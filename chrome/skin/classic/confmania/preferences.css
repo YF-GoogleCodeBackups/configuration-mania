@@ -1,0 +1,21 @@
+.listBox{
+  -moz-appearance: listbox;
+  margin: 2px 4px;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+  background-color: -moz-Field;
+}
+
+expander > hbox:hover > label.header{ background-color: #E0E8F6; color: #000; }
+
+.settingsBox {
+  margin: 5px;
+  padding: 5px;
+}
+
+.emphasis{ font-weight: bold ! important; }
+
+*|*:-moz-any-link:hover{ color: blue; text-decoration: underline; }

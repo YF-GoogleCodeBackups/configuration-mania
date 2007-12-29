@@ -1,0 +1,272 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is the Configure Mania.
+   -
+   - The Initial Developer of the Original Code is Popoki Tom.
+   - Portions created by the Initial Developer are Copyright (C) 2005
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Popoki Tom
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+]>
+
+<overlay id="paneSecurityOverlay"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneSecurity" onpaneload="gPrefSecurity.init();">
+
+<script><![CDATA[
+var gPrefSecurity = {
+  init : function(){
+    // popup_allowed_events
+    var mData = document.getElementById("popupwin-popup_allowed_events");
+    var e = mData.value.split(" ");
+    for(var i = 0; i < e.length; i++)
+      document.getElementById("popupwin-e." + e[i]).checked = true;
+
+    this.updateIDN();
+
+    document.getElementById("passwordTimeout").value
+     = Components.classes["@mozilla.org/security/pk11tokendb;1"]
+     .getService(Components.interfaces.nsIPK11TokenDB)
+     .getInternalKeyToken().getAskPasswordTimeout();
+  },
+  updatePopupwin : function(){
+    const XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+    var checks = document.getElementById("popupwin-e").getElementsByTagNameNS(XULNS, "listitem");
+    var e = [];
+    Array.forEach(checks, function(check){
+      if(check.checked) e.push(check.getAttribute("id").substring(11));//"popupwin-e.".length == 11
+    });
+
+    var mData = document.getElementById("popupwin-popup_allowed_events");
+    mData.value = e.join(" ");
+    document.getElementById("paneSecurity").userChangedValue(mData);
+  },
+  updateIDN : function(){
+    document.getElementById("showPunycode").disabled = ! document.getElementById("enableIDN").checked;
+    document.getElementById("showPunycodeDesc").disabled = ! document.getElementById("enableIDN").checked;
+  },
+  updatePasswordAskTimes : function(){
+    var radiogroup = document.getElementById("passwordAskTimes");
+    var askEveryTimeHidden = document.getElementById("askEveryTimeHidden");
+    document.getElementById("passwordTimeout").disabled = (String(radiogroup.value) != "1");
+    askEveryTimeHidden.checked = (String(radiogroup.value) == "-1");
+    if(askEveryTimeHidden._initilized)
+      document.getElementById("paneSecurity").userChangedValue(askEveryTimeHidden);
+    else
+      askEveryTimeHidden._initilized = true;
+  }
+};
+]]></script>
+
+<preferences>
+  <preference id="dom.max_script_run_time" name="dom.max_script_run_time" type="int"/>
+  <preference id="dom.allow_scripts_to_close_windows" name="dom.allow_scripts_to_close_windows" type="bool" inverted="true"/>
+  <preference id="dom.disable_window_flip" name="dom.disable_window_flip" type="bool"/>
+  <preference id="dom.disable_window_move_resize" name="dom.disable_window_move_resize" type="bool"/>
+  <preference id="dom.disable_window_status_change" name="dom.disable_window_status_change" type="bool"/>
+  <preference id="dom.disable_image_src_set" name="dom.disable_image_src_set" type="bool"/>
+  <preference id="dom.event.contextmenu.enabled" name="dom.event.contextmenu.enabled" type="bool" inverted="true"/>
+  <preference id="nglayout.events.dispatchLeftClickOnly" name="nglayout.events.dispatchLeftClickOnly" type="bool"/>
+
+  <preference id="dom.disable_window_open_feature.menubar" name="dom.disable_window_open_feature.menubar" type="bool"/>
+  <preference id="dom.disable_window_open_feature.resizable" name="dom.disable_window_open_feature.resizable" type="bool"/>
+  <preference id="dom.disable_window_open_feature.scrollbars" name="dom.disable_window_open_feature.scrollbars" type="bool"/>
+  <!--preference id="dom.disable_window_open_feature.titlebar" name="dom.disable_window_open_feature.titlebar" type="bool"/-->
+  <preference id="dom.disable_window_open_feature.toolbar" name="dom.disable_window_open_feature.toolbar" type="bool"/>
+  <preference id="dom.disable_window_open_feature.location" name="dom.disable_window_open_feature.location" type="bool"/>
+  <preference id="dom.disable_window_open_feature.status" name="dom.disable_window_open_feature.status" type="bool"/>
+
+  <preference id="browser.link.open_newwindow.restriction" name="browser.link.open_newwindow.restriction" type="int"/>
+  <preference id="dom.popup_maximum" name="dom.popup_maximum" type="int"/>
+  <preference id="dom.popup_allowed_events" name="dom.popup_allowed_events" type="string"/>
+
+  <preference id="network.http.redirection-limit" name="network.http.redirection-limit" type="int"/>
+  <preference id="network.enableIDN" name="network.enableIDN" type="bool"/>
+  <preference id="network.IDN_show_punycode" name="network.IDN_show_punycode" type="bool"/>
+  <preference id="network.http.sendRefererHeader" name="network.http.sendRefererHeader" type="int"/>
+
+  <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
+  <preference id="network.cookie.lifetime.days" name="network.cookie.lifetime.days" type="int"/>
+  <preference id="security.ask_for_password" name="security.ask_for_password" type="int"/>
+  <preference id="security.password_lifetime" name="security.password_lifetime" type="int"/>
+</preferences>
+
+<tabbox flex="1">
+<tabs>
+<tab label="&security.js.label;"/>
+<tab label="&security.net.label;"/>
+<tab label="&security.others.label;"/>
+</tabs> 
+<tabpanels flex="1">
+<tabpanel orient="vertical" flex="1">
+
+<tabbox class="settingsBox">
+<tabs>
+<tab label="&security.js.annoy.label;"/>
+<tab label="&security.js.uis.label;"/>
+<tab label="&security.js.popupwin.label;"/>
+</tabs>
+<tabpanels flex="1">
+<tabpanel orient="vertical">
+  <groupbox align="center" orient="horizontal">
+    <label value="&security.js.annoy.max_script_run_time.label;" control="max_script_run_time"/>
+    <textbox id="max_script_run_time" preference="dom.max_script_run_time" size="2"/>
+    <label value="&seconds;"/>
+  </groupbox>
+
+  <groupbox>
+    <checkbox preference="dom.allow_scripts_to_close_windows" label="&security.js.annoy.disable_scripts_to_close_windows;"/>
+    <checkbox preference="dom.disable_window_flip" label="&security.js.annoy.window_flip;"/>
+    <checkbox preference="dom.disable_window_move_resize" label="&security.js.annoy.window_move_resize;"/>
+    <checkbox preference="dom.disable_window_status_change" label="&security.js.annoy.status_change;"/>
+    <checkbox preference="dom.disable_image_src_set" label="&security.js.annoy.change_image;"/>
+    <description class="indent">&security.js.annoy.change_image.desc;</description>
+    <checkbox preference="dom.event.contextmenu.enabled" label="&security.js.annoy.contextmenu;"/>
+    <checkbox preference="nglayout.events.dispatchLeftClickOnly" label="&security.js.annoy.dispatchLeftClickOnly;"/>
+  </groupbox>
+</tabpanel>
+<tabpanel orient="vertical">
+  <label value="&security.js.uis.desc1;"/>
+  <checkbox label="&security.js.uis.menubar;" preference="dom.disable_window_open_feature.menubar"/>
+  <checkbox label="&security.js.uis.resizable;" preference="dom.disable_window_open_feature.resizable"/>
+  <checkbox label="&security.js.uis.scrollbars;" preference="dom.disable_window_open_feature.scrollbars"/>
+  <!--checkbox id="security-uis-titlebar" label="Title" preference="dom.disable_window_open_feature.titlebar"/-->
+  <checkbox label="&security.js.uis.toolbar;" preference="dom.disable_window_open_feature.toolbar"/>
+  <checkbox label="&security.js.uis.locationbar;" preference="dom.disable_window_open_feature.location"/>
+  <checkbox label="&security.js.uis.status;" preference="dom.disable_window_open_feature.status"/>
+  <label class="emphasis" value="&security.js.uis.desc2;"/>
+</tabpanel>
+<tabpanel orient="vertical">
+  <groupbox>
+  <caption label="&security.js.popupwin.tabs.label;"/>
+  <radiogroup preference="browser.link.open_newwindow.restriction">
+    <radio value="0" label="&security.js.popupwin.tabs.0.label;"/>
+    <radio value="1" label="&security.js.popupwin.tabs.1.label;"/>
+    <radio value="2" label="&security.js.popupwin.tabs.2.label;"/>
+  </radiogroup>
+  </groupbox>
+
+  <hbox align="center">
+    <label value="&security.js.popupwin.popup_maximum.label;"/>
+    <textbox id="popupwin-popup_maximum" preference="dom.popup_maximum" size="2"/>
+  </hbox>
+  <textbox hidden="true" id="popupwin-popup_allowed_events" preference="dom.popup_allowed_events"/>
+  <label value="&security.js.popupwin.event.label;"/>
+  <listbox id="popupwin-e" rows="6" onclick="gPrefSecurity.updatePopupwin();" onkeypress="gPrefSecurity.updatePopupwin();">
+    <listitem type="checkbox" id="popupwin-e.reset" label="&security.js.popupwin.event.reset.label;"/>
+    <listitem type="checkbox" id="popupwin-e.submit" label="&security.js.popupwin.event.submit.label;"/>
+    <listitem type="checkbox" id="popupwin-e.select" label="&security.js.popupwin.event.select.label;"/>
+    <listitem type="checkbox" id="popupwin-e.change" label="&security.js.popupwin.event.change.label;"/>
+    <listitem type="checkbox" id="popupwin-e.resize" label="&security.js.popupwin.event.resize.label;"/>
+    <listitem type="checkbox" id="popupwin-e.input" label="&security.js.popupwin.event.input.label;"/>
+    <listitem type="checkbox" id="popupwin-e.keypress" label="&security.js.popupwin.event.keypress.label;"/>
+    <listitem type="checkbox" id="popupwin-e.keydown" label="&security.js.popupwin.event.keydown.label;"/>
+    <listitem type="checkbox" id="popupwin-e.keyup" label="&security.js.popupwin.event.keyup.label;"/>
+    <listitem type="checkbox" id="popupwin-e.mouseup" label="&security.js.popupwin.event.mouseup.label;"/>
+    <listitem type="checkbox" id="popupwin-e.mousedown" label="&security.js.popupwin.event.mousedown.label;"/>
+    <listitem type="checkbox" id="popupwin-e.click" label="&security.js.popupwin.event.click.label;"/>
+    <listitem type="checkbox" id="popupwin-e.dblclick" label="&security.js.popupwin.event.dblclick.label;"/>
+  </listbox>
+</tabpanel>
+</tabpanels>
+</tabbox>
+
+</tabpanel>
+<tabpanel orient="vertical">
+
+<groupbox>
+  <hbox align="center">
+    <label control="redirection-limit" value="&security.net.redirection-limit.label;"/>
+    <textbox id="redirection-limit" size="2" preference="network.http.redirection-limit"/>
+  </hbox>
+  <checkbox id="enableIDN" label="&security.net.enableIDN.label;"
+    preference="network.enableIDN" oncommand="gPrefSecurity.updateIDN();"/>
+  <checkbox id="showPunycode" class="indent" label="&security.net.show_punycode.label;"
+    preference="network.IDN_show_punycode"/>
+  <description id="showPunycodeDesc" class="indent">&security.net.show_punycode.desc;</description>
+</groupbox>
+
+<groupbox>
+  <caption label="&security.net.referer.label;"/>
+  <radiogroup id="sendReferer" preference="network.http.sendRefererHeader">
+    <radio value="0" label="&security.net.referer.none.label;"/>
+    <description class="indent">&security.net.referer.none.desc;</description>
+    <radio value="1" label="&security.net.referer.link.label;"/>
+    <radio value="2" label="&security.net.referer.all.label;"/>
+  </radiogroup>
+</groupbox>
+
+</tabpanel>
+<tabpanel orient="vertical">
+<groupbox>
+  <caption label="&security.others.cookie.label;"/>
+  <hbox align="center">
+    <label value="&security.others.cookie.lifetimedays.label;"/>
+    <textbox id="cookieLifetimeDays" size="2" preference="network.cookie.lifetime.days"/>
+    <label value="&days;"/>
+  </hbox>
+</groupbox>
+<groupbox>
+<caption label="&security.others.passwd.label;"/>
+<groupbox>
+  <caption label="&security.others.passwd.managepassword.label;"/>
+  <checkbox hidden="true" id="askEveryTimeHidden" preference="signon.expireMasterPassword"/>
+  <label value="&security.others.passwd.managepassword.text;"/>
+  <radiogroup id="passwordAskTimes" preference="security.ask_for_password">
+    <!-- Components.interfaces.nsIPK11Token.ASK_FIRST_TIME == 0 -->
+    <radio value="0" label="&security.others.passwd.managepassword.askfirsttime;"
+      oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
+    <!-- Components.interfaces.nsIPK11Token.ASK_EVERY_TIME == -1 -->
+    <radio value="-1" label="&security.others.passwd.managepassword.askeverytime;"
+      oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
+    <hbox align="center">
+      <!-- Components.interfaces.nsIPK11Token.ASK_EXPIRE_TIME == 1 -->
+      <radio value="1" label="&security.others.passwd.managepassword.asktimeout;"
+        oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
+      <textbox id="passwordTimeout" size="4" label="security.password_lifetime"/>
+      <label value="&security.others.passwd.managepassword.timeout.unit;"/>
+    </hbox>
+  </radiogroup>
+</groupbox>
+<description>&security.others.passwd.desc;</description>
+</groupbox>
+</tabpanel>
+</tabpanels>
+</tabbox>
+
+</prefpane>
+</overlay>

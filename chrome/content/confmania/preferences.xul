@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://confmania/skin/preferences.css"?>
+
+<!DOCTYPE prefwindow [
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY cm "chrome://confmania/content">
+]>
+<prefwindow type="prefwindow" id="ConfmaniaPreferences"
+ windowtype="Browser:Confmania"
+ chromehidden="menubar location directories status extrachrome"
+ title="&prefWindow.title;" style="&prefWindow.style;"
+ onload="if(!this._shouldAnimate) window.setTimeout('window.resizeTo(window.innerWidth, &prefWindow.defaultHeight;);', 0);"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script src="&cm;/xconnect.js"/>
+
+<prefpane id="paneBrowser" label="&browser.title;" src="&cm;/paneBrowser.xul"/>
+<prefpane id="paneSecurity" label="&security.title;" src="&cm;/paneSecurity.xul"/>
+<prefpane id="paneHTTP" label="&http.title;" src="&cm;/paneHTTP.xul"/>
+<prefpane id="paneUI" label="&ui.title;" src="&cm;/paneUI.xul"/>
+<prefpane id="paneDebug" label="&debug.title;" src="&cm;/paneDebug.xul"/>
+</prefwindow>

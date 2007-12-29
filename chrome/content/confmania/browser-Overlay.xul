@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://confmania/locale/confmania.dtd">
+
+<overlay id="confmania-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="confmania" oncommand="
+var features = 'chrome,titlebar,toolbar,centerscreen,resizable';
+features += gPrefService.getBoolPref('browser.preferences.instantApply')? ',dialog=no' : ',modal';
+
+var wm = Components.classes['@mozilla.org/appshell/window-mediator;1']
+ .getService(Components.interfaces.nsIWindowMediator);
+var win = wm.getMostRecentWindow('Browser:Confmania');
+if(win) win.focus(); else openDialog(this.getAttribute('href'),'confmania',features);"
+              label="&confmania.label;" insertafter="menu_preferences"
+              href="chrome://confmania/content/preferences.xul"/>
+  </menupopup>
+</overlay>

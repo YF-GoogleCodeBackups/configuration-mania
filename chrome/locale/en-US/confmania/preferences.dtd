@@ -1,0 +1,294 @@
+<!ENTITY prefWindow.title "Configuration Mania">
+<!ENTITY prefWindow.style "width:42em;">
+<!ENTITY prefWindow.defaultHeight "500">
+
+<!ENTITY browser.title "Browser">
+<!ENTITY browser.smartbrowsing.label "SmartBrowsing">
+<!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
+<!ENTITY browser.smartbrowsing.internetKeywords.desc "Internet Keywords enables fast access to services such as search and other information from the Location bar.">
+<!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Enable Internet Keywords">
+<!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL Prefix : ">
+<!ENTITY browser.smartbrowsing.domainGuessing.label "Domain Guessing">
+<!ENTITY browser.smartbrowsing.domainGuessing.desc "Automatically add prefix and suffix to the location if a web page isn't found.">
+<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Enable Domain Guessing">
+<!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefix : ">
+<!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Suffix : ">
+<!ENTITY browser.html.label "Page control">
+<!ENTITY browser.html.allowBlink.label "Allow blinking text">
+<!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
+<!ENTITY browser.html.enableFrame.label "Enable frames">
+<!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
+<!ENTITY browser.html.animation_mode.label "Animated image control">
+<!ENTITY browser.html.animation_mode.normal.label "Normal">
+<!ENTITY browser.html.animation_mode.once.label "Once">
+<!ENTITY browser.html.animation_mode.none.label "None (Stop)">
+<!ENTITY browser.html.show_image_placeholders.label "Show image-placeholder on broken/loading one">
+<!ENTITY browser.html.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
+<!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
+<!ENTITY browser.html.focus.label "Highlight Focus">
+<!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
+<!ENTITY browser.html.focus.bg.label "Background Color">
+<!ENTITY browser.html.focus.fg.label "Text Color">
+<!ENTITY browser.tabs.label "TabBrowsing">
+<!ENTITY browser.tabs.closeButtons.label "Where to display a close button ...">
+<!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
+<!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">
+<!ENTITY browser.tabs.closeButtons.no.label "Not any close button">
+<!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
+<!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button (Default:140)">
+<!ENTITY browser.tabs.disableBackgroundClose.label "Do not close by clicking background-tab's close button">
+<!ENTITY browser.tabs.tabMinWidth.label "Minimum tab width (Default:60)">
+<!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that openedit">
+<!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
+<!ENTITY browser.bookmarkicon.label "Bookmark Icons">
+<!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab and location bar">
+<!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
+<!ENTITY browser.ua.label "UserAgent">
+<!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of &quot;PrefBar&quot;, &quot;User Agent Switcher&quot; and so on.">
+<!ENTITY browser.ua.default.label "Use browser default">
+<!ENTITY browser.ua.ie6.label "Internet Explorer 6.0 (WinXP SP2+.NET2.0)">
+<!ENTITY browser.ua.ie6.value "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)">
+<!ENTITY browser.ua.ie7.label "Internet Explorer 7 (WinVista)">
+<!ENTITY browser.ua.ie7.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)">
+<!ENTITY browser.ua.safari.label "Safari 2.0.4 (PowerPC MacOS X Tiger)">
+<!ENTITY browser.ua.safari.value "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3">
+<!ENTITY browser.ua.opera.label "Opera 9.10 (WinXP)">
+<!ENTITY browser.ua.opera.value "Mozilla/5.0 (Windows NT 5.1; U; en) Opera 9.10">
+<!ENTITY browser.ua.konqueror.label "Konqueror 3.5.6 (Linux)">
+<!ENTITY browser.ua.konqueror.value "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.6 (like Gecko)">
+<!ENTITY browser.ua.googlebot.label "Googlebot 2.1">
+<!ENTITY browser.ua.googlebot.value "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)">
+<!ENTITY browser.ua.manual.label "Custom">
+<!ENTITY browser.speed-paint.label "High Speed Browsing/Paint&amp;Rendering">
+<!ENTITY browser.speed-paint.desc "Caution: The Recommended values are not always suitable for your line and PC environment. It sometimes make browsing slower. (But some of them feel browsing faster, which is the Placebo effect :-)">
+<!ENTITY browser.speed-paint.delay.label "Initial paint delay">
+<!ENTITY browser.speed-paint.delay.desc "Recommend - ISDN:200-600ms, ADSL:0-300ms, BroadBand:0ms; Default:250ms">
+<!ENTITY browser.speed-paint.notify-backoffcount.label "Initial reflows threshold">
+<!ENTITY browser.speed-paint.notify-backoffcount.never "Never">
+<!ENTITY browser.speed-paint.notify-backoffcount.custom "Custom">
+<!ENTITY browser.speed-paint.notify-interval.label "Interval for the initial reflows">
+<!ENTITY browser.speed-paint.notify-interval.desc "Recommend - Fast: Synchronize with &quot;&browser.speed-paint.delay.label;&quot; (Caution: check the units); Default: 120000">
+<!ENTITY browser.speed-paint.notify-interval.desc1 "Recommend - Fast: ">
+<!ENTITY browser.speed-paint.notify-interval.synch.label "Synchronize with &quot;&browser.speed-paint.delay.label;&quot;">
+<!ENTITY browser.speed-paint.notify-interval.desc2 "(Caution: check the units); Default: 120000">
+<!ENTITY browser.speed-paint.content-interrupt.label "Interrupts parsing when the event processing loops (Recommend)">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.label "Maximum time to interrupt the process">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "Recommended - Fast: half of &quot;&browser.speed-paint.notify-interval.label;&quot;, Default:3&#xd7;&quot;&browser.speed-paint.notify-interval.label;&quot;; Caution: Do not set 0.">
+<!ENTITY browser.speed-paint.content-switch-threshold.label "High-&gt;Low frequency interrupt mode switch Threshold">
+<!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode provides better UI responsiveness at the expense of load time; Default: 750000 ie. 3/4 ms">
+<!ENTITY browser.speed-cache.label "High Speed Browsing/Cache">
+<!ENTITY browser.speed-cache.desc "&browser.speed-paint.desc;">
+<!ENTITY browser.speed-cache.check.label "Check cache of the pages ...">
+<!ENTITY browser.speed-cache.check.desc "WARNING: &quot;&browser.speed-cache.check.once.label;&quot; makes the browser faster, it may makes troubles in a part of Web service. Please check &quot;&browser.speed-cache.check.each.label;&quot;, if you find that a certain page is not updated correctly. Or, Please push reload button with shift key to force reload page.">
+<!ENTITY browser.speed-cache.check.once.label "Once par session">
+<!ENTITY browser.speed-cache.check.each.label "Each time">
+<!ENTITY browser.speed-cache.check.never.label "Never (Not Recommended)">
+<!ENTITY browser.speed-cache.check.auto.label "When it&#39;s Out Of Date (Preferred)">
+<!ENTITY browser.speed-cache.memory_enable.label "Enable cache memory (Never disabled, usually)">
+<!ENTITY browser.speed-cache.memory_capability.label "Cache Memory">
+<!ENTITY browser.speed-cache.memory_capability.auto.label "Auto">
+<!ENTITY browser.speed-cache.memory_capability.manual.label "Manual">
+<!ENTITY browser.speed-cache.disk_cache_ssl.label "Also store ssl-connection pages in the cache (INSECURE)">
+<!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
+<!ENTITY browser.speed-cache.session-history-viewers.label "The # of latest page-displays to be cached">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "Recommended: 5 (recently viewed pages appear instantly!), Default: 3">
+<!ENTITY browser.others.label "Others">
+<!ENTITY browser.others.downloadShowAlertOnComplete.label "Show alert on complete download">
+<!ENTITY browser.others.urlbarhideGoButton "Hide the Go button next to the location bar">
+<!ENTITY browser.others.urlbarclickSelectsAll "Select the contents of the address bar when it is clicked">
+<!ENTITY browser.others.enableSVG.label "Enable rendering SVG content">
+<!ENTITY browser.others.errorPageEnabled.label "Instead of annoying error dialog messages, display pages">
+<!ENTITY browser.others.editorExternal "View source with external editor">
+<!ENTITY browser.others.editorExternal.path "Editor path:">
+
+<!ENTITY security.title "Security">
+<!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.annoy.label "More Advanced">
+<!ENTITY security.js.annoy.max_script_run_time.label "Script execution time of which the browser warns">
+<!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable to close non-popup windows">
+<!ENTITY security.js.annoy.window_flip "Disable Raise and Lower windows">
+<!ENTITY security.js.annoy.window_move_resize "Disable Move and Resize existing windows">
+<!ENTITY security.js.annoy.status_change "Disable Chaging statusbar">
+<!ENTITY security.js.annoy.change_image "Disable Chaging images">
+<!ENTITY security.js.annoy.change_image.desc "Caution: The setting &quot;&security.js.annoy.change_image;&quot; cause some web applications (such as Google Map) not to work.">
+<!ENTITY security.js.annoy.contextmenu "Disallow to dispatch contextmenu events">
+<!ENTITY security.js.annoy.dispatchLeftClickOnly "Allow to dispatch left click only">
+<!ENTITY security.js.uis.label "Anti UI spoof">
+<!ENTITY security.js.uis.desc1 "Disable hiding (and Enable) when opened by JavaScript :">
+<!ENTITY security.js.uis.desc2 "Make all items checked so as to avoid UI spool.">
+<!ENTITY security.js.uis.menubar "Menubar">
+<!ENTITY security.js.uis.resizable "Resizable">
+<!ENTITY security.js.uis.scrollbars "Scroll bars">
+<!ENTITY security.js.uis.toolbar "Tool bar">
+<!ENTITY security.js.uis.locationbar "Location bar">
+<!ENTITY security.js.uis.status "Status bar">
+<!ENTITY security.js.popupwin.label "Pop-up Windows">
+<!ENTITY security.js.popupwin.tabs.label "Popup Windows (window.open) on the Tabbed Browsing">
+<!ENTITY security.js.popupwin.tabs.0.label "Same as the link's setting">
+<!ENTITY security.js.popupwin.tabs.1.label "Open new window">
+<!ENTITY security.js.popupwin.tabs.2.label "Same as the link's setting, but open window if specified how to be displayed (Default)">
+<!ENTITY security.js.popupwin.popup_maximum.label "Maximum count of the windows">
+<!ENTITY security.js.popupwin.event.label "Allow to open when :">
+<!ENTITY security.js.popupwin.event.reset.label "Reset form">
+<!ENTITY security.js.popupwin.event.submit.label "Submit form">
+<!ENTITY security.js.popupwin.event.select.label "Selected a form">
+<!ENTITY security.js.popupwin.event.change.label "Changed a text">
+<!ENTITY security.js.popupwin.event.resize.label "Resized windows">
+<!ENTITY security.js.popupwin.event.input.label "Input">
+<!ENTITY security.js.popupwin.event.keypress.label "Pressed Key">
+<!ENTITY security.js.popupwin.event.keydown.label "Key Down">
+<!ENTITY security.js.popupwin.event.keyup.label "Key Up">
+<!ENTITY security.js.popupwin.event.mouseup.label "Mouse Up">
+<!ENTITY security.js.popupwin.event.mousedown.label "Mouse Down">
+<!ENTITY security.js.popupwin.event.click.label "Clicked">
+<!ENTITY security.js.popupwin.event.dblclick.label "Double Clicked">
+<!ENTITY security.net.label "Network">
+<!ENTITY security.net.redirection-limit.label "HTTP Redirection limit">
+<!ENTITY security.net.enableIDN.label "Enable IDN(Internationalized Domain Names)">
+<!ENTITY security.net.show_punycode.label "Show IDN in punycode">
+<!ENTITY security.net.show_punycode.desc "It is usually no necessary to show IDN in punycode. Current &brandShortName; refuses an illegal IDN address by using the black/white list.">
+<!ENTITY security.net.referer.label "Referer request-header">
+<!ENTITY security.net.referer.none.label "Never Send (Not recommended)">
+<!ENTITY security.net.referer.none.desc "WARNING: Sending the referrer header may sometimes be required. If you experience with getting to some sites, this setting can be changed to &quot;&security.net.referer.link.label;&quot; or &quot;&security.net.referer.all.label;&quot;.">
+<!ENTITY security.net.referer.link.label "Send only on clicks">
+<!ENTITY security.net.referer.all.label "Send on image requests as well">
+<!ENTITY security.others.label "Others">
+<!ENTITY security.others.cookie.label "Cookie">
+<!ENTITY security.others.cookie.lifetimedays.label "Force to Delete cookies after">
+<!ENTITY security.others.passwd.label "Master Password">
+<!ENTITY security.others.passwd.managepassword.label "Master Password Timeout">
+<!ENTITY security.others.passwd.managepassword.text "&brandShortName; will ask for your master password:">
+<!ENTITY security.others.passwd.managepassword.askfirsttime "The first time it is needed">
+<!ENTITY security.others.passwd.managepassword.askeverytime "Every time it is needed">
+<!ENTITY security.others.passwd.managepassword.asktimeout   "If it has not been used for ">
+<!ENTITY security.others.passwd.managepassword.timeout.unit "minutes or longer">
+<!ENTITY security.others.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
+
+<!ENTITY http.title "HTTP Network">
+<!ENTITY http.connect.label "Connection">
+<!ENTITY http.connect.desc "HTTP connections may be fine-tuned using these options to
+enhance either performance or compatibility. Some proxy servers, for example, are known to require HTTP/1.0.">
+<!ENTITY http.connect.direct.label "Direct Connection Options">
+<!ENTITY http.connect.proxy.label "Proxy Connection Options">
+<!ENTITY http.connect.HTTP10.label "Use HTTP 1.0">
+<!ENTITY http.connect.HTTP11.label "Use HTTP 1.1">
+<!ENTITY http.connect.keepAlive.label "Enable Keep-Alive">
+<!ENTITY http.connect.pipeline.label "Enable Pipelining">
+<!ENTITY http.connect.pipeline.desc "WARNING: Pipelining is an experimental feature, designed to improve page-load performance, that is unfortunately not well supported by some web servers and proxies.">
+<!ENTITY http.ad.label "Advanced">
+<!ENTITY http.ad.accept.label "Transmitted 'Accept' HTTP Headers">
+<!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
+<!ENTITY http.ad.accept.default.label "Accept">
+<!ENTITY http.ad.maxsession.label "Maximum session connenction">
+<!ENTITY http.ad.maxsession.desc "WARNING: Do not change this unless you have a complete understanding of RFC 2616.">
+<!ENTITY http.ad.maxsession.maxpipeliningrequest.label "Max pipelining Request">
+<!ENTITY http.ad.maxsession.maxconnections.label "Max Connection (Total)">
+<!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "Max Connection (per Server)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "Max Persistent Connection (per Server)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "Max Persistent Connection (via Proxy)">
+
+<!ENTITY ui.title "UI">
+<!ENTITY ui.mousewheel.label "Mouse wheel">
+<!ENTITY ui.mousewheel.mouseWheelPanel.label "mouse wheel behavior with">
+<!ENTITY ui.mousewheel.mouseWheelPanel2.label "key">
+<!ENTITY ui.mousewheel.vertiscroll.label "Vertical-scroll">
+<!ENTITY ui.mousewheel.horizscroll.label "Horizontal-scroll">
+<!ENTITY ui.mousewheel.usingJustTheWheel.label "No Modifier">
+<!ENTITY ui.mousewheel.usingWheelAndAlt.label "Alt">
+<!ENTITY ui.mousewheel.usingWheelAndCtrl.label "Control">
+<!ENTITY ui.mousewheel.usingWheelAndShift.label "Shift">
+<!ENTITY ui.mousewheel.scroll.label "Scroll document by">
+<!ENTITY ui.mousewheel.scrollLines.label "lines.">
+<!ENTITY ui.mousewheel.useSystemDefault.label "Use system default">
+<!ENTITY ui.mousewheel.scrollPgUpPgDn.label "Scroll a page up or a page down">
+<!ENTITY ui.mousewheel.history.label "Move back and forward in the browsing history">
+<!ENTITY ui.mousewheel.textsize.label "Make the text larger or smaller">
+<!ENTITY ui.find.label "Find in page">
+<!ENTITY ui.find.findahead.label "Find As You Type">
+<!ENTITY ui.find.findahead.desc "Tip: To manually start Find As You Type, type / to find text or ' to find links, followed by the text you want to find.">
+<!ENTITY ui.find.findahead.timeout.label "Clear the current search after">
+<!ENTITY ui.find.findahead.timeout.label2 "[ms] of inactivity">
+<!ENTITY ui.find.findahead.sound.label "Play a sound when typed text isn't found (takes effect after restart)">
+<!ENTITY ui.keynav.label "Keyboard Navigation">
+<!ENTITY ui.keynav.tabNavigationBehavior.label "Tab Focus Navigation">
+<!ENTITY ui.keynav.tabNavigationLinks.label "Links">
+<!ENTITY ui.keynav.tabNavigationLinks.accesskey "L">
+<!ENTITY ui.keynav.tabNavigationForms.label "Buttons, radio buttons, checkboxes, and lists">
+<!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
+<!ENTITY ui.keynav.tabNavigationTextboxes.label "Note: text boxes are always part of the tabbing order.">
+<!ENTITY ui.keynav.tabNavigationDesc.label "When Tab or Shift+Tab is pressed, move between:">
+<!ENTITY ui.keynav.accelerators.label  "Keyboard accelerators">
+<!ENTITY ui.keynav.acceleratorsBlurb.label  "A value of zero disables a modifier key.">
+<!ENTITY ui.keynav.acceleratorKey.label  "Accelerator key:">
+<!ENTITY ui.keynav.acceleratorKey.accesskey  "A">
+<!ENTITY ui.keynav.menuAccessKey.label   "Menu access key:">
+<!ENTITY ui.keynav.menuAccessKey.accesskey   "M">
+<!ENTITY ui.i18n.label "i18n">
+<!ENTITY ui.i18n.locale.label "Application Locale">
+<!ENTITY ui.i18n.locale.eg "(e.g. en-US, ja-JP, ar-AE)">
+<!ENTITY ui.i18n.bidi.label "Bi-Directional (BiDi)">
+<!ENTITY ui.i18n.bidi.ui.label "Enable BiDi UI">
+<!ENTITY ui.i18n.bidi.characterset.label "Charset">
+<!ENTITY ui.i18n.bidi.characterset.doc.label "Document-specified">
+<!ENTITY ui.i18n.bidi.characterset.default.label "Default charset in document">
+<!ENTITY ui.i18n.bidi.controlstextmode.label "Controls">
+<!ENTITY ui.i18n.bidi.controlstextmode.logical.label "Logical">
+<!ENTITY ui.i18n.bidi.controlstextmode.visual.label "Visual">
+<!ENTITY ui.i18n.bidi.controlstextmode.container.label "Container">
+<!ENTITY ui.i18n.bidi.direction.label "Direction">
+<!ENTITY ui.i18n.bidi.direction.ltr.label "-&gt; Left-to-right">
+<!ENTITY ui.i18n.bidi.direction.rtl.label "&lt;- Right-to-left">
+<!ENTITY ui.i18n.bidi.numeral.label "Numeral">
+<!ENTITY ui.i18n.bidi.numeral.regular_context.label "Regular context">
+<!ENTITY ui.i18n.bidi.numeral.hindi_context.label "Hindi context">
+<!ENTITY ui.i18n.bidi.numeral.arabic.label "Arabic">
+<!ENTITY ui.i18n.bidi.numeral.hindi.label "Hindi">
+<!ENTITY ui.i18n.bidi.support.label "Provider">
+<!ENTITY ui.i18n.bidi.support.mozilla.label "&brandShortName;">
+<!ENTITY ui.i18n.bidi.support.os.label "OS">
+<!ENTITY ui.i18n.bidi.support.disable.label "Disable">
+<!ENTITY ui.i18n.bidi.texttype.label "Text type">
+<!ENTITY ui.i18n.bidi.texttype.charset.label "Default">
+<!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
+<!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
+<!ENTITY ui.i18n.ime.label "Input Method Editor (IME)">
+<!ENTITY ui.i18n.ime.password_onblur.label "Reopen IME if it was open prior to the password">
+<!ENTITY ui.i18n.ime.password_onfocus.label "Close IME when password field gain focus">
+<!ENTITY ui.i18n.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
+<!ENTITY ui.others.label "Others">
+<!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
+<!ENTITY ui.others.preference.instanceAccept.label "Accept instance (likely Mac or Gnome)">
+<!ENTITY ui.others.preference.animateFadeIn.label "Animate fade-in (likely Mac)">
+<!ENTITY ui.others.xwin.label "Unix (X-Window) style mouse behavior">
+<!ENTITY ui.others.xwin.autocopy.label "Enable auto-copy selected text">
+<!ENTITY ui.others.xwin.paste.label "Paste when clicked middle mouse button">
+<!ENTITY ui.others.xwin.contentLoadURL.label "Go to URL stored in clipboard by middle mouse click">
+<!ENTITY ui.others.xwin.scrollbarPosition.label "Allow middle mouse button to adjust scroll bar (takes effect after restart)">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.label "Submenu Delay">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "None">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.manual.label "Custom">
+<!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">
+<!ENTITY ui.others.extensionInstallButton "Show Install button on the add-on dialog">
+
+<!ENTITY debug.title "Debug">
+<!ENTITY debug.debug.label "For Debugging">
+<!ENTITY debug.debug.dump.label "Enable JavaScript dump() output">
+<!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
+<!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
+<!ENTITY debug.debug.csserr.label "Show CSS parse errors">
+<!ENTITY debug.cache.label "Cache">
+<!ENTITY debug.cache.disableXULCache.label "Disable XUL Cache">
+<!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
+<!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">
+<!ENTITY debug.extension.noCheckCompatibility.label "Do Not check extension compatibility on install/update">
+
+<!ENTITY miliseconds "[ms]">
+<!ENTITY microseconds "[us]">
+<!ENTITY seconds "seconds">
+<!ENTITY minutes "minutes">
+<!ENTITY days "days">
+<!ENTITY kilobytes "KB">
+<!ENTITY none "(none)">
+<!ENTITY reset "Reset">
+<!ENTITY browse "Browse...">

@@ -1,0 +1,294 @@
+<!ENTITY prefWindow.title "Configuration Mania">
+<!ENTITY prefWindow.style "width:42em;">
+<!ENTITY prefWindow.defaultHeight "500">
+
+<!ENTITY browser.title "ブラウザ">
+<!ENTITY browser.smartbrowsing.label "SmartBrowsing">
+<!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
+<!ENTITY browser.smartbrowsing.internetKeywords.desc "Internet Keywords を使って、ロケーションバーから検索、その他の情報に素早くアクセスできます。">
+<!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Internet Keywords を有効にする">
+<!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL の接頭辞 : ">
+<!ENTITY browser.smartbrowsing.domainGuessing.label "ドメイン補完">
+<!ENTITY browser.smartbrowsing.domainGuessing.desc "Web ページがみつからないときに、自動的に接頭辞と接尾辞を補完します。">
+<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "ドメイン補完を有効にする">
+<!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "接頭辞 : ">
+<!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "接尾辞 : ">
+<!ENTITY browser.html.label "ページ表示制御">
+<!ENTITY browser.html.allowBlink.label "点滅テキストを有効にする">
+<!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
+<!ENTITY browser.html.enableFrame.label "フレームを有効にする">
+<!ENTITY browser.html.frameForceResizability.label "フレームを強制的にサイズ変更できるようにする">
+<!ENTITY browser.html.animation_mode.label "GIF アニメーションの動作">
+<!ENTITY browser.html.animation_mode.normal.label "通常">
+<!ENTITY browser.html.animation_mode.once.label "一度だけ">
+<!ENTITY browser.html.animation_mode.none.label "なし(静止)">
+<!ENTITY browser.html.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
+<!ENTITY browser.html.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
+<!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
+<!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
+<!ENTITY browser.html.focus.enabled.label "フォーカスされたオブジェクトをハイライト表示する">
+<!ENTITY browser.html.focus.bg.label "背景色">
+<!ENTITY browser.html.focus.fg.label "文字色">
+<!ENTITY browser.tabs.label "タブブラウジング">
+<!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所">
+<!ENTITY browser.tabs.closeButtons.active.label "アクティブなタブのみ表示">
+<!ENTITY browser.tabs.closeButtons.all.label "全てのタブに表示 (標準)">
+<!ENTITY browser.tabs.closeButtons.no.label "全く表示しない">
+<!ENTITY browser.tabs.closeButtons.end.label "タブバーの端に表示 (Firefox1.xの動作)">
+<!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ (標準:140)">
+<!ENTITY browser.tabs.disableBackgroundClose.label "バックグラウンドタブの閉じるボタンを押すことでタブを閉じない">
+<!ENTITY browser.tabs.tabMinWidth.label "タブの最小サイズ (標準:60)">
+<!ENTITY browser.tabs.selectOwnerOnClose.label "タブを閉じたら、そのタブを開いたタブをアクティブにする">
+<!ENTITY browser.tabs.seachOpenintab.label "検索バーでの検索結果を新しいタブで開く">
+<!ENTITY browser.bookmarkicon.label "ブックマークのアイコン">
+<!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
+<!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
+<!ENTITY browser.ua.label "UserAgent">
+<!ENTITY browser.ua.desc "警告: おそらくこの設定が &quot;PrefBar&quot; や &quot;User Agent Switcher&quot; 等と競合するかもしれません。">
+<!ENTITY browser.ua.default.label "ブラウザの標準を使用する">
+<!ENTITY browser.ua.ie6.label "Internet Explorer 6.0 (WinXP SP2+.NET2.0)">
+<!ENTITY browser.ua.ie6.value "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)">
+<!ENTITY browser.ua.ie7.label "Internet Explorer 7 (WinVista)">
+<!ENTITY browser.ua.ie7.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)">
+<!ENTITY browser.ua.safari.label "Safari 2.0.4 (PowerPC MacOS X Tiger)">
+<!ENTITY browser.ua.safari.value "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; ja-jp) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3">
+<!ENTITY browser.ua.opera.label "Opera 9.10 (WinXP)">
+<!ENTITY browser.ua.opera.value "Mozilla/5.0 (Windows NT 5.1; U; ja) Opera 9.10">
+<!ENTITY browser.ua.konqueror.label "Konqueror 3.5.6 (Linux)">
+<!ENTITY browser.ua.konqueror.value "Mozilla/5.0 (compatible; Konqueror/3.5; Linux) KHTML/3.5.6 (like Gecko)">
+<!ENTITY browser.ua.googlebot.label "Googlebot 2.1">
+<!ENTITY browser.ua.googlebot.value "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)">
+<!ENTITY browser.ua.manual.label "カスタム">
+<!ENTITY browser.speed-paint.label "高速ブラウジング/描画とレンダリング">
+<!ENTITY browser.speed-paint.desc "注意: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることで遅くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
+<!ENTITY browser.speed-paint.label "描画/レンダリング">
+<!ENTITY browser.speed-paint.delay.label "初期描画待機時間">
+<!ENTITY browser.speed-paint.delay.desc "推奨値 - ISDN:200-600ms, ADSL:0-300ms, 高速回線:0ms; 標準:250ms">
+<!ENTITY browser.speed-paint.notify-backoffcount.label "初期レンダリングの閾値">
+<!ENTITY browser.speed-paint.notify-backoffcount.never "しない">
+<!ENTITY browser.speed-paint.notify-backoffcount.custom "カスタム">
+<!ENTITY browser.speed-paint.notify-interval.label "初期レンダリングの間隔">
+<!ENTITY browser.speed-paint.notify-interval.desc "推奨値 - 高速: &quot;&browser.speed-paint.delay.label;&quot; と同期(単位の差に注意); 標準: 120000">
+<!ENTITY browser.speed-paint.notify-interval.desc1 "推奨値 - 高速: ">
+<!ENTITY browser.speed-paint.notify-interval.synch.label "&quot;&browser.speed-paint.delay.label;&quot; と同期">
+<!ENTITY browser.speed-paint.notify-interval.desc2 "(単位の差に注意); 標準: 120000">
+<!ENTITY browser.speed-paint.content-interrupt.label "イベントがループしたときパースを終了する(推奨)">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.label "その処理を中止するまでの最大時間">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "推奨値 - 高速: &quot;&browser.speed-paint.notify-interval.label;&quot;の半値, 標準:3&#x00d7;&quot;&browser.speed-paint.notify-interval.label;&quot;; 注意: 0 にしてはいけません。">
+<!ENTITY browser.speed-paint.content-switch-threshold.label "High→Low frequency interrupt mode 切替待機時間閾値">
+<!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode はインターフェースの反応を速くするために、ページの読み込み処理を遅くします。; 標準: 750000 則ち 3/4 ミリ秒">
+<!ENTITY browser.speed-cache.label "高速ブラウジング/キャッシュ">
+<!ENTITY browser.speed-cache.desc "&browser.speed-paint.desc;">
+<!ENTITY browser.speed-cache.memory_enable.label "キャッシュメモリーを有効に (通常、決して無効にしないで下さい)">
+<!ENTITY browser.speed-cache.check.label "ページのキャッシュの確認の頻度">
+<!ENTITY browser.speed-cache.check.desc "警告: &quot;&browser.speed-cache.check.once.label;&quot; で高速化されますが、一部の Web サービスに支障が出るかもしれません。また、ページが正しく更新されない不具合がある場合、&quot;&browser.speed-cache.check.each.label;&quot;に設定して下さい。もしくは、シフトキーを押しながら再読込ボタンをクリックして、強制読込をしてください。">
+<!ENTITY browser.speed-cache.check.once.label "セッション毎">
+<!ENTITY browser.speed-cache.check.each.label "アクセスする度に">
+<!ENTITY browser.speed-cache.check.never.label "しない">
+<!ENTITY browser.speed-cache.check.auto.label "更新されたら (推奨)">
+<!ENTITY browser.speed-cache.memory_capability.label "使用容量">
+<!ENTITY browser.speed-cache.memory_capability.auto.label "自動">
+<!ENTITY browser.speed-cache.memory_capability.manual.label "手動">
+<!ENTITY browser.speed-cache.disk_cache_ssl.label "SSL 通信の分もキャッシュに貯める (セキュリティ上危険)">
+<!ENTITY browser.speed-cache.prefetch-next.label "リンク先読み (prefetch) 機構を有効にする">
+<!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "推奨値: 5 (最近表示したページが瞬時に表示!), 標準: 3">
+<!ENTITY browser.others.label "その他">
+<!ENTITY browser.others.downloadShowAlertOnComplete.label "ダウンロード終了時に通知する">
+<!ENTITY browser.others.urlbarhideGoButton "場所バーの隣りの移動ボタンを隠す">
+<!ENTITY browser.others.urlbarclickSelectsAll "場所バーをクリック時に内容を選択する">
+<!ENTITY browser.others.enableSVG.label "SVG を表示する">
+<!ENTITY browser.others.errorPageEnabled.label "エラーダイアログを表示しないで、エラーページでその旨を表示する">
+<!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
+<!ENTITY browser.others.editorExternal.path "エディタのパス:">
+
+<!ENTITY security.title "セキュリティ">
+<!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.annoy.label "詳細設定">
+<!ENTITY security.js.annoy.max_script_run_time.label "警告するスクリプト実行時間">
+<!ENTITY security.js.annoy.disable_scripts_to_close_windows "スクリプトからポップアップウィンドウを閉じれなくする">
+<!ENTITY security.js.annoy.window_flip "ウィンドウのフォーカス(前面か背面か)の切り替えを無効に">
+<!ENTITY security.js.annoy.window_move_resize "ウィンドウの移動または大きさの変更を無効に">
+<!ENTITY security.js.annoy.status_change "ステータスバーのテキストの変更を無効に">
+<!ENTITY security.js.annoy.change_image "画像の置き換えを無効に">
+<!ENTITY security.js.annoy.change_image.desc "注意: &quot;&security.js.annoy.change_image;&quot;の設定によって、いくつかのウェブアプリケーション(Google マップなど)が動作しなくなります。">
+<!ENTITY security.js.annoy.contextmenu "コンテキストメニューイベントの取得を無効に">
+<!ENTITY security.js.annoy.dispatchLeftClickOnly "左クリックのみイベント処理を許可">
+<!ENTITY security.js.uis.label "UI 擬装対策">
+<!ENTITY security.js.uis.desc1 "JavaScript で開かれたウインドウで以下を強制可視表示/有効 : ">
+<!ENTITY security.js.uis.menubar "メニューバー">
+<!ENTITY security.js.uis.resizable "サイズ変更可能性">
+<!ENTITY security.js.uis.scrollbars "スクロールバー">
+<!ENTITY security.js.uis.toolbar "ツールバー">
+<!ENTITY security.js.uis.locationbar "場所バー">
+<!ENTITY security.js.uis.status "ステータスバー">
+<!ENTITY security.js.uis.desc2 "UI 擬装 (UI Spoof) への対処として、全項目をチェックしてください。">
+<!ENTITY security.js.popupwin.label "ポップアップウィンドウ">
+<!ENTITY security.js.popupwin.tabs.label "タブブラウジングでのポップアップ(window.open)の扱い">
+<!ENTITY security.js.popupwin.tabs.0.label "リンクの設定と同様に処理">
+<!ENTITY security.js.popupwin.tabs.1.label "ウィンドウを開く">
+<!ENTITY security.js.popupwin.tabs.2.label "リンクの設定と同様に処理するが、ウィンドウの表示方法等が設定してある場合はウィンドウを開く (標準)">
+<!ENTITY security.js.popupwin.popup_maximum.label "同時に開く上限数">
+<!ENTITY security.js.popupwin.event.label "以下の時に開くのを許可 :">
+<!ENTITY security.js.popupwin.event.reset.label "フォームのリセット">
+<!ENTITY security.js.popupwin.event.submit.label "フォーム送信">
+<!ENTITY security.js.popupwin.event.select.label "フォーム選択">
+<!ENTITY security.js.popupwin.event.change.label "テキスト等の変更">
+<!ENTITY security.js.popupwin.event.resize.label "ウィンドウのサイズ変更">
+<!ENTITY security.js.popupwin.event.input.label "入力">
+<!ENTITY security.js.popupwin.event.keypress.label "キーを押した">
+<!ENTITY security.js.popupwin.event.keydown.label "キー押下">
+<!ENTITY security.js.popupwin.event.keyup.label "キーを離した">
+<!ENTITY security.js.popupwin.event.mouseup.label "マウスボタン押下">
+<!ENTITY security.js.popupwin.event.mousedown.label "マウスボタンを離した">
+<!ENTITY security.js.popupwin.event.click.label "クリック">
+<!ENTITY security.js.popupwin.event.dblclick.label "ダブルクリック">
+<!ENTITY security.net.label "ネットワーク">
+<!ENTITY security.net.redirection-limit.label "HTTP リダイレクト限界数">
+<!ENTITY security.net.enableIDN.label "IDN (国際化ドメイン名) を有効にする">
+<!ENTITY security.net.show_punycode.label "IDN を punycode で表示する">
+<!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
+<!ENTITY security.net.referer.label "Referer 要求ヘッダ">
+<!ENTITY security.net.referer.none.label "常に送らない (非推奨)">
+<!ENTITY security.net.referer.none.desc "警告: ときたま、Referrer ヘッダが要求されることがあります。もしそのようなことがあったら、この設定を&quot;&security.net.referer.link.label;&quot;及び&quot;&security.net.referer.all.label;&quot;に変更して下さい。">
+<!ENTITY security.net.referer.link.label "リンクのクリック時のみ送る">
+<!ENTITY security.net.referer.all.label "画像要求も送る">
+<!ENTITY security.others.label "その他">
+<!ENTITY security.others.cookie.label "Cookie">
+<!ENTITY security.others.cookie.lifetimedays.label "Cookieを強制削除するまでの日数 : ">
+<!ENTITY security.others.passwd.label "マスターパスワード">
+<!ENTITY security.others.passwd.managepassword.label "マスターパスワードの期限">
+<!ENTITY security.others.passwd.managepassword.text "マスターパスワードが求められるとき:">
+<!ENTITY security.others.passwd.managepassword.askfirsttime "必要になった初回のみ">
+<!ENTITY security.others.passwd.managepassword.askeverytime "必要になったとき毎回">
+<!ENTITY security.others.passwd.managepassword.asktimeout   "前回使用後">
+<!ENTITY security.others.passwd.managepassword.timeout.unit "分以上経ったとき">
+<!ENTITY security.others.passwd.desc "ヒント: マスターパスワードの設定は &brandShortName; の設定ダイアログにあります。">
+
+<!ENTITY http.title "HTTP ネットワーク">
+<!ENTITY http.connect.label "接続">
+<!ENTITY http.connect.desc "HTTP 接続はこれらの設定を使ってパフォーマンスや互換性を増すように調整されています。いくつかのプロキシサーバは、例えば HTTP/1.0 を要求することが知られています。">
+<!ENTITY http.connect.direct.label "直接接続の設定">
+<!ENTITY http.connect.proxy.label "プロキシ接続の設定">
+<!ENTITY http.connect.HTTP10.label "HTTP 1.0 を使う">
+<!ENTITY http.connect.HTTP11.label "HTTP 1.1 を使う">
+<!ENTITY http.connect.keepAlive.label "接続の持続 (Keep-Alive) を有効にする">
+<!ENTITY http.connect.pipeline.label "パイプラインを有効にする">
+<!ENTITY http.connect.pipeline.desc "警告: パイプラインは実験的な機能です。ページ読み込みパフォーマンスを向上させるためのものですが、残念なことに一部の Web サーバやプロキシはうまくサポートしていません。">
+<!ENTITY http.ad.label "詳細">
+<!ENTITY http.ad.accept.label "送信される 'Accept' HTTP ヘッダ">
+<!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
+<!ENTITY http.ad.accept.default.label "Accept">
+<!ENTITY http.ad.maxsession.label "最大セッション接続">
+<!ENTITY http.ad.maxsession.desc "警告: RFC 2616 を完全に理解していないならば設定を変更しないでください。">
+<!ENTITY http.ad.maxsession.maxpipeliningrequest.label "最大パイプライン要求数">
+<!ENTITY http.ad.maxsession.maxconnections.label "最大接続数 (延べ)">
+<!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "最大接続数 (サーバ当たり)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
+
+<!ENTITY ui.title "インターフェイス">
+<!ENTITY ui.mousewheel.label "マウスホイール">
+<!ENTITY ui.mousewheel.mouseWheelPanel.label "での動作 (装飾キー：">
+<!ENTITY ui.mousewheel.mouseWheelPanel2.label ")">
+<!ENTITY ui.mousewheel.vertiscroll.label "垂直スクロール">
+<!ENTITY ui.mousewheel.horizscroll.label "水平スクロール">
+<!ENTITY ui.mousewheel.usingJustTheWheel.label "なし">
+<!ENTITY ui.mousewheel.usingWheelAndAlt.label "Alt">
+<!ENTITY ui.mousewheel.usingWheelAndCtrl.label "Control">
+<!ENTITY ui.mousewheel.usingWheelAndShift.label "Shift">
+<!ENTITY ui.mousewheel.scroll.label "文書を">
+<!ENTITY ui.mousewheel.scrollLines.label "行づつスクロールする">
+<!ENTITY ui.mousewheel.useSystemDefault.label "システムの標準設定を使用する">
+<!ENTITY ui.mousewheel.scrollPgUpPgDn.label "1 ページ上下にスクロールする">
+<!ENTITY ui.mousewheel.history.label "ブラウズの履歴を戻るまたは進む">
+<!ENTITY ui.mousewheel.textsize.label "文字サイズを大きくしたり小さくしたりする">
+<!ENTITY ui.find.label "ページ内検索">
+<!ENTITY ui.find.findahead.label "Find As You Type (検索語入力時の逐次検索機能)">
+<!ENTITY ui.find.findahead.desc "ヒント: 文字入力検索を手動で開始するには、検索文字を続けて、/文字 または、 'リンク を入力します。">
+<!ENTITY ui.find.findahead.timeout.label "停止状態が">
+<!ENTITY ui.find.findahead.timeout.label2 "ミリ秒続いたら現在の検索をクリアする">
+<!ENTITY ui.find.findahead.sound.label "入力文字が見つからないときサウンドを鳴らす (再起動必要)">
+<!ENTITY ui.keynav.label "キーボードナビゲーション">
+<!ENTITY ui.keynav.tabNavigationBehavior.label "タブキーによるフォーカス制御">
+<!ENTITY ui.keynav.tabNavigationLinks.label "リンク">
+<!ENTITY ui.keynav.tabNavigationLinks.accesskey "L">
+<!ENTITY ui.keynav.tabNavigationForms.label "ボタン、ラジオボタン、チェックボックス、リスト">
+<!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
+<!ENTITY ui.keynav.tabNavigationTextboxes.label "注意: テキストボックスは常にタブ操作の対象になります">
+<!ENTITY ui.keynav.tabNavigationDesc.label "Tab または Shift+Tab が入力されたときに移動:">
+<!ENTITY ui.keynav.accelerators.label  "キーボードアクセラレータ">
+<!ENTITY ui.keynav.acceleratorsBlurb.label  "0 に値を設定すると装飾キーを無効にします。">
+<!ENTITY ui.keynav.acceleratorKey.label  "装飾キー(のコード):">
+<!ENTITY ui.keynav.acceleratorKey.accesskey  "A">
+<!ENTITY ui.keynav.menuAccessKey.label   "メニュー装飾キー(のコード):">
+<!ENTITY ui.keynav.menuAccessKey.accesskey   "M">
+<!ENTITY ui.i18n.label "国際化">
+<!ENTITY ui.i18n.locale.label "アプリケーションのロケール(言語)">
+<!ENTITY ui.i18n.locale.eg "(例: en-US, ja-JP, ar-AE)">
+<!ENTITY ui.i18n.bidi.label "双方向テキスト (BiDi)">
+<!ENTITY ui.i18n.bidi.ui.label "BiDi のインターフェイスを有効に">
+<!ENTITY ui.i18n.bidi.characterset.label "文字セット">
+<!ENTITY ui.i18n.bidi.characterset.doc.label "文書で定義された文字セット">
+<!ENTITY ui.i18n.bidi.characterset.default.label "標準文字セット">
+<!ENTITY ui.i18n.bidi.controlstextmode.label "コントロール">
+<!ENTITY ui.i18n.bidi.controlstextmode.logical.label "Logical">
+<!ENTITY ui.i18n.bidi.controlstextmode.visual.label "Visual">
+<!ENTITY ui.i18n.bidi.controlstextmode.container.label "Container">
+<!ENTITY ui.i18n.bidi.direction.label "方向">
+<!ENTITY ui.i18n.bidi.direction.ltr.label "-&gt; 左から右">
+<!ENTITY ui.i18n.bidi.direction.rtl.label "&lt;- 右から左">
+<!ENTITY ui.i18n.bidi.numeral.label "数値表現">
+<!ENTITY ui.i18n.bidi.numeral.regular_context.label "通常文脈">
+<!ENTITY ui.i18n.bidi.numeral.hindi_context.label "ヒンディ語文脈">
+<!ENTITY ui.i18n.bidi.numeral.arabic.label "アラビア語">
+<!ENTITY ui.i18n.bidi.numeral.hindi.label "ヒンディ語">
+<!ENTITY ui.i18n.bidi.support.label "処理担当">
+<!ENTITY ui.i18n.bidi.support.mozilla.label "&brandShortName;">
+<!ENTITY ui.i18n.bidi.support.os.label "OS">
+<!ENTITY ui.i18n.bidi.support.disable.label "無効">
+<!ENTITY ui.i18n.bidi.texttype.label "テキストの種類">
+<!ENTITY ui.i18n.bidi.texttype.charset.label "文字コードに従う">
+<!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
+<!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
+<!ENTITY ui.i18n.ime.label "Input Method Editor (IME)">
+<!ENTITY ui.i18n.ime.password_onblur.label "パスワード入力後はIMEの状態を元に戻す">
+<!ENTITY ui.i18n.ime.password_onfocus.label "パスワード入力時にIMEを無効にする">
+<!ENTITY ui.i18n.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
+<!ENTITY ui.others.label "その他">
+<!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
+<!ENTITY ui.others.preference.instanceAccept.label "瞬時に設定を適用 (Mac や Gnome のように)">
+<!ENTITY ui.others.preference.animateFadeIn.label "フェードインのアニメーションをする (Mac のように)">
+<!ENTITY ui.others.xwin.label "Unix (X-Window) スタイルのマウス動作">
+<!ENTITY ui.others.xwin.autocopy.label "選択テキストの自動コピーを有効にする">
+<!ENTITY ui.others.xwin.paste.label "中央クリックで張り付ける">
+<!ENTITY ui.others.xwin.contentLoadURL.label "中央クリックでクリップボードに格納された URL へ行く">
+<!ENTITY ui.others.xwin.scrollbarPosition.label "中央ボタンでスクロールバーを調整できるようにする(再起動必要)">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.label "サブメニュー表示遅延時間">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "なし">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "&#x221e; (Motif の真似)">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.manual.label "カスタム">
+<!ENTITY ui.others.xul_file_picker "システムのファイルダイアログを使わずにXULファイルダイアログを使用">
+<!ENTITY ui.others.extensionInstallButton "アドオンダイアログにインストールボタンを表示">
+
+<!ENTITY debug.title "デバッグ">
+<!ENTITY debug.debug.label "デバッグ作業用">
+<!ENTITY debug.debug.dump.label "JavaScript の dump() 出力を有効にする">
+<!ENTITY debug.debug.jsstrict.label "JavaScript の厳密なエラーを出力する">
+<!ENTITY debug.debug.chromeerr.label "クロム (chrome) の JavaScript エラー/警告も表示する">
+<!ENTITY debug.debug.csserr.label "スタイルシートの解析エラーも表示する">
+<!ENTITY debug.cache.label "キャッシュ">
+<!ENTITY debug.cache.disableXULCache.label "XUL キャッシュを無効にする">
+<!ENTITY debug.cache.diskCacheDisable.label "ディスクキャッシュを無効にする">
+<!ENTITY debug.cache.memoryCacheDisable.label "メモリーキャッシュを無効にする">
+<!ENTITY debug.extension.noCheckCompatibility.label "インストール/更新時の拡張機能のバージョンチェックを回避">
+
+<!ENTITY miliseconds "ミリ秒">
+<!ENTITY microseconds "&#x03bc;秒">
+<!ENTITY seconds "秒">
+<!ENTITY minutes "分">
+<!ENTITY days "日">
+<!ENTITY kilobytes "KB">
+<!ENTITY none "(なし)">
+<!ENTITY reset "標準に戻す">
+<!ENTITY browse "参照...">
