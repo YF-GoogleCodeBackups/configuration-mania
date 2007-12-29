@@ -45,7 +45,7 @@
 <overlay id="paneBrowserOverlay"
  xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneBrowser" class="listBox settingsBox" onpaneload="gPrefBrowser.init();" style="overflow:auto;">
+<prefpane id="paneBrowser" flex="1" onpaneload="gPrefBrowser.init();">
 
 <script><![CDATA[
 var gPrefBrowser = {
@@ -189,7 +189,7 @@ var gPrefBrowser = {
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
 </preferences>
 
-<vbox flex="1" style="padding-bottom: 10em;">
+<vbox flex="1" class="listBox">
 
 <expander id="smartbrowsing" label="&browser.smartbrowsing.label;" open="false" clearhidden="true">
   <groupbox>
@@ -381,7 +381,7 @@ var gPrefBrowser = {
   <checkbox label="&browser.speed-cache.prefetch-next.label;" preference="network.prefetch-next"/>
   <hbox align="center">
     <label control="session-history-viewers" value="&browser.speed-cache.session-history-viewers.label;"/>
-    <textbox id="session-history-viewers" type="number" size="3" preference="browser.sessionhistory.max_viewers"/>
+    <textbox id="session-history-viewers" type="number" value="3" size="2" preference="browser.sessionhistory.max_viewers"/>
   </hbox>
   <description class="indent">&browser.speed-cache.session-history-viewers.desc;</description>
 </expander>
