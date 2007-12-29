@@ -218,7 +218,7 @@ var gUIPref = {
         <radio value="0" label="&ui.mousewheel.scroll.label;"/>
         <vbox align="start">
           <hbox align="center">
-            <textbox id="mousewheelNumlines" size="3" oninput="gUIPref.changed_mousewheelNumlines();"/>
+            <textbox id="mousewheelNumlines" type="number" size="3" oninput="gUIPref.changed_mousewheelNumlines();"/>
             <label value="&ui.mousewheel.scrollLines.label;"/>
           </hbox>
           <checkbox id="mousewheelSysNumlines" label="&ui.mousewheel.useSystemDefault.label;"
@@ -233,7 +233,7 @@ var gUIPref = {
 
   <!-- __DATA__ -->
   <data hidden="true">
-    <textbox id="mousewheelWithNoKeyAction" preference="mousewheel.withnokey.action"/>
+    <textbox id="mousewheelWithNoKeyAction" type="number" hidespinbuttons="true" preference="mousewheel.withnokey.action"/>
     <textbox id="mousewheelWithNoKeyNumlines" preference="mousewheel.withnokey.numlines"/>
     <textbox id="mousewheelWithNoKeySysNumlines" preference="mousewheel.withnokey.sysnumlines"/>
     <textbox id="mousewheelWithAltKeyAction" preference="mousewheel.withaltkey.action"/>
@@ -265,7 +265,7 @@ var gUIPref = {
     <description>&ui.find.findahead.desc;</description>
     <hbox align="center">
       <label value="&ui.find.findahead.timeout.label;"/>
-      <textbox id="keyNavTypeAHeadTimeout" preference="accessibility.typeaheadfind.timeout" size="5"/>
+      <textbox id="keyNavTypeAHeadTimeout" type="number" hidespinbuttons="true" preference="accessibility.typeaheadfind.timeout" size="5"/>
       <label value="&ui.find.findahead.timeout.label2;"/>
     </hbox>
     <checkbox id="keyNavTypeAHeadSound" label="&ui.find.findahead.sound.label;"
@@ -294,11 +294,11 @@ var gUIPref = {
     <hbox align="center">
       <label value="&ui.keynav.acceleratorKey.label;"
        accesskey="&ui.keynav.acceleratorKey.accesskey;" control="acceleratorKeyValue"/>
-      <textbox id="acceleratorKeyValue" preference="ui.key.accelKey" size="5"/>
+      <textbox id="acceleratorKeyValue" type="number" hidespinbuttons="true" preference="ui.key.accelKey" size="5"/>
     </hbox>
     <hbox align="center">
       <label value="&ui.keynav.menuAccessKey.label;" accesskey="&ui.keynav.menuAccessKey.accesskey;" control="menuAccessKeyValue"/>
-      <textbox id="menuAccessKeyValue" preference="ui.key.menuAccessKey" size="5"/>
+      <textbox id="menuAccessKeyValue" type="number" hidespinbuttons="true" preference="ui.key.menuAccessKey" size="5"/>
     </hbox>
   </groupbox>
 </tabpanel>
@@ -389,7 +389,7 @@ var gUIPref = {
         <radio value="0" label="&ui.others.xwin.uiSubmenuDelay.none.label;"/>
         <radio value="-1" label="&ui.others.xwin.uiSubmenuDelay.inf.label;"/>
         <radio value="*" label="&ui.others.xwin.uiSubmenuDelay.manual.label;"/>
-        <textbox id="uiSubmenuDelay" size="4" preference="ui.submenuDelay"
+        <textbox id="uiSubmenuDelay" type="number" hidespinbuttons="true" min="-1" size="4" preference="ui.submenuDelay"
           onsyncfrompreference="initRadioGroupConnect2('uiSubmenuDelay-radio','uiSubmenuDelay','0');"/>
         <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
       </radiogroup>

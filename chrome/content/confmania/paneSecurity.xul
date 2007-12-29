@@ -144,7 +144,7 @@ var gPrefSecurity = {
 <tabpanel orient="vertical">
   <groupbox align="center" orient="horizontal">
     <label value="&security.js.annoy.max_script_run_time.label;" control="max_script_run_time"/>
-    <textbox id="max_script_run_time" preference="dom.max_script_run_time" size="2"/>
+    <textbox id="max_script_run_time" type="number" hidespinbuttons="true" preference="dom.max_script_run_time" size="2"/>
     <label value="&seconds;"/>
   </groupbox>
 
@@ -182,7 +182,7 @@ var gPrefSecurity = {
 
   <hbox align="center">
     <label value="&security.js.popupwin.popup_maximum.label;"/>
-    <textbox id="popupwin-popup_maximum" preference="dom.popup_maximum" size="2"/>
+    <textbox id="popupwin-popup_maximum" type="number" hidespinbuttons="true" preference="dom.popup_maximum" size="2"/>
   </hbox>
   <textbox hidden="true" id="popupwin-popup_allowed_events" preference="dom.popup_allowed_events"/>
   <label value="&security.js.popupwin.event.label;"/>
@@ -211,7 +211,7 @@ var gPrefSecurity = {
 <groupbox>
   <hbox align="center">
     <label control="redirection-limit" value="&security.net.redirection-limit.label;"/>
-    <textbox id="redirection-limit" size="2" preference="network.http.redirection-limit"/>
+    <textbox id="redirection-limit" type="number" hidespinbuttons="true" size="2" preference="network.http.redirection-limit"/>
   </hbox>
   <checkbox id="enableIDN" label="&security.net.enableIDN.label;"
     preference="network.enableIDN" oncommand="gPrefSecurity.updateIDN();"/>
@@ -236,7 +236,7 @@ var gPrefSecurity = {
   <caption label="&security.others.cookie.label;"/>
   <hbox align="center">
     <label value="&security.others.cookie.lifetimedays.label;"/>
-    <textbox id="cookieLifetimeDays" size="2" preference="network.cookie.lifetime.days"/>
+    <textbox id="cookieLifetimeDays" type="number" hidespinbuttons="true" size="2" preference="network.cookie.lifetime.days"/>
     <label value="&days;"/>
   </hbox>
 </groupbox>
@@ -257,7 +257,7 @@ var gPrefSecurity = {
       <!-- Components.interfaces.nsIPK11Token.ASK_EXPIRE_TIME == 1 -->
       <radio value="1" label="&security.others.passwd.managepassword.asktimeout;"
         oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
-      <textbox id="passwordTimeout" size="4" label="security.password_lifetime"/>
+      <textbox id="passwordTimeout" type="number" size="4" label="security.password_lifetime"/>
       <label value="&security.others.passwd.managepassword.timeout.unit;"/>
     </hbox>
   </radiogroup>

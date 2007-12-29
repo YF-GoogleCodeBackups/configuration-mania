@@ -9,8 +9,6 @@
   background-color: -moz-Field;
 }
 
-expander > hbox:hover > label.header{ background-color: #E0E8F6; color: #000; }
-
 .settingsBox {
   margin: 5px;
   padding: 5px;

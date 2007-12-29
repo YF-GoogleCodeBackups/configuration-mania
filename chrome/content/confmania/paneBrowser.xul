@@ -268,7 +268,7 @@ var gPrefBrowser = {
       <radio value="1" label="&browser.tabs.closeButtons.all.label;"/>
       <vbox class="indent" id="tabs-closeButtons-all-pane">
         <label value="&browser.tabs.tabClipWidth.label;" control="tabs-tabClipWidth"/>
-        <textbox class="indent" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
+        <textbox class="indent" type="number" hidespinbuttons="true" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
         <checkbox preference="browser.tabs.disableBackgroundClose" label="&browser.tabs.disableBackgroundClose.label;"/>
       </vbox>
       <radio value="2" label="&browser.tabs.closeButtons.no.label;"/>
@@ -277,7 +277,7 @@ var gPrefBrowser = {
   </groupbox>
   <hbox align="center">
     <label value="&browser.tabs.tabMinWidth.label;" control="tabs-tabMinWidth"/>
-    <textbox id="tabs-tabMinWidth" preference="browser.tabs.tabMinWidth" size="4"/>
+    <textbox id="tabs-tabMinWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMinWidth" size="4"/>
   </hbox>
   <checkbox preference="browser.tabs.selectOwnerOnClose" label="&browser.tabs.selectOwnerOnClose.label;"/>
 
@@ -310,7 +310,7 @@ var gPrefBrowser = {
   <description>&browser.speed-paint.desc;</description>
   <hbox align="center">
     <label control="speed-paintDalay" value="&browser.speed-paint.delay.label;"/>
-    <textbox id="speed-paintDalay" size="3" preference="nglayout.initialpaint.delay"/>
+    <textbox id="speed-paintDalay" type="number" hidespinbuttons="true" size="3" preference="nglayout.initialpaint.delay"/>
     <label value="&miliseconds;"/>
   </hbox>
   <description class="indent">&browser.speed-paint.delay.desc;</description>
@@ -318,12 +318,12 @@ var gPrefBrowser = {
   <radiogroup id="speed-notify-backoffcount-gr" class="indent" orient="horizontal" align="center">
     <radio value="-1" label="&browser.speed-paint.notify-backoffcount.never;"/>
     <radio value="*" label="&browser.speed-paint.notify-backoffcount.custom;"/>
-    <textbox id="speed-notify-backoffcount" preference="content.notify.backoffcount" size="1"
+    <textbox id="speed-notify-backoffcount" type="number" hidespinbuttons="true" min="-1" preference="content.notify.backoffcount" size="1"
      onsyncfrompreference="initRadioGroupConnect2('speed-notify-backoffcount-gr','speed-notify-backoffcount','-1');"/>
   </radiogroup>
   <hbox align="center">
     <label value="&browser.speed-paint.notify-interval.label;" control="speed-notify-interval"/>
-    <textbox id="speed-notify-interval" preference="content.notify.interval" size="6"/>
+    <textbox id="speed-notify-interval" type="number" hidespinbuttons="true" preference="content.notify.interval" size="6"/>
     <label value="&microseconds;"/>
   </hbox>
   <description class="indent" align="center">
@@ -337,14 +337,14 @@ var gPrefBrowser = {
   <vbox class="indent">
     <hbox align="center" id="speed-interrupt-parsing-hbox">
       <label value="&browser.speed-paint.content-max-tokenizing-time.label;" control="speed-max-tokenizing-time"/>
-      <textbox id="speed-max-tokenizing-time" preference="content.max.tokenizing.time" size="8"/>
+      <textbox id="speed-max-tokenizing-time" type="number" hidespinbuttons="true" preference="content.max.tokenizing.time" size="8"/>
       <label value="&microseconds;"/>
     </hbox>
     <description class="indent">&browser.speed-paint.content-max-tokenizing-time.desc;</description>
   </vbox>
   <hbox align="center">
     <label value="&browser.speed-paint.content-switch-threshold.label;" control="speed-switch-threshold"/>
-    <textbox id="speed-switch-threshold" preference="content.switch.threshold" size="8"/>
+    <textbox id="speed-switch-threshold" type="number" hidespinbuttons="true" preference="content.switch.threshold" size="8"/>
     <label value="&microseconds;"/>
   </hbox>
   <description class="indent">&browser.speed-paint.content-switch-threshold.desc;</description>
@@ -357,7 +357,7 @@ var gPrefBrowser = {
     <label value="&browser.speed-cache.memory_capability.label;"/>
     <radio value="-1" label="&browser.speed-cache.memory_capability.auto.label;"/>
     <radio value="*" label="&browser.speed-cache.memory_capability.manual.label;"/>
-    <textbox id="speed-cache-memory-capacity" size="8" preference="browser.cache.memory.capacity"
+    <textbox id="speed-cache-memory-capacity" type="number" hidespinbuttons="true" min="-1" size="8" preference="browser.cache.memory.capacity"
      onsyncfrompreference="initRadioGroupConnect2('speed-cache-memory-capacity-type','speed-cache-memory-capacity','-1');"/>
     <label value="&kilobytes;"/>
   </radiogroup>
@@ -381,7 +381,7 @@ var gPrefBrowser = {
   <checkbox label="&browser.speed-cache.prefetch-next.label;" preference="network.prefetch-next"/>
   <hbox align="center">
     <label control="session-history-viewers" value="&browser.speed-cache.session-history-viewers.label;"/>
-    <textbox id="session-history-viewers" size="3" preference="browser.sessionhistory.max_viewers"/>
+    <textbox id="session-history-viewers" type="number" size="3" preference="browser.sessionhistory.max_viewers"/>
   </hbox>
   <description class="indent">&browser.speed-cache.session-history-viewers.desc;</description>
 </expander>

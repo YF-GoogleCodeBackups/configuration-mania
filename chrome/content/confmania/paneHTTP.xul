@@ -112,7 +112,7 @@
   <hbox align="center">
     <label value="&http.ad.accept.default.label;" control="HTTPAccept"/>
     <textbox id="HTTPAccept" flex="1" preference="network.http.accept.default"/>
-    <button label="&reset;" oncommand="document.getElementById('network.http.accept.default').reset();"/>
+    <button label="&reset;" oncommand="document.getElementById('network.http.accept.default').reset();" icon="clear"/>
   </hbox>
 </groupbox>
 <groupbox>
@@ -120,23 +120,23 @@
   <description>&http.ad.maxsession.desc;</description>
   <hbox align="center">
     <label control="maxpipeliningrequest" value="&http.ad.maxsession.maxpipeliningrequest.label;"/>
-    <textbox id="maxpipeliningrequest" size="1" preference="network.http.pipelining.maxrequests"/>
+    <textbox id="maxpipeliningrequest" type="number" size="1" preference="network.http.pipelining.maxrequests"/>
   </hbox>
   <hbox align="center">
     <label control="maxconnections" value="&http.ad.maxsession.maxconnections.label;"/>
-    <textbox id="maxconnections" size="2" preference="network.http.max-connections"/>
+    <textbox id="maxconnections" type="number" size="2" preference="network.http.max-connections"/>
   </hbox>
   <hbox class="indent" align="center">
     <label control="maxconnectionsPerServer" value="&http.ad.maxsession.maxconnectionsPerServer.label;"/>
-    <textbox id="maxconnectionsPerServer" size="1" preference="network.http.max-connections-per-server"/>
+    <textbox id="maxconnectionsPerServer" type="number" size="1" preference="network.http.max-connections-per-server"/>
   </hbox>
   <hbox class="indent" align="center">
     <label control="maxpersistentconnectionsPerServer" value="&http.ad.maxsession.maxpersistentconnectionsPerServer.label;"/>
-    <textbox id="maxpersistentconnectionsPerServer" size="1" preference="network.http.max-persistent-connections-per-server"/>
+    <textbox id="maxpersistentconnectionsPerServer" type="number" size="1" preference="network.http.max-persistent-connections-per-server"/>
   </hbox>
   <hbox class="indent" align="center">
     <label control="maxpersistentconnectionsPerProxy" value="&http.ad.maxsession.maxpersistentconnectionsPerProxy.label;"/>
-    <textbox id="maxpersistentconnectionsPerProxy" size="1" preference="network.http.max-persistent-connections-per-proxy"/>
+    <textbox id="maxpersistentconnectionsPerProxy" type="number" size="1" preference="network.http.max-persistent-connections-per-proxy"/>
   </hbox>
 
 </groupbox>
