@@ -18,12 +18,14 @@
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
 <!ENTITY browser.html.enableFrame.label "Enable frames">
 <!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
-<!ENTITY browser.html.animation_mode.label "Animated image control">
-<!ENTITY browser.html.animation_mode.normal.label "Normal">
-<!ENTITY browser.html.animation_mode.once.label "Once">
-<!ENTITY browser.html.animation_mode.none.label "None (Stop)">
-<!ENTITY browser.html.show_image_placeholders.label "Show image-placeholder on broken/loading one">
-<!ENTITY browser.html.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
+<!ENTITY browser.html.img "Image">
+<!ENTITY browser.html.img.anim.label "Animated image control : ">
+<!ENTITY browser.html.img.anim.normal.label "Normal">
+<!ENTITY browser.html.img.anim.once.label "Once">
+<!ENTITY browser.html.img.anim.none.label "None (Stop)">
+<!ENTITY browser.html.img.resizing.label "Shlink to fit image">
+<!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
+<!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
@@ -43,6 +45,11 @@
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons">
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab and location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
+<!ENTITY browser.urlbar.label "Location Bar">
+<!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar">
+<!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
+<!ENTITY browser.urlbar.richResults.label "Display the dropdown as a richlistbox widget (takes effect after restart, firefox 3.0 &amp; later)">
+<!ENTITY browser.urlbar.maxRichResults.label "Maximum Number of entries in dropdown: ">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of &quot;PrefBar&quot;, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.default.label "Use browser default">
@@ -97,7 +104,7 @@
 <!ENTITY browser.others.urlbarhideGoButton "Hide the Go button next to the location bar">
 <!ENTITY browser.others.urlbarclickSelectsAll "Select the contents of the address bar when it is clicked">
 <!ENTITY browser.others.enableSVG.label "Enable rendering SVG content">
-<!ENTITY browser.others.errorPageEnabled.label "Instead of annoying error dialog messages, display pages">
+<!ENTITY browser.others.errorPageDisabled.label "Annoy error dialog message, not display error-pages">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
 
@@ -175,6 +182,14 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY http.connect.keepAlive.label "Enable Keep-Alive">
 <!ENTITY http.connect.pipeline.label "Enable Pipelining">
 <!ENTITY http.connect.pipeline.desc "WARNING: Pipelining is an experimental feature, designed to improve page-load performance, that is unfortunately not well supported by some web servers and proxies.">
+<!ENTITY http.connect.HTTP10.accesskey "U">
+<!ENTITY http.connect.HTTP10Proxy.accesskey "S">
+<!ENTITY http.connect.HTTP11.accesskey "E">
+<!ENTITY http.connect.HTTP11Proxy.accesskey "T">
+<!ENTITY http.connect.keepAlive.accesskey "K">
+<!ENTITY http.connect.keepAliveProxy.accesskey "A">
+<!ENTITY http.connect.pipeline.accesskey "P">
+<!ENTITY http.connect.pipelineProxy.accesskey "N">
 <!ENTITY http.ad.label "Advanced">
 <!ENTITY http.ad.accept.label "Transmitted 'Accept' HTTP Headers">
 <!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
@@ -282,6 +297,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
 <!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">
 <!ENTITY debug.extension.noCheckCompatibility.label "Do Not check extension compatibility on install/update">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of extensions">
 
 <!ENTITY miliseconds "[ms]">
 <!ENTITY microseconds "[us]">

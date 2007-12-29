@@ -56,6 +56,7 @@
   <preference name="browser.cache.disk.enable" id="browser.cache.disk.enable" type="bool" inverted="true"/>
   <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
   <preference name="extensions.checkCompatibility" id="extensions.checkCompatibility" type="bool" inverted="true"/>
+  <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
 </preferences>
 
 <groupbox>
@@ -83,6 +84,8 @@
 <groupbox>
 <checkbox label="&debug.extension.noCheckCompatibility.label;"
           preference="extensions.checkCompatibility"/>
+<checkbox label="&debug.extension.noCheckUpdateSecurity.label;"
+          preference="extensions.checkUpdateSecurity"/>
 </groupbox>
 
 </prefpane>

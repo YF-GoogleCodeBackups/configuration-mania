@@ -97,6 +97,10 @@ var gPrefBrowser = {
     box = document.getElementById("tabs-closeButtons-all-pane");
     Array.forEach(box.childNodes, disablefunc);
 
+    disabled = ! document.getElementById("urlbar-RichResults").checked;
+    box = document.getElementById("urlbar-maxRichResults-box");
+    Array.forEach(box.childNodes, disablefunc);
+
     disabled = ! document.getElementById("others-editorExternal").checked;
     box = document.getElementById("others-editorExternal-hbox");
     Array.forEach(box.childNodes, disablefunc);
@@ -147,6 +151,7 @@ var gPrefBrowser = {
   <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool"/>
   <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
   <preference id="image.animation_mode" name="image.animation_mode" type="string"/>
+  <preference id="browser.enable_automatic_image_resizing" name="browser.enable_automatic_image_resizin" type="bool"/>
   <preference id="browser.display.show_image_placeholders" name="browser.display.show_image_placeholders" type="bool"/>
   <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
@@ -163,6 +168,11 @@ var gPrefBrowser = {
 
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
+
+  <preference id="browser.urlbar.hideGoButton" name="browser.urlbar.hideGoButton" type="bool"/>
+  <preference id="browser.urlbar.clickSelectsAll" name="browser.urlbar.clickSelectsAll" type="bool"/>
+  <preference id="browser.urlbar.richResults" name="browser.urlbar.richResults" type="bool"/>
+  <preference id="browser.urlbar.maxRichResults" name="browser.urlbar.maxRichResults" type="int"/>
 
   <preference id="general.useragent.override" name="general.useragent.override" type="wstring"/>
 
@@ -181,10 +191,8 @@ var gPrefBrowser = {
   <preference id="browser.sessionhistory.max_viewers" name="browser.sessionhistory.max_viewers" type="int"/>
 
   <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
-  <preference id="browser.urlbar.hideGoButton" name="browser.urlbar.hideGoButton" type="bool"/>
-  <preference id="browser.urlbar.clickSelectsAll" name="browser.urlbar.clickSelectsAll" type="bool"/>
   <preference id="svg.enabled" name="svg.enabled" type="bool"/>
-  <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool"/>
+  <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
 </preferences>
@@ -202,7 +210,7 @@ var gPrefBrowser = {
       <hbox align="center" id="smartbrowsing-keywordsURL-hbox">
         <label control="smartbrowsing-keywordsURL" value="&browser.smartbrowsing.internetKeywords.URL.label;"/>
         <textbox id="smartbrowsing-keywordsURL" preference="keyword.URL" flex="1"/>
-        <button label="&reset;" oncommand="gPrefBrowser.resetKeywordURL()"/>
+        <button label="&reset;" icon="clear" oncommand="gPrefBrowser.resetKeywordURL()"/>
       </hbox>
     </vbox>
   </groupbox>
@@ -235,17 +243,22 @@ var gPrefBrowser = {
   <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
    class="indent" preference="layout.frames.force_resizability"/>
   <groupbox>
-    <caption label="&browser.html.animation_mode.label;"/>
-    <radiogroup preference="image.animation_mode" orient="horizontal">
-      <radio value="normal" label="&browser.html.animation_mode.normal.label;"/>
-      <radio value="once" label="&browser.html.animation_mode.once.label;"/>
-      <radio value="none" label="&browser.html.animation_mode.none.label;"/>
-    </radiogroup>
+    <caption label="&browser.html.img;"/>
+    <hbox align="center">
+      <label value="&browser.html.img.anim.label;" control="html-animation"/>
+      <menulist id="html-animation"><menupopup>
+        <menuitem value="normal" label="&browser.html.img.anim.normal.label;"/>
+        <menuitem value="once" label="&browser.html.img.anim.once.label;"/>
+        <menuitem value="none" label="&browser.html.img.anim.none.label;"/>
+      </menupopup></menulist>
+    </hbox>
+    <checkbox label="&browser.html.img.resizing.label;"
+     preference="browser.enable_automatic_image_resizing"/>
+    <checkbox label="&browser.html.img.show_image_placeholders.label;"
+     preference="browser.display.show_image_placeholders"/>
+    <checkbox label="&browser.html.img.force_inline_alttext.label;"
+     preference="browser.display.force_inline_alttext"/>
   </groupbox>
-  <checkbox label="&browser.html.show_image_placeholders.label;"
-   preference="browser.display.show_image_placeholders"/>
-  <checkbox label="&browser.html.force_inline_alttext.label;"
-   preference="browser.display.force_inline_alttext"/>
 
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
   <groupbox>
@@ -267,8 +280,10 @@ var gPrefBrowser = {
       <radio value="0" label="&browser.tabs.closeButtons.active.label;"/>
       <radio value="1" label="&browser.tabs.closeButtons.all.label;"/>
       <vbox class="indent" id="tabs-closeButtons-all-pane">
-        <label value="&browser.tabs.tabClipWidth.label;" control="tabs-tabClipWidth"/>
-        <textbox class="indent" type="number" hidespinbuttons="true" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
+        <hbox align="center">
+          <label value="&browser.tabs.tabClipWidth.label;" control="tabs-tabClipWidth"/>
+          <textbox class="indent" type="number" hidespinbuttons="true" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
+        </hbox>
         <checkbox preference="browser.tabs.disableBackgroundClose" label="&browser.tabs.disableBackgroundClose.label;"/>
       </vbox>
       <radio value="2" label="&browser.tabs.closeButtons.no.label;"/>
@@ -288,6 +303,15 @@ var gPrefBrowser = {
    preference="browser.chrome.site_icons"/>
   <checkbox label="&browser.bookmarkicon.favicons.lebel;"
    preference="browser.chrome.favicons"/>
+</expander>
+<expander id="urlbar" label="&browser.urlbar.label;" open="false" clearhidden="true">
+  <checkbox id="urlbar-hideGoButton" label="&browser.urlbar.hideGoButton.label;" preference="browser.urlbar.hideGoButton"/>
+  <checkbox label="&browser.urlbar.clickSelectsAll.label;" preference="browser.urlbar.clickSelectsAll"/>
+  <checkbox id="urlbar-richResults" label="&browser.urlbar.richResults.label;" preference="browser.urlbar.richResults" oncommand="gPrefBrowser.updatePrefs()"/>
+  <hbox class="indent" align="center" id="urlbar-maxRichResults-box">
+    <label value="&browser.urlbar.maxRichResults.label;" control="urlbar-maxRichResults"/>
+    <textbox id="urlbar-maxRichResults" type="number" size="2" preference="browser.urlbar.maxRichResults"/>
+  </hbox>
 </expander>
 <expander id="ua" label="&browser.ua.label;" open="false" clearhidden="true">
   <description>&browser.ua.desc;</description>
@@ -389,10 +413,8 @@ var gPrefBrowser = {
 <expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
   <checkbox label="&browser.others.downloadShowAlertOnComplete.label;"
             preference="browser.download.manager.showAlertOnComplete"/>
-  <checkbox label="&browser.others.urlbarhideGoButton;" preference="browser.urlbar.hideGoButton"/>
-  <checkbox label="&browser.others.urlbarclickSelectsAll;" preference="browser.urlbar.clickSelectsAll"/>
   <checkbox label="&browser.others.enableSVG.label;" preference="svg.enabled"/>
-  <checkbox label="&browser.others.errorPageEnabled.label;" preference="browser.xul.error_pages.enabled"/>
+  <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
             oncommand="gPrefBrowser.updatePrefs();"/>

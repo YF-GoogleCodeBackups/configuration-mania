@@ -159,7 +159,7 @@ var gUIPref = {
   <preference id="ui.key.accelKey" name="ui.key.accelKey" type="int"/>
   <preference id="ui.key.menuAccessKey" name="ui.key.menuAccessKey" type="int"/>
 
-  <preference id="general.useragent.locale" name="general.useragent.locale" type="string"/>
+  <preference id="general.useragent.locale" name="general.useragent.locale" type="wstring"/>
   <preference id="bidi.browser.ui" name="bidi.browser.ui" type="bool"/>
   <preference id="bidi.characterset" name="bidi.characterset" type="int"/>
   <preference id="bidi.controlstextmode" name="bidi.controlstextmode" type="int"/>

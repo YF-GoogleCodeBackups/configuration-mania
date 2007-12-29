@@ -79,24 +79,28 @@
     <groupbox flex="1">
       <caption label="&http.connect.direct.label;"/>
       <radiogroup id="httpVersion" preference="network.http.version">
-        <radio value="1.0" label="&http.connect.HTTP10.label;"/>
-        <radio value="1.1" label="&http.connect.HTTP11.label;"/>
+        <radio value="1.0" label="&http.connect.HTTP10.label;" accesskey="&http.connect.HTTP10.accesskey;"/>
+        <radio value="1.1" label="&http.connect.HTTP11.label;" accesskey="&http.connect.HTTP11.accesskey;"/>
       </radiogroup>
       <checkbox id="enableKeepAlive" label="&http.connect.keepAlive.label;"
+                accesskey="&http.connect.keepAlive.accesskey;"
                 preference="network.http.keep-alive"/>
       <checkbox id="enablePipelining" label="&http.connect.pipeline.label;"
+                accesskey="&http.connect.pipeline.accesskey;"
                 preference="network.http.pipelining"/>
     </groupbox>
 
     <groupbox flex="1">
       <caption label="&http.connect.proxy.label;"/>
       <radiogroup id="httpVersionProxy" preference="network.http.proxy.version">
-        <radio value="1.0" label="&http.connect.HTTP10.label;"/>
-        <radio value="1.1" label="&http.connect.HTTP11.label;"/>
+        <radio value="1.0" label="&http.connect.HTTP10.label;" accesskey="&http.connect.HTTP10Proxy.accesskey;"/>
+        <radio value="1.1" label="&http.connect.HTTP11.label;" accesskey="&http.connect.HTTP11Proxy.accesskey;"/>
       </radiogroup>
       <checkbox id="enableKeepAliveProxy" label="&http.connect.keepAlive.label;"
+                accesskey="&http.connect.keepAliveProxy.accesskey;"
                 preference="network.http.proxy.keep-alive"/>
       <checkbox id="enablePipeliningProxy" label="&http.connect.pipeline.label;"
+                accesskey="&http.connect.pipelineProxy.accesskey;"
                 preference="network.http.proxy.pipelining"/>
     </groupbox>
   </hbox>

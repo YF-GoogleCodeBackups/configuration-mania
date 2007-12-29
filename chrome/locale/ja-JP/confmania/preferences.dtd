@@ -18,12 +18,14 @@
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
 <!ENTITY browser.html.enableFrame.label "フレームを有効にする">
 <!ENTITY browser.html.frameForceResizability.label "フレームを強制的にサイズ変更できるようにする">
-<!ENTITY browser.html.animation_mode.label "GIF アニメーションの動作">
-<!ENTITY browser.html.animation_mode.normal.label "通常">
-<!ENTITY browser.html.animation_mode.once.label "一度だけ">
-<!ENTITY browser.html.animation_mode.none.label "なし(静止)">
-<!ENTITY browser.html.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
-<!ENTITY browser.html.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
+<!ENTITY browser.html.img "画像">
+<!ENTITY browser.html.img.anim.label "GIF アニメーションの動作 : ">
+<!ENTITY browser.html.img.anim.normal.label "標準">
+<!ENTITY browser.html.img.anim.once.label "一度だけ">
+<!ENTITY browser.html.img.anim.none.label "なし(静止)">
+<!ENTITY browser.html.img.resizing.label "ページサイズに合わせて画像を縮小">
+<!ENTITY browser.html.img.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
+<!ENTITY browser.html.img.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
 <!ENTITY browser.html.focus.enabled.label "フォーカスされたオブジェクトをハイライト表示する">
@@ -43,6 +45,11 @@
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン">
 <!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
+<!ENTITY browser.urlbar.label "ロケーションバー">
+<!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す">
+<!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
+<!ENTITY browser.urlbar.richResults.label "ドロップダウンをリッチ表示で (再起動が必要, firefox 3以降向け)">
+<!ENTITY browser.urlbar.maxRichResults.label "表示するエントリ数の最大値: ">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "警告: おそらくこの設定が &quot;PrefBar&quot; や &quot;User Agent Switcher&quot; 等と競合するかもしれません。">
 <!ENTITY browser.ua.default.label "ブラウザの標準を使用する">
@@ -98,7 +105,7 @@
 <!ENTITY browser.others.urlbarhideGoButton "場所バーの隣りの移動ボタンを隠す">
 <!ENTITY browser.others.urlbarclickSelectsAll "場所バーをクリック時に内容を選択する">
 <!ENTITY browser.others.enableSVG.label "SVG を表示する">
-<!ENTITY browser.others.errorPageEnabled.label "エラーダイアログを表示しないで、エラーページでその旨を表示する">
+<!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで通知">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
 
@@ -175,6 +182,14 @@
 <!ENTITY http.connect.keepAlive.label "接続の持続 (Keep-Alive) を有効にする">
 <!ENTITY http.connect.pipeline.label "パイプラインを有効にする">
 <!ENTITY http.connect.pipeline.desc "警告: パイプラインは実験的な機能です。ページ読み込みパフォーマンスを向上させるためのものですが、残念なことに一部の Web サーバやプロキシはうまくサポートしていません。">
+<!ENTITY http.connect.HTTP10.accesskey "U">
+<!ENTITY http.connect.HTTP10Proxy.accesskey "S">
+<!ENTITY http.connect.HTTP11.accesskey "E">
+<!ENTITY http.connect.HTTP11Proxy.accesskey "T">
+<!ENTITY http.connect.keepAlive.accesskey "K">
+<!ENTITY http.connect.keepAliveProxy.accesskey "A">
+<!ENTITY http.connect.pipeline.accesskey "P">
+<!ENTITY http.connect.pipelineProxy.accesskey "N">
 <!ENTITY http.ad.label "詳細">
 <!ENTITY http.ad.accept.label "送信される 'Accept' HTTP ヘッダ">
 <!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
@@ -282,6 +297,7 @@
 <!ENTITY debug.cache.diskCacheDisable.label "ディスクキャッシュを無効にする">
 <!ENTITY debug.cache.memoryCacheDisable.label "メモリーキャッシュを無効にする">
 <!ENTITY debug.extension.noCheckCompatibility.label "インストール/更新時の拡張機能のバージョンチェックを回避">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "拡張機能の署名チェックを回避">
 
 <!ENTITY miliseconds "ミリ秒">
 <!ENTITY microseconds "&#x03bc;秒">
