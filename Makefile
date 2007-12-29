@@ -13,7 +13,7 @@ clean:
 chrome/$(EXTENSIONNAME).jar:
 	cd chrome ; \
 	zip -9qr $(EXTENSIONNAME).jar \
-		content locale skin ; \
+		content locale skin -x@../exclude.lst ; \
 	cd ..
 
 $(EXTENSIONNAME).xpi: chrome/$(EXTENSIONNAME).jar
@@ -21,4 +21,5 @@ $(EXTENSIONNAME).xpi: chrome/$(EXTENSIONNAME).jar
 		chrome/$(EXTENSIONNAME).jar \
 		*.rdf chrome.manifest \
 #		components defaults/preferences \
+#		-x@exclude.lst
 	chmod 0644 $(EXTENSIONNAME).xpi
