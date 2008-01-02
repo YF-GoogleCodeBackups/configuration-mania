@@ -97,7 +97,7 @@ var gPrefBrowser = {
     box = document.getElementById("tabs-closeButtons-all-pane");
     Array.forEach(box.childNodes, disablefunc);
 
-    disabled = ! document.getElementById("urlbar-RichResults").checked;
+    disabled = ! document.getElementById("urlbar-richResults").checked;
     box = document.getElementById("urlbar-maxRichResults-box");
     Array.forEach(box.childNodes, disablefunc);
 
