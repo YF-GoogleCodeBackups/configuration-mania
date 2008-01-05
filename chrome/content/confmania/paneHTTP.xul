@@ -121,26 +121,29 @@
 </groupbox>
 <groupbox>
   <caption label="&http.ad.maxsession.label;"/>
-  <description>&http.ad.maxsession.desc;</description>
+  <description class="emphasis">&http.ad.maxsession.desc;</description>
   <hbox align="center">
     <label control="maxpipeliningrequest" value="&http.ad.maxsession.maxpipeliningrequest.label;"/>
-    <textbox id="maxpipeliningrequest" type="number" size="1" preference="network.http.pipelining.maxrequests"/>
+    <textbox id="maxpipeliningrequest" type="number" min="1" size="1" preference="network.http.pipelining.maxrequests"/>
   </hbox>
   <hbox align="center">
     <label control="maxconnections" value="&http.ad.maxsession.maxconnections.label;"/>
-    <textbox id="maxconnections" type="number" size="2" preference="network.http.max-connections"/>
+    <textbox id="maxconnections" type="number" min="1" size="2" preference="network.http.max-connections"/>
   </hbox>
   <hbox class="indent" align="center">
     <label control="maxconnectionsPerServer" value="&http.ad.maxsession.maxconnectionsPerServer.label;"/>
-    <textbox id="maxconnectionsPerServer" type="number" size="1" preference="network.http.max-connections-per-server"/>
+    <textbox id="maxconnectionsPerServer" type="number" min="1" size="1" preference="network.http.max-connections-per-server"/>
   </hbox>
-  <hbox class="indent" align="center">
-    <label control="maxpersistentconnectionsPerServer" value="&http.ad.maxsession.maxpersistentconnectionsPerServer.label;"/>
-    <textbox id="maxpersistentconnectionsPerServer" type="number" size="1" preference="network.http.max-persistent-connections-per-server"/>
-  </hbox>
+  <vbox class="indent">
+    <hbox align="center">
+      <label control="maxpersistentconnectionsPerServer" value="&http.ad.maxsession.maxpersistentconnectionsPerServer.label;"/>
+      <textbox id="maxpersistentconnectionsPerServer" min="1" type="number" size="1" preference="network.http.max-persistent-connections-per-server" onchange="this.className = (parseInt(this.value) > 2)? 'error' : '';" />
+    </hbox>
+    <description class="indent">&http.ad.maxsession.maxpersistentconnectionsPerServer.caution;</description>
+  </vbox>
   <hbox class="indent" align="center">
     <label control="maxpersistentconnectionsPerProxy" value="&http.ad.maxsession.maxpersistentconnectionsPerProxy.label;"/>
-    <textbox id="maxpersistentconnectionsPerProxy" type="number" size="1" preference="network.http.max-persistent-connections-per-proxy"/>
+    <textbox id="maxpersistentconnectionsPerProxy" min="1" type="number" size="1" preference="network.http.max-persistent-connections-per-proxy"/>
   </hbox>
 
 </groupbox>

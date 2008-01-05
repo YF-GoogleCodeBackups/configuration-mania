@@ -200,6 +200,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY http.ad.maxsession.maxconnections.label "Max Connection (Total)">
 <!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "Max Connection (per Server)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "Max Persistent Connection (per Server)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "Caution: SHOULD NOT maintain more than 2 (RFC 2616)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "Max Persistent Connection (via Proxy)">
 
 <!ENTITY ui.title "UI">
@@ -296,8 +297,8 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.cache.disableXULCache.label "Disable XUL Cache">
 <!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
 <!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">
-<!ENTITY debug.extension.noCheckCompatibility.label "Do Not check extension compatibility on install/update">
-<!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of extensions">
+<!ENTITY debug.extension.noCheckCompatibility.label "Do Not check add-on compatibility on install/update">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
 
 <!ENTITY miliseconds "[ms]">
 <!ENTITY microseconds "[us]">

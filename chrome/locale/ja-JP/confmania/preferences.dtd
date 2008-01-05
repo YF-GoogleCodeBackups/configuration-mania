@@ -200,6 +200,7 @@
 <!ENTITY http.ad.maxsession.maxconnections.label "最大接続数 (延べ)">
 <!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "最大接続数 (サーバ当たり)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "注意: 2 を超えるべからず (RFC 2616)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
 
 <!ENTITY ui.title "インターフェイス">
@@ -296,8 +297,8 @@
 <!ENTITY debug.cache.disableXULCache.label "XUL キャッシュを無効にする">
 <!ENTITY debug.cache.diskCacheDisable.label "ディスクキャッシュを無効にする">
 <!ENTITY debug.cache.memoryCacheDisable.label "メモリーキャッシュを無効にする">
-<!ENTITY debug.extension.noCheckCompatibility.label "インストール/更新時の拡張機能のバージョンチェックを回避">
-<!ENTITY debug.extension.noCheckUpdateSecurity.label "拡張機能の署名チェックを回避">
+<!ENTITY debug.extension.noCheckCompatibility.label "インストール/更新時のアドオンのバージョンチェックを回避">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "アドオンの署名チェックを回避">
 
 <!ENTITY miliseconds "ミリ秒">
 <!ENTITY microseconds "&#x03bc;秒">

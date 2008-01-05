@@ -14,4 +14,9 @@
 
 .emphasis{ font-weight: bold ! important; }
 
+.error, .error hbox.textbox-input-box {
+  background-color: yellow;
+  color: red;
+}
+
 *|*:-moz-any-link:hover{ color: blue; text-decoration: underline; }
