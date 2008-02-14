@@ -48,7 +48,8 @@
 <!ENTITY browser.urlbar.label "ロケーションバー">
 <!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す">
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
-<!ENTITY browser.urlbar.richResults.label "ドロップダウンをリッチ表示で (再起動が必要, firefox 3以降向け)">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
+<!ENTITY browser.urlbar.richResults.label "firefox3のリッチ表示のドロップダウンを使わない (再起動が必要)">
 <!ENTITY browser.urlbar.maxRichResults.label "表示するエントリ数の最大値: ">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "警告: おそらくこの設定が &quot;PrefBar&quot; や &quot;User Agent Switcher&quot; 等と競合するかもしれません。">

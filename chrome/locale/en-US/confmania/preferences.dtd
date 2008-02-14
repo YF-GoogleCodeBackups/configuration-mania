@@ -48,7 +48,8 @@
 <!ENTITY browser.urlbar.label "Location Bar">
 <!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
-<!ENTITY browser.urlbar.richResults.label "Display the dropdown as a richlistbox widget (takes effect after restart, firefox 3.0 &amp; later)">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked">
+<!ENTITY browser.urlbar.richResults.label "Do NOT display the dropdown as a firefox3&quot;s richlistbox widget (takes effect after restart)">
 <!ENTITY browser.urlbar.maxRichResults.label "Maximum Number of entries in dropdown: ">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of &quot;PrefBar&quot;, &quot;User Agent Switcher&quot; and so on.">
