@@ -50,7 +50,7 @@
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
 <!ENTITY browser.urlbar.richResults.label "firefox3のリッチ表示のドロップダウンを使わない (再起動が必要)">
-<!ENTITY browser.urlbar.maxRichResults.label "表示するエントリ数の最大値: ">
+<!ENTITY browser.urlbar.maxRichResults.label "リッチ表示のドロップダウンでの最大表示数: ">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "警告: おそらくこの設定が &quot;PrefBar&quot; や &quot;User Agent Switcher&quot; 等と競合するかもしれません。">
 <!ENTITY browser.ua.default.label "ブラウザの標準を使用する">

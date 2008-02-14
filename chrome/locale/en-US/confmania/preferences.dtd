@@ -50,7 +50,7 @@
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked">
 <!ENTITY browser.urlbar.richResults.label "Do NOT display the dropdown as a firefox3&quot;s richlistbox widget (takes effect after restart)">
-<!ENTITY browser.urlbar.maxRichResults.label "Maximum Number of entries in dropdown: ">
+<!ENTITY browser.urlbar.maxRichResults.label "Maximum # of entries in firefox3&quot;s richlistbox dropdown: ">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of &quot;PrefBar&quot;, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.default.label "Use browser default">

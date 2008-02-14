@@ -311,11 +311,11 @@ var gPrefBrowser = {
   <checkbox label="&browser.urlbar.doubleClickSelectsAll.label;" preference="browser.urlbar.doubleClickSelectsAll"/>
 <!--
   <checkbox id="urlbar-richResults" label="&browser.urlbar.richResults.label;" preference="browser.urlbar.richResults" oncommand="gPrefBrowser.updatePrefs()"/>
-  <hbox class="indent" align="center" id="urlbar-maxRichResults-box">
+-->
+  <hbox align="center" id="urlbar-maxRichResults-box">
     <label value="&browser.urlbar.maxRichResults.label;" control="urlbar-maxRichResults"/>
     <textbox id="urlbar-maxRichResults" type="number" size="2" preference="browser.urlbar.maxRichResults"/>
   </hbox>
--->
 </expander>
 <expander id="ua" label="&browser.ua.label;" open="false" clearhidden="true">
   <description>&browser.ua.desc;</description>
