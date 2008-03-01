@@ -101,8 +101,15 @@
 <!ENTITY browser.speed-cache.prefetch-next.label "リンク先読み (prefetch) 機構を有効にする">
 <!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "推奨値: 5 (最近表示したページが瞬時に表示!), 標準: 3">
+<!ENTITY browser.download.label "ダウンロード">
+<!ENTITY browser.download.downloadShowAlertOnComplete.label "ダウンロード終了時に通知する">
+<!ENTITY browser.download.alerts.label "通知アラート表示の設定">
+<!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
+<!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
+<!ENTITY browser.download.alerts.slide.prefix.label "">
+<!ENTITY browser.download.alerts.slide.per.label "ピクセルづつ動かす。時間間隔は">
+<!ENTITY browser.download.alerts.slide.settolight.label "軽い設定にする">
 <!ENTITY browser.others.label "その他">
-<!ENTITY browser.others.downloadShowAlertOnComplete.label "ダウンロード終了時に通知する">
 <!ENTITY browser.others.urlbarhideGoButton "場所バーの隣りの移動ボタンを隠す">
 <!ENTITY browser.others.urlbarclickSelectsAll "場所バーをクリック時に内容を選択する">
 <!ENTITY browser.others.enableSVG.label "SVG を表示する">
@@ -301,10 +308,8 @@
 <!ENTITY miliseconds "ミリ秒">
 <!ENTITY microseconds "&#x03bc;秒">
 <!ENTITY seconds "秒">
-<!ENTITY minutes "分">
 <!ENTITY days "日">
 <!ENTITY kilobytes "KB">
-<!ENTITY none "(なし)">
-<!ENTITY disabled "無効">
 <!ENTITY reset "標準に戻す">
 <!ENTITY browse "参照...">
+<!ENTITY preview "プレビュー">

@@ -100,8 +100,15 @@
 <!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
 <!ENTITY browser.speed-cache.session-history-viewers.label "The # of latest page-displays to be cached">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "Recommended: 5 (recently viewed pages appear instantly!), Default: 3">
+<!ENTITY browser.download.label "Download">
+<!ENTITY browser.download.downloadShowAlertOnComplete.label "Show alert on complete download">
+<!ENTITY browser.download.alerts.label "The Alerts configration">
+<!ENTITY browser.download.alerts.totalOpenTime "Show alerts for">
+<!ENTITY browser.download.alerts.slide.label "Speed of alert slide-animation">
+<!ENTITY browser.download.alerts.slide.prefix.label "Move the alerts by">
+<!ENTITY browser.download.alerts.slide.per.label "pixels per">
+<!ENTITY browser.download.alerts.slide.settolight.label "Set light conf.">
 <!ENTITY browser.others.label "Others">
-<!ENTITY browser.others.downloadShowAlertOnComplete.label "Show alert on complete download">
 <!ENTITY browser.others.urlbarhideGoButton "Hide the Go button next to the location bar">
 <!ENTITY browser.others.urlbarclickSelectsAll "Select the contents of the address bar when it is clicked">
 <!ENTITY browser.others.enableSVG.label "Enable rendering SVG content">
@@ -301,10 +308,8 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY miliseconds "[ms]">
 <!ENTITY microseconds "[us]">
 <!ENTITY seconds "seconds">
-<!ENTITY minutes "minutes">
 <!ENTITY days "days">
 <!ENTITY kilobytes "KB">
-<!ENTITY none "(none)">
-<!ENTITY disabled "Disabled">
 <!ENTITY reset "Reset">
 <!ENTITY browse "Browse...">
+<!ENTITY preview "Preview">

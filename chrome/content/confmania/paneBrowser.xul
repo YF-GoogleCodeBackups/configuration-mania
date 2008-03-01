@@ -64,6 +64,10 @@ var gPrefBrowser = {
       if(document.getElementById(ele.getAttribute("preference")).value == null)
         hash[i](ele);
     }
+
+    if (! document.documentElement.instantApply) {
+      document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
+    }
   },
   updatePrefs : function(){
     var disabled, box;
@@ -136,6 +140,19 @@ var gPrefBrowser = {
 
     if(fp.show() == nsIFilePicker.returnOK)
       document.getElementById("others-editorExternal-path").value = fp.file.path;
+  },
+  previewAlert : function(title, val){
+    var alertsService = Components.classes["@mozilla.org/alerts-service;1"]
+     .getService(Components.interfaces.nsIAlertsService);
+    alertsService.showAlertNotification("", title, val, false, "cookie", null);
+  },
+  resetAlertsSlide : function(){//#alerts.slide*
+    document.getElementById("alerts.slideIncrement").reset();
+    document.getElementById("alerts.slideIncrementTime").reset();
+  },
+  setAlertsSlideLight : function(){//#alerts.slide*
+    document.getElementById("alerts.slideIncrement").value = 20;
+    document.getElementById("alerts.slideIncrementTime").value = 20;
   }
 };
 ]]></script>
@@ -192,6 +209,10 @@ var gPrefBrowser = {
   <preference id="browser.sessionhistory.max_viewers" name="browser.sessionhistory.max_viewers" type="int"/>
 
   <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
+  <preference id="alerts.slideIncrement" name="alerts.slideIncrement" type="int"/>
+  <preference id="alerts.slideIncrementTime" name="alerts.slideIncrementTime" type="int"/>
+  <preference id="alerts.totalOpenTime" name="alerts.totalOpenTime" type="int"/>
+
   <preference id="svg.enabled" name="svg.enabled" type="bool"/>
   <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
@@ -414,9 +435,36 @@ var gPrefBrowser = {
   <description class="indent">&browser.speed-cache.session-history-viewers.desc;</description>
 </expander>
 
-<expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
-  <checkbox label="&browser.others.downloadShowAlertOnComplete.label;"
+<expander id="download" label="&browser.download.label;" open="false" clearhidden="true">
+  <checkbox label="&browser.download.downloadShowAlertOnComplete.label;"
             preference="browser.download.manager.showAlertOnComplete"/>
+
+  <groupbox>
+    <caption label="&browser.download.alerts.label;"/>
+    <hbox align="center">
+      <label control="browserTotalOpenTime" value="&browser.download.alerts.totalOpenTime;"/>
+      <textbox id="browserTotalOpenTime" type="number" hidespinbuttons="true" size="5" preference="alerts.totalOpenTime"/>
+      <label value="&miliseconds;"/>
+    </hbox>
+    <groupbox>
+      <caption label="&browser.download.alerts.slide.label;"/>
+      <hbox align="center">
+        <label value="&browser.download.alerts.slide.prefix.label;"/>
+        <textbox type="number" size="3" preference="alerts.slideIncrement"/>
+        <label value="&browser.download.alerts.slide.per.label;"/>
+        <textbox type="number" hidespinbuttons="true" size="5" preference="alerts.slideIncrementTime"/>
+        <label value="&miliseconds;"/>
+      </hbox>
+      <hbox>
+        <button id="alertsPreviewButton" label="&preview;" oncommand="gPrefBrowser.previewAlert(this.label, this.label);"/>
+        <button label="&reset;" icon="clear" oncommand="gPrefBrowser.resetAlertsSlide();"/>
+        <button label="&browser.download.alerts.slide.settolight.label;" oncommand="gPrefBrowser.setAlertsSlideLight();"/>
+      </hbox>
+    </groupbox>
+  </groupbox>
+</expander>
+
+<expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
   <checkbox label="&browser.others.enableSVG.label;" preference="svg.enabled"/>
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 
