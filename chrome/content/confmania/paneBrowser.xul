@@ -151,7 +151,7 @@ var gPrefBrowser = {
     document.getElementById("alerts.slideIncrementTime").reset();
   },
   setAlertsSlideLight : function(){//#alerts.slide*
-    document.getElementById("alerts.slideIncrement").value = 20;
+    document.getElementById("alerts.slideIncrement").value = 10;
     document.getElementById("alerts.slideIncrementTime").value = 20;
   }
 };
@@ -461,12 +461,12 @@ var gPrefBrowser = {
       <caption label="&browser.download.alerts.slide.label;"/>
       <hbox align="center">
         <label value="&browser.download.alerts.slide.prefix.label;"/>
-        <textbox type="number" size="3" preference="alerts.slideIncrement"/>
+        <textbox type="number" size="3" min="1" preference="alerts.slideIncrement"/>
         <label value="&browser.download.alerts.slide.per.label;"/>
         <textbox type="number" hidespinbuttons="true" size="5" preference="alerts.slideIncrementTime"/>
         <label value="&miliseconds;"/>
       </hbox>
-      <hbox>
+      <hbox pack="end">
         <button id="alertsPreviewButton" label="&preview;" oncommand="gPrefBrowser.previewAlert(this.label, this.label);"/>
         <button label="&reset;" icon="clear" oncommand="gPrefBrowser.resetAlertsSlide();"/>
         <button label="&browser.download.alerts.slide.settolight.label;" oncommand="gPrefBrowser.setAlertsSlideLight();"/>
