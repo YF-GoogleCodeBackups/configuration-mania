@@ -211,9 +211,6 @@
 <!ENTITY ui.mousewheel.vertiscroll.label "垂直スクロール">
 <!ENTITY ui.mousewheel.horizscroll.label "水平スクロール">
 <!ENTITY ui.mousewheel.usingJustTheWheel.label "なし">
-<!ENTITY ui.mousewheel.usingWheelAndAlt.label "Alt">
-<!ENTITY ui.mousewheel.usingWheelAndCtrl.label "Control">
-<!ENTITY ui.mousewheel.usingWheelAndShift.label "Shift">
 <!ENTITY ui.mousewheel.scroll.label "文書を">
 <!ENTITY ui.mousewheel.scrollLines.label "行づつスクロールする">
 <!ENTITY ui.mousewheel.useSystemDefault.label "システムの標準設定を使用する">
@@ -308,5 +305,6 @@
 <!ENTITY days "日">
 <!ENTITY kilobytes "KB">
 <!ENTITY none "(なし)">
+<!ENTITY disabled "無効">
 <!ENTITY reset "標準に戻す">
 <!ENTITY browse "参照...">

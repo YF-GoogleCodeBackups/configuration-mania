@@ -211,9 +211,6 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.mousewheel.vertiscroll.label "Vertical-scroll">
 <!ENTITY ui.mousewheel.horizscroll.label "Horizontal-scroll">
 <!ENTITY ui.mousewheel.usingJustTheWheel.label "No Modifier">
-<!ENTITY ui.mousewheel.usingWheelAndAlt.label "Alt">
-<!ENTITY ui.mousewheel.usingWheelAndCtrl.label "Control">
-<!ENTITY ui.mousewheel.usingWheelAndShift.label "Shift">
 <!ENTITY ui.mousewheel.scroll.label "Scroll document by">
 <!ENTITY ui.mousewheel.scrollLines.label "lines.">
 <!ENTITY ui.mousewheel.useSystemDefault.label "Use system default">
@@ -308,5 +305,6 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY days "days">
 <!ENTITY kilobytes "KB">
 <!ENTITY none "(none)">
+<!ENTITY disabled "Disabled">
 <!ENTITY reset "Reset">
 <!ENTITY browse "Browse...">

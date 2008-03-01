@@ -205,9 +205,9 @@ var gUIPref = {
        oncommand="gUIPref.updateMouseWheelMode();">
         <menupopup>
           <menuitem label="&ui.mousewheel.usingJustTheWheel.label;" value="No" selected="true"/>
-          <menuitem label="&ui.mousewheel.usingWheelAndAlt.label;" value="Alt"/>
-          <menuitem label="&ui.mousewheel.usingWheelAndCtrl.label;" value="Ctrl"/>
-          <menuitem label="&ui.mousewheel.usingWheelAndShift.label;" value="Shift"/>
+          <menuitem label="Alt" value="Alt"/>
+          <menuitem label="Ctrl" value="Ctrl"/>
+          <menuitem label="Shift" value="Shift"/>
         </menupopup>
       </menulist>
       <label value="&ui.mousewheel.mouseWheelPanel2.label;"/>
