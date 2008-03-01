@@ -8,9 +8,13 @@
 <!ENTITY browser.smartbrowsing.internetKeywords.desc "Internet Keywords を使って、ロケーションバーから検索、その他の情報に素早くアクセスできます。">
 <!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Internet Keywords を有効にする">
 <!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL の接頭辞 : ">
+<!ENTITY browser.smartbrowsing.autoComplete.label "ロケーションバーの自動補完">
+<!ENTITY browser.smartbrowsing.autoComplete.autoFill.label "ロケーションバーに入力した文字列を自動的に補完">
+<!ENTITY browser.smartbrowsing.autoComplete.matchOnlyTyped.label "以前に入力した Web サイトにのみ一致するリストを表示">
+<!ENTITY browser.smartbrowsing.autoComplete.richResults.label "リッチ表示のドロップダウン (Firefox3以降)">
+<!ENTITY browser.smartbrowsing.autoComplete.richResults.maxRichResults.label "最大表示項目数">
 <!ENTITY browser.smartbrowsing.domainGuessing.label "ドメイン補完">
-<!ENTITY browser.smartbrowsing.domainGuessing.desc "Web ページがみつからないときに、自動的に接頭辞と接尾辞を補完します。">
-<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "ドメイン補完を有効にする">
+<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Web ページがみつからないときに、自動的に接頭辞と接尾辞を補完">
 <!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "接頭辞 : ">
 <!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "接尾辞 : ">
 <!ENTITY browser.html.label "ページ表示制御">
@@ -49,8 +53,6 @@
 <!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す">
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
-<!ENTITY browser.urlbar.richResults.label "firefox3のリッチ表示のドロップダウンを使わない (再起動が必要)">
-<!ENTITY browser.urlbar.maxRichResults.label "リッチ表示のドロップダウンでの最大表示数: ">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "警告: おそらくこの設定が &quot;PrefBar&quot; や &quot;User Agent Switcher&quot; 等と競合するかもしれません。">
 <!ENTITY browser.ua.default.label "ブラウザの標準を使用する">

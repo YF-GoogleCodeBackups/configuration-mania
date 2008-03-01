@@ -78,6 +78,10 @@ var gPrefBrowser = {
     box = document.getElementById("smartbrowsing-keywordsURL-hbox");
     Array.forEach(box.childNodes, disablefunc);
 
+//  disabled = document.getElementById("smartbrowsing-richResults").checked;
+//  box = document.getElementById("smartbrowsing-maxRichResults-box");
+//  Array.forEach(box.childNodes, disablefunc);
+
     disabled = ! document.getElementById("smartbrowsing-domainGuessingEnabled").checked;
     box = document.getElementById("smartbrowsing-domainGuessingEnabled-hbox");
     Array.forEach(box.childNodes, disablefunc);
@@ -100,10 +104,6 @@ var gPrefBrowser = {
     disabled = document.getElementById("tabs-closeButtons").selectedIndex != 1;
     box = document.getElementById("tabs-closeButtons-all-pane");
     Array.forEach(box.childNodes, disablefunc);
-
-//  disabled = document.getElementById("urlbar-richResults").checked;
-//  box = document.getElementById("urlbar-maxRichResults-box");
-//  Array.forEach(box.childNodes, disablefunc);
 
     disabled = ! document.getElementById("others-editorExternal").checked;
     box = document.getElementById("others-editorExternal-hbox");
@@ -160,6 +160,10 @@ var gPrefBrowser = {
 <preferences>
   <preference id="keyword.enabled" name="keyword.enabled" type="bool"/>
   <preference id="keyword.URL" name="keyword.URL" type="wstring"/>
+  <preference id="browser.urlbar.autoFill" name="browser.urlbar.autoFill" type="bool"/>
+  <preference id="browser.urlbar.matchOnlyTyped" name="browser.urlbar.matchOnlyTyped" type="bool"/>
+  <!--preference id="browser.urlbar.richResults" name="browser.urlbar.richResults" type="bool" inverted="true"/-->
+  <preference id="browser.urlbar.maxRichResults" name="browser.urlbar.maxRichResults" type="int"/>
   <preference id="browser.fixup.alternate.enabled" name="browser.fixup.alternate.enabled" type="bool"/>
   <preference id="browser.fixup.alternate.prefix" name="browser.fixup.alternate.prefix" type="string"/>
   <preference id="browser.fixup.alternate.suffix" name="browser.fixup.alternate.suffix" type="string"/>
@@ -189,8 +193,6 @@ var gPrefBrowser = {
   <preference id="browser.urlbar.hideGoButton" name="browser.urlbar.hideGoButton" type="bool"/>
   <preference id="browser.urlbar.clickSelectsAll" name="browser.urlbar.clickSelectsAll" type="bool"/>
   <preference id="browser.urlbar.doubleClickSelectsAll" name="browser.urlbar.doubleClickSelectsAll" type="bool"/>
-  <!--preference id="browser.urlbar.richResults" name="browser.urlbar.richResults" type="bool" inverted="true"/-->
-  <preference id="browser.urlbar.maxRichResults" name="browser.urlbar.maxRichResults" type="int"/>
 
   <preference id="general.useragent.override" name="general.useragent.override" type="wstring"/>
 
@@ -237,25 +239,41 @@ var gPrefBrowser = {
     </vbox>
   </groupbox>
   <groupbox>
-    <caption label="&browser.smartbrowsing.domainGuessing.label;"/>
-    <description>&browser.smartbrowsing.domainGuessing.desc;</description>
-    <vbox>
-      <checkbox id="smartbrowsing-domainGuessingEnabled"
-            label="&browser.smartbrowsing.domainGuessing.enabled.label;"
-            oncommand="gPrefBrowser.updatePrefs()"
-            preference="browser.fixup.alternate.enabled"/>
-      <hbox id="smartbrowsing-domainGuessingEnabled-hbox" align="center">
-        <label control="smartbrowsing-domainGuessingPrefix"
-               value="&browser.smartbrowsing.domainGuessing.prefix.label;"/>
-        <textbox id="smartbrowsing-domainGuessingPrefix"
-          preference="browser.fixup.alternate.prefix" flex="1"/>
-        <spacer flex="1"/>
-        <label control="smartbrowsing-domainGuessingSuffix"
-               value="&browser.smartbrowsing.domainGuessing.suffix.label;"/>
-        <textbox id="smartbrowsing-domainGuessingSuffix"
-                 preference="browser.fixup.alternate.suffix" flex="1"/>
+    <caption label="&browser.smartbrowsing.autoComplete.label;"/>
+
+    <checkbox id="smartbrowsing-cbxAutoFill" label="&browser.smartbrowsing.autoComplete.autoFill.label;"
+              preference="browser.urlbar.autoFill" />
+    <checkbox id="smartbrowsing-cbxMatchOnlyTyped" label="&browser.smartbrowsing.autoComplete.matchOnlyTyped.label;"
+              preference="browser.urlbar.matchOnlyTyped" />
+    <groupbox>
+      <caption label="&browser.smartbrowsing.autoComplete.richResults.label;"/>
+      <!--
+      <checkbox id="smartbrowsing-richResults" label="" preference="browser.urlbar.richResults" oncommand="gPrefBrowser.updatePrefs()"/>
+      -->
+      <hbox align="center" id="smartbrowsing-maxRichResults-box">
+        <label value="&browser.smartbrowsing.autoComplete.richResults.maxRichResults.label;" control="smartbrowsing-maxRichResults"/>
+        <textbox id="smartbrowsing-maxRichResults" type="number" size="2" preference="browser.urlbar.maxRichResults"/>
       </hbox>
-    </vbox>
+    </groupbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&browser.smartbrowsing.domainGuessing.label;"/>
+
+    <checkbox id="smartbrowsing-domainGuessingEnabled"
+          label="&browser.smartbrowsing.domainGuessing.enabled.label;"
+          oncommand="gPrefBrowser.updatePrefs()"
+          preference="browser.fixup.alternate.enabled"/>
+    <hbox id="smartbrowsing-domainGuessingEnabled-hbox" align="center">
+      <label control="smartbrowsing-domainGuessingPrefix"
+             value="&browser.smartbrowsing.domainGuessing.prefix.label;"/>
+      <textbox id="smartbrowsing-domainGuessingPrefix"
+        preference="browser.fixup.alternate.prefix" flex="1"/>
+      <spacer flex="1"/>
+      <label control="smartbrowsing-domainGuessingSuffix"
+             value="&browser.smartbrowsing.domainGuessing.suffix.label;"/>
+      <textbox id="smartbrowsing-domainGuessingSuffix"
+               preference="browser.fixup.alternate.suffix" flex="1"/>
+    </hbox>
   </groupbox>
 </expander>
 <expander id="html" label="&browser.html.label;" open="false" clearhidden="true">
@@ -330,13 +348,6 @@ var gPrefBrowser = {
   <checkbox id="urlbar-hideGoButton" label="&browser.urlbar.hideGoButton.label;" preference="browser.urlbar.hideGoButton"/>
   <checkbox label="&browser.urlbar.clickSelectsAll.label;" preference="browser.urlbar.clickSelectsAll"/>
   <checkbox label="&browser.urlbar.doubleClickSelectsAll.label;" preference="browser.urlbar.doubleClickSelectsAll"/>
-<!--
-  <checkbox id="urlbar-richResults" label="&browser.urlbar.richResults.label;" preference="browser.urlbar.richResults" oncommand="gPrefBrowser.updatePrefs()"/>
--->
-  <hbox align="center" id="urlbar-maxRichResults-box">
-    <label value="&browser.urlbar.maxRichResults.label;" control="urlbar-maxRichResults"/>
-    <textbox id="urlbar-maxRichResults" type="number" size="2" preference="browser.urlbar.maxRichResults"/>
-  </hbox>
 </expander>
 <expander id="ua" label="&browser.ua.label;" open="false" clearhidden="true">
   <description>&browser.ua.desc;</description>

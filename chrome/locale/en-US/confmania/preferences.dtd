@@ -8,9 +8,13 @@
 <!ENTITY browser.smartbrowsing.internetKeywords.desc "Internet Keywords enables fast access to services such as search and other information from the Location bar.">
 <!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Enable Internet Keywords">
 <!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL Prefix : ">
+<!ENTITY browser.smartbrowsing.autoComplete.label "Location Bar Autocomplete">
+<!ENTITY browser.smartbrowsing.autoComplete.autoFill.label "Autocomplete best match as you type">
+<!ENTITY browser.smartbrowsing.autoComplete.matchOnlyTyped.label "Match only websites you've typed previously">
+<!ENTITY browser.smartbrowsing.autoComplete.richResults.label "Dropdown with richlistbox (Firefox3+)">
+<!ENTITY browser.smartbrowsing.autoComplete.richResults.maxRichResults.label "Maximum number of entries">
 <!ENTITY browser.smartbrowsing.domainGuessing.label "Domain Guessing">
-<!ENTITY browser.smartbrowsing.domainGuessing.desc "Automatically add prefix and suffix to the location if a web page isn't found.">
-<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Enable Domain Guessing">
+<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Automatically add prefix &amp; suffix to the location if a web page isn't found.">
 <!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefix : ">
 <!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Suffix : ">
 <!ENTITY browser.html.label "Page control">
@@ -49,8 +53,6 @@
 <!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked">
-<!ENTITY browser.urlbar.richResults.label "Do NOT display the dropdown as a firefox3&quot;s richlistbox widget (takes effect after restart)">
-<!ENTITY browser.urlbar.maxRichResults.label "Maximum # of entries in firefox3&quot;s richlistbox dropdown: ">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of &quot;PrefBar&quot;, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.default.label "Use browser default">
