@@ -5,7 +5,7 @@
 <!ENTITY browser.title "ブラウザ">
 <!ENTITY browser.smartbrowsing.label "SmartBrowsing">
 <!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
-<!ENTITY browser.smartbrowsing.internetKeywords.desc "Internet Keywords を使って、ロケーションバーから検索、その他の情報に素早くアクセスできます。">
+<!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords を使って、ロケーションバーから検索、その他の情報に素早くアクセスできます。">
 <!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Internet Keywords を有効にする">
 <!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL の接頭辞 : ">
 <!ENTITY browser.smartbrowsing.autoComplete.label "ロケーションバーの自動補完">
@@ -292,7 +292,6 @@
 <!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "&#x221e; (Motif の真似)">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.manual.label "カスタム">
 <!ENTITY ui.others.xul_file_picker "システムのファイルダイアログを使わずにXULファイルダイアログを使用">
-<!ENTITY ui.others.extensionInstallButton "アドオンダイアログにインストールボタンを表示">
 
 <!ENTITY debug.title "デバッグ">
 <!ENTITY debug.debug.label "デバッグ作業用">
@@ -304,8 +303,10 @@
 <!ENTITY debug.cache.disableXULCache.label "XUL キャッシュを無効にする">
 <!ENTITY debug.cache.diskCacheDisable.label "ディスクキャッシュを無効にする">
 <!ENTITY debug.cache.memoryCacheDisable.label "メモリーキャッシュを無効にする">
+<!ENTITY debug.extension.label "アドオン">
 <!ENTITY debug.extension.noCheckCompatibility.label "インストール/更新時のアドオンのバージョンチェックを回避">
 <!ENTITY debug.extension.noCheckUpdateSecurity.label "アドオンの署名チェックを回避">
+<!ENTITY debug.extension.installButton.label "アドオンダイアログにインストールボタンを表示">
 
 <!ENTITY miliseconds "ミリ秒">
 <!ENTITY microseconds "&#x03bc;秒">

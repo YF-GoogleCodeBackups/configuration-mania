@@ -5,7 +5,7 @@
 <!ENTITY browser.title "Browser">
 <!ENTITY browser.smartbrowsing.label "SmartBrowsing">
 <!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
-<!ENTITY browser.smartbrowsing.internetKeywords.desc "Internet Keywords enables fast access to services such as search and other information from the Location bar.">
+<!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords enables fast access to services such as search and other information from the Location bar.">
 <!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Enable Internet Keywords">
 <!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL Prefix : ">
 <!ENTITY browser.smartbrowsing.autoComplete.label "Location Bar Autocomplete">
@@ -292,7 +292,6 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.manual.label "Custom">
 <!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">
-<!ENTITY ui.others.extensionInstallButton "Show Install button on the add-on dialog">
 
 <!ENTITY debug.title "Debug">
 <!ENTITY debug.debug.label "For Debugging">
@@ -304,8 +303,10 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.cache.disableXULCache.label "Disable XUL Cache">
 <!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
 <!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">
+<!ENTITY debug.extension.label "Add-ons">
 <!ENTITY debug.extension.noCheckCompatibility.label "Do Not check add-on compatibility on install/update">
 <!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
+<!ENTITY debug.extension.installButton.label "Show Install button on the add-on dialog">
 
 <!ENTITY miliseconds "[ms]">
 <!ENTITY microseconds "[us]">

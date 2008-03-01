@@ -179,7 +179,6 @@ var gUIPref = {
   <preference id="middlemouse.scrollbarPosition" name="middlemouse.scrollbarPosition" type="bool"/>
   <preference id="ui.submenuDelay" name="ui.submenuDelay" type="int"/>
   <preference id="ui.allow_platform_file_picker" name="ui.allow_platform_file_picker" type="bool" inverted="true"/>
-  <preference id="extensions.hideInstallButton" name="extensions.hideInstallButton" type="bool" inverted="true"/>
 </preferences>
 
 <tabbox flex="1">
@@ -397,7 +396,6 @@ var gUIPref = {
   </groupbox>
   <groupbox>
     <checkbox label="&ui.others.xul_file_picker;" preference="ui.allow_platform_file_picker"/>
-    <checkbox label="&ui.others.extensionInstallButton;" preference="extensions.hideInstallButton"/>
   </groupbox>
 </tabpanel>
 </tabpanels>
