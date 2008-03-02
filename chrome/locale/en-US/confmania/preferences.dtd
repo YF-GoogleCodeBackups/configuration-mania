@@ -96,12 +96,10 @@
 <!ENTITY browser.speed-cache.check.auto.label "When it&#39;s Out Of Date (Preferred)">
 <!ENTITY browser.speed-cache.memory_enable.label "Enable cache memory (Never disabled, usually)">
 <!ENTITY browser.speed-cache.memory_capability.label "Cache Memory">
-<!ENTITY browser.speed-cache.memory_capability.auto.label "Auto">
-<!ENTITY browser.speed-cache.memory_capability.manual.label "Manual">
 <!ENTITY browser.speed-cache.disk_cache_ssl.label "Also store ssl-connection pages in the cache (INSECURE)">
 <!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
-<!ENTITY browser.speed-cache.session-history-viewers.label "The # of latest page-displays to be cached">
-<!ENTITY browser.speed-cache.session-history-viewers.desc "Recommended: 5 (recently viewed pages appear instantly!), Default: 3">
+<!ENTITY browser.speed-cache.session-history-viewers.label "Max Number of pages stored in memory">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: This improves performance when pressing Back and Forward, If you have a lot of tabs, &brandShortName;'s memory usage can climb dramatically. It's a trade-off.">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.downloadShowAlertOnComplete.label "Show alert on complete download">
 <!ENTITY browser.download.alerts.label "The Alerts configration">
@@ -290,7 +288,6 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.others.xwin.uiSubmenuDelay.label "Submenu Delay">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "None">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
-<!ENTITY ui.others.xwin.uiSubmenuDelay.manual.label "Custom">
 <!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">
 
 <!ENTITY debug.title "Debug">
@@ -316,3 +313,6 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY reset "Reset">
 <!ENTITY browse "Browse...">
 <!ENTITY preview "Preview">
+<!ENTITY autoSet "Auto">
+<!ENTITY disableSet "Disabled">
+<!ENTITY manualSet "Manual">

@@ -206,9 +206,9 @@ var gPrefBrowser = {
   <preference id="browser.cache.memory.enable" name="browser.cache.memory.enable" type="bool"/>
   <preference id="browser.cache.memory.capacity" name="browser.cache.memory.capacity" type="int"/>
   <preference id="browser.cache.check_doc_frequency" name="browser.cache.check_doc_frequency" type="int"/>
+  <preference id="browser.sessionhistory.max_total_viewers" name="browser.sessionhistory.max_total_viewers" type="int"/>
   <preference id="browser.cache.disk_cache_ssl" name="browser.cache.disk_cache_ssl" type="bool"/>
   <preference id="network.prefetch-next" name="network.prefetch-next" type="bool"/>
-  <preference id="browser.sessionhistory.max_viewers" name="browser.sessionhistory.max_viewers" type="int"/>
 
   <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
   <preference id="alerts.slideIncrement" name="alerts.slideIncrement" type="int"/>
@@ -415,8 +415,8 @@ var gPrefBrowser = {
     preference="browser.cache.memory.enable" oncommand="gPrefBrowser.updatePrefs()"/>
   <radiogroup class="indent" align="center" orient="horizontal" id="speed-cache-memory-capacity-type">
     <label value="&browser.speed-cache.memory_capability.label;"/>
-    <radio value="-1" label="&browser.speed-cache.memory_capability.auto.label;"/>
-    <radio value="*" label="&browser.speed-cache.memory_capability.manual.label;"/>
+    <radio value="-1" label="&autoSet;"/>
+    <radio value="*" label="&manualSet;"/>
     <textbox id="speed-cache-memory-capacity" type="number" hidespinbuttons="true" min="-1" size="8" preference="browser.cache.memory.capacity"
      onsyncfrompreference="initRadioGroupConnect2('speed-cache-memory-capacity-type','speed-cache-memory-capacity','-1');"/>
     <label value="&kilobytes;"/>
@@ -437,13 +437,20 @@ var gPrefBrowser = {
     </radiogroup>
     <description>&browser.speed-cache.check.desc;</description>
   </groupbox>
+  <groupbox>
+    <caption label="&browser.speed-cache.session-history-viewers.label;"/>
+    <radiogroup align="center" orient="horizontal" id="session-history-viewers-gr">
+      <radio value="-1" label="&autoSet;"/>
+      <radio value="0" label="&disableSet;"/>
+      <radio value="*" label="&manualSet;"/>
+      <textbox id="session-history-viewers" type="number" min="-1" value="-1" size="2"
+       preference="browser.sessionhistory.max_total_viewers"
+       onsyncfrompreference="initRadioGroupConnect2('session-history-viewers-gr','session-history-viewers','-1');"/>
+    </radiogroup>
+    <description>&browser.speed-cache.session-history-viewers.desc;</description>
+  </groupbox>
   <checkbox label="&browser.speed-cache.disk_cache_ssl.label;" preference="browser.cache.disk_cache_ssl"/>
   <checkbox label="&browser.speed-cache.prefetch-next.label;" preference="network.prefetch-next"/>
-  <hbox align="center">
-    <label control="session-history-viewers" value="&browser.speed-cache.session-history-viewers.label;"/>
-    <textbox id="session-history-viewers" type="number" value="3" size="2" preference="browser.sessionhistory.max_viewers"/>
-  </hbox>
-  <description class="indent">&browser.speed-cache.session-history-viewers.desc;</description>
 </expander>
 
 <expander id="download" label="&browser.download.label;" open="false" clearhidden="true">

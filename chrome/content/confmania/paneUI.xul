@@ -387,7 +387,7 @@ var gUIPref = {
       <radiogroup id="uiSubmenuDelay-radio" orient="horizontal" align="center">
         <radio value="0" label="&ui.others.xwin.uiSubmenuDelay.none.label;"/>
         <radio value="-1" label="&ui.others.xwin.uiSubmenuDelay.inf.label;"/>
-        <radio value="*" label="&ui.others.xwin.uiSubmenuDelay.manual.label;"/>
+        <radio value="*" label="&manualSet;"/>
         <textbox id="uiSubmenuDelay" type="number" hidespinbuttons="true" min="-1" size="4" preference="ui.submenuDelay"
           onsyncfrompreference="initRadioGroupConnect2('uiSubmenuDelay-radio','uiSubmenuDelay','0');"/>
         <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
