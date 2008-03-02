@@ -300,7 +300,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">
 <!ENTITY debug.extension.label "Add-ons">
 <!ENTITY debug.extension.noCheckCompatibility.label "Do Not check add-on compatibility on install/update">
-<!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons (Firefox3+)">
 <!ENTITY debug.extension.installButton.label "Show Install button on the add-on dialog">
 
 <!ENTITY miliseconds "[ms]">
