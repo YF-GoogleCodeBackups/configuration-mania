@@ -54,7 +54,7 @@
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked">
 <!ENTITY browser.ua.label "UserAgent">
-<!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of &quot;PrefBar&quot;, &quot;User Agent Switcher&quot; and so on.">
+<!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.default.label "Use browser default">
 <!ENTITY browser.ua.ie6.label "Internet Explorer 6.0 (WinXP SP2+.NET2.0)">
 <!ENTITY browser.ua.ie6.value "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)">
@@ -70,12 +70,11 @@
 <!ENTITY browser.ua.googlebot.value "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)">
 <!ENTITY browser.ua.manual.label "Custom">
 <!ENTITY browser.speed-paint.label "High Speed Browsing/Paint&amp;Rendering">
-<!ENTITY browser.speed-paint.desc "Caution: The Recommended values are not always suitable for your line and PC environment. It sometimes make browsing slower. (But some of them feel browsing faster, which is the Placebo effect :-)">
+<!ENTITY browser.speed-paint.desc "WARNING: The Recommended values are not always suitable for your line and PC environment. It sometimes make browsing slower or heavy. (But some of them feel browsing faster, which is the Placebo effect :-)">
 <!ENTITY browser.speed-paint.delay.label "Initial paint delay">
 <!ENTITY browser.speed-paint.delay.desc "Recommend - ISDN:200-600ms, ADSL:0-300ms, BroadBand:0ms; Default:250ms">
-<!ENTITY browser.speed-paint.notify-backoffcount.label "Initial reflows threshold">
-<!ENTITY browser.speed-paint.notify-backoffcount.never "Never">
-<!ENTITY browser.speed-paint.notify-backoffcount.custom "Custom">
+<!ENTITY browser.speed-paint.notify-backoffcount.label "Max Number of timer-based reflows to perform">
+<!ENTITY browser.speed-paint.notify-backoffcount.never "No limit">
 <!ENTITY browser.speed-paint.notify-interval.label "Interval for the initial reflows">
 <!ENTITY browser.speed-paint.notify-interval.desc "Recommend - Fast: Synchronize with &quot;&browser.speed-paint.delay.label;&quot; (Caution: check the units); Default: 120000">
 <!ENTITY browser.speed-paint.notify-interval.desc1 "Recommend - Fast: ">

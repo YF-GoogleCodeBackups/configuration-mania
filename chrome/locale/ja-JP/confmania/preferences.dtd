@@ -54,7 +54,7 @@
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
 <!ENTITY browser.ua.label "UserAgent">
-<!ENTITY browser.ua.desc "警告: おそらくこの設定が &quot;PrefBar&quot; や &quot;User Agent Switcher&quot; 等と競合するかもしれません。">
+<!ENTITY browser.ua.desc "警告: おそらくこの設定が一部のプラグインや &quot;User Agent Switcher&quot; などと競合するかもしれません。">
 <!ENTITY browser.ua.default.label "ブラウザの標準を使用する">
 <!ENTITY browser.ua.ie6.label "Internet Explorer 6.0 (WinXP SP2+.NET2.0)">
 <!ENTITY browser.ua.ie6.value "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)">
@@ -70,13 +70,12 @@
 <!ENTITY browser.ua.googlebot.value "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)">
 <!ENTITY browser.ua.manual.label "カスタム">
 <!ENTITY browser.speed-paint.label "高速ブラウジング/描画とレンダリング">
-<!ENTITY browser.speed-paint.desc "注意: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることで遅くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
+<!ENTITY browser.speed-paint.desc "警告: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることによって、動作が遅くあるいは重くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
 <!ENTITY browser.speed-paint.label "描画/レンダリング">
 <!ENTITY browser.speed-paint.delay.label "初期描画待機時間">
 <!ENTITY browser.speed-paint.delay.desc "推奨値 - ISDN:200-600ms, ADSL:0-300ms, 高速回線:0ms; 標準:250ms">
-<!ENTITY browser.speed-paint.notify-backoffcount.label "初期レンダリングの閾値">
-<!ENTITY browser.speed-paint.notify-backoffcount.never "しない">
-<!ENTITY browser.speed-paint.notify-backoffcount.custom "カスタム">
+<!ENTITY browser.speed-paint.notify-backoffcount.label "初期レンダリングの待機時間の閾値">
+<!ENTITY browser.speed-paint.notify-backoffcount.never "制限しない">
 <!ENTITY browser.speed-paint.notify-interval.label "初期レンダリングの間隔">
 <!ENTITY browser.speed-paint.notify-interval.desc "推奨値 - 高速: &quot;&browser.speed-paint.delay.label;&quot; と同期(単位の差に注意); 標準: 120000">
 <!ENTITY browser.speed-paint.notify-interval.desc1 "推奨値 - 高速: ">
@@ -165,7 +164,7 @@
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
 <!ENTITY security.net.referer.label "Referer 要求ヘッダ">
 <!ENTITY security.net.referer.none.label "常に送らない (非推奨)">
-<!ENTITY security.net.referer.none.desc "警告: ときたま、Referrer ヘッダが要求されることがあります。もしそのようなことがあったら、この設定を&quot;&security.net.referer.link.label;&quot;及び&quot;&security.net.referer.all.label;&quot;に変更して下さい。">
+<!ENTITY security.net.referer.none.desc "警告: しばしば、Referrer ヘッダが要求されることがあります。もしそのようなことがあった時には、この設定を&quot;&security.net.referer.link.label;&quot;及び&quot;&security.net.referer.all.label;&quot;に変更して下さい。">
 <!ENTITY security.net.referer.link.label "リンクのクリック時のみ送る">
 <!ENTITY security.net.referer.all.label "画像要求も送る">
 <!ENTITY security.others.label "その他">

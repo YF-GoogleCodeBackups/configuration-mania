@@ -377,8 +377,9 @@ var gPrefBrowser = {
   <label value="&browser.speed-paint.notify-backoffcount.label;"/>
   <radiogroup id="speed-notify-backoffcount-gr" class="indent" orient="horizontal" align="center">
     <radio value="-1" label="&browser.speed-paint.notify-backoffcount.never;"/>
-    <radio value="*" label="&browser.speed-paint.notify-backoffcount.custom;"/>
-    <textbox id="speed-notify-backoffcount" type="number" hidespinbuttons="true" min="-1" preference="content.notify.backoffcount" size="1"
+    <radio value="*" label="&manualSet;"/>
+    <textbox id="speed-notify-backoffcount" type="number" hidespinbuttons="true" min="-1" value="-1"
+     preference="content.notify.backoffcount" size="2"
      onsyncfrompreference="initRadioGroupConnect2('speed-notify-backoffcount-gr','speed-notify-backoffcount','-1');"/>
   </radiogroup>
   <hbox align="center">
