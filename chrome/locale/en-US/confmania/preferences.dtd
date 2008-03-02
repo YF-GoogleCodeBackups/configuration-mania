@@ -108,8 +108,7 @@
 <!ENTITY browser.download.alerts.slide.per.label "pixels per">
 <!ENTITY browser.download.alerts.slide.settolight.label "Set light conf.">
 <!ENTITY browser.others.label "Others">
-<!ENTITY browser.others.urlbarhideGoButton "Hide the Go button next to the location bar">
-<!ENTITY browser.others.urlbarclickSelectsAll "Select the contents of the address bar when it is clicked">
+<!ENTITY browser.others.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.enableSVG.label "Enable rendering SVG content">
 <!ENTITY browser.others.errorPageDisabled.label "Annoy error dialog message, not display error-pages">
 <!ENTITY browser.others.editorExternal "View source with external editor">

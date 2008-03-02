@@ -215,6 +215,7 @@ var gPrefBrowser = {
   <preference id="alerts.slideIncrementTime" name="alerts.slideIncrementTime" type="int"/>
   <preference id="alerts.totalOpenTime" name="alerts.totalOpenTime" type="int"/>
 
+  <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="svg.enabled" name="svg.enabled" type="bool"/>
   <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
@@ -484,6 +485,7 @@ var gPrefBrowser = {
 </expander>
 
 <expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
+  <checkbox label="&browser.others.disableIPv6.label;" preference="network.dns.disableIPv6"/>
   <checkbox label="&browser.others.enableSVG.label;" preference="svg.enabled"/>
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 

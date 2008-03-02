@@ -111,6 +111,7 @@
 <!ENTITY browser.others.label "その他">
 <!ENTITY browser.others.urlbarhideGoButton "場所バーの隣りの移動ボタンを隠す">
 <!ENTITY browser.others.urlbarclickSelectsAll "場所バーをクリック時に内容を選択する">
+<!ENTITY browser.others.disableIPv6.label "IPv6でDNSを問い合わせしない">
 <!ENTITY browser.others.enableSVG.label "SVG を表示する">
 <!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで通知">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
