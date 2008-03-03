@@ -86,7 +86,7 @@
 <!ENTITY browser.speed-paint.content-switch-threshold.label "High-&gt;Low frequency interrupt mode switch Threshold">
 <!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode provides better UI responsiveness at the expense of load time; Default: 750000 ie. 3/4 ms">
 <!ENTITY browser.speed-cache.label "High Speed Browsing/Cache">
-<!ENTITY browser.speed-cache.desc "&browser.speed-paint.desc;">
+<!ENTITY browser.speed-cache.desc "">
 <!ENTITY browser.speed-cache.check.label "Check cache of the pages ...">
 <!ENTITY browser.speed-cache.check.desc "WARNING: &quot;&browser.speed-cache.check.once.label;&quot; makes the browser faster, it may makes troubles in a part of Web service. Please check &quot;&browser.speed-cache.check.each.label;&quot;, if you find that a certain page is not updated correctly. Or, Please push reload button with shift key to force reload page.">
 <!ENTITY browser.speed-cache.check.once.label "Once par session">

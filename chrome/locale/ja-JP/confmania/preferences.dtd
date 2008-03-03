@@ -87,7 +87,7 @@
 <!ENTITY browser.speed-paint.content-switch-threshold.label "High→Low frequency interrupt mode 切替待機時間閾値">
 <!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode はインターフェースの反応を速くするために、ページの読み込み処理を遅くします。; 標準: 750000 則ち 3/4 ミリ秒">
 <!ENTITY browser.speed-cache.label "高速ブラウジング/キャッシュ">
-<!ENTITY browser.speed-cache.desc "&browser.speed-paint.desc;">
+<!ENTITY browser.speed-cache.desc "">
 <!ENTITY browser.speed-cache.memory_enable.label "キャッシュメモリーを有効に (通常、決して無効にしないで下さい)">
 <!ENTITY browser.speed-cache.check.label "ページのキャッシュの確認の頻度">
 <!ENTITY browser.speed-cache.check.desc "警告: &quot;&browser.speed-cache.check.once.label;&quot; で高速化されますが、一部の Web サービスに支障が出るかもしれません。また、ページが正しく更新されない不具合がある場合、&quot;&browser.speed-cache.check.each.label;&quot;に設定して下さい。もしくは、シフトキーを押しながら再読込ボタンをクリックして、強制読込をしてください。">
