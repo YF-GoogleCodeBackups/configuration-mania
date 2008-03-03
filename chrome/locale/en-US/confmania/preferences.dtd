@@ -50,7 +50,7 @@
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab and location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
 <!ENTITY browser.urlbar.label "Location Bar">
-<!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar">
+<!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar (Firefox 2.x)">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked">
 <!ENTITY browser.ua.label "UserAgent">

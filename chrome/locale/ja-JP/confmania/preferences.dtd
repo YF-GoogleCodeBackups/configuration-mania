@@ -50,7 +50,7 @@
 <!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
 <!ENTITY browser.urlbar.label "ロケーションバー">
-<!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す">
+<!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す (Firefox2.x)">
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
 <!ENTITY browser.ua.label "UserAgent">
