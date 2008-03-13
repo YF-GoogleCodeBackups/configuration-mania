@@ -52,7 +52,7 @@
 <!ENTITY browser.urlbar.label "ロケーションバー">
 <!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す (Firefox2.x)">
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
-<!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択(Firefox3以降)">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "警告: おそらくこの設定が一部のプラグインや &quot;User Agent Switcher&quot; などと競合するかもしれません。">
 <!ENTITY browser.ua.default.label "ブラウザの標準を使用する">
@@ -69,7 +69,7 @@
 <!ENTITY browser.ua.googlebot.label "Googlebot 2.1">
 <!ENTITY browser.ua.googlebot.value "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)">
 <!ENTITY browser.ua.manual.label "カスタム">
-<!ENTITY browser.speed-paint.label "高速ブラウジング/描画とレンダリング">
+<!ENTITY browser.speed-paint.label "描画とレンダリング">
 <!ENTITY browser.speed-paint.desc "警告: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることによって、動作が遅くあるいは重くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
 <!ENTITY browser.speed-paint.label "描画/レンダリング">
 <!ENTITY browser.speed-paint.delay.label "初期描画待機時間">
@@ -86,8 +86,7 @@
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "推奨値 - 高速: &quot;&browser.speed-paint.notify-interval.label;&quot;の半値, 標準:3&#x00d7;&quot;&browser.speed-paint.notify-interval.label;&quot;; 注意: 0 にしてはいけません。">
 <!ENTITY browser.speed-paint.content-switch-threshold.label "High→Low frequency interrupt mode 切替待機時間閾値">
 <!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode はインターフェースの反応を速くするために、ページの読み込み処理を遅くします。; 標準: 750000 則ち 3/4 ミリ秒">
-<!ENTITY browser.speed-cache.label "高速ブラウジング/キャッシュ">
-<!ENTITY browser.speed-cache.desc "">
+<!ENTITY browser.speed-cache.label "ブラウザのキャッシュ">
 <!ENTITY browser.speed-cache.memory_enable.label "キャッシュメモリーを有効に (通常、決して無効にしないで下さい)">
 <!ENTITY browser.speed-cache.check.label "ページのキャッシュの確認の頻度">
 <!ENTITY browser.speed-cache.check.desc "警告: &quot;&browser.speed-cache.check.once.label;&quot; で高速化されますが、一部の Web サービスに支障が出るかもしれません。また、ページが正しく更新されない不具合がある場合、&quot;&browser.speed-cache.check.each.label;&quot;に設定して下さい。もしくは、シフトキーを押しながら再読込ボタンをクリックして、強制読込をしてください。">

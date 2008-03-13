@@ -52,7 +52,7 @@
 <!ENTITY browser.urlbar.label "Location Bar">
 <!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar (Firefox 2.x)">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
-<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked (Firefox3+)">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.default.label "Use browser default">
@@ -69,7 +69,7 @@
 <!ENTITY browser.ua.googlebot.label "Googlebot 2.1">
 <!ENTITY browser.ua.googlebot.value "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)">
 <!ENTITY browser.ua.manual.label "Custom">
-<!ENTITY browser.speed-paint.label "High Speed Browsing/Paint&amp;Rendering">
+<!ENTITY browser.speed-paint.label "Paint&amp;Rendering">
 <!ENTITY browser.speed-paint.desc "WARNING: The Recommended values are not always suitable for your line and PC environment. It sometimes make browsing slower or heavy. (But some of them feel browsing faster, which is the Placebo effect :-)">
 <!ENTITY browser.speed-paint.delay.label "Initial paint delay">
 <!ENTITY browser.speed-paint.delay.desc "Recommend - ISDN:200-600ms, ADSL:0-300ms, BroadBand:0ms; Default:250ms">
@@ -85,8 +85,7 @@
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "Recommended - Fast: half of &quot;&browser.speed-paint.notify-interval.label;&quot;, Default:3&#xd7;&quot;&browser.speed-paint.notify-interval.label;&quot;; Caution: Do not set 0.">
 <!ENTITY browser.speed-paint.content-switch-threshold.label "High-&gt;Low frequency interrupt mode switch Threshold">
 <!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode provides better UI responsiveness at the expense of load time; Default: 750000 ie. 3/4 ms">
-<!ENTITY browser.speed-cache.label "High Speed Browsing/Cache">
-<!ENTITY browser.speed-cache.desc "">
+<!ENTITY browser.speed-cache.label "Browser Cache">
 <!ENTITY browser.speed-cache.check.label "Check cache of the pages ...">
 <!ENTITY browser.speed-cache.check.desc "WARNING: &quot;&browser.speed-cache.check.once.label;&quot; makes the browser faster, it may makes troubles in a part of Web service. Please check &quot;&browser.speed-cache.check.each.label;&quot;, if you find that a certain page is not updated correctly. Or, Please push reload button with shift key to force reload page.">
 <!ENTITY browser.speed-cache.check.once.label "Once par session">

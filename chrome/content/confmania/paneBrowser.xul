@@ -412,7 +412,6 @@ var gPrefBrowser = {
   <description class="indent">&browser.speed-paint.content-switch-threshold.desc;</description>
 </expander>
 <expander id="speed-cache" label="&browser.speed-cache.label;" open="false" clearhidden="true">
-  <description>&browser.speed-cache.desc;</description>
   <checkbox id="speed-cache-memory-enable" label="&browser.speed-cache.memory_enable.label;"
     preference="browser.cache.memory.enable" oncommand="gPrefBrowser.updatePrefs()"/>
   <radiogroup class="indent" align="center" orient="horizontal" id="speed-cache-memory-capacity-type">
