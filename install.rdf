@@ -7,7 +7,7 @@
 
 <em:id>{c4d362ec-1cff-4ca0-9031-99a8fad7995a}</em:id>
 <!--em:id>{3329801B-F8DD-4503-BDB5-6E0A076B5364}</em:id--><!-- use this id by somebody in addons.mozilla.org -->
-<em:version>1.09.2008031301</em:version>
+<em:version>1.09.2008040301</em:version>
 
 <!-- Target Application this theme can install into, 
     with minimum and maximum supported versions. --> 
@@ -15,7 +15,7 @@
 <Description>
   <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
   <em:minVersion>2.0</em:minVersion>
-  <em:maxVersion>3.0b4</em:maxVersion>
+  <em:maxVersion>3.0b5</em:maxVersion>
 </Description>
 </em:targetApplication>
 
