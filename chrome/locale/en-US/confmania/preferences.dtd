@@ -30,6 +30,7 @@
 <!ENTITY browser.html.img.resizing.label "Shlink to fit image">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
+<!ENTITY browser.html.color_management_enabled.label "Enable Color Management (CMS) (Firefox3+;takes effect after restart)">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
@@ -58,14 +59,16 @@
 <!ENTITY browser.ua.default.label "Use browser default">
 <!ENTITY browser.ua.ie6.label "Internet Explorer 6.0 (WinXP SP2+.NET2.0)">
 <!ENTITY browser.ua.ie6.value "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)">
-<!ENTITY browser.ua.ie7.label "Internet Explorer 7 (WinVista)">
-<!ENTITY browser.ua.ie7.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)">
-<!ENTITY browser.ua.safari.label "Safari 3.0.4 (PowerPC MacOS X)">
-<!ENTITY browser.ua.safari.value "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/523.10.3 (KHTML, like Gecko) Version/3.0.4 Safari/523.10">
-<!ENTITY browser.ua.opera.label "Opera 9.25 (WinXP)">
-<!ENTITY browser.ua.opera.value "Mozilla/5.0 (Windows NT 5.1; U; en) Opera 9.25">
-<!ENTITY browser.ua.konqueror.label "Konqueror 4.0 (Linux)">
-<!ENTITY browser.ua.konqueror.value "Mozilla/5.0 (compatible; Konqueror/4.0; Linux) KHTML/4.0.0 (like Gecko)">
+<!ENTITY browser.ua.ie7.label "Internet Explorer 7 (Vista SP1+.NET3.0)">
+<!ENTITY browser.ua.ie7.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 3.0.04506)">
+<!ENTITY browser.ua.ie7wow64.label "Internet Explorer 7 on WOW64 (VistaSP1+.NET3.0)">
+<!ENTITY browser.ua.ie7wow64.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; WOW64; SLCC1; .NET CLR 3.0.04506)">
+<!ENTITY browser.ua.safari.label "Safari 3.1 (PowerPC MacOS X)">
+<!ENTITY browser.ua.safari.value "Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/525.13 (KHTML, like Gecko) Version/3.1 Safari/525.13">
+<!ENTITY browser.ua.opera.label "Opera 9.27 (WinXP)">
+<!ENTITY browser.ua.opera.value "Mozilla/5.0 (Windows NT 5.1; U; en) Opera 9.27">
+<!ENTITY browser.ua.konqueror.label "Konqueror 4.0.1 (Linux)">
+<!ENTITY browser.ua.konqueror.value "Mozilla/5.0 (compatible; Konqueror/4.0.1; Linux) KHTML/4.0.1 (like Gecko)">
 <!ENTITY browser.ua.googlebot.label "Googlebot 2.1">
 <!ENTITY browser.ua.googlebot.value "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)">
 <!ENTITY browser.ua.manual.label "Custom">

@@ -175,6 +175,7 @@ var gPrefBrowser = {
   <preference id="browser.enable_automatic_image_resizing" name="browser.enable_automatic_image_resizin" type="bool"/>
   <preference id="browser.display.show_image_placeholders" name="browser.display.show_image_placeholders" type="bool"/>
   <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
+  <preference id="gfx.color_management.enabled" name="gfx.color_management.enabled" type="bool"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
@@ -300,6 +301,8 @@ var gPrefBrowser = {
     <checkbox label="&browser.html.img.force_inline_alttext.label;"
      preference="browser.display.force_inline_alttext"/>
   </groupbox>
+  <checkbox label="&browser.html.color_management_enabled.label;"
+   preference="gfx.color_management.enabled"/>
 
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
   <groupbox>
@@ -356,6 +359,7 @@ var gPrefBrowser = {
     <radio id="ua-default" label="&browser.ua.default.label;" value=""/>
     <radio id="ua-ie6" label="&browser.ua.ie6.label;" value="&browser.ua.ie6.value;"/>
     <radio id="ua-ie7" label="&browser.ua.ie7.label;" value="&browser.ua.ie7.value;"/>
+    <radio id="ua-ie7wow64" label="&browser.ua.ie7wow64.label;" value="&browser.ua.ie7wow64.value;"/>
     <radio id="ua-safari" label="&browser.ua.safari.label;" value="&browser.ua.safari.value;"/>
     <radio id="ua-opera" label="&browser.ua.opera.label;" value="&browser.ua.opera.value;"/>
     <radio id="ua-konqueror" label="&browser.ua.konqueror.label;" value="&browser.ua.konqueror.value;"/>
