@@ -29,7 +29,7 @@ function initRadioGroupConnect(groupid,dataid){
 function initRadioGroupConnect2(groupid,dataid,defaultdat){
   var mData = document.getElementById(dataid);
   var preference = document.getElementById(mData.getAttribute("preference"));
-  if(preference.instantApply || !mData._xconnect_loaded)
+  if((preference.instantApply || !mData._xconnect_loaded) && (mData.value != preference.valueFromPreferences))
     mData.value = preference.valueFromPreferences;
   if(defaultdat != null && String(mData.value) == "") mData.value = defaultdat;
   mData._xconnect_loaded = true;
