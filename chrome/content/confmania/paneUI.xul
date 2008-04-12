@@ -178,6 +178,7 @@ var gUIPref = {
   <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
   <preference id="middlemouse.scrollbarPosition" name="middlemouse.scrollbarPosition" type="bool"/>
   <preference id="ui.submenuDelay" name="ui.submenuDelay" type="int"/>
+  <preference id="nglayout.enable_drag_images" name="nglayout.enable_drag_images" type="bool"/>
   <preference id="ui.allow_platform_file_picker" name="ui.allow_platform_file_picker" type="bool" inverted="true"/>
 </preferences>
 
@@ -393,6 +394,7 @@ var gUIPref = {
         <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
       </radiogroup>
     </groupbox>
+    <checkbox label="&ui.others.xwin.enable_drag_images.label;" preference="nglayout.enable_drag_images"/>
   </groupbox>
   <groupbox>
     <checkbox label="&ui.others.xul_file_picker;" preference="ui.allow_platform_file_picker"/>

@@ -292,6 +292,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.others.xwin.uiSubmenuDelay.label "Submenu Delay">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "None">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
+<!ENTITY ui.others.xwin.enable_drag_images.label "Display an image (when specified) during dragging (Firefox3+)">
 <!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">
 
 <!ENTITY debug.title "Debug">

@@ -294,6 +294,7 @@
 <!ENTITY ui.others.xwin.uiSubmenuDelay.label "サブメニュー表示遅延時間">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "なし">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "&#x221e; (Motif の真似)">
+<!ENTITY ui.others.xwin.enable_drag_images.label "ドラッグ中に(可能であれば)画像を表示する (Firefox3以降)">
 <!ENTITY ui.others.xul_file_picker "システムのファイルダイアログを使わずにXULファイルダイアログを使用">
 
 <!ENTITY debug.title "デバッグ">
