@@ -115,6 +115,10 @@
 <!ENTITY browser.others.errorPageDisabled.label "Annoy error dialog message, not display error-pages">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
+<!ENTITY browser.others.backspace_action.label "Action when Pressing [Backspace] :">
+<!ENTITY browser.others.backspace_action.goBack "Go back a page in the session history (same as IE)">
+<!ENTITY browser.others.backspace_action.scrollUp "Scroll up in the current document">
+<!ENTITY browser.others.backspace_action.nothing "Do nothing">
 
 <!ENTITY security.title "Security">
 <!ENTITY security.js.label "JavaScript">

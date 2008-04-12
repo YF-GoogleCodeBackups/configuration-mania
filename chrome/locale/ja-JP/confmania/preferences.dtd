@@ -118,6 +118,10 @@
 <!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで通知">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
+<!ENTITY browser.others.backspace_action.label "Backspaceキー押下時の動作:">
+<!ENTITY browser.others.backspace_action.goBack "ページの履歴を戻る(IEと同じ動作)">
+<!ENTITY browser.others.backspace_action.scrollUp "ページをスクロールアップ">
+<!ENTITY browser.others.backspace_action.nothing "何もしない">
 
 <!ENTITY security.title "セキュリティ">
 <!ENTITY security.js.label "JavaScript">

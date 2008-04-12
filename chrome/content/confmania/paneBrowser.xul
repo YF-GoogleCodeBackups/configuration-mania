@@ -221,6 +221,7 @@ var gPrefBrowser = {
   <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
+  <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
 </preferences>
 
 <vbox flex="1" class="listBox">
@@ -499,6 +500,14 @@ var gPrefBrowser = {
     <textbox id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
     <button label="&browse;" oncommand="gPrefBrowser.onEditorExternalBrowse()"/>
   </hbox>
+  <groupbox>
+    <caption label="&browser.others.backspace_action.label;"/>
+    <radiogroup preference="browser.backspace_action">
+      <radio value="0" label="&browser.others.backspace_action.goBack;"/>
+      <radio value="1" label="&browser.others.backspace_action.scrollUp;"/>
+      <radio value="2" label="&browser.others.backspace_action.nothing;"/>
+    </radiogroup>
+  </groupbox>
 </expander>
 
 </vbox>
