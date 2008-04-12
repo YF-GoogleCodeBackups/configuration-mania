@@ -78,10 +78,6 @@ var gPrefBrowser = {
     box = document.getElementById("smartbrowsing-keywordsURL-hbox");
     Array.forEach(box.childNodes, disablefunc);
 
-//  disabled = document.getElementById("smartbrowsing-richResults").checked;
-//  box = document.getElementById("smartbrowsing-maxRichResults-box");
-//  Array.forEach(box.childNodes, disablefunc);
-
     disabled = ! document.getElementById("smartbrowsing-domainGuessingEnabled").checked;
     box = document.getElementById("smartbrowsing-domainGuessingEnabled-hbox");
     Array.forEach(box.childNodes, disablefunc);
@@ -162,7 +158,6 @@ var gPrefBrowser = {
   <preference id="keyword.URL" name="keyword.URL" type="wstring"/>
   <preference id="browser.urlbar.autoFill" name="browser.urlbar.autoFill" type="bool"/>
   <preference id="browser.urlbar.matchOnlyTyped" name="browser.urlbar.matchOnlyTyped" type="bool"/>
-  <!--preference id="browser.urlbar.richResults" name="browser.urlbar.richResults" type="bool" inverted="true"/-->
   <preference id="browser.urlbar.maxRichResults" name="browser.urlbar.maxRichResults" type="int"/>
   <preference id="browser.fixup.alternate.enabled" name="browser.fixup.alternate.enabled" type="bool"/>
   <preference id="browser.fixup.alternate.prefix" name="browser.fixup.alternate.prefix" type="string"/>
@@ -250,9 +245,6 @@ var gPrefBrowser = {
               preference="browser.urlbar.matchOnlyTyped" />
     <groupbox>
       <caption label="&browser.smartbrowsing.autoComplete.richResults.label;"/>
-      <!--
-      <checkbox id="smartbrowsing-richResults" label="" preference="browser.urlbar.richResults" oncommand="gPrefBrowser.updatePrefs()"/>
-      -->
       <hbox align="center" id="smartbrowsing-maxRichResults-box">
         <label value="&browser.smartbrowsing.autoComplete.richResults.maxRichResults.label;" control="smartbrowsing-maxRichResults"/>
         <textbox id="smartbrowsing-maxRichResults" type="number" size="2" preference="browser.urlbar.maxRichResults"/>
