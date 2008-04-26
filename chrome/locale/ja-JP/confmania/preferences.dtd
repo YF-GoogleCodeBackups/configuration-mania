@@ -44,8 +44,12 @@
 <!ENTITY browser.tabs.closeButtons.end.label "タブバーの端に表示 (Firefox1.xの動作)">
 <!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ (標準:140)">
 <!ENTITY browser.tabs.disableBackgroundClose.label "バックグラウンドタブの閉じるボタンを押すことでタブを閉じない">
-<!ENTITY browser.tabs.tabMinWidth.label "タブの最小サイズ (標準:60)">
+<!ENTITY browser.tabs.tabMinWidth.label "タブの最小サイズ (標準:100)">
+<!ENTITY browser.tabs.tabMaxWidth.label "最大 (標準:250) (Firefox3以降)">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "タブを閉じたら、そのタブを開いたタブをアクティブにする">
+<!ENTITY browser.tabs.sessionStore.label "タブの状態の保存及び最近閉じたタブを有効にする">
+<!ENTITY browser.tabs.sessionStore.interval.label "タブ状態を保存する時間間隔">
+<!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "タブの保存履歴件数">
 <!ENTITY browser.tabs.seachOpenintab.label "検索バーでの検索結果を新しいタブで開く">
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン">
 <!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">

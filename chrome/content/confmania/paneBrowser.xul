@@ -82,6 +82,12 @@ var gPrefBrowser = {
     box = document.getElementById("smartbrowsing-domainGuessingEnabled-hbox");
     Array.forEach(box.childNodes, disablefunc);
 
+    disabled = ! document.getElementById("tabs-sessionEnabled").checked;
+    box = document.getElementById("tabs-sessionInterval-pane");
+    Array.forEach(box.childNodes, disablefunc);
+    box = document.getElementById("tabs-sessionMaxUndo-pane");
+    Array.forEach(box.childNodes, disablefunc);
+
     disabled = ! document.getElementById("speed-interrupt-parsing").checked;
     box = document.getElementById("speed-interrupt-parsing-hbox");
     Array.forEach(box.childNodes, disablefunc);
@@ -180,7 +186,11 @@ var gPrefBrowser = {
   <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
   <preference id="browser.tabs.disableBackgroundClose" name="browser.tabs.disableBackgroundClose" type="bool"/>
   <preference id="browser.tabs.tabMinWidth" name="browser.tabs.tabMinWidth" type="int"/>
+  <preference id="browser.tabs.tabMaxWidth" name="browser.tabs.tabMaxWidth" type="int"/>
   <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
+  <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool"/>
+  <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
+  <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
   <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
 
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
@@ -330,8 +340,22 @@ var gPrefBrowser = {
   <hbox align="center">
     <label value="&browser.tabs.tabMinWidth.label;" control="tabs-tabMinWidth"/>
     <textbox id="tabs-tabMinWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMinWidth" size="4"/>
+    <label value="&browser.tabs.tabMaxWidth.label;" control="tabs-tabMaxWidth"/>
+    <textbox id="tabs-tabMaxWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMaxWidth" size="4"/>
   </hbox>
   <checkbox preference="browser.tabs.selectOwnerOnClose" label="&browser.tabs.selectOwnerOnClose.label;"/>
+  <checkbox id="tabs-sessionEnabled" preference="browser.sessionstore.enabled" label="&browser.tabs.sessionStore.label;" oncommand="gPrefBrowser.updatePrefs();"/>
+  <vbox class="indent">
+    <hbox align="center" id="tabs-sessionInterval-pane">
+      <label value="&browser.tabs.sessionStore.interval.label;" control="tabs-sessionInterval"/>
+      <textbox id="tabs-sessionInterval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>
+      <label value="&miliseconds;"/>
+    </hbox>
+    <hbox align="center" id="tabs-sessionMaxUndo-pane">
+      <label value="&browser.tabs.sessionStore.max_tabs_undo.label;" control="tabs-sessionMaxUndo"/>
+      <textbox id="tabs-sessionMaxUndo" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.max_tabs_undo" size="4"/>
+    </hbox>
+  </vbox>
 
   <checkbox label="&browser.tabs.seachOpenintab.label;" preference="browser.search.openintab"/>
 </expander>
