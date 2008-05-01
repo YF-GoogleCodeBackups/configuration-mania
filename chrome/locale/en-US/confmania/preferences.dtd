@@ -44,8 +44,9 @@
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button (Default:140)">
 <!ENTITY browser.tabs.disableBackgroundClose.label "Do not close by clicking background-tab's close button">
-<!ENTITY browser.tabs.tabMinWidth.label "Minimum tab width (Default:100)">
-<!ENTITY browser.tabs.tabMaxWidth.label "Maximum (Default:250) (Firefox3+)">
+<!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width">
+<!ENTITY browser.tabs.tabWidth.min.label "Minimum">
+<!ENTITY browser.tabs.tabWidth.max.label "Maximum (Firefox3+)">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that openedit">
 <!ENTITY browser.tabs.sessionStore.label "Enables &quot;Session Store&quot;&amp;&quot;Recently Closed Tabs&quot;">
 <!ENTITY browser.tabs.sessionStore.interval.label "Save sessions at intervals of">

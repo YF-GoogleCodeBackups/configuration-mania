@@ -337,12 +337,13 @@ var gPrefBrowser = {
       <radio value="3" label="&browser.tabs.closeButtons.end.label;"/>
     </radiogroup>
   </groupbox>
-  <hbox align="center">
-    <label value="&browser.tabs.tabMinWidth.label;" control="tabs-tabMinWidth"/>
+  <groupbox orient="horizontal" align="center">
+    <caption label="&browser.tabs.tabWidth.label;"/>
+    <label value="&browser.tabs.tabWidth.min.label;" control="tabs-tabMinWidth"/>
     <textbox id="tabs-tabMinWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMinWidth" size="4"/>
-    <label value="&browser.tabs.tabMaxWidth.label;" control="tabs-tabMaxWidth"/>
+    <label value="&browser.tabs.tabWidth.max.label;" control="tabs-tabMaxWidth"/>
     <textbox id="tabs-tabMaxWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMaxWidth" size="4"/>
-  </hbox>
+  </groupbox>
   <checkbox preference="browser.tabs.selectOwnerOnClose" label="&browser.tabs.selectOwnerOnClose.label;"/>
   <checkbox id="tabs-sessionEnabled" preference="browser.sessionstore.enabled" label="&browser.tabs.sessionStore.label;" oncommand="gPrefBrowser.updatePrefs();"/>
   <vbox class="indent">
