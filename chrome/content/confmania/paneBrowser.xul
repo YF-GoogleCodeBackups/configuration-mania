@@ -52,19 +52,6 @@ var gPrefBrowser = {
   init : function(){
     this.updatePrefs();
 
-    const hash = {
-      "speed-paintDalay" : function(ele){ele.value = "250";},
-      "speed-notify-interval" : function(ele){ele.value = "120000";},
-      "speed-interrupt-parsing" : function(ele){ele.checked = true;},
-      "speed-max-tokenizing-time" : function(ele){ele.value = (parseInt(document.getElementById("speed-notify-interval").value) * 3);},
-      "speed-switch-threshold" : function(ele){ele.value = "750000";}
-    };
-    for(var i in hash){
-      var ele = document.getElementById(i);
-      if(document.getElementById(ele.getAttribute("preference")).value == null)
-        hash[i](ele);
-    }
-
     if (! document.documentElement.instantApply) {
       document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
     }
@@ -88,7 +75,7 @@ var gPrefBrowser = {
     box = document.getElementById("tabs-sessionMaxUndo-pane");
     Array.forEach(box.childNodes, disablefunc);
 
-    disabled = ! document.getElementById("speed-interrupt-parsing").checked;
+    disabled = document.getElementById("speed-interrupt-parsing").checked;
     box = document.getElementById("speed-interrupt-parsing-hbox");
     Array.forEach(box.childNodes, disablefunc);
 
@@ -113,6 +100,15 @@ var gPrefBrowser = {
   },
   resetKeywordURL : function(){//#smartbrowsing-keywordsURL
     document.getElementById("keyword.URL").reset();
+  },
+  onSpeedPaintReset : function(){
+    ["nglayout.initialpaint.delay", "content.notify.backoffcount", "content.notify.interval",
+    "content.interrupt.parsing", "content.max.tokenizing.time",
+    "content.switch.threshold"].forEach(function(id){
+      document.getElementById(id).reset();
+    });
+
+    gPrefBrowser.updatePrefs();
   },
   synchNotifyInterval : function(){
     var paintDelay = document.getElementById("nglayout.initialpaint.delay").value;
@@ -205,7 +201,7 @@ var gPrefBrowser = {
   <preference id="nglayout.initialpaint.delay" name="nglayout.initialpaint.delay" type="int"/>
   <preference id="content.notify.backoffcount" name="content.notify.backoffcount" type="int"/>
   <preference id="content.notify.interval" name="content.notify.interval" type="int"/>
-  <preference id="content.interrupt.parsing" name="content.interrupt.parsing" type="bool"/>
+  <preference id="content.interrupt.parsing" name="content.interrupt.parsing" type="bool" inverted="true"/>
   <preference id="content.max.tokenizing.time" name="content.max.tokenizing.time" type="int"/>
   <preference id="content.switch.threshold" name="content.switch.threshold" type="int"/>
 
@@ -385,15 +381,19 @@ var gPrefBrowser = {
     <hbox align="center">
       <radio id="ua-manual" label="&browser.ua.manual.label;" value="*"/>
       <textbox id="ua-value" flex="1" preference="general.useragent.override"
-       onsyncfrompreference="initRadioGroupConnect2('ua-radiogr','ua-value');"/>
+       onsyncfrompreference="return initRadioGroupConnect2('ua-radiogr','ua-value','');"/>
     </hbox>
   </radiogroup>
 </expander>
 <expander id="speed-paint" label="&browser.speed-paint.label;" open="false" clearhidden="true">
-  <description>&browser.speed-paint.desc;</description>
+  <hbox align="center">
+    <description flex="1">&browser.speed-paint.desc;</description>
+    <button label="&reset;" icon="clear" oncommand="gPrefBrowser.onSpeedPaintReset();"/>
+  </hbox>
   <hbox align="center">
     <label control="speed-paintDalay" value="&browser.speed-paint.delay.label;"/>
-    <textbox id="speed-paintDalay" type="number" hidespinbuttons="true" size="3" preference="nglayout.initialpaint.delay"/>
+    <textbox id="speed-paintDalay" type="number" hidespinbuttons="true" size="3" preference="nglayout.initialpaint.delay"
+     onsyncfrompreference="return document.getElementById('nglayout.initialpaint.delay').value || 250;"/>
     <label value="&miliseconds;"/>
   </hbox>
   <description class="indent">&browser.speed-paint.delay.desc;</description>
@@ -403,11 +403,12 @@ var gPrefBrowser = {
     <radio value="*" label="&manualSet;"/>
     <textbox id="speed-notify-backoffcount" type="number" hidespinbuttons="true" min="-1" value="-1"
      preference="content.notify.backoffcount" size="2"
-     onsyncfrompreference="initRadioGroupConnect2('speed-notify-backoffcount-gr','speed-notify-backoffcount','-1');"/>
+     onsyncfrompreference="return initRadioGroupConnect2('speed-notify-backoffcount-gr','speed-notify-backoffcount',-1);"/>
   </radiogroup>
   <hbox align="center">
     <label value="&browser.speed-paint.notify-interval.label;" control="speed-notify-interval"/>
-    <textbox id="speed-notify-interval" type="number" hidespinbuttons="true" preference="content.notify.interval" size="6"/>
+    <textbox id="speed-notify-interval" type="number" hidespinbuttons="true" preference="content.notify.interval" size="6"
+     onsyncfrompreference="return document.getElementById('content.notify.interval').value || 120000;"/>
     <label value="&microseconds;"/>
   </hbox>
   <description class="indent" align="center">
@@ -418,17 +419,20 @@ var gPrefBrowser = {
   <checkbox preference="content.interrupt.parsing" id="speed-interrupt-parsing"
    oncommand="gPrefBrowser.updatePrefs();"
    label="&browser.speed-paint.content-interrupt.label;"/>
+  <description class="indent">&browser.speed-paint.content-interrupt.desc;</description>
   <vbox class="indent">
     <hbox align="center" id="speed-interrupt-parsing-hbox">
       <label value="&browser.speed-paint.content-max-tokenizing-time.label;" control="speed-max-tokenizing-time"/>
-      <textbox id="speed-max-tokenizing-time" type="number" hidespinbuttons="true" preference="content.max.tokenizing.time" size="8"/>
+      <textbox id="speed-max-tokenizing-time" type="number" hidespinbuttons="true" preference="content.max.tokenizing.time"
+       size="8" onsyncfrompreference="return document.getElementById('content.max.tokenizing.time').value || (parseInt(document.getElementById('speed-notify-interval').value) * 3);"/>
       <label value="&microseconds;"/>
     </hbox>
     <description class="indent">&browser.speed-paint.content-max-tokenizing-time.desc;</description>
   </vbox>
   <hbox align="center">
     <label value="&browser.speed-paint.content-switch-threshold.label;" control="speed-switch-threshold"/>
-    <textbox id="speed-switch-threshold" type="number" hidespinbuttons="true" preference="content.switch.threshold" size="8"/>
+    <textbox id="speed-switch-threshold" type="number" hidespinbuttons="true" preference="content.switch.threshold"
+     size="8" onsyncfrompreference="return document.getElementById('content.switch.threshold').value || 750000;"/>
     <label value="&microseconds;"/>
   </hbox>
   <description class="indent">&browser.speed-paint.content-switch-threshold.desc;</description>
@@ -441,7 +445,7 @@ var gPrefBrowser = {
     <radio value="-1" label="&autoSet;"/>
     <radio value="*" label="&manualSet;"/>
     <textbox id="speed-cache-memory-capacity" type="number" hidespinbuttons="true" min="-1" size="8" preference="browser.cache.memory.capacity"
-     onsyncfrompreference="initRadioGroupConnect2('speed-cache-memory-capacity-type','speed-cache-memory-capacity','-1');"/>
+     onsyncfrompreference="return initRadioGroupConnect2('speed-cache-memory-capacity-type','speed-cache-memory-capacity',-1);"/>
     <label value="&kilobytes;"/>
   </radiogroup>
   <groupbox>
@@ -468,7 +472,7 @@ var gPrefBrowser = {
       <radio value="*" label="&manualSet;"/>
       <textbox id="session-history-viewers" type="number" min="-1" value="-1" size="2"
        preference="browser.sessionhistory.max_total_viewers"
-       onsyncfrompreference="initRadioGroupConnect2('session-history-viewers-gr','session-history-viewers','-1');"/>
+       onsyncfrompreference="return initRadioGroupConnect2('session-history-viewers-gr','session-history-viewers',-1);"/>
     </radiogroup>
     <description>&browser.speed-cache.session-history-viewers.desc;</description>
   </groupbox>

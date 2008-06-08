@@ -1,6 +1,11 @@
-function initRadioGroupConnect(groupid,dataid){
-  var mGroup = document.getElementById(groupid);
+function initRadioGroupConnect2(groupid,dataid,defaultdat){
   var mData = document.getElementById(dataid);
+  var mGroup = document.getElementById(groupid);
+  var preference = document.getElementById(mData.getAttribute("preference"));
+  var val = preference.value;
+
+  if(defaultdat != null && val == null)
+    val = defaultdat;
 
   const _oncommand = 
    "var mData = document.getElementById('" + dataid +"');"
@@ -18,21 +23,13 @@ function initRadioGroupConnect(groupid,dataid){
       oOthers = oRadio;
     }else{
       oRadio.setAttribute("oncommand", _oncommand);
-      if(oRadio.value == mData.value){
+      if(oRadio.value == String(val)){
         found = true;
         mGroup.selectedItem = oRadio;
       }
     }
   });
   if(!found) mGroup.selectedItem = oOthers;
-}
-function initRadioGroupConnect2(groupid,dataid,defaultdat){
-  var mData = document.getElementById(dataid);
-  var preference = document.getElementById(mData.getAttribute("preference"));
-  if((preference.instantApply || !mData._xconnect_loaded) && (mData.value != preference.valueFromPreferences))
-    mData.value = preference.valueFromPreferences;
-  if(defaultdat != null && String(mData.value) == "") mData.value = defaultdat;
-  mData._xconnect_loaded = true;
-  initRadioGroupConnect(groupid,dataid);
-  return mData.value;
+
+  return val;
 }
