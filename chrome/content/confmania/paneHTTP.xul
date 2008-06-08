@@ -66,6 +66,15 @@
   <preference id="network.http.max-persistent-connections-per-server" name="network.http.max-persistent-connections-per-server" type="int"/>
   <preference id="network.http.max-persistent-connections-per-proxy" name="network.http.max-persistent-connections-per-proxy" type="int"/>
 </preferences>
+<script><![CDATA[
+var gHTTPPane = {
+  resetAdvMaxSess : function(){
+    Array.forEach(document.getElementById("http-ad-maxsess").getElementsByTagName("textbox"), function(elem){
+      document.getElementById(elem.getAttribute("preference")).reset();
+    });
+  }
+};
+]]></script>
 
 <tabbox flex="1">
 <tabs>
@@ -119,9 +128,12 @@
     <button label="&reset;" oncommand="document.getElementById('network.http.accept.default').reset();" icon="clear"/>
   </hbox>
 </groupbox>
-<groupbox>
+<groupbox id="http-ad-maxsess">
   <caption label="&http.ad.maxsession.label;"/>
-  <description class="emphasis">&http.ad.maxsession.desc;</description>
+  <hbox>
+    <description flex="1" class="emphasis">&http.ad.maxsession.desc;</description>
+    <button label="&reset;" oncommand="gHTTPPane.resetAdvMaxSess();" icon="clear"/>
+  </hbox>
   <hbox align="center">
     <label control="maxpipeliningrequest" value="&http.ad.maxsession.maxpipeliningrequest.label;"/>
     <textbox id="maxpipeliningrequest" type="number" min="1" size="1" preference="network.http.pipelining.maxrequests"/>
@@ -137,7 +149,7 @@
   <vbox class="indent">
     <hbox align="center">
       <label control="maxpersistentconnectionsPerServer" value="&http.ad.maxsession.maxpersistentconnectionsPerServer.label;"/>
-      <textbox id="maxpersistentconnectionsPerServer" min="1" type="number" size="1" preference="network.http.max-persistent-connections-per-server" onchange="this.className = (parseInt(this.value) > 2)? 'error' : '';" />
+      <textbox id="maxpersistentconnectionsPerServer" min="1" type="number" size="1" preference="network.http.max-persistent-connections-per-server"/>
     </hbox>
     <description class="indent">&http.ad.maxsession.maxpersistentconnectionsPerServer.caution;</description>
   </vbox>
