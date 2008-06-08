@@ -47,11 +47,14 @@
 <!ENTITY browser.tabs.tabWidth.label "タブの最小/最大サイズ">
 <!ENTITY browser.tabs.tabWidth.min.label "最小">
 <!ENTITY browser.tabs.tabWidth.max.label "最大 (Firefox3+)">
+<!ENTITY browser.tabs.seachOpenintab.label "検索バーでの検索結果を新しいタブで開く">
+<!ENTITY browser.tabs.loadBookmarksInBackground.label "ブックマークや履歴から開いた新しいタブを選択する">
+<!ENTITY browser.tabs.loadDivertedInBackground.label "外部アプリやリンクなどに新しいタブが開かれたとき、すぐにそのタブに切り替える">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "タブを閉じたら、そのタブを開いたタブをアクティブにする">
-<!ENTITY browser.tabs.sessionStore.label "タブの状態の保存及び最近閉じたタブを有効にする">
+<!ENTITY browser.tabs.sessionStore.label "タブの状態の保存及び最近閉じたタブ">
+<!ENTITY browser.tabs.sessionStore.enabled.label "&browser.tabs.sessionStore.label;を有効にする">
 <!ENTITY browser.tabs.sessionStore.interval.label "タブ状態を保存する時間間隔">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "タブの保存履歴件数">
-<!ENTITY browser.tabs.seachOpenintab.label "検索バーでの検索結果を新しいタブで開く">
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン">
 <!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
@@ -89,7 +92,8 @@
 <!ENTITY browser.speed-paint.notify-interval.desc1 "推奨値 - 高速: ">
 <!ENTITY browser.speed-paint.notify-interval.synch.label "&quot;&browser.speed-paint.delay.label;&quot; と同期">
 <!ENTITY browser.speed-paint.notify-interval.desc2 "(単位の差に注意); 標準: 120000">
-<!ENTITY browser.speed-paint.content-interrupt.label "イベントがループしたときパースを終了する(推奨)">
+<!ENTITY browser.speed-paint.content-interrupt.label "パースを中断せずに続ける (通常、チェックしないでください)">
+<!ENTITY browser.speed-paint.content-interrupt.desc "パース終了まで&brandShortName;が応答しない原因になり得ます。">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.label "その処理を中止するまでの最大時間">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "推奨値 - 高速: &quot;&browser.speed-paint.notify-interval.label;&quot;の半値, 標準:3&#x00d7;&quot;&browser.speed-paint.notify-interval.label;&quot;; 注意: 0 にしてはいけません。">
 <!ENTITY browser.speed-paint.content-switch-threshold.label "High→Low frequency interrupt mode 切替待機時間閾値">
@@ -219,7 +223,7 @@
 <!ENTITY http.ad.maxsession.maxconnections.label "最大接続数 (延べ)">
 <!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "最大接続数 (サーバ当たり)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
-<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "注意: 2 を超えるべからず (RFC 2616)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "注意: 2 を超えるべからず (RFC 2616), (標準値: Firefox3,IE8:6, Opera,Safari:2, Firefox2,IE7:2)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
 
 <!ENTITY ui.title "インターフェイス">

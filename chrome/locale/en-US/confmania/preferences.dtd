@@ -47,11 +47,14 @@
 <!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width">
 <!ENTITY browser.tabs.tabWidth.min.label "Minimum">
 <!ENTITY browser.tabs.tabWidth.max.label "Maximum (Firefox3+)">
+<!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
+<!ENTITY browser.tabs.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
+<!ENTITY browser.tabs.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that openedit">
-<!ENTITY browser.tabs.sessionStore.label "Enables &quot;Session Store&quot;&amp;&quot;Recently Closed Tabs&quot;">
+<!ENTITY browser.tabs.sessionStore.label "&quot;Session Store&quot;&amp;&quot;Recently Closed Tabs&quot;">
+<!ENTITY browser.tabs.sessionStore.enabled label "Enables &quot;Session Store&quot;&amp;&quot;Recently Closed Tabs&quot;">
 <!ENTITY browser.tabs.sessionStore.interval.label "Save sessions at intervals of">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "Number of tab closures to remember :">
-<!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons">
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab and location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
@@ -88,7 +91,8 @@
 <!ENTITY browser.speed-paint.notify-interval.desc1 "Recommend - Fast: ">
 <!ENTITY browser.speed-paint.notify-interval.synch.label "Synchronize with &quot;&browser.speed-paint.delay.label;&quot;">
 <!ENTITY browser.speed-paint.notify-interval.desc2 "(Caution: check the units); Default: 120000">
-<!ENTITY browser.speed-paint.content-interrupt.label "Interrupts parsing when the event processing loops (Recommend)">
+<!ENTITY browser.speed-paint.content-interrupt.label "Parsing cannot be interrupt (Disrecommend to check this)">
+<!ENTITY browser.speed-paint.content-interrupt.desc "&brandShortName; can be unresponsive until parsing is complete.">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.label "Maximum time to interrupt the process">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "Recommended - Fast: half of &quot;&browser.speed-paint.notify-interval.label;&quot;, Default:3&#xd7;&quot;&browser.speed-paint.notify-interval.label;&quot;; Caution: Do not set 0.">
 <!ENTITY browser.speed-paint.content-switch-threshold.label "High-&gt;Low frequency interrupt mode switch Threshold">
@@ -217,7 +221,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY http.ad.maxsession.maxconnections.label "Max Connection (Total)">
 <!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "Max Connection (per Server)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "Max Persistent Connection (per Server)">
-<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "Caution: SHOULD NOT maintain more than 2 (RFC 2616)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "Caution: SHOULD NOT maintain more than 2 (RFC 2616), (Default: Firefox3,IE8:6, Opera,Safari:2, Firefox2,IE7:2)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "Max Persistent Connection (via Proxy)">
 
 <!ENTITY ui.title "UI">

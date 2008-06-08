@@ -183,11 +183,13 @@ var gPrefBrowser = {
   <preference id="browser.tabs.disableBackgroundClose" name="browser.tabs.disableBackgroundClose" type="bool"/>
   <preference id="browser.tabs.tabMinWidth" name="browser.tabs.tabMinWidth" type="int"/>
   <preference id="browser.tabs.tabMaxWidth" name="browser.tabs.tabMaxWidth" type="int"/>
+  <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
+  <preference id="browser.tabs.loadBookmarksInBackground" name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
+  <preference id="browser.tabs.loadDivertedInBackground" name="browser.tabs.loadDivertedInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
   <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool"/>
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
-  <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
 
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
@@ -340,21 +342,27 @@ var gPrefBrowser = {
     <label value="&browser.tabs.tabWidth.max.label;" control="tabs-tabMaxWidth"/>
     <textbox id="tabs-tabMaxWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMaxWidth" size="4"/>
   </groupbox>
-  <checkbox preference="browser.tabs.selectOwnerOnClose" label="&browser.tabs.selectOwnerOnClose.label;"/>
-  <checkbox id="tabs-sessionEnabled" preference="browser.sessionstore.enabled" label="&browser.tabs.sessionStore.label;" oncommand="gPrefBrowser.updatePrefs();"/>
-  <vbox class="indent">
-    <hbox align="center" id="tabs-sessionInterval-pane">
-      <label value="&browser.tabs.sessionStore.interval.label;" control="tabs-sessionInterval"/>
-      <textbox id="tabs-sessionInterval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>
-      <label value="&miliseconds;"/>
-    </hbox>
-    <hbox align="center" id="tabs-sessionMaxUndo-pane">
-      <label value="&browser.tabs.sessionStore.max_tabs_undo.label;" control="tabs-sessionMaxUndo"/>
-      <textbox id="tabs-sessionMaxUndo" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.max_tabs_undo" size="4"/>
-    </hbox>
-  </vbox>
 
   <checkbox label="&browser.tabs.seachOpenintab.label;" preference="browser.search.openintab"/>
+  <checkbox label="&browser.tabs.loadBookmarksInBackground.label;" preference="browser.tabs.loadBookmarksInBackground"/>
+  <checkbox label="&browser.tabs.loadDivertedInBackground.label;" preference="browser.tabs.loadDivertedInBackground"/>
+  <checkbox label="&browser.tabs.selectOwnerOnClose.label;" preference="browser.tabs.selectOwnerOnClose"/>
+
+  <groupbox>
+    <caption label="&browser.tabs.sessionStore.label;"/>
+    <checkbox id="tabs-sessionEnabled" preference="browser.sessionstore.enabled" label="&browser.tabs.sessionStore.enabled.label;" oncommand="gPrefBrowser.updatePrefs();"/>
+    <vbox class="indent">
+      <hbox align="center" id="tabs-sessionInterval-pane">
+        <label value="&browser.tabs.sessionStore.interval.label;" control="tabs-sessionInterval"/>
+        <textbox id="tabs-sessionInterval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>
+        <label value="&miliseconds;"/>
+      </hbox>
+      <hbox align="center" id="tabs-sessionMaxUndo-pane">
+        <label value="&browser.tabs.sessionStore.max_tabs_undo.label;" control="tabs-sessionMaxUndo"/>
+        <textbox id="tabs-sessionMaxUndo" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.max_tabs_undo" size="4"/>
+      </hbox>
+    </vbox>
+  </groupbox>
 </expander>
 <expander id="bookmarkicon" label="&browser.bookmarkicon.label;" open="false" clearhidden="true">
   <checkbox label="&browser.bookmarkicon.siteicons.label;"
