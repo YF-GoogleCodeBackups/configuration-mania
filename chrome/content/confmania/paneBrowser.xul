@@ -238,7 +238,7 @@ var gPrefBrowser = {
       <hbox align="center" id="smartbrowsing-keywordsURL-hbox">
         <label control="smartbrowsing-keywordsURL" value="&browser.smartbrowsing.internetKeywords.URL.label;"/>
         <textbox id="smartbrowsing-keywordsURL" preference="keyword.URL" flex="1"/>
-        <button label="&reset;" icon="clear" oncommand="gPrefBrowser.resetKeywordURL()"/>
+        <button label="&reset;" oncommand="gPrefBrowser.resetKeywordURL()"/>
       </hbox>
     </vbox>
   </groupbox>
@@ -388,7 +388,7 @@ var gPrefBrowser = {
 <expander id="speed-paint" label="&browser.speed-paint.label;" open="false" clearhidden="true">
   <hbox align="center">
     <description flex="1">&browser.speed-paint.desc;</description>
-    <button label="&reset;" icon="clear" oncommand="gPrefBrowser.onSpeedPaintReset();"/>
+    <button label="&reset;" oncommand="gPrefBrowser.onSpeedPaintReset();"/>
   </hbox>
   <hbox align="center">
     <label control="speed-paintDalay" value="&browser.speed-paint.delay.label;"/>
@@ -502,7 +502,7 @@ var gPrefBrowser = {
       </hbox>
       <hbox pack="end">
         <button id="alertsPreviewButton" label="&preview;" oncommand="gPrefBrowser.previewAlert(this.label, this.label);"/>
-        <button label="&reset;" icon="clear" oncommand="gPrefBrowser.resetAlertsSlide();"/>
+        <button label="&reset;" oncommand="gPrefBrowser.resetAlertsSlide();"/>
         <button label="&browser.download.alerts.slide.settolight.label;" oncommand="gPrefBrowser.setAlertsSlideLight();"/>
       </hbox>
     </groupbox>

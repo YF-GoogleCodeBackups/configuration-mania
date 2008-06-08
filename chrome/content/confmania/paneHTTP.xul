@@ -125,14 +125,14 @@ var gHTTPPane = {
   <hbox align="center">
     <label value="&http.ad.accept.default.label;" control="HTTPAccept"/>
     <textbox id="HTTPAccept" flex="1" preference="network.http.accept.default"/>
-    <button label="&reset;" oncommand="document.getElementById('network.http.accept.default').reset();" icon="clear"/>
+    <button label="&reset;" oncommand="document.getElementById('network.http.accept.default').reset();"/>
   </hbox>
 </groupbox>
 <groupbox id="http-ad-maxsess">
   <caption label="&http.ad.maxsession.label;"/>
   <hbox>
     <description flex="1" class="emphasis">&http.ad.maxsession.desc;</description>
-    <button label="&reset;" oncommand="gHTTPPane.resetAdvMaxSess();" icon="clear"/>
+    <button label="&reset;" oncommand="gHTTPPane.resetAdvMaxSess();"/>
   </hbox>
   <hbox align="center">
     <label control="maxpipeliningrequest" value="&http.ad.maxsession.maxpipeliningrequest.label;"/>
