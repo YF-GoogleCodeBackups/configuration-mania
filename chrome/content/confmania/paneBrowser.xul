@@ -239,7 +239,7 @@ var gPrefBrowser = {
                 label="&browser.smartbrowsing.internetKeywords.enabled.label;"/>
       <hbox align="center" id="smartbrowsing-keywordsURL-hbox">
         <label control="smartbrowsing-keywordsURL" value="&browser.smartbrowsing.internetKeywords.URL.label;"/>
-        <textbox id="smartbrowsing-keywordsURL" preference="keyword.URL" flex="1"/>
+        <textbox id="smartbrowsing-keywordsURL" preference="keyword.URL" flex="1" class="uri-element"/>
         <button label="&reset;" oncommand="gPrefBrowser.resetKeywordURL()"/>
       </hbox>
     </vbox>
