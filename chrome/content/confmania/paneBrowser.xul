@@ -55,6 +55,7 @@ var gPrefBrowser = {
     if (! document.documentElement.instantApply) {
       document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
     }
+    document.getElementById("ua-value").setAttribute("emptytext", gPrefBrowser.DefaultUserAgent);
   },
   updatePrefs : function(){
     var disabled, box;
@@ -100,6 +101,37 @@ var gPrefBrowser = {
   },
   resetKeywordURL : function(){//#smartbrowsing-keywordsURL
     document.getElementById("keyword.URL").reset();
+  },
+  get DefaultUserAgent(){
+    var m = Components.classes['@mozilla.org/network/protocol;1?name=http'].getService(Components.interfaces.nsIHttpProtocolHandler);
+    var pref = Components.classes['@mozilla.org/preferences;1'].getService(Components.interfaces.nsIPref);
+    var prefBranch = Components.classes['@mozilla.org/preferences;1'].getService(Components.interfaces.nsIPrefBranch);
+
+    var userAgent = m.appName + "/" + m.appVersion + " ";
+    var mSecurity = prefBranch.getCharPref("general.useragent.security");
+    userAgent += "("+m.platform+"; "+mSecurity+"; "+m.oscpu;
+    if(m.language && m.language != "") userAgent += "; "+m.language;
+    if(m.misc && m.misc != "") userAgent += "; "+m.misc;
+    userAgent += ")";
+
+    var fooSubComment = function(foo,fooSub,fooComment){
+      if(foo && foo != ""){
+        userAgent += " "+foo;
+        if(fooSub && fooSub != "") userAgent += "/"+fooSub;
+        if(fooComment && fooComment != "") userAgent += " ("+fooComment+")";
+      }
+    };
+    fooSubComment(m.product, m.productSub, m.productComment);
+    fooSubComment(m.vendor, m.vendorSub, m.vendorComment);
+
+    var extras = pref.getBranch("general.useragent.extra.");
+    var pCount = {value : 0};
+    var list = extras.getChildList("", pCount);
+    list = list.sort();
+    for (var i = 0; i < pCount.value; i++){
+      userAgent += " "+prefBranch.getCharPref("general.useragent.extra."+list[i]);
+    }
+    return userAgent;
   },
   onSpeedPaintReset : function(){
     ["nglayout.initialpaint.delay", "content.notify.backoffcount", "content.notify.interval",
