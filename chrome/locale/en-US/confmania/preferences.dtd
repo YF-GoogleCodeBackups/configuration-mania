@@ -177,7 +177,7 @@
 <!ENTITY security.js.popupwin.event.dblclick.label "Double Clicked">
 <!ENTITY security.antivirus.label "Anti-Virus">
 <!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
-<!ENTITY security.antivirus.scanWhenDone.desc "Hint: On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">
+<!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">
 <!ENTITY security.antivirus.dontclean.label "Try to clean a downloaded file when a virus is detected">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE.">
 <!ENTITY security.net.label "Network">
@@ -295,10 +295,11 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.i18n.bidi.texttype.charset.label "Default">
 <!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
 <!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
-<!ENTITY ui.i18n.ime.label "Input Method Editor (IME)">
-<!ENTITY ui.i18n.ime.password_onblur.label "Reopen IME if it was open prior to the password">
-<!ENTITY ui.i18n.ime.password_onfocus.label "Close IME when password field gain focus">
-<!ENTITY ui.i18n.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
+<!ENTITY ui.i18n.asian.label "Asian">
+<!ENTITY ui.i18n.asian.ime.label "Input Method Editor (IME)">
+<!ENTITY ui.i18n.asian.ime.password_onblur.label "Reopen IME if it was open prior to the password">
+<!ENTITY ui.i18n.asian.ime.password_onfocus.label "Close IME when password field gain focus">
+<!ENTITY ui.i18n.asian.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
 <!ENTITY ui.others.label "Others">
 <!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
 <!ENTITY ui.others.preference.instanceAccept.label "Accept instance (likely Mac or Gnome)">

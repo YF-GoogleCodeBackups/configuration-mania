@@ -308,68 +308,87 @@ var gUIPref = {
     <textbox id="contentLocale" preference="general.useragent.locale" size="8"/>
     <label value="&ui.i18n.locale.eg;"/>
   </hbox>
-  <groupbox>
-    <caption label="&ui.i18n.bidi.label;"/>
-    <checkbox label="&ui.i18n.bidi.ui.label;" preference="bidi.browser.ui"/>
-    <grid>
-    <columns><column/><column flex="1"/></columns>
-    <rows>
-    <row align="center">
-      <label value="&ui.i18n.bidi.characterset.label;"/>
-      <radiogroup id="bidi-charset" orient="horizontal" preference="bidi.characterset">
-        <radio value="1" label="&ui.i18n.bidi.characterset.doc.label;"/>
-        <radio value="2" label="&ui.i18n.bidi.characterset.default.label;"/>
-      </radiogroup>
-    </row>
-    <row align="center">
-      <label value="&ui.i18n.bidi.controlstextmode.label;"/>
-      <radiogroup id="bidi-controlstextmode" orient="horizontal" preference="bidi.controlstextmode">
-        <radio value="1" label="&ui.i18n.bidi.controlstextmode.logical.label;"/>
-        <radio value="2" label="&ui.i18n.bidi.controlstextmode.visual.label;"/>
-        <radio value="3" label="&ui.i18n.bidi.controlstextmode.container.label;"/>
-      </radiogroup>
-    </row>
-    <row align="center">
-      <label value="&ui.i18n.bidi.direction.label;"/>
-      <radiogroup id="bidi-direction" orient="horizontal" preference="bidi.direction">
-        <radio value="1" label="&ui.i18n.bidi.direction.ltr.label;"/>
-        <radio value="2" label="&ui.i18n.bidi.direction.rtl.label;"/>
-      </radiogroup>
-    </row>
-    <row align="center">
-      <label control="bidi-numeral" value="&ui.i18n.bidi.numeral.label;"/>
-      <radiogroup id="bidi-numeral" orient="horizontal" preference="bidi.numeral">
-        <radio value="0" label="&ui.i18n.bidi.numeral.regular_context.label;"/>
-        <radio value="1" label="&ui.i18n.bidi.numeral.hindi_context.label;"/>
-        <radio value="2" label="&ui.i18n.bidi.numeral.arabic.label;"/>
-        <radio value="3" label="&ui.i18n.bidi.numeral.hindi.label;"/>
-      </radiogroup>
-    </row>
-    <row align="center">
-      <label value="&ui.i18n.bidi.support.label;"/>
-      <radiogroup id="bidi-provider" orient="horizontal" preference="bidi.support">
-        <radio value="1" label="&ui.i18n.bidi.support.mozilla.label;"/>
-        <radio value="2" label="&ui.i18n.bidi.support.os.label;"/>
-        <radio value="3" label="&ui.i18n.bidi.support.disable.label;"/>
-      </radiogroup>
-    </row>
-    <row align="center">
-      <label value="&ui.i18n.bidi.texttype.label;"/>
-      <radiogroup id="bidi-texttype" orient="horizontal" preference="bidi.texttype">
-        <radio value="1" label="&ui.i18n.bidi.texttype.charset.label;"/>
-        <radio value="2" label="&ui.i18n.bidi.texttype.logical.label;"/>
-        <radio value="3" label="&ui.i18n.bidi.texttype.visual.label;"/>
-      </radiogroup>
-    </row>
-    </rows>
-    </grid>
-  </groupbox>
-  <groupbox>
-    <caption label="&ui.i18n.ime.label;"/>
-    <checkbox label="&ui.i18n.ime.password_onblur.label;" preference="ime.password.onBlur.dontCare"/>
-    <checkbox label="&ui.i18n.ime.password_onfocus.label;" preference="ime.password.onFocus.dontCare"/>
-  </groupbox>
-  <checkbox label="&ui.i18n.japanese_specific_transform.label;" preference="layout.enable_japanese_specific_transform"/>
+
+  <tabbox>
+  <tabs>
+    <tab label="&ui.i18n.bidi.label;"/>
+    <tab label="&ui.i18n.asian.label;"/>
+  </tabs>
+  <tabpanels flex="1">
+    <vbox>
+      <checkbox label="&ui.i18n.bidi.ui.label;" preference="bidi.browser.ui"/>
+      <grid>
+      <columns><column/><column flex="1"/></columns>
+      <rows>
+      <row align="center">
+        <label value="&ui.i18n.bidi.characterset.label;"/>
+        <radiogroup id="bidi-charset" orient="horizontal" preference="bidi.characterset">
+          <radio value="1" label="&ui.i18n.bidi.characterset.doc.label;"/>
+          <radio value="2" label="&ui.i18n.bidi.characterset.default.label;"/>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label value="&ui.i18n.bidi.controlstextmode.label;"/>
+        <radiogroup id="bidi-controlstextmode" orient="horizontal" preference="bidi.controlstextmode">
+          <radio value="1" label="&ui.i18n.bidi.controlstextmode.logical.label;"/>
+          <radio value="2" label="&ui.i18n.bidi.controlstextmode.visual.label;"/>
+          <radio value="3" label="&ui.i18n.bidi.controlstextmode.container.label;"/>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label value="&ui.i18n.bidi.direction.label;"/>
+        <radiogroup id="bidi-direction" orient="horizontal" preference="bidi.direction">
+          <radio value="1" label="&ui.i18n.bidi.direction.ltr.label;"/>
+          <radio value="2" label="&ui.i18n.bidi.direction.rtl.label;"/>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label control="bidi-numeral" value="&ui.i18n.bidi.numeral.label;"/>
+        <radiogroup id="bidi-numeral" orient="horizontal" preference="bidi.numeral">
+          <grid>
+          <columns><column/><column/></columns>
+          <rows>
+            <row>
+              <radio value="0" label="&ui.i18n.bidi.numeral.regular_context.label;"/>
+              <radio value="1" label="&ui.i18n.bidi.numeral.hindi_context.label;"/>
+            </row>
+            <row>
+              <radio value="2" label="&ui.i18n.bidi.numeral.arabic.label;"/>
+              <radio value="3" label="&ui.i18n.bidi.numeral.hindi.label;"/>
+            </row>
+          </rows>
+          </grid>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label value="&ui.i18n.bidi.support.label;"/>
+        <radiogroup id="bidi-provider" orient="horizontal" preference="bidi.support">
+          <radio value="1" label="&ui.i18n.bidi.support.mozilla.label;"/>
+          <radio value="2" label="&ui.i18n.bidi.support.os.label;"/>
+          <radio value="3" label="&ui.i18n.bidi.support.disable.label;"/>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label value="&ui.i18n.bidi.texttype.label;"/>
+        <radiogroup id="bidi-texttype" orient="horizontal" preference="bidi.texttype">
+          <radio value="1" label="&ui.i18n.bidi.texttype.charset.label;"/>
+          <radio value="2" label="&ui.i18n.bidi.texttype.logical.label;"/>
+          <radio value="3" label="&ui.i18n.bidi.texttype.visual.label;"/>
+        </radiogroup>
+      </row>
+      </rows>
+      </grid>
+    </vbox>
+    <vbox>
+      <groupbox>
+        <caption label="&ui.i18n.asian.ime.label;"/>
+        <checkbox label="&ui.i18n.asian.ime.password_onblur.label;" preference="ime.password.onBlur.dontCare"/>
+        <checkbox label="&ui.i18n.asian.ime.password_onfocus.label;" preference="ime.password.onFocus.dontCare"/>
+      </groupbox>
+      <checkbox label="&ui.i18n.asian.japanese_specific_transform.label;" preference="layout.enable_japanese_specific_transform"/>
+    </vbox>
+  </tabpanels>
+  </tabbox>
 </tabpanel>
 <tabpanel orient="vertical">
   <groupbox>

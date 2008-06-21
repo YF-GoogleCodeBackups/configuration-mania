@@ -180,7 +180,7 @@
 <!ENTITY security.js.popupwin.event.dblclick.label "ダブルクリック">
 <!ENTITY security.antivirus.label "ウイルス対策">
 <!ENTITY security.antivirus.scanWhenDone.label "ダウンロード完了時にウイルススキャンを実行する">
-<!ENTITY security.antivirus.scanWhenDone.desc "ヒント: Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く際にセキュリティの警告を表示するかにも反映します">
+<!ENTITY security.antivirus.scanWhenDone.desc "Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く際にセキュリティの警告を表示するかにも反映します">
 <!ENTITY security.antivirus.dontclean.label "ダウンロードされたファイルからウイルスが検出された場合、駆除を試みる">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
 <!ENTITY security.net.label "ネットワーク">
@@ -297,10 +297,11 @@
 <!ENTITY ui.i18n.bidi.texttype.charset.label "文字コードに従う">
 <!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
 <!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
-<!ENTITY ui.i18n.ime.label "Input Method Editor (IME)">
-<!ENTITY ui.i18n.ime.password_onblur.label "パスワード入力後はIMEの状態を元に戻す">
-<!ENTITY ui.i18n.ime.password_onfocus.label "パスワード入力時にIMEを無効にする">
-<!ENTITY ui.i18n.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
+<!ENTITY ui.i18n.asian.label "アジア言語">
+<!ENTITY ui.i18n.asian.ime.label "Input Method Editor (IME)">
+<!ENTITY ui.i18n.asian.ime.password_onblur.label "パスワード入力後はIMEの状態を元に戻す">
+<!ENTITY ui.i18n.asian.ime.password_onfocus.label "パスワード入力時にIMEを無効にする">
+<!ENTITY ui.i18n.asian.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
 <!ENTITY ui.others.label "その他">
 <!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
 <!ENTITY ui.others.preference.instanceAccept.label "瞬時に設定を適用 (Mac や Gnome のように)">
