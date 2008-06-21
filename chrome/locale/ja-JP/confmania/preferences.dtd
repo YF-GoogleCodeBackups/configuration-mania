@@ -190,9 +190,11 @@
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
 <!ENTITY security.net.referer.label "Referer 要求ヘッダ">
 <!ENTITY security.net.referer.none.label "常に送らない (非推奨)">
-<!ENTITY security.net.referer.none.desc "警告: しばしば、Referrer ヘッダが要求されることがあります。もしそのようなことがあった時には、この設定を&quot;&security.net.referer.link.label;&quot;及び&quot;&security.net.referer.all.label;&quot;に変更して下さい。">
+<!ENTITY security.net.referer.none.desc "警告: しばしば、Referer ヘッダが要求されることがあります。もしそのようなことがあった時には、この設定を&quot;&security.net.referer.link.label;&quot;及び&quot;&security.net.referer.all.label;&quot;に変更して下さい。">
 <!ENTITY security.net.referer.link.label "リンクのクリック時のみ送る">
 <!ENTITY security.net.referer.all.label "画像要求も送る">
+<!ENTITY security.net.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referer を送る">
+<!ENTITY security.net.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Refererは送られません">
 <!ENTITY security.others.label "その他">
 <!ENTITY security.others.cookie.label "Cookie">
 <!ENTITY security.others.cookie.lifetimedays.label "Cookieを強制削除するまでの日数 : ">

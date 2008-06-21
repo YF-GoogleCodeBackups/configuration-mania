@@ -56,6 +56,7 @@ var gPrefSecurity = {
       document.getElementById("popupwin-e." + e[i]).checked = true;
 
     this.updateIDN();
+    this.updateSendRefererSecureXSite();
 
     document.getElementById("passwordTimeout").value
      = Components.classes["@mozilla.org/security/pk11tokendb;1"]
@@ -78,6 +79,9 @@ var gPrefSecurity = {
   updateIDN : function(){
     document.getElementById("showPunycode").disabled = ! document.getElementById("enableIDN").checked;
     document.getElementById("showPunycodeDesc").disabled = ! document.getElementById("enableIDN").checked;
+  },
+  updateSendRefererSecureXSite: function(){
+    document.getElementById("sendRefererSecureXSite").disabled = document.getElementById("sendReferer").value == "0";
   },
   updatePasswordAskTimes : function(){
     var radiogroup = document.getElementById("passwordAskTimes");
@@ -122,6 +126,7 @@ var gPrefSecurity = {
   <preference id="network.enableIDN" name="network.enableIDN" type="bool"/>
   <preference id="network.IDN_show_punycode" name="network.IDN_show_punycode" type="bool"/>
   <preference id="network.http.sendRefererHeader" name="network.http.sendRefererHeader" type="int"/>
+  <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
 
   <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
   <preference id="network.cookie.lifetime.days" name="network.cookie.lifetime.days" type="int"/>
@@ -237,11 +242,14 @@ var gPrefSecurity = {
 <groupbox>
   <caption label="&security.net.referer.label;"/>
   <radiogroup id="sendReferer" preference="network.http.sendRefererHeader">
-    <radio value="0" label="&security.net.referer.none.label;"/>
+    <radio value="0" label="&security.net.referer.none.label;" oncommand="gPrefSecurity.updateSendRefererSecureXSite()"/>
     <description class="indent">&security.net.referer.none.desc;</description>
-    <radio value="1" label="&security.net.referer.link.label;"/>
-    <radio value="2" label="&security.net.referer.all.label;"/>
+    <radio value="1" label="&security.net.referer.link.label;" oncommand="gPrefSecurity.updateSendRefererSecureXSite()"/>
+    <radio value="2" label="&security.net.referer.all.label;" oncommand="gPrefSecurity.updateSendRefererSecureXSite()"/>
   </radiogroup>
+  <checkbox id="sendRefererSecureXSite" label="&security.net.referer.secureXSite.label;"
+    preference="network.http.sendSecureXSiteReferrer"/>
+  <description class="indent">&security.net.referer.secureXSite.desc;</description>
 </groupbox>
 
 </tabpanel>
