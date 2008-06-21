@@ -175,6 +175,11 @@
 <!ENTITY security.js.popupwin.event.mousedown.label "Mouse Down">
 <!ENTITY security.js.popupwin.event.click.label "Clicked">
 <!ENTITY security.js.popupwin.event.dblclick.label "Double Clicked">
+<!ENTITY security.antivirus.label "Anti-Virus">
+<!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
+<!ENTITY security.antivirus.scanWhenDone.desc "Hint: On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">
+<!ENTITY security.antivirus.dontclean.label "Try to clean a downloaded file when a virus is detected">
+<!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE.">
 <!ENTITY security.net.label "Network">
 <!ENTITY security.net.redirection-limit.label "HTTP Redirection limit">
 <!ENTITY security.net.enableIDN.label "Enable IDN(Internationalized Domain Names)">

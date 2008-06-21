@@ -114,6 +114,10 @@ var gPrefSecurity = {
   <preference id="dom.popup_maximum" name="dom.popup_maximum" type="int"/>
   <preference id="dom.popup_allowed_events" name="dom.popup_allowed_events" type="string"/>
 
+  <preference id="browser.download.manager.scanWhenDone" name="browser.download.manager.scanWhenDone" type="bool"/>
+  <preference id="browser.download.antivirus.dontclean" name="browser.download.antivirus.dontclean" type="bool"/>
+  <preference id="browser.download.manager.alertOnEXEOpen" name="browser.download.manager.alertOnEXEOpen" type="bool"/>
+
   <preference id="network.http.redirection-limit" name="network.http.redirection-limit" type="int"/>
   <preference id="network.enableIDN" name="network.enableIDN" type="bool"/>
   <preference id="network.IDN_show_punycode" name="network.IDN_show_punycode" type="bool"/>
@@ -128,6 +132,7 @@ var gPrefSecurity = {
 <tabbox flex="1">
 <tabs>
 <tab label="&security.js.label;"/>
+<tab label="&security.antivirus.label;"/>
 <tab label="&security.net.label;"/>
 <tab label="&security.others.label;"/>
 </tabs> 
@@ -205,6 +210,15 @@ var gPrefSecurity = {
 </tabpanels>
 </tabbox>
 
+</tabpanel>
+<tabpanel orient="vertical">
+  <checkbox label="&security.antivirus.scanWhenDone.label;"
+   preference="browser.download.manager.scanWhenDone"/>
+  <description class="indent">&security.antivirus.scanWhenDone.desc;</description>
+  <checkbox label="&security.antivirus.dontclean.label;"
+   preference="browser.download.antivirus.dontclean"/>
+  <checkbox label="&security.antivirus.alertOnEXEOpen.label;"
+   preference="browser.download.manager.alertOnEXEOpen"/>
 </tabpanel>
 <tabpanel orient="vertical">
 

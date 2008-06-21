@@ -178,6 +178,11 @@
 <!ENTITY security.js.popupwin.event.mousedown.label "マウスボタンを離した">
 <!ENTITY security.js.popupwin.event.click.label "クリック">
 <!ENTITY security.js.popupwin.event.dblclick.label "ダブルクリック">
+<!ENTITY security.antivirus.label "ウイルス対策">
+<!ENTITY security.antivirus.scanWhenDone.label "ダウンロード完了時にウイルススキャンを実行する">
+<!ENTITY security.antivirus.scanWhenDone.desc "ヒント: Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く際にセキュリティの警告を表示するかにも反映します">
+<!ENTITY security.antivirus.dontclean.label "ダウンロードされたファイルからウイルスが検出された場合、駆除を試みる">
+<!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
 <!ENTITY security.net.label "ネットワーク">
 <!ENTITY security.net.redirection-limit.label "HTTP リダイレクト限界数">
 <!ENTITY security.net.enableIDN.label "IDN (国際化ドメイン名) を有効にする">
