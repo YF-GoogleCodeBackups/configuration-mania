@@ -214,6 +214,8 @@ var gPrefBrowser = {
   <preference id="browser.cache.disk_cache_ssl" name="browser.cache.disk_cache_ssl" type="bool"/>
   <preference id="network.prefetch-next" name="network.prefetch-next" type="bool"/>
 
+  <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
+  <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
   <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
   <preference id="alerts.slideIncrement" name="alerts.slideIncrement" type="int"/>
   <preference id="alerts.slideIncrementTime" name="alerts.slideIncrementTime" type="int"/>
@@ -489,9 +491,19 @@ var gPrefBrowser = {
 </expander>
 
 <expander id="download" label="&browser.download.label;" open="false" clearhidden="true">
-  <checkbox label="&browser.download.downloadShowAlertOnComplete.label;"
-            preference="browser.download.manager.showAlertOnComplete"/>
+  <checkbox label="&browser.download.addToRecentDocs.label;"
+            preference="browser.download.manager.addToRecentDocs"/>
+  <groupbox>
+    <caption label="&browser.download.quitBehavior.label;"/>
+    <radiogroup preference="browser.download.manager.quitBehavior">
+      <radio value="0" label="&browser.download.quitBehavior.resumeOnRestart.label;"/>
+      <radio value="1" label="&browser.download.quitBehavior.pauseOnRestart.label;"/>
+      <radio value="2" label="&browser.download.quitBehavior.cancelOnQuit.label;"/>
+    </radiogroup>
+  </groupbox>
 
+  <checkbox label="&browser.download.showAlertOnComplete.label;"
+            preference="browser.download.manager.showAlertOnComplete"/>
   <groupbox>
     <caption label="&browser.download.alerts.label;"/>
     <hbox align="center">

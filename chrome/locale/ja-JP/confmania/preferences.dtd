@@ -112,7 +112,12 @@
 <!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "注意: この値を増やすと、戻る/進むのパフォーマンスが向上します。しかし、タブを多く開いている時などに&brandShortName;がより多くのメモリを消費するようになります。つまりトレードオフが存在します。">
 <!ENTITY browser.download.label "ダウンロード">
-<!ENTITY browser.download.downloadShowAlertOnComplete.label "ダウンロード終了時に通知する">
+<!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
+<!ENTITY browser.download.quitBehavior.label "&brandShortName;終了時の進行中のダウンロードの処理">
+<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "中止するが、次回&brandShortName;起動時に自動的に再開">
+<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "中止して、次回&brandShortName;起動時も自動的には再開しない">
+<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "&brandShortName;終了時にキャンセルする">
+<!ENTITY browser.download.showAlertOnComplete.label "ダウンロード終了時に通知する">
 <!ENTITY browser.download.alerts.label "通知アラート表示の設定">
 <!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
 <!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
