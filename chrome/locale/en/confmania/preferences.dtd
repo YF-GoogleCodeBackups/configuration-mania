@@ -250,8 +250,8 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.mousewheel.history.label "Move back and forward in the browsing history">
 <!ENTITY ui.mousewheel.textsize.label "Make the text larger or smaller">
 <!ENTITY ui.find.label "Find in page">
-<!ENTITY ui.find.findahead.label "Find As You Type">
-<!ENTITY ui.find.findahead.desc "Tip: To manually start Find As You Type, type / to find text or ' to find links, followed by the text you want to find.">
+<!ENTITY ui.find.findahead.label "Quick Find (Find As You Type)">
+<!ENTITY ui.find.findahead.desc "Tip: To manually start Quick Find, type / to find text or ' to find links, followed by the text you want to find.">
 <!ENTITY ui.find.findahead.timeout.label "Clear the current search after">
 <!ENTITY ui.find.findahead.timeout.label2 "[ms] of inactivity">
 <!ENTITY ui.find.findahead.sound.label "Play a sound when typed text isn't found (takes effect after restart)">

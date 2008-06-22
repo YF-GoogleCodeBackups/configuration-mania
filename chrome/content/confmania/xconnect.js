@@ -14,7 +14,7 @@ function initRadioGroupConnect2(groupid,dataid,defaultdat){
    +"document.getElementById(mData.getAttribute('preference')).reset();"
    +"}else{"
    +"document.documentElement.currentPane.userChangedValue(mData);"
-   +"}event.preventBubble();";
+   +"}event.stopPropagation();";
 
   var oOthers; var found = false;
   Array.forEach(mGroup._getRadioChildren(), function(oRadio){

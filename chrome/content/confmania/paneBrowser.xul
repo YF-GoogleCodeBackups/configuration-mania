@@ -103,6 +103,7 @@ var gPrefBrowser = {
     document.getElementById("keyword.URL").reset();
   },
   get DefaultUserAgent(){
+    // cf. nsGlobalWindow.cpp#GetUserAgent
     var m = Components.classes['@mozilla.org/network/protocol;1?name=http'].getService(Components.interfaces.nsIHttpProtocolHandler);
     var pref = Components.classes['@mozilla.org/preferences;1'].getService(Components.interfaces.nsIPref);
     var prefBranch = Components.classes['@mozilla.org/preferences;1'].getService(Components.interfaces.nsIPrefBranch);

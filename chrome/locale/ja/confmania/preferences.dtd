@@ -252,8 +252,8 @@
 <!ENTITY ui.mousewheel.history.label "ブラウズの履歴を戻るまたは進む">
 <!ENTITY ui.mousewheel.textsize.label "文字サイズを大きくしたり小さくしたりする">
 <!ENTITY ui.find.label "ページ内検索">
-<!ENTITY ui.find.findahead.label "Find As You Type (検索語入力時の逐次検索機能)">
-<!ENTITY ui.find.findahead.desc "ヒント: 文字入力検索を手動で開始するには、検索文字を続けて、/文字 または、 'リンク を入力します。">
+<!ENTITY ui.find.findahead.label "クイック検索 (Find As You Type)">
+<!ENTITY ui.find.findahead.desc "ヒント: クイック検索を手動で開始するには、検索文字を続けて、/文字 または、 'リンク を入力します。">
 <!ENTITY ui.find.findahead.timeout.label "停止状態が">
 <!ENTITY ui.find.findahead.timeout.label2 "ミリ秒続いたら現在の検索をクリアする">
 <!ENTITY ui.find.findahead.sound.label "入力文字が見つからないときサウンドを鳴らす (再起動必要)">
