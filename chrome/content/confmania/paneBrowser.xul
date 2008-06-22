@@ -202,7 +202,7 @@ var gPrefBrowser = {
   <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool"/>
   <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
   <preference id="image.animation_mode" name="image.animation_mode" type="string"/>
-  <preference id="browser.enable_automatic_image_resizing" name="browser.enable_automatic_image_resizin" type="bool"/>
+  <preference id="browser.enable_automatic_image_resizing" name="browser.enable_automatic_image_resizing" type="bool"/>
   <preference id="browser.display.show_image_placeholders" name="browser.display.show_image_placeholders" type="bool"/>
   <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
   <preference id="gfx.color_management.enabled" name="gfx.color_management.enabled" type="bool"/>
@@ -571,7 +571,7 @@ var gPrefBrowser = {
             oncommand="gPrefBrowser.updatePrefs();"/>
   <hbox id="others-editorExternal-hbox" class="indent" align="center">
     <label control="others-editorExternal-path" label="&browser.others.editorExternal.path;"/>
-    <textbox id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
+    <textbox type="autocomplete" autocompletesearch="file" id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
     <button label="&browse;" oncommand="gPrefBrowser.onEditorExternalBrowse()"/>
   </hbox>
   <groupbox>
