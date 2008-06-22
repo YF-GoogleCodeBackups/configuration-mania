@@ -300,9 +300,6 @@
 <!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
 <!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
 <!ENTITY ui.i18n.asian.label "アジア言語">
-<!ENTITY ui.i18n.asian.ime.label "Input Method Editor (IME)">
-<!ENTITY ui.i18n.asian.ime.password_onblur.label "パスワード入力後はIMEの状態を元に戻す">
-<!ENTITY ui.i18n.asian.ime.password_onfocus.label "パスワード入力時にIMEを無効にする">
 <!ENTITY ui.i18n.asian.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
 <!ENTITY ui.others.label "その他">
 <!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">

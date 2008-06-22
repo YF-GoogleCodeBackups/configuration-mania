@@ -167,8 +167,6 @@ var gUIPref = {
   <preference id="bidi.numeral" name="bidi.numeral" type="int"/>
   <preference id="bidi.support" name="bidi.support" type="int"/>
   <preference id="bidi.texttype" name="bidi.texttype" type="int"/>
-  <preference id="ime.password.onBlur.dontCare" name="ime.password.onBlur.dontCare" type="bool" inverted="true"/>
-  <preference id="ime.password.onFocus.dontCare" name="ime.password.onFocus.dontCare" type="bool" inverted="true"/>
   <preference id="layout.enable_japanese_specific_transform" name="layout.enable_japanese_specific_transform" type="bool"/>
 
   <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
@@ -380,11 +378,6 @@ var gUIPref = {
       </grid>
     </vbox>
     <vbox>
-      <groupbox>
-        <caption label="&ui.i18n.asian.ime.label;"/>
-        <checkbox label="&ui.i18n.asian.ime.password_onblur.label;" preference="ime.password.onBlur.dontCare"/>
-        <checkbox label="&ui.i18n.asian.ime.password_onfocus.label;" preference="ime.password.onFocus.dontCare"/>
-      </groupbox>
       <checkbox label="&ui.i18n.asian.japanese_specific_transform.label;" preference="layout.enable_japanese_specific_transform"/>
     </vbox>
   </tabpanels>
