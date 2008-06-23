@@ -324,7 +324,7 @@ var gPrefBrowser = {
     <caption label="&browser.html.img;"/>
     <hbox align="center">
       <label value="&browser.html.img.anim.label;" control="html-animation"/>
-      <menulist id="html-animation"><menupopup>
+      <menulist id="html-animation" preference="image.animation_mode"><menupopup>
         <menuitem value="normal" label="&browser.html.img.anim.normal.label;"/>
         <menuitem value="once" label="&browser.html.img.anim.once.label;"/>
         <menuitem value="none" label="&browser.html.img.anim.none.label;"/>
