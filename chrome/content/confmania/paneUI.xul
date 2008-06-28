@@ -216,7 +216,7 @@ var gUIPref = {
         <radio value="0" label="&ui.mousewheel.scroll.label;"/>
         <vbox align="start">
           <hbox align="center">
-            <textbox id="mousewheelNumlines" type="number" size="3" oninput="gUIPref.changed_mousewheelNumlines();"/>
+            <textbox id="mousewheelNumlines" type="number" size="3" onchange="gUIPref.changed_mousewheelNumlines();"/>
             <label value="&ui.mousewheel.scrollLines.label;"/>
           </hbox>
           <checkbox id="mousewheelSysNumlines" label="&ui.mousewheel.useSystemDefault.label;"
@@ -231,7 +231,7 @@ var gUIPref = {
 
   <!-- __DATA__ -->
   <data hidden="true">
-    <textbox id="mousewheelWithNoKeyAction" type="number" hidespinbuttons="true" preference="mousewheel.withnokey.action"/>
+    <textbox id="mousewheelWithNoKeyAction" preference="mousewheel.withnokey.action"/>
     <textbox id="mousewheelWithNoKeyNumlines" preference="mousewheel.withnokey.numlines"/>
     <textbox id="mousewheelWithNoKeySysNumlines" preference="mousewheel.withnokey.sysnumlines"/>
     <textbox id="mousewheelWithAltKeyAction" preference="mousewheel.withaltkey.action"/>
