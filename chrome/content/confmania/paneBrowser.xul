@@ -231,6 +231,13 @@ var gPrefBrowser = {
   <preference id="browser.urlbar.clickSelectsAll" name="browser.urlbar.clickSelectsAll" type="bool"/>
   <preference id="browser.urlbar.doubleClickSelectsAll" name="browser.urlbar.doubleClickSelectsAll" type="bool"/>
 
+  <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
+  <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
+  <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
+  <preference id="alerts.slideIncrement" name="alerts.slideIncrement" type="int"/>
+  <preference id="alerts.slideIncrementTime" name="alerts.slideIncrementTime" type="int"/>
+  <preference id="alerts.totalOpenTime" name="alerts.totalOpenTime" type="int"/>
+
   <preference id="general.useragent.override" name="general.useragent.override" type="wstring"/>
 
   <preference id="nglayout.initialpaint.delay" name="nglayout.initialpaint.delay" type="int"/>
@@ -246,13 +253,6 @@ var gPrefBrowser = {
   <preference id="browser.sessionhistory.max_total_viewers" name="browser.sessionhistory.max_total_viewers" type="int"/>
   <preference id="browser.cache.disk_cache_ssl" name="browser.cache.disk_cache_ssl" type="bool"/>
   <preference id="network.prefetch-next" name="network.prefetch-next" type="bool"/>
-
-  <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
-  <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
-  <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
-  <preference id="alerts.slideIncrement" name="alerts.slideIncrement" type="int"/>
-  <preference id="alerts.slideIncrementTime" name="alerts.slideIncrementTime" type="int"/>
-  <preference id="alerts.totalOpenTime" name="alerts.totalOpenTime" type="int"/>
 
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="svg.enabled" name="svg.enabled" type="bool"/>
@@ -410,6 +410,44 @@ var gPrefBrowser = {
   <checkbox label="&browser.urlbar.clickSelectsAll.label;" preference="browser.urlbar.clickSelectsAll"/>
   <checkbox label="&browser.urlbar.doubleClickSelectsAll.label;" preference="browser.urlbar.doubleClickSelectsAll"/>
 </expander>
+<expander id="download" label="&browser.download.label;" open="false" clearhidden="true">
+  <checkbox label="&browser.download.addToRecentDocs.label;"
+            preference="browser.download.manager.addToRecentDocs"/>
+  <groupbox>
+    <caption label="&browser.download.quitBehavior.label;"/>
+    <radiogroup preference="browser.download.manager.quitBehavior">
+      <radio value="0" label="&browser.download.quitBehavior.resumeOnRestart.label;"/>
+      <radio value="1" label="&browser.download.quitBehavior.pauseOnRestart.label;"/>
+      <radio value="2" label="&browser.download.quitBehavior.cancelOnQuit.label;"/>
+    </radiogroup>
+  </groupbox>
+
+  <checkbox label="&browser.download.showAlertOnComplete.label;"
+            preference="browser.download.manager.showAlertOnComplete"/>
+  <groupbox>
+    <caption label="&browser.download.alerts.label;"/>
+    <hbox align="center">
+      <label control="browserTotalOpenTime" value="&browser.download.alerts.totalOpenTime;"/>
+      <textbox id="browserTotalOpenTime" type="number" hidespinbuttons="true" size="5" preference="alerts.totalOpenTime"/>
+      <label value="&miliseconds;"/>
+    </hbox>
+    <groupbox>
+      <caption label="&browser.download.alerts.slide.label;"/>
+      <hbox align="center">
+        <label value="&browser.download.alerts.slide.prefix.label;"/>
+        <textbox type="number" size="3" min="1" preference="alerts.slideIncrement"/>
+        <label value="&browser.download.alerts.slide.per.label;"/>
+        <textbox type="number" hidespinbuttons="true" size="5" preference="alerts.slideIncrementTime"/>
+        <label value="&miliseconds;"/>
+      </hbox>
+      <hbox pack="end">
+        <button id="alertsPreviewButton" label="&preview;" oncommand="gPrefBrowser.previewAlert(this.label, this.label);"/>
+        <button label="&reset;" oncommand="gPrefBrowser.resetAlertsSlide();"/>
+        <button label="&browser.download.alerts.slide.settolight.label;" oncommand="gPrefBrowser.setAlertsSlideLight();"/>
+      </hbox>
+    </groupbox>
+  </groupbox>
+</expander>
 <expander id="ua" label="&browser.ua.label;" open="false" clearhidden="true">
   <description>&browser.ua.desc;</description>
   <radiogroup flex="1" id="ua-radiogr">
@@ -521,45 +559,6 @@ var gPrefBrowser = {
   </groupbox>
   <checkbox label="&browser.speed-cache.disk_cache_ssl.label;" preference="browser.cache.disk_cache_ssl"/>
   <checkbox label="&browser.speed-cache.prefetch-next.label;" preference="network.prefetch-next"/>
-</expander>
-
-<expander id="download" label="&browser.download.label;" open="false" clearhidden="true">
-  <checkbox label="&browser.download.addToRecentDocs.label;"
-            preference="browser.download.manager.addToRecentDocs"/>
-  <groupbox>
-    <caption label="&browser.download.quitBehavior.label;"/>
-    <radiogroup preference="browser.download.manager.quitBehavior">
-      <radio value="0" label="&browser.download.quitBehavior.resumeOnRestart.label;"/>
-      <radio value="1" label="&browser.download.quitBehavior.pauseOnRestart.label;"/>
-      <radio value="2" label="&browser.download.quitBehavior.cancelOnQuit.label;"/>
-    </radiogroup>
-  </groupbox>
-
-  <checkbox label="&browser.download.showAlertOnComplete.label;"
-            preference="browser.download.manager.showAlertOnComplete"/>
-  <groupbox>
-    <caption label="&browser.download.alerts.label;"/>
-    <hbox align="center">
-      <label control="browserTotalOpenTime" value="&browser.download.alerts.totalOpenTime;"/>
-      <textbox id="browserTotalOpenTime" type="number" hidespinbuttons="true" size="5" preference="alerts.totalOpenTime"/>
-      <label value="&miliseconds;"/>
-    </hbox>
-    <groupbox>
-      <caption label="&browser.download.alerts.slide.label;"/>
-      <hbox align="center">
-        <label value="&browser.download.alerts.slide.prefix.label;"/>
-        <textbox type="number" size="3" min="1" preference="alerts.slideIncrement"/>
-        <label value="&browser.download.alerts.slide.per.label;"/>
-        <textbox type="number" hidespinbuttons="true" size="5" preference="alerts.slideIncrementTime"/>
-        <label value="&miliseconds;"/>
-      </hbox>
-      <hbox pack="end">
-        <button id="alertsPreviewButton" label="&preview;" oncommand="gPrefBrowser.previewAlert(this.label, this.label);"/>
-        <button label="&reset;" oncommand="gPrefBrowser.resetAlertsSlide();"/>
-        <button label="&browser.download.alerts.slide.settolight.label;" oncommand="gPrefBrowser.setAlertsSlideLight();"/>
-      </hbox>
-    </groupbox>
-  </groupbox>
 </expander>
 
 <expander id="others" label="&browser.others.label;" open="false" clearhidden="true">

@@ -62,6 +62,19 @@
 <!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す (Firefox2.x)">
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択(Firefox3以降)">
+<!ENTITY browser.download.label "ダウンロード">
+<!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
+<!ENTITY browser.download.quitBehavior.label "&brandShortName;終了時の進行中のダウンロードの処理">
+<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "中止するが、次回&brandShortName;起動時に自動的に再開">
+<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "中止して、次回&brandShortName;起動時も自動的には再開しない">
+<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "&brandShortName;終了時にキャンセルする">
+<!ENTITY browser.download.showAlertOnComplete.label "ダウンロード終了時に通知する">
+<!ENTITY browser.download.alerts.label "通知アラート表示の設定">
+<!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
+<!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
+<!ENTITY browser.download.alerts.slide.prefix.label "">
+<!ENTITY browser.download.alerts.slide.per.label "ピクセルづつ動かす。時間間隔は">
+<!ENTITY browser.download.alerts.slide.settolight.label "軽い設定にする">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "警告: おそらくこの設定が一部のプラグインや &quot;User Agent Switcher&quot; などと競合するかもしれません。">
 <!ENTITY browser.ua.default.label "ブラウザの標準を使用する">
@@ -111,19 +124,6 @@
 <!ENTITY browser.speed-cache.prefetch-next.label "リンク先読み (prefetch) 機構を有効にする">
 <!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "注意: この値を増やすと、戻る/進むのパフォーマンスが向上します。しかし、タブを多く開いている時などに&brandShortName;がより多くのメモリを消費するようになります。つまりトレードオフが存在します。">
-<!ENTITY browser.download.label "ダウンロード">
-<!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
-<!ENTITY browser.download.quitBehavior.label "&brandShortName;終了時の進行中のダウンロードの処理">
-<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "中止するが、次回&brandShortName;起動時に自動的に再開">
-<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "中止して、次回&brandShortName;起動時も自動的には再開しない">
-<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "&brandShortName;終了時にキャンセルする">
-<!ENTITY browser.download.showAlertOnComplete.label "ダウンロード終了時に通知する">
-<!ENTITY browser.download.alerts.label "通知アラート表示の設定">
-<!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
-<!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
-<!ENTITY browser.download.alerts.slide.prefix.label "">
-<!ENTITY browser.download.alerts.slide.per.label "ピクセルづつ動かす。時間間隔は">
-<!ENTITY browser.download.alerts.slide.settolight.label "軽い設定にする">
 <!ENTITY browser.others.label "その他">
 <!ENTITY browser.others.urlbarhideGoButton "場所バーの隣りの移動ボタンを隠す">
 <!ENTITY browser.others.urlbarclickSelectsAll "場所バーをクリック時に内容を選択する">

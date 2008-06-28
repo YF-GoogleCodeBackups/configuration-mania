@@ -62,6 +62,19 @@
 <!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar (Firefox 2.x)">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked (Firefox3+)">
+<!ENTITY browser.download.label "Download">
+<!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
+<!ENTITY browser.download.quitBehavior.label "What should happen to in-progress downloads when &brandShortName; quited">
+<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">
+<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Pause but will not resume downloads automatically when &brandShortName; restarted">
+<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
+<!ENTITY browser.download.showAlertOnComplete.label "Show alert on complete download">
+<!ENTITY browser.download.alerts.label "The Alerts configration">
+<!ENTITY browser.download.alerts.totalOpenTime "Show alerts for">
+<!ENTITY browser.download.alerts.slide.label "Speed of alert slide-animation">
+<!ENTITY browser.download.alerts.slide.prefix.label "Move the alerts by">
+<!ENTITY browser.download.alerts.slide.per.label "pixels per">
+<!ENTITY browser.download.alerts.slide.settolight.label "Set light-weight conf.">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.default.label "Use browser default">
@@ -110,19 +123,6 @@
 <!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
 <!ENTITY browser.speed-cache.session-history-viewers.label "Max Number of pages stored in memory">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: This improves performance when pressing Back and Forward, If you have a lot of tabs, &brandShortName;'s memory usage can climb dramatically. It's a trade-off.">
-<!ENTITY browser.download.label "Download">
-<!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
-<!ENTITY browser.download.quitBehavior.label "What should happen to in-progress downloads when &brandShortName; quited">
-<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">
-<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Pause but will not resume downloads automatically when &brandShortName; restarted">
-<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
-<!ENTITY browser.download.showAlertOnComplete.label "Show alert on complete download">
-<!ENTITY browser.download.alerts.label "The Alerts configration">
-<!ENTITY browser.download.alerts.totalOpenTime "Show alerts for">
-<!ENTITY browser.download.alerts.slide.label "Speed of alert slide-animation">
-<!ENTITY browser.download.alerts.slide.prefix.label "Move the alerts by">
-<!ENTITY browser.download.alerts.slide.per.label "pixels per">
-<!ENTITY browser.download.alerts.slide.settolight.label "Set light-weight conf.">
 <!ENTITY browser.others.label "Others">
 <!ENTITY browser.others.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.enableSVG.label "Enable rendering SVG content">
