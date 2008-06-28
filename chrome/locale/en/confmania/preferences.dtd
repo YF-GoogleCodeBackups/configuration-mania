@@ -192,17 +192,17 @@
 <!ENTITY security.net.referer.all.label "Send on image requests as well">
 <!ENTITY security.net.referer.secureXSite.label "Send the Referer header when navigating from a https site to another https site">
 <!ENTITY security.net.referer.secureXSite.desc "Regardless of this setting, Never send the Referer header when navigating from a https server to a non-secure server.">
-<!ENTITY security.others.label "Others">
-<!ENTITY security.others.cookie.label "Cookie">
-<!ENTITY security.others.cookie.lifetimedays.label "Force to Delete cookies after">
-<!ENTITY security.others.passwd.label "Master Password">
-<!ENTITY security.others.passwd.managepassword.label "Master Password Timeout">
-<!ENTITY security.others.passwd.managepassword.text "&brandShortName; will ask for your master password:">
-<!ENTITY security.others.passwd.managepassword.askfirsttime "The first time it is needed">
-<!ENTITY security.others.passwd.managepassword.askeverytime "Every time it is needed">
-<!ENTITY security.others.passwd.managepassword.asktimeout   "If it has not been used for ">
-<!ENTITY security.others.passwd.managepassword.timeout.unit "minutes or longer">
-<!ENTITY security.others.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
+<!ENTITY security.privacy.label "Privacy">
+<!ENTITY security.privacy.cookie.label "Cookie">
+<!ENTITY security.privacy.cookie.lifetimedays.label "Force to Delete cookies after">
+<!ENTITY security.privacy.passwd.label "Master Password">
+<!ENTITY security.privacy.passwd.managepassword.label "Master Password Timeout">
+<!ENTITY security.privacy.passwd.managepassword.text "&brandShortName; will ask for your master password:">
+<!ENTITY security.privacy.passwd.managepassword.askfirsttime "The first time it is needed">
+<!ENTITY security.privacy.passwd.managepassword.askeverytime "Every time it is needed">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout   "If it has not been used for ">
+<!ENTITY security.privacy.passwd.managepassword.timeout.unit "minutes or longer">
+<!ENTITY security.privacy.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
 
 <!ENTITY http.title "HTTP Network">
 <!ENTITY http.connect.label "Connection">

@@ -195,17 +195,17 @@
 <!ENTITY security.net.referer.all.label "画像要求も送る">
 <!ENTITY security.net.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referer を送る">
 <!ENTITY security.net.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Refererは送られません">
-<!ENTITY security.others.label "その他">
-<!ENTITY security.others.cookie.label "Cookie">
-<!ENTITY security.others.cookie.lifetimedays.label "Cookieを強制削除するまでの日数 : ">
-<!ENTITY security.others.passwd.label "マスターパスワード">
-<!ENTITY security.others.passwd.managepassword.label "マスターパスワードの期限">
-<!ENTITY security.others.passwd.managepassword.text "マスターパスワードが求められるとき:">
-<!ENTITY security.others.passwd.managepassword.askfirsttime "必要になった初回のみ">
-<!ENTITY security.others.passwd.managepassword.askeverytime "必要になったとき毎回">
-<!ENTITY security.others.passwd.managepassword.asktimeout   "前回使用後">
-<!ENTITY security.others.passwd.managepassword.timeout.unit "分以上経ったとき">
-<!ENTITY security.others.passwd.desc "ヒント: マスターパスワードの設定は &brandShortName; の設定ダイアログにあります。">
+<!ENTITY security.privacy.label "プライバシー">
+<!ENTITY security.privacy.cookie.label "Cookie">
+<!ENTITY security.privacy.cookie.lifetimedays.label "Cookieを強制削除するまでの日数 : ">
+<!ENTITY security.privacy.passwd.label "マスターパスワード">
+<!ENTITY security.privacy.passwd.managepassword.label "マスターパスワードの期限">
+<!ENTITY security.privacy.passwd.managepassword.text "マスターパスワードが求められるとき:">
+<!ENTITY security.privacy.passwd.managepassword.askfirsttime "必要になった初回のみ">
+<!ENTITY security.privacy.passwd.managepassword.askeverytime "必要になったとき毎回">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout   "前回使用後">
+<!ENTITY security.privacy.passwd.managepassword.timeout.unit "分以上経ったとき">
+<!ENTITY security.privacy.passwd.desc "ヒント: マスターパスワードの設定は &brandShortName; の設定ダイアログにあります。">
 
 <!ENTITY http.title "HTTP ネットワーク">
 <!ENTITY http.connect.label "接続">

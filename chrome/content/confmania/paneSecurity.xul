@@ -139,7 +139,7 @@ var gPrefSecurity = {
 <tab label="&security.js.label;"/>
 <tab label="&security.antivirus.label;"/>
 <tab label="&security.net.label;"/>
-<tab label="&security.others.label;"/>
+<tab label="&security.privacy.label;"/>
 </tabs> 
 <tabpanels flex="1">
 <tabpanel orient="vertical" flex="1">
@@ -255,36 +255,36 @@ var gPrefSecurity = {
 </tabpanel>
 <tabpanel orient="vertical">
 <groupbox>
-  <caption label="&security.others.cookie.label;"/>
+  <caption label="&security.privacy.cookie.label;"/>
   <hbox align="center">
-    <label value="&security.others.cookie.lifetimedays.label;"/>
+    <label value="&security.privacy.cookie.lifetimedays.label;"/>
     <textbox id="cookieLifetimeDays" type="number" hidespinbuttons="true" size="2" preference="network.cookie.lifetime.days"/>
     <label value="&days;"/>
   </hbox>
 </groupbox>
 <groupbox>
-<caption label="&security.others.passwd.label;"/>
+<caption label="&security.privacy.passwd.label;"/>
 <groupbox>
-  <caption label="&security.others.passwd.managepassword.label;"/>
+  <caption label="&security.privacy.passwd.managepassword.label;"/>
   <checkbox hidden="true" id="askEveryTimeHidden" preference="signon.expireMasterPassword"/>
-  <label value="&security.others.passwd.managepassword.text;"/>
+  <label value="&security.privacy.passwd.managepassword.text;"/>
   <radiogroup id="passwordAskTimes" preference="security.ask_for_password">
     <!-- Components.interfaces.nsIPK11Token.ASK_FIRST_TIME == 0 -->
-    <radio value="0" label="&security.others.passwd.managepassword.askfirsttime;"
+    <radio value="0" label="&security.privacy.passwd.managepassword.askfirsttime;"
       oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
     <!-- Components.interfaces.nsIPK11Token.ASK_EVERY_TIME == -1 -->
-    <radio value="-1" label="&security.others.passwd.managepassword.askeverytime;"
+    <radio value="-1" label="&security.privacy.passwd.managepassword.askeverytime;"
       oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
     <hbox align="center">
       <!-- Components.interfaces.nsIPK11Token.ASK_EXPIRE_TIME == 1 -->
-      <radio value="1" label="&security.others.passwd.managepassword.asktimeout;"
+      <radio value="1" label="&security.privacy.passwd.managepassword.asktimeout;"
         oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
       <textbox id="passwordTimeout" type="number" size="4" label="security.password_lifetime"/>
-      <label value="&security.others.passwd.managepassword.timeout.unit;"/>
+      <label value="&security.privacy.passwd.managepassword.timeout.unit;"/>
     </hbox>
   </radiogroup>
 </groupbox>
-<description>&security.others.passwd.desc;</description>
+<description>&security.privacy.passwd.desc;</description>
 </groupbox>
 </tabpanel>
 </tabpanels>
