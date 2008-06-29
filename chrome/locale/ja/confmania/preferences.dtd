@@ -183,6 +183,16 @@
 <!ENTITY security.antivirus.scanWhenDone.desc "Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く際にセキュリティの警告を表示するかにも反映します">
 <!ENTITY security.antivirus.dontclean.label "ダウンロードされたファイルからウイルスが検出された場合、駆除を試みる">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
+<!ENTITY security.ssl.label "SSL">
+<!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ... (Firefox3+)">
+<!ENTITY security.ssl.ssl_domain_display.none.label "favicon only (Default)">
+<!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD (effective top-level domain) along with the second-level domain (e.g., mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.full.label "the full domain (e.g., addons.mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.desc "When a site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to on the left of the URL in the Location Bar.">
+<!ENTITY security.ssl.ssl_override_behavior.label "Whether &brandShortName; pre-populates the exception URL and/or downloads the certificate (Firefox3+)">
+<!ENTITY security.ssl.ssl_override_behavior.dont.label "Do not pre-populate the current URL as an exception and do not pre-fetch the SSL certificate.">
+<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but do not pre-fetch the certificate. (Default)">
+<!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Pre-populate the current URL and pre-fetch the certificate.">
 <!ENTITY security.net.label "ネットワーク">
 <!ENTITY security.net.redirection-limit.label "HTTP リダイレクト限界数">
 <!ENTITY security.net.enableIDN.label "IDN (国際化ドメイン名) を有効にする">
