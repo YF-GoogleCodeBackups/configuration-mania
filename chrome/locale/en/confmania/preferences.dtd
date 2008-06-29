@@ -55,7 +55,7 @@
 <!ENTITY browser.tabs.sessionStore.enabled.label "Enables &browser.tabs.sessionStore.label;">
 <!ENTITY browser.tabs.sessionStore.interval.label "Save sessions at intervals of">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "Number of tab closures to remember :">
-<!ENTITY browser.bookmarkicon.label "Bookmark Icons">
+<!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab and location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
 <!ENTITY browser.urlbar.label "Location Bar">
@@ -176,7 +176,7 @@
 <!ENTITY security.js.popupwin.event.click.label "Clicked">
 <!ENTITY security.js.popupwin.event.dblclick.label "Double Clicked">
 <!ENTITY security.antivirus.label "Anti-Virus">
-<!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
+<!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete (Firefox3+)">
 <!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">
 <!ENTITY security.antivirus.dontclean.label "Try to clean a downloaded file when a virus is detected">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE.">
@@ -185,7 +185,7 @@
 <!ENTITY security.ssl.ssl_domain_display.none.label "favicon only (Default)">
 <!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD (effective top-level domain) along with the second-level domain (e.g., mozilla.org)">
 <!ENTITY security.ssl.ssl_domain_display.full.label "the full domain (e.g., addons.mozilla.org)">
-<!ENTITY security.ssl.ssl_domain_display.desc "When a site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to on the left of the URL in the Location Bar.">
+<!ENTITY security.ssl.ssl_domain_display.desc "When the site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to .">
 <!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed (Firefox3+)">
 <!ENTITY security.ssl.ssl_override_behavior.dont.label "Do Not pre-populate the current URL as an exception and Do Not pre-fetch the SSL certificate.">
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate. (Default)">
