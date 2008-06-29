@@ -406,11 +406,9 @@ var gUIPref = {
         <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
       </radiogroup>
     </groupbox>
-    <checkbox label="&ui.others.xwin.enable_drag_images.label;" preference="nglayout.enable_drag_images"/>
   </groupbox>
-  <groupbox>
-    <checkbox label="&ui.others.xul_file_picker;" preference="ui.allow_platform_file_picker"/>
-  </groupbox>
+  <checkbox label="&ui.others.enable_drag_images.label;" preference="nglayout.enable_drag_images"/>
+  <checkbox label="&ui.others.xul_file_picker;" preference="ui.allow_platform_file_picker"/>
 </tabpanel>
 </tabpanels>
 </tabbox>
