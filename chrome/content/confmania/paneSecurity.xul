@@ -122,7 +122,7 @@ var gPrefSecurity = {
   <preference id="browser.download.antivirus.dontclean" name="browser.download.antivirus.dontclean" type="bool"/>
   <preference id="browser.download.manager.alertOnEXEOpen" name="browser.download.manager.alertOnEXEOpen" type="bool"/>
 
-  <preference id="browser.identity.ssl_domain_display" name="browser.ssl_override_behavior" type="int"/>
+  <preference id="browser.identity.ssl_domain_display" name="browser.identity.ssl_domain_display" type="int"/>
   <preference id="browser.ssl_override_behavior" name="browser.ssl_override_behavior" type="int"/>
 
   <preference id="network.http.redirection-limit" name="network.http.redirection-limit" type="int"/>
