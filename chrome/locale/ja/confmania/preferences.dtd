@@ -125,9 +125,8 @@
 <!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "注意: この値を増やすと、戻る/進むのパフォーマンスが向上します。しかし、タブを多く開いている時などに&brandShortName;がより多くのメモリを消費するようになります。つまりトレードオフが存在します。">
 <!ENTITY browser.others.label "その他">
-<!ENTITY browser.others.urlbarhideGoButton "場所バーの隣りの移動ボタンを隠す">
-<!ENTITY browser.others.urlbarclickSelectsAll "場所バーをクリック時に内容を選択する">
 <!ENTITY browser.others.disableIPv6.label "IPv6でDNSを問い合わせしない">
+<!ENTITY browser.others.nouse_text_smoothing_setting.label "常にテキストの縁を滑らかに表示する (Macでのみ有効)">
 <!ENTITY browser.others.enableSVG.label "SVG を表示する">
 <!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで通知">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">

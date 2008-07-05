@@ -255,6 +255,7 @@ var gPrefBrowser = {
   <preference id="network.prefetch-next" name="network.prefetch-next" type="bool"/>
 
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
+  <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
   <preference id="svg.enabled" name="svg.enabled" type="bool"/>
   <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
@@ -563,6 +564,7 @@ var gPrefBrowser = {
 
 <expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
   <checkbox label="&browser.others.disableIPv6.label;" preference="network.dns.disableIPv6"/>
+  <checkbox label="&browser.others.nouse_text_smoothing_setting.label;" preference="gfx.use_text_smoothing_setting"/>
   <checkbox label="&browser.others.enableSVG.label;" preference="svg.enabled"/>
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 

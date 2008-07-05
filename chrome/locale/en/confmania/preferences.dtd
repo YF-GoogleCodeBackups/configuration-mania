@@ -125,6 +125,7 @@
 <!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: This improves performance when pressing Back and Forward, If you have a lot of tabs, &brandShortName;'s memory usage can climb dramatically. It's a trade-off.">
 <!ENTITY browser.others.label "Others">
 <!ENTITY browser.others.disableIPv6.label "Disable IPv6 DNS lookups">
+<!ENTITY browser.others.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">
 <!ENTITY browser.others.enableSVG.label "Enable rendering SVG content">
 <!ENTITY browser.others.errorPageDisabled.label "Annoy error dialog message, not display error-pages">
 <!ENTITY browser.others.editorExternal "View source with external editor">
