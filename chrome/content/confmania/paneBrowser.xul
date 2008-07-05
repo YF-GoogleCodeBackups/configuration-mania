@@ -184,6 +184,11 @@ var gPrefBrowser = {
   setAlertsSlideLight : function(){//#alerts.slide*
     document.getElementById("alerts.slideIncrement").value = 10;
     document.getElementById("alerts.slideIncrementTime").value = 20;
+  },
+
+  syncFrom : function(elem,defaultValue){
+    var val = document.getElementById(elem.getAttribute("preference")).value;
+    return (val != null)? val : defaultValue;
   }
 };
 ]]></script>
@@ -475,7 +480,7 @@ var gPrefBrowser = {
   <hbox align="center">
     <label control="speed-paintDalay" value="&browser.speed-paint.delay.label;"/>
     <textbox id="speed-paintDalay" type="number" hidespinbuttons="true" size="3" preference="nglayout.initialpaint.delay"
-     onsyncfrompreference="return document.getElementById('nglayout.initialpaint.delay').value || 250;"/>
+     onsyncfrompreference="return gPrefBrowser.syncFrom(this, 250);"/>
     <label value="&miliseconds;"/>
   </hbox>
   <description class="indent">&browser.speed-paint.delay.desc;</description>
@@ -490,7 +495,7 @@ var gPrefBrowser = {
   <hbox align="center">
     <label value="&browser.speed-paint.notify-interval.label;" control="speed-notify-interval"/>
     <textbox id="speed-notify-interval" type="number" hidespinbuttons="true" preference="content.notify.interval" size="6"
-     onsyncfrompreference="return document.getElementById('content.notify.interval').value || 120000;"/>
+     onsyncfrompreference="return gPrefBrowser.syncFrom(this, 120000);"/>
     <label value="&microseconds;"/>
   </hbox>
   <description class="indent" align="center">
@@ -514,7 +519,8 @@ var gPrefBrowser = {
   <hbox align="center">
     <label value="&browser.speed-paint.content-switch-threshold.label;" control="speed-switch-threshold"/>
     <textbox id="speed-switch-threshold" type="number" hidespinbuttons="true" preference="content.switch.threshold"
-     size="8" onsyncfrompreference="return document.getElementById('content.switch.threshold').value || 750000;"/>
+     size="8"
+     onsyncfrompreference="return gPrefBrowser.syncFrom(this, 750000);"/>
     <label value="&microseconds;"/>
   </hbox>
   <description class="indent">&browser.speed-paint.content-switch-threshold.desc;</description>
