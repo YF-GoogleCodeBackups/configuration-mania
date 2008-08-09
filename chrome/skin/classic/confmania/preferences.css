@@ -11,6 +11,10 @@
 
   overflow-y: auto;
 }
+prefwindow#ConfmaniaPreferences .paneSelector > radio[pane] {
+  list-style-image: none;
+  -moz-image-region: auto;
+}
 
 .emphasis{ font-weight: bold ! important; }
 
