@@ -173,26 +173,26 @@
 <!ENTITY security.js.uis.locationbar "場所バー">
 <!ENTITY security.js.uis.status "ステータスバー">
 <!ENTITY security.js.uis.desc2 "UI 擬装 (UI Spoof) への対処として、全項目をチェックしてください。">
-<!ENTITY security.js.popupwin.label "ポップアップウィンドウ">
-<!ENTITY security.js.popupwin.tabs.label "タブブラウジングでのポップアップ(window.open)の扱い">
-<!ENTITY security.js.popupwin.tabs.0.label "リンクの設定と同様に処理">
-<!ENTITY security.js.popupwin.tabs.1.label "ウィンドウを開く">
-<!ENTITY security.js.popupwin.tabs.2.label "リンクの設定と同様に処理するが、ウィンドウの表示方法等が設定してある場合はウィンドウを開く (標準)">
-<!ENTITY security.js.popupwin.popup_maximum.label "同時に開く上限数">
-<!ENTITY security.js.popupwin.event.label "以下の時に開くのを許可 :">
-<!ENTITY security.js.popupwin.event.reset.label "フォームのリセット">
-<!ENTITY security.js.popupwin.event.submit.label "フォーム送信">
-<!ENTITY security.js.popupwin.event.select.label "フォーム選択">
-<!ENTITY security.js.popupwin.event.change.label "テキスト等の変更">
-<!ENTITY security.js.popupwin.event.resize.label "ウィンドウのサイズ変更">
-<!ENTITY security.js.popupwin.event.input.label "入力">
-<!ENTITY security.js.popupwin.event.keypress.label "キーを押した">
-<!ENTITY security.js.popupwin.event.keydown.label "キー押下">
-<!ENTITY security.js.popupwin.event.keyup.label "キーを離した">
-<!ENTITY security.js.popupwin.event.mouseup.label "マウスボタン押下">
-<!ENTITY security.js.popupwin.event.mousedown.label "マウスボタンを離した">
-<!ENTITY security.js.popupwin.event.click.label "クリック">
-<!ENTITY security.js.popupwin.event.dblclick.label "ダブルクリック">
+<!ENTITY security.popupwin.label "ポップアップ">
+<!ENTITY security.popupwin.tabs.label "タブブラウジングでのポップアップ(window.open)の扱い">
+<!ENTITY security.popupwin.tabs.0.label "リンクの設定と同様に処理">
+<!ENTITY security.popupwin.tabs.1.label "ウィンドウを開く">
+<!ENTITY security.popupwin.tabs.2.label "リンクの設定と同様に処理するが、ウィンドウの表示方法等が設定してある場合はウィンドウを開く (標準)">
+<!ENTITY security.popupwin.popup_maximum.label "同時に開く上限数">
+<!ENTITY security.popupwin.event.label "以下の時に開くのを許可 :">
+<!ENTITY security.popupwin.event.reset.label "フォームのリセット">
+<!ENTITY security.popupwin.event.submit.label "フォーム送信">
+<!ENTITY security.popupwin.event.select.label "フォーム選択">
+<!ENTITY security.popupwin.event.change.label "テキスト等の変更">
+<!ENTITY security.popupwin.event.resize.label "ウィンドウのサイズ変更">
+<!ENTITY security.popupwin.event.input.label "入力">
+<!ENTITY security.popupwin.event.keypress.label "キーを押した">
+<!ENTITY security.popupwin.event.keydown.label "キー押下">
+<!ENTITY security.popupwin.event.keyup.label "キーを離した">
+<!ENTITY security.popupwin.event.mouseup.label "マウスボタン押下">
+<!ENTITY security.popupwin.event.mousedown.label "マウスボタンを離した">
+<!ENTITY security.popupwin.event.click.label "クリック">
+<!ENTITY security.popupwin.event.dblclick.label "ダブルクリック">
 <!ENTITY security.antivirus.label "ウイルス対策">
 <!ENTITY security.antivirus.scanWhenDone.label "ダウンロード完了時にウイルススキャンを実行する">
 <!ENTITY security.antivirus.scanWhenDone.desc "Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く際にセキュリティの警告を表示するかにも反映します">

@@ -172,26 +172,26 @@
 <!ENTITY security.js.uis.toolbar "Tool bar">
 <!ENTITY security.js.uis.locationbar "Location bar">
 <!ENTITY security.js.uis.status "Status bar">
-<!ENTITY security.js.popupwin.label "Pop-up Windows">
-<!ENTITY security.js.popupwin.tabs.label "Popup Windows (window.open) on the Tabbed Browsing">
-<!ENTITY security.js.popupwin.tabs.0.label "Same as the link's setting">
-<!ENTITY security.js.popupwin.tabs.1.label "Open new window">
-<!ENTITY security.js.popupwin.tabs.2.label "Same as the link's setting, but open window if specified how to be displayed (Default)">
-<!ENTITY security.js.popupwin.popup_maximum.label "Maximum count of the windows">
-<!ENTITY security.js.popupwin.event.label "Allow to open when :">
-<!ENTITY security.js.popupwin.event.reset.label "Reset form">
-<!ENTITY security.js.popupwin.event.submit.label "Submit form">
-<!ENTITY security.js.popupwin.event.select.label "Selected a form">
-<!ENTITY security.js.popupwin.event.change.label "Changed a text">
-<!ENTITY security.js.popupwin.event.resize.label "Resized windows">
-<!ENTITY security.js.popupwin.event.input.label "Input">
-<!ENTITY security.js.popupwin.event.keypress.label "Pressed Key">
-<!ENTITY security.js.popupwin.event.keydown.label "Key Down">
-<!ENTITY security.js.popupwin.event.keyup.label "Key Up">
-<!ENTITY security.js.popupwin.event.mouseup.label "Mouse Up">
-<!ENTITY security.js.popupwin.event.mousedown.label "Mouse Down">
-<!ENTITY security.js.popupwin.event.click.label "Clicked">
-<!ENTITY security.js.popupwin.event.dblclick.label "Double Clicked">
+<!ENTITY security.popupwin.label "Popup Win.">
+<!ENTITY security.popupwin.tabs.label "Popup Windows (window.open) on the Tabbed Browsing">
+<!ENTITY security.popupwin.tabs.0.label "Same as the link's setting">
+<!ENTITY security.popupwin.tabs.1.label "Open new window">
+<!ENTITY security.popupwin.tabs.2.label "Same as the link's setting, but open window if specified how to be displayed (Default)">
+<!ENTITY security.popupwin.popup_maximum.label "Maximum count of the windows">
+<!ENTITY security.popupwin.event.label "Allow to open when :">
+<!ENTITY security.popupwin.event.reset.label "Reset form">
+<!ENTITY security.popupwin.event.submit.label "Submit form">
+<!ENTITY security.popupwin.event.select.label "Selected a form">
+<!ENTITY security.popupwin.event.change.label "Changed a text">
+<!ENTITY security.popupwin.event.resize.label "Resized windows">
+<!ENTITY security.popupwin.event.input.label "Input">
+<!ENTITY security.popupwin.event.keypress.label "Pressed Key">
+<!ENTITY security.popupwin.event.keydown.label "Key Down">
+<!ENTITY security.popupwin.event.keyup.label "Key Up">
+<!ENTITY security.popupwin.event.mouseup.label "Mouse Up">
+<!ENTITY security.popupwin.event.mousedown.label "Mouse Down">
+<!ENTITY security.popupwin.event.click.label "Clicked">
+<!ENTITY security.popupwin.event.dblclick.label "Double Clicked">
 <!ENTITY security.antivirus.label "Anti-Virus">
 <!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete (Firefox3+)">
 <!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">

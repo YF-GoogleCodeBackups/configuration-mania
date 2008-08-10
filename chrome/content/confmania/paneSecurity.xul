@@ -140,6 +140,7 @@ var gPrefSecurity = {
 <tabbox flex="1">
 <tabs>
 <tab label="&security.js.label;"/>
+<tab label="&security.popupwin.label;"/>
 <tab label="&security.antivirus.label;"/>
 <tab label="&security.ssl.label;"/>
 <tab label="&security.net.label;"/>
@@ -152,7 +153,6 @@ var gPrefSecurity = {
 <tabs>
 <tab label="&security.js.annoy.label;"/>
 <tab label="&security.js.uis.label;"/>
-<tab label="&security.js.popupwin.label;"/>
 </tabs>
 <tabpanels flex="1">
 <tabpanel orient="vertical">
@@ -184,42 +184,43 @@ var gPrefSecurity = {
   <checkbox label="&security.js.uis.status;" preference="dom.disable_window_open_feature.status"/>
   <label class="emphasis" value="&security.js.uis.desc2;"/>
 </tabpanel>
+</tabpanels>
+</tabbox>
+</tabpanel>
+
 <tabpanel orient="vertical">
   <groupbox>
-  <caption label="&security.js.popupwin.tabs.label;"/>
+  <caption label="&security.popupwin.tabs.label;"/>
   <radiogroup preference="browser.link.open_newwindow.restriction">
-    <radio value="0" label="&security.js.popupwin.tabs.0.label;"/>
-    <radio value="1" label="&security.js.popupwin.tabs.1.label;"/>
-    <radio value="2" label="&security.js.popupwin.tabs.2.label;"/>
+    <radio value="0" label="&security.popupwin.tabs.0.label;"/>
+    <radio value="1" label="&security.popupwin.tabs.1.label;"/>
+    <radio value="2" label="&security.popupwin.tabs.2.label;"/>
   </radiogroup>
   </groupbox>
 
   <hbox align="center">
-    <label value="&security.js.popupwin.popup_maximum.label;"/>
+    <label value="&security.popupwin.popup_maximum.label;"/>
     <textbox id="popupwin-popup_maximum" type="number" hidespinbuttons="true" preference="dom.popup_maximum" size="2"/>
   </hbox>
   <textbox hidden="true" id="popupwin-popup_allowed_events" preference="dom.popup_allowed_events"/>
-  <label value="&security.js.popupwin.event.label;"/>
+  <label value="&security.popupwin.event.label;"/>
   <listbox id="popupwin-e" rows="6" onclick="gPrefSecurity.updatePopupwin();" onkeypress="gPrefSecurity.updatePopupwin();">
-    <listitem type="checkbox" id="popupwin-e.reset" label="&security.js.popupwin.event.reset.label;"/>
-    <listitem type="checkbox" id="popupwin-e.submit" label="&security.js.popupwin.event.submit.label;"/>
-    <listitem type="checkbox" id="popupwin-e.select" label="&security.js.popupwin.event.select.label;"/>
-    <listitem type="checkbox" id="popupwin-e.change" label="&security.js.popupwin.event.change.label;"/>
-    <listitem type="checkbox" id="popupwin-e.resize" label="&security.js.popupwin.event.resize.label;"/>
-    <listitem type="checkbox" id="popupwin-e.input" label="&security.js.popupwin.event.input.label;"/>
-    <listitem type="checkbox" id="popupwin-e.keypress" label="&security.js.popupwin.event.keypress.label;"/>
-    <listitem type="checkbox" id="popupwin-e.keydown" label="&security.js.popupwin.event.keydown.label;"/>
-    <listitem type="checkbox" id="popupwin-e.keyup" label="&security.js.popupwin.event.keyup.label;"/>
-    <listitem type="checkbox" id="popupwin-e.mouseup" label="&security.js.popupwin.event.mouseup.label;"/>
-    <listitem type="checkbox" id="popupwin-e.mousedown" label="&security.js.popupwin.event.mousedown.label;"/>
-    <listitem type="checkbox" id="popupwin-e.click" label="&security.js.popupwin.event.click.label;"/>
-    <listitem type="checkbox" id="popupwin-e.dblclick" label="&security.js.popupwin.event.dblclick.label;"/>
+    <listitem type="checkbox" id="popupwin-e.reset" label="&security.popupwin.event.reset.label;"/>
+    <listitem type="checkbox" id="popupwin-e.submit" label="&security.popupwin.event.submit.label;"/>
+    <listitem type="checkbox" id="popupwin-e.select" label="&security.popupwin.event.select.label;"/>
+    <listitem type="checkbox" id="popupwin-e.change" label="&security.popupwin.event.change.label;"/>
+    <listitem type="checkbox" id="popupwin-e.resize" label="&security.popupwin.event.resize.label;"/>
+    <listitem type="checkbox" id="popupwin-e.input" label="&security.popupwin.event.input.label;"/>
+    <listitem type="checkbox" id="popupwin-e.keypress" label="&security.popupwin.event.keypress.label;"/>
+    <listitem type="checkbox" id="popupwin-e.keydown" label="&security.popupwin.event.keydown.label;"/>
+    <listitem type="checkbox" id="popupwin-e.keyup" label="&security.popupwin.event.keyup.label;"/>
+    <listitem type="checkbox" id="popupwin-e.mouseup" label="&security.popupwin.event.mouseup.label;"/>
+    <listitem type="checkbox" id="popupwin-e.mousedown" label="&security.popupwin.event.mousedown.label;"/>
+    <listitem type="checkbox" id="popupwin-e.click" label="&security.popupwin.event.click.label;"/>
+    <listitem type="checkbox" id="popupwin-e.dblclick" label="&security.popupwin.event.dblclick.label;"/>
   </listbox>
 </tabpanel>
-</tabpanels>
-</tabbox>
 
-</tabpanel>
 <tabpanel orient="vertical">
   <checkbox label="&security.antivirus.scanWhenDone.label;"
    preference="browser.download.manager.scanWhenDone"/>
