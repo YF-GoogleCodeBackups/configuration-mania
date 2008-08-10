@@ -50,12 +50,26 @@
 <script><![CDATA[
 var gPrefBrowser = {
   init : function(){
-    this.updatePrefs();
-
     if (! document.documentElement.instantApply) {
       document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
     }
-    document.getElementById("ua-value").setAttribute("emptytext", gPrefBrowser.DefaultUserAgent);
+    gPrefBrowser.initUA();
+
+    gPrefBrowser.updatePrefs();
+  },
+  initUA : function(){
+    var defUA = gPrefBrowser.getFirefoxUserAgent();
+    document.getElementById("ua-value").setAttribute("emptytext", defUA);
+
+    var fxPlatforms = { winvista: "Windows,Windows NT 6.0", winxp: "Windows,Windows NT 5.1",
+      mac: "Macintosh,Intel Mac OS X 10_5_4", macppc: "Macintosh,PPC Mac OS X 10_5_4",
+      linux: "X11,Linux i686", linuxx64: "X11,Linux x86_64"};
+    for (var i in fxPlatforms) {
+      var uastr = gPrefBrowser.getFirefoxUserAgent.apply(gPrefBrowser, fxPlatforms[i].split(","));
+      var oRadio = document.getElementById("ua-this-"+i);
+      oRadio.value = uastr;
+      if (uastr == defUA) oRadio.hidden = true;
+    }
   },
   updatePrefs : function(){
     var disabled, box;
@@ -102,16 +116,20 @@ var gPrefBrowser = {
   resetKeywordURL : function(){//#smartbrowsing-keywordsURL
     document.getElementById("keyword.URL").reset();
   },
-  get DefaultUserAgent(){
+  getFirefoxUserAgent : function(platform, oscpu, language){
     // cf. nsGlobalWindow.cpp#GetUserAgent
     var m = Components.classes['@mozilla.org/network/protocol;1?name=http'].getService(Components.interfaces.nsIHttpProtocolHandler);
     var pref = Components.classes['@mozilla.org/preferences;1'].getService(Components.interfaces.nsIPref);
     var prefBranch = Components.classes['@mozilla.org/preferences;1'].getService(Components.interfaces.nsIPrefBranch);
 
+    if (platform == null) platform = m.platform;
+    if (oscpu    == null) oscpu    = m.oscpu;
+    if (language == null) language = m.language;
+
     var userAgent = m.appName + "/" + m.appVersion + " ";
     var mSecurity = prefBranch.getCharPref("general.useragent.security");
-    userAgent += "("+m.platform+"; "+mSecurity+"; "+m.oscpu;
-    if(m.language && m.language != "") userAgent += "; "+m.language;
+    userAgent += "("+platform+"; "+mSecurity+"; "+oscpu;
+    if(language && language != "") userAgent += "; "+language;
     if(m.misc && m.misc != "") userAgent += "; "+m.misc;
     userAgent += ")";
 
@@ -458,12 +476,43 @@ var gPrefBrowser = {
   <description>&browser.ua.desc;</description>
   <radiogroup flex="1" id="ua-radiogr">
     <radio id="ua-default" label="&browser.ua.default.label;" value=""/>
-    <radio id="ua-ie6" label="&browser.ua.ie6.label;" value="&browser.ua.ie6.value;"/>
-    <radio id="ua-ie7" label="&browser.ua.ie7.label;" value="&browser.ua.ie7.value;"/>
-    <radio id="ua-ie7wow64" label="&browser.ua.ie7wow64.label;" value="&browser.ua.ie7wow64.value;"/>
-    <radio id="ua-safari" label="&browser.ua.safari.label;" value="&browser.ua.safari.value;"/>
-    <radio id="ua-opera" label="&browser.ua.opera.label;" value="&browser.ua.opera.value;"/>
-    <radio id="ua-konqueror" label="&browser.ua.konqueror.label;" value="&browser.ua.konqueror.value;"/>
+
+    <hbox align="center">
+      <label value="&browser.ua.this.label;"/>
+      <radio id="ua-this-winvista" label="&browser.ua.os.winvista;"/>
+      <radio id="ua-this-winxp" label="&browser.ua.os.winxp;"/>
+      <radio id="ua-this-mac" label="&browser.ua.os.mac;"/>
+      <radio id="ua-this-macppc" label="&browser.ua.os.macppc;"/>
+      <radio id="ua-this-linux" label="&browser.ua.os.linux;"/>
+      <radio id="ua-this-linuxx64" label="&browser.ua.os.linuxx64;"/>
+    </hbox>
+    <hbox align="center">
+      <label value="&browser.ua.ie6.label;"/>
+      <radio label="&browser.ua.os.winxpsp2;" value="&browser.ua.ie6.winxpsp2.value;"/>
+    </hbox>
+    <hbox align="center">
+      <label value="&browser.ua.ie7.label;"/>
+      <radio label="&browser.ua.os.winvistasp1;" value="&browser.ua.ie7.winvistasp1.value;"/>
+      <radio label="&browser.ua.os.winvistasp1WOW64;" value="&browser.ua.ie7.winvistasp1WOW64.value;"/>
+    </hbox>
+    <hbox align="center">
+      <label value="&browser.ua.safari.label;"/>
+      <radio label="&browser.ua.os.mac;" value="&browser.ua.safari.mac.value;"/>
+      <radio label="&browser.ua.os.macppc;" value="&browser.ua.safari.macppc.value;"/>
+      <radio label="&browser.ua.os.winxp;" value="&browser.ua.safari.winxp.value;"/>
+      <radio label="&browser.ua.os.iphone;" value="&browser.ua.safari.iphone.value;"/>
+    </hbox>
+    <hbox align="center">
+      <label value="&browser.ua.opera.label;"/>
+      <radio label="&browser.ua.os.winxp;" value="&browser.ua.opera.winxp.value;"/>
+      <radio label="&browser.ua.os.winvista;" value="&browser.ua.opera.winvista.value;"/>
+      <radio label="&browser.ua.os.mac;" value="&browser.ua.opera.mac.value;"/>
+      <radio label="&browser.ua.os.linux;" value="&browser.ua.opera.linux.value;"/>
+    </hbox>
+    <hbox align="center">
+      <label value="&browser.ua.konqueror.label;"/>
+      <radio label="&browser.ua.os.linux;" value="&browser.ua.konqueror.linux.value;"/>
+    </hbox>
     <radio id="ua-googlebot" label="&browser.ua.googlebot.label;" value="&browser.ua.googlebot.value;"/>
     <hbox align="center">
       <radio id="ua-manual" label="&browser.ua.manual.label;" value="*"/>

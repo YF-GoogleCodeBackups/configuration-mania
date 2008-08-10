@@ -77,19 +77,35 @@
 <!ENTITY browser.download.alerts.slide.settolight.label "Set light-weight conf.">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
-<!ENTITY browser.ua.default.label "Use browser default">
-<!ENTITY browser.ua.ie6.label "Internet Explorer 6.0 (WinXP SP2+.NET2.0)">
-<!ENTITY browser.ua.ie6.value "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)">
-<!ENTITY browser.ua.ie7.label "Internet Explorer 7 (Vista SP1+.NET3.0)">
-<!ENTITY browser.ua.ie7.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 3.0.04506)">
-<!ENTITY browser.ua.ie7wow64.label "Internet Explorer 7 on WOW64 (VistaSP1+.NET3.0)">
-<!ENTITY browser.ua.ie7wow64.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; WOW64; SLCC1; .NET CLR 3.0.04506)">
-<!ENTITY browser.ua.safari.label "Safari 3.1.2 (PowerPC MacOS X 10.5.3)">
-<!ENTITY browser.ua.safari.value "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_5_3; ja-jp) AppleWebKit/525.21 (KHTML, like Gecko) Version/3.1.2 Safari/525.21">
-<!ENTITY browser.ua.opera.label "Opera 9.51 (WinXP)">
-<!ENTITY browser.ua.opera.value "Opera/9.51 (Windows NT 5.1; U; en)">
-<!ENTITY browser.ua.konqueror.label "Konqueror 4.0.5 (Linux)">
-<!ENTITY browser.ua.konqueror.value "Mozilla/5.0 (compatible; Konqueror/4.0.5; Linux) KHTML/4.0.5 (like Gecko)">
+<!ENTITY browser.ua.default.label "Use browser default (Recommend)">
+<!ENTITY browser.ua.os.winvista "Vista">
+<!ENTITY browser.ua.os.winxp "WinXP">
+<!ENTITY browser.ua.os.mac "Mac">
+<!ENTITY browser.ua.os.macppc "Mac(PowerPC)">
+<!ENTITY browser.ua.os.linux "linux">
+<!ENTITY browser.ua.os.iphone "iPhone">
+<!ENTITY browser.ua.os.linuxx64 "linux(x64)">
+<!ENTITY browser.ua.os.winxpsp2 "WinXP SP2+.NET2.0">
+<!ENTITY browser.ua.os.winvistasp1 "Vista SP1+.NET3.0">
+<!ENTITY browser.ua.os.winvistasp1WOW64 "WOW64 on Vista SP1+.NET3.0">
+<!ENTITY browser.ua.this.label "&brandShortName;">
+<!ENTITY browser.ua.ie6.label "IE 6.0">
+<!ENTITY browser.ua.ie6.winxpsp2.value "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)">
+<!ENTITY browser.ua.ie7.label "IE 7.0">
+<!ENTITY browser.ua.ie7.winvistasp1.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 3.0.04506)">
+<!ENTITY browser.ua.ie7.winvistasp1WOW64.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; WOW64; SLCC1; .NET CLR 3.0.04506)">
+<!ENTITY browser.ua.safari.label "Safari 3.1.2 (iPhone:3.1.1)">
+<!ENTITY browser.ua.safari.mac.value "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_4; en-us) AppleWebKit/525.21 (KHTML, like Gecko) Version/3.1.2 Safari/525.21">
+<!ENTITY browser.ua.safari.macppc.value "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_5_4; en-us) AppleWebKit/525.21 (KHTML, like Gecko) Version/3.1.2 Safari/525.21">
+<!ENTITY browser.ua.safari.winxp.value "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-us) AppleWebKit/525.21 (KHTML, like Gecko) Version/3.1.2 Safari/525.21">
+<!ENTITY browser.ua.safari.iphone.value "Mozilla/5.0 (iPhone; U; CPU iPhone OS 2_0 like Mac OS X; en-us) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20">
+<!ENTITY browser.ua.opera.label "Opera 9.52">
+<!ENTITY browser.ua.opera.winxp.value "Opera/9.52 (Windows NT 5.1; U; en)">
+<!ENTITY browser.ua.opera.winvista.value "Opera/9.52 (Windows NT 6.0; U; en)">
+<!ENTITY browser.ua.opera.mac.value "Opera/9.52 (Machintosh; Intel Mac OS X; U; en)">
+<!ENTITY browser.ua.opera.linux.value "Opera/9.52 (X11; Linux i686; U; en)">
+<!ENTITY browser.ua.konqueror.label "Konqueror 4.1">
+<!ENTITY browser.ua.konqueror.linux.value "Mozilla/5.0 (compatible; Konqueror/4.1; Linux) KHTML/4.1.0 (like Gecko)">
 <!ENTITY browser.ua.googlebot.label "Googlebot 2.1">
 <!ENTITY browser.ua.googlebot.value "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)">
 <!ENTITY browser.ua.manual.label "Custom">
