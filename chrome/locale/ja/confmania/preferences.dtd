@@ -56,7 +56,7 @@
 <!ENTITY browser.tabs.sessionStore.interval.label "タブ状態を保存する時間間隔">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "タブの保存履歴件数">
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン(ファビコン)">
-<!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコン()を表示する">
+<!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
 <!ENTITY browser.urlbar.label "ロケーションバー">
 <!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す (Firefox2.x)">
@@ -308,8 +308,17 @@
 <!ENTITY ui.i18n.bidi.texttype.charset.label "文字コードに従う">
 <!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
 <!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
-<!ENTITY ui.i18n.asian.label "アジア言語">
-<!ENTITY ui.i18n.asian.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
+<!ENTITY ui.i18n.others.label "その他">
+<!ENTITY ui.i18n.others.scrollbarSide.label "垂直スクロールバーの位置">
+<!ENTITY ui.i18n.others.scrollbarSide.uiBase "&brandShortName;の方向に従い、-&gt;(LTR)の場合は右端、&lt;-(RTL)の場合は左端(標準)">
+<!ENTITY ui.i18n.others.scrollbarSide.contentBase "文書の方向に従い、-&gt;(LTR)の場合は右端、&lt;-(RTL)の場合は左端">
+<!ENTITY ui.i18n.others.scrollbarSide.right "右端">
+<!ENTITY ui.i18n.others.scrollbarSide.left "左端">
+<!ENTITY ui.i18n.others.spellcheckDefault.label "スペルチェッカーの設定">
+<!ENTITY ui.i18n.others.spellcheckDefault.disabled "スペルチェッカーを無効にする">
+<!ENTITY ui.i18n.others.spellcheckDefault.multiline "複数行のコントロール(例:textarea)に対して有効にする(標準)">
+<!ENTITY ui.i18n.others.spellcheckDefault.all "すべてのテキスト入力コントロールに対して有効にする">
+<!ENTITY ui.i18n.others.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
 <!ENTITY ui.others.label "その他">
 <!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
 <!ENTITY ui.others.preference.instanceAccept.label "瞬時に設定を適用 (Mac や Gnome のように)">

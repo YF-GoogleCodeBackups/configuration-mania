@@ -308,8 +308,17 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.i18n.bidi.texttype.charset.label "Default">
 <!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
 <!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
-<!ENTITY ui.i18n.asian.label "Asian">
-<!ENTITY ui.i18n.asian.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
+<!ENTITY ui.i18n.others.label "Others">
+<!ENTITY ui.i18n.others.scrollbarSide.label "Place the vertical scrollbar on:">
+<!ENTITY ui.i18n.others.scrollbarSide.uiBase "Right in LTR, Left in RTL, based on the &brandShortName;'s direction.(Default)">
+<!ENTITY ui.i18n.others.scrollbarSide.contentBase "Right in LTR, Left in RTL, based on the document's direction.">
+<!ENTITY ui.i18n.others.scrollbarSide.right "Right side">
+<!ENTITY ui.i18n.others.scrollbarSide.left "Left side">
+<!ENTITY ui.i18n.others.spellcheckDefault.label "Spellchecker Setting">
+<!ENTITY ui.i18n.others.spellcheckDefault.disabled "Disables spellchecker">
+<!ENTITY ui.i18n.others.spellcheckDefault.multiline "Enables spellchecker for multi-line controls (e.g., textarea) (Default)">
+<!ENTITY ui.i18n.others.spellcheckDefault.all "Enables spellchecker for all text controls">
+<!ENTITY ui.i18n.others.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
 <!ENTITY ui.others.label "Others">
 <!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
 <!ENTITY ui.others.preference.instanceAccept.label "Accept instance (likely Mac or Gnome)">

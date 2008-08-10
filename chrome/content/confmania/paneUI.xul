@@ -167,6 +167,8 @@ var gUIPref = {
   <preference id="bidi.numeral" name="bidi.numeral" type="int"/>
   <preference id="bidi.support" name="bidi.support" type="int"/>
   <preference id="bidi.texttype" name="bidi.texttype" type="int"/>
+  <preference id="layout.scrollbar.side" name="layout.scrollbar.side" type="int"/>
+  <preference id="layout.spellcheckDefault" name="layout.spellcheckDefault" type="int"/>
   <preference id="layout.enable_japanese_specific_transform" name="layout.enable_japanese_specific_transform" type="bool"/>
 
   <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
@@ -310,7 +312,7 @@ var gUIPref = {
   <tabbox>
   <tabs>
     <tab label="&ui.i18n.bidi.label;"/>
-    <tab label="&ui.i18n.asian.label;"/>
+    <tab label="&ui.i18n.others.label;"/>
   </tabs>
   <tabpanels flex="1">
     <vbox>
@@ -378,7 +380,24 @@ var gUIPref = {
       </grid>
     </vbox>
     <vbox>
-      <checkbox label="&ui.i18n.asian.japanese_specific_transform.label;" preference="layout.enable_japanese_specific_transform"/>
+      <groupbox>
+        <caption label="&ui.i18n.others.scrollbarSide.label;"/>
+        <radiogroup preference="layout.scrollbar.side">
+          <radio value="0" label="&ui.i18n.others.scrollbarSide.uiBase;"/>
+          <radio value="1" label="&ui.i18n.others.scrollbarSide.contentBase;"/>
+          <radio value="2" label="&ui.i18n.others.scrollbarSide.right;"/>
+          <radio value="3" label="&ui.i18n.others.scrollbarSide.left;"/>
+        </radiogroup>
+      </groupbox>
+      <groupbox>
+        <caption label="&ui.i18n.others.spellcheckDefault.label;"/>
+        <radiogroup preference="layout.spellcheckDefault">
+          <radio value="0" label="&ui.i18n.others.spellcheckDefault.disabled;"/>
+          <radio value="1" label="&ui.i18n.others.spellcheckDefault.multiline;"/>
+          <radio value="2" label="&ui.i18n.others.spellcheckDefault.all;"/>
+        </radiogroup>
+      </groupbox>
+      <checkbox label="&ui.i18n.others.japanese_specific_transform.label;" preference="layout.enable_japanese_specific_transform"/>
     </vbox>
   </tabpanels>
   </tabbox>
