@@ -174,12 +174,17 @@
 <!ENTITY security.js.uis.status "ステータスバー">
 <!ENTITY security.js.uis.desc2 "UI 擬装 (UI Spoof) への対処として、全項目をチェックしてください。">
 <!ENTITY security.popupwin.label "ポップアップ">
-<!ENTITY security.popupwin.tabs.label "タブブラウジングでのポップアップ(window.open)の扱い">
+<!ENTITY security.popupwin.tabs.label "タブブラウジングでのポップアップ(window.open)の扱い:">
 <!ENTITY security.popupwin.tabs.0.label "リンクの設定と同様に処理">
 <!ENTITY security.popupwin.tabs.1.label "ウィンドウを開く">
 <!ENTITY security.popupwin.tabs.2.label "リンクの設定と同様に処理するが、ウィンドウの表示方法等が設定してある場合はウィンドウを開く (標準)">
 <!ENTITY security.popupwin.popup_maximum.label "同時に開く上限数">
-<!ENTITY security.popupwin.event.label "以下の時に開くのを許可 :">
+<!ENTITY security.popupwin.from_plugins.label "プラグインからのポップアップの扱い:">
+<!ENTITY security.popupwin.from_plugins.0.label "制限なし">
+<!ENTITY security.popupwin.from_plugins.1.label "&quot;&security.popupwin.popup_maximum.label;&quot;の値までに数を制限">
+<!ENTITY security.popupwin.from_plugins.2.label "ホワイトリスト以外ブロック">
+<!ENTITY security.popupwin.from_plugins.3.label "ホワイトリストを無視し全てブロック">
+<!ENTITY security.popupwin.event.label "以下の時に開くのを許可:">
 <!ENTITY security.popupwin.event.reset.label "フォームのリセット">
 <!ENTITY security.popupwin.event.submit.label "フォーム送信">
 <!ENTITY security.popupwin.event.select.label "フォーム選択">

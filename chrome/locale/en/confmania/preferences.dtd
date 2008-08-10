@@ -173,12 +173,17 @@
 <!ENTITY security.js.uis.locationbar "Location bar">
 <!ENTITY security.js.uis.status "Status bar">
 <!ENTITY security.popupwin.label "Popup Win.">
-<!ENTITY security.popupwin.tabs.label "Popup Windows (window.open) on the Tabbed Browsing">
+<!ENTITY security.popupwin.tabs.label "On opening Popup Windows (window.open) on the Tabbed Browsing:">
 <!ENTITY security.popupwin.tabs.0.label "Same as the link's setting">
 <!ENTITY security.popupwin.tabs.1.label "Open new window">
 <!ENTITY security.popupwin.tabs.2.label "Same as the link's setting, but open window if specified how to be displayed (Default)">
 <!ENTITY security.popupwin.popup_maximum.label "Maximum count of the windows">
-<!ENTITY security.popupwin.event.label "Allow to open when :">
+<!ENTITY security.popupwin.from_plugins.label "Limit to Popup Windows from plugins:">
+<!ENTITY security.popupwin.from_plugins.0.label "No restrictions">
+<!ENTITY security.popupwin.from_plugins.1.label "Limit the numbers to &quot;&security.popupwin.popup_maximum.label;&quot;">
+<!ENTITY security.popupwin.from_plugins.2.label "Block all except whitelisted">
+<!ENTITY security.popupwin.from_plugins.3.label "Block all even those on whitelisted">
+<!ENTITY security.popupwin.event.label "Allow to open when:">
 <!ENTITY security.popupwin.event.reset.label "Reset form">
 <!ENTITY security.popupwin.event.submit.label "Submit form">
 <!ENTITY security.popupwin.event.select.label "Selected a form">

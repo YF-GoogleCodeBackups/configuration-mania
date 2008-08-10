@@ -116,6 +116,7 @@ var gPrefSecurity = {
 
   <preference id="browser.link.open_newwindow.restriction" name="browser.link.open_newwindow.restriction" type="int"/>
   <preference id="dom.popup_maximum" name="dom.popup_maximum" type="int"/>
+  <preference id="privacy.popups.disable_from_plugins" name="privacy.popups.disable_from_plugins" type="int"/>
   <preference id="dom.popup_allowed_events" name="dom.popup_allowed_events" type="string"/>
 
   <preference id="browser.download.manager.scanWhenDone" name="browser.download.manager.scanWhenDone" type="bool"/>
@@ -189,22 +190,34 @@ var gPrefSecurity = {
 </tabpanel>
 
 <tabpanel orient="vertical">
-  <groupbox>
-  <caption label="&security.popupwin.tabs.label;"/>
-  <radiogroup preference="browser.link.open_newwindow.restriction">
+  <label value="&security.popupwin.tabs.label;"/>
+  <radiogroup class="indent" preference="browser.link.open_newwindow.restriction">
     <radio value="0" label="&security.popupwin.tabs.0.label;"/>
     <radio value="1" label="&security.popupwin.tabs.1.label;"/>
     <radio value="2" label="&security.popupwin.tabs.2.label;"/>
   </radiogroup>
-  </groupbox>
 
   <hbox align="center">
     <label value="&security.popupwin.popup_maximum.label;"/>
     <textbox id="popupwin-popup_maximum" type="number" hidespinbuttons="true" preference="dom.popup_maximum" size="2"/>
   </hbox>
+  <label value="&security.popupwin.from_plugins.label;"/>
+  <radiogroup class="indent" preference="privacy.popups.disable_from_plugins">
+    <grid>
+    <columns><column/><column/></columns>
+    <rows><row>
+      <radio value="0" label="&security.popupwin.from_plugins.0.label;"/>
+      <radio value="1" label="&security.popupwin.from_plugins.1.label;"/>
+    </row><row>
+      <radio value="2" label="&security.popupwin.from_plugins.2.label;"/>
+      <radio value="3" label="&security.popupwin.from_plugins.3.label;"/>
+    </row></rows>
+    </grid>
+  </radiogroup>
+
   <textbox hidden="true" id="popupwin-popup_allowed_events" preference="dom.popup_allowed_events"/>
   <label value="&security.popupwin.event.label;"/>
-  <listbox id="popupwin-e" rows="6" onclick="gPrefSecurity.updatePopupwin();" onkeypress="gPrefSecurity.updatePopupwin();">
+  <listbox class="indent" id="popupwin-e" rows="6" onclick="gPrefSecurity.updatePopupwin();" onkeypress="gPrefSecurity.updatePopupwin();">
     <listitem type="checkbox" id="popupwin-e.reset" label="&security.popupwin.event.reset.label;"/>
     <listitem type="checkbox" id="popupwin-e.submit" label="&security.popupwin.event.submit.label;"/>
     <listitem type="checkbox" id="popupwin-e.select" label="&security.popupwin.event.select.label;"/>
