@@ -303,7 +303,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.keynav.menuAccessKey.accesskey   "M">
 <!ENTITY ui.i18n.label "i18n">
 <!ENTITY ui.i18n.locale.label "Application Locale">
-<!ENTITY ui.i18n.locale.eg "(e.g. en-US, ja-JP, ar-AE)">
+<!ENTITY ui.i18n.locale.eg "(e.g. en-US, en-GB, ja, ar)">
 <!ENTITY ui.i18n.bidi.label "Bi-Directional (BiDi)">
 <!ENTITY ui.i18n.bidi.ui.label "Enable BiDi UI">
 <!ENTITY ui.i18n.bidi.characterset.label "Charset">

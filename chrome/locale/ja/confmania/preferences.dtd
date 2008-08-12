@@ -303,7 +303,7 @@
 <!ENTITY ui.keynav.menuAccessKey.accesskey   "M">
 <!ENTITY ui.i18n.label "国際化">
 <!ENTITY ui.i18n.locale.label "アプリケーションのロケール(言語)">
-<!ENTITY ui.i18n.locale.eg "(例: en-US, ja-JP, ar-AE)">
+<!ENTITY ui.i18n.locale.eg "(例: ja, en-US, en-GB, ar)">
 <!ENTITY ui.i18n.bidi.label "双方向テキスト (BiDi)">
 <!ENTITY ui.i18n.bidi.ui.label "BiDi のインターフェイスを有効に">
 <!ENTITY ui.i18n.bidi.characterset.label "文字セット">
