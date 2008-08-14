@@ -59,7 +59,8 @@ var gPrefBrowser = {
   },
   initUA : function(){
     var defUA = gPrefBrowser.getFirefoxUserAgent();
-    document.getElementById("ua-value").setAttribute("emptytext", defUA);
+    var oUAValue = document.getElementById("ua-value");
+    oUAValue.setAttribute("emptytext", defUA);
 
     var fxPlatforms = { winvista: "Windows,Windows NT 6.0", winxp: "Windows,Windows NT 5.1",
       mac: "Macintosh,Intel Mac OS X 10_5_4", macppc: "Macintosh,PPC Mac OS X 10_5_4",
@@ -70,6 +71,7 @@ var gPrefBrowser = {
       oRadio.value = uastr;
       if (uastr == defUA) oRadio.hidden = true;
     }
+    initRadioGroupConnect2('ua-radiogr','ua-value',''); // HACK: fixed the bug that the selection is not saved but returns to "linux(x64)".
   },
   updatePrefs : function(){
     var disabled, box;
