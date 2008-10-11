@@ -81,7 +81,7 @@
 <!ENTITY browser.ua.os.winvista "Vista">
 <!ENTITY browser.ua.os.winxp "WinXP">
 <!ENTITY browser.ua.os.mac "Mac">
-<!ENTITY browser.ua.os.macppc "Mac(PowerPC)">
+<!ENTITY browser.ua.os.macppc "Mac(PPC)">
 <!ENTITY browser.ua.os.linux "linux">
 <!ENTITY browser.ua.os.iphone "iPhone">
 <!ENTITY browser.ua.os.linuxx64 "linux(x64)">
