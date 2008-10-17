@@ -361,6 +361,9 @@
 <!ENTITY debug.debug.jsstrict.label "JavaScript の厳密なエラーを出力する">
 <!ENTITY debug.debug.chromeerr.label "クロム (chrome) の JavaScript エラー/警告も表示する">
 <!ENTITY debug.debug.csserr.label "スタイルシートの解析エラーも表示する">
+<!ENTITY debug.tracemonkey.label "JavaScriptのJITコンパイラ(TraceMonkey)を有効に: (Firefox3.1+)">
+<!ENTITY debug.tracemonkey.content.label "ウェブ上">
+<!ENTITY debug.tracemonkey.chrome.label "クロム (chrome) ">
 <!ENTITY debug.cache.label "キャッシュ">
 <!ENTITY debug.cache.disableXULCache.label "XUL キャッシュを無効にする">
 <!ENTITY debug.cache.diskCacheDisable.label "ディスクキャッシュを無効にする">

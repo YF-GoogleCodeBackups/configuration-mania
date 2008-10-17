@@ -361,6 +361,9 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
+<!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript ... (Firefox3.1+)">
+<!ENTITY debug.tracemonkey.content.label "on the web">
+<!ENTITY debug.tracemonkey.chrome.label "on chrome">
 <!ENTITY debug.cache.label "Cache">
 <!ENTITY debug.cache.disableXULCache.label "Disable XUL Cache">
 <!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
