@@ -92,6 +92,9 @@ var gPrefBrowser = {
     box = document.getElementById("tabs-sessionMaxUndo-pane");
     Array.forEach(box.childNodes, disablefunc);
 
+    disabled = ! document.getElementById("tabs-ctrlTabsEnabled").checked;
+    document.getElementById("tabs-ctrlTabsSmooth").disabled = disabled;
+
     disabled = document.getElementById("speed-interrupt-parsing").checked;
     box = document.getElementById("speed-interrupt-parsing-hbox");
     Array.forEach(box.childNodes, disablefunc);
@@ -248,6 +251,8 @@ var gPrefBrowser = {
   <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool"/>
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
+  <preference id="browser.ctrlTab.mostRecentlyUsed" name="browser.ctrlTab.mostRecentlyUsed" type="bool"/>
+  <preference id="browser.ctrlTab.smoothScroll" name="browser.ctrlTab.smoothScroll" type="bool"/>
 
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
@@ -424,6 +429,9 @@ var gPrefBrowser = {
       </hbox>
     </vbox>
   </groupbox>
+  <checkbox id="tabs-ctrlTabsEnabled" label="&browser.tabs.ctrlTabs.enabled.label;" preference="browser.ctrlTab.mostRecentlyUsed"
+            oncommand="gPrefBrowser.updatePrefs();"/>
+  <checkbox id="tabs-ctrlTabsSmooth" class="indent" label="&browser.tabs.ctrlTabs.smoothScroll.label;" preference="browser.ctrlTab.smoothScroll"/>
 </expander>
 <expander id="bookmarkicon" label="&browser.bookmarkicon.label;" open="false" clearhidden="true">
   <checkbox label="&browser.bookmarkicon.siteicons.label;"

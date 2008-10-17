@@ -55,6 +55,8 @@
 <!ENTITY browser.tabs.sessionStore.enabled.label "&browser.tabs.sessionStore.label;を有効にする">
 <!ENTITY browser.tabs.sessionStore.interval.label "タブ状態を保存する時間間隔">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "タブの保存履歴件数">
+<!ENTITY browser.tabs.ctrlTabs.enabled.label "Ctrl+Tab押下時にタブのプレビューを表示する (Firefox3.1以降)">
+<!ENTITY browser.tabs.ctrlTabs.smoothScroll.label "タブプレビューをなめらかにスクロールする(再起動必要)">
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン(ファビコン)">
 <!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
@@ -361,7 +363,7 @@
 <!ENTITY debug.debug.jsstrict.label "JavaScript の厳密なエラーを出力する">
 <!ENTITY debug.debug.chromeerr.label "クロム (chrome) の JavaScript エラー/警告も表示する">
 <!ENTITY debug.debug.csserr.label "スタイルシートの解析エラーも表示する">
-<!ENTITY debug.tracemonkey.label "JavaScriptのJITコンパイラ(TraceMonkey)を有効に: (Firefox3.1+)">
+<!ENTITY debug.tracemonkey.label "JavaScriptのJITコンパイラ(TraceMonkey)を有効に: (Firefox3.1以降)">
 <!ENTITY debug.tracemonkey.content.label "ウェブ上">
 <!ENTITY debug.tracemonkey.chrome.label "クロム (chrome) ">
 <!ENTITY debug.cache.label "キャッシュ">

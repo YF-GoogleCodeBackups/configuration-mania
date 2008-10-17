@@ -55,6 +55,8 @@
 <!ENTITY browser.tabs.sessionStore.enabled.label "Enables &browser.tabs.sessionStore.label;">
 <!ENTITY browser.tabs.sessionStore.interval.label "Save sessions at intervals of">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "Number of tab closures to remember :">
+<!ENTITY browser.tabs.ctrlTabs.enabled.label "Display tab previews each time Ctrl+Tab is pressed (Firefox3.1+)">
+<!ENTITY browser.tabs.ctrlTabs.smoothScroll.label "Scroll tab previews smoothly (takes effect after restart)">
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab and location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
