@@ -138,6 +138,7 @@
 <!ENTITY browser.speed-cache.check.never.label "しない">
 <!ENTITY browser.speed-cache.check.auto.label "更新されたら (推奨)">
 <!ENTITY browser.speed-cache.memory_capability.label "使用容量">
+<!ENTITY browser.speed-cache.trim_on_minimize.label "&brandShortName;の最小化時にメモリの内容をスワップアウトする (Windowsのみ)">
 <!ENTITY browser.speed-cache.disk_cache_ssl.label "SSL 通信の分もキャッシュに貯める (セキュリティ上危険)">
 <!ENTITY browser.speed-cache.prefetch-next.label "リンク先読み (prefetch) 機構を有効にする">
 <!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">

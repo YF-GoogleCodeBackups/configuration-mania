@@ -137,6 +137,7 @@
 <!ENTITY browser.speed-cache.check.auto.label "When it&#39;s Out Of Date (Preferred)">
 <!ENTITY browser.speed-cache.memory_enable.label "Enable cache memory (Never disabled, usually)">
 <!ENTITY browser.speed-cache.memory_capability.label "Cache Memory">
+<!ENTITY browser.speed-cache.trim_on_minimize.label "Swap out memory when &brandShortName; is minimized (Windows Only)">
 <!ENTITY browser.speed-cache.disk_cache_ssl.label "Also store ssl-connection pages in the cache (INSECURE)">
 <!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
 <!ENTITY browser.speed-cache.session-history-viewers.label "Max Number of pages stored in memory">

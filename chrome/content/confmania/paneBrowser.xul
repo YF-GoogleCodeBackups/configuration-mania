@@ -280,9 +280,10 @@ var gPrefBrowser = {
   <preference id="browser.cache.memory.enable" name="browser.cache.memory.enable" type="bool"/>
   <preference id="browser.cache.memory.capacity" name="browser.cache.memory.capacity" type="int"/>
   <preference id="browser.cache.check_doc_frequency" name="browser.cache.check_doc_frequency" type="int"/>
-  <preference id="browser.sessionhistory.max_total_viewers" name="browser.sessionhistory.max_total_viewers" type="int"/>
+  <preference id="config.trim_on_minimize" name="config.trim_on_minimize" type="bool"/>
   <preference id="browser.cache.disk_cache_ssl" name="browser.cache.disk_cache_ssl" type="bool"/>
   <preference id="network.prefetch-next" name="network.prefetch-next" type="bool"/>
+  <preference id="browser.sessionhistory.max_total_viewers" name="browser.sessionhistory.max_total_viewers" type="int"/>
 
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
@@ -611,6 +612,9 @@ var gPrefBrowser = {
     </radiogroup>
     <description>&browser.speed-cache.check.desc;</description>
   </groupbox>
+  <checkbox label="&browser.speed-cache.trim_on_minimize.label;" preference="config.trim_on_minimize"/>
+  <checkbox label="&browser.speed-cache.disk_cache_ssl.label;" preference="browser.cache.disk_cache_ssl"/>
+  <checkbox label="&browser.speed-cache.prefetch-next.label;" preference="network.prefetch-next"/>
   <groupbox>
     <caption label="&browser.speed-cache.session-history-viewers.label;"/>
     <radiogroup align="center" orient="horizontal" id="session-history-viewers-gr">
@@ -623,8 +627,6 @@ var gPrefBrowser = {
     </radiogroup>
     <description>&browser.speed-cache.session-history-viewers.desc;</description>
   </groupbox>
-  <checkbox label="&browser.speed-cache.disk_cache_ssl.label;" preference="browser.cache.disk_cache_ssl"/>
-  <checkbox label="&browser.speed-cache.prefetch-next.label;" preference="network.prefetch-next"/>
 </expander>
 
 <expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
