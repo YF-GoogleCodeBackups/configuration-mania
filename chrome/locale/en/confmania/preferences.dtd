@@ -37,6 +37,7 @@
 <!ENTITY browser.html.focus.bg.label "Background Color">
 <!ENTITY browser.html.focus.fg.label "Text Color">
 <!ENTITY browser.tabs.label "TabBrowsing">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab (Firefox3.1+)">
 <!ENTITY browser.tabs.closeButtons.label "Where to display a close button ...">
 <!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
 <!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">

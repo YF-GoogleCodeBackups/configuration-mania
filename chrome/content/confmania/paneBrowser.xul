@@ -239,6 +239,7 @@ var gPrefBrowser = {
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
   <preference id="browser.display.focus_text_color" name="browser.display.focus_text_color" type="string"/>
 
+  <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
   <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
   <preference id="browser.tabs.disableBackgroundClose" name="browser.tabs.disableBackgroundClose" type="bool"/>
@@ -386,6 +387,7 @@ var gPrefBrowser = {
   </groupbox>
 </expander>
 <expander id="tabs" label="&browser.tabs.label;" open="false" clearhidden="true">
+  <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
   <groupbox>
     <caption label="&browser.tabs.closeButtons.label;"/>
     <radiogroup id="tabs-closeButtons" preference="browser.tabs.closeButtons" oncommand="gPrefBrowser.updatePrefs();">

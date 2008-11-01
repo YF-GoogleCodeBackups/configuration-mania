@@ -37,10 +37,11 @@
 <!ENTITY browser.html.focus.bg.label "背景色">
 <!ENTITY browser.html.focus.fg.label "文字色">
 <!ENTITY browser.tabs.label "タブブラウジング">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる (Firefox3.1以降)">
 <!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所">
 <!ENTITY browser.tabs.closeButtons.active.label "アクティブなタブのみ表示">
 <!ENTITY browser.tabs.closeButtons.all.label "全てのタブに表示 (標準)">
-<!ENTITY browser.tabs.closeButtons.no.label "全く表示しない">
+<!ENTITY browser.tabs.closeButtons.no.label "常に表示しない">
 <!ENTITY browser.tabs.closeButtons.end.label "タブバーの端に表示 (Firefox1.xの動作)">
 <!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ (標準:140)">
 <!ENTITY browser.tabs.disableBackgroundClose.label "バックグラウンドタブの閉じるボタンを押すことでタブを閉じない">
@@ -203,8 +204,8 @@
 <!ENTITY security.popupwin.event.dblclick.label "ダブルクリック">
 <!ENTITY security.antivirus.label "ウイルス対策">
 <!ENTITY security.antivirus.scanWhenDone.label "ダウンロード完了時にウイルススキャンを実行する">
-<!ENTITY security.antivirus.scanWhenDone.desc "Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く際にセキュリティの警告を表示するかにも反映します">
-<!ENTITY security.antivirus.dontclean.label "ダウンロードされたファイルからウイルスが検出された場合、駆除を試みる">
+<!ENTITY security.antivirus.scanWhenDone.desc "Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く場合にセキュリティの警告を表示するかにも反映します">
+<!ENTITY security.antivirus.dontclean.label "ダウンロードされたファイルからウイルスが検出されたら駆除を試みる">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.ssl_domain_display.label "セキュアなサイトにアクセスしているとき、ロケーションバーのURLのすぐ左に表示するもの (Firefox3以降)">
