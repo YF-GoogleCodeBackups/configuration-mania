@@ -53,9 +53,14 @@
 <!ENTITY browser.tabs.loadDivertedInBackground.label "外部アプリやリンクなどに新しいタブが開かれたとき、すぐにそのタブに切り替える">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "タブを閉じたら、そのタブを開いたタブをアクティブにする">
 <!ENTITY browser.tabs.sessionStore.label "タブの状態の保存及び最近閉じたタブ">
-<!ENTITY browser.tabs.sessionStore.enabled.label "&browser.tabs.sessionStore.label;を有効にする">
+<!ENTITY browser.tabs.sessionStore.enabled.label "&browser.tabs.sessionStore.label;を有効にする (Firefox2,3.0.x)">
 <!ENTITY browser.tabs.sessionStore.interval.label "タブ状態を保存する時間間隔">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "タブの保存履歴件数">
+<!ENTITY browser.tabs.sessionStore.resume_from_crash.label "クラッシュ後の&brandShortName;起動時に、ウィンドウとタブを復元する">
+<!ENTITY browser.tabs.sessionStore.privacy_level.label "URL以外の付加的情報の扱い">
+<!ENTITY browser.tabs.sessionStore.privacy_level.any.label "すべてのサイトで保存">
+<!ENTITY browser.tabs.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">
+<!ENTITY browser.tabs.sessionStore.privacy_level.never.label "決して保存しない">
 <!ENTITY browser.tabs.ctrlTabs.enabled.label "Ctrl+Tab押下時にタブのプレビューを表示する (Firefox3.1以降)">
 <!ENTITY browser.tabs.ctrlTabs.smoothScroll.label "タブプレビューをなめらかにスクロールする(再起動必要)">
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン(ファビコン)">

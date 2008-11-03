@@ -86,12 +86,6 @@ var gPrefBrowser = {
     box = document.getElementById("smartbrowsing-domainGuessingEnabled-hbox");
     Array.forEach(box.childNodes, disablefunc);
 
-    disabled = ! document.getElementById("tabs-sessionEnabled").checked;
-    box = document.getElementById("tabs-sessionInterval-pane");
-    Array.forEach(box.childNodes, disablefunc);
-    box = document.getElementById("tabs-sessionMaxUndo-pane");
-    Array.forEach(box.childNodes, disablefunc);
-
     disabled = ! document.getElementById("tabs-ctrlTabsEnabled").checked;
     document.getElementById("tabs-ctrlTabsSmooth").disabled = disabled;
 
@@ -252,6 +246,8 @@ var gPrefBrowser = {
   <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool"/>
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
+  <preference id="browser.sessionstore.resume_from_crash" name="browser.sessionstore.resume_from_crash" type="bool"/>
+  <preference id="browser.sessionstore.privacy_level" name="browser.sessionstore.privacy_level" type="int"/>
   <preference id="browser.ctrlTab.mostRecentlyUsed" name="browser.ctrlTab.mostRecentlyUsed" type="bool"/>
   <preference id="browser.ctrlTab.smoothScroll" name="browser.ctrlTab.smoothScroll" type="bool"/>
 
@@ -419,18 +415,25 @@ var gPrefBrowser = {
 
   <groupbox>
     <caption label="&browser.tabs.sessionStore.label;"/>
-    <checkbox id="tabs-sessionEnabled" preference="browser.sessionstore.enabled" label="&browser.tabs.sessionStore.enabled.label;" oncommand="gPrefBrowser.updatePrefs();"/>
-    <vbox class="indent">
-      <hbox align="center" id="tabs-sessionInterval-pane">
-        <label value="&browser.tabs.sessionStore.interval.label;" control="tabs-sessionInterval"/>
-        <textbox id="tabs-sessionInterval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>
-        <label value="&miliseconds;"/>
-      </hbox>
-      <hbox align="center" id="tabs-sessionMaxUndo-pane">
-        <label value="&browser.tabs.sessionStore.max_tabs_undo.label;" control="tabs-sessionMaxUndo"/>
-        <textbox id="tabs-sessionMaxUndo" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.max_tabs_undo" size="4"/>
-      </hbox>
-    </vbox>
+    <checkbox id="tabs-sessionEnabled" preference="browser.sessionstore.enabled" label="&browser.tabs.sessionStore.enabled.label;"/>
+    <hbox align="center" id="tabs-sessionInterval-pane">
+      <label value="&browser.tabs.sessionStore.interval.label;" control="tabs-sessionInterval"/>
+      <textbox id="tabs-sessionInterval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>
+      <label value="&miliseconds;"/>
+    </hbox>
+    <hbox align="center" id="tabs-sessionMaxUndo-pane">
+      <label value="&browser.tabs.sessionStore.max_tabs_undo.label;" control="tabs-sessionMaxUndo"/>
+      <textbox id="tabs-sessionMaxUndo" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.max_tabs_undo" size="4"/>
+    </hbox>
+    <checkbox preference="browser.sessionstore.resume_from_crash" label="&browser.tabs.sessionStore.resume_from_crash.label;"/>
+    <groupbox>
+      <caption label="&browser.tabs.sessionStore.privacy_level.label;"/>
+      <radiogroup preference="browser.sessionstore.privacy_level">
+        <radio value="0" label="&browser.tabs.sessionStore.privacy_level.any.label;"/>
+        <radio value="1" label="&browser.tabs.sessionStore.privacy_level.unenc.label;"/>
+        <radio value="2" label="&browser.tabs.sessionStore.privacy_level.never.label;"/>
+      </radiogroup>
+    </groupbox>
   </groupbox>
   <checkbox id="tabs-ctrlTabsEnabled" label="&browser.tabs.ctrlTabs.enabled.label;" preference="browser.ctrlTab.mostRecentlyUsed"
             oncommand="gPrefBrowser.updatePrefs();"/>

@@ -53,9 +53,14 @@
 <!ENTITY browser.tabs.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that openedit">
 <!ENTITY browser.tabs.sessionStore.label "&quot;Session Store&quot;&amp;&quot;Recently Closed Tabs&quot;">
-<!ENTITY browser.tabs.sessionStore.enabled.label "Enables &browser.tabs.sessionStore.label;">
+<!ENTITY browser.tabs.sessionStore.enabled.label "Enables &browser.tabs.sessionStore.label; (Firefox2,3.0.x)">
 <!ENTITY browser.tabs.sessionStore.interval.label "Save sessions at intervals of">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "Number of tab closures to remember :">
+<!ENTITY browser.tabs.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
+<!ENTITY browser.tabs.sessionStore.privacy_level.label "Store extra session data :">
+<!ENTITY browser.tabs.sessionStore.privacy_level.any.label "for any site">
+<!ENTITY browser.tabs.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
+<!ENTITY browser.tabs.sessionStore.privacy_level.never.label "Never">
 <!ENTITY browser.tabs.ctrlTabs.enabled.label "Display tab previews each time Ctrl+Tab is pressed (Firefox3.1+)">
 <!ENTITY browser.tabs.ctrlTabs.smoothScroll.label "Scroll tab previews smoothly (takes effect after restart)">
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
