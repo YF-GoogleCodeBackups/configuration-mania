@@ -61,8 +61,6 @@
 <!ENTITY browser.tabs.sessionStore.privacy_level.any.label "for any site">
 <!ENTITY browser.tabs.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
 <!ENTITY browser.tabs.sessionStore.privacy_level.never.label "Never">
-<!ENTITY browser.tabs.ctrlTabs.enabled.label "Display tab previews each time Ctrl+Tab is pressed (Firefox3.1+)">
-<!ENTITY browser.tabs.ctrlTabs.smoothScroll.label "Scroll tab previews smoothly (takes effect after restart)">
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab and location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
