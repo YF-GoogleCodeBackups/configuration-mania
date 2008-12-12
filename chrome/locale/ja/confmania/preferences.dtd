@@ -8,15 +8,20 @@
 <!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords を使って、ロケーションバーから検索、その他の情報に素早くアクセスできます。">
 <!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Internet Keywords を有効にする">
 <!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL の接頭辞 : ">
-<!ENTITY browser.smartbrowsing.autoComplete.label "ロケーションバーの自動補完">
-<!ENTITY browser.smartbrowsing.autoComplete.autoFill.label "ロケーションバーに入力した文字列を自動的に補完">
-<!ENTITY browser.smartbrowsing.autoComplete.matchOnlyTyped.label "以前に入力した Web サイトにのみ一致するリストを表示">
-<!ENTITY browser.smartbrowsing.autoComplete.richResults.label "リッチ表示のドロップダウン (Firefox3以降)">
-<!ENTITY browser.smartbrowsing.autoComplete.richResults.maxRichResults.label "最大表示項目数">
 <!ENTITY browser.smartbrowsing.domainGuessing.label "ドメイン補完">
 <!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Web ページがみつからないときに、自動的に接頭辞と接尾辞を補完">
 <!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "接頭辞 : ">
 <!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "接尾辞 : ">
+<!ENTITY browser.urlbar.label "ロケーションバー">
+<!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す (Firefox2.x)">
+<!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択(Firefox3以降)">
+<!ENTITY browser.urlbar.autoComplete.label "URLの自動補完">
+<!ENTITY browser.urlbar.autoComplete.autoFill.label "ロケーションバーに入力したURLを自動的に補完">
+<!ENTITY browser.urlbar.autoComplete.matchOnlyTyped.label "以前に入力した Web サイトにのみ一致するリストを表示">
+<!ENTITY browser.urlbar.richResults.label "リッチ表示のドロップダウン (Firefox3以降)">
+<!ENTITY browser.urlbar.richResults.maxRichResults.label "最大表示項目数">
+<!ENTITY browser.urlbar.richResults.filterJavaScript.label "&#34;javascript:&#34;のアドレス（ブックマークレット）を表示しない">
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowBlink.label "点滅テキストを有効にする">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
@@ -64,10 +69,6 @@
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン(ファビコン)">
 <!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
-<!ENTITY browser.urlbar.label "ロケーションバー">
-<!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す (Firefox2.x)">
-<!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
-<!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択(Firefox3以降)">
 <!ENTITY browser.download.label "ダウンロード">
 <!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
 <!ENTITY browser.download.quitBehavior.label "&brandShortName;終了時の進行中のダウンロードの処理">

@@ -8,15 +8,20 @@
 <!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords enables fast access to services such as search and other information from the Location bar.">
 <!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Enable Internet Keywords">
 <!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL Prefix : ">
-<!ENTITY browser.smartbrowsing.autoComplete.label "Location Bar Autocomplete">
-<!ENTITY browser.smartbrowsing.autoComplete.autoFill.label "Autocomplete best match as you type">
-<!ENTITY browser.smartbrowsing.autoComplete.matchOnlyTyped.label "Match only websites you've typed previously">
-<!ENTITY browser.smartbrowsing.autoComplete.richResults.label "Dropdown with richlistbox (Firefox3+)">
-<!ENTITY browser.smartbrowsing.autoComplete.richResults.maxRichResults.label "Maximum number of entries">
 <!ENTITY browser.smartbrowsing.domainGuessing.label "Domain Guessing">
 <!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Automatically add prefix &amp; suffix to the location if a web page isn't found.">
 <!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefix : ">
 <!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Suffix : ">
+<!ENTITY browser.urlbar.label "Location Bar">
+<!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar (Firefox 2.x)">
+<!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked (Firefox3+)">
+<!ENTITY browser.urlbar.autoComplete.label "URL Autocomplete">
+<!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
+<!ENTITY browser.urlbar.autoComplete.matchOnlyTyped.label "Match only websites you've typed previously">
+<!ENTITY browser.urlbar.richResults.label "Dropdown with richlistbox (Firefox3+)">
+<!ENTITY browser.urlbar.richResults.maxRichResults.label "Maximum number of entries">
+<!ENTITY browser.urlbar.richResults.filterJavaScript.label "Filter out bookmarklet (&#34;javascript:&#34; URLs)">
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowBlink.label "Allow blinking text">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
@@ -64,10 +69,6 @@
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab and location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
-<!ENTITY browser.urlbar.label "Location Bar">
-<!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar (Firefox 2.x)">
-<!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
-<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked (Firefox3+)">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
 <!ENTITY browser.download.quitBehavior.label "What should happen to in-progress downloads when &brandShortName; quited">
