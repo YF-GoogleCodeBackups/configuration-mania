@@ -56,7 +56,29 @@ var gUIPref = {
     var tabNavPref = parseInt(document.getElementById("tabFocus").value) | 1;
     document.getElementById("tabNavigationLinks").checked = ((tabNavPref & 4) != 0);
     document.getElementById("tabNavigationForms").checked = ((tabNavPref & 2) != 0);
+    this.initMultitouchPopup();
     this.tabNavPrefChanged();
+  },
+  initMultitouchPopup: function(){
+    var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                   .getService(Components.interfaces.nsIWindowMediator);
+    var win = wm.getMostRecentWindow("navigator:browser");
+    if ( win == null ) return;
+    var cmds = Array.map(win.document.getElementsByTagName("command"), function(elem){
+      return elem.id;
+    });
+
+    var oMenupop = document.createElement("menupopup");
+    cmds.sort().forEach(function(v){
+      var oMenuitem = document.createElement("menuitem");
+      oMenuitem.setAttribute("label", v);
+      oMenupop.appendChild(oMenuitem);
+    });
+
+    Array.forEach(document.getElementById("multitouch-gestures-box").getElementsByTagName("menulist"), function(e){
+      e.appendChild(oMenupop.cloneNode(true));
+      e.setAttribute("sizetopopup", "none");
+    });
   },
   _currentIDs : {mousewheelAction : "mousewheelWithNoKeyAction",
                  mousewheelNumlines : "mousewheelWithNoKeyNumlines",
@@ -152,6 +174,17 @@ var gUIPref = {
   <preference type="int" id="mousewheel.horizscroll.withshiftkey.numlines" name="mousewheel.horizscroll.withshiftkey.numlines"/>
   <preference type="bool" id="mousewheel.horizscroll.withshiftkey.sysnumlines" name="mousewheel.horizscroll.withshiftkey.sysnumlines"/>
 
+  <preference id="browser.gesture.swipe.left"      name="browser.gesture.swipe.left"      type="string"/>
+  <preference id="browser.gesture.swipe.right"     name="browser.gesture.swipe.right"     type="string"/>
+  <preference id="browser.gesture.swipe.up"        name="browser.gesture.swipe.up"        type="string"/>
+  <preference id="browser.gesture.swipe.down"      name="browser.gesture.swipe.down"      type="string"/>
+  <preference id="browser.gesture.pinch.out"       name="browser.gesture.pinch.out"       type="string"/>
+  <preference id="browser.gesture.pinch.in"        name="browser.gesture.pinch.in"        type="string"/>
+  <preference id="browser.gesture.pinch.out.shift" name="browser.gesture.pinch.out.shift" type="string"/>
+  <preference id="browser.gesture.pinch.in.shift"  name="browser.gesture.pinch.in.shift"  type="string"/>
+  <preference id="browser.gesture.twist.right"     name="browser.gesture.twist.right"     type="string"/>
+  <preference id="browser.gesture.twist.left"      name="browser.gesture.twist.left"      type="string"/>
+
   <preference id="accessibility.typeaheadfind.timeout" name="accessibility.typeaheadfind.timeout" type="int"/>
   <preference id="accessibility.typeaheadfind.enablesound" name="accessibility.typeaheadfind.enablesound" type="string"/>
 
@@ -185,6 +218,7 @@ var gUIPref = {
 <tabbox flex="1">
 <tabs>
 <tab label="&ui.mousewheel.label;"/>
+<tab label="&ui.multitouch.label;"/>
 <tab label="&ui.find.label;"/>
 <tab label="&ui.keynav.label;"/>
 <tab label="&ui.i18n.label;"/>
@@ -258,6 +292,60 @@ var gUIPref = {
     <textbox id="mousewheelHorizScrollWithShiftKeyNumlines" preference="mousewheel.horizscroll.withshiftkey.numlines"/>
     <textbox id="mousewheelHorizScrollWithShiftKeySysNumlines" preference="mousewheel.horizscroll.withshiftkey.sysnumlines"/>
   </data>
+</tabpanel>
+<tabpanel id="multitouch-box" orient="vertical">
+  <groupbox id="multitouch-gestures-box">
+    <caption label="&ui.multitouch.gestures.label;"/>
+    <grid>
+      <columns><column/><column flex="1"/></columns>
+      <rows>
+      <row align="center">
+        <label value="&ui.multitouch.gestures.pinch.in.label;"/>
+        <menulist editable="true" preference="browser.gesture.pinch.in"/>
+      </row>
+      <row align="center">
+        <label value="&ui.multitouch.gestures.pinch.in.shift.label;"/>
+        <menulist editable="true" preference="browser.gesture.pinch.in.shift"/>
+      </row>
+      <row align="center">
+        <label value="&ui.multitouch.gestures.pinch.out.label;"/>
+        <menulist editable="true" preference="browser.gesture.pinch.out" />
+      </row>
+      <row align="center">
+        <label value="&ui.multitouch.gestures.pinch.out.shift.label;"/>
+        <menulist editable="true" preference="browser.gesture.pinch.out.shift"/>
+      </row>
+      </rows>
+    </grid>
+    <groupbox>
+      <caption label="&ui.multitouch.gestures.swipe.label;"/>
+      <grid>
+      <columns><column flex="1"/><column flex="1"/><column flex="1"/></columns>
+      <rows>
+      <row align="center">
+        <box/>
+        <menulist editable="true" preference="browser.gesture.swipe.up"/>
+        <box/>
+      </row>
+      <row align="center">
+        <menulist editable="true" preference="browser.gesture.swipe.left"/>
+        <box/>
+        <menulist editable="true" preference="browser.gesture.swipe.right"/>
+      </row>
+      <row align="center">
+        <box/>
+        <menulist editable="true" preference="browser.gesture.swipe.down"/>
+        <box/>
+      </row>
+      </rows>
+      </grid>
+    </groupbox>
+    <groupbox orient="horizontal">
+      <caption label="&ui.multitouch.gestures.twist.label;"/>
+      <menulist editable="true" preference="browser.gesture.twist.left" flex="1"/>
+      <menulist editable="true" preference="browser.gesture.twist.right" flex="1"/>
+    </groupbox>
+  </groupbox>
 </tabpanel>
 <tabpanel orient="vertical">
   <groupbox>

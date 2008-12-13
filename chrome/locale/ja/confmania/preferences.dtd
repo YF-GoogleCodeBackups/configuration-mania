@@ -289,13 +289,21 @@
 <!ENTITY ui.mousewheel.scrollPgUpPgDn.label "1 ページ上下にスクロールする">
 <!ENTITY ui.mousewheel.history.label "ブラウズの履歴を戻るまたは進む">
 <!ENTITY ui.mousewheel.textsize.label "文字サイズを大きくしたり小さくしたりする">
+<!ENTITY ui.multitouch.label "マルチタッチ">
+<!ENTITY ui.multitouch.gestures.label "マルチタッチ・ジェスチャー (Firefox3.1+)">
+<!ENTITY ui.multitouch.gestures.pinch.in.label "ピンチイン">
+<!ENTITY ui.multitouch.gestures.pinch.in.shift.label "ピンチイン+シフトキー">
+<!ENTITY ui.multitouch.gestures.pinch.out.label "ピンチアウト">
+<!ENTITY ui.multitouch.gestures.pinch.out.shift.label "ピンチアウト+シフトキー">
+<!ENTITY ui.multitouch.gestures.swipe.label "スワイプ (上下左右)">
+<!ENTITY ui.multitouch.gestures.twist.label "ツイスト (左回り/右回り)">
 <!ENTITY ui.find.label "ページ内検索">
 <!ENTITY ui.find.findahead.label "クイック検索 (Find As You Type)">
 <!ENTITY ui.find.findahead.desc "ヒント: クイック検索を手動で開始するには、検索文字を続けて、/文字 または、 'リンク を入力します。">
 <!ENTITY ui.find.findahead.timeout.label "停止状態が">
 <!ENTITY ui.find.findahead.timeout.label2 "ミリ秒続いたら現在の検索をクリアする">
 <!ENTITY ui.find.findahead.sound.label "入力文字が見つからないときサウンドを鳴らす (再起動必要)">
-<!ENTITY ui.keynav.label "キーボードナビゲーション">
+<!ENTITY ui.keynav.label "キーボード">
 <!ENTITY ui.keynav.tabNavigationBehavior.label "タブキーによるフォーカス制御">
 <!ENTITY ui.keynav.tabNavigationLinks.label "リンク">
 <!ENTITY ui.keynav.tabNavigationLinks.accesskey "L">

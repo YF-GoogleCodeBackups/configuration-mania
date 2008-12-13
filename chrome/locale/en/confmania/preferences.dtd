@@ -289,13 +289,21 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.mousewheel.scrollPgUpPgDn.label "Scroll a page up or a page down">
 <!ENTITY ui.mousewheel.history.label "Move back and forward in the browsing history">
 <!ENTITY ui.mousewheel.textsize.label "Make the text larger or smaller">
+<!ENTITY ui.multitouch.label "Multi-Touch">
+<!ENTITY ui.multitouch.gestures.label "Multi-Touch Gestures (Firefox 3.1+)">
+<!ENTITY ui.multitouch.gestures.pinch.in.label "Pinch-in">
+<!ENTITY ui.multitouch.gestures.pinch.in.shift.label "Pinch-in with shift">
+<!ENTITY ui.multitouch.gestures.pinch.out.label "Pinch-out">
+<!ENTITY ui.multitouch.gestures.pinch.out.shift.label "Pinch-out with shift">
+<!ENTITY ui.multitouch.gestures.swipe.label "Swipe (left/right/up/down)">
+<!ENTITY ui.multitouch.gestures.twist.label "Twist (left-/right-handed)">
 <!ENTITY ui.find.label "Find in page">
 <!ENTITY ui.find.findahead.label "Quick Find (Find As You Type)">
 <!ENTITY ui.find.findahead.desc "Tip: To manually start Quick Find, type / to find text or ' to find links, followed by the text you want to find.">
 <!ENTITY ui.find.findahead.timeout.label "Clear the current search after">
 <!ENTITY ui.find.findahead.timeout.label2 "[ms] of inactivity">
 <!ENTITY ui.find.findahead.sound.label "Play a sound when typed text isn't found (takes effect after restart)">
-<!ENTITY ui.keynav.label "Keyboard Navigation">
+<!ENTITY ui.keynav.label "Key Navi">
 <!ENTITY ui.keynav.tabNavigationBehavior.label "Tab Focus Navigation">
 <!ENTITY ui.keynav.tabNavigationLinks.label "Links">
 <!ENTITY ui.keynav.tabNavigationLinks.accesskey "L">
