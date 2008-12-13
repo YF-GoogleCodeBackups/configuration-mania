@@ -30,11 +30,13 @@
 <em:locale>en</em:locale>
 <em:name>Configuration Mania</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
+<em:creator>Popoki Tom</em:creator>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>ja</em:locale>
 <em:name>Configuration Mania</em:name>
 <em:description>様々な隠し設定を変更するためのパネル</em:description>
+<em:creator>Popoki Tom</em:creator>
 </Description></em:localized>
 
 </Description>
