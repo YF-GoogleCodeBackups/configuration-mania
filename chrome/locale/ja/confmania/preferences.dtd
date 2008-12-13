@@ -148,6 +148,8 @@
 <!ENTITY browser.speed-cache.prefetch-next.label "リンク先読み (prefetch) 機構を有効にする">
 <!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "注意: この値を増やすと、戻る/進むのパフォーマンスが向上します。しかし、タブを多く開いている時などに&brandShortName;がより多くのメモリを消費するようになります。つまりトレードオフが存在します。">
+<!ENTITY browser.speed-cache.diskCacheFolder.label "キャッシュの保存先">
+<!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
 <!ENTITY browser.others.label "その他">
 <!ENTITY browser.others.disableIPv6.label "IPv6でDNSを問い合わせしない">
 <!ENTITY browser.others.nouse_text_smoothing_setting.label "常にテキストの縁を滑らかに表示する (Macでのみ有効)">

@@ -147,6 +147,8 @@
 <!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
 <!ENTITY browser.speed-cache.session-history-viewers.label "Max Number of pages stored in memory">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: This improves performance when pressing Back and Forward, If you have a lot of tabs, &brandShortName;'s memory usage can climb dramatically. It's a trade-off.">
+<!ENTITY browser.speed-cache.diskCacheFolder.label "Cache Folder Location">
+<!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
 <!ENTITY browser.others.label "Others">
 <!ENTITY browser.others.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">

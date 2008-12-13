@@ -13,13 +13,14 @@
    - for the specific language governing rights and limitations under the
    - License.
    -
-   - The Original Code is the Configure Mania.
+   - The Original Code is mozilla.org code.
    -
    - The Initial Developer of the Original Code is Popoki Tom.
-   - Portions created by the Initial Developer are Copyright (C) 2004-2005
+   - Portions created by the Initial Developer are Copyright (C) 2004-2008
    - the Initial Developer. All Rights Reserved.
    -
-   - Contributor(s): Popoki Tom
+   - Contributor(s):
+   -   Popoki Tom (Edited for Configuration Mania)
    -
    - Alternatively, the contents of this file may be used under the terms of
    - either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -50,6 +51,13 @@
 <script><![CDATA[
 var gPrefBrowser = {
   init : function(){
+    try {
+      var dirSvc = Components.classes["@mozilla.org/file/directory_service;1"]
+       .getService(Components.interfaces.nsIProperties);
+      var cachedir = dirSvc.get((dirSvc.has("ProfLD"))? "ProfLD" : "ProfD", Components.interfaces.nsILocalFile);
+      document.getElementById("browserCacheDiskCacheFolder").setAttribute("emptytext", cachedir.path);
+    } catch(ex){}
+
     if (! document.documentElement.instantApply) {
       document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
     }
@@ -189,6 +197,27 @@ var gPrefBrowser = {
     if(fp.show() == nsIFilePicker.returnOK)
       document.getElementById("others-editorExternal-path").value = fp.file.path;
   },
+  onBrowserCacheDiskCacheFolderBrowse : function(){
+    var folderField = document.getElementById("browserCacheDiskCacheFolder");
+
+    // Open File Dialog
+    const nsIFilePicker = Components.interfaces.nsIFilePicker;
+    var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+    fp.init(window, document.title, nsIFilePicker.modeGetFolder);
+    try{
+      var file = Components.classes["@mozilla.org/file/local;1"]
+       .createInstance(Components.interfaces.nsILocalFile);
+      file.initWithPath((folderField.value == "")? folderField.emptyText : folderField.value);
+      fp.displayDirectory = file.parent;
+      fp.defaultString = file.leafName;
+    }catch(ex){throw ex}
+
+    if(fp.show() == nsIFilePicker.returnOK)
+      folderField.value = fp.file.path;
+  },
+  resetBrowserCacheDiskCacheFolder : function(){
+    document.getElementById("browserCacheDiskCacheFolder").reset();
+  },
   previewAlert : function(title, val){
     var alertsService = Components.classes["@mozilla.org/alerts-service;1"]
      .getService(Components.interfaces.nsIAlertsService);
@@ -280,6 +309,7 @@ var gPrefBrowser = {
   <preference id="browser.cache.disk_cache_ssl" name="browser.cache.disk_cache_ssl" type="bool"/>
   <preference id="network.prefetch-next" name="network.prefetch-next" type="bool"/>
   <preference id="browser.sessionhistory.max_total_viewers" name="browser.sessionhistory.max_total_viewers" type="int"/>
+  <preference id="browser.cache.disk.parent_directory" name="browser.cache.disk.parent_directory" type="string"/>
 
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
@@ -629,6 +659,15 @@ var gPrefBrowser = {
     </radiogroup>
     <description>&browser.speed-cache.session-history-viewers.desc;</description>
   </groupbox>
+  <groupbox>
+    <caption label="&browser.speed-cache.diskCacheFolder.label;"/>
+    <hbox align="center">
+      <textbox id="browserCacheDiskCacheFolder" flex="1" preference="browser.cache.disk.parent_directory"/>
+      <button label="&browse;" oncommand="gPrefBrowser.onBrowserCacheDiskCacheFolderBrowse();"/>
+      <button label="&reset;" oncommand="gPrefBrowser.resetBrowserCacheDiskCacheFolder()"/>
+    </hbox>
+    <description>&browser.speed-cache.diskCacheFolder.desc;</description>
+  </groupbox>
 </expander>
 
 <expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
@@ -641,7 +680,7 @@ var gPrefBrowser = {
             oncommand="gPrefBrowser.updatePrefs();"/>
   <hbox id="others-editorExternal-hbox" class="indent" align="center">
     <label control="others-editorExternal-path" label="&browser.others.editorExternal.path;"/>
-    <textbox type="autocomplete" autocompletesearch="file" id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
+    <textbox id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
     <button label="&browse;" oncommand="gPrefBrowser.onEditorExternalBrowse()"/>
   </hbox>
   <groupbox>
