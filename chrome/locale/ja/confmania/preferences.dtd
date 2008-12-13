@@ -101,18 +101,23 @@
 <!ENTITY browser.ua.ie7.label "IE 7.0">
 <!ENTITY browser.ua.ie7.winvistasp1.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 3.0.04506)">
 <!ENTITY browser.ua.ie7.winvistasp1WOW64.value "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; WOW64; SLCC1; .NET CLR 3.0.04506)">
-<!ENTITY browser.ua.safari.label "Safari 3.1.2 (iPhone:3.1.1)">
-<!ENTITY browser.ua.safari.mac.value "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_4; ja-jp) AppleWebKit/525.21 (KHTML, like Gecko) Version/3.1.2 Safari/525.21">
-<!ENTITY browser.ua.safari.macppc.value "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_5_4; ja-jp) AppleWebKit/525.21 (KHTML, like Gecko) Version/3.1.2 Safari/525.21">
-<!ENTITY browser.ua.safari.winxp.value "Mozilla/5.0 (Windows; U; Windows NT 5.1; ja-jp) AppleWebKit/525.21 (KHTML, like Gecko) Version/3.1.2 Safari/525.21">
-<!ENTITY browser.ua.safari.iphone.value "Mozilla/5.0 (iPhone; U; CPU iPhone OS 2_0 like Mac OS X; ja-jp) AppleWebKit/525.18.1 (KHTML, like Gecko) Version/3.1.1 Mobile/5A347 Safari/525.20">
+<!ENTITY browser.ua.safari.label "Safari 3.2.1 (iPhone:3.2)">
+<!ENTITY browser.ua.safari.mac.value "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_4; ja-jp) AppleWebKit/525.27 (KHTML, like Gecko) Version/3.2.1 Safari/525.27">
+<!ENTITY browser.ua.safari.macppc.value "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_5_4; ja-jp) AppleWebKit/525.27 (KHTML, like Gecko) Version/3.2.1 Safari/525.27">
+<!ENTITY browser.ua.safari.winxp.value "Mozilla/5.0 (Windows; U; Windows NT 5.1; ja-jp) AppleWebKit/525.27 (KHTML, like Gecko) Version/3.2.1 Safari/525.27">
+<!ENTITY browser.ua.safari.iphone.value "Mozilla/5.0 (iPhone; U; CPU iPhone OS 2_0 like Mac OS X; ja-jp) AppleWebKit/525.20 (KHTML, like Gecko) Version/3.2 Mobile/5A347 Safari/525.20">
+<!ENTITY browser.ua.opera.label "Opera 9.62">
+<!ENTITY browser.ua.opera.winxp.value "Opera/9.62 (Windows NT 5.1; U; ja)">
+<!ENTITY browser.ua.opera.winvista.value "Opera/9.62 (Windows NT 6.0; U; ja)">
+<!ENTITY browser.ua.opera.mac.value "Opera/9.62 (Machintosh; Intel Mac OS X; U; ja)">
+<!ENTITY browser.ua.opera.linux.value "Opera/9.62 (X11; Linux i686; U; ja)">
 <!ENTITY browser.ua.opera.label "Opera 9.60">
 <!ENTITY browser.ua.opera.winxp.value "Opera/9.60 (Windows NT 5.1; U; ja)">
 <!ENTITY browser.ua.opera.winvista.value "Opera/9.60 (Windows NT 6.0; U; ja)">
 <!ENTITY browser.ua.opera.mac.value "Opera/9.60 (Machintosh; Intel Mac OS X; U; ja)">
 <!ENTITY browser.ua.opera.linux.value "Opera/9.60 (X11; Linux i686; U; ja)">
-<!ENTITY browser.ua.konqueror.label "Konqueror 4.1">
-<!ENTITY browser.ua.konqueror.linux.value "Mozilla/5.0 (compatible; Konqueror/4.1; Linux) KHTML/4.1.0 (like Gecko)">
+<!ENTITY browser.ua.konqueror.label "Konqueror 4.1.3">
+<!ENTITY browser.ua.konqueror.linux.value "Mozilla/5.0 (compatible; Konqueror/4.1.3; Linux) KHTML/4.1.0 (like Gecko)">
 <!ENTITY browser.ua.googlebot.label "Googlebot 2.1">
 <!ENTITY browser.ua.googlebot.value "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)">
 <!ENTITY browser.ua.manual.label "カスタム">
