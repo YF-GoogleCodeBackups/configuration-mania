@@ -1,6 +1,10 @@
 <!ENTITY prefWindow.title "Configuration Mania">
 <!ENTITY prefWindow.style "width:42em;">
 <!ENTITY prefWindow.defaultHeight "500">
+<!ENTITY prefWindow.context.reset.label "Reset setting to the default value">
+<!ENTITY prefWindow.context.reset.accesskey "R">
+<!ENTITY prefWindow.context.mkb.label "Search in MozillaZine Knowledge Base">
+<!ENTITY prefWindow.context.mkb.accesskey "S">
 
 <!ENTITY browser.title "Browser">
 <!ENTITY browser.smartbrowsing.label "SmartBrowsing">
@@ -14,8 +18,8 @@
 <!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Suffix : ">
 <!ENTITY browser.urlbar.label "Location Bar">
 <!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar (Firefox 2.x)">
-<!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when it is clicked">
-<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when it is double-clicked (Firefox3+)">
+<!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when clicked">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when double-clicked (Firefox3+)">
 <!ENTITY browser.urlbar.autoComplete.label "URL Autocomplete">
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
 <!ENTITY browser.urlbar.autoComplete.matchOnlyTyped.label "Match only websites you've typed previously">
@@ -28,7 +32,7 @@
 <!ENTITY browser.html.enableFrame.label "Enable frames">
 <!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
 <!ENTITY browser.html.img "Image">
-<!ENTITY browser.html.img.anim.label "Animated image control : ">
+<!ENTITY browser.html.img.anim.label "Animated image : ">
 <!ENTITY browser.html.img.anim.normal.label "Normal">
 <!ENTITY browser.html.img.anim.once.label "Once">
 <!ENTITY browser.html.img.anim.none.label "None (Stop)">
@@ -43,13 +47,13 @@
 <!ENTITY browser.html.focus.fg.label "Text Color">
 <!ENTITY browser.tabs.label "TabBrowsing">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab (Firefox3.1+)">
-<!ENTITY browser.tabs.closeButtons.label "Where to display a close button ...">
+<!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
 <!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
 <!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">
 <!ENTITY browser.tabs.closeButtons.no.label "Not any close button">
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button (Default:140)">
-<!ENTITY browser.tabs.disableBackgroundClose.label "Do not close by clicking background-tab's close button">
+<!ENTITY browser.tabs.disableBackgroundClose.label "Clicking on the close tab button of a tab in backgrund will switch to that tab, not close it">
 <!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width">
 <!ENTITY browser.tabs.tabWidth.min.label "Minimum">
 <!ENTITY browser.tabs.tabWidth.max.label "Maximum (Firefox3+)">
@@ -67,7 +71,7 @@
 <!ENTITY browser.tabs.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
 <!ENTITY browser.tabs.sessionStore.privacy_level.never.label "Never">
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
-<!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab and location bar">
+<!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab &amp; location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">

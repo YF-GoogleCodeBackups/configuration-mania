@@ -12,9 +12,56 @@
  windowtype="Browser:Confmania"
  chromehidden="menubar location directories status extrachrome"
  title="&prefWindow.title;" style="&prefWindow.style;"
- onload="if(!this._shouldAnimate) window.setTimeout('window.resizeTo(window.innerWidth, &prefWindow.defaultHeight;);', 0);"
+ onload="gPrefWindow.onLoad(&prefWindow.defaultHeight;);"
+ context="prefContextPopup"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <script src="&cm;/xconnect.js"/>
+<script src="chrome://global/content/contentAreaUtils.js"/>
+<script><![CDATA[
+var gPrefWindow = {
+  onLoad: function(height) {
+    var prefWin = document.documentElement;
+    if (!prefWin._shouldAnimate) {
+      window.setTimeout(function(){
+        window.resizeTo(window.innerWidth, height);
+      }, 0);
+    }
+
+    prefWin.addEventListener("contextmenu", gPrefWindow.onContextMenu, true);
+  },
+  _contextPrefElem: null,
+  _setPrefObj: function(event){
+    var o = event.target;
+    if (o.labeledControlElement) o = o.labeledControlElement;
+    if (o.nodeName == "radio") {
+      if ((o.value == "*") && (o.nextSibling != null) && (o.nextSibling.hasAttribute("preference"))) {
+        o = o.nextSibling;
+      } else if (o.radioGroup) o = o.radioGroup;
+    }
+
+    gPrefWindow._contextPrefElem = (o.hasAttribute("preference"))? o : null;
+  },
+  onContextMenu: function(event){
+    gPrefWindow._setPrefObj(event)
+    if (gPrefWindow._contextPrefElem == null) event.preventDefault();
+  },
+  onResetPopupClicked: function(event){
+    var o = gPrefWindow._contextPrefElem;
+    var p = document.getElementById(o.getAttribute("preference"));
+    p.reset();
+  },
+  onMkbPopupClicked: function(event){
+    var o = gPrefWindow._contextPrefElem;
+    openURL("http://kb.mozillazine.org/"+encodeURI(o.getAttribute("preference")));
+  }
+};
+]]></script>
+<popupset>
+  <menupopup id="prefContextPopup">
+    <menuitem label="&prefWindow.context.reset.label;" accesskey="&prefWindow.context.reset.accesskey;" onclick="gPrefWindow.onResetPopupClicked(event);" />
+    <menuitem label="&prefWindow.context.mkb.label;" accesskey="&prefWindow.context.mkb.accesskey;" onclick="gPrefWindow.onMkbPopupClicked(event);" />
+  </menupopup>
+</popupset>
 
 <prefpane id="paneBrowser" label="&browser.title;" src="&cm;/paneBrowser.xul"/>
 <prefpane id="paneSecurity" label="&security.title;" src="&cm;/paneSecurity.xul"/>

@@ -300,20 +300,20 @@ var gUIPref = {
       <columns><column/><column flex="1"/></columns>
       <rows>
       <row align="center">
-        <label value="&ui.multitouch.gestures.pinch.in.label;"/>
-        <menulist editable="true" preference="browser.gesture.pinch.in"/>
+        <label value="&ui.multitouch.gestures.pinch.in.label;" control="menu_pinch_in"/>
+        <menulist editable="true" preference="browser.gesture.pinch.in" id="menu_pinch_in"/>
       </row>
       <row align="center">
-        <label value="&ui.multitouch.gestures.pinch.in.shift.label;"/>
-        <menulist editable="true" preference="browser.gesture.pinch.in.shift"/>
+        <label value="&ui.multitouch.gestures.pinch.in.shift.label;" control="menu_pinch_in_shift"/>
+        <menulist editable="true" preference="browser.gesture.pinch.in.shift" id="menu_pinch_in_shift"/>
       </row>
       <row align="center">
-        <label value="&ui.multitouch.gestures.pinch.out.label;"/>
-        <menulist editable="true" preference="browser.gesture.pinch.out" />
+        <label value="&ui.multitouch.gestures.pinch.out.label;" control="menu_pinch_out"/>
+        <menulist editable="true" preference="browser.gesture.pinch.out" id="menu_pinch_out"/>
       </row>
       <row align="center">
-        <label value="&ui.multitouch.gestures.pinch.out.shift.label;"/>
-        <menulist editable="true" preference="browser.gesture.pinch.out.shift"/>
+        <label value="&ui.multitouch.gestures.pinch.out.shift.label;" control="menu_pinch_out_shift"/>
+        <menulist editable="true" preference="browser.gesture.pinch.out.shift" id="menu_pinch_out_shift"/>
       </row>
       </rows>
     </grid>

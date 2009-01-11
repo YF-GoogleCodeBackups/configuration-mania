@@ -1,6 +1,10 @@
 <!ENTITY prefWindow.title "Configuration Mania">
 <!ENTITY prefWindow.style "width:42em;">
 <!ENTITY prefWindow.defaultHeight "500">
+<!ENTITY prefWindow.context.reset.label "標準の設定に戻す">
+<!ENTITY prefWindow.context.reset.accesskey "R">
+<!ENTITY prefWindow.context.mkb.label "MozillaZine Knowledge Baseで検索">
+<!ENTITY prefWindow.context.mkb.accesskey "S">
 
 <!ENTITY browser.title "ブラウザ">
 <!ENTITY browser.smartbrowsing.label "SmartBrowsing">
