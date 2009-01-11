@@ -17,13 +17,12 @@
 <!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefix : ">
 <!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Suffix : ">
 <!ENTITY browser.urlbar.label "Location Bar">
-<!ENTITY browser.urlbar.hideGoButton.label "Hide the Go button next to the location bar (Firefox 2.x)">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when clicked">
-<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when double-clicked (Firefox3+)">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when double-clicked">
 <!ENTITY browser.urlbar.autoComplete.label "URL Autocomplete">
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
 <!ENTITY browser.urlbar.autoComplete.matchOnlyTyped.label "Match only websites you've typed previously">
-<!ENTITY browser.urlbar.richResults.label "Dropdown with richlistbox (Firefox3+)">
+<!ENTITY browser.urlbar.richResults.label "Dropdown with richlistbox">
 <!ENTITY browser.urlbar.richResults.maxRichResults.label "Maximum number of entries">
 <!ENTITY browser.urlbar.richResults.filterJavaScript.label "Filter out bookmarklet (&#34;javascript:&#34; URLs)">
 <!ENTITY browser.html.label "Page control">
@@ -39,7 +38,7 @@
 <!ENTITY browser.html.img.resizing.label "Shlink to fit image">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
-<!ENTITY browser.html.color_management_enabled.label "Enable Color Management (CMS) (Firefox3+;takes effect after restart)">
+<!ENTITY browser.html.color_management_enabled.label "Enable Color Management (CMS) (takes effect after restart)">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
@@ -56,13 +55,13 @@
 <!ENTITY browser.tabs.disableBackgroundClose.label "Clicking on the close tab button of a tab in backgrund will switch to that tab, not close it">
 <!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width">
 <!ENTITY browser.tabs.tabWidth.min.label "Minimum">
-<!ENTITY browser.tabs.tabWidth.max.label "Maximum (Firefox3+)">
+<!ENTITY browser.tabs.tabWidth.max.label "Maximum">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
 <!ENTITY browser.tabs.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
 <!ENTITY browser.tabs.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that openedit">
 <!ENTITY browser.tabs.sessionStore.label "&quot;Session Store&quot;&amp;&quot;Recently Closed Tabs&quot;">
-<!ENTITY browser.tabs.sessionStore.enabled.label "Enables &browser.tabs.sessionStore.label; (Firefox2,3.0.x)">
+<!ENTITY browser.tabs.sessionStore.enabled.label "Enables &browser.tabs.sessionStore.label; (Firefox3.0.x)">
 <!ENTITY browser.tabs.sessionStore.interval.label "Save sessions at intervals of">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "Number of tab closures to remember :">
 <!ENTITY browser.tabs.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
@@ -212,17 +211,17 @@
 <!ENTITY security.popupwin.event.click.label "Clicked">
 <!ENTITY security.popupwin.event.dblclick.label "Double Clicked">
 <!ENTITY security.antivirus.label "Anti-Virus">
-<!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete (Firefox3+)">
+<!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
 <!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">
 <!ENTITY security.antivirus.dontclean.label "Try to clean a downloaded file when a virus is detected">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE.">
 <!ENTITY security.ssl.label "SSL">
-<!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ... (Firefox3+)">
+<!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ...">
 <!ENTITY security.ssl.ssl_domain_display.none.label "favicon only (Default)">
 <!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD (effective top-level domain) along with the second-level domain (e.g., mozilla.org)">
 <!ENTITY security.ssl.ssl_domain_display.full.label "the full domain (e.g., addons.mozilla.org)">
 <!ENTITY security.ssl.ssl_domain_display.desc "When the site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to .">
-<!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed (Firefox3+)">
+<!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed">
 <!ENTITY security.ssl.ssl_override_behavior.dont.label "Do Not pre-populate the current URL as an exception and Do Not pre-fetch the SSL certificate.">
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate. (Default)">
 <!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Pre-populate the current URL and pre-fetch the certificate.">
@@ -374,7 +373,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.others.xwin.uiSubmenuDelay.label "Submenu Delay">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "None">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
-<!ENTITY ui.others.enable_drag_images.label "Display an image (when specified) during dragging (Firefox3+)">
+<!ENTITY ui.others.enable_drag_images.label "Display an image (when specified) during dragging">
 <!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">
 
 <!ENTITY debug.title "Debug">
@@ -393,7 +392,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.extension.label "Add-ons">
 <!ENTITY debug.extension.dialog_enable_delay.label "Time to start add-on installations :">
 <!ENTITY debug.extension.noCheckCompatibility.label "Do Not check add-on compatibility on install/update">
-<!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons (Firefox3+)">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
 <!ENTITY debug.extension.installButton.label "Show Install button on the add-on dialog">
 
 <!ENTITY miliseconds "[ms]">

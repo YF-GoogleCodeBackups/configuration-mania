@@ -246,7 +246,6 @@ var gPrefBrowser = {
   <preference id="browser.fixup.alternate.prefix" name="browser.fixup.alternate.prefix" type="string"/>
   <preference id="browser.fixup.alternate.suffix" name="browser.fixup.alternate.suffix" type="string"/>
 
-  <preference id="browser.urlbar.hideGoButton" name="browser.urlbar.hideGoButton" type="bool"/>
   <preference id="browser.urlbar.clickSelectsAll" name="browser.urlbar.clickSelectsAll" type="bool"/>
   <preference id="browser.urlbar.doubleClickSelectsAll" name="browser.urlbar.doubleClickSelectsAll" type="bool"/>
   <preference id="browser.urlbar.autoFill" name="browser.urlbar.autoFill" type="bool"/>
@@ -358,7 +357,6 @@ var gPrefBrowser = {
   </groupbox>
 </expander>
 <expander id="urlbar" label="&browser.urlbar.label;" open="false" clearhidden="true">
-  <checkbox id="urlbar-hideGoButton" label="&browser.urlbar.hideGoButton.label;" preference="browser.urlbar.hideGoButton"/>
   <checkbox label="&browser.urlbar.clickSelectsAll.label;" preference="browser.urlbar.clickSelectsAll"/>
   <checkbox label="&browser.urlbar.doubleClickSelectsAll.label;" preference="browser.urlbar.doubleClickSelectsAll"/>
   <groupbox>
@@ -693,6 +691,7 @@ var gPrefBrowser = {
   </groupbox>
 </expander>
 
+<findbar />
 </vbox>
 
 </prefpane>

@@ -17,13 +17,12 @@
 <!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "接頭辞 : ">
 <!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "接尾辞 : ">
 <!ENTITY browser.urlbar.label "ロケーションバー">
-<!ENTITY browser.urlbar.hideGoButton.label "ロケーションバーの隣りの移動ボタンを隠す (Firefox2.x)">
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
-<!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択(Firefox3以降)">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
 <!ENTITY browser.urlbar.autoComplete.label "URLの自動補完">
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "ロケーションバーに入力したURLを自動的に補完">
 <!ENTITY browser.urlbar.autoComplete.matchOnlyTyped.label "以前に入力した Web サイトにのみ一致するリストを表示">
-<!ENTITY browser.urlbar.richResults.label "リッチ表示のドロップダウン (Firefox3以降)">
+<!ENTITY browser.urlbar.richResults.label "リッチ表示のドロップダウン">
 <!ENTITY browser.urlbar.richResults.maxRichResults.label "最大表示項目数">
 <!ENTITY browser.urlbar.richResults.filterJavaScript.label "&#34;javascript:&#34;のアドレス（ブックマークレット）を表示しない">
 <!ENTITY browser.html.label "ページ表示制御">
@@ -39,7 +38,7 @@
 <!ENTITY browser.html.img.resizing.label "ページサイズに合わせて画像を縮小">
 <!ENTITY browser.html.img.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
 <!ENTITY browser.html.img.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
-<!ENTITY browser.html.color_management_enabled.label "カラーマネージメント(CMS)を有効に(Firefox3以降;再起動必要)">
+<!ENTITY browser.html.color_management_enabled.label "カラーマネージメント(CMS)を有効に(再起動必要)">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
 <!ENTITY browser.html.focus.enabled.label "フォーカスされたオブジェクトをハイライト表示する">
@@ -56,13 +55,13 @@
 <!ENTITY browser.tabs.disableBackgroundClose.label "バックグラウンドタブの閉じるボタンを押すことでタブを閉じない">
 <!ENTITY browser.tabs.tabWidth.label "タブの最小/最大サイズ">
 <!ENTITY browser.tabs.tabWidth.min.label "最小">
-<!ENTITY browser.tabs.tabWidth.max.label "最大 (Firefox3以降)">
+<!ENTITY browser.tabs.tabWidth.max.label "最大">
 <!ENTITY browser.tabs.seachOpenintab.label "検索バーでの検索結果を新しいタブで開く">
 <!ENTITY browser.tabs.loadBookmarksInBackground.label "ブックマークや履歴から開いた新しいタブを選択する">
 <!ENTITY browser.tabs.loadDivertedInBackground.label "外部アプリやリンクなどに新しいタブが開かれたとき、すぐにそのタブに切り替える">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "タブを閉じたら、そのタブを開いたタブをアクティブにする">
 <!ENTITY browser.tabs.sessionStore.label "タブの状態の保存及び最近閉じたタブ">
-<!ENTITY browser.tabs.sessionStore.enabled.label "&browser.tabs.sessionStore.label;を有効にする (Firefox2,3.0.x)">
+<!ENTITY browser.tabs.sessionStore.enabled.label "&browser.tabs.sessionStore.label;を有効にする (Firefox3.0.x)">
 <!ENTITY browser.tabs.sessionStore.interval.label "タブ状態を保存する時間間隔">
 <!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "タブの保存履歴件数">
 <!ENTITY browser.tabs.sessionStore.resume_from_crash.label "クラッシュ後の&brandShortName;起動時に、ウィンドウとタブを復元する">
@@ -223,12 +222,12 @@
 <!ENTITY security.antivirus.dontclean.label "ダウンロードされたファイルからウイルスが検出されたら駆除を試みる">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
 <!ENTITY security.ssl.label "SSL">
-<!ENTITY security.ssl.ssl_domain_display.label "セキュアなサイトにアクセスしているとき、ロケーションバーのURLのすぐ左に表示するもの (Firefox3以降)">
+<!ENTITY security.ssl.ssl_domain_display.label "セキュアなサイトにアクセスしているとき、ロケーションバーのURLのすぐ左に表示するもの">
 <!ENTITY security.ssl.ssl_domain_display.none.label "ファビコンのみ (標準)">
 <!ENTITY security.ssl.ssl_domain_display.eTLD.label "実効トップレベルドメイン (eTLD)+セカンドレベルドメイン (例: mozilla.org)">
 <!ENTITY security.ssl.ssl_domain_display.full.label "フルドメイン (例: addons.mozilla.org)">
 <!ENTITY security.ssl.ssl_domain_display.desc "EV(Extended Validation)-SSL証明書を使ったサイトでは、常に接続先の組織名が表示されます。">
-<!ENTITY security.ssl.ssl_override_behavior.label "安全な接続ができなかったときの、&quot;セキュリティ例外の追加&quot;ダイアログの振る舞い (Firefox3以降)">
+<!ENTITY security.ssl.ssl_override_behavior.label "安全な接続ができなかったときの、&quot;セキュリティ例外の追加&quot;ダイアログの振る舞い">
 <!ENTITY security.ssl.ssl_override_behavior.dont.label "現在のURLを例外として自動入力せず、SSL証明書の取得も行わない。">
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "現在のURLを例外として予め自動で入力しておくが、SSL証明書の取得は自動で行わない。(標準)">
 <!ENTITY security.ssl.ssl_override_behavior.prefetch.label "現在のURLを例外として予め入力し、さらにSSL証明書も自動取得する">
@@ -379,7 +378,7 @@
 <!ENTITY ui.others.xwin.uiSubmenuDelay.label "サブメニュー表示遅延時間">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "なし">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "&#x221e; (Motif の真似)">
-<!ENTITY ui.others.enable_drag_images.label "ドラッグ中に(可能であれば)画像を表示する (Firefox3以降)">
+<!ENTITY ui.others.enable_drag_images.label "ドラッグ中に(可能であれば)画像を表示する">
 <!ENTITY ui.others.xul_file_picker "システムのファイルダイアログを使わずにXULファイルダイアログを使用">
 
 <!ENTITY debug.title "デバッグ">
@@ -398,7 +397,7 @@
 <!ENTITY debug.extension.label "アドオン">
 <!ENTITY debug.extension.dialog_enable_delay.label "インストール開始するまでの時間">
 <!ENTITY debug.extension.noCheckCompatibility.label "インストール/更新時のアドオンのバージョンチェックを回避">
-<!ENTITY debug.extension.noCheckUpdateSecurity.label "アドオンの署名チェックを回避 (Firefox3以降)">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "アドオンの署名チェックを回避">
 <!ENTITY debug.extension.installButton.label "アドオンダイアログにインストールボタンを表示">
 
 <!ENTITY miliseconds "ミリ秒">
