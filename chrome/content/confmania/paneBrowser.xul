@@ -94,9 +94,6 @@ var gPrefBrowser = {
     box = document.getElementById("smartbrowsing-domainGuessingEnabled-hbox");
     Array.forEach(box.childNodes, disablefunc);
 
-    disabled = ! document.getElementById("tabs-ctrlTabsEnabled").checked;
-    document.getElementById("tabs-ctrlTabsSmooth").disabled = disabled;
-
     disabled = document.getElementById("speed-interrupt-parsing").checked;
     box = document.getElementById("speed-interrupt-parsing-hbox");
     Array.forEach(box.childNodes, disablefunc);
@@ -119,6 +116,44 @@ var gPrefBrowser = {
     disabled = ! document.getElementById("others-editorExternal").checked;
     box = document.getElementById("others-editorExternal-hbox");
     Array.forEach(box.childNodes, disablefunc);
+  },
+  searchKeyword : function(aKeyword){
+    if ((aKeyword || "") == "") return;
+    var expanders = document.getElementsByTagName("expander");
+    var listBox = document.getElementById("paneBrowserBox");
+    try {
+      Array.forEach(expanders, function(ex){ex.open = true;});
+
+      var xpathEq = ".//*["+["@label","text()","@value"].map(function(v){
+        return "contains("+v+",'%s')".replace(/%s/, aKeyword.replace(/'/g,"''"));
+      }).join(" or ")+"]";
+      var xpath = document.evaluate(xpathEq, listBox, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+      for ( var e; e = xpath.iterateNext(); ) {
+            while(e.nodeType != Node.ELEMENT_NODE) e = e.parentNode;
+            document.getElementById("paneBrowserBox")
+             .boxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject)
+             .ensureElementIsVisible(e);
+            e.style.outline = "solid 3px -moz-activehyperlinktext";
+            setTimeout(function(){e.style.outline = "inherit";}, 2000);
+            break;
+      }
+/*
+      Array.forEach(expanders, function(ex){
+        Array.forEach(ex.getElementsByTagName("*"), function(e){
+          var text = e.caption || e.label || e.text || e.value || e.nodeValue;
+          if (text.indexOf(aKeyword) >= 0) {
+            while(e.nodeType != Node.ELEMENT_NODE) e = e.parentNode;
+            document.getElementById("paneBrowserBox")
+             .boxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject)
+             .ensureElementIsVisible(e);
+            e.style.outline = "solid 3px -moz-activehyperlinktext";
+            setTimeout(function(){e.style.outline = "inherit";}, 2000);
+            throw $break;
+          }
+        });
+      });
+*/
+    } catch (e) {if(e!=$break) throw e;}
   },
   resetKeywordURL : function(){//#smartbrowsing-keywordsURL
     document.getElementById("keyword.URL").reset();
@@ -319,7 +354,10 @@ var gPrefBrowser = {
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
 </preferences>
 
-<vbox flex="1" class="listBox">
+<hbox pack="end">
+<textbox id="paneBrowser-search" type="search" emptytext="&search;" oncommand="gPrefBrowser.searchKeyword(this.value);"/>
+</hbox>
+<scrollbox orient="vertical" id="paneBrowserBox" flex="1" class="listBox">
 
 <expander id="smartbrowsing" label="&browser.smartbrowsing.label;" open="false" clearhidden="true">
   <groupbox>
@@ -690,7 +728,7 @@ var gPrefBrowser = {
     </radiogroup>
   </groupbox>
 </expander>
-</vbox>
+</scrollbox>
 
 </prefpane>
 </overlay>

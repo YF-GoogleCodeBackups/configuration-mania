@@ -408,6 +408,7 @@
 <!ENTITY reset "標準に戻す">
 <!ENTITY browse "参照...">
 <!ENTITY preview "プレビュー">
+<!ENTITY search "検索">
 <!ENTITY autoSet "自動">
 <!ENTITY disableSet "無効">
 <!ENTITY manualSet "手動設定">

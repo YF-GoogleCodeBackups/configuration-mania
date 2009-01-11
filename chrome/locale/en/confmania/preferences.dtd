@@ -403,6 +403,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY reset "Reset">
 <!ENTITY browse "Browse...">
 <!ENTITY preview "Preview">
+<!ENTITY search "Search">
 <!ENTITY autoSet "Auto">
 <!ENTITY disableSet "Disabled">
 <!ENTITY manualSet "Manual">
