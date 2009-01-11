@@ -690,8 +690,6 @@ var gPrefBrowser = {
     </radiogroup>
   </groupbox>
 </expander>
-
-<findbar />
 </vbox>
 
 </prefpane>

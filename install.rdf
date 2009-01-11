@@ -25,6 +25,7 @@
 <em:creator>Popoki Tom</em:creator>
 <em:homepageURL>http://members.lycos.co.uk/toolbarpalette/confmania/index_en.html</em:homepageURL>
 <!--em:updateURL>http://members.lycos.co.uk/toolbarpalette/extension-updates.rdf</em:updateURL-->
+<em:optionsURL>chrome://confmania/content/preferences.xul</em:optionsURL>
 
 <em:localized><Description>
 <em:locale>en</em:locale>
