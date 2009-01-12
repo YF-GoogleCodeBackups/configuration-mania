@@ -63,6 +63,7 @@ var gUIPref = {
     var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
                    .getService(Components.interfaces.nsIWindowMediator);
     var win = wm.getMostRecentWindow("navigator:browser");
+    var winMenubar = win.document.getElementById("main-menubar");
     if ( win == null ) return;
     var cmds = Array.map(win.document.getElementsByTagName("command"), function(elem){
       return elem.id;
@@ -72,6 +73,12 @@ var gUIPref = {
     cmds.sort().forEach(function(v){
       var oMenuitem = document.createElement("menuitem");
       oMenuitem.setAttribute("label", v);
+
+      var labelResult = win.document.evaluate("//*[(@label) and (@command='"+v+"')]", win.document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
+      if ( labelResult && labelResult.singleNodeValue ) {
+        oMenuitem.setAttribute("tooltiptext", labelResult.singleNodeValue.label);
+      }
+
       oMenupop.appendChild(oMenuitem);
     });
 
