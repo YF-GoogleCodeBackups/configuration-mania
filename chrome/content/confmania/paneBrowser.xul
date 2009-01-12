@@ -58,6 +58,12 @@ var gPrefBrowser = {
       document.getElementById("browserCacheDiskCacheFolder").setAttribute("emptytext", cachedir.path);
     } catch(ex){}
 
+    /* Firefox 3.0.x does not support type=search textbox */
+    var searchbox = document.getElementById("paneBrowser-search");
+    if ( ! searchbox._timer ) {
+      searchbox.setAttribute("type", "timed");
+    }
+
     if (! document.documentElement.instantApply) {
       document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
     }
@@ -121,39 +127,22 @@ var gPrefBrowser = {
     if ((aKeyword || "") == "") return;
     var expanders = document.getElementsByTagName("expander");
     var listBox = document.getElementById("paneBrowserBox");
-    try {
-      Array.forEach(expanders, function(ex){ex.open = true;});
 
-      var xpathEq = ".//*["+["@label","text()","@value"].map(function(v){
-        return "contains("+v+",'%s')".replace(/%s/, aKeyword.replace(/'/g,"''"));
-      }).join(" or ")+"]";
-      var xpath = document.evaluate(xpathEq, listBox, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
-      for ( var e; e = xpath.iterateNext(); ) {
-            while(e.nodeType != Node.ELEMENT_NODE) e = e.parentNode;
-            document.getElementById("paneBrowserBox")
-             .boxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject)
-             .ensureElementIsVisible(e);
-            e.style.outline = "solid 3px -moz-activehyperlinktext";
-            setTimeout(function(){e.style.outline = "inherit";}, 2000);
-            break;
-      }
-/*
-      Array.forEach(expanders, function(ex){
-        Array.forEach(ex.getElementsByTagName("*"), function(e){
-          var text = e.caption || e.label || e.text || e.value || e.nodeValue;
-          if (text.indexOf(aKeyword) >= 0) {
-            while(e.nodeType != Node.ELEMENT_NODE) e = e.parentNode;
-            document.getElementById("paneBrowserBox")
-             .boxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject)
-             .ensureElementIsVisible(e);
-            e.style.outline = "solid 3px -moz-activehyperlinktext";
-            setTimeout(function(){e.style.outline = "inherit";}, 2000);
-            throw $break;
-          }
-        });
-      });
-*/
-    } catch (e) {if(e!=$break) throw e;}
+    Array.forEach(expanders, function(ex){ex.open = true;});
+
+    var xpathEq = ".//*["+["@label","text()","@value"].map(function(v){
+      return "contains("+v+",'%s')".replace(/%s/, aKeyword.replace(/'/g,"''"));
+    }).join(" or ")+"]";
+    var xpath = document.evaluate(xpathEq, listBox, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+    for ( var e; e = xpath.iterateNext(); ) {
+      while(e.nodeType != Node.ELEMENT_NODE) e = e.parentNode;
+      document.getElementById("paneBrowserBox")
+       .boxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject)
+       .ensureElementIsVisible(e);
+      e.style.outline = "solid 3px -moz-activehyperlinktext";
+      setTimeout(function(){e.style.outline = "inherit";}, 2000);
+      break;
+    }
   },
   resetKeywordURL : function(){//#smartbrowsing-keywordsURL
     document.getElementById("keyword.URL").reset();
@@ -195,11 +184,11 @@ var gPrefBrowser = {
     return userAgent;
   },
   onSpeedPaintReset : function(){
-    ["nglayout.initialpaint.delay", "content.notify.backoffcount", "content.notify.interval",
-    "content.interrupt.parsing", "content.max.tokenizing.time",
-    "content.switch.threshold"].forEach(function(id){
-      document.getElementById(id).reset();
-    });
+    var expander = document.getElementById("speed-paint");
+    var xpath = document.evaluate(".//*[@preference]", expander, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+    for ( var e; e = xpath.iterateNext(); ) {
+      document.getElementById(e.getAttribute("preference")).reset();
+    }
 
     gPrefBrowser.updatePrefs();
   },
@@ -355,7 +344,7 @@ var gPrefBrowser = {
 </preferences>
 
 <hbox pack="end">
-<textbox id="paneBrowser-search" type="search" emptytext="&search;" oncommand="gPrefBrowser.searchKeyword(this.value);"/>
+<textbox id="paneBrowser-search" type="search" timeout="500" emptytext="&search;" oncommand="gPrefBrowser.searchKeyword(this.value);"/>
 </hbox>
 <scrollbox orient="vertical" id="paneBrowserBox" flex="1" class="listBox">
 

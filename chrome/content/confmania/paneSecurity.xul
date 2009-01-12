@@ -51,9 +51,9 @@ var gPrefSecurity = {
   init : function(){
     // popup_allowed_events
     var mData = document.getElementById("popupwin-popup_allowed_events");
-    var e = mData.value.split(" ");
-    for(var i = 0; i < e.length; i++)
+    Array.forEach(mData.value.split(" "), function(e) {
       document.getElementById("popupwin-e." + e[i]).checked = true;
+    });
 
     this.updateIDN();
     this.updateSendRefererSecureXSite();
@@ -67,10 +67,9 @@ var gPrefSecurity = {
     const XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
     var checks = document.getElementById("popupwin-e").getElementsByTagNameNS(XULNS, "listitem");
-    var e = [];
-    Array.forEach(checks, function(check){
-      if(check.checked) e.push(check.getAttribute("id").substring(11));//"popupwin-e.".length == 11
-    });
+    var e = Array.reduce(checks, function(arr, check){
+      if(check.checked) arr.push(check.getAttribute("id").substring(11));//"popupwin-e.".length == 11
+    }, []);
 
     var mData = document.getElementById("popupwin-popup_allowed_events");
     mData.value = e.join(" ");
