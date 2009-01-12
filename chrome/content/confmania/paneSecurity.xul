@@ -216,7 +216,7 @@ var gPrefSecurity = {
   </radiogroup>
 
   <textbox hidden="true" id="popupwin-popup_allowed_events" preference="dom.popup_allowed_events"/>
-  <label value="&security.popupwin.event.label;"/>
+  <label value="&security.popupwin.event.label;" control="popupwin-e"/>
   <listbox class="indent" id="popupwin-e" rows="6" onclick="gPrefSecurity.updatePopupwin();" onkeypress="gPrefSecurity.updatePopupwin();">
     <listitem type="checkbox" id="popupwin-e.reset" label="&security.popupwin.event.reset.label;"/>
     <listitem type="checkbox" id="popupwin-e.submit" label="&security.popupwin.event.submit.label;"/>
@@ -290,7 +290,7 @@ var gPrefSecurity = {
 <groupbox>
   <caption label="&security.privacy.cookie.label;"/>
   <hbox align="center">
-    <label value="&security.privacy.cookie.lifetimedays.label;"/>
+    <label value="&security.privacy.cookie.lifetimedays.label;" control="cookieLifetimeDays"/>
     <textbox id="cookieLifetimeDays" type="number" hidespinbuttons="true" size="2" preference="network.cookie.lifetime.days"/>
     <label value="&days;"/>
   </hbox>
