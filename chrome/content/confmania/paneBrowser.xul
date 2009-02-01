@@ -60,7 +60,7 @@ var gPrefBrowser = {
 
     /* Firefox 3.0.x does not support type=search textbox */
     var searchbox = document.getElementById("paneBrowser-search");
-    if ( ! searchbox._timer ) {
+    if ( searchbox._fireCommand == undefined ) {
       searchbox.setAttribute("type", "timed");
     }
 
