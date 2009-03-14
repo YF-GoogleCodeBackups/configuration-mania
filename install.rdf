@@ -7,7 +7,7 @@
 
 <em:id>{c4d362ec-1cff-4ca0-9031-99a8fad7995a}</em:id>
 <!--em:id>{3329801B-F8DD-4503-BDB5-6E0A076B5364}</em:id--><!-- this id is used by somebody in addons.mozilla.org -->
-<em:version>1.10.2009020201</em:version>
+<em:version>1.10.2009031401</em:version>
 
 <!-- Target Application this theme can install into, 
     with minimum and maximum supported versions. --> 
@@ -15,7 +15,7 @@
 <Description>
   <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
   <em:minVersion>3.0</em:minVersion>
-  <em:maxVersion>3.1b2</em:maxVersion>
+  <em:maxVersion>3.1b3</em:maxVersion>
 </Description>
 </em:targetApplication>
 
@@ -23,8 +23,8 @@
 <em:name>Configuration Mania?</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>http://members.lycos.co.uk/toolbarpalette/confmania/index_en.html</em:homepageURL>
-<!--em:updateURL>http://members.lycos.co.uk/toolbarpalette/extension-updates.rdf</em:updateURL-->
+<em:homepageURL>http://toolbarpalette.comyr.com/confmania/</em:homepageURL>
+<!--em:updateURL>http://toolbarpalette.comyr.com/extension-updates.rdf</em:updateURL-->
 <em:optionsURL>chrome://confmania/content/preferences.xul</em:optionsURL>
 
 <em:localized><Description>
