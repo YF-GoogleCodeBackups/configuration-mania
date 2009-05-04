@@ -46,7 +46,7 @@
 <!ENTITY browser.html.focus.bg.label "Background Color">
 <!ENTITY browser.html.focus.fg.label "Text Color">
 <!ENTITY browser.tabs.label "TabBrowsing">
-<!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab (Firefox3.1+)">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab (Firefox3.5+)">
 <!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
 <!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
 <!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">
@@ -296,7 +296,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.mousewheel.history.label "Move back and forward in the browsing history">
 <!ENTITY ui.mousewheel.textsize.label "Make the text larger or smaller">
 <!ENTITY ui.multitouch.label "Multi-Touch">
-<!ENTITY ui.multitouch.gestures.label "Multi-Touch Gestures (Firefox 3.1+)">
+<!ENTITY ui.multitouch.gestures.label "Multi-Touch Gestures (Firefox 3.5+)">
 <!ENTITY ui.multitouch.gestures.pinch.in.label "Pinch-in">
 <!ENTITY ui.multitouch.gestures.pinch.in.shift.label "Pinch-in with shift">
 <!ENTITY ui.multitouch.gestures.pinch.out.label "Pinch-out">
@@ -383,7 +383,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
-<!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript ... (Firefox3.1+)">
+<!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript ... (Firefox3.5+)">
 <!ENTITY debug.tracemonkey.content.label "on the web">
 <!ENTITY debug.tracemonkey.chrome.label "on chrome">
 <!ENTITY debug.cache.label "Cache">
