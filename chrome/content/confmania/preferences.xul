@@ -11,6 +11,7 @@
 <prefwindow type="prefwindow" id="ConfmaniaPreferences"
  windowtype="Browser:Confmania"
  chromehidden="menubar location directories status extrachrome"
+ buttonlabelextra1="&reset;" ondialogextra1="gPrefWindow.onResetSettings();"
  title="&prefWindow.title;" style="&prefWindow.style;"
  onload="gPrefWindow.onLoad(&prefWindow.defaultHeight;);"
  context="prefContextPopup"
@@ -26,8 +27,22 @@ var gPrefWindow = {
         window.resizeTo(window.innerWidth, height);
       }, 0);
     }
+    prefWin.getButton("extra1").hidden = false;
 
     prefWin.addEventListener("contextmenu", gPrefWindow.onContextMenu, true);
+  },
+  onResetSettings: function(event){
+    var currentPane = document.documentElement.currentPane;
+    var srcbtn = document.documentElement.getButton("extra1");
+    var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                   .getService(Components.interfaces.nsIPromptService);
+
+      var msg = "CHANGES WILL BE LOST! ARE YOU SURE YOU WANT TO RESET SETTINGS ON THIS TAB '%s'?".replace(/%s/, currentPane.label);
+      if( prompts.confirm(window, srcbtn.label, msg) ) {
+        Array.forEach(currentPane.preferences, function(v){
+          if(v.hasUserValue) v.reset();
+        });
+      }
   },
   _contextPrefElem: null,
   _setPrefObj: function(event){
