@@ -49,12 +49,6 @@
 <script><![CDATA[
 var gPrefSecurity = {
   init : function(){
-    // popup_allowed_events
-    var mData = document.getElementById("popupwin-popup_allowed_events");
-    Array.forEach(mData.value.split(" "), function(e) {
-      document.getElementById("popupwin-e." + e[i]).checked = true;
-    });
-
     this.updateIDN();
     this.updateSendRefererSecureXSite();
 
@@ -63,16 +57,24 @@ var gPrefSecurity = {
      .getService(Components.interfaces.nsIPK11TokenDB)
      .getInternalKeyToken().getAskPasswordTimeout();
   },
+  syncPopupwin : function(){
+    var mData = document.getElementById(document.getElementById("popupwin-popup_allowed_events").getAttribute("preference"));
+    Array.forEach(mData.value.split(/\s+/), function(v) {
+      try {
+        document.getElementById("popupwin-e-" + v).checked = true;
+      } catch(ex) {/*illegal element*/}
+    });
+  },
   updatePopupwin : function(){
     const XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
     var checks = document.getElementById("popupwin-e").getElementsByTagNameNS(XULNS, "listitem");
-    var e = Array.reduce(checks, function(arr, check){
-      if(check.checked) arr.push(check.getAttribute("id").substring(11));//"popupwin-e.".length == 11
-    }, []);
+    var val = Array.filter(checks, function(v){return v.checked}).map(function(v){
+      return v.getAttribute("id").substring(11);//"popupwin-e-".length == 11
+    });
 
     var mData = document.getElementById("popupwin-popup_allowed_events");
-    mData.value = e.join(" ");
+    mData.value = val;
     document.getElementById("paneSecurity").userChangedValue(mData);
   },
   updateIDN : function(){
@@ -214,22 +216,22 @@ var gPrefSecurity = {
     </grid>
   </radiogroup>
 
-  <textbox hidden="true" id="popupwin-popup_allowed_events" preference="dom.popup_allowed_events"/>
+  <textbox hidden="true" id="popupwin-popup_allowed_events" preference="dom.popup_allowed_events" onsyncfrompreference="gPrefSecurity.syncPopupwin()"/>
   <label value="&security.popupwin.event.label;" control="popupwin-e"/>
   <listbox class="indent" id="popupwin-e" rows="6" onclick="gPrefSecurity.updatePopupwin();" onkeypress="gPrefSecurity.updatePopupwin();">
-    <listitem type="checkbox" id="popupwin-e.reset" label="&security.popupwin.event.reset.label;"/>
-    <listitem type="checkbox" id="popupwin-e.submit" label="&security.popupwin.event.submit.label;"/>
-    <listitem type="checkbox" id="popupwin-e.select" label="&security.popupwin.event.select.label;"/>
-    <listitem type="checkbox" id="popupwin-e.change" label="&security.popupwin.event.change.label;"/>
-    <listitem type="checkbox" id="popupwin-e.resize" label="&security.popupwin.event.resize.label;"/>
-    <listitem type="checkbox" id="popupwin-e.input" label="&security.popupwin.event.input.label;"/>
-    <listitem type="checkbox" id="popupwin-e.keypress" label="&security.popupwin.event.keypress.label;"/>
-    <listitem type="checkbox" id="popupwin-e.keydown" label="&security.popupwin.event.keydown.label;"/>
-    <listitem type="checkbox" id="popupwin-e.keyup" label="&security.popupwin.event.keyup.label;"/>
-    <listitem type="checkbox" id="popupwin-e.mouseup" label="&security.popupwin.event.mouseup.label;"/>
-    <listitem type="checkbox" id="popupwin-e.mousedown" label="&security.popupwin.event.mousedown.label;"/>
-    <listitem type="checkbox" id="popupwin-e.click" label="&security.popupwin.event.click.label;"/>
-    <listitem type="checkbox" id="popupwin-e.dblclick" label="&security.popupwin.event.dblclick.label;"/>
+    <listitem type="checkbox" id="popupwin-e-reset" label="&security.popupwin.event.reset.label;"/>
+    <listitem type="checkbox" id="popupwin-e-submit" label="&security.popupwin.event.submit.label;"/>
+    <listitem type="checkbox" id="popupwin-e-select" label="&security.popupwin.event.select.label;"/>
+    <listitem type="checkbox" id="popupwin-e-change" label="&security.popupwin.event.change.label;"/>
+    <listitem type="checkbox" id="popupwin-e-resize" label="&security.popupwin.event.resize.label;"/>
+    <listitem type="checkbox" id="popupwin-e-input" label="&security.popupwin.event.input.label;"/>
+    <listitem type="checkbox" id="popupwin-e-keypress" label="&security.popupwin.event.keypress.label;"/>
+    <listitem type="checkbox" id="popupwin-e-keydown" label="&security.popupwin.event.keydown.label;"/>
+    <listitem type="checkbox" id="popupwin-e-keyup" label="&security.popupwin.event.keyup.label;"/>
+    <listitem type="checkbox" id="popupwin-e-mouseup" label="&security.popupwin.event.mouseup.label;"/>
+    <listitem type="checkbox" id="popupwin-e-mousedown" label="&security.popupwin.event.mousedown.label;"/>
+    <listitem type="checkbox" id="popupwin-e-click" label="&security.popupwin.event.click.label;"/>
+    <listitem type="checkbox" id="popupwin-e-dblclick" label="&security.popupwin.event.dblclick.label;"/>
   </listbox>
 </tabpanel>
 
