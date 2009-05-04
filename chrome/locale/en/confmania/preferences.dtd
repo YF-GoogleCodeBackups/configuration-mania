@@ -1,6 +1,7 @@
 <!ENTITY prefWindow.title "Configuration Mania">
 <!ENTITY prefWindow.style "width:42em;">
 <!ENTITY prefWindow.defaultHeight "500">
+<!ENTITY prefwindow.resetMessageTemplate "Changes will be lost! Are you sure you want to reset settings on this tab [__TABNAME__]?">
 <!ENTITY prefWindow.context.reset.label "Reset setting to the default value">
 <!ENTITY prefWindow.context.reset.accesskey "R">
 <!ENTITY prefWindow.context.mkb.label "Search in MozillaZine Knowledge Base">
