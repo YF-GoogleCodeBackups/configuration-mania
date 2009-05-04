@@ -83,7 +83,7 @@
           preference="javascript.options.jit.chrome"/>
 </groupbox>
 
-<groupbox>
+<groupbox orient="horizontal">
 <caption label="&debug.cache.label;"/>
 <checkbox label="&debug.cache.disableXULCache.label;"
           preference="nglayout.debug.disable_xul_cache"/>
