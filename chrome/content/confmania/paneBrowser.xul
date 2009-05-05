@@ -286,6 +286,7 @@ var gPrefBrowser = {
   <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
   <preference id="gfx.color_management.enabled" name="gfx.color_management.enabled" type="bool"/>
   <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
+  <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
@@ -440,6 +441,7 @@ var gPrefBrowser = {
       </menupopup></menulist>
     </hbox>
   </groupbox>
+  <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
 
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
   <groupbox>

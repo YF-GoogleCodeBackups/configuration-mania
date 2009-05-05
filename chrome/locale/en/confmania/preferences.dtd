@@ -45,6 +45,7 @@
 <!ENTITY browser.html.color_management.mode.off.label "Disable CMS">
 <!ENTITY browser.html.color_management.mode.on.label "Enable for rendered graphics">
 <!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
+<!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts (Firefox3.5+)">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">

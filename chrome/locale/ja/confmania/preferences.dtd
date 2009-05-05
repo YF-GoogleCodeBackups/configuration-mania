@@ -46,6 +46,7 @@
 <!ENTITY browser.html.color_management.mode.off.label "CMS無効">
 <!ENTITY browser.html.color_management.mode.on.label "有効にする">
 <!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
+<!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする (Firefox3.5以降)">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
 <!ENTITY browser.html.focus.enabled.label "フォーカスされたオブジェクトをハイライト表示する">
