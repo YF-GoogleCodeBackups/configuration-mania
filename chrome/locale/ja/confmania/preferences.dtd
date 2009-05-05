@@ -40,6 +40,12 @@
 <!ENTITY browser.html.img.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
 <!ENTITY browser.html.img.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
 <!ENTITY browser.html.color_management_enabled.label "カラーマネージメント(CMS)を有効に(再起動必要)">
+<!ENTITY browser.html.color_management.label "カラーマネージメント(CMS) (再起動必要)">
+<!ENTITY browser.html.color_management.enabled.label "CMSを有効にする (Firefox3.0.x)">
+<!ENTITY browser.html.color_management.mode.label "モード (Firefox3.5以降)">
+<!ENTITY browser.html.color_management.mode.off.label "CMS無効">
+<!ENTITY browser.html.color_management.mode.on.label "有効にする">
+<!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
 <!ENTITY browser.html.focus.enabled.label "フォーカスされたオブジェクトをハイライト表示する">
@@ -230,8 +236,8 @@
 <!ENTITY security.ssl.ssl_domain_display.desc "EV(Extended Validation)-SSL証明書を使ったサイトでは、常に接続先の組織名が表示されます。">
 <!ENTITY security.ssl.ssl_override_behavior.label "安全な接続ができなかったときの、&quot;セキュリティ例外の追加&quot;ダイアログの振る舞い">
 <!ENTITY security.ssl.ssl_override_behavior.dont.label "現在のURLを例外として自動入力せず、SSL証明書の取得も行わない。">
-<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "現在のURLを例外として予め自動で入力しておくが、SSL証明書の取得は自動で行わない。(標準)">
-<!ENTITY security.ssl.ssl_override_behavior.prefetch.label "現在のURLを例外として予め入力し、さらにSSL証明書も自動取得する">
+<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "現在のURLを例外として予め自動で入力しておくが、SSL証明書の取得は自動で行わない。">
+<!ENTITY security.ssl.ssl_override_behavior.prefetch.label "現在のURLを例外として予め入力し、さらにSSL証明書も自動取得する。">
 <!ENTITY security.net.label "ネットワーク">
 <!ENTITY security.net.redirection-limit.label "HTTP リダイレクト限界数">
 <!ENTITY security.net.enableIDN.label "IDN (国際化ドメイン名) を有効にする">

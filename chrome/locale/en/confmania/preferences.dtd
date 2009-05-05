@@ -39,7 +39,12 @@
 <!ENTITY browser.html.img.resizing.label "Shlink to fit image">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
-<!ENTITY browser.html.color_management_enabled.label "Enable Color Management (CMS) (takes effect after restart)">
+<!ENTITY browser.html.color_management.label "Color Management (CMS) (takes effect after restart)">
+<!ENTITY browser.html.color_management.enabled.label "Enable CMS (Firefox3.0.x)">
+<!ENTITY browser.html.color_management.mode.label "Mode (Firefox3.5+)">
+<!ENTITY browser.html.color_management.mode.off.label "Disable CMS">
+<!ENTITY browser.html.color_management.mode.on.label "Enable for rendered graphics">
+<!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
@@ -224,7 +229,7 @@
 <!ENTITY security.ssl.ssl_domain_display.desc "When the site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to .">
 <!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed">
 <!ENTITY security.ssl.ssl_override_behavior.dont.label "Do Not pre-populate the current URL as an exception and Do Not pre-fetch the SSL certificate.">
-<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate. (Default)">
+<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate.">
 <!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Pre-populate the current URL and pre-fetch the certificate.">
 <!ENTITY security.net.label "Network">
 <!ENTITY security.net.redirection-limit.label "HTTP Redirection limit">

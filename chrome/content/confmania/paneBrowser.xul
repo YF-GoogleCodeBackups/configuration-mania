@@ -285,6 +285,7 @@ var gPrefBrowser = {
   <preference id="browser.display.show_image_placeholders" name="browser.display.show_image_placeholders" type="bool"/>
   <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
   <preference id="gfx.color_management.enabled" name="gfx.color_management.enabled" type="bool"/>
+  <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
@@ -426,8 +427,19 @@ var gPrefBrowser = {
     <checkbox label="&browser.html.img.force_inline_alttext.label;"
      preference="browser.display.force_inline_alttext"/>
   </groupbox>
-  <checkbox label="&browser.html.color_management_enabled.label;"
-   preference="gfx.color_management.enabled"/>
+  <groupbox>
+    <caption label="&browser.html.color_management.label;"/>
+    <checkbox label="&browser.html.color_management.enabled.label;"
+     preference="gfx.color_management.enabled"/>
+    <hbox align="center">
+      <label control="color_management_mode" value="&browser.html.color_management.mode.label;"/>
+      <menulist id="color_management_mode" preference="gfx.color_management.mode"><menupopup>
+        <menuitem value="0" label="&browser.html.color_management.mode.off.label;"/>
+        <menuitem value="1" label="&browser.html.color_management.mode.on.label;"/>
+        <menuitem value="2" label="&browser.html.color_management.mode.tagged.label;"/>
+      </menupopup></menulist>
+    </hbox>
+  </groupbox>
 
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
   <groupbox>

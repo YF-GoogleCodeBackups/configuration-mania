@@ -125,7 +125,6 @@ var gHTTPPane = {
   <hbox align="center">
     <label value="&http.ad.accept.default.label;" control="HTTPAccept"/>
     <textbox id="HTTPAccept" flex="1" preference="network.http.accept.default"/>
-    <button label="&reset;" oncommand="document.getElementById('network.http.accept.default').reset();"/>
   </hbox>
 </groupbox>
 <groupbox id="http-ad-maxsess">
