@@ -76,7 +76,7 @@ var gUIPref = {
 
       var labelResult = win.document.evaluate("//*[(@label) and (@command='"+v+"')]", win.document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
       if ( labelResult && labelResult.singleNodeValue ) {
-        oMenuitem.setAttribute("tooltiptext", labelResult.singleNodeValue.label);
+        oMenuitem.setAttribute("description", labelResult.singleNodeValue.label);
       }
 
       oMenupop.appendChild(oMenuitem);
