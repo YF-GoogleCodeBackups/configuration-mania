@@ -591,10 +591,6 @@ var gPrefBrowser = {
       <radio label="&browser.ua.os.mac;" value="&browser.ua.opera.mac.value;"/>
       <radio label="&browser.ua.os.linux;" value="&browser.ua.opera.linux.value;"/>
     </hbox>
-    <hbox align="center">
-      <label value="&browser.ua.konqueror.label;"/>
-      <radio label="&browser.ua.os.linux;" value="&browser.ua.konqueror.linux.value;"/>
-    </hbox>
     <radio id="ua-googlebot" label="&browser.ua.googlebot.label;" value="&browser.ua.googlebot.value;"/>
     <hbox align="center">
       <radio id="ua-manual" label="&browser.ua.manual.label;" value="*"/>
