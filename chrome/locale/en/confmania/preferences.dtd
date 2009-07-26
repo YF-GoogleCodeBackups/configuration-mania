@@ -67,15 +67,17 @@
 <!ENTITY browser.tabs.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
 <!ENTITY browser.tabs.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that openedit">
-<!ENTITY browser.tabs.sessionStore.label "&quot;Session Store&quot;&amp;&quot;Recently Closed Tabs&quot;">
-<!ENTITY browser.tabs.sessionStore.enabled.label "Enables &browser.tabs.sessionStore.label; (Firefox3.0.x)">
-<!ENTITY browser.tabs.sessionStore.interval.label "Save sessions at intervals of">
-<!ENTITY browser.tabs.sessionStore.max_tabs_undo.label "Number of tab closures to remember :">
-<!ENTITY browser.tabs.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
-<!ENTITY browser.tabs.sessionStore.privacy_level.label "Store extra session data :">
-<!ENTITY browser.tabs.sessionStore.privacy_level.any.label "for any site">
-<!ENTITY browser.tabs.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
-<!ENTITY browser.tabs.sessionStore.privacy_level.never.label "Never">
+<!ENTITY browser.sessionStore.label "Session Store">
+<!ENTITY browser.sessionStore.disabled.label "Disable &browser.sessionStore.label;">
+<!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
+<!ENTITY browser.sessionStore.max_undo.label "Number of window/tab closures to remember for later possible restoration">
+<!ENTITY browser.sessionStore.max_undo.windows.label "Number of window closures :">
+<!ENTITY browser.sessionStore.max_undo.tabs.label "Number of tab closures :">
+<!ENTITY browser.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
+<!ENTITY browser.sessionStore.privacy_level.label "Store extra session data :">
+<!ENTITY browser.sessionStore.privacy_level.any.label "for any site">
+<!ENTITY browser.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
+<!ENTITY browser.sessionStore.privacy_level.never.label "Never">
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab &amp; location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
@@ -222,7 +224,7 @@
 <!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE.">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ...">
-<!ENTITY security.ssl.ssl_domain_display.none.label "favicon only (Default)">
+<!ENTITY security.ssl.ssl_domain_display.none.label "favicon only">
 <!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD (effective top-level domain) along with the second-level domain (e.g., mozilla.org)">
 <!ENTITY security.ssl.ssl_domain_display.full.label "the full domain (e.g., addons.mozilla.org)">
 <!ENTITY security.ssl.ssl_domain_display.desc "When the site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to .">

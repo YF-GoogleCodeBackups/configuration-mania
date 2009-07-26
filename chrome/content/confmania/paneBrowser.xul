@@ -302,8 +302,9 @@ var gPrefBrowser = {
   <preference id="browser.tabs.loadBookmarksInBackground" name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.loadDivertedInBackground" name="browser.tabs.loadDivertedInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
-  <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool"/>
+  <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool" inverted="true"/>
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
+  <preference id="browser.sessionstore.max_windows_undo" name="browser.sessionstore.max_windows_undo" type="int"/>
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
   <preference id="browser.sessionstore.resume_from_crash" name="browser.sessionstore.resume_from_crash" type="bool"/>
   <preference id="browser.sessionstore.privacy_level" name="browser.sessionstore.privacy_level" type="int"/>
@@ -486,28 +487,37 @@ var gPrefBrowser = {
   <checkbox label="&browser.tabs.loadBookmarksInBackground.label;" preference="browser.tabs.loadBookmarksInBackground"/>
   <checkbox label="&browser.tabs.loadDivertedInBackground.label;" preference="browser.tabs.loadDivertedInBackground"/>
   <checkbox label="&browser.tabs.selectOwnerOnClose.label;" preference="browser.tabs.selectOwnerOnClose"/>
-
+</expander>
+<expander id="sessionstore" label="&browser.sessionStore.label;" open="false" clearhidden="true">
+  <checkbox id="sessionStore-Disabled" preference="browser.sessionstore.enabled" label="&browser.sessionStore.disabled.label;"/>
+  <hbox align="center" id="sessionStore-Interval-pane">
+    <label value="&browser.sessionStore.interval.label;" control="sessionStore-Interval"/>
+    <textbox id="sessionStore-Interval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>
+    <label value="&miliseconds;"/>
+  </hbox>
   <groupbox>
-    <caption label="&browser.tabs.sessionStore.label;"/>
-    <checkbox id="tabs-sessionEnabled" preference="browser.sessionstore.enabled" label="&browser.tabs.sessionStore.enabled.label;"/>
-    <hbox align="center" id="tabs-sessionInterval-pane">
-      <label value="&browser.tabs.sessionStore.interval.label;" control="tabs-sessionInterval"/>
-      <textbox id="tabs-sessionInterval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>
-      <label value="&miliseconds;"/>
-    </hbox>
-    <hbox align="center" id="tabs-sessionMaxUndo-pane">
-      <label value="&browser.tabs.sessionStore.max_tabs_undo.label;" control="tabs-sessionMaxUndo"/>
-      <textbox id="tabs-sessionMaxUndo" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.max_tabs_undo" size="4"/>
-    </hbox>
-    <checkbox preference="browser.sessionstore.resume_from_crash" label="&browser.tabs.sessionStore.resume_from_crash.label;"/>
-    <groupbox>
-      <caption label="&browser.tabs.sessionStore.privacy_level.label;"/>
-      <radiogroup preference="browser.sessionstore.privacy_level">
-        <radio value="0" label="&browser.tabs.sessionStore.privacy_level.any.label;"/>
-        <radio value="1" label="&browser.tabs.sessionStore.privacy_level.unenc.label;"/>
-        <radio value="2" label="&browser.tabs.sessionStore.privacy_level.never.label;"/>
-      </radiogroup>
-    </groupbox>
+    <caption label="&browser.sessionStore.max_undo.label;"/>
+    <grid id="sessionStore-MaxUndo-pane">
+      <columns><column/><column/></columns>
+      <rows><row align="center">
+        <label value="&browser.sessionStore.max_undo.windows.label;" control="sessionStore-MaxWindowsUndo"/>
+        <textbox id="sessionStore-MaxWindowsUndo" type="number"
+         hidespinbuttons="true" min="1" preference="browser.sessionstore.max_windows_undo" size="3"/>
+      </row><row align="center">
+        <label value="&browser.sessionStore.max_undo.tabs.label;" control="sessionStore-MaxTabsUndo"/>
+        <textbox id="sessionStore-MaxTabsUndo" type="number"
+         hidespinbuttons="true" min="1" preference="browser.sessionstore.max_tabs_undo" size="3"/>
+      </row></rows>
+    </grid>
+  </groupbox>
+  <checkbox preference="browser.sessionstore.resume_from_crash" label="&browser.sessionStore.resume_from_crash.label;"/>
+  <groupbox>
+    <caption label="&browser.sessionStore.privacy_level.label;"/>
+    <radiogroup preference="browser.sessionstore.privacy_level">
+      <radio value="0" label="&browser.sessionStore.privacy_level.any.label;"/>
+      <radio value="1" label="&browser.sessionStore.privacy_level.unenc.label;"/>
+      <radio value="2" label="&browser.sessionStore.privacy_level.never.label;"/>
+    </radiogroup>
   </groupbox>
 </expander>
 <expander id="bookmarkicon" label="&browser.bookmarkicon.label;" open="false" clearhidden="true">
