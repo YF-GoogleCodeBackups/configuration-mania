@@ -613,7 +613,7 @@ var gPrefBrowser = {
 
   <hbox align="center">
     <label value="&browser.ua.text.label;" control="ua-value"/>
-    <textbox id="ua-value" class="indent" flex="1" preference="general.useragent.override"/>
+    <textbox id="ua-value" flex="1" preference="general.useragent.override"/>
   </hbox>
   <hbox align="center" pack="end">
     <button type="menu" label="&browser.ua.presets.label;"
