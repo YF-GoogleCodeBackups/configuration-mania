@@ -55,7 +55,7 @@ var gPrefBrowser = {
       var dirSvc = Components.classes["@mozilla.org/file/directory_service;1"]
        .getService(Components.interfaces.nsIProperties);
       var cachedir = dirSvc.get((dirSvc.has("ProfLD"))? "ProfLD" : "ProfD", Components.interfaces.nsILocalFile);
-      document.getElementById("browserCacheDiskCacheFolder").setAttribute("emptytext", cachedir.path);
+      document.getElementById("browserCacheDiskCacheFolder").emptyText = cachedir.path;
     } catch(ex){}
 
     /* Firefox 3.0.x does not support type=search textbox */
@@ -72,20 +72,57 @@ var gPrefBrowser = {
     gPrefBrowser.updatePrefs();
   },
   initUA : function(){
-    var defUA = gPrefBrowser.getFirefoxUserAgent();
     var oUAValue = document.getElementById("ua-value");
-    oUAValue.setAttribute("emptytext", defUA);
+    oUAValue.emptyText = gPrefBrowser.getFirefoxUserAgent();
 
-    var fxPlatforms = { winvista: "Windows,Windows NT 6.0", winxp: "Windows,Windows NT 5.1",
-      mac: "Macintosh,Intel Mac OS X 10_5_4", macppc: "Macintosh,PPC Mac OS X 10_5_4",
-      linux: "X11,Linux i686", linuxx64: "X11,Linux x86_64"};
-    for (var i in fxPlatforms) {
-      var uastr = gPrefBrowser.getFirefoxUserAgent.apply(gPrefBrowser, fxPlatforms[i].split(","));
-      var oRadio = document.getElementById("ua-this-"+i);
-      oRadio.value = uastr;
-      if (uastr == defUA) oRadio.hidden = true;
-    }
-    initRadioGroupConnect2('ua-radiogr','ua-value',''); // HACK: fixed the bug that the selection is not saved but returns to "linux(x64)".
+    var req = new XMLHttpRequest();
+    req.open("GET", "useragent.xml", true);
+    req.onreadystatechange = function (event) {
+      if(req.readyState != 4) return;
+      var doc = req.responseXML;
+
+      var m = Components.classes['@mozilla.org/network/protocol;1?name=http']
+       .getService(Components.interfaces.nsIHttpProtocolHandler);
+      var presetpopup = document.getElementById("ua-presets-popup");
+      var menupopuptable = {"{opt:this}": document.getElementById("ua-presets-this-popup")};
+
+      const OS_PARAM_LANGUAGE        = /\{language\??\}/g;
+      const OPT_PARAM_GENERIC        = /\{opt:([a-zA-Z]+)\??\}/g;
+      const OPT_PARAM_DEFAULT        = /\{opt:default\}/g;
+      const OS_PARAM_OPTIONAL        = /\{\w+\?\}/g;
+      const UA_FIREFOX_DEFAULT = gPrefBrowser.getFirefoxUserAgent("{opt:platform}", "{opt:oscpu}", null);
+
+      Array.forEach(doc.getElementsByTagName("browser"), function(b) {
+        var name = b.getAttribute("name");
+        if (name != "{opt:this}") {
+          menupopuptable[name] = document.createElement("menupopup");
+          var oMenu = document.createElement("menu");
+          oMenu.setAttribute("label", name);
+          oMenu.appendChild(menupopuptable[name]);
+          presetpopup.appendChild(oMenu);
+        }
+      });
+      Array.forEach(doc.getElementsByTagName("option"), function(o) {
+        var b     = o.parentNode;
+        var bname = b.getAttribute("name");
+        var name  = o.getAttribute("name");
+        var value = o.getAttribute("value") || b.getAttribute("value");
+
+        value = value.replace(OPT_PARAM_DEFAULT, UA_FIREFOX_DEFAULT);
+        value = value.replace(OPT_PARAM_GENERIC, function(str, optattr) {
+          return o.getAttribute(optattr) || b.getAttribute(optattr) || "";
+        });
+        value = value.replace(OS_PARAM_LANGUAGE, m.language);
+        value = value.replace(OS_PARAM_OPTIONAL, "");
+
+        var oMenupopup = menupopuptable[bname];
+        var oMenuItem = document.createElement("menuitem");
+        oMenuItem.setAttribute("label", name);
+        oMenuItem.setAttribute("value", value);
+        oMenupopup.appendChild(oMenuItem);
+      });
+    };
+    req.send(null);
   },
   updatePrefs : function(){
     var disabled, box;
@@ -149,7 +186,8 @@ var gPrefBrowser = {
   },
   getFirefoxUserAgent : function(platform, oscpu, language){
     // cf. nsGlobalWindow.cpp#GetUserAgent
-    var m = Components.classes['@mozilla.org/network/protocol;1?name=http'].getService(Components.interfaces.nsIHttpProtocolHandler);
+    var m = Components.classes['@mozilla.org/network/protocol;1?name=http']
+      .getService(Components.interfaces.nsIHttpProtocolHandler);
     var pref = Components.classes['@mozilla.org/preferences;1'].getService(Components.interfaces.nsIPref);
     var prefBranch = Components.classes['@mozilla.org/preferences;1'].getService(Components.interfaces.nsIPrefBranch);
 
@@ -182,6 +220,12 @@ var gPrefBrowser = {
       userAgent += " "+prefBranch.getCharPref("general.useragent.extra."+list[i]);
     }
     return userAgent;
+  },
+  onUserAgentPresetCommanded : function(event) {
+    document.getElementById("ua-value").value = event.target.value;
+  },
+  resetUserAgent : function(){
+    document.getElementById("ua-value").reset();
   },
   onSpeedPaintReset : function(){
     var expander = document.getElementById("speed-paint");
@@ -566,48 +610,23 @@ var gPrefBrowser = {
 </expander>
 <expander id="ua" label="&browser.ua.label;" open="false" clearhidden="true">
   <description>&browser.ua.desc;</description>
-  <radiogroup flex="1" id="ua-radiogr">
-    <radio id="ua-default" label="&browser.ua.default.label;" value=""/>
 
-    <hbox align="center">
-      <label value="&browser.ua.this.label;"/>
-      <radio id="ua-this-winvista" label="&browser.ua.os.winvista;"/>
-      <radio id="ua-this-winxp" label="&browser.ua.os.winxp;"/>
-      <radio id="ua-this-mac" label="&browser.ua.os.mac;"/>
-      <radio id="ua-this-macppc" label="&browser.ua.os.macppc;"/>
-      <radio id="ua-this-linux" label="&browser.ua.os.linux;"/>
-      <radio id="ua-this-linuxx64" label="&browser.ua.os.linuxx64;"/>
-    </hbox>
-    <hbox align="center">
-      <label value="&browser.ua.ie6.label;"/>
-      <radio label="&browser.ua.os.winxpsp2;" value="&browser.ua.ie6.winxpsp2.value;"/>
-    </hbox>
-    <hbox align="center">
-      <label value="&browser.ua.ie7.label;"/>
-      <radio label="&browser.ua.os.winvistasp1;" value="&browser.ua.ie7.winvistasp1.value;"/>
-      <radio label="&browser.ua.os.winvistasp1WOW64;" value="&browser.ua.ie7.winvistasp1WOW64.value;"/>
-    </hbox>
-    <hbox align="center">
-      <label value="&browser.ua.safari.label;"/>
-      <radio label="&browser.ua.os.mac;" value="&browser.ua.safari.mac.value;"/>
-      <radio label="&browser.ua.os.macppc;" value="&browser.ua.safari.macppc.value;"/>
-      <radio label="&browser.ua.os.winxp;" value="&browser.ua.safari.winxp.value;"/>
-      <radio label="&browser.ua.os.iphone;" value="&browser.ua.safari.iphone.value;"/>
-    </hbox>
-    <hbox align="center">
-      <label value="&browser.ua.opera.label;"/>
-      <radio label="&browser.ua.os.winxp;" value="&browser.ua.opera.winxp.value;"/>
-      <radio label="&browser.ua.os.winvista;" value="&browser.ua.opera.winvista.value;"/>
-      <radio label="&browser.ua.os.mac;" value="&browser.ua.opera.mac.value;"/>
-      <radio label="&browser.ua.os.linux;" value="&browser.ua.opera.linux.value;"/>
-    </hbox>
-    <radio id="ua-googlebot" label="&browser.ua.googlebot.label;" value="&browser.ua.googlebot.value;"/>
-    <hbox align="center">
-      <radio id="ua-manual" label="&browser.ua.manual.label;" value="*"/>
-      <textbox id="ua-value" flex="1" preference="general.useragent.override"
-       onsyncfrompreference="return initRadioGroupConnect2('ua-radiogr','ua-value','');"/>
-    </hbox>
-  </radiogroup>
+  <hbox align="center">
+    <label value="&browser.ua.text.label;" control="ua-value"/>
+    <textbox id="ua-value" class="indent" flex="1" preference="general.useragent.override"/>
+  </hbox>
+  <hbox align="center" pack="end">
+    <button type="menu" label="&browser.ua.presets.label;"
+     oncommand="gPrefBrowser.onUserAgentPresetCommanded(event);">
+      <menupopup id="ua-presets-popup">
+        <menu label="&browser.ua.presets.this.label;">
+          <menupopup id="ua-presets-this-popup"/>
+        </menu>
+        <menuseparator/>
+      </menupopup>
+    </button>
+    <button label="&reset;" oncommand="gPrefBrowser.resetUserAgent();"/>
+  </hbox>
 </expander>
 <expander id="speed-paint" label="&browser.speed-paint.label;" open="false" clearhidden="true">
   <hbox align="center">
