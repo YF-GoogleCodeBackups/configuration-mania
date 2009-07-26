@@ -68,7 +68,7 @@
 <!ENTITY browser.sessionStore.label "Session Store">
 <!ENTITY browser.sessionStore.disabled.label "Disable &browser.sessionStore.label;">
 <!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
-<!ENTITY browser.sessionStore.max_undo.label "Number of window/tab closures to remember for later possible restoration">
+<!ENTITY browser.sessionStore.max_undo.label "Number of closures to remember for restoration">
 <!ENTITY browser.sessionStore.max_undo.windows.label "Number of window closures :">
 <!ENTITY browser.sessionStore.max_undo.tabs.label "Number of tab closures :">
 <!ENTITY browser.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
