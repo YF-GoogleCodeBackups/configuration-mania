@@ -20,12 +20,10 @@
 <!ENTITY browser.urlbar.label "Location Bar">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when clicked">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when double-clicked">
-<!ENTITY browser.urlbar.autoComplete.label "URL Autocomplete">
+<!ENTITY browser.urlbar.autoComplete.label "Disable autocomplete">
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
-<!ENTITY browser.urlbar.autoComplete.matchOnlyTyped.label "Match only websites you've typed previously">
-<!ENTITY browser.urlbar.richResults.label "Dropdown with richlistbox">
-<!ENTITY browser.urlbar.richResults.maxRichResults.label "Maximum number of entries">
-<!ENTITY browser.urlbar.richResults.filterJavaScript.label "Filter out bookmarklet (&#34;javascript:&#34; URLs)">
+<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Filter out bookmarklet (&#34;javascript:&#34; URLs)">
+<!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maximum number of entries">
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowBlink.label "Allow blinking text">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">

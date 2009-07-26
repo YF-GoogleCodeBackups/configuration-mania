@@ -20,12 +20,10 @@
 <!ENTITY browser.urlbar.label "ロケーションバー">
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
-<!ENTITY browser.urlbar.autoComplete.label "URLの自動補完">
+<!ENTITY browser.urlbar.autoComplete.label "自動補完を無効にする">
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "ロケーションバーに入力したURLを自動的に補完">
-<!ENTITY browser.urlbar.autoComplete.matchOnlyTyped.label "以前に入力した Web サイトにのみ一致するリストを表示">
-<!ENTITY browser.urlbar.richResults.label "リッチ表示のドロップダウン">
-<!ENTITY browser.urlbar.richResults.maxRichResults.label "最大表示項目数">
-<!ENTITY browser.urlbar.richResults.filterJavaScript.label "&#34;javascript:&#34;のアドレス（ブックマークレット）を表示しない">
+<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "&#34;javascript:&#34;のアドレス（ブックマークレット）を表示しない">
+<!ENTITY browser.urlbar.autoComplete.maxRichResults.label "最大表示項目数">
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowBlink.label "点滅テキストを有効にする">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
