@@ -228,10 +228,12 @@ var gPrefBrowser = {
     return userAgent;
   },
   onUserAgentPresetCommanded : function(event) {
-    document.getElementById("ua-value").value = event.target.value;
+    var mData = document.getElementById("ua-value");
+    mData.value = event.target.value;
+    document.documentElement.currentPane.userChangedValue(mData);
   },
   resetUserAgent : function(){
-    document.getElementById("ua-value").reset();
+    document.getElementById("general.useragent.override").reset();
   },
   onSpeedPaintReset : function(){
     var expander = document.getElementById("speed-paint");
