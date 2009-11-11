@@ -65,6 +65,8 @@
 <!ENTITY browser.tabs.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
 <!ENTITY browser.tabs.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that openedit">
+<!ENTITY browser.tabs.allTabsPreview.label "Enable thumbnail preview of all tabs (Firefox3.6+)">
+<!ENTITY browser.tabs.ctrlTabsPreview.label "Enable thumbnail preview on Ctrl+TAB (Firefox3.6+)">
 <!ENTITY browser.sessionStore.label "Session Store">
 <!ENTITY browser.sessionStore.disabled.label "Disable &browser.sessionStore.label;">
 <!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
