@@ -23,7 +23,7 @@
 <em:name>Configuration Mania?</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>http://toolbarpalette.comyr.com/confmania/</em:homepageURL>
+<em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL>
 <!--em:updateURL>http://toolbarpalette.comyr.com/extension-updates.rdf</em:updateURL-->
 <em:optionsURL>chrome://confmania/content/preferences.xul</em:optionsURL>
 
@@ -32,12 +32,14 @@
 <em:name>Configuration Mania</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
+<em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>ja</em:locale>
 <em:name>Configuration Mania</em:name>
 <em:description>様々な隠し設定を変更するためのパネル</em:description>
 <em:creator>Popoki Tom</em:creator>
+<em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL>
 </Description></em:localized>
 
 </Description>
