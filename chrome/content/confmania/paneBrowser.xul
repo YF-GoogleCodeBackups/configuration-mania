@@ -647,7 +647,6 @@ var gPrefBrowser = {
      onsyncfrompreference="return gPrefBrowser.syncFrom(this, 250);"/>
     <label value="&miliseconds;"/>
   </hbox>
-  <description class="indent">&browser.speed-paint.delay.desc;</description>
   <label value="&browser.speed-paint.notify-backoffcount.label;"/>
   <radiogroup id="speed-notify-backoffcount-gr" class="indent" orient="horizontal" align="center">
     <radio value="-1" label="&browser.speed-paint.notify-backoffcount.never;"/>
@@ -662,15 +661,10 @@ var gPrefBrowser = {
      onsyncfrompreference="return gPrefBrowser.syncFrom(this, 120000);"/>
     <label value="&microseconds;"/>
   </hbox>
-  <description class="indent" align="center">
-    &browser.speed-paint.notify-interval.desc1;
-    <html:a href="javascript:gPrefBrowser.synchNotifyInterval();">&browser.speed-paint.notify-interval.synch.label;</html:a>
-    &browser.speed-paint.notify-interval.desc2;
-  </description>
   <checkbox preference="content.interrupt.parsing" id="speed-interrupt-parsing"
    oncommand="gPrefBrowser.updatePrefs();"
    label="&browser.speed-paint.content-interrupt.label;"/>
-  <description class="indent">&browser.speed-paint.content-interrupt.desc;</description>
+  <label class="indent" value="&browser.speed-paint.content-interrupt.desc;" />
   <vbox class="indent">
     <hbox align="center" id="speed-interrupt-parsing-hbox">
       <label value="&browser.speed-paint.content-max-tokenizing-time.label;" control="speed-max-tokenizing-time"/>
@@ -678,7 +672,7 @@ var gPrefBrowser = {
        size="8" onsyncfrompreference="return document.getElementById('content.max.tokenizing.time').value || (parseInt(document.getElementById('speed-notify-interval').value) * 3);"/>
       <label value="&microseconds;"/>
     </hbox>
-    <description class="indent">&browser.speed-paint.content-max-tokenizing-time.desc;</description>
+    <label class="indent" value="&browser.speed-paint.content-max-tokenizing-time.desc;" />
   </vbox>
   <hbox align="center">
     <label value="&browser.speed-paint.content-switch-threshold.label;" control="speed-switch-threshold"/>

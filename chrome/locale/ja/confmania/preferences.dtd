@@ -102,18 +102,13 @@
 <!ENTITY browser.speed-paint.desc "警告: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることによって、動作が遅くあるいは重くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
 <!ENTITY browser.speed-paint.label "描画/レンダリング">
 <!ENTITY browser.speed-paint.delay.label "初期描画待機時間">
-<!ENTITY browser.speed-paint.delay.desc "推奨値 - ISDN:200-600ms, ADSL:0-300ms, 高速回線:0ms; 標準:250ms">
 <!ENTITY browser.speed-paint.notify-backoffcount.label "初期レンダリングの待機時間の閾値">
 <!ENTITY browser.speed-paint.notify-backoffcount.never "制限しない">
 <!ENTITY browser.speed-paint.notify-interval.label "初期レンダリングの間隔">
-<!ENTITY browser.speed-paint.notify-interval.desc "推奨値 - 高速: &quot;&browser.speed-paint.delay.label;&quot; と同期(単位の差に注意); 標準: 120000">
-<!ENTITY browser.speed-paint.notify-interval.desc1 "推奨値 - 高速: ">
-<!ENTITY browser.speed-paint.notify-interval.synch.label "&quot;&browser.speed-paint.delay.label;&quot; と同期">
-<!ENTITY browser.speed-paint.notify-interval.desc2 "(単位の差に注意); 標準: 120000">
 <!ENTITY browser.speed-paint.content-interrupt.label "パースを中断せずに続ける (通常、チェックしないでください)">
-<!ENTITY browser.speed-paint.content-interrupt.desc "パース終了まで&brandShortName;が応答しない原因になり得ます。">
+<!ENTITY browser.speed-paint.content-interrupt.desc "注意: パース終了まで&brandShortName;が応答しない原因になり得ます。">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.label "その処理を中止するまでの最大時間">
-<!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "推奨値 - 高速: &quot;&browser.speed-paint.notify-interval.label;&quot;の半値, 標準:3&#x00d7;&quot;&browser.speed-paint.notify-interval.label;&quot;; 注意: 0 にしてはいけません。">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "注意: 0 にしてはいけません。">
 <!ENTITY browser.speed-paint.content-switch-threshold.label "High→Low frequency interrupt mode 切替待機時間閾値">
 <!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode はインターフェースの反応を速くするために、ページの読み込み処理を遅くします。; 標準: 750000 則ち 3/4 ミリ秒">
 <!ENTITY browser.speed-cache.label "ブラウザのキャッシュ">
@@ -126,7 +121,7 @@
 <!ENTITY browser.speed-cache.check.auto.label "更新されたら (推奨)">
 <!ENTITY browser.speed-cache.memory_capability.label "使用容量">
 <!ENTITY browser.speed-cache.trim_on_minimize.label "&brandShortName;の最小化時にメモリの内容をスワップアウトする (Windowsのみ)">
-<!ENTITY browser.speed-cache.disk_cache_ssl.label "SSL 通信の分もキャッシュに貯める (セキュリティ上危険)">
+<!ENTITY browser.speed-cache.disk_cache_ssl.label "SSL 通信の分もキャッシュに貯める (セキュリティリスク有り)">
 <!ENTITY browser.speed-cache.prefetch-next.label "リンク先読み (prefetch) 機構を有効にする">
 <!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "注意: この値を増やすと、戻る/進むのパフォーマンスが向上します。しかし、タブを多く開いている時などに&brandShortName;がより多くのメモリを消費するようになります。つまりトレードオフが存在します。">

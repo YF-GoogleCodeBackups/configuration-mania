@@ -218,7 +218,7 @@ var gPrefSecurity = {
 
   <textbox hidden="true" id="popupwin-popup_allowed_events" preference="dom.popup_allowed_events" onsyncfrompreference="gPrefSecurity.syncPopupwin()"/>
   <label value="&security.popupwin.event.label;" control="popupwin-e"/>
-  <listbox class="indent" id="popupwin-e" rows="6" onclick="gPrefSecurity.updatePopupwin();" onkeypress="gPrefSecurity.updatePopupwin();">
+  <listbox class="indent" id="popupwin-e" rows="5" onclick="gPrefSecurity.updatePopupwin();" onkeypress="gPrefSecurity.updatePopupwin();">
     <listitem type="checkbox" id="popupwin-e-reset" label="&security.popupwin.event.reset.label;"/>
     <listitem type="checkbox" id="popupwin-e-submit" label="&security.popupwin.event.submit.label;"/>
     <listitem type="checkbox" id="popupwin-e-select" label="&security.popupwin.event.select.label;"/>
