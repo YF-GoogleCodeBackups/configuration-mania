@@ -39,19 +39,18 @@
 <!ENTITY browser.html.img.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
 <!ENTITY browser.html.color_management_enabled.label "カラーマネージメント(CMS)を有効に(再起動必要)">
 <!ENTITY browser.html.color_management.label "カラーマネージメント(CMS) (再起動必要)">
-<!ENTITY browser.html.color_management.enabled.label "CMSを有効にする (Firefox3.0.x)">
-<!ENTITY browser.html.color_management.mode.label "モード (Firefox3.5以降)">
+<!ENTITY browser.html.color_management.mode.label "モード">
 <!ENTITY browser.html.color_management.mode.off.label "CMS無効">
 <!ENTITY browser.html.color_management.mode.on.label "有効にする">
 <!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
-<!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする (Firefox3.5以降)">
+<!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
 <!ENTITY browser.html.focus.enabled.label "フォーカスされたオブジェクトをハイライト表示する">
 <!ENTITY browser.html.focus.bg.label "背景色">
 <!ENTITY browser.html.focus.fg.label "文字色">
 <!ENTITY browser.tabs.label "タブブラウジング">
-<!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる (Firefox3.5以降)">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
 <!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所">
 <!ENTITY browser.tabs.closeButtons.active.label "アクティブなタブのみ表示">
 <!ENTITY browser.tabs.closeButtons.all.label "全てのタブに表示 (標準)">
@@ -276,7 +275,7 @@
 <!ENTITY ui.mousewheel.history.label "ブラウズの履歴を戻るまたは進む">
 <!ENTITY ui.mousewheel.textsize.label "文字サイズを大きくしたり小さくしたりする">
 <!ENTITY ui.multitouch.label "マルチタッチ">
-<!ENTITY ui.multitouch.gestures.label "マルチタッチ・ジェスチャー (Firefox3.5+)">
+<!ENTITY ui.multitouch.gestures.label "マルチタッチ・ジェスチャー">
 <!ENTITY ui.multitouch.gestures.pinch.in.label "ピンチイン">
 <!ENTITY ui.multitouch.gestures.pinch.in.shift.label "ピンチイン+シフトキー">
 <!ENTITY ui.multitouch.gestures.pinch.out.label "ピンチアウト">
@@ -363,7 +362,7 @@
 <!ENTITY debug.debug.jsstrict.label "JavaScript の厳密なエラーを出力する">
 <!ENTITY debug.debug.chromeerr.label "クロム (chrome) の JavaScript エラー/警告も表示する">
 <!ENTITY debug.debug.csserr.label "スタイルシートの解析エラーも表示する">
-<!ENTITY debug.tracemonkey.label "JavaScriptのJITコンパイラ(TraceMonkey)を有効に: (Firefox3.5以降)">
+<!ENTITY debug.tracemonkey.label "JavaScriptのJITコンパイラ(TraceMonkey)を有効に:">
 <!ENTITY debug.tracemonkey.content.label "ウェブ上">
 <!ENTITY debug.tracemonkey.chrome.label "クロム (chrome) ">
 <!ENTITY debug.cache.label "キャッシュ">

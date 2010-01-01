@@ -38,19 +38,18 @@
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
 <!ENTITY browser.html.color_management.label "Color Management (CMS) (takes effect after restart)">
-<!ENTITY browser.html.color_management.enabled.label "Enable CMS (Firefox3.0.x)">
-<!ENTITY browser.html.color_management.mode.label "Mode (Firefox3.5+)">
+<!ENTITY browser.html.color_management.mode.label "Mode">
 <!ENTITY browser.html.color_management.mode.off.label "Disable CMS">
 <!ENTITY browser.html.color_management.mode.on.label "Enable for rendered graphics">
 <!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
-<!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts (Firefox3.5+)">
+<!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
 <!ENTITY browser.html.focus.bg.label "Background Color">
 <!ENTITY browser.html.focus.fg.label "Text Color">
 <!ENTITY browser.tabs.label "TabBrowsing">
-<!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab (Firefox3.5+)">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab">
 <!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
 <!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
 <!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">
@@ -275,7 +274,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.mousewheel.history.label "Move back and forward in the browsing history">
 <!ENTITY ui.mousewheel.textsize.label "Make the text larger or smaller">
 <!ENTITY ui.multitouch.label "Multi-Touch">
-<!ENTITY ui.multitouch.gestures.label "Multi-Touch Gestures (Firefox 3.5+)">
+<!ENTITY ui.multitouch.gestures.label "Multi-Touch Gestures">
 <!ENTITY ui.multitouch.gestures.pinch.in.label "Pinch-in">
 <!ENTITY ui.multitouch.gestures.pinch.in.shift.label "Pinch-in with shift">
 <!ENTITY ui.multitouch.gestures.pinch.out.label "Pinch-out">
@@ -362,7 +361,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
-<!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript ... (Firefox3.5+)">
+<!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript ...">
 <!ENTITY debug.tracemonkey.content.label "on the web">
 <!ENTITY debug.tracemonkey.chrome.label "on chrome">
 <!ENTITY debug.cache.label "Cache">

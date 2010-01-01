@@ -483,8 +483,6 @@ var gPrefBrowser = {
   </groupbox>
   <groupbox>
     <caption label="&browser.html.color_management.label;"/>
-    <checkbox label="&browser.html.color_management.enabled.label;"
-     preference="gfx.color_management.enabled"/>
     <hbox align="center">
       <label control="color_management_mode" value="&browser.html.color_management.mode.label;"/>
       <menulist id="color_management_mode" preference="gfx.color_management.mode"><menupopup>
