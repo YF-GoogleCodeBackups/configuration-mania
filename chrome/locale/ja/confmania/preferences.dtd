@@ -67,7 +67,7 @@
 <!ENTITY browser.tabs.loadDivertedInBackground.label "外部アプリやリンクなどに新しいタブが開かれたとき、すぐにそのタブに切り替える">
 <!ENTITY browser.tabs.selectOwnerOnClose.label "タブを閉じたら、そのタブを開いたタブをアクティブにする">
 <!ENTITY browser.tabs.allTabsPreview.label "タブ一覧をサムネール表示する(Firefox3.6以降)">
-<!ENTITY browser.tabs.ctrlTabsPreview.label "Ctrl+TABをサムネール表示する(Firefox3.6以降)">
+<!ENTITY browser.tabs.ctrlTabPreview.label "Ctrl+TABをサムネール表示する(Firefox3.6以降)">
 <!ENTITY browser.sessionStore.label "セッションストア">
 <!ENTITY browser.sessionStore.disabled.label "&browser.sessionStore.label;を無効にする">
 <!ENTITY browser.sessionStore.interval.label "セッション状態を保存する時間間隔">

@@ -355,7 +355,7 @@ var gPrefBrowser = {
   <preference id="browser.tabs.loadDivertedInBackground" name="browser.tabs.loadDivertedInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
   <preference id="browser.allTabs.previews" name="browser.allTabs.previews" type="bool"/>
-  <preference id="browser.ctrlTabs.previews" name="browser.ctrlTabs.previews" type="bool"/>
+  <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
 
   <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool" inverted="true"/>
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
@@ -540,7 +540,7 @@ var gPrefBrowser = {
   <checkbox label="&browser.tabs.loadDivertedInBackground.label;" preference="browser.tabs.loadDivertedInBackground"/>
   <checkbox label="&browser.tabs.selectOwnerOnClose.label;" preference="browser.tabs.selectOwnerOnClose"/>
   <checkbox label="&browser.tabs.allTabsPreview.label;" preference="browser.allTabs.previews"/>
-  <checkbox label="&browser.tabs.ctrlTabsPreview.label;" preference="browser.ctrlTabs.previews"/>
+  <checkbox label="&browser.tabs.ctrlTabPreview.label;" preference="browser.ctrlTab.previews"/>
 </expander>
 <expander id="sessionstore" label="&browser.sessionStore.label;" open="false" clearhidden="true">
   <checkbox id="sessionStore-Disabled" preference="browser.sessionstore.enabled" label="&browser.sessionStore.disabled.label;"/>
