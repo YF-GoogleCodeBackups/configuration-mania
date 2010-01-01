@@ -133,6 +133,8 @@ var gPrefSecurity = {
   <preference id="network.http.sendRefererHeader" name="network.http.sendRefererHeader" type="int"/>
   <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
 
+  <preference id="browser.history_expire_days" name="browser.history_expire_days" type="int"/>
+  <preference id="browser.history_expire_sites" name="browser.history_expire_sites" type="int"/>
   <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
   <preference id="network.cookie.lifetime.days" name="network.cookie.lifetime.days" type="int"/>
   <preference id="security.ask_for_password" name="security.ask_for_password" type="int"/>
@@ -288,6 +290,27 @@ var gPrefSecurity = {
 
 </tabpanel>
 <tabpanel orient="vertical">
+<groupbox>
+  <caption label="&security.privacy.history.label;"/>
+    <hbox align="center">
+      <label value="&security.privacy.history.expireDays1.label;"
+             control="histDay"/>
+      <textbox id="histDay"
+               type="number"
+               size="4"
+               preference="browser.history_expire_days"/>
+      <label value="&security.privacy.history.expireDays2.label;"/>
+    </hbox>
+    <hbox align="center">
+      <label value="&security.privacy.history.expireSites1.label;"
+             control="histSites"/>
+      <textbox id="histSites"
+               type="number"
+               size="6"
+               preference="browser.history_expire_sites"/>
+      <label value="&security.privacy.history.expireSites2.label;"/>
+    </hbox>
+</groupbox>
 <groupbox>
   <caption label="&security.privacy.cookie.label;"/>
   <hbox align="center">

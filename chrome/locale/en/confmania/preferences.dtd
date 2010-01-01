@@ -215,8 +215,13 @@
 <!ENTITY security.net.referer.secureXSite.label "Send the Referrer header when navigating from a https site to another https site">
 <!ENTITY security.net.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https server to a non-secure server.">
 <!ENTITY security.privacy.label "Privacy">
+<!ENTITY security.privacy.history.label "Browsing History">
+<!ENTITY security.privacy.history.expireDays1.label  "Remember visited pages for up to">
+<!ENTITY security.privacy.history.expireDays2.label  "days">
+<!ENTITY security.privacy.history.expireSites1.label "Remember up to">
+<!ENTITY security.privacy.history.expireSites2.label "visited pages">
 <!ENTITY security.privacy.cookie.label "Cookie">
-<!ENTITY security.privacy.cookie.lifetimedays.label "Force to Delete cookies after">
+<!ENTITY security.privacy.cookie.lifetimedays.label "Accept cookies for">
 <!ENTITY security.privacy.passwd.label "Master Password">
 <!ENTITY security.privacy.passwd.managepassword.label "Master Password Timeout">
 <!ENTITY security.privacy.passwd.managepassword.text "&brandShortName; will ask for your master password:">

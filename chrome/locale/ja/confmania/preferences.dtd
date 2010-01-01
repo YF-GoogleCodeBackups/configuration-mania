@@ -217,8 +217,13 @@
 <!ENTITY security.net.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送る">
 <!ENTITY security.net.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Referrerは送られません">
 <!ENTITY security.privacy.label "プライバシー">
+<!ENTITY security.privacy.history.label "履歴">
+<!ENTITY security.privacy.history.expireDays1.label  "訪問したページを次の日数だけ記憶する:">
+<!ENTITY security.privacy.history.expireDays2.label  "日">
+<!ENTITY security.privacy.history.expireSites1.label "訪問したページを次の個数だけ記憶する:">
+<!ENTITY security.privacy.history.expireSites2.label "件">
 <!ENTITY security.privacy.cookie.label "Cookie">
-<!ENTITY security.privacy.cookie.lifetimedays.label "Cookieを強制削除するまでの日数 : ">
+<!ENTITY security.privacy.cookie.lifetimedays.label "有効期限を限定:">
 <!ENTITY security.privacy.passwd.label "マスターパスワード">
 <!ENTITY security.privacy.passwd.managepassword.label "マスターパスワードの期限">
 <!ENTITY security.privacy.passwd.managepassword.text "マスターパスワードが求められるとき:">
