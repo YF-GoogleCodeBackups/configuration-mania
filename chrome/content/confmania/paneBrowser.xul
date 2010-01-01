@@ -351,6 +351,7 @@ var gPrefBrowser = {
   <preference id="browser.tabs.tabMinWidth" name="browser.tabs.tabMinWidth" type="int"/>
   <preference id="browser.tabs.tabMaxWidth" name="browser.tabs.tabMaxWidth" type="int"/>
   <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
+  <preference id="browser.tabs.insertRelatedAfterCurrent" name="browser.tabs.insertRelatedAfterCurrent" type="bool"/>
   <preference id="browser.tabs.loadBookmarksInBackground" name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.loadDivertedInBackground" name="browser.tabs.loadDivertedInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
@@ -534,11 +535,18 @@ var gPrefBrowser = {
   </groupbox>
 
   <checkbox label="&browser.tabs.seachOpenintab.label;" preference="browser.search.openintab"/>
-  <checkbox label="&browser.tabs.loadBookmarksInBackground.label;" preference="browser.tabs.loadBookmarksInBackground"/>
-  <checkbox label="&browser.tabs.loadDivertedInBackground.label;" preference="browser.tabs.loadDivertedInBackground"/>
-  <checkbox label="&browser.tabs.selectOwnerOnClose.label;" preference="browser.tabs.selectOwnerOnClose"/>
-  <checkbox label="&browser.tabs.allTabsPreview.label;" preference="browser.allTabs.previews"/>
-  <checkbox label="&browser.tabs.ctrlTabPreview.label;" preference="browser.ctrlTab.previews"/>
+  <checkbox label="&browser.tabs.insertRelatedAfterCurrent.label;" preference="browser.tabs.insertRelatedAfterCurrent"/>
+  <groupbox>
+    <caption label="&browser.tabs.autoselect.label;"/>
+    <checkbox label="&browser.tabs.autoselect.loadBookmarksInBackground.label;" preference="browser.tabs.loadBookmarksInBackground"/>
+    <checkbox label="&browser.tabs.autoselect.loadDivertedInBackground.label;" preference="browser.tabs.loadDivertedInBackground"/>
+    <checkbox label="&browser.tabs.autoselect.selectOwnerOnClose.label;" preference="browser.tabs.selectOwnerOnClose"/>
+  </groupbox>
+  <groupbox orient="horizontal">
+    <caption label="&browser.tabs.tabpreview.label;"/>
+    <checkbox label="&browser.tabs.tabpreview.alltabs.label;" preference="browser.allTabs.previews"/>
+    <checkbox label="&browser.tabs.tabpreview.ctrltab.label;" preference="browser.ctrlTab.previews"/>
+  </groupbox>
 </expander>
 <expander id="sessionstore" label="&browser.sessionStore.label;" open="false" clearhidden="true">
   <checkbox id="sessionStore-Disabled" preference="browser.sessionstore.enabled" label="&browser.sessionStore.disabled.label;"/>

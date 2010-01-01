@@ -54,17 +54,20 @@
 <!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">
 <!ENTITY browser.tabs.closeButtons.no.label "Not any close button">
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
-<!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button (Default:140)">
+<!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
 <!ENTITY browser.tabs.disableBackgroundClose.label "Clicking on the close tab button of a tab in backgrund will switch to that tab, not close it">
 <!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width">
 <!ENTITY browser.tabs.tabWidth.min.label "Minimum">
 <!ENTITY browser.tabs.tabWidth.max.label "Maximum">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
-<!ENTITY browser.tabs.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
-<!ENTITY browser.tabs.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
-<!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that opened it">
-<!ENTITY browser.tabs.allTabsPreview.label "Enable thumbnail preview of all tabs (Firefox3.6+)">
-<!ENTITY browser.tabs.ctrlTabPreview.label "Enable thumbnail preview on Ctrl+TAB (Firefox3.6+)">
+<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tabs to the right of the current tab (Firefox 3.6+)">
+<!ENTITY browser.tabs.autoselect.label "Auto tab selection">
+<!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
+<!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
+<!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "When closed tab, Focus back to the tab that opened it">
+<!ENTITY browser.tabs.tabpreview.label "Enable thumbnail preview (Firefox3.6+)">
+<!ENTITY browser.tabs.tabpreview.alltabs.label "on the All tabs panel">
+<!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
 <!ENTITY browser.sessionStore.label "Session Store">
 <!ENTITY browser.sessionStore.disabled.label "Disable &browser.sessionStore.label;">
 <!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
