@@ -42,6 +42,8 @@
 <!ENTITY browser.html.color_management.mode.on.label "Enable for rendered graphics">
 <!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
+<!ENTITY browser.html.html5.label "Enable HTML 5 Parsing">
+<!ENTITY browser.html.enableSVG.label "Enable rendering SVG content">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
@@ -131,7 +133,6 @@
 <!ENTITY browser.others.label "Others">
 <!ENTITY browser.others.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">
-<!ENTITY browser.others.enableSVG.label "Enable rendering SVG content">
 <!ENTITY browser.others.errorPageDisabled.label "Annoy error dialog message, not display error-pages">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
