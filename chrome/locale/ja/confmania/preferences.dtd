@@ -1,6 +1,5 @@
 <!ENTITY prefWindow.title "Configuration Mania">
-<!ENTITY prefWindow.style "width:42em;">
-<!ENTITY prefWindow.defaultHeight "500">
+<!ENTITY prefWindow.style "width:50em; min-height: 40em;">
 <!ENTITY prefwindow.resetMessageTemplate "変更は失われます! 本当にこのタブ「__TABNAME__」の設定を標準に戻しますか?">
 <!ENTITY prefWindow.context.reset.label "標準の設定に戻す">
 <!ENTITY prefWindow.context.reset.accesskey "R">

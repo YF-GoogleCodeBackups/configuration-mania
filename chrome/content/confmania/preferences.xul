@@ -10,26 +10,19 @@
 ]>
 <prefwindow type="prefwindow" id="ConfmaniaPreferences"
  windowtype="Browser:Confmania"
+ onload="gPrefWindow.onLoad();"
  chromehidden="menubar location directories status extrachrome"
  buttonlabelextra1="&reset;" ondialogextra1="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"
  title="&prefWindow.title;" style="&prefWindow.style;"
- onload="gPrefWindow.onLoad(&prefWindow.defaultHeight;);"
  context="prefContextPopup"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <script src="&cm;/xconnect.js"/>
 <script src="chrome://global/content/contentAreaUtils.js"/>
 <script><![CDATA[
 var gPrefWindow = {
-  onLoad: function(height) {
-    var prefWin = document.documentElement;
-    if (!prefWin._shouldAnimate) {
-      window.setTimeout(function(){
-        window.resizeTo(window.innerWidth, height);
-      }, 0);
-    }
-    prefWin.getButton("extra1").hidden = false;
-
-    prefWin.addEventListener("contextmenu", gPrefWindow.onContextMenu, true);
+  onLoad: function(){
+    // Kill animation (on Mac); The animation cause the confmania dialog not to be visible entire.
+    document.documentElement.__defineGetter__("_shouldAnimate", function(){ return false; });
   },
   onResetSettings: function(event, msgtmpl){
     var currentPane = document.documentElement.currentPane;
