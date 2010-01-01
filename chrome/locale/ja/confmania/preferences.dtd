@@ -105,7 +105,7 @@
 <!ENTITY browser.speed-paint.notify-backoffcount.label "初期レンダリングの待機時間の閾値">
 <!ENTITY browser.speed-paint.notify-backoffcount.never "制限しない">
 <!ENTITY browser.speed-paint.notify-interval.label "初期レンダリングの間隔">
-<!ENTITY browser.speed-paint.content-interrupt.label "パースを中断せずに続ける (通常、チェックしないでください)">
+<!ENTITY browser.speed-paint.content-interrupt.label "パースを中断せずに続ける">
 <!ENTITY browser.speed-paint.content-interrupt.desc "注意: パース終了まで&brandShortName;が応答しない原因になり得ます。">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.label "その処理を中止するまでの最大時間">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "注意: 0 にしてはいけません。">
@@ -205,13 +205,13 @@
 <!ENTITY security.net.enableIDN.label "IDN (国際化ドメイン名) を有効にする">
 <!ENTITY security.net.show_punycode.label "IDN を punycode で表示する">
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
-<!ENTITY security.net.referer.label "Referer 要求ヘッダ">
+<!ENTITY security.net.referer.label "Referrer 要求ヘッダ">
 <!ENTITY security.net.referer.none.label "常に送らない (非推奨)">
-<!ENTITY security.net.referer.none.desc "警告: しばしば、Referer ヘッダが要求されることがあります。もしそのようなことがあった時には、この設定を&quot;&security.net.referer.link.label;&quot;及び&quot;&security.net.referer.all.label;&quot;に変更して下さい。">
+<!ENTITY security.net.referer.none.desc "警告: しばしば、Referrer ヘッダが要求されることがあります。もしそのようなことがあった時には、この設定を&quot;&security.net.referer.link.label;&quot;及び&quot;&security.net.referer.all.label;&quot;に変更して下さい。">
 <!ENTITY security.net.referer.link.label "リンクのクリック時のみ送る">
 <!ENTITY security.net.referer.all.label "画像要求も送る">
-<!ENTITY security.net.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referer を送る">
-<!ENTITY security.net.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Refererは送られません">
+<!ENTITY security.net.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送る">
+<!ENTITY security.net.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Referrerは送られません">
 <!ENTITY security.privacy.label "プライバシー">
 <!ENTITY security.privacy.cookie.label "Cookie">
 <!ENTITY security.privacy.cookie.lifetimedays.label "Cookieを強制削除するまでの日数 : ">

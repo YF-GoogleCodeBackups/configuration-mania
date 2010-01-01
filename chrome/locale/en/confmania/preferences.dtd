@@ -33,7 +33,7 @@
 <!ENTITY browser.html.img.anim.normal.label "Normal">
 <!ENTITY browser.html.img.anim.once.label "Once">
 <!ENTITY browser.html.img.anim.none.label "None (Stop)">
-<!ENTITY browser.html.img.resizing.label "Shlink to fit image">
+<!ENTITY browser.html.img.resizing.label "Shrink to fit image">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
 <!ENTITY browser.html.color_management.label "Color Management (CMS) (takes effect after restart)">
@@ -62,7 +62,7 @@
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
 <!ENTITY browser.tabs.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
 <!ENTITY browser.tabs.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
-<!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that openedit">
+<!ENTITY browser.tabs.selectOwnerOnClose.label "When closed tab, Focus back to the tab that opened it">
 <!ENTITY browser.tabs.allTabsPreview.label "Enable thumbnail preview of all tabs (Firefox3.6+)">
 <!ENTITY browser.tabs.ctrlTabPreview.label "Enable thumbnail preview on Ctrl+TAB (Firefox3.6+)">
 <!ENTITY browser.sessionStore.label "Session Store">
@@ -86,13 +86,13 @@
 <!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Pause but will not resume downloads automatically when &brandShortName; restarted">
 <!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
 <!ENTITY browser.download.showAlertOnComplete.label "Show alert on complete download">
-<!ENTITY browser.download.alerts.label "The Alerts configration">
+<!ENTITY browser.download.alerts.label "The Alerts configuration">
 <!ENTITY browser.download.alerts.totalOpenTime "Show alerts for">
 <!ENTITY browser.download.alerts.slide.label "Speed of alert slide-animation">
 <!ENTITY browser.download.alerts.slide.prefix.label "Move the alerts by">
 <!ENTITY browser.download.alerts.slide.per.label "pixels per">
 <!ENTITY browser.download.alerts.slide.settolight.label "Set light-weight conf.">
-<!ENTITY browser.ua.label "UserAgent">
+<!ENTITY browser.ua.label "User-Agent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.text.label "UA string :">
 <!ENTITY browser.ua.presets.label "Preset">
@@ -103,7 +103,7 @@
 <!ENTITY browser.speed-paint.notify-backoffcount.label "Max Number of timer-based reflows to perform">
 <!ENTITY browser.speed-paint.notify-backoffcount.never "No limit">
 <!ENTITY browser.speed-paint.notify-interval.label "Interval for the initial reflows">
-<!ENTITY browser.speed-paint.content-interrupt.label "Parsing cannot be interrupt (Disrecommend to check this)">
+<!ENTITY browser.speed-paint.content-interrupt.label "Parsing cannot be interrupt">
 <!ENTITY browser.speed-paint.content-interrupt.desc "Caution: &brandShortName; can be unresponsive until parsing is complete.">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.label "Maximum time to interrupt the process">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "Caution: Do not set 0.">
@@ -119,7 +119,7 @@
 <!ENTITY browser.speed-cache.memory_enable.label "Enable cache memory (Never disabled, usually)">
 <!ENTITY browser.speed-cache.memory_capability.label "Cache Memory">
 <!ENTITY browser.speed-cache.trim_on_minimize.label "Swap out memory when &brandShortName; is minimized (Windows Only)">
-<!ENTITY browser.speed-cache.disk_cache_ssl.label "Also store ssl-connection pages in the cache (INSECURE)">
+<!ENTITY browser.speed-cache.disk_cache_ssl.label "Also store SSL-connection pages in the cache (INSECURE)">
 <!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
 <!ENTITY browser.speed-cache.session-history-viewers.label "Max Number of pages stored in memory">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: This improves performance when pressing Back and Forward, If you have a lot of tabs, &brandShortName;'s memory usage can climb dramatically. It's a trade-off.">
@@ -144,8 +144,8 @@
 <!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable to close non-popup windows">
 <!ENTITY security.js.annoy.window_flip "Disable Raise and Lower windows">
 <!ENTITY security.js.annoy.window_move_resize "Disable Move and Resize existing windows">
-<!ENTITY security.js.annoy.status_change "Disable Chaging statusbar">
-<!ENTITY security.js.annoy.change_image "Disable Chaging images">
+<!ENTITY security.js.annoy.status_change "Disable Changing statusbar">
+<!ENTITY security.js.annoy.change_image "Disable Changing images">
 <!ENTITY security.js.annoy.change_image.desc "Caution: The setting &quot;&security.js.annoy.change_image;&quot; cause some web applications (such as Google Map) not to work.">
 <!ENTITY security.js.annoy.contextmenu "Disallow to dispatch contextmenu events">
 <!ENTITY security.js.annoy.dispatchLeftClickOnly "Allow to dispatch left click only">
@@ -203,13 +203,13 @@
 <!ENTITY security.net.enableIDN.label "Enable IDN(Internationalized Domain Names)">
 <!ENTITY security.net.show_punycode.label "Show IDN in punycode">
 <!ENTITY security.net.show_punycode.desc "It is usually no necessary to show IDN in punycode. Current &brandShortName; refuses an illegal IDN address by using the black/white list.">
-<!ENTITY security.net.referer.label "Referer request-header">
+<!ENTITY security.net.referer.label "Referrer request-header">
 <!ENTITY security.net.referer.none.label "Never Send (Not recommended)">
-<!ENTITY security.net.referer.none.desc "WARNING: Sending the Referer header may sometimes be required. If you experience with getting to some sites, this setting can be changed to &quot;&security.net.referer.link.label;&quot; or &quot;&security.net.referer.all.label;&quot;.">
+<!ENTITY security.net.referer.none.desc "WARNING: Sending the Referrer header may sometimes be required. If you experience with getting to some sites, this setting can be changed to &quot;&security.net.referer.link.label;&quot; or &quot;&security.net.referer.all.label;&quot;.">
 <!ENTITY security.net.referer.link.label "Send only on clicks">
 <!ENTITY security.net.referer.all.label "Send on image requests as well">
-<!ENTITY security.net.referer.secureXSite.label "Send the Referer header when navigating from a https site to another https site">
-<!ENTITY security.net.referer.secureXSite.desc "Regardless of this setting, Never send the Referer header when navigating from a https server to a non-secure server.">
+<!ENTITY security.net.referer.secureXSite.label "Send the Referrer header when navigating from a https site to another https site">
+<!ENTITY security.net.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https server to a non-secure server.">
 <!ENTITY security.privacy.label "Privacy">
 <!ENTITY security.privacy.cookie.label "Cookie">
 <!ENTITY security.privacy.cookie.lifetimedays.label "Force to Delete cookies after">
@@ -281,7 +281,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.find.findahead.timeout.label "Clear the current search after">
 <!ENTITY ui.find.findahead.timeout.label2 "[ms] of inactivity">
 <!ENTITY ui.find.findahead.sound.label "Play a sound when typed text isn't found (takes effect after restart)">
-<!ENTITY ui.keynav.label "Key Navi">
+<!ENTITY ui.keynav.label "Key Navigation">
 <!ENTITY ui.keynav.tabNavigationBehavior.label "Tab Focus Navigation">
 <!ENTITY ui.keynav.tabNavigationLinks.label "Links">
 <!ENTITY ui.keynav.tabNavigationLinks.accesskey "L">
