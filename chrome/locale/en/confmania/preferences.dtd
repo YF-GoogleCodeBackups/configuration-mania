@@ -29,8 +29,8 @@
 <!ENTITY browser.html.enableFrame.label "Enable frames">
 <!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
 <!ENTITY browser.html.img "Image">
-<!ENTITY browser.html.img.anim.label "Animated image : ">
-<!ENTITY browser.html.img.anim.normal.label "Normal">
+<!ENTITY browser.html.img.anim.label "Animated images should loop">
+<!ENTITY browser.html.img.anim.normal.label "As many times as the image specifies">
 <!ENTITY browser.html.img.anim.once.label "Once">
 <!ENTITY browser.html.img.anim.none.label "None (Stop)">
 <!ENTITY browser.html.img.resizing.label "Shrink to fit image">
@@ -62,7 +62,7 @@
 <!ENTITY browser.tabs.tabWidth.min.label "Minimum">
 <!ENTITY browser.tabs.tabWidth.max.label "Maximum">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
-<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tabs to the right of the current tab (Firefox 3.6+)">
+<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab (Firefox 3.6+)">
 <!ENTITY browser.tabs.autoselect.label "Auto tab selection">
 <!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
 <!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
@@ -241,7 +241,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY http.connect.HTTP11.label "Use HTTP 1.1">
 <!ENTITY http.connect.keepAlive.label "Enable Keep-Alive">
 <!ENTITY http.connect.pipeline.label "Enable Pipelining">
-<!ENTITY http.connect.pipeline.desc "WARNING: Pipelining is an experimental feature, designed to improve page-load performance, that is unfortunately not well supported by some web servers and proxies.">
+<!ENTITY http.connect.pipeline.desc "WARNING: pipelining is an experimental feature, designed to improve page-load performance, that is unfortunately not well supported by some web servers and proxies.">
 <!ENTITY http.connect.HTTP10.accesskey "U">
 <!ENTITY http.connect.HTTP10Proxy.accesskey "S">
 <!ENTITY http.connect.HTTP11.accesskey "E">

@@ -29,9 +29,9 @@
 <!ENTITY browser.html.enableFrame.label "フレームを有効にする">
 <!ENTITY browser.html.frameForceResizability.label "フレームを強制的にサイズ変更できるようにする">
 <!ENTITY browser.html.img "画像">
-<!ENTITY browser.html.img.anim.label "GIF アニメーションの動作 : ">
-<!ENTITY browser.html.img.anim.normal.label "標準">
-<!ENTITY browser.html.img.anim.once.label "一度だけ">
+<!ENTITY browser.html.img.anim.label "アニメーション画像の繰り返し:">
+<!ENTITY browser.html.img.anim.normal.label "画像が指定している回数">
+<!ENTITY browser.html.img.anim.once.label "一回だけ">
 <!ENTITY browser.html.img.anim.none.label "なし(静止)">
 <!ENTITY browser.html.img.resizing.label "ページサイズに合わせて画像を縮小">
 <!ENTITY browser.html.img.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
@@ -242,7 +242,7 @@
 <!ENTITY http.connect.HTTP11.label "HTTP 1.1 を使う">
 <!ENTITY http.connect.keepAlive.label "接続の持続 (Keep-Alive) を有効にする">
 <!ENTITY http.connect.pipeline.label "パイプラインを有効にする">
-<!ENTITY http.connect.pipeline.desc "警告: パイプラインは実験的な機能です。ページ読み込みパフォーマンスを向上させるためのものですが、残念なことに一部の Web サーバやプロキシはうまくサポートしていません。">
+<!ENTITY http.connect.pipeline.desc "警告: パイプラインは、まだ実験的な機能です。この機能を利用するとページの読み込み速度が向上しますが、一部のウェブ サーバやプロキシではそれら自身の不具合によって速度が落ちたり、まったく接続できなくなったりします。">
 <!ENTITY http.connect.HTTP10.accesskey "U">
 <!ENTITY http.connect.HTTP10Proxy.accesskey "S">
 <!ENTITY http.connect.HTTP11.accesskey "E">
@@ -268,15 +268,15 @@
 <!ENTITY ui.mousewheel.label "マウスホイール">
 <!ENTITY ui.mousewheel.mouseWheelPanel.label "での動作 (装飾キー：">
 <!ENTITY ui.mousewheel.mouseWheelPanel2.label ")">
-<!ENTITY ui.mousewheel.vertiscroll.label "垂直スクロール">
-<!ENTITY ui.mousewheel.horizscroll.label "水平スクロール">
+<!ENTITY ui.mousewheel.vertiscroll.label "縦のスクロール">
+<!ENTITY ui.mousewheel.horizscroll.label "横のスクロール">
 <!ENTITY ui.mousewheel.usingJustTheWheel.label "なし">
-<!ENTITY ui.mousewheel.scroll.label "文書を">
+<!ENTITY ui.mousewheel.scroll.label "ドキュメントを">
 <!ENTITY ui.mousewheel.scrollLines.label "行づつスクロールする">
 <!ENTITY ui.mousewheel.useSystemDefault.label "システムの標準設定を使用する">
-<!ENTITY ui.mousewheel.scrollPgUpPgDn.label "1 ページ上下にスクロールする">
-<!ENTITY ui.mousewheel.history.label "ブラウズの履歴を戻るまたは進む">
-<!ENTITY ui.mousewheel.textsize.label "文字サイズを大きくしたり小さくしたりする">
+<!ENTITY ui.mousewheel.scrollPgUpPgDn.label "1 ページ単位に上下にスクロールする">
+<!ENTITY ui.mousewheel.history.label "履歴の中で 戻る/進む">
+<!ENTITY ui.mousewheel.textsize.label "テキストを大きくしたり小さくしたりする">
 <!ENTITY ui.multitouch.label "マルチタッチ">
 <!ENTITY ui.multitouch.gestures.label "マルチタッチ・ジェスチャー">
 <!ENTITY ui.multitouch.gestures.pinch.in.label "ピンチイン">

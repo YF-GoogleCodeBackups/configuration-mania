@@ -58,12 +58,6 @@ var gPrefBrowser = {
       document.getElementById("browserCacheDiskCacheFolder").emptyText = cachedir.path;
     } catch(ex){}
 
-    /* Firefox 3.0.x does not support type=search textbox */
-    var searchbox = document.getElementById("paneBrowser-search");
-    if ( searchbox._fireCommand == undefined ) {
-      searchbox.setAttribute("type", "timed");
-    }
-
     if (! document.documentElement.instantApply) {
       document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
     }
@@ -182,7 +176,7 @@ var gPrefBrowser = {
       document.getElementById("paneBrowserBox")
        .boxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject)
        .ensureElementIsVisible(e);
-      e.style.outline = "solid 3px -moz-activehyperlinktext";
+      e.style.outline = "solid 5px -moz-activehyperlinktext";
       setTimeout(function(){e.style.outline = "inherit";}, 2000);
       break;
     }

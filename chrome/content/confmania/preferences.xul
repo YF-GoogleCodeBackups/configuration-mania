@@ -13,6 +13,7 @@
  onload="gPrefWindow.onLoad();"
  chromehidden="menubar location directories status extrachrome"
  buttonlabelextra1="&reset;" ondialogextra1="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"
+ buttons="accept,cancel,extra1"
  title="&prefWindow.title;" style="&prefWindow.style;"
  context="prefContextPopup"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
