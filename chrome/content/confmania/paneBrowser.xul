@@ -390,6 +390,7 @@ var gPrefBrowser = {
   <preference id="browser.cache.disk.parent_directory" name="browser.cache.disk.parent_directory" type="string"/>
 
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
+  <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
   <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
   <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
@@ -742,7 +743,12 @@ var gPrefBrowser = {
 </expander>
 
 <expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
-  <checkbox label="&browser.others.disableIPv6.label;" preference="network.dns.disableIPv6"/>
+  <groupbox>
+    <caption label="&browser.others.dns.label;"/>
+    <checkbox label="&browser.others.dns.disableIPv6.label;" preference="network.dns.disableIPv6"/>
+    <checkbox label="&browser.others.dns.prefetch.label;" preference="network.dns.disablePrefetch"
+     onsyncfrompreference="return gPrefBrowser.syncFrom(this, true);"/>
+  </groupbox>
   <checkbox label="&browser.others.nouse_text_smoothing_setting.label;" preference="gfx.use_text_smoothing_setting"/>
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 

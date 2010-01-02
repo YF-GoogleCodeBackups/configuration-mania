@@ -127,13 +127,16 @@
 <!ENTITY browser.speed-cache.memory_capability.label "使用容量">
 <!ENTITY browser.speed-cache.trim_on_minimize.label "&brandShortName;の最小化時にメモリの内容をスワップアウトする (Windowsのみ)">
 <!ENTITY browser.speed-cache.disk_cache_ssl.label "SSL 通信の分もキャッシュに貯める (セキュリティリスク有り)">
-<!ENTITY browser.speed-cache.prefetch-next.label "リンク先読み (prefetch) 機構を有効にする">
+<!ENTITY browser.speed-cache.prefetch-next.label "リンク・プリフェッチ(先読み)を有効にする">
 <!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
 <!ENTITY browser.speed-cache.session-history-viewers.desc "注意: この値を増やすと、戻る/進むのパフォーマンスが向上します。しかし、タブを多く開いている時などに&brandShortName;がより多くのメモリを消費するようになります。つまりトレードオフが存在します。">
 <!ENTITY browser.speed-cache.diskCacheFolder.label "キャッシュの保存先">
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
 <!ENTITY browser.others.label "その他">
 <!ENTITY browser.others.disableIPv6.label "IPv6でDNSを問い合わせしない">
+<!ENTITY browser.others.dns.label "名前解決(DNS)">
+<!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
+<!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">
 <!ENTITY browser.others.nouse_text_smoothing_setting.label "常にテキストの縁を滑らかに表示する (Macでのみ有効)">
 <!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで通知">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
