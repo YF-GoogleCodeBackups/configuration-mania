@@ -1,5 +1,5 @@
 <useragent xmlns="chrome://confmania/chrome/xmlns/useragent#">
-  <browser name="{opt:this}" value="{opt:default}">
+  <group name="{opt:this}" value="{opt:default}">
     <option name="Windows 2000" oscpu="Windows NT 5.0" platform="Windows"/>
     <option name="Windows XP" oscpu="Windows NT 5.1" platform="Windows"/>
     <option name="Windows Vista" oscpu="Windows NT 6.0" platform="Windows"/>
@@ -10,8 +10,8 @@
     <option name="Linux x64" oscpu="Linux x86_64" platform="X11"/>
     <option name="FreeBSD x86" oscpu="FreeBSD i686" platform="X11"/>
     <option name="FreeBSD x64" oscpu="FreeBSD x86_64" platform="X11"/>
-  </browser>
-  <browser name="Microsoft Internet Explorer" value="Mozilla/4.0 (compatible; MSIE {opt:version}; {opt:oscpu}{opt:extra})">
+  </group>
+  <group name="Microsoft Internet Explorer" value="Mozilla/4.0 (compatible; MSIE {opt:version}; {opt:oscpu}{opt:extra})">
     <option name="IE 6 (Windows XP SP3, .NET 1.0~2.0)" version="6.0" oscpu="Windows NT 5.1" extra="; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727"/>
     <option name="IE 7 (Windows XP SP3, .NET 1.0~2.0)" version="7.0" oscpu="Windows NT 5.1" extra="; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727"/>
     <option name="IE 7 (Windows Vista SP1, .NET 2.0~3.5)" version="7.0" oscpu="Windows NT 6.0" extra="; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.0.30618; .NET CLR 3.5.30729"/>
@@ -19,29 +19,29 @@
     <option name="IE 8 (Windows 7 x86 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0"/>
     <option name="IE 8 (Windows 7 x64 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1; Win64; x64" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0"/>
     <option name="IE 8 (Windows 7 x64 WOW64 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1; WOW64" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0"/>
-  </browser>
-  <browser name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:webkit}">
+  </group>
+  <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:webkit}">
     <option name="Safari 4.0.4 (Intel MacOS X 10.6.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_2" webkit="531.21.10" version="4.0.4"/>
     <option name="Safari 4.0.4 (PowerPC MacOS X 10.5.4)" platform="Macintosh" oscpu="PPC Mac OS X 10_5_4" webkit="531.21.10" version="4.0.4"/>
     <option name="Safari 4.0 (Windows Vista)" platform="Windows" oscpu="Windows NT 6.0" webkit="531.21.10" version="4.0.4"/>
     <option name="Safari 4.0 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="531.21.10" version="4.0.4"/>
     <option name="Safari 4.0 (iPhone 3.0)" platform="iPhone" oscpu="CPU iPhone OS 3_0 like Mac OS X" webkit="528.18" version="4.0 Mobile/7A341"/>
     <option name="Safari 4.0 (iPod touch)" platform="iPod" oscpu="CPU like Mac OS X" webkit="528.18" version="4.0 Mobile/3A100a"/>
-  </browser>
-  <browser name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
+  </group>
+  <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
     <option name="Chrome 4.0.249.43 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="532.0" version="4.0.249.43"/>
     <option name="Chrome 4.0.249.43 (Intel MacOS X 10.6.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_2" webkit="532.0" version="4.0.249.43"/>
-  </browser>
-  <browser name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
+  </group>
+  <group name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
     <option name="Opera 10.00 (Windows 7)" oscpu="Windows NT 6.1" presto="2.2.1" version="10.00"/>
     <option name="Opera 10.00 (Linux x86)" oscpu="X11; Linux i686" presto="2.2.1" version="10.00"/>
-  </browser>
-  <browser name="Nintendo DS/Wii" value="">
+  </group>
+  <group name="Nintendo DS/Wii" value="">
     <option name="Nintendo DS Browser (Nintendo DSi)" value="Opera/{opt:version} (Nintendo DSi; Opera/466; U; {language})" version="9.50"/>
     <option name="Nintendo Wii" value="Opera/{opt:version} (Nintendo Wii; U; ; 1621; {language})" version="9.10"/>
-  </browser>
-  <browser name="Googlebot">
+  </group>
+  <group name="Googlebot">
     <option name="Googlebot 2.1" value="Mozilla/5.0 (compatible; Googlebot/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
     <option name="Googlebot Image 1.0" value="Googlebot-Image/{opt:version}" version="1.0"/>
-  </browser>
+  </group>
 </useragent>

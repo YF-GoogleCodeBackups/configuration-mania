@@ -86,7 +86,7 @@ var gPrefBrowser = {
       const OS_PARAM_OPTIONAL        = /\{\w+\?\}/g;
       const UA_FIREFOX_DEFAULT = gPrefBrowser.getFirefoxUserAgent("{opt:platform}", "{opt:oscpu}", null);
 
-      Array.forEach(doc.getElementsByTagName("browser"), function(b) {
+      Array.forEach(doc.getElementsByTagName("group"), function(b) {
         var name = b.getAttribute("name");
         if (name != "{opt:this}") {
           menupopuptable[name] = document.createElement("menupopup");
