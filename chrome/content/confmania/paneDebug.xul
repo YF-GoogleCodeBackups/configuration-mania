@@ -61,7 +61,8 @@
   <preference name="extensions.checkCompatibility" id="extensions.checkCompatibility" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.3.6" id="extensions.checkCompatibility.3.6" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
-  <preference id="extensions.hideInstallButton" name="extensions.hideInstallButton" type="bool" inverted="true"/>
+  <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
+  <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
 </preferences>
 
 <groupbox>
@@ -96,6 +97,10 @@
 
 <groupbox>
 <caption label="&debug.extension.label;"/>
+<hbox align="center">
+  <label value="&debug.extension.get_addons_maxResults.label;" control="ext-maxResults"/>
+  <textbox id="ext-maxResults" preference="extensions.getAddons.maxResults" type="number" hidespinbuttons="true" min="1" size="3"/>
+</hbox>
 <hbox align="center">
   <label value="&debug.extension.dialog_enable_delay.label;" control="ext-delay"/>
   <textbox id="ext-delay" preference="security.dialog_enable_delay" type="number" hidespinbuttons="true" min="0" size="4"/>

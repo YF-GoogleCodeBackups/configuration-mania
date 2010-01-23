@@ -375,6 +375,8 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
 <!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">
 <!ENTITY debug.extension.label "Add-ons">
+
+<!ENTITY debug.extension.get_addons_maxResults.label "Maximum number of search results to display :">
 <!ENTITY debug.extension.dialog_enable_delay.label "Time to start add-on installations :">
 <!ENTITY debug.extension.noCheckCompatibility.label "Do Not check add-on compatibility on install/update">
 <!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">

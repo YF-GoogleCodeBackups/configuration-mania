@@ -377,6 +377,7 @@
 <!ENTITY debug.cache.diskCacheDisable.label "ディスクキャッシュを無効にする">
 <!ENTITY debug.cache.memoryCacheDisable.label "メモリーキャッシュを無効にする">
 <!ENTITY debug.extension.label "アドオン">
+<!ENTITY debug.extension.get_addons_maxResults.label "表示する検索結果の最大数 :">
 <!ENTITY debug.extension.dialog_enable_delay.label "インストール開始するまでの時間">
 <!ENTITY debug.extension.noCheckCompatibility.label "インストール/更新時のアドオンのバージョンチェックを回避">
 <!ENTITY debug.extension.noCheckUpdateSecurity.label "アドオンの署名チェックを回避">
