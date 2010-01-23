@@ -389,6 +389,7 @@ var gPrefBrowser = {
   <preference id="browser.sessionhistory.max_total_viewers" name="browser.sessionhistory.max_total_viewers" type="int"/>
   <preference id="browser.cache.disk.parent_directory" name="browser.cache.disk.parent_directory" type="string"/>
 
+  <preference id="geo.enabled" name="geo.enabled" type="bool"/>
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
   <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
@@ -743,6 +744,7 @@ var gPrefBrowser = {
 </expander>
 
 <expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
+  <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled"/>
   <groupbox>
     <caption label="&browser.others.dns.label;"/>
     <checkbox label="&browser.others.dns.disableIPv6.label;" preference="network.dns.disableIPv6"/>

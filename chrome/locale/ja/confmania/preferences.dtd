@@ -133,6 +133,7 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.label "キャッシュの保存先">
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
 <!ENTITY browser.others.label "その他">
+<!ENTITY browser.others.geo_enabled.label "位置情報通信機能を有効にする">
 <!ENTITY browser.others.disableIPv6.label "IPv6でDNSを問い合わせしない">
 <!ENTITY browser.others.dns.label "名前解決(DNS)">
 <!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
