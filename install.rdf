@@ -23,8 +23,8 @@
 <em:name>Configuration Mania?</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL>
-<!--em:updateURL>http://toolbarpalette.comyr.com/extension-updates.rdf</em:updateURL-->
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/wiki/</em:homepageURL>
+<!--em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL-->
 <em:optionsURL>chrome://confmania/content/preferences.xul</em:optionsURL>
 
 <em:localized><Description>
@@ -32,14 +32,14 @@
 <em:name>Configuration Mania</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/wiki/Home</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>ja</em:locale>
 <em:name>Configuration Mania</em:name>
 <em:description>様々な隠し設定を変更するためのパネル</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/wiki/Home</em:homepageURL>
 </Description></em:localized>
 
 </Description>
