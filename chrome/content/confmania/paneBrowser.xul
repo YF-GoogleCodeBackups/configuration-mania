@@ -353,6 +353,7 @@ var gPrefBrowser = {
   <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
   <preference id="browser.allTabs.previews" name="browser.allTabs.previews" type="bool"/>
   <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
+  <preference id="browser.taskbar.previews.enable" name="browser.taskbar.previews.enable" type="bool"/>
 
   <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool" inverted="true"/>
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
@@ -545,6 +546,7 @@ var gPrefBrowser = {
     <caption label="&browser.tabs.tabpreview.label;"/>
     <checkbox label="&browser.tabs.tabpreview.alltabs.label;" preference="browser.allTabs.previews"/>
     <checkbox label="&browser.tabs.tabpreview.ctrltab.label;" preference="browser.ctrlTab.previews"/>
+    <checkbox label="&browser.tabs.tabpreview.taskbar.label;" preference="browser.taskbar.previews.enable"/>
   </groupbox>
 </expander>
 <expander id="sessionstore" label="&browser.sessionStore.label;" open="false" clearhidden="true">
