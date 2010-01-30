@@ -199,7 +199,7 @@ var gPrefSecurity = {
   </radiogroup>
 
   <hbox align="center">
-    <label value="&security.popupwin.popup_maximum.label;"/>
+    <label value="&security.popupwin.popup_maximum.label;" control="popupwin-popup_maximum"/>
     <textbox id="popupwin-popup_maximum" type="number" hidespinbuttons="true" preference="dom.popup_maximum" size="2"/>
   </hbox>
   <label value="&security.popupwin.from_plugins.label;"/>

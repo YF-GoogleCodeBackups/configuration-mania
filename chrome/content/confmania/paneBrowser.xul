@@ -611,10 +611,10 @@ var gPrefBrowser = {
     <groupbox>
       <caption label="&browser.download.alerts.slide.label;"/>
       <hbox align="center">
-        <label value="&browser.download.alerts.slide.prefix.label;"/>
-        <textbox type="number" size="3" min="1" preference="alerts.slideIncrement"/>
-        <label value="&browser.download.alerts.slide.per.label;"/>
-        <textbox type="number" hidespinbuttons="true" size="5" preference="alerts.slideIncrementTime"/>
+        <label value="&browser.download.alerts.slide.prefix.label;" control="browserSlideIncrement"/>
+        <textbox id="browserSlideIncrement" type="number" size="3" min="1" preference="alerts.slideIncrement"/>
+        <label value="&browser.download.alerts.slide.per.label;" control="browserSlideIncrementTime"/>
+        <textbox id="browserSlideIncrementTime" type="number" hidespinbuttons="true" size="5" preference="alerts.slideIncrementTime"/>
         <label value="&miliseconds;"/>
       </hbox>
       <hbox pack="end">
