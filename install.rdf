@@ -7,7 +7,7 @@
 
 <em:id>{c4d362ec-1cff-4ca0-9031-99a8fad7995a}</em:id>
 <!--em:id>{3329801B-F8DD-4503-BDB5-6E0A076B5364}</em:id--><!-- this id is used by somebody in addons.mozilla.org -->
-<em:version>1.11.2010010301</em:version><!-- $Revision$ -->
+<em:version>1.11.2010012301</em:version>
 
 <!-- Target Application this theme can install into, 
     with minimum and maximum supported versions. --> 
@@ -23,7 +23,8 @@
 <em:name>Configuration Mania?</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/wiki/</em:homepageURL>
+<!--em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL-->
 <em:optionsURL>chrome://confmania/content/preferences.xul</em:optionsURL>
 
 <em:localized><Description>
@@ -31,14 +32,14 @@
 <em:name>Configuration Mania</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/wiki/Home</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>ja</em:locale>
 <em:name>Configuration Mania</em:name>
 <em:description>様々な隠し設定を変更するためのパネル</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/wiki/Home</em:homepageURL>
 </Description></em:localized>
 
 </Description>
