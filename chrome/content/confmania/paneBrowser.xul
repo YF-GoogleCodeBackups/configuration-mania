@@ -177,7 +177,12 @@ var gPrefBrowser = {
        .boxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject)
        .ensureElementIsVisible(e);
       e.style.outline = "solid 5px -moz-activehyperlinktext";
-      setTimeout(function(){e.style.outline = "inherit";}, 2000);
+
+      var timer = Components.classes["@mozilla.org/timer;1"]
+       .createInstance(Components.interfaces.nsITimer);
+      timer.initWithCallback({notify: function(aTimer) {
+        e.style.outline = "inherit";
+      }}, 2000, Components.interfaces.nsITimer.TYPE_ONE_SHOT);
       break;
     }
   },
