@@ -1,0 +1,849 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is mozilla.org code.
+   -
+   - The Initial Developer of the Original Code is Popoki Tom.
+   - Portions created by the Initial Developer are Copyright (C) 2004-2008
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -   Popoki Tom (cat_in_136) (Edited for Configuration Mania)
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+]>
+
+<overlay id="paneBrowserOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneBrowser" flex="1" onpaneload="gPrefBrowser.init();">
+
+<script type="application/javascript;version=1.8"><![CDATA[
+var gPrefBrowser = {
+  init : function(){
+    try {
+      let dirSvc = Components.classes["@mozilla.org/file/directory_service;1"]
+       .getService(Components.interfaces.nsIProperties);
+      let cachedir = dirSvc.get((dirSvc.has("ProfLD"))? "ProfLD" : "ProfD", Components.interfaces.nsILocalFile);
+      document.getElementById("browserCacheDiskCacheFolder").emptyText = cachedir.path;
+    } catch(ex){}
+
+    if (! document.documentElement.instantApply) {
+      document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
+    }
+    gPrefBrowser.initUA();
+    gPrefBrowser.initBrowserBoxTab();
+  },
+  initUA : function(){
+    var oUAValue = document.getElementById("ua-value");
+    try {
+      oUAValue.emptyText = gPrefBrowser.getFirefoxUserAgent();
+    } catch (ex) {}
+
+    var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
+              .createInstance(Components.interfaces.nsIXMLHttpRequest);
+    req.open("GET", "useragent.xml", true);
+    req.onreadystatechange = function (event) {
+      if(req.readyState != 4) return;
+      var doc = req.responseXML;
+
+      var m = Components.classes['@mozilla.org/network/protocol;1?name=http']
+       .getService(Components.interfaces.nsIHttpProtocolHandler);
+      var presetpopup = document.getElementById("ua-presets-popup");
+      var menupopuptable = {"{opt:this}": document.getElementById("ua-presets-this-popup")};
+
+      const OS_PARAM_LANGUAGE        = /\{language\??\}/g;
+      const OPT_PARAM_GENERIC        = /\{opt:([a-zA-Z]+)\??\}/g;
+      const OPT_PARAM_DEFAULT        = /\{opt:default\}/g;
+      const OS_PARAM_OPTIONAL        = /\{\w+\?\}/g;
+      const UA_FIREFOX_DEFAULT = gPrefBrowser.getFirefoxUserAgent("{opt:platform}", "{opt:oscpu}", null);
+
+      Array.forEach(doc.getElementsByTagName("group"), function(b) {
+        var name = b.getAttribute("name");
+        if (name != "{opt:this}") {
+          menupopuptable[name] = document.createElement("menupopup");
+          var oMenu = document.createElement("menu");
+          oMenu.setAttribute("label", name);
+          oMenu.appendChild(menupopuptable[name]);
+          presetpopup.appendChild(oMenu);
+        }
+      });
+      Array.forEach(doc.getElementsByTagName("option"), function(o) {
+        var b     = o.parentNode;
+        var bname = b.getAttribute("name");
+        var name  = o.getAttribute("name");
+        var value = o.getAttribute("value") || b.getAttribute("value");
+
+        value = value.replace(OPT_PARAM_DEFAULT, UA_FIREFOX_DEFAULT);
+        value = value.replace(OPT_PARAM_GENERIC, function(str, optattr) {
+          return o.getAttribute(optattr) || b.getAttribute(optattr) || "";
+        });
+        value = value.replace(OS_PARAM_LANGUAGE, m.language);
+        value = value.replace(OS_PARAM_OPTIONAL, "");
+
+        var oMenupopup = menupopuptable[bname];
+        var oMenuItem = document.createElement("menuitem");
+        oMenuItem.setAttribute("label", name);
+        oMenuItem.setAttribute("value", value);
+        oMenupopup.appendChild(oMenuItem);
+      });
+    };
+    req.send(null);
+  },
+  initBrowserBoxTab : function () {
+    gPrefBrowser.onPaneBrowserBoxTabSelected();
+  },
+  onPaneBrowserBoxTabSelected : function () {
+    let paneBrowserBoxTab = document.getElementById("paneBrowserBoxTab");
+    let selectedPanel = document.getElementById(paneBrowserBoxTab.value);
+    selectedPanel.parentNode.selectedPanel = selectedPanel;
+
+    for (let i = 0; i < paneBrowserBoxTab.itemCount; i++) {
+      let radioItem = paneBrowserBoxTab.getItemAtIndex(i);
+      let pane = document.getElementById(radioItem.value);
+      pane.setAttribute("selected", (radioItem.selected)? "true" : "false");
+    }
+  },
+  onSmartBrowsingSyncFrom : function () {
+    let disabled = ! document.getElementById("keyword.enabled").value;
+    document.getElementById("keyword.URL").disabled = disabled;
+    return undefined; // no override
+  },
+  onDomainGaussSyncFrom : function () {
+    let disabled = ! document.getElementById("browser.fixup.alternate.enabled").value;
+    for each (let name in ["browser.fixup.alternate.prefix", "browser.fixup.alternate.suffix"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
+  },
+  onAutoCompleteSyncFrom : function (){
+    let disabled = document.getElementById("browser.urlbar.autocomplete.enabled").value;
+    for each (let name in ["browser.urlbar.autoFill", "browser.urlbar.filter.javascript", "browser.urlbar.maxRichResults", "browser.urlbar.delay"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
+  },
+  onHtmlFrameSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.frames.enabled").value;
+    document.getElementById("layout.frames.force_resizability").disabled = disabled;
+    return undefined; // no override
+  },
+  onWebGLSyncFrom : function() {
+    let disabled = ! document.getElementById("webgl.enabled_for_all_sites").value;
+    document.getElementById("webgl.force_osmesa").disabled = disabled;
+    return gPrefBrowser.onWebGLSFRenderSyncFrom();
+  },
+  onWebGLSFRenderSyncFrom : function() {
+    let disabled = ! (document.getElementById("webgl.enabled_for_all_sites").value && document.getElementById("webgl.force_osmesa").value);
+    document.getElementById("webgl.osmesalib").disabled = disabled;
+    return undefined; // no override
+  },
+  onFocusHighlightSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.display.use_focus_colors").value;
+    for each (let name in ["browser.display.focus_background_color", "browser.display.focus_text_color"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
+  },
+  onTabsCloseButtonSyncFrom : function() {
+    let disabled = document.getElementById("browser.tabs.closeButtons").value != 1;
+    document.getElementById("browser.tabs.tabClipWidth").disabled = disabled;
+    return undefined; // no override
+  },
+  onInterruptParseSyncFrom : function() {
+    let disabled = document.getElementById("content.interrupt.parsing").value;
+    document.getElementById("content.max.tokenizing.time").disabled = disabled;
+    return undefined; // no override
+  },
+  onMemoryEnableSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.cache.memory.enable").value;
+    for each (let name in ["speed-cache-memory-capacity-type", "speed-cache-memory-capacity-type-label", "browser.cache.memory.capacity"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
+  },
+  onEditorExternalSyncFrom : function() {
+    let disabled = ! document.getElementById("view_source.editor.external").value;
+    document.getElementById("view_source.editor.path").disabled = disabled;
+    return undefined; // no override
+  },
+  resetKeywordURL : function(){//#smartbrowsing-keywordsURL
+    gPrefWindow.resetPref(document.getElementById("keyword.URL"));
+  },
+  getFirefoxUserAgent : function(platform, oscpu, language){
+    // cf. nsGlobalWindow.cpp#GetUserAgent
+    var m = Components.classes['@mozilla.org/network/protocol;1?name=http']
+      .getService(Components.interfaces.nsIHttpProtocolHandler);
+    var pref = Components.classes['@mozilla.org/preferences-service;1']
+      .getService(Components.interfaces.nsIPrefService);
+    var prefBranch = Components.classes['@mozilla.org/preferences-service;1']
+      .getService(Components.interfaces.nsIPrefBranch);
+
+    var isGecko2 = false;
+    var mSecurity = null;
+    if (prefBranch.getPrefType("general.useragent.security") != prefBranch.PREF_INVALID) {
+      mSecurity = prefBranch.getCharPref("general.useragent.security");
+    } else {
+      isGecko2 = true;
+      // "general.useragent.security" is not defined Gecko2 (Firefox 4)
+    }
+
+    if (platform == null) platform = m.platform;
+    if (oscpu    == null) oscpu    = m.oscpu;
+    if (language == null) language = m.language;
+
+    if (isGecko2) language = null; // language is not displayed on Gecko2 (Firefox4)
+
+    var userAgent = m.appName + "/" + m.appVersion + " ";
+    userAgent += "("+platform+"; ";
+    if (mSecurity) userAgent += mSecurity + "; ";
+    userAgent += oscpu;
+    if(language && language != "") userAgent += "; "+language;
+    if(m.misc && m.misc != "") userAgent += "; "+m.misc;
+    userAgent += ")";
+
+    var fooSubComment = function(foo,fooSub,fooComment){
+      if(foo && foo != ""){
+        userAgent += " "+foo;
+        if(fooSub && fooSub != "") userAgent += "/"+fooSub;
+        if(fooComment && fooComment != "") userAgent += " ("+fooComment+")";
+      }
+    };
+    fooSubComment(m.product, m.productSub, m.productComment);
+    fooSubComment(m.vendor, m.vendorSub, m.vendorComment);
+
+    var extras = pref.getBranch("general.useragent.extra.");
+    var pCount = {value : 0};
+    var list = extras.getChildList("", pCount);
+    list = list.sort();
+    for (var i = 0; i < pCount.value; i++){
+      userAgent += " "+prefBranch.getCharPref("general.useragent.extra."+list[i]);
+    }
+    return userAgent;
+  },
+  onUserAgentPresetCommanded : function(event) {
+    var mData = document.getElementById("ua-value");
+    mData.value = event.target.value;
+    document.documentElement.currentPane.userChangedValue(mData);
+  },
+  resetUserAgent : function(){
+    gPrefWindow.resetPref(document.getElementById("general.useragent.override"));
+  },
+  onSpeedPaintReset : function(){
+    let expander = document.getElementById("speed-paint");
+    Array.forEach(expander.querySelectorAll("*[preference]"), function(e) {
+      gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
+    });
+  },
+  synchNotifyInterval : function(){
+    var paintDelay = document.getElementById("nglayout.initialpaint.delay").value;
+    if(paintDelay == null) paintDelay = 250;
+
+    var mData = document.getElementById("speed-notify-interval");
+    mData.value = paintDelay * 1000;
+    document.documentElement.currentPane.userChangedValue(mData);
+
+    mData = document.getElementById("speed-max-tokenizing-time");
+    mData.value = paintDelay * 500;
+    document.documentElement.currentPane.userChangedValue(mData);
+  },
+  _openBrowse: function(aFilter, aTargetID) {
+    // Open File Dialog
+    const nsIFilePicker = Components.interfaces.nsIFilePicker;
+    var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+    fp.init(window, document.title, nsIFilePicker.modeOpen);
+    fp.appendFilters(aFilter);
+    try{
+      var file = Components.classes["@mozilla.org/file/local;1"]
+       .createInstance(Components.interfaces.nsILocalFile);
+      file.initWithPath(document.getElementById(aTargetID).value);
+      fp.displayDirectory = file.parent;
+      fp.defaultString = file.leafName;
+    }catch(ex){}
+
+    if(fp.show() == nsIFilePicker.returnOK) {
+      document.getElementById(aTargetID).value = fp.file.path;
+    }
+  },
+  onWebGLOSMesaBrowse : function() {
+    this._openBrowse(Components.interfaces.nsIFilePicker.filterAll, "html-webgl-osmesa-path");
+  },
+  onEditorExternalBrowse : function(){
+    const filter = Components.interfaces.nsIFilePicker.filterApps | Components.interfaces.nsIFilePicker.filterAll;
+    this._openBrowse(filter, "others-editorExternal-path");
+  },
+  onBrowserCacheDiskCacheFolderBrowse : function(){
+    var folderField = document.getElementById("browserCacheDiskCacheFolder");
+
+    // Open File Dialog
+    const nsIFilePicker = Components.interfaces.nsIFilePicker;
+    var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
+    fp.init(window, document.title, nsIFilePicker.modeGetFolder);
+    try{
+      var file = Components.classes["@mozilla.org/file/local;1"]
+       .createInstance(Components.interfaces.nsILocalFile);
+      file.initWithPath((folderField.value == "")? folderField.emptyText : folderField.value);
+      fp.displayDirectory = file.parent;
+      fp.defaultString = file.leafName;
+    }catch(ex){throw ex}
+
+    if(fp.show() == nsIFilePicker.returnOK)
+      folderField.value = fp.file.path;
+  },
+  resetBrowserCacheDiskCacheFolder : function(){
+    gPrefWindow.resetPref(document.getElementById("browser.cache.disk.parent_directory"));
+  },
+  previewAlert : function(title, val){
+    var alertsService = Components.classes["@mozilla.org/alerts-service;1"]
+     .getService(Components.interfaces.nsIAlertsService);
+    alertsService.showAlertNotification("", title, val, false, "cookie", null);
+  },
+  resetAlertsSlide : function(){//#alerts.slide*
+    for each (let name in ["alerts.slideIncrement", "alerts.slideIncrementTime"]) {
+      gPrefWindow.resetPref(document.getElementById(name));
+    }
+  },
+  setAlertsSlideLight : function(){//#alerts.slide*
+    document.getElementById("alerts.slideIncrement").value = 10;
+    document.getElementById("alerts.slideIncrementTime").value = 20;
+  },
+
+  syncFrom : function(elem,defaultValue){
+    var val = document.getElementById(elem.getAttribute("preference")).value;
+    return (val != null)? val : defaultValue;
+  }
+};
+]]></script>
+
+<preferences>
+  <preference id="keyword.enabled" name="keyword.enabled" type="bool"/>
+  <preference id="keyword.URL" name="keyword.URL" type="wstring"/>
+  <preference id="browser.fixup.alternate.enabled" name="browser.fixup.alternate.enabled" type="bool"/>
+  <preference id="browser.fixup.alternate.prefix" name="browser.fixup.alternate.prefix" type="string"/>
+  <preference id="browser.fixup.alternate.suffix" name="browser.fixup.alternate.suffix" type="string"/>
+
+  <preference id="browser.urlbar.clickSelectsAll" name="browser.urlbar.clickSelectsAll" type="bool"/>
+  <preference id="browser.urlbar.doubleClickSelectsAll" name="browser.urlbar.doubleClickSelectsAll" type="bool"/>
+  <preference id="browser.urlbar.autocomplete.enabled" name="browser.urlbar.autocomplete.enabled" type="bool" inverted="true"/>
+  <preference id="browser.urlbar.autoFill" name="browser.urlbar.autoFill" type="bool"/>
+  <preference id="browser.urlbar.filter.javascript" name="browser.urlbar.filter.javascript" type="bool"/>
+  <preference id="browser.urlbar.maxRichResults" name="browser.urlbar.maxRichResults" type="int"/>
+  <preference id="browser.urlbar.delay" name="browser.urlbar.delay" type="int"/>
+
+  <preference id="browser.blink_allowed" name="browser.blink_allowed" type="bool"/>
+  <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool"/>
+  <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
+  <preference id="image.animation_mode" name="image.animation_mode" type="string"/>
+  <preference id="browser.enable_automatic_image_resizing" name="browser.enable_automatic_image_resizing" type="bool"/>
+  <preference id="browser.display.show_image_placeholders" name="browser.display.show_image_placeholders" type="bool"/>
+  <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
+  <preference id="gfx.color_management.enabled" name="gfx.color_management.enabled" type="bool"/>
+  <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
+  <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
+  <preference id="html5.enable" name="html5.enable" type="bool"/>
+  <preference id="svg.enabled" name="svg.enabled" type="bool"/>
+  <preference id="svg.smil.enabled" name="svg.smil.enabled" type="bool"/>
+  <preference id="webgl.enabled_for_all_sites" name="webgl.enabled_for_all_sites" type="bool"/>
+  <preference id="webgl.force_osmesa" name="webgl.force_osmesa" type="bool"/>
+  <preference id="webgl.osmesalib" name="webgl.osmesalib" type="string"/>
+  <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
+  <preference id="browser.zoom.siteSpecific" name="browser.zoom.siteSpecific" type="bool"/>
+  <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
+  <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
+  <preference id="browser.display.focus_text_color" name="browser.display.focus_text_color" type="string"/>
+  <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
+
+  <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
+  <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
+  <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
+  <preference id="browser.tabs.tabMinWidth" name="browser.tabs.tabMinWidth" type="int"/>
+  <preference id="browser.tabs.tabMaxWidth" name="browser.tabs.tabMaxWidth" type="int"/>
+  <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
+  <preference id="browser.tabs.insertRelatedAfterCurrent" name="browser.tabs.insertRelatedAfterCurrent" type="bool"/>
+  <preference id="browser.tabs.loadBookmarksInBackground" name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
+  <preference id="browser.tabs.loadDivertedInBackground" name="browser.tabs.loadDivertedInBackground" type="bool" inverted="true"/>
+  <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
+  <preference id="browser.allTabs.previews" name="browser.allTabs.previews" type="bool"/>
+  <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
+  <preference id="browser.taskbar.previews.enable" name="browser.taskbar.previews.enable" type="bool"/>
+
+  <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
+  <preference id="browser.sessionstore.max_windows_undo" name="browser.sessionstore.max_windows_undo" type="int"/>
+  <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
+  <preference id="browser.sessionstore.resume_from_crash" name="browser.sessionstore.resume_from_crash" type="bool"/>
+  <preference id="browser.sessionstore.privacy_level" name="browser.sessionstore.privacy_level" type="int"/>
+
+  <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
+  <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
+
+  <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
+  <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
+  <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
+  <preference id="alerts.slideIncrement" name="alerts.slideIncrement" type="int"/>
+  <preference id="alerts.slideIncrementTime" name="alerts.slideIncrementTime" type="int"/>
+  <preference id="alerts.totalOpenTime" name="alerts.totalOpenTime" type="int"/>
+
+  <preference id="general.useragent.override" name="general.useragent.override" type="wstring"/>
+
+  <preference id="nglayout.initialpaint.delay" name="nglayout.initialpaint.delay" type="int"/>
+  <preference id="content.notify.backoffcount" name="content.notify.backoffcount" type="int"/>
+  <preference id="content.notify.interval" name="content.notify.interval" type="int"/>
+  <preference id="content.interrupt.parsing" name="content.interrupt.parsing" type="bool" inverted="true"/>
+  <preference id="content.max.tokenizing.time" name="content.max.tokenizing.time" type="int"/>
+  <preference id="content.switch.threshold" name="content.switch.threshold" type="int"/>
+
+  <preference id="browser.cache.memory.enable" name="browser.cache.memory.enable" type="bool"/>
+  <preference id="browser.cache.memory.capacity" name="browser.cache.memory.capacity" type="int"/>
+  <preference id="browser.cache.check_doc_frequency" name="browser.cache.check_doc_frequency" type="int"/>
+  <preference id="config.trim_on_minimize" name="config.trim_on_minimize" type="bool"/>
+  <preference id="browser.cache.disk_cache_ssl" name="browser.cache.disk_cache_ssl" type="bool"/>
+  <preference id="network.prefetch-next" name="network.prefetch-next" type="bool"/>
+  <preference id="browser.sessionhistory.max_total_viewers" name="browser.sessionhistory.max_total_viewers" type="int"/>
+  <preference id="browser.cache.disk.parent_directory" name="browser.cache.disk.parent_directory" type="string"/>
+
+  <preference id="geo.enabled" name="geo.enabled" type="bool"/>
+  <preference id="network.websocket.enabled" name="network.websocket.enabled" type="bool"/>
+  <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
+  <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
+  <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
+  <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
+  <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
+  <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
+</preferences>
+
+<hbox flex="1" orient="horizontal" id="paneBrowserBox">
+<radiogroup id="paneBrowserBoxTab" class="subtabs"
+ orient="vertical" style="max-width: 10em; width: 10em;"
+ value="smartbrowsing" oncommand="gPrefBrowser.onPaneBrowserBoxTabSelected();">
+  <radio class="subtab" value="smartbrowsing" label="&browser.smartbrowsing.label;"/>
+  <radio class="subtab" value="urlbar"        label="&browser.urlbar.label;"       />
+  <radio class="subtab" value="html"          label="&browser.html.label;"         />
+  <radio class="subtab" value="tabs"          label="&browser.tabs.label;"         />
+  <radio class="subtab" value="sessionstore"  label="&browser.sessionStore.label;" />
+  <radio class="subtab" value="bookmarkicon"  label="&browser.bookmarkicon.label;" />
+  <radio class="subtab" value="download"      label="&browser.download.label;"     />
+  <radio class="subtab" value="ua"            label="&browser.ua.label;"           />
+  <radio class="subtab" value="speed-paint"   label="&browser.speed-paint.label;"  />
+  <radio class="subtab" value="speed-cache"   label="&browser.speed-cache.label;"  />
+  <radio class="subtab" value="others"        label="&browser.others.label;"       />
+</radiogroup>
+<splitter/>
+<deck id="paneBrowserBoxContainer" flex="4">
+<box class="subtabpanel" orient="vertical" id="smartbrowsing">
+  <groupbox>
+    <caption label="&browser.smartbrowsing.internetKeywords.label;"/>
+    <description>&browser.smartbrowsing.internetKeywords.desc;</description>
+    <vbox>
+      <checkbox id="smartbrowsing-keywordsEnabled" preference="keyword.enabled"
+                onsyncfrompreference="return gPrefBrowser.onSmartBrowsingSyncFrom();"
+                label="&browser.smartbrowsing.internetKeywords.enabled.label;"/>
+      <hbox align="center">
+        <label control="smartbrowsing-keywordsURL" value="&browser.smartbrowsing.internetKeywords.URL.label;"/>
+        <textbox id="smartbrowsing-keywordsURL" preference="keyword.URL" flex="1" class="uri-element"/>
+      </hbox>
+    </vbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&browser.smartbrowsing.domainGuessing.label;"/>
+
+    <checkbox id="smartbrowsing-domainGuessingEnabled"
+          label="&browser.smartbrowsing.domainGuessing.enabled.label;"
+          onsyncfrompreference="return gPrefBrowser.onDomainGaussSyncFrom();"
+          preference="browser.fixup.alternate.enabled"/>
+    <hbox align="center">
+      <label control="smartbrowsing-domainGuessingPrefix"
+             value="&browser.smartbrowsing.domainGuessing.prefix.label;"/>
+      <textbox id="smartbrowsing-domainGuessingPrefix"
+        preference="browser.fixup.alternate.prefix" flex="1"/>
+      <spacer flex="1"/>
+      <label control="smartbrowsing-domainGuessingSuffix"
+             value="&browser.smartbrowsing.domainGuessing.suffix.label;"/>
+      <textbox id="smartbrowsing-domainGuessingSuffix"
+               preference="browser.fixup.alternate.suffix" flex="1"/>
+    </hbox>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="urlbar">
+  <checkbox label="&browser.urlbar.clickSelectsAll.label;" preference="browser.urlbar.clickSelectsAll"/>
+  <checkbox label="&browser.urlbar.doubleClickSelectsAll.label;" preference="browser.urlbar.doubleClickSelectsAll"/>
+
+  <checkbox label="&browser.urlbar.autoComplete.label;" preference="browser.urlbar.autocomplete.enabled"
+   onsyncfrompreference="return gPrefBrowser.onAutoCompleteSyncFrom();" id="urlbar-autoComplete-disabled"/>
+  <vbox class="indent" id="urlbar-autoComplete-pane">
+    <checkbox label="&browser.urlbar.autoComplete.autoFill.label;"
+              preference="browser.urlbar.autoFill" />
+    <checkbox label="&browser.urlbar.autoComplete.filterJavaScript.label;"
+              preference="browser.urlbar.filter.javascript"/>
+    <hbox align="center">
+      <label value="&browser.urlbar.autoComplete.maxRichResults.label;" control="urlbar-maxRichResults"/>
+      <textbox id="urlbar-maxRichResults" type="number" size="2" preference="browser.urlbar.maxRichResults"/>
+    </hbox>
+    <hbox align="center">
+      <label value="&browser.urlbar.autoComplete.delay.label;" control="urlbar-delay"/>
+      <textbox id="urlbar-delay" type="number" hidespinbuttons="true" size="4" preference="browser.urlbar.delay"/>
+      <label value="&miliseconds;" control="urlbar-delay"/>
+    </hbox>
+  </vbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="html">
+  <checkbox label="&browser.html.allowBlink.label;" preference="browser.blink_allowed"/>
+  <checkbox id="html-frameEnabled" label="&browser.html.enableFrame.label;"
+   onsyncfrompreference="return gPrefBrowser.onHtmlFrameSyncFrom();" preference="browser.frames.enabled"/>
+  <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
+   class="indent" preference="layout.frames.force_resizability"/>
+  <groupbox>
+    <caption label="&browser.html.img;"/>
+    <groupbox>
+      <caption label="&browser.html.img.anim.label;"/>
+      <radiogroup preference="image.animation_mode">
+        <radio value="normal" label="&browser.html.img.anim.normal.label;"/>
+        <radio value="once" label="&browser.html.img.anim.once.label;"/>
+        <radio value="none" label="&browser.html.img.anim.none.label;"/>
+      </radiogroup>
+    </groupbox>
+    <checkbox label="&browser.html.img.resizing.label;"
+     preference="browser.enable_automatic_image_resizing"/>
+    <checkbox label="&browser.html.img.show_image_placeholders.label;"
+     preference="browser.display.show_image_placeholders"/>
+    <checkbox label="&browser.html.img.force_inline_alttext.label;"
+     preference="browser.display.force_inline_alttext"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&browser.html.color_management.label;"/>
+    <hbox align="center">
+      <label control="color_management_mode" value="&browser.html.color_management.mode.label;"/>
+      <menulist id="color_management_mode" preference="gfx.color_management.mode"><menupopup>
+        <menuitem value="0" label="&browser.html.color_management.mode.off.label;"/>
+        <menuitem value="1" label="&browser.html.color_management.mode.on.label;"/>
+        <menuitem value="2" label="&browser.html.color_management.mode.tagged.label;"/>
+      </menupopup></menulist>
+    </hbox>
+  </groupbox>
+  <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
+  <checkbox label="&browser.html.html5.label;" preference="html5.enable"/>
+  <checkbox label="&browser.html.enableSVG.label;" preference="svg.enabled"/>
+  <checkbox label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
+  <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.enabled_for_all_sites"
+            onsyncfrompreference="return gPrefBrowser.onWebGLSyncFrom()"/>
+  <vbox id="html-webgl-vbox" class="indent">
+    <checkbox id="html-webgl-software-render" label="&browser.html.webgl.software_render.label;" preference="webgl.force_osmesa"
+              onsyncfrompreference="return gPrefBrowser.onWebGLSFRenderSyncFrom()"/>
+    <hbox align="center">
+      <label control="html-webgl-osmesa-path" value="&browser.html.webgl.osmesa.path.label;"/>
+      <textbox id="html-webgl-osmesa-path" preference="webgl.osmesalib" flex="1"/>
+      <button label="&browse;" control="html-webgl-osmesa-path" oncommand="gPrefBrowser.onWebGLOSMesaBrowse()"/>
+    </hbox>
+  </vbox>
+
+  <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
+  <checkbox label="&browser.html.zoomSiteSpecific.label;" preference="browser.zoom.siteSpecific"/>
+
+  <groupbox>
+    <caption label="&browser.html.focus.label;"/>
+    <checkbox id="focus-highlight-enabled" label="&browser.html.focus.enabled.label;"
+     onsyncfrompreference="return gPrefBrowser.onFocusHighlightSyncFrom();"
+     preference="browser.display.use_focus_colors"/>
+    <hbox align="center" class="indent">
+      <label value="&browser.html.focus.bg.label;" control="focus-bg-color"/>
+      <colorpicker id="focus-bg-color" type="button" preference="browser.display.focus_background_color"/>
+      <label value="&browser.html.focus.fg.label;" control="focus-fg-color"/>
+      <colorpicker id="focus-fg-color" type="button" preference="browser.display.focus_text_color"/>
+    </hbox>
+  </groupbox>
+  <checkbox label="&browser.html.nouse_text_smoothing_setting.label;" preference="gfx.use_text_smoothing_setting"/>
+</box>
+<box class="subtabpanel" orient="vertical" id="tabs">
+  <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
+  <groupbox>
+    <caption label="&browser.tabs.closeButtons.label;"/>
+    <radiogroup preference="browser.tabs.closeButtons" onsyncfrompreference="return gPrefBrowser.onTabsCloseButtonSyncFrom()">
+      <radio value="0" label="&browser.tabs.closeButtons.active.label;"/>
+      <radio value="1" label="&browser.tabs.closeButtons.all.label;"/>
+      <vbox class="indent">
+        <html:div>
+          <label control="tabs-tabClipWidth">&browser.tabs.tabClipWidth.label;</label>
+          <textbox class="indent" type="number" hidespinbuttons="true" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
+        </html:div>
+      </vbox>
+      <radio value="2" label="&browser.tabs.closeButtons.no.label;"/>
+      <radio value="3" label="&browser.tabs.closeButtons.end.label;"/>
+    </radiogroup>
+  </groupbox>
+  <groupbox orient="horizontal" align="center">
+    <caption label="&browser.tabs.tabWidth.label;"/>
+    <label value="&browser.tabs.tabWidth.min.label;" control="tabs-tabMinWidth"/>
+    <textbox id="tabs-tabMinWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMinWidth" size="4"/>
+    <label value="&browser.tabs.tabWidth.max.label;" control="tabs-tabMaxWidth"/>
+    <textbox id="tabs-tabMaxWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMaxWidth" size="4"/>
+  </groupbox>
+
+  <checkbox label="&browser.tabs.seachOpenintab.label;" preference="browser.search.openintab"/>
+  <checkbox label="&browser.tabs.insertRelatedAfterCurrent.label;" preference="browser.tabs.insertRelatedAfterCurrent"/>
+  <groupbox>
+    <caption label="&browser.tabs.autoselect.label;"/>
+    <checkbox label="&browser.tabs.autoselect.loadBookmarksInBackground.label;" preference="browser.tabs.loadBookmarksInBackground"/>
+    <checkbox label="&browser.tabs.autoselect.loadDivertedInBackground.label;" preference="browser.tabs.loadDivertedInBackground"/>
+    <checkbox label="&browser.tabs.autoselect.selectOwnerOnClose.label;" preference="browser.tabs.selectOwnerOnClose"/>
+  </groupbox>
+  <groupbox orient="horizontal">
+    <caption label="&browser.tabs.tabpreview.label;"/>
+    <checkbox label="&browser.tabs.tabpreview.alltabs.label;" preference="browser.allTabs.previews"/>
+    <checkbox label="&browser.tabs.tabpreview.ctrltab.label;" preference="browser.ctrlTab.previews"/>
+    <checkbox label="&browser.tabs.tabpreview.taskbar.label;" preference="browser.taskbar.previews.enable"/>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="sessionstore">
+  <hbox align="center" id="sessionStore-Interval-pane">
+    <label value="&browser.sessionStore.interval.label;" control="sessionStore-Interval"/>
+    <textbox id="sessionStore-Interval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>
+    <label value="&miliseconds;"/>
+  </hbox>
+  <groupbox>
+    <caption label="&browser.sessionStore.max_undo.label;"/>
+    <grid id="sessionStore-MaxUndo-pane">
+      <columns><column/><column/></columns>
+      <rows><row align="center">
+        <label value="&browser.sessionStore.max_undo.windows.label;" control="sessionStore-MaxWindowsUndo"/>
+        <textbox id="sessionStore-MaxWindowsUndo" type="number"
+         hidespinbuttons="true" min="0" preference="browser.sessionstore.max_windows_undo" size="3"/>
+      </row><row align="center">
+        <label value="&browser.sessionStore.max_undo.tabs.label;" control="sessionStore-MaxTabsUndo"/>
+        <textbox id="sessionStore-MaxTabsUndo" type="number"
+         hidespinbuttons="true" min="0" preference="browser.sessionstore.max_tabs_undo" size="3"/>
+      </row></rows>
+    </grid>
+  </groupbox>
+  <checkbox preference="browser.sessionstore.resume_from_crash" label="&browser.sessionStore.resume_from_crash.label;"/>
+  <groupbox>
+    <caption label="&browser.sessionStore.privacy_level.label;"/>
+    <radiogroup preference="browser.sessionstore.privacy_level">
+      <radio value="0" label="&browser.sessionStore.privacy_level.any.label;"/>
+      <radio value="1" label="&browser.sessionStore.privacy_level.unenc.label;"/>
+      <radio value="2" label="&browser.sessionStore.privacy_level.never.label;"/>
+    </radiogroup>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="bookmarkicon">
+  <checkbox label="&browser.bookmarkicon.siteicons.label;"
+   preference="browser.chrome.site_icons"/>
+  <checkbox label="&browser.bookmarkicon.favicons.lebel;"
+   preference="browser.chrome.favicons"/>
+</box>
+<box class="subtabpanel" orient="vertical" id="download">
+  <checkbox label="&browser.download.addToRecentDocs.label;"
+            preference="browser.download.manager.addToRecentDocs"/>
+  <groupbox>
+    <caption label="&browser.download.quitBehavior.label;"/>
+    <radiogroup preference="browser.download.manager.quitBehavior">
+      <radio value="0" label="&browser.download.quitBehavior.resumeOnRestart.label;"/>
+      <radio value="1" label="&browser.download.quitBehavior.pauseOnRestart.label;"/>
+      <radio value="2" label="&browser.download.quitBehavior.cancelOnQuit.label;"/>
+    </radiogroup>
+  </groupbox>
+
+  <checkbox label="&browser.download.showAlertOnComplete.label;"
+            preference="browser.download.manager.showAlertOnComplete"/>
+  <groupbox>
+    <caption label="&browser.download.alerts.label;"/>
+    <hbox align="center">
+      <label control="browserTotalOpenTime" value="&browser.download.alerts.totalOpenTime;"/>
+      <textbox id="browserTotalOpenTime" type="number" hidespinbuttons="true" size="5" preference="alerts.totalOpenTime"/>
+      <label value="&miliseconds;"/>
+    </hbox>
+    <groupbox>
+      <caption label="&browser.download.alerts.slide.label;"/>
+      <hbox align="center">
+        <label value="&browser.download.alerts.slide.prefix.label;" control="browserSlideIncrement"/>
+        <textbox id="browserSlideIncrement" type="number" size="3" min="1" preference="alerts.slideIncrement"/>
+        <label value="&browser.download.alerts.slide.per.label;" control="browserSlideIncrementTime"/>
+        <textbox id="browserSlideIncrementTime" type="number" hidespinbuttons="true" size="5" preference="alerts.slideIncrementTime"/>
+        <label value="&miliseconds;"/>
+      </hbox>
+      <hbox pack="end">
+        <button id="alertsPreviewButton" label="&preview;" oncommand="gPrefBrowser.previewAlert(this.label, this.label);"/>
+        <button label="&reset;" oncommand="gPrefBrowser.resetAlertsSlide();"/>
+        <button label="&browser.download.alerts.slide.settolight.label;" oncommand="gPrefBrowser.setAlertsSlideLight();"/>
+      </hbox>
+    </groupbox>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="ua">
+  <description>&browser.ua.desc;</description>
+
+  <hbox align="center">
+    <label value="&browser.ua.text.label;" control="ua-value"/>
+    <textbox id="ua-value" flex="1" preference="general.useragent.override"/>
+  </hbox>
+  <hbox align="center" pack="end">
+    <button type="menu" label="&browser.ua.presets.label;"
+     oncommand="gPrefBrowser.onUserAgentPresetCommanded(event);">
+      <menupopup id="ua-presets-popup">
+        <menu label="&browser.ua.presets.this.label;">
+          <menupopup id="ua-presets-this-popup"/>
+        </menu>
+        <menuseparator/>
+      </menupopup>
+    </button>
+    <button label="&reset;" oncommand="gPrefBrowser.resetUserAgent();"/>
+  </hbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="speed-paint">
+  <hbox align="center">
+    <description flex="1">&browser.speed-paint.desc;</description>
+    <button label="&reset;" oncommand="gPrefBrowser.onSpeedPaintReset();"/>
+  </hbox>
+  <hbox align="center">
+    <label control="speed-paintDalay" value="&browser.speed-paint.delay.label;"/>
+    <textbox id="speed-paintDalay" type="number" hidespinbuttons="true" size="3" preference="nglayout.initialpaint.delay"
+     onsyncfrompreference="return gPrefBrowser.syncFrom(this, 250);"/>
+    <label value="&miliseconds;"/>
+  </hbox>
+  <label value="&browser.speed-paint.notify-backoffcount.label;"/>
+  <radiogroup id="speed-notify-backoffcount-gr" class="indent" orient="horizontal" align="center">
+    <radio value="-1" label="&browser.speed-paint.notify-backoffcount.never;"/>
+    <radio value="*" label="&manualSet;"/>
+    <textbox id="speed-notify-backoffcount" type="number" hidespinbuttons="true" min="-1" value="-1"
+     preference="content.notify.backoffcount" size="2"
+     onsyncfrompreference="return initRadioGroupConnect2('speed-notify-backoffcount-gr','speed-notify-backoffcount',-1);"/>
+  </radiogroup>
+  <html:div>
+    <label value="&browser.speed-paint.notify-interval.label;" control="speed-notify-interval"/>
+    <textbox id="speed-notify-interval" type="number" hidespinbuttons="true" preference="content.notify.interval" size="6"
+     onsyncfrompreference="return gPrefBrowser.syncFrom(this, 120000);"/>
+    <label value="&microseconds;"/>
+  </html:div>
+  <checkbox preference="content.interrupt.parsing" id="speed-interrupt-parsing"
+   onsyncfrompreference="return gPrefBrowser.onInterruptParseSyncFrom();"
+   label="&browser.speed-paint.content-interrupt.label;"/>
+  <description class="indent">&browser.speed-paint.content-interrupt.desc;</description>
+  <vbox class="indent">
+    <html:div>
+      <label value="&browser.speed-paint.content-max-tokenizing-time.label;" control="speed-max-tokenizing-time"/>
+      <textbox id="speed-max-tokenizing-time" type="number" hidespinbuttons="true" preference="content.max.tokenizing.time"
+       size="8" onsyncfrompreference="return document.getElementById('content.max.tokenizing.time').value || (parseInt(document.getElementById('speed-notify-interval').value) * 3);"/>
+      <label value="&microseconds;" control="speed-max-tokenizing-time"/>
+    </html:div>
+    <description class="indent">&browser.speed-paint.content-max-tokenizing-time.desc;</description>
+  </vbox>
+  <html:div>
+    <label value="&browser.speed-paint.content-switch-threshold.label;" control="speed-switch-threshold"/>
+    <textbox id="speed-switch-threshold" type="number" hidespinbuttons="true" preference="content.switch.threshold"
+     size="8"
+     onsyncfrompreference="return gPrefBrowser.syncFrom(this, 750000);"/>
+    <label value="&microseconds;"/>
+  </html:div>
+  <description class="indent">&browser.speed-paint.content-switch-threshold.desc;</description>
+</box>
+<box class="subtabpanel" orient="vertical" id="speed-cache">
+  <checkbox id="speed-cache-memory-enable" label="&browser.speed-cache.memory_enable.label;"
+    onsyncfrompreference="return gPrefBrowser.onMemoryEnableSyncFrom();"
+    preference="browser.cache.memory.enable"/>
+  <radiogroup class="indent" align="center" orient="horizontal" id="speed-cache-memory-capacity-type">
+    <label value="&browser.speed-cache.memory_capability.label;" id="speed-cache-memory-capacity-type-label"/>
+    <radio value="-1" label="&autoSet;"/>
+    <radio value="*" label="&manualSet;"/>
+    <textbox id="speed-cache-memory-capacity" type="number" hidespinbuttons="true" min="-1" size="8" preference="browser.cache.memory.capacity"
+     onsyncfrompreference="return initRadioGroupConnect2('speed-cache-memory-capacity-type','speed-cache-memory-capacity',-1);"/>
+    <label value="&kilobytes;" control="browser-cache-memory-capacity"/>
+  </radiogroup>
+  <groupbox>
+    <caption label="&browser.speed-cache.check.label;"/>
+    <radiogroup id="speed-cache_check" preference="browser.cache.check_doc_frequency">
+      <html:div>
+        <radio value="0" label="&browser.speed-cache.check.once.label;"/>
+        <radio value="3" label="&browser.speed-cache.check.auto.label;"/>
+        <radio value="1" label="&browser.speed-cache.check.each.label;"/>
+        <radio value="2" label="&browser.speed-cache.check.never.label;"/>
+      </html:div>
+    </radiogroup>
+    <description>&browser.speed-cache.check.desc;</description>
+  </groupbox>
+  <checkbox label="&browser.speed-cache.trim_on_minimize.label;" preference="config.trim_on_minimize"/>
+  <checkbox label="&browser.speed-cache.disk_cache_ssl.label;" preference="browser.cache.disk_cache_ssl"/>
+  <checkbox label="&browser.speed-cache.prefetch-next.label;" preference="network.prefetch-next"/>
+  <groupbox>
+    <caption label="&browser.speed-cache.session-history-viewers.label;"/>
+    <radiogroup align="center" orient="horizontal" id="session-history-viewers-gr">
+      <radio value="-1" label="&autoSet;"/>
+      <radio value="0" label="&disableSet;"/>
+      <radio value="*" label="&manualSet;"/>
+      <textbox id="session-history-viewers" type="number" min="-1" value="-1" size="2"
+       preference="browser.sessionhistory.max_total_viewers"
+       onsyncfrompreference="return initRadioGroupConnect2('session-history-viewers-gr','session-history-viewers',-1);"/>
+    </radiogroup>
+    <description>&browser.speed-cache.session-history-viewers.desc;</description>
+  </groupbox>
+  <groupbox>
+    <caption label="&browser.speed-cache.diskCacheFolder.label;"/>
+    <hbox align="center">
+      <textbox id="browserCacheDiskCacheFolder" flex="1" preference="browser.cache.disk.parent_directory"/>
+      <button label="&browse;" oncommand="gPrefBrowser.onBrowserCacheDiskCacheFolderBrowse();"/>
+      <button label="&reset;" oncommand="gPrefBrowser.resetBrowserCacheDiskCacheFolder()"/>
+    </hbox>
+    <description>&browser.speed-cache.diskCacheFolder.desc;</description>
+  </groupbox>
+</box>
+
+<box class="subtabpanel" orient="vertical" id="others">
+  <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled"/>
+  <checkbox label="&browser.others.websocket_enabled.label;" preference="network.websocket.enabled"/>
+  <groupbox>
+    <caption label="&browser.others.dns.label;"/>
+    <checkbox label="&browser.others.dns.disableIPv6.label;" preference="network.dns.disableIPv6"/>
+    <checkbox label="&browser.others.dns.prefetch.label;" preference="network.dns.disablePrefetch"
+     onsyncfrompreference="return gPrefBrowser.syncFrom(this, true);"/>
+  </groupbox>
+  <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
+
+  <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
+            onsyncfrompreference="return gPrefBrowser.onEditorExternalSyncFrom()"/>
+  <hbox id="others-editorExternal-hbox" class="indent" align="center">
+    <label control="others-editorExternal-path" label="&browser.others.editorExternal.path;"/>
+    <textbox id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
+    <button label="&browse;" control="others-editorExternal-path" oncommand="gPrefBrowser.onEditorExternalBrowse()"/>
+  </hbox>
+  <groupbox>
+    <caption label="&browser.others.backspace_action.label;"/>
+    <radiogroup preference="browser.backspace_action">
+      <radio value="0" label="&browser.others.backspace_action.goBack;"/>
+      <radio value="1" label="&browser.others.backspace_action.scrollUp;"/>
+      <radio value="2" label="&browser.others.backspace_action.nothing;"/>
+    </radiogroup>
+  </groupbox>
+</box>
+
+</deck>
+</hbox>
+
+</prefpane>
+</overlay>

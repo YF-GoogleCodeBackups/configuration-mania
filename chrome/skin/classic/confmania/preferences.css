@@ -1,0 +1,78 @@
+.listBox{
+  -moz-appearance: listbox;
+  margin: 2px 4px;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+  background: -moz-Field;
+  color: -moz-FieldText;
+
+  overflow: auto;
+}
+prefwindow#ConfmaniaPreferences .paneSelector > radio[pane] {
+  list-style-image: none;
+  -moz-image-region: auto;
+}
+
+.subtabs, .subtabpanel{
+  -moz-appearance: listbox;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+  background: -moz-Field;
+  color: -moz-FieldText;
+
+  overflow: auto;
+}
+.subtabs {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+radio.subtab {
+  -moz-appearance: none;
+  margin: 0;
+  padding: 2px;
+  border: solid 1px transparent;
+  background: -moz-Field;
+  color: -moz-FieldText;
+}
+radio.subtab * {
+  background-image: none ! important;
+}
+radio.subtab[selected] {
+  background: Highlight;
+  color: HighlightText;
+}
+radio.subtab .radio-spacer-box, radio.subtab .radio-check {
+  display: none;
+}
+.subtabpanel {
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+.subtabpanel {
+  visibility: collapse;
+  opacity: 0;
+}
+.subtabpanel[selected="true"] {
+  visibility: visible;
+  opacity: 1;
+}
+prefwindow[animated="true"] #paneBrowserBoxContainer .subtabpanel {
+  /* For animated or Mac, specify fixed height */
+  max-height: 390px;
+  min-height: 390px;
+
+  /* Enable animation for switching subtabpanel */
+  -moz-transition-duration: 500ms;
+  -moz-transition-property: opacity;
+  -moz-transition-timing-function: linear;
+}
+
+.emphasis{ font-weight: bold ! important; }
+
+*|*:-moz-any-link:hover{ color: -moz-nativehyperlinktext; text-decoration: underline; }

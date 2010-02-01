@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://confmania/locale/confmania.dtd">
+
+<overlay id="confmania-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="chrome://confmania/content/browser-Overlay.js"></script>
+  <commandset id="mainCommandSet">
+    <command id="ConfMania:Open" oncommand="window['ConfMania'].open()"/>
+  </commandset>
+  <menupopup id="menu_EditPopup">
+    <menuitem id="confmania" command="ConfMania:Open"
+              label="&confmania.label;" insertafter="menu_preferences"/>
+  </menupopup>
+  
+  <menupopup id="appmenu_customizeMenu">
+    <menuitem id="appmenu_confmania" command="ConfMania:Open"
+              label="&confmania.label;" insertafter="appmenu_preferences"/>
+  </menupopup>
+</overlay>

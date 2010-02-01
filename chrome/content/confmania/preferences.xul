@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://confmania/skin/preferences.css"?>
+
+<!DOCTYPE prefwindow [
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY cm "chrome://confmania/content">
+]>
+<prefwindow type="prefwindow" id="ConfmaniaPreferences"
+ windowtype="Browser:Confmania"
+ onload="gPrefWindow.onLoad();"
+ chromehidden="menubar location directories status extrachrome"
+ buttonlabelextra2="&reset;" ondialogextra2="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"
+ buttons="accept,cancel,extra2"
+ title="&prefWindow.title;" style="&prefWindow.style;"
+ context="prefContextPopup"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script src="&cm;/xconnect.js"/>
+<script src="chrome://global/content/contentAreaUtils.js"/>
+<script><![CDATA[
+var gPrefWindow = {
+  onLoad: function(){
+    var prefWin = document.documentElement;
+    prefWin.addEventListener("contextmenu", gPrefWindow.onContextMenu, true);
+  },
+  onResetSettings: function(event, msgtmpl){
+    var currentPane = document.documentElement.currentPane;
+    var srcbtn = document.documentElement.getButton("extra2");
+    var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                   .getService(Components.interfaces.nsIPromptService);
+
+    var msg = msgtmpl.replace(/__TABNAME__/, currentPane.label);
+    if( prompts.confirm(window, srcbtn.label, msg) ) {
+      Array.forEach(currentPane.preferences, gPrefWindow.resetPref);
+    }
+  },
+  resetPref: function(aPref) {
+    if (aPref.instantApply) {
+      if (aPref.hasUserValue) {
+        aPref.reset();
+        aPref.updateElements();
+      }
+    } else {
+      aPref.value = aPref.defaultValue;
+      aPref.updateElements();
+    }
+  },
+  _contextPrefElem: null,
+  _setPrefObj: function(event){
+    var o = event.target;
+    if (o.labeledControlElement) o = o.labeledControlElement;
+    if (o.nodeName == "radio") {
+      if ((o.value == "*") && (o.nextSibling != null) && (o.nextSibling.hasAttribute("preference"))) {
+        o = o.nextSibling;
+      } else if (o.radioGroup) o = o.radioGroup;
+    }
+
+    gPrefWindow._contextPrefElem = (o.hasAttribute("preference"))? o : null;
+  },
+  onContextMenu: function(event){
+    gPrefWindow._setPrefObj(event)
+    if (gPrefWindow._contextPrefElem == null) event.preventDefault();
+  },
+  onResetPopupClicked: function(event){
+    var o = gPrefWindow._contextPrefElem;
+    var p = document.getElementById(o.getAttribute("preference"));
+    gPrefWindow.resetPref(p);
+  },
+  onMkbPopupClicked: function(event){
+    var o = gPrefWindow._contextPrefElem;
+    openURL("http://kb.mozillazine.org/"+encodeURI(o.getAttribute("preference")));
+  }
+};
+]]></script>
+<popupset>
+  <menupopup id="prefContextPopup">
+    <menuitem label="&prefWindow.context.reset.label;" accesskey="&prefWindow.context.reset.accesskey;" onclick="gPrefWindow.onResetPopupClicked(event);" />
+    <menuitem label="&prefWindow.context.mkb.label;" accesskey="&prefWindow.context.mkb.accesskey;" onclick="gPrefWindow.onMkbPopupClicked(event);" />
+  </menupopup>
+</popupset>
+
+<prefpane id="paneBrowser" label="&browser.title;" src="&cm;/paneBrowser.xul"/>
+<prefpane id="paneSecurity" label="&security.title;" src="&cm;/paneSecurity.xul"/>
+<prefpane id="paneUI" label="&ui.title;" src="&cm;/paneUI.xul"/>
+<prefpane id="paneAddons" label="&addons.title;" src="&cm;/paneAddons.xul"/>
+<prefpane id="paneDebug" label="&debug.title;" src="&cm;/paneDebug.xul"/>
+</prefwindow>

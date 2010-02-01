@@ -1,0 +1,518 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Mozilla.org Code.
+   -
+   - The Initial Developer of the Original Code is
+   - Netscape Communications Corporation.
+   - Portions created by the Initial Developer are Copyright (C) 2003
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Aaron Leventhal
+   -                 Popoki Tom (cat_in_136) (Edited for Configuration Mania)
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+]>
+
+<overlay id="paneUIOverlay"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneUI" onpaneload="gUIPref.init();">
+
+<script><![CDATA[
+var gUIPref = {
+  init : function(){
+    this.updateMouseWheelMode();
+
+    var tabNavPref = parseInt(document.getElementById("tabFocus").value) | 1;
+    document.getElementById("tabNavigationLinks").checked = ((tabNavPref & 4) != 0);
+    document.getElementById("tabNavigationForms").checked = ((tabNavPref & 2) != 0);
+    this.initMultitouchPopup();
+    this.tabNavPrefChanged();
+  },
+  initMultitouchPopup: function(){
+    var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                   .getService(Components.interfaces.nsIWindowMediator);
+    var win = wm.getMostRecentWindow("navigator:browser");
+    var winMenubar = win.document.getElementById("main-menubar");
+    if ( win == null ) return;
+    var cmds = Array.map(win.document.getElementsByTagName("command"), function(elem){
+      return elem.id;
+    });
+
+    var oMenupop = document.createElement("menupopup");
+    cmds.sort().forEach(function(v){
+      var oMenuitem = document.createElement("menuitem");
+      oMenuitem.setAttribute("label", v);
+
+      var labelResult = win.document.evaluate("//*[(@label) and (@command='"+v+"')]", win.document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null );
+      if ( labelResult && labelResult.singleNodeValue ) {
+        oMenuitem.setAttribute("description", labelResult.singleNodeValue.label);
+      }
+
+      oMenupop.appendChild(oMenuitem);
+    });
+
+    Array.forEach(document.getElementById("multitouch-gestures-box").getElementsByTagName("menulist"), function(e){
+      e.appendChild(oMenupop.cloneNode(true));
+      e.setAttribute("sizetopopup", "none");
+    });
+  },
+  _currentIDs : {mousewheelAction : "mousewheelWithNoKeyAction",
+                 mousewheelNumlines : "mousewheelWithNoKeyNumlines",
+                 mousewheelSysNumlines : "mousewheelWithNoKeySysNumlines"},
+  updateMouseWheelMode : function(){
+    var prefix = "mousewheel";
+    if(this.isHorizScroll()) prefix += "HorizScroll"
+    prefix += "With" + this.getModKey() + "Key";
+
+    this._currentIDs["mousewheelAction"] = prefix + "Action";
+    this._currentIDs["mousewheelNumlines"] = prefix + "Numlines";
+    this._currentIDs["mousewheelSysNumlines"] = prefix + "SysNumlines";
+
+    document.getElementById("mousewheelAction").selectedIndex =
+     parseInt( document.getElementById(this._currentIDs["mousewheelAction"]).value );
+    document.getElementById("mousewheelNumlines").value =
+     document.getElementById(this._currentIDs["mousewheelNumlines"]).value;
+    document.getElementById("mousewheelSysNumlines").checked =
+     document.getElementById(this._currentIDs["mousewheelSysNumlines"]).value == "true";
+    this.mousewheelNumlineDoEnabled();
+  },
+  changed_mousewheelAction : function(){
+    var mousewheelAction = document.getElementById(this._currentIDs["mousewheelAction"]);
+    mousewheelAction.value = document.getElementById("mousewheelAction").value;
+
+    this.updateValueAt(mousewheelAction);
+    return false;
+  },
+  changed_mousewheelNumlines : function(){
+    var mousewheelNumlines = document.getElementById(this._currentIDs["mousewheelNumlines"]);
+    mousewheelNumlines.value = document.getElementById("mousewheelNumlines").value;
+
+    this.updateValueAt(mousewheelNumlines);
+    return false;
+  },
+  changed_mousewheelSysNumlines : function(){
+    var mousewheelSysNumlines = document.getElementById(this._currentIDs["mousewheelSysNumlines"]);
+    mousewheelSysNumlines.value = document.getElementById("mousewheelSysNumlines").value;
+    this.mousewheelNumlineDoEnabled();
+
+    this.updateValueAt(mousewheelSysNumlines);
+    return false;
+  },
+  mousewheelNumlineDoEnabled : function(){
+    document.getElementById("mousewheelNumlines").disabled
+     = document.getElementById("mousewheelSysNumlines").checked;
+  },
+  isHorizScroll : function(){
+    return document.getElementById("mousewheelOriental").value == "h";
+  },
+  getModKey : function(){// (No|Alt|Ctrl|Shift)
+    return document.getElementById("mousewheelMod").value;
+  },
+
+  tabNavPrefChanged : function(){
+    var tabNavPref = 1;
+    if(document.getElementById("tabNavigationLinks").checked) tabNavPref |= 4;
+    if(document.getElementById("tabNavigationForms").checked) tabNavPref |= 2;
+    var tabFocus = document.getElementById("tabFocus");
+    tabFocus.value = tabNavPref;
+    this.updateValueAt(tabFocus);
+  },
+
+  updateValueAt : function(target){
+    document.getElementById("paneUI").userChangedValue(target);
+  }
+};
+]]></script>
+
+<preferences>
+  <preference type="int" id="mousewheel.withnokey.action" name="mousewheel.withnokey.action"/>
+  <preference type="int" id="mousewheel.withnokey.numlines" name="mousewheel.withnokey.numlines"/>
+  <preference type="bool" id="mousewheel.withnokey.sysnumlines" name="mousewheel.withnokey.sysnumlines"/>
+  <preference type="int" id="mousewheel.withaltkey.action" name="mousewheel.withaltkey.action"/>
+  <preference type="int" id="mousewheel.withaltkey.numlines" name="mousewheel.withaltkey.numlines"/>
+  <preference type="bool" id="mousewheel.withaltkey.sysnumlines" name="mousewheel.withaltkey.sysnumlines"/>
+  <preference type="int" id="mousewheel.withcontrolkey.action" name="mousewheel.withcontrolkey.action"/>
+  <preference type="int" id="mousewheel.withcontrolkey.numlines" name="mousewheel.withcontrolkey.numlines"/>
+  <preference type="bool" id="mousewheel.withcontrolkey.sysnumlines" name="mousewheel.withcontrolkey.sysnumlines"/>
+  <preference type="int" id="mousewheel.withshiftkey.action" name="mousewheel.withshiftkey.action"/>
+  <preference type="int" id="mousewheel.withshiftkey.numlines" name="mousewheel.withshiftkey.numlines"/>
+  <preference type="bool" id="mousewheel.withshiftkey.sysnumlines" name="mousewheel.withshiftkey.sysnumlines"/>
+  <preference type="int" id="mousewheel.horizscroll.withnokey.action" name="mousewheel.horizscroll.withnokey.action"/>
+  <preference type="int" id="mousewheel.horizscroll.withnokey.numlines" name="mousewheel.horizscroll.withnokey.numlines"/>
+  <preference type="bool" id="mousewheel.horizscroll.withnokey.sysnumlines" name="mousewheel.horizscroll.withnokey.sysnumlines"/>
+  <preference type="int" id="mousewheel.horizscroll.withaltkey.action" name="mousewheel.horizscroll.withaltkey.action"/>
+  <preference type="int" id="mousewheel.horizscroll.withaltkey.numlines" name="mousewheel.horizscroll.withaltkey.numlines"/>
+  <preference type="bool" id="mousewheel.horizscroll.withaltkey.sysnumlines" name="mousewheel.horizscroll.withaltkey.sysnumlines"/>
+  <preference type="int" id="mousewheel.horizscroll.withcontrolkey.action" name="mousewheel.horizscroll.withcontrolkey.action"/>
+  <preference type="int" id="mousewheel.horizscroll.withcontrolkey.numlines" name="mousewheel.horizscroll.withcontrolkey.numlines"/>
+  <preference type="bool" id="mousewheel.horizscroll.withcontrolkey.sysnumlines" name="mousewheel.horizscroll.withcontrolkey.sysnumlines"/>
+  <preference type="int" id="mousewheel.horizscroll.withshiftkey.action" name="mousewheel.horizscroll.withshiftkey.action"/>
+  <preference type="int" id="mousewheel.horizscroll.withshiftkey.numlines" name="mousewheel.horizscroll.withshiftkey.numlines"/>
+  <preference type="bool" id="mousewheel.horizscroll.withshiftkey.sysnumlines" name="mousewheel.horizscroll.withshiftkey.sysnumlines"/>
+
+  <preference id="browser.gesture.swipe.left"      name="browser.gesture.swipe.left"      type="string"/>
+  <preference id="browser.gesture.swipe.right"     name="browser.gesture.swipe.right"     type="string"/>
+  <preference id="browser.gesture.swipe.up"        name="browser.gesture.swipe.up"        type="string"/>
+  <preference id="browser.gesture.swipe.down"      name="browser.gesture.swipe.down"      type="string"/>
+  <preference id="browser.gesture.pinch.out"       name="browser.gesture.pinch.out"       type="string"/>
+  <preference id="browser.gesture.pinch.in"        name="browser.gesture.pinch.in"        type="string"/>
+  <preference id="browser.gesture.pinch.out.shift" name="browser.gesture.pinch.out.shift" type="string"/>
+  <preference id="browser.gesture.pinch.in.shift"  name="browser.gesture.pinch.in.shift"  type="string"/>
+  <preference id="browser.gesture.twist.right"     name="browser.gesture.twist.right"     type="string"/>
+  <preference id="browser.gesture.twist.left"      name="browser.gesture.twist.left"      type="string"/>
+
+  <preference id="accessibility.typeaheadfind.timeout" name="accessibility.typeaheadfind.timeout" type="int"/>
+  <preference id="accessibility.typeaheadfind.enablesound" name="accessibility.typeaheadfind.enablesound" type="string"/>
+  <preference id="accessibility.typeaheadfind.casesensitive" name="accessibility.typeaheadfind.casesensitive" type="int"/>
+
+  <preference id="accessibility.tabfocus" name="accessibility.tabfocus" type="int"/>
+  <preference id="ui.key.accelKey" name="ui.key.accelKey" type="int"/>
+  <preference id="ui.key.menuAccessKey" name="ui.key.menuAccessKey" type="int"/>
+
+  <preference id="bidi.browser.ui" name="bidi.browser.ui" type="bool"/>
+  <preference id="bidi.characterset" name="bidi.characterset" type="int"/>
+  <preference id="bidi.controlstextmode" name="bidi.controlstextmode" type="int"/>
+  <preference id="bidi.direction" name="bidi.direction" type="int"/>
+  <preference id="bidi.numeral" name="bidi.numeral" type="int"/>
+  <preference id="bidi.support" name="bidi.support" type="int"/>
+  <preference id="bidi.texttype" name="bidi.texttype" type="int"/>
+  <preference id="layout.scrollbar.side" name="layout.scrollbar.side" type="int"/>
+
+  <preference id="general.useragent.locale" name="general.useragent.locale" type="string"/>
+  <preference id="layout.spellcheckDefault" name="layout.spellcheckDefault" type="int"/>
+  <preference id="layout.enable_japanese_specific_transform" name="layout.enable_japanese_specific_transform" type="bool"/>
+
+  <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
+  <preference id="browser.preferences.animateFadeIn" name="browser.preferences.animateFadeIn" type="bool"/>
+  <preference id="clipboard.autocopy" name="clipboard.autocopy" type="bool"/>
+  <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
+  <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
+  <preference id="middlemouse.scrollbarPosition" name="middlemouse.scrollbarPosition" type="bool"/>
+  <preference id="ui.submenuDelay" name="ui.submenuDelay" type="int"/>
+  <preference id="nglayout.enable_drag_images" name="nglayout.enable_drag_images" type="bool"/>
+  <preference id="ui.allow_platform_file_picker" name="ui.allow_platform_file_picker" type="bool" inverted="true"/>
+</preferences>
+
+<tabbox flex="1">
+<tabs>
+<tab label="&ui.mousewheel.label;"/>
+<tab label="&ui.multitouch.label;"/>
+<tab label="&ui.find.label;"/>
+<tab label="&ui.keynav.label;"/>
+<tab label="&ui.bidi.label;"/>
+<tab label="&ui.i18n.label;"/>
+<tab label="&ui.others.label;"/>
+</tabs>
+<tabpanels flex="1">
+<tabpanel orient="vertical">
+  <groupbox>
+    <caption align="center">
+      <menulist id="mousewheelOriental" label="Vertical" oncommand="gUIPref.updateMouseWheelMode();">
+        <menupopup>
+          <menuitem label="&ui.mousewheel.vertiscroll.label;" value="v" selected="true"/>
+          <menuitem label="&ui.mousewheel.horizscroll.label;" value="h"/>
+        </menupopup>
+      </menulist>
+      <label value="&ui.mousewheel.mouseWheelPanel.label;"/>
+      <menulist id="mousewheelMod" label="&ui.mousewheel.usingJustTheWheel.label;"
+       oncommand="gUIPref.updateMouseWheelMode();">
+        <menupopup>
+          <menuitem label="&ui.mousewheel.usingJustTheWheel.label;" value="No" selected="true"/>
+          <menuitem label="Alt" value="Alt"/>
+          <menuitem label="Ctrl" value="Ctrl"/>
+          <menuitem label="Shift" value="Shift"/>
+        </menupopup>
+      </menulist>
+      <label value="&ui.mousewheel.mouseWheelPanel2.label;"/>
+    </caption>
+
+    <radiogroup id="mousewheelAction" oncommand="gUIPref.changed_mousewheelAction();">
+      <hbox align="start">
+        <radio value="0" label="&ui.mousewheel.scroll.label;"/>
+        <vbox align="start">
+          <hbox align="center">
+            <textbox id="mousewheelNumlines" type="number" size="3" onchange="gUIPref.changed_mousewheelNumlines();"/>
+            <label value="&ui.mousewheel.scrollLines.label;"/>
+          </hbox>
+          <checkbox id="mousewheelSysNumlines" label="&ui.mousewheel.useSystemDefault.label;"
+           oncommand="gUIPref.changed_mousewheelSysNumlines();"/>
+        </vbox>
+      </hbox>
+      <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
+      <radio value="2" label="&ui.mousewheel.history.label;"/>
+      <radio value="3" label="&ui.mousewheel.textsize.label;"/>
+    </radiogroup>
+  </groupbox>
+
+  <!-- __DATA__ -->
+  <data hidden="true">
+    <textbox id="mousewheelWithNoKeyAction" preference="mousewheel.withnokey.action"/>
+    <textbox id="mousewheelWithNoKeyNumlines" preference="mousewheel.withnokey.numlines"/>
+    <textbox id="mousewheelWithNoKeySysNumlines" preference="mousewheel.withnokey.sysnumlines"/>
+    <textbox id="mousewheelWithAltKeyAction" preference="mousewheel.withaltkey.action"/>
+    <textbox id="mousewheelWithAltKeyNumlines" preference="mousewheel.withaltkey.numlines"/>
+    <textbox id="mousewheelWithAltKeySysNumlines" preference="mousewheel.withaltkey.sysnumlines"/>
+    <textbox id="mousewheelWithCtrlKeyAction" preference="mousewheel.withcontrolkey.action"/>
+    <textbox id="mousewheelWithCtrlKeyNumlines" preference="mousewheel.withcontrolkey.numlines"/>
+    <textbox id="mousewheelWithCtrlKeySysNumlines" preference="mousewheel.withcontrolkey.sysnumlines"/>
+    <textbox id="mousewheelWithShiftKeyAction" preference="mousewheel.withshiftkey.action"/>
+    <textbox id="mousewheelWithShiftKeyNumlines" preference="mousewheel.withshiftkey.numlines"/>
+    <textbox id="mousewheelWithShiftKeySysNumlines" preference="mousewheel.withshiftkey.sysnumlines"/>
+    <textbox id="mousewheelHorizScrollWithNoKeyAction" preference="mousewheel.horizscroll.withnokey.action"/>
+    <textbox id="mousewheelHorizScrollWithNoKeyNumlines" preference="mousewheel.horizscroll.withnokey.numlines"/>
+    <textbox id="mousewheelHorizScrollWithNoKeySysNumlines" preference="mousewheel.horizscroll.withnokey.sysnumlines"/>
+    <textbox id="mousewheelHorizScrollWithAltKeyAction" preference="mousewheel.horizscroll.withaltkey.action"/>
+    <textbox id="mousewheelHorizScrollWithAltKeyNumlines" preference="mousewheel.horizscroll.withaltkey.numlines"/>
+    <textbox id="mousewheelHorizScrollWithAltKeySysNumlines" preference="mousewheel.horizscroll.withaltkey.sysnumlines"/>
+    <textbox id="mousewheelHorizScrollWithCtrlKeyAction" preference="mousewheel.horizscroll.withcontrolkey.action"/>
+    <textbox id="mousewheelHorizScrollWithCtrlKeyNumlines" preference="mousewheel.horizscroll.withcontrolkey.numlines"/>
+    <textbox id="mousewheelHorizScrollWithCtrlKeySysNumlines" preference="mousewheel.horizscroll.withcontrolkey.sysnumlines"/>
+    <textbox id="mousewheelHorizScrollWithShiftKeyAction" preference="mousewheel.horizscroll.withshiftkey.action"/>
+    <textbox id="mousewheelHorizScrollWithShiftKeyNumlines" preference="mousewheel.horizscroll.withshiftkey.numlines"/>
+    <textbox id="mousewheelHorizScrollWithShiftKeySysNumlines" preference="mousewheel.horizscroll.withshiftkey.sysnumlines"/>
+  </data>
+</tabpanel>
+<tabpanel id="multitouch-box" orient="vertical">
+  <groupbox id="multitouch-gestures-box">
+    <caption label="&ui.multitouch.gestures.label;"/>
+    <hbox>
+      <vbox flex="1">
+        <label value="&ui.multitouch.gestures.pinch.in.label;" control="menu_pinch_in"/>
+        <menulist class="indent" editable="true" preference="browser.gesture.pinch.in" id="menu_pinch_in"/>
+        <label value="&ui.multitouch.gestures.pinch.in.shift.label;" control="menu_pinch_in_shift"/>
+        <menulist class="indent" editable="true" preference="browser.gesture.pinch.in.shift" id="menu_pinch_in_shift"/>
+      </vbox>
+      <vbox flex="1">
+        <label value="&ui.multitouch.gestures.pinch.out.label;" control="menu_pinch_out"/>
+        <menulist class="indent" editable="true" preference="browser.gesture.pinch.out" id="menu_pinch_out"/>
+        <label value="&ui.multitouch.gestures.pinch.out.shift.label;" control="menu_pinch_out_shift"/>
+        <menulist class="indent" editable="true" preference="browser.gesture.pinch.out.shift" id="menu_pinch_out_shift"/>
+      </vbox>
+    </hbox>
+    <groupbox>
+      <caption label="&ui.multitouch.gestures.swipe.label;"/>
+      <grid>
+      <columns><column flex="1"/><column flex="1"/><column flex="1"/></columns>
+      <rows>
+      <row align="center">
+        <box/>
+        <menulist editable="true" preference="browser.gesture.swipe.up"/>
+        <box/>
+      </row>
+      <row align="center">
+        <menulist editable="true" preference="browser.gesture.swipe.left"/>
+        <box/>
+        <menulist editable="true" preference="browser.gesture.swipe.right"/>
+      </row>
+      <row align="center">
+        <box/>
+        <menulist editable="true" preference="browser.gesture.swipe.down"/>
+        <box/>
+      </row>
+      </rows>
+      </grid>
+    </groupbox>
+    <groupbox orient="horizontal">
+      <caption label="&ui.multitouch.gestures.twist.label;"/>
+      <menulist editable="true" preference="browser.gesture.twist.left" flex="1"/>
+      <menulist editable="true" preference="browser.gesture.twist.right" flex="1"/>
+    </groupbox>
+  </groupbox>
+</tabpanel>
+<tabpanel orient="vertical">
+  <groupbox>
+    <caption label="&ui.find.findahead.label;"/>
+    <description>&ui.find.findahead.desc;</description>
+    <hbox align="center">
+      <label value="&ui.find.findahead.timeout.label;" control="keyNavTypeAHeadTimeout"/>
+      <textbox id="keyNavTypeAHeadTimeout" type="number" hidespinbuttons="true" preference="accessibility.typeaheadfind.timeout" size="5"/>
+      <label value="&ui.find.findahead.timeout.label2;"/>
+    </hbox>
+    <checkbox id="keyNavTypeAHeadSound" label="&ui.find.findahead.sound.label;"
+     preference="accessibility.typeaheadfind.enablesound"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&ui.find.casesensitive.label;"/>
+    <radiogroup preference="accessibility.typeaheadfind.casesensitive">
+      <radio value="0" label="&ui.find.casesensitive.insensitive;"/>
+      <radio value="1" label="&ui.find.casesensitive.sensitive;"/>
+      <radio value="-1" label="&ui.find.casesensitive.auto;"/>
+    </radiogroup>
+  </groupbox>
+</tabpanel>
+<tabpanel orient="vertical">
+  <groupbox align="start">
+    <caption label="&ui.keynav.tabNavigationBehavior.label;"/>
+    <description value="&ui.keynav.tabNavigationDesc.label;"/>
+    <!-- gData var and kTabTo* consts are declared in pref-keynav.js -->
+    <checkbox id="tabNavigationLinks" class="indent" label="&ui.keynav.tabNavigationLinks.label;"
+     accesskey="&ui.keynav.tabNavigationLinks.accesskey;"
+     oncommand="gUIPref.tabNavPrefChanged();"/>
+    <checkbox id="tabNavigationForms" class="indent" label="&ui.keynav.tabNavigationForms.label;"
+     accesskey="&ui.keynav.tabNavigationForms.accesskey;"
+     oncommand="gUIPref.tabNavPrefChanged();"/>
+    <description value="&ui.keynav.tabNavigationTextboxes.label;"/>
+    <textbox hidden="true" id="tabFocus" preference="accessibility.tabfocus"/>
+  </groupbox>
+
+  <groupbox>
+    <caption label="&ui.keynav.accelerators.label;"/>
+    <label value="&ui.keynav.acceleratorsBlurb.label;"/>
+
+    <hbox align="center">
+      <label value="&ui.keynav.acceleratorKey.label;"
+       accesskey="&ui.keynav.acceleratorKey.accesskey;" control="acceleratorKeyValue"/>
+      <textbox id="acceleratorKeyValue" type="number" hidespinbuttons="true" preference="ui.key.accelKey" size="5"/>
+    </hbox>
+    <hbox align="center">
+      <label value="&ui.keynav.menuAccessKey.label;" accesskey="&ui.keynav.menuAccessKey.accesskey;" control="menuAccessKeyValue"/>
+      <textbox id="menuAccessKeyValue" type="number" hidespinbuttons="true" preference="ui.key.menuAccessKey" size="5"/>
+    </hbox>
+  </groupbox>
+</tabpanel>
+<tabpanel orient="vertical">
+    <vbox>
+      <checkbox label="&ui.bidi.ui.label;" preference="bidi.browser.ui"/>
+      <grid>
+      <columns><column/><column flex="1"/></columns>
+      <rows>
+      <row align="center">
+        <label value="&ui.bidi.characterset.label;"/>
+        <radiogroup id="bidi-charset" orient="horizontal" preference="bidi.characterset">
+          <radio value="1" label="&ui.bidi.characterset.doc.label;"/>
+          <radio value="2" label="&ui.bidi.characterset.default.label;"/>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label value="&ui.bidi.controlstextmode.label;"/>
+        <radiogroup id="bidi-controlstextmode" orient="horizontal" preference="bidi.controlstextmode">
+          <radio value="1" label="&ui.bidi.controlstextmode.logical.label;"/>
+          <radio value="2" label="&ui.bidi.controlstextmode.visual.label;"/>
+          <radio value="3" label="&ui.bidi.controlstextmode.container.label;"/>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label value="&ui.bidi.direction.label;"/>
+        <radiogroup id="bidi-direction" orient="horizontal" preference="bidi.direction">
+          <radio value="1" label="&ui.bidi.direction.ltr.label;"/>
+          <radio value="2" label="&ui.bidi.direction.rtl.label;"/>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label control="bidi-numeral" value="&ui.bidi.numeral.label;"/>
+        <radiogroup id="bidi-numeral" orient="horizontal" preference="bidi.numeral">
+          <radio value="0" label="&ui.bidi.numeral.regular_context.label;"/>
+          <radio value="1" label="&ui.bidi.numeral.hindi_context.label;"/>
+          <radio value="2" label="&ui.bidi.numeral.arabic.label;"/>
+          <radio value="3" label="&ui.bidi.numeral.hindi.label;"/>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label value="&ui.bidi.support.label;"/>
+        <radiogroup id="bidi-provider" orient="horizontal" preference="bidi.support">
+          <radio value="1" label="&ui.bidi.support.mozilla.label;"/>
+          <radio value="2" label="&ui.bidi.support.os.label;"/>
+          <radio value="3" label="&ui.bidi.support.disable.label;"/>
+        </radiogroup>
+      </row>
+      <row align="center">
+        <label value="&ui.bidi.texttype.label;"/>
+        <radiogroup id="bidi-texttype" orient="horizontal" preference="bidi.texttype">
+          <radio value="1" label="&ui.bidi.texttype.charset.label;"/>
+          <radio value="2" label="&ui.bidi.texttype.logical.label;"/>
+          <radio value="3" label="&ui.bidi.texttype.visual.label;"/>
+        </radiogroup>
+      </row>
+      </rows>
+      </grid>
+    </vbox>
+      <groupbox>
+        <caption label="&ui.bidi.scrollbarSide.label;"/>
+        <radiogroup preference="layout.scrollbar.side">
+          <radio value="0" label="&ui.bidi.scrollbarSide.uiBase;"/>
+          <radio value="1" label="&ui.bidi.scrollbarSide.contentBase;"/>
+          <radio value="2" label="&ui.bidi.scrollbarSide.right;"/>
+          <radio value="3" label="&ui.bidi.scrollbarSide.left;"/>
+        </radiogroup>
+      </groupbox>
+</tabpanel>
+<tabpanel orient="vertical">
+  <hbox align="center">
+    <label value="&ui.i18n.locale.label;" control="contentLocale"/>
+    <textbox id="contentLocale" preference="general.useragent.locale" size="8"/>
+    <label value="&ui.i18n.locale.eg;"/>
+  </hbox>
+
+  <groupbox>
+    <caption label="&ui.i18n.spellcheckDefault.label;"/>
+    <radiogroup preference="layout.spellcheckDefault">
+      <radio value="0" label="&ui.i18n.spellcheckDefault.disabled;"/>
+      <radio value="1" label="&ui.i18n.spellcheckDefault.multiline;"/>
+      <radio value="2" label="&ui.i18n.spellcheckDefault.all;"/>
+    </radiogroup>
+  </groupbox>
+  <checkbox label="&ui.i18n.japanese_specific_transform.label;" preference="layout.enable_japanese_specific_transform"/>
+</tabpanel>
+<tabpanel orient="vertical">
+  <groupbox>
+    <caption label="&ui.others.preference.label;"/>
+    <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
+    <checkbox label="&ui.others.preference.animateFadeIn.label;" preference="browser.preferences.animateFadeIn"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&ui.others.xwin.label;"/>
+    <checkbox label="&ui.others.xwin.autocopy.label;" preference="clipboard.autocopy"/>
+    <checkbox label="&ui.others.xwin.paste.label;" preference="middlemouse.paste"/>
+    <checkbox label="&ui.others.xwin.contentLoadURL.label;" preference="middlemouse.contentLoadURL"/>
+    <checkbox label="&ui.others.xwin.scrollbarPosition.label;" preference="middlemouse.scrollbarPosition"/>
+    <groupbox>
+      <caption label="&ui.others.xwin.uiSubmenuDelay.label;"/>
+      <radiogroup id="uiSubmenuDelay-radio" orient="horizontal" align="center">
+        <radio value="0" label="&ui.others.xwin.uiSubmenuDelay.none.label;"/>
+        <radio value="-1" label="&ui.others.xwin.uiSubmenuDelay.inf.label;"/>
+        <radio value="*" label="&manualSet;"/>
+        <textbox id="uiSubmenuDelay" type="number" hidespinbuttons="true" min="-1" size="4" preference="ui.submenuDelay"
+          onsyncfrompreference="return initRadioGroupConnect2('uiSubmenuDelay-radio','uiSubmenuDelay',0);"/>
+        <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
+      </radiogroup>
+    </groupbox>
+  </groupbox>
+  <checkbox label="&ui.others.enable_drag_images.label;" preference="nglayout.enable_drag_images"/>
+  <checkbox label="&ui.others.xul_file_picker;" preference="ui.allow_platform_file_picker"/>
+</tabpanel>
+</tabpanels>
+</tabbox>
+
+</prefpane>
+</overlay>

@@ -1,0 +1,375 @@
+<!ENTITY prefWindow.title "Configuration Mania">
+<!ENTITY prefWindow.style "width:50em; min-height: 40em;">
+<!ENTITY prefwindow.resetMessageTemplate "Changes will be lost! Are you sure you want to reset settings on this tab [__TABNAME__]?">
+<!ENTITY prefWindow.context.reset.label "Reset setting to the default value">
+<!ENTITY prefWindow.context.reset.accesskey "R">
+<!ENTITY prefWindow.context.mkb.label "Search in MozillaZine Knowledge Base">
+<!ENTITY prefWindow.context.mkb.accesskey "S">
+
+<!ENTITY browser.title "Browser">
+<!ENTITY browser.smartbrowsing.label "SmartBrowsing">
+<!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
+<!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords enables fast access to services such as search and other information from the Location bar.">
+<!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Enable Internet Keywords">
+<!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL Prefix :">
+<!ENTITY browser.smartbrowsing.domainGuessing.label "Domain Guessing">
+<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Automatically add prefix &amp; suffix to the location if a web page isn't found.">
+<!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefix :">
+<!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Suffix :">
+<!ENTITY browser.urlbar.label "Location Bar">
+<!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when clicked">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when double-clicked">
+<!ENTITY browser.urlbar.autoComplete.label "Disable autocomplete">
+<!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
+<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Filter out bookmarklet (&quot;javascript:&quot; URLs)">
+<!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maximum number of entries">
+<!ENTITY browser.urlbar.autoComplete.delay.label "Wait time of starting to autocomplete :">
+<!ENTITY browser.html.label "Page control">
+<!ENTITY browser.html.allowBlink.label "Allow blinking text">
+<!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
+<!ENTITY browser.html.enableFrame.label "Enable frames">
+<!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
+<!ENTITY browser.html.img "Image">
+<!ENTITY browser.html.img.anim.label "Animated images should loop">
+<!ENTITY browser.html.img.anim.normal.label "As many times as the image specifies">
+<!ENTITY browser.html.img.anim.once.label "Once">
+<!ENTITY browser.html.img.anim.none.label "Never (Stop)">
+<!ENTITY browser.html.img.resizing.label "Resize large images to fit in the browser window">
+<!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
+<!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
+<!ENTITY browser.html.color_management.label "Color Management (CMS) (takes effect after restart)">
+<!ENTITY browser.html.color_management.mode.label "Mode">
+<!ENTITY browser.html.color_management.mode.off.label "Disable CMS">
+<!ENTITY browser.html.color_management.mode.on.label "Enable for rendered graphics">
+<!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
+<!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
+<!ENTITY browser.html.html5.label "Enable HTML 5 Parsing">
+<!ENTITY browser.html.enableSVG.label "Enable rendering SVG content">
+<!ENTITY browser.html.enableSVGSMIL.label "Enable SMIL content (Firefox 4.0+)">
+<!ENTITY browser.html.webgl.label "Enable WebGL (Firefox 4.0+; takes effect after restart)">
+<!ENTITY browser.html.webgl.software_render.label "Use software rendering">
+<!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib path :">
+<!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
+<!ENTITY browser.html.zoomSiteSpecific.label "Remember the zoom preferences page by page">
+<!ENTITY browser.html.focus.label "Highlight Focus">
+<!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
+<!ENTITY browser.html.focus.bg.label "Background Color">
+<!ENTITY browser.html.focus.fg.label "Text Color">
+<!ENTITY browser.html.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">
+<!ENTITY browser.tabs.label "TabBrowsing">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab">
+<!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
+<!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
+<!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">
+<!ENTITY browser.tabs.closeButtons.no.label "Not any close button">
+<!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
+<!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
+<!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width (Firefox 3.x)">
+<!ENTITY browser.tabs.tabWidth.min.label "Minimum">
+<!ENTITY browser.tabs.tabWidth.max.label "Maximum">
+<!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
+<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab (Firefox 3.6+)">
+<!ENTITY browser.tabs.autoselect.label "Auto tab selection">
+<!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
+<!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
+<!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "When closed tab, Focus back to the tab that opened it">
+<!ENTITY browser.tabs.tabpreview.label "Enable thumbnail preview (Firefox3.6+)">
+<!ENTITY browser.tabs.tabpreview.alltabs.label "on the All tabs panel">
+<!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
+<!ENTITY browser.tabs.tabpreview.taskbar.label "on Taskbar (Windows7)">
+<!ENTITY browser.sessionStore.label "Session Store">
+<!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
+<!ENTITY browser.sessionStore.max_undo.label "Number of closures to remember for restoration">
+<!ENTITY browser.sessionStore.max_undo.windows.label "Number of window closures :">
+<!ENTITY browser.sessionStore.max_undo.tabs.label "Number of tab closures :">
+<!ENTITY browser.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
+<!ENTITY browser.sessionStore.privacy_level.label "Store extra session data :">
+<!ENTITY browser.sessionStore.privacy_level.any.label "for any site">
+<!ENTITY browser.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
+<!ENTITY browser.sessionStore.privacy_level.never.label "Never">
+<!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
+<!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab &amp; location bar">
+<!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
+<!ENTITY browser.download.label "Download">
+<!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
+<!ENTITY browser.download.quitBehavior.label "What should happen to in-progress downloads when &brandShortName; quited">
+<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">
+<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Pause but will not resume downloads automatically when &brandShortName; restarted">
+<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
+<!ENTITY browser.download.showAlertOnComplete.label "Show alert on complete download">
+<!ENTITY browser.download.alerts.label "The Alerts configuration">
+<!ENTITY browser.download.alerts.totalOpenTime "Show alerts for">
+<!ENTITY browser.download.alerts.slide.label "Speed of alert slide-animation">
+<!ENTITY browser.download.alerts.slide.prefix.label "Move the alerts by">
+<!ENTITY browser.download.alerts.slide.per.label "pixels per">
+<!ENTITY browser.download.alerts.slide.settolight.label "Set light-weight conf.">
+<!ENTITY browser.ua.label "User-Agent">
+<!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
+<!ENTITY browser.ua.text.label "UA string :">
+<!ENTITY browser.ua.presets.label "Preset">
+<!ENTITY browser.ua.presets.this.label "&brandShortName;, this version.">
+<!ENTITY browser.speed-paint.label "Paint&amp;Rendering">
+<!ENTITY browser.speed-paint.desc "WARNING: The Recommended values are not always suitable for your line and PC environment. It sometimes make browsing slower or heavy. (But some of them feel browsing faster, which is the Placebo effect :-)">
+<!ENTITY browser.speed-paint.delay.label "Initial paint delay">
+<!ENTITY browser.speed-paint.notify-backoffcount.label "Max Number of timer-based reflows to perform">
+<!ENTITY browser.speed-paint.notify-backoffcount.never "No limit">
+<!ENTITY browser.speed-paint.notify-interval.label "Interval for the initial reflows">
+<!ENTITY browser.speed-paint.content-interrupt.label "Parsing cannot be interrupt">
+<!ENTITY browser.speed-paint.content-interrupt.desc "Caution: &brandShortName; can be unresponsive until parsing is complete.">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.label "Maximum time to interrupt the process">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "Caution: Do not set 0.">
+<!ENTITY browser.speed-paint.content-switch-threshold.label "High-&gt;Low frequency interrupt mode switch Threshold">
+<!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode provides better UI responsiveness at the expense of load time; Default: 750000 ie. 3/4 ms">
+<!ENTITY browser.speed-cache.label "Browser Cache">
+<!ENTITY browser.speed-cache.check.label "Check cache of the pages ...">
+<!ENTITY browser.speed-cache.check.desc "WARNING: &quot;Once per session&quot; speeds up your web browsing but can cause problems on some sites. Check &quot;&browser.speed-cache.check.each.label;&quot; if a page is not updated correctly. You can always use Shift+Reload to force a reload.">
+<!ENTITY browser.speed-cache.check.once.label "Once per session">
+<!ENTITY browser.speed-cache.check.each.label "Each time">
+<!ENTITY browser.speed-cache.check.never.label "Never (Not Recommended)">
+<!ENTITY browser.speed-cache.check.auto.label "When it is out of date (Preferred)">
+<!ENTITY browser.speed-cache.memory_enable.label "Enable cache memory (Never disabled, usually)">
+<!ENTITY browser.speed-cache.memory_capability.label "Cache Memory">
+<!ENTITY browser.speed-cache.trim_on_minimize.label "Swap out memory when &brandShortName; is minimized (Windows Only)">
+<!ENTITY browser.speed-cache.disk_cache_ssl.label "Also store SSL-connection pages in the cache (INSECURE)">
+<!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
+<!ENTITY browser.speed-cache.session-history-viewers.label "Max Number of pages stored in memory">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: This improves performance when pressing Back and Forward, If you have a lot of tabs, &brandShortName;'s memory usage can climb dramatically. It's a trade-off.">
+<!ENTITY browser.speed-cache.diskCacheFolder.label "Cache Folder Location">
+<!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
+<!ENTITY browser.others.label "Others">
+<!ENTITY browser.others.geo_enabled.label "Enable Geolocation">
+<!ENTITY browser.others.websocket_enabled.label "Enable WebSocket (Firefox 4.0+)">
+<!ENTITY browser.others.dns.label "DNS Setting">
+<!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
+<!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
+<!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
+<!ENTITY browser.others.editorExternal "View source with external editor">
+<!ENTITY browser.others.editorExternal.path "Editor path:">
+<!ENTITY browser.others.backspace_action.label "Action when Pressing [Backspace] :">
+<!ENTITY browser.others.backspace_action.goBack "Go back a page in the session history (same as IE)">
+<!ENTITY browser.others.backspace_action.scrollUp "Scroll up in the current document">
+<!ENTITY browser.others.backspace_action.nothing "Do nothing">
+
+<!ENTITY security.title "Security">
+<!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.annoy.label "More Advanced">
+<!ENTITY security.js.annoy.max_script_run_time.label "Script execution time of which the browser warns">
+<!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable Closing non-popup windows">
+<!ENTITY security.js.annoy.window_flip "Disable Requesting/Removing window focus">
+<!ENTITY security.js.annoy.window_move_resize "Disable Moving/Resizing existing windows">
+<!ENTITY security.js.annoy.status_change "Disable Changing statusbar">
+<!ENTITY security.js.annoy.change_image "Disable Changing images">
+<!ENTITY security.js.annoy.change_image.desc "Caution: The setting &quot;&security.js.annoy.change_image;&quot; cause some web applications (such as Google Map) not to work.">
+<!ENTITY security.js.annoy.contextmenu "Disallow to dispatch contextmenu events">
+<!ENTITY security.js.annoy.dispatchLeftClickOnly "Allow to dispatch left click only">
+<!ENTITY security.js.uis.label "Anti UI spoof">
+<!ENTITY security.js.uis.desc1 "Disable hiding (and Enable) when opened by JavaScript :">
+<!ENTITY security.js.uis.desc2 "Make all items checked so as to avoid UI spool.">
+<!ENTITY security.js.uis.menubar "Menubar">
+<!ENTITY security.js.uis.resizable "Resizable">
+<!ENTITY security.js.uis.scrollbars "Scroll bars">
+<!ENTITY security.js.uis.toolbar "Tool bar">
+<!ENTITY security.js.uis.locationbar "Location bar">
+<!ENTITY security.js.uis.status "Status bar">
+<!ENTITY security.popupwin.label "Popup Win.">
+<!ENTITY security.popupwin.tabs.label "On opening Popup Windows (window.open) on the Tabbed Browsing:">
+<!ENTITY security.popupwin.tabs.0.label "Same as the link's setting">
+<!ENTITY security.popupwin.tabs.1.label "Open new window">
+<!ENTITY security.popupwin.tabs.2.label "Same as the link's setting, but open window if specified how to be displayed (Default)">
+<!ENTITY security.popupwin.popup_maximum.label "Maximum count of the windows">
+<!ENTITY security.popupwin.from_plugins.label "Limit to Popup Windows from plugins:">
+<!ENTITY security.popupwin.from_plugins.0.label "No restrictions">
+<!ENTITY security.popupwin.from_plugins.1.label "Limit the numbers to &quot;&security.popupwin.popup_maximum.label;&quot;">
+<!ENTITY security.popupwin.from_plugins.2.label "Block all except whitelisted">
+<!ENTITY security.popupwin.from_plugins.3.label "Block all even those on whitelisted">
+<!ENTITY security.popupwin.event.label "Allow to open when:">
+<!ENTITY security.popupwin.event.reset.label "Reset form">
+<!ENTITY security.popupwin.event.submit.label "Submit form">
+<!ENTITY security.popupwin.event.select.label "Selected a form">
+<!ENTITY security.popupwin.event.change.label "Changed a text">
+<!ENTITY security.popupwin.event.resize.label "Resized windows">
+<!ENTITY security.popupwin.event.input.label "Input">
+<!ENTITY security.popupwin.event.keypress.label "Pressed Key">
+<!ENTITY security.popupwin.event.keydown.label "Key Down">
+<!ENTITY security.popupwin.event.keyup.label "Key Up">
+<!ENTITY security.popupwin.event.mouseup.label "Mouse Up">
+<!ENTITY security.popupwin.event.mousedown.label "Mouse Down">
+<!ENTITY security.popupwin.event.click.label "Clicked">
+<!ENTITY security.popupwin.event.dblclick.label "Double Clicked">
+<!ENTITY security.antivirus.label "Anti-Virus">
+<!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
+<!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">
+<!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE.">
+<!ENTITY security.ssl.label "SSL">
+<!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ...">
+<!ENTITY security.ssl.ssl_domain_display.none.label "favicon only">
+<!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD (effective top-level domain) along with the second-level domain (e.g., mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.full.label "the full domain (e.g., addons.mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.desc "When the site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to .">
+<!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed">
+<!ENTITY security.ssl.ssl_override_behavior.dont.label "Do Not pre-populate the current URL as an exception and Do Not pre-fetch the SSL certificate.">
+<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate.">
+<!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Pre-populate the current URL and pre-fetch the certificate.">
+<!ENTITY security.net.label "Network">
+<!ENTITY security.net.enableIDN.label "Enable IDN(Internationalized Domain Names)">
+<!ENTITY security.net.show_punycode.label "Show IDN in punycode">
+<!ENTITY security.net.show_punycode.desc "There is no need to show IDN in punycode. Current &brandShortName; refuses illegal IDN addresses by using the black/white list.">
+<!ENTITY security.privacy.label "Privacy">
+<!ENTITY security.privacy.form.label "Form">
+<!ENTITY security.privacy.form.autofillForms.label "Automatically fill sign-in forms">
+<!ENTITY security.privacy.history.label "History">
+<!ENTITY security.privacy.history.history.label "Browsing History (Firefox 3.x)">
+<!ENTITY security.privacy.history.history.expireDays1.label "Remember visited pages for up to">
+<!ENTITY security.privacy.history.history.expireDays2.label "days">
+<!ENTITY security.privacy.history.history.expireSites1.label "Remember up to">
+<!ENTITY security.privacy.history.history.expireSites2.label "visited pages">
+<!ENTITY security.privacy.history.cookie.label "Cookie">
+<!ENTITY security.privacy.history.cookie.lifetimedays.label "Accept cookies for">
+<!ENTITY security.privacy.passwd.label "Master Password">
+<!ENTITY security.privacy.passwd.managepassword.label "Master Password Timeout">
+<!ENTITY security.privacy.passwd.managepassword.text "&brandShortName; will ask for your master password:">
+<!ENTITY security.privacy.passwd.managepassword.askfirsttime "The first time it is needed">
+<!ENTITY security.privacy.passwd.managepassword.askeverytime "Every time it is needed">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout "If it has not been used for">
+<!ENTITY security.privacy.passwd.managepassword.timeout.unit "minutes or longer">
+<!ENTITY security.privacy.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
+
+<!ENTITY ui.title "UI">
+<!ENTITY ui.mousewheel.label "Mouse wheel">
+<!ENTITY ui.mousewheel.mouseWheelPanel.label "mouse wheel behavior with">
+<!ENTITY ui.mousewheel.mouseWheelPanel2.label "key">
+<!ENTITY ui.mousewheel.vertiscroll.label "Vertical-scroll">
+<!ENTITY ui.mousewheel.horizscroll.label "Horizontal-scroll">
+<!ENTITY ui.mousewheel.usingJustTheWheel.label "No Modifier">
+<!ENTITY ui.mousewheel.scroll.label "Scroll document by">
+<!ENTITY ui.mousewheel.scrollLines.label "lines.">
+<!ENTITY ui.mousewheel.useSystemDefault.label "Use system default">
+<!ENTITY ui.mousewheel.scrollPgUpPgDn.label "Scroll a page up or a page down">
+<!ENTITY ui.mousewheel.history.label "Move back and forward in the browsing history">
+<!ENTITY ui.mousewheel.textsize.label "Make the text larger or smaller">
+<!ENTITY ui.multitouch.label "Multi-Touch">
+<!ENTITY ui.multitouch.gestures.label "Multi-Touch Gestures">
+<!ENTITY ui.multitouch.gestures.pinch.in.label "Pinch-in">
+<!ENTITY ui.multitouch.gestures.pinch.in.shift.label "Pinch-in with shift">
+<!ENTITY ui.multitouch.gestures.pinch.out.label "Pinch-out">
+<!ENTITY ui.multitouch.gestures.pinch.out.shift.label "Pinch-out with shift">
+<!ENTITY ui.multitouch.gestures.swipe.label "Swipe (left/right/up/down)">
+<!ENTITY ui.multitouch.gestures.twist.label "Twist (left-/right-handed)">
+<!ENTITY ui.find.label "Find in page">
+<!ENTITY ui.find.findahead.label "Quick Find (Find As You Type)">
+<!ENTITY ui.find.findahead.desc "Tip: To manually start Quick Find, type / to find text or ' to find links, followed by the text you want to find.">
+<!ENTITY ui.find.findahead.timeout.label "Clear the current search after">
+<!ENTITY ui.find.findahead.timeout.label2 "[ms] of inactivity">
+<!ENTITY ui.find.findahead.sound.label "Play a sound when typed text isn't found (takes effect after restart)">
+<!ENTITY ui.find.casesensitive.label "Case sensitivity mode">
+<!ENTITY ui.find.casesensitive.insensitive "Case-insensitive">
+<!ENTITY ui.find.casesensitive.sensitive "Case-sensitive">
+<!ENTITY ui.find.casesensitive.auto "Case-sensitive only if the search string contains upper-case characters but isn't all-caps">
+<!ENTITY ui.keynav.label "Key Navigation">
+<!ENTITY ui.keynav.tabNavigationBehavior.label "Tab Focus Navigation">
+<!ENTITY ui.keynav.tabNavigationLinks.label "Links">
+<!ENTITY ui.keynav.tabNavigationLinks.accesskey "L">
+<!ENTITY ui.keynav.tabNavigationForms.label "Buttons, radio buttons, checkboxes, and lists">
+<!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
+<!ENTITY ui.keynav.tabNavigationTextboxes.label "Note: text boxes are always part of the tabbing order.">
+<!ENTITY ui.keynav.tabNavigationDesc.label "When Tab or Shift+Tab is pressed, move between:">
+<!ENTITY ui.keynav.accelerators.label "Keyboard accelerators">
+<!ENTITY ui.keynav.acceleratorsBlurb.label "A value of zero disables a modifier key.">
+<!ENTITY ui.keynav.acceleratorKey.label "Accelerator key:">
+<!ENTITY ui.keynav.acceleratorKey.accesskey "A">
+<!ENTITY ui.keynav.menuAccessKey.label "Menu access key:">
+<!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.bidi.label "Bidi">
+<!ENTITY ui.bidi.ui.label "Enable Bi-Directional (BiDi) UI">
+<!ENTITY ui.bidi.characterset.label "Charset">
+<!ENTITY ui.bidi.characterset.doc.label "Document-specified">
+<!ENTITY ui.bidi.characterset.default.label "Default charset in document">
+<!ENTITY ui.bidi.controlstextmode.label "Controls (Firefox 3.x)">
+<!ENTITY ui.bidi.controlstextmode.logical.label "Logical">
+<!ENTITY ui.bidi.controlstextmode.visual.label "Visual">
+<!ENTITY ui.bidi.controlstextmode.container.label "Container">
+<!ENTITY ui.bidi.direction.label "Direction">
+<!ENTITY ui.bidi.direction.ltr.label "-&gt; Left-to-right">
+<!ENTITY ui.bidi.direction.rtl.label "&lt;- Right-to-left">
+<!ENTITY ui.bidi.numeral.label "Numeral">
+<!ENTITY ui.bidi.numeral.regular_context.label "Regular context">
+<!ENTITY ui.bidi.numeral.hindi_context.label "Hindi context">
+<!ENTITY ui.bidi.numeral.arabic.label "Arabic">
+<!ENTITY ui.bidi.numeral.hindi.label "Hindi">
+<!ENTITY ui.bidi.support.label "Provider">
+<!ENTITY ui.bidi.support.mozilla.label "&brandShortName;">
+<!ENTITY ui.bidi.support.os.label "OS">
+<!ENTITY ui.bidi.support.disable.label "Disable">
+<!ENTITY ui.bidi.texttype.label "Text type">
+<!ENTITY ui.bidi.texttype.charset.label "Default">
+<!ENTITY ui.bidi.texttype.logical.label "Logical">
+<!ENTITY ui.bidi.texttype.visual.label "Visual">
+<!ENTITY ui.bidi.scrollbarSide.label "Place the vertical scrollbar on:">
+<!ENTITY ui.bidi.scrollbarSide.uiBase "Right in LTR, Left in RTL, based on the &brandShortName;'s direction.(Default)">
+<!ENTITY ui.bidi.scrollbarSide.contentBase "Right in LTR, Left in RTL, based on the document's direction.">
+<!ENTITY ui.bidi.scrollbarSide.right "Right side">
+<!ENTITY ui.bidi.scrollbarSide.left "Left side">
+<!ENTITY ui.i18n.label "i18n">
+<!ENTITY ui.i18n.locale.label "Application Locale">
+<!ENTITY ui.i18n.locale.eg "(e.g. en-US, en-GB, ja, ar)">
+<!ENTITY ui.i18n.spellcheckDefault.label "Spellchecker Setting">
+<!ENTITY ui.i18n.spellcheckDefault.disabled "Disables spellchecker">
+<!ENTITY ui.i18n.spellcheckDefault.multiline "Enables spellchecker for multi-line controls (e.g., textarea) (Default)">
+<!ENTITY ui.i18n.spellcheckDefault.all "Enables spellchecker for all text controls">
+<!ENTITY ui.i18n.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
+<!ENTITY ui.others.label "Others">
+<!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
+<!ENTITY ui.others.preference.instanceAccept.label "Apply instance (likely Mac or Gnome)">
+<!ENTITY ui.others.preference.animateFadeIn.label "Animate fade-in (likely Mac)">
+<!ENTITY ui.others.xwin.label "Unix (X-Window) style mouse behavior">
+<!ENTITY ui.others.xwin.autocopy.label "Enable auto-copy selected text (takes effect only *nix)">
+<!ENTITY ui.others.xwin.paste.label "Paste when clicked middle mouse button">
+<!ENTITY ui.others.xwin.contentLoadURL.label "Go to URL stored in clipboard by middle mouse click">
+<!ENTITY ui.others.xwin.scrollbarPosition.label "Allow middle mouse button to adjust scroll bar (takes effect after restart)">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.label "Submenu Delay">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "None">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
+<!ENTITY ui.others.enable_drag_images.label "Display an image (when specified) during dragging">
+<!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">
+
+<!ENTITY addons.title "Add-ons">
+<!ENTITY addons.get_addons_maxResults.label "Maximum number of search results to display :">
+<!ENTITY addons.dialog_enable_delay.label "Time to start add-on installations :">
+<!ENTITY addons.noCheckCompatibility.label "Do Not check add-on compatibility with :">
+<!ENTITY addons.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
+<!ENTITY addons.installButton.label "Show Install button on the add-on dialog (Firefox 3.x)">
+<!ENTITY addons.oopp.label "Run browser plugins in an own process (OOPP) (Firefox 3.6.4+)">
+<!ENTITY addons.alwaysUnpack.label "Always unpack XPI file (Firefox 4.0+)">
+
+<!ENTITY debug.title "Debug">
+<!ENTITY debug.debug.label "For Debugging">
+<!ENTITY debug.debug.dump.label "Enable JavaScript dump() output">
+<!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
+<!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
+<!ENTITY debug.debug.csserr.label "Show CSS parse errors">
+<!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript (Firefox 3.x) ...">
+<!ENTITY debug.tracemonkey.content.label "on webpages">
+<!ENTITY debug.tracemonkey.chrome.label "on UI">
+<!ENTITY debug.jit.label "JavaScript JIT Compiler Setting (Firefox 4.0+)">
+<!ENTITY debug.jit.jitprofiling.label "Enable tuning JIT heuristics">
+<!ENTITY debug.jit.methodjit.label "Enable JagerMonkey (baseline JIT)">
+<!ENTITY debug.jit.tracejit.label "Enable TraceMonkey (native-code compiler)">
+<!ENTITY debug.jit.content.label "on webpages">
+<!ENTITY debug.jit.chrome.label "on UI">
+<!ENTITY debug.cache.label "Cache">
+<!ENTITY debug.cache.disableXULCache.label "Disable XUL Cache">
+<!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
+<!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">
+
+<!ENTITY miliseconds "[ms]">
+<!ENTITY microseconds "[us]">
+<!ENTITY seconds "seconds">
+<!ENTITY days "days">
+<!ENTITY kilobytes "KB">
+<!ENTITY reset "Reset">
+<!ENTITY browse "Browse...">
+<!ENTITY preview "Preview">
+<!ENTITY search "Search">
+<!ENTITY autoSet "Auto">
+<!ENTITY disableSet "Disabled">
+<!ENTITY manualSet "Manual">
