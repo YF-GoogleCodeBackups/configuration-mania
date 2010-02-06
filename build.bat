@@ -44,7 +44,7 @@ goto EOF
 :xpi
 	call :prep
 	call :jar
-	%ZIP_PROG% %EXTENSIONNAME%.xpi chrome\%EXTENSIONNAME%.jar *.rdf chrome.manifest -x@exclude.lst
+	%ZIP_PROG% %EXTENSIONNAME%.xpi chrome\%EXTENSIONNAME%.jar *.rdf chrome.manifest defaults\preferences\pref.js -x@exclude.lst
 	goto EOF
 
 :EOF

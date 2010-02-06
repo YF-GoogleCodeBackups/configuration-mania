@@ -20,6 +20,7 @@ $(EXTENSIONNAME).xpi: chrome/$(EXTENSIONNAME).jar
 	zip -9q $(EXTENSIONNAME).xpi \
 		chrome/$(EXTENSIONNAME).jar \
 		*.rdf chrome.manifest \
-#		components defaults/preferences \
-#		-x@exclude.lst
+		defaults/preferences/pref.js \
+		-x@exclude.lst
+#		components \
 	chmod 0644 $(EXTENSIONNAME).xpi
