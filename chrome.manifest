@@ -4,3 +4,8 @@ content	confmania	jar:chrome/confmania.jar!/content/confmania/
 skin	confmania	classic/1.0	jar:chrome/confmania.jar!/skin/classic/confmania/
 locale	confmania	en-US	jar:chrome/confmania.jar!/locale/en-US/confmania/
 locale	confmania	ja-JP	jar:chrome/confmania.jar!/locale/ja-JP/confmania/
+
+#locale	confmania	de-DE	jar:chrome/confmania.jar!/locale/de-DE/confmania/
+#locale	confmania	fr	jar:chrome/confmania.jar!/locale/fc/confmania/
+locale	confmania	pl	jar:chrome/confmania.jar!/locale/pl/confmania/
+locale	confmania	zh-CN	jar:chrome/confmania.jar!/locale/zh-CN/confmania/

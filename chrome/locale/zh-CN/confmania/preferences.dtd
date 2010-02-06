@@ -1,0 +1,388 @@
+<!ENTITY prefWindow.title "Configuration Mania">
+<!ENTITY prefWindow.style "width:50em; min-height: 40em;">
+<!ENTITY prefwindow.resetMessageTemplate "这么做将丢失之前所做的更改！您是否确定要重置当前标签页[__TABNAME__]的所有设置？">
+<!ENTITY prefWindow.context.reset.label "重置设置为默认值">
+<!ENTITY prefWindow.context.reset.accesskey "R">
+<!ENTITY prefWindow.context.mkb.label "在 MozillaZine Knowledge Base 中查找">
+<!ENTITY prefWindow.context.mkb.accesskey "S">
+<!ENTITY browser.title "浏览器">
+<!ENTITY browser.smartbrowsing.label "智能浏览">
+<!ENTITY browser.smartbrowsing.internetKeywords.label "Internet 关键词">
+<!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet 关键词允许通过在地址栏输入关键词快速访问搜索和其他信息服务。">
+<!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "启用 Internet 关键词">
+<!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL 前缀：">
+<!ENTITY browser.smartbrowsing.domainGuessing.label "域名推测">
+<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "自动为无法显示的页面添加前缀和后缀">
+<!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "前缀：">
+<!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "后缀：">
+<!ENTITY browser.urlbar.label "地址栏">
+<!ENTITY browser.urlbar.clickSelectsAll.label "单击时自动全选">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "双击时自动全选">
+<!ENTITY browser.urlbar.autoComplete.label "禁用 URL 自动完成">
+<!ENTITY browser.urlbar.autoComplete.autoFill.label "自动完成为最匹配您的输入">
+<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "不包括 bookmarklet (&quot;javascript:&quot; URLs)">
+<!ENTITY browser.urlbar.autoComplete.maxRichResults.label "可显示的最多条目数：">
+<!ENTITY browser.html.label "页面控制">
+<!ENTITY browser.html.allowBlink.label "允许文字闪动">
+<!ENTITY browser.html.allowMarquee.label "允许文字滚动">
+<!ENTITY browser.html.enableFrame.label "允许网页框架">
+<!ENTITY browser.html.frameForceResizability.label "强制网页框架可改变大小">
+<!ENTITY browser.html.img "图片">
+<!ENTITY browser.html.img.anim.label "动态图片循环播放">
+<!ENTITY browser.html.img.anim.normal.label "按图片指定的播放次数">
+<!ENTITY browser.html.img.anim.once.label "只播放一次">
+<!ENTITY browser.html.img.anim.none.label "无（静止）">
+<!ENTITY browser.html.img.resizing.label "图片自动缩小以适应窗口大小">
+<!ENTITY browser.html.img.show_image_placeholders.label "图片失效或加载时显示占位符">
+<!ENTITY browser.html.img.force_inline_alttext.label "强制使用 ALT 属性的文字代替缺失的图片进行排版">
+<!ENTITY browser.html.color_management.label "色彩管理 (CMS) （重启后生效）">
+<!ENTITY browser.html.color_management.mode.label "色彩管理模式">
+<!ENTITY browser.html.color_management.mode.off.label "禁用色彩管理">
+<!ENTITY browser.html.color_management.mode.on.label "应用于已渲染的图形">
+<!ENTITY browser.html.color_management.mode.tagged.label "仅应用于标签标记的图形">
+<!ENTITY browser.html.downloadable_fonts.label "下载 CSS3 页面内的字体">
+<!ENTITY browser.html.html5.label "启用 HTML 5 解析">
+<!ENTITY browser.html.enableSVG.label "启用 SVG 内容渲染">
+<!ENTITY browser.html.plainviewXML.label "按纯文本格式显示无样式的 XML 文件">
+<!ENTITY browser.html.focus.label "高亮选定">
+<!ENTITY browser.html.focus.enabled.label "高亮显示选定的对象">
+<!ENTITY browser.html.focus.bg.label "背景颜色">
+<!ENTITY browser.html.focus.fg.label "文字颜色">
+<!ENTITY browser.tabs.label "标签式浏览">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "关闭最后一个标签页时同时关闭窗口">
+<!ENTITY browser.tabs.closeButtons.label "关闭按钮显示方式...">
+<!ENTITY browser.tabs.closeButtons.active.label "仅显示在当前标签页">
+<!ENTITY browser.tabs.closeButtons.all.label "显示在所有标签页（默认）">
+<!ENTITY browser.tabs.closeButtons.no.label "不显示任何关闭按钮">
+<!ENTITY browser.tabs.closeButtons.end.label "显示在标签栏末端（类似 Firefox1.x ）">
+<!ENTITY browser.tabs.tabClipWidth.label "要显示关闭按钮的后台标签页的最小宽度">
+<!ENTITY browser.tabs.disableBackgroundClose.label "点击后台标签页的关闭按钮时不关闭该页，而是切换到该页">
+<!ENTITY browser.tabs.tabWidth.label "标签页最小/最大宽度">
+<!ENTITY browser.tabs.tabWidth.min.label "最小宽度">
+<!ENTITY browser.tabs.tabWidth.max.label "最大宽度">
+<!ENTITY browser.tabs.seachOpenintab.label "在新标签页打开搜索栏的搜索结果">
+<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "紧邻当前标签页右侧打开新标签页 (Firefox 3.6+)">
+<!ENTITY browser.tabs.autoselect.label "标签页自动切换">
+<!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "在新标签页打开书签或历史记录">
+<!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "在前台显示外部程序或链接所打开的新标签页">
+<!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "关闭标签页时自动切换到其父标签页">
+<!ENTITY browser.tabs.tabpreview.label "启用缩略图预览 (Firefox3.6+)">
+<!ENTITY browser.tabs.tabpreview.alltabs.label "在全部标签页的面板中预览">
+<!ENTITY browser.tabs.tabpreview.ctrltab.label "按 Ctrl+TAB 时预览">
+<!ENTITY browser.sessionStore.label "浏览进程恢复">
+<!ENTITY browser.sessionStore.disabled.label "禁用 &browser.sessionStore.label;">
+<!ENTITY browser.sessionStore.interval.label "保存浏览进程的时间间隔：">
+<!ENTITY browser.sessionStore.max_undo.label "关闭后可恢复的最大数量">
+<!ENTITY browser.sessionStore.max_undo.windows.label "最大窗口数量：">
+<!ENTITY browser.sessionStore.max_undo.tabs.label "最大标签页数量：">
+<!ENTITY browser.sessionStore.resume_from_crash.label "当 &brandShortName; 崩溃后，重新启动时自动恢复上次的浏览进程">
+<!ENTITY browser.sessionStore.privacy_level.label "保存下列站点额外的浏览进程数据：">
+<!ENTITY browser.sessionStore.privacy_level.any.label "所有站点">
+<!ENTITY browser.sessionStore.privacy_level.unenc.label "仅非加密的站点（非 HTTPS）">
+<!ENTITY browser.sessionStore.privacy_level.never.label "不保存">
+<!ENTITY browser.bookmarkicon.label "书签图标 (Favicons)">
+<!ENTITY browser.bookmarkicon.siteicons.label "在标签上和地址栏显示书签图标">
+<!ENTITY browser.bookmarkicon.favicons.lebel "在书签项目中显示书签图标">
+<!ENTITY browser.download.label "下载">
+<!ENTITY browser.download.addToRecentDocs.label "添加新下载项到最近的文件列表">
+<!ENTITY browser.download.quitBehavior.label "如何处理 &brandShortName; 关闭时正在下载的文件：">
+<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "暂停下载， &brandShortName; 重新启动后自动继续下载">
+<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "暂停下载，&brandShortName; 重新启动后不自动继续下载">
+<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "退出时取消下载">
+<!ENTITY browser.download.showAlertOnComplete.label "下载完成时显示提示窗口">
+<!ENTITY browser.download.alerts.label "提示窗口设置">
+<!ENTITY browser.download.alerts.totalOpenTime "提示窗口持续时间">
+<!ENTITY browser.download.alerts.slide.label "提示窗口滑动显示的速度">
+<!ENTITY browser.download.alerts.slide.prefix.label "提示窗口移动">
+<!ENTITY browser.download.alerts.slide.per.label "像素，每隔">
+<!ENTITY browser.download.alerts.slide.settolight.label "设置为轻量值">
+<!ENTITY browser.ua.label "用户代理 (User-Agent)">
+<!ENTITY browser.ua.desc "警告：该设置可能会和某些插件以及 &quot;User Agent Switcher&quot; 等扩展产生冲突。">
+<!ENTITY browser.ua.text.label "UA 字符串：">
+<!ENTITY browser.ua.presets.label "预设值">
+<!ENTITY browser.ua.presets.this.label "&brandShortName;，当前版本">
+<!ENTITY browser.speed-paint.label "绘制&amp;渲染">
+<!ENTITY browser.speed-paint.desc "警告：该推荐值并不总是适合您的网络线路和PC环境,有时候推荐值会减慢浏览速度。(但有些人认为速度提高了，大概都是心理作用吧:-)">
+<!ENTITY browser.speed-paint.delay.label "初始页面绘制延迟">
+<!ENTITY browser.speed-paint.notify-backoffcount.label "基于计时器的初始回流最大值：">
+<!ENTITY browser.speed-paint.notify-backoffcount.never "不限制">
+<!ENTITY browser.speed-paint.notify-interval.label "初始回流的时间间隔">
+<!ENTITY browser.speed-paint.content-interrupt.label "不允许中断语法分析">
+<!ENTITY browser.speed-paint.content-interrupt.desc "注意：在语法分析结束之前 &brandShortName; 可能无响应。">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.label "中断语法分析的最长时间：">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "注意：请勿设为 0">
+<!ENTITY browser.speed-paint.content-switch-threshold.label "高频与低频中断模式切换的门限值">
+<!ENTITY browser.speed-paint.content-switch-threshold.desc "高频中断模式具有更快的用户界面响应,但需要花费更多的加载时间；默认值： 750000（3/4 秒）">
+<!ENTITY browser.speed-cache.label "浏览器缓存">
+<!ENTITY browser.speed-cache.check.label "检查页面缓存...">
+<!ENTITY browser.speed-cache.check.desc "警告：&quot;&browser.speed-cache.check.once.label;&quot; 能提高浏览速度，但可能导致某些网页服务出现问题。如果您发现某些页面无法正常更新请勾选&quot;&browser.speed-cache.check.each.label;&quot;，或者按 shift 键和刷新按钮来强制刷新该页。">
+<!ENTITY browser.speed-cache.check.once.label "每个浏览进程一次">
+<!ENTITY browser.speed-cache.check.each.label "每次浏览时">
+<!ENTITY browser.speed-cache.check.never.label "不检查（不推荐）">
+<!ENTITY browser.speed-cache.check.auto.label "页面到期时（推荐）">
+<!ENTITY browser.speed-cache.memory_enable.label "启用内存缓存（最好不要禁用）">
+<!ENTITY browser.speed-cache.memory_capability.label "内存缓存">
+<!ENTITY browser.speed-cache.trim_on_minimize.label "&brandShortName; 最小化时将内存交换到缓存（仅 Windows）">
+<!ENTITY browser.speed-cache.disk_cache_ssl.label "保存 SSL 连接的页面到缓存中（非安全的）">
+<!ENTITY browser.speed-cache.prefetch-next.label "启用链接预读取">
+<!ENTITY browser.speed-cache.session-history-viewers.label "缓存中允许保存页面的最大数量">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "提示：增加数量能提高点击后退和前进按钮时的浏览性能，但在过多标签页的情况下将使 &brandShortName; 的内存占用直线上升。">
+<!ENTITY browser.speed-cache.diskCacheFolder.label "缓存文件位置">
+<!ENTITY browser.speed-cache.diskCacheFolder.desc "缓存文件保存在您指定目录下名为 &quot;Cache&quot; 的子文件夹中。请重新启动 &brandShortName; 以使更改生效。">
+<!ENTITY browser.others.label "其他">
+<!ENTITY browser.others.geo_enabled.label "启用地理位置定位">
+<!ENTITY browser.others.dns.label "DNS 设置">
+<!ENTITY browser.others.dns.disableIPv6.label "禁用 IPv6 DNS 解析">
+<!ENTITY browser.others.dns.prefetch.label "启用 DNS 预读取以提高页面载入性能">
+<!ENTITY browser.others.nouse_text_smoothing_setting.label "总是使用文字平滑（仅在 Mac 有效）">
+<!ENTITY browser.others.errorPageDisabled.label "显示错误信息对话框而不是错误页面">
+<!ENTITY browser.others.editorExternal "使用外部编辑器查看源代码">
+<!ENTITY browser.others.editorExternal.path "编辑器路径：">
+<!ENTITY browser.others.backspace_action.label "按 [Backspace] 键时执行下列动作：">
+<!ENTITY browser.others.backspace_action.goBack "回到历史记录中的上一页（类似 IE）">
+<!ENTITY browser.others.backspace_action.scrollUp "回到当前页面顶端">
+<!ENTITY browser.others.backspace_action.nothing "什么也不做">
+<!ENTITY security.title "安全">
+<!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.annoy.label "高级设置">
+<!ENTITY security.js.annoy.max_script_run_time.label "从 Script 开始执行到浏览器弹出提示之间的时间为">
+<!ENTITY security.js.annoy.disable_scripts_to_close_windows "禁止关闭非弹出窗口">
+<!ENTITY security.js.annoy.window_flip "禁止上移或下移窗口">
+<!ENTITY security.js.annoy.window_move_resize "禁止移动和更改已打开窗口的大小">
+<!ENTITY security.js.annoy.status_change "禁止修改状态栏">
+<!ENTITY security.js.annoy.change_image "禁止修改图片">
+<!ENTITY security.js.annoy.change_image.desc "提示：&quot;&security.js.annoy.change_image;&quot;这项可能会引起某些网页应用程序（例如 Google Map）无法正常工作。">
+<!ENTITY security.js.annoy.contextmenu "禁止使用右键菜单项">
+<!ENTITY security.js.annoy.dispatchLeftClickOnly "只允许左键点击">
+<!ENTITY security.js.uis.label "防止界面伪装">
+<!ENTITY security.js.uis.desc1 "启用或禁止隐藏下列由 JavaScript 打开的项目：">
+<!ENTITY security.js.uis.desc2 "要获得防止界面伪装最佳效果，请勾选以上所有选项。">
+<!ENTITY security.js.uis.menubar "菜单栏">
+<!ENTITY security.js.uis.resizable "更改窗口大小">
+<!ENTITY security.js.uis.scrollbars "滚动条">
+<!ENTITY security.js.uis.toolbar "工具栏">
+<!ENTITY security.js.uis.locationbar "地址栏">
+<!ENTITY security.js.uis.status "状态栏">
+<!ENTITY security.popupwin.label "弹出窗口">
+<!ENTITY security.popupwin.tabs.label "标签式浏览时弹出窗口 (window.open) 的打开方式：">
+<!ENTITY security.popupwin.tabs.0.label "与链接的设置相同">
+<!ENTITY security.popupwin.tabs.1.label "在新窗口中打开">
+<!ENTITY security.popupwin.tabs.2.label "与链接的设置相同，但如果已指定则在新窗口中打开（默认）">
+<!ENTITY security.popupwin.popup_maximum.label "可打开的最大窗口数量">
+<!ENTITY security.popupwin.from_plugins.label "来自插件所打开的弹出窗口的限制方式：">
+<!ENTITY security.popupwin.from_plugins.0.label "不限制">
+<!ENTITY security.popupwin.from_plugins.1.label "限制数量为&quot;&security.popupwin.popup_maximum.label;&quot;">
+<!ENTITY security.popupwin.from_plugins.2.label "拦截白名单以外的所有窗口">
+<!ENTITY security.popupwin.from_plugins.3.label "拦截包括白名单在内的所有窗口">
+<!ENTITY security.popupwin.event.label "允许执行下列操作时打开弹出窗口：">
+<!ENTITY security.popupwin.event.reset.label "重置表单">
+<!ENTITY security.popupwin.event.submit.label "提交表单">
+<!ENTITY security.popupwin.event.select.label "选择表单">
+<!ENTITY security.popupwin.event.change.label "修改文本">
+<!ENTITY security.popupwin.event.resize.label "更改窗口大小">
+<!ENTITY security.popupwin.event.input.label "输入">
+<!ENTITY security.popupwin.event.keypress.label "按下任意键">
+<!ENTITY security.popupwin.event.keydown.label "按下按键">
+<!ENTITY security.popupwin.event.keyup.label "松开按键">
+<!ENTITY security.popupwin.event.mouseup.label "松开鼠标">
+<!ENTITY security.popupwin.event.mousedown.label "按下鼠标">
+<!ENTITY security.popupwin.event.click.label "单击">
+<!ENTITY security.popupwin.event.dblclick.label "双击">
+<!ENTITY security.antivirus.label "反病毒">
+<!ENTITY security.antivirus.scanWhenDone.label "下载完成后进行病毒扫描">
+<!ENTITY security.antivirus.scanWhenDone.desc "在 Windows XP SP2+ 和 Windows Vista 下，该项也表示打开下载文件时是否触发安全警告。">
+<!ENTITY security.antivirus.dontclean.label "当检测到病毒时尝试删除下载文件">
+<!ENTITY security.antivirus.alertOnEXEOpen.label "打开 EXE 文件时显示提示对话框">
+<!ENTITY security.ssl.label "SSL">
+<!ENTITY security.ssl.ssl_domain_display.label "当进入的网站被认定为安全的时，在地址栏 URL 左侧显示...">
+<!ENTITY security.ssl.ssl_domain_display.none.label "仅 favicon">
+<!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD（有效顶级域名）及其二级域名（例如：mozilla.org）">
+<!ENTITY security.ssl.ssl_domain_display.full.label "完整的域名（例如：addons.mozilla.org）">
+<!ENTITY security.ssl.ssl_domain_display.desc "当网站使用 Extended Validation (EV) SSL 证书时，显示您所连接到的组织名。">
+<!ENTITY security.ssl.ssl_override_behavior.label "安全连接失败时的&quot;添加安全例外&quot; 对话框所执行的操作：">
+<!ENTITY security.ssl.ssl_override_behavior.dont.label "不将当前 URL 预添加为例外也不预获取其 SSL 证书">
+<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "将当前 URL 预添加为例外但不预获取其 SSL 证书">
+<!ENTITY security.ssl.ssl_override_behavior.prefetch.label "将当前 URL 预添加为例外并预获取其 SSL 证书">
+<!ENTITY security.net.label "网络">
+<!ENTITY security.net.redirection-limit.label "HTTP 重定向限制次数">
+<!ENTITY security.net.enableIDN.label "启用 IDN（国际化域名）">
+<!ENTITY security.net.show_punycode.label "用 punycode 显示 IDN">
+<!ENTITY security.net.show_punycode.desc "在通常情况下不需要用 punycode 显示 IDN，因为现在&brandShortName;可以通过黑/白名单来过滤非法的 IDN 地址。">
+<!ENTITY security.net.referer.label "请求标头参照 (Referrer request-header)">
+<!ENTITY security.net.referer.none.label "不发送（不推荐）">
+<!ENTITY security.net.referer.none.desc "警告：发送 Referrer header 有时是必须的。如果您访问某些网站，该选项将变成&quot;&security.net.referer.link.label;&quot;或&quot;&security.net.referer.all.label;&quot;。">
+<!ENTITY security.net.referer.link.label "单击时才发送">
+<!ENTITY security.net.referer.all.label "同时也发送图片请求">
+<!ENTITY security.net.referer.secureXSite.label "从一个 https 站点转至另一个 https 站点时发送 Referrer header">
+<!ENTITY security.net.referer.secureXSite.desc "从一个 https 安全站点转至另一个非安全站点时忽略该设置，不发送 Referrer header">
+<!ENTITY security.privacy.label "隐私">
+<!ENTITY security.privacy.history.label "浏览历史">
+<!ENTITY security.privacy.history.expireDays1.label "保存已访问的页面，至少">
+<!ENTITY security.privacy.history.expireDays2.label "天">
+<!ENTITY security.privacy.history.expireSites1.label "保存至少">
+<!ENTITY security.privacy.history.expireSites2.label "个已访问的页面">
+<!ENTITY security.privacy.cookie.label "Cookie">
+<!ENTITY security.privacy.cookie.lifetimedays.label "保留 cookies">
+<!ENTITY security.privacy.passwd.label "主密码">
+<!ENTITY security.privacy.passwd.managepassword.label "主密码提示时限">
+<!ENTITY security.privacy.passwd.managepassword.text "在下列情况下 &brandShortName; 会提示您输入主密码：">
+<!ENTITY security.privacy.passwd.managepassword.askfirsttime "首次需要时">
+<!ENTITY security.privacy.passwd.managepassword.askeverytime "每次需要时">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout "超过 ">
+<!ENTITY security.privacy.passwd.managepassword.timeout.unit "分钟以上未使用时">
+<!ENTITY security.privacy.passwd.desc "注意：主密码可以在 &brandShortName; 选项面板中设置。">
+<!ENTITY http.title "HTTP 网络">
+<!ENTITY http.connect.label "连接">
+<!ENTITY http.connect.desc "通过设置下列选项可以调整 HTTP 的连接来提高网络性能或增加兼容性。例如，某些代理服务器需要 HTTP/1.0 的支持。">
+<!ENTITY http.connect.direct.label "直接连接选项">
+<!ENTITY http.connect.proxy.label "代理连接选项">
+<!ENTITY http.connect.HTTP10.label "使用 HTTP 1.0">
+<!ENTITY http.connect.HTTP11.label "使用 HTTP 1.1">
+<!ENTITY http.connect.keepAlive.label "启用 Keep-Alive">
+<!ENTITY http.connect.pipeline.label "启用 Pipelining">
+<!ENTITY http.connect.pipeline.desc "提示： pipelining 是正处于测试中的功能，用于提高页面加载的性能。但是一些 web 服务器和代理服务器无法很好的支持它。">
+<!ENTITY http.connect.HTTP10.accesskey "U">
+<!ENTITY http.connect.HTTP10Proxy.accesskey "S">
+<!ENTITY http.connect.HTTP11.accesskey "E">
+<!ENTITY http.connect.HTTP11Proxy.accesskey "T">
+<!ENTITY http.connect.keepAlive.accesskey "K">
+<!ENTITY http.connect.keepAliveProxy.accesskey "A">
+<!ENTITY http.connect.pipeline.accesskey "P">
+<!ENTITY http.connect.pipelineProxy.accesskey "N">
+<!ENTITY http.ad.label "高级">
+<!ENTITY http.ad.accept.label "传送 'Accept' HTTP Header">
+<!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
+<!ENTITY http.ad.accept.default.label "Accept">
+<!ENTITY http.ad.maxsession.label "最大浏览进程连接设置">
+<!ENTITY http.ad.maxsession.desc "提示：在您对 RFC 2616 有一个清楚的了解之前最好不要修改下列选项。">
+<!ENTITY http.ad.maxsession.maxpipeliningrequest.label "最大 pipelining 请求数">
+<!ENTITY http.ad.maxsession.maxconnections.label "最大总连接数">
+<!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "每个服务器最大连接数">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "每个服务器最大持续连接数">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "提示：Firefox3，IE8:6，Opera，Safari:4，Firefox2，IE7:2 默认情况下设置值最好不要超过 2(RFC 2616)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "每个代理服务器最大持续连接数">
+<!ENTITY ui.title "用户界面">
+<!ENTITY ui.mousewheel.label "鼠标滚轮">
+<!ENTITY ui.mousewheel.mouseWheelPanel.label "鼠标滚轮且按下">
+<!ENTITY ui.mousewheel.mouseWheelPanel2.label "键时执行下列动作：">
+<!ENTITY ui.mousewheel.vertiscroll.label "垂直滚动">
+<!ENTITY ui.mousewheel.horizscroll.label "水平滚动">
+<!ENTITY ui.mousewheel.usingJustTheWheel.label "不按任何键">
+<!ENTITY ui.mousewheel.scroll.label "滚动">
+<!ENTITY ui.mousewheel.scrollLines.label "行文字">
+<!ENTITY ui.mousewheel.useSystemDefault.label "使用系统默认值">
+<!ENTITY ui.mousewheel.scrollPgUpPgDn.label "页面上下滚动">
+<!ENTITY ui.mousewheel.history.label "打开浏览历史中的上一页和下一页">
+<!ENTITY ui.mousewheel.textsize.label "缩放文字">
+<!ENTITY ui.multitouch.label "多点触控">
+<!ENTITY ui.multitouch.gestures.label "多点触控手势">
+<!ENTITY ui.multitouch.gestures.pinch.in.label "捏进(Pinch-in)">
+<!ENTITY ui.multitouch.gestures.pinch.in.shift.label "Shift+ 捏进(Pinch-in)">
+<!ENTITY ui.multitouch.gestures.pinch.out.label "捏出(Pinch-out)">
+<!ENTITY ui.multitouch.gestures.pinch.out.shift.label "Shift+ 捏出(Pinch-out)">
+<!ENTITY ui.multitouch.gestures.swipe.label "向左/右/上/下重拍(Swipe)">
+<!ENTITY ui.multitouch.gestures.twist.label "向左/右手边旋转(Twist)">
+<!ENTITY ui.find.label "页内查找">
+<!ENTITY ui.find.findahead.label "快速查找（即随打即找）">
+<!ENTITY ui.find.findahead.desc "提示：要手动启用随打即找功能，可以在输入查找的内容之前按 / 来查找文字或按 ' 来查找链接。">
+<!ENTITY ui.find.findahead.timeout.label "超过">
+<!ENTITY ui.find.findahead.timeout.label2 "[毫秒]未使用后自动清除查找内容">
+<!ENTITY ui.find.findahead.sound.label "要查找的内容未找到时播放提示音（重启后生效）">
+<!ENTITY ui.keynav.label "键盘导航">
+<!ENTITY ui.keynav.tabNavigationBehavior.label "Tab 键导航">
+<!ENTITY ui.keynav.tabNavigationLinks.label "链接">
+<!ENTITY ui.keynav.tabNavigationLinks.accesskey "L">
+<!ENTITY ui.keynav.tabNavigationForms.label "按钮、单选钮、复选框和下拉列表">
+<!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
+<!ENTITY ui.keynav.tabNavigationTextboxes.label "注意：按 Tab 键导航也包括切换到文本框。">
+<!ENTITY ui.keynav.tabNavigationDesc.label "按 Tab 或 Shift+Tab 时，在下列对象中切换：">
+<!ENTITY ui.keynav.accelerators.label "键盘快捷键">
+<!ENTITY ui.keynav.acceleratorsBlurb.label "提示：值设置为 0 表示取消该快捷键">
+<!ENTITY ui.keynav.acceleratorKey.label "快捷键：">
+<!ENTITY ui.keynav.acceleratorKey.accesskey "A">
+<!ENTITY ui.keynav.menuAccessKey.label "菜单访问键：">
+<!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.i18n.label "i18n">
+<!ENTITY ui.i18n.locale.label "应用程序本地语言">
+<!ENTITY ui.i18n.locale.eg "（例如： en-US，en-GB，ja，ar）">
+<!ENTITY ui.i18n.bidi.label "双向书写语言 (BiDi)">
+<!ENTITY ui.i18n.bidi.ui.label "启用 BiDi 界面">
+<!ENTITY ui.i18n.bidi.characterset.label "字符集">
+<!ENTITY ui.i18n.bidi.characterset.doc.label "文档指定的字符集">
+<!ENTITY ui.i18n.bidi.characterset.default.label "默认字符集">
+<!ENTITY ui.i18n.bidi.controlstextmode.label "控制">
+<!ENTITY ui.i18n.bidi.controlstextmode.logical.label "Logical">
+<!ENTITY ui.i18n.bidi.controlstextmode.visual.label "Visual">
+<!ENTITY ui.i18n.bidi.controlstextmode.container.label "Container">
+<!ENTITY ui.i18n.bidi.direction.label "书写方向">
+<!ENTITY ui.i18n.bidi.direction.ltr.label "-&gt; 从左到右">
+<!ENTITY ui.i18n.bidi.direction.rtl.label "&lt;- 从右到左">
+<!ENTITY ui.i18n.bidi.numeral.label "数字">
+<!ENTITY ui.i18n.bidi.numeral.regular_context.label "正规式上下文">
+<!ENTITY ui.i18n.bidi.numeral.hindi_context.label "Hindi 式上下文">
+<!ENTITY ui.i18n.bidi.numeral.arabic.label "阿拉伯式">
+<!ENTITY ui.i18n.bidi.numeral.hindi.label "Hindi">
+<!ENTITY ui.i18n.bidi.support.label "提供方">
+<!ENTITY ui.i18n.bidi.support.mozilla.label "&brandShortName;">
+<!ENTITY ui.i18n.bidi.support.os.label "操作系统">
+<!ENTITY ui.i18n.bidi.support.disable.label "禁用">
+<!ENTITY ui.i18n.bidi.texttype.label "文字类型">
+<!ENTITY ui.i18n.bidi.texttype.charset.label "默认">
+<!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
+<!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
+<!ENTITY ui.i18n.others.label "其他">
+<!ENTITY ui.i18n.others.scrollbarSide.label "将垂直滚动条放置在：">
+<!ENTITY ui.i18n.others.scrollbarSide.uiBase "根据 &brandShortName; 的书写方向，在 LTR 的右侧及 RTL 的左侧（默认）">
+<!ENTITY ui.i18n.others.scrollbarSide.contentBase "根据文档自身的书写方向，在 LTR 的右侧及 RTL 的左侧">
+<!ENTITY ui.i18n.others.scrollbarSide.right "右侧">
+<!ENTITY ui.i18n.others.scrollbarSide.left "左侧">
+<!ENTITY ui.i18n.others.spellcheckDefault.label "拼写检查">
+<!ENTITY ui.i18n.others.spellcheckDefault.disabled "禁用拼写检查">
+<!ENTITY ui.i18n.others.spellcheckDefault.multiline "启用多行控制区域（如文本框）中的拼写检查（默认）">
+<!ENTITY ui.i18n.others.spellcheckDefault.all "启用所有文本控制区域的拼写检查">
+<!ENTITY ui.i18n.others.japanese_specific_transform.label "在日文编码的文档中用日元符号替代反斜杠">
+<!ENTITY ui.others.label "其他">
+<!ENTITY ui.others.preference.label "选项对话框应用方式（包含 Configuration Mania）">
+<!ENTITY ui.others.preference.instanceAccept.label "立即应用设置（类似 Mac 或 Gnome）">
+<!ENTITY ui.others.preference.animateFadeIn.label "淡入效果（类似 Mac）">
+<!ENTITY ui.others.xwin.label "Unix (X-Window) 样式的鼠标动作">
+<!ENTITY ui.others.xwin.autocopy.label "自动复制选定的文字（仅在 *nix 中有效）">
+<!ENTITY ui.others.xwin.paste.label "鼠标中键点击时粘贴">
+<!ENTITY ui.others.xwin.contentLoadURL.label "中键点击时打开剪贴板中的 URL">
+<!ENTITY ui.others.xwin.scrollbarPosition.label "鼠标中键控制滚动条（重启后才生效）">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.label "子菜单弹出延时">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "无延时">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "无限延时（类似 Motif）">
+<!ENTITY ui.others.enable_drag_images.label "拖拽图片时显示图片">
+<!ENTITY ui.others.xul_file_picker "在系统文件打开对话框可用的情况下仍使用 XUL 文件打开对话框">
+<!ENTITY debug.title "调试">
+<!ENTITY debug.debug.label "面向调试">
+<!ENTITY debug.debug.dump.label "允许 JavaScript dump() 输出">
+<!ENTITY debug.debug.jsstrict.label "显示严格的 JavaScript 警告">
+<!ENTITY debug.debug.chromeerr.label "显示 chrome JavaScript 错误和警告">
+<!ENTITY debug.debug.csserr.label "显示 CSS 语法分析错误">
+<!ENTITY debug.tracemonkey.label "打开下列对象 JavaScript 的 JIT(TraceMonkey) 功能...">
+<!ENTITY debug.tracemonkey.content.label "网页">
+<!ENTITY debug.tracemonkey.chrome.label "Chrome">
+<!ENTITY debug.cache.label "缓存">
+<!ENTITY debug.cache.disableXULCache.label "禁用 XUL 缓存">
+<!ENTITY debug.cache.diskCacheDisable.label "禁用磁盘缓存">
+<!ENTITY debug.cache.memoryCacheDisable.label "禁用内存缓存">
+<!ENTITY debug.extension.label "附加组件">
+<!ENTITY debug.extension.get_addons_maxResults.label "附加组件搜索结果显示的最大数目：">
+<!ENTITY debug.extension.dialog_enable_delay.label "安装附加组件时的延迟时间：">
+<!ENTITY debug.extension.noCheckCompatibility.label "安装/更新时不检查附加组件兼容性">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "不检查附加组件的安全更新">
+<!ENTITY debug.extension.installButton.label "在附加组件对话框显示&quot;安装&quot;按钮">
+<!ENTITY miliseconds "[毫秒]">
+<!ENTITY microseconds "[微秒]">
+<!ENTITY seconds "秒">
+<!ENTITY days "天">
+<!ENTITY kilobytes "KB">
+<!ENTITY reset "重置">
+<!ENTITY browse "浏览...">
+<!ENTITY preview "预览">
+<!ENTITY search "查找">
+<!ENTITY autoSet "自动设置">
+<!ENTITY disableSet "禁用">
+<!ENTITY manualSet "手动设置">

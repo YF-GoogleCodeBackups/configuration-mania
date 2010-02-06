@@ -1,0 +1,389 @@
+<!ENTITY prefWindow.title "Configuration Mania">
+<!ENTITY prefWindow.style "width:50em; min-height: 40em;">
+<!ENTITY prefwindow.resetMessageTemplate "Zmiany zostaną utracone! Czy na pewno chcesz zresetować ustawienia na karcie [__TABNAME__]?">
+<!ENTITY prefWindow.context.reset.label "Przywróć ustawienia domyślne">
+<!ENTITY prefWindow.context.reset.accesskey "P">
+<!ENTITY prefWindow.context.mkb.label "Szukaj w bazie wiedzy MozillaZine">
+<!ENTITY prefWindow.context.mkb.accesskey "S">
+<!ENTITY browser.title " Przeglądarka ">
+<!ENTITY browser.smartbrowsing.label "Wyszukiwanie">
+<!ENTITY browser.smartbrowsing.internetKeywords.label "Słowa kluczowe">
+<!ENTITY browser.smartbrowsing.internetKeywords.desc "Słowa kluczowe (keywords) programu &brandShortName; umożliwiają szybki dostęp do serwisów wyszukiwarek i innych informacji z poziomu paska adresu.">
+<!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Uaktywnij słowa kluczowe">
+<!ENTITY browser.smartbrowsing.internetKeywords.URL.label "Prefiks URL: ">
+<!ENTITY browser.smartbrowsing.domainGuessing.label "Uzupełnianie domen">
+<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Dodawaj automatycznie do adresu witryny internetowej prefiks i sufiks, jeśli strona nie zostanie odnaleziona.">
+<!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefiks: ">
+<!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Sufiks: ">
+<!ENTITY browser.urlbar.label "Pasek adresu">
+<!ENTITY browser.urlbar.clickSelectsAll.label "Zaznaczaj całą zawartość po kliknięciu">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Zaznaczaj całą zawartość po dwukrotnym kliknięciu">
+<!ENTITY browser.urlbar.autoComplete.label "Nie stosuj autouzupełniania">
+<!ENTITY browser.urlbar.autoComplete.autoFill.label "Uzupełniaj automatycznie w trakcie pisania">
+<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Odfiltrowuj skryptozakładki (adresy URL „javascript:”)">
+<!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maksymalna liczba wpisów">
+<!ENTITY browser.html.label "Wygląd">
+<!ENTITY browser.html.allowBlink.label "Zezwalaj na migający tekst">
+<!ENTITY browser.html.allowMarquee.label "Zezwalaj na tekst przewijany w markizie">
+<!ENTITY browser.html.enableFrame.label "Uaktywnij ramki">
+<!ENTITY browser.html.frameForceResizability.label "Zamieniaj ramki o stałej wielkości na ramki o zmiennej wielkości">
+<!ENTITY browser.html.img "Obrazek">
+<!ENTITY browser.html.img.anim.label "Wyświetlaj animowane obrazki:">
+<!ENTITY browser.html.img.anim.normal.label "normalnie">
+<!ENTITY browser.html.img.anim.once.label "jednorazowo">
+<!ENTITY browser.html.img.anim.none.label "zabronione">
+<!ENTITY browser.html.img.resizing.label "Dopasuj do rozmiaru obrazka">
+<!ENTITY browser.html.img.show_image_placeholders.label "Wyświetlaj symbol zastępczy obrazka podczas wczytywania obrazka oraz, gdy obrazek jest uszkodzony">
+<!ENTITY browser.html.img.force_inline_alttext.label "Wyświetlaj tekst ze znacznika ALT w przypadku braku obrazka">
+<!ENTITY browser.html.color_management.label "Zarządzanie kolorem (CMS) (działa po ponownym uruchomieniu)">
+<!ENTITY browser.html.color_management.mode.label "Tryb">
+<!ENTITY browser.html.color_management.mode.off.label "Dezaktywuj CMS">
+<!ENTITY browser.html.color_management.mode.on.label "Uaktywnij dla renderowanej grafiki">
+<!ENTITY browser.html.color_management.mode.tagged.label "Uaktywnij tylko dla oznaczonej grafiki">
+<!ENTITY browser.html.downloadable_fonts.label "Pobieraj czcionki sieciowe CSS3">
+<!ENTITY browser.html.html5.label "Przetwarzaj HTML 5">
+<!ENTITY browser.html.enableSVG.label "Renderuj SVG">
+<!ENTITY browser.html.plainviewXML.label "Wyświetlaj w prostym stylu elementy XML bez określonych stylów">
+<!ENTITY browser.html.focus.label "Wyróżnianie aktywnych pól i elementów">
+<!ENTITY browser.html.focus.enabled.label "Wyróżniaj aktywne pola tekstowe i elementy">
+<!ENTITY browser.html.focus.bg.label "Kolor tła">
+<!ENTITY browser.html.focus.fg.label "Kolor tekstu">
+<!ENTITY browser.tabs.label "Przeglądanie w kartach">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "Zamykaj okno, gdy jest zamykana ostatnia karta">
+<!ENTITY browser.tabs.closeButtons.label "Przycisk zmykania wyświetlaj na:">
+<!ENTITY browser.tabs.closeButtons.active.label "etykiecie aktywnej karty">
+<!ENTITY browser.tabs.closeButtons.all.label "wszystkich etykietach kart (domyślne)">
+<!ENTITY browser.tabs.closeButtons.no.label "nigdzie nie wyświetlaj">
+<!ENTITY browser.tabs.closeButtons.end.label "na końcu paska kart (zachowanie jak w Firefox 1.x)">
+<!ENTITY browser.tabs.tabClipWidth.label "Wyświetlaj na etykietach szerszych niż">
+<!ENTITY browser.tabs.disableBackgroundClose.label "Po naciśnięciu przycisku na nieaktywnej karcie, przełączaj do karty zamiast ją zamykać">
+<!ENTITY browser.tabs.tabWidth.label "Szerokość etykiety karty">
+<!ENTITY browser.tabs.tabWidth.min.label "Minimalna (px):">
+<!ENTITY browser.tabs.tabWidth.max.label "Maksymalna (px):">
+<!ENTITY browser.tabs.seachOpenintab.label "Otwieraj w nowej karcie wyniki wyszukiwania zainicjowane z paska szukania">
+<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Otwieraj nowe karty za aktywną kartą (Firefox 3.6+)">
+<!ENTITY browser.tabs.autoselect.label "Automatyczne uaktywnianie kart">
+<!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "Otwieraj jako aktywne nowe karty otwierane z zakładek i historii">
+<!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "Nowe karty otwierane przez odnośniki lub zewnętrzne programy otwieraj jako aktywne">
+<!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "Uaktywniaj kartę macierzystą po zamknięciu karty otwartej z innej karty">
+<!ENTITY browser.tabs.tabpreview.label "Wyświetlanie miniatur kart (Firefox 3.6+)">
+<!ENTITY browser.tabs.tabpreview.alltabs.label "W panelu wyświetlania otwartych kart">
+<!ENTITY browser.tabs.tabpreview.ctrltab.label "Po użyciu skrótu [Ctrl+Tab]">
+<!ENTITY browser.sessionStore.label "Zapis sesji">
+<!ENTITY browser.sessionStore.disabled.label "Dezaktywuj zapis sesji">
+<!ENTITY browser.sessionStore.interval.label "Zapisuj sesje co">
+<!ENTITY browser.sessionStore.max_undo.label "Zapamiętywanie zamknięć do odtworzenia">
+<!ENTITY browser.sessionStore.max_undo.windows.label "Liczba zamknięć okien:">
+<!ENTITY browser.sessionStore.max_undo.tabs.label "Liczba zamknięć kart:">
+<!ENTITY browser.sessionStore.resume_from_crash.label "Odtwarzaj ostatnią sesję, gdy &brandShortName; jest uruchamiany po awarii">
+<!ENTITY browser.sessionStore.privacy_level.label "Zapamiętuj dodatkowe dane sesji:">
+<!ENTITY browser.sessionStore.privacy_level.any.label "dla wszystkich witryn">
+<!ENTITY browser.sessionStore.privacy_level.unenc.label "dla wszystkich witryn oprócz HTTPS">
+<!ENTITY browser.sessionStore.privacy_level.never.label "nie zapamiętuj">
+<!ENTITY browser.bookmarkicon.label "Ikony witryn (favikony)">
+<!ENTITY browser.bookmarkicon.siteicons.label "Wyświetlaj ikony witryn na etykietach kart i w pasku adresu">
+<!ENTITY browser.bookmarkicon.favicons.lebel "Wyświetlaj ikony witryn na elementach zakładek">
+<!ENTITY browser.download.label "Pobieranie">
+<!ENTITY browser.download.addToRecentDocs.label "Dodawaj nowe pobrania do listy ostatnio pobieranych">
+<!ENTITY browser.download.quitBehavior.label "Zachowanie po zamknięciu programu &brandShortName;">
+<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Przerwij i wznów pobieranie po ponownym uruchomieniu programu &brandShortName;">
+<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Przerwij, ale nie wznawiaj pobierania po ponownym uruchomieniu programu &brandShortName;">
+<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Anuluj pobierania">
+<!ENTITY browser.download.showAlertOnComplete.label "Wyświetlaj monit o dokończenie pobierania">
+<!ENTITY browser.download.alerts.label "Konfiguracja powiadomień">
+<!ENTITY browser.download.alerts.totalOpenTime "Wyświetlaj powiadomienia przez">
+<!ENTITY browser.download.alerts.slide.label "Szybkość animacji wysuwanych powiadomień">
+<!ENTITY browser.download.alerts.slide.prefix.label "Wysuwaj powiadomienia z prędkością">
+<!ENTITY browser.download.alerts.slide.per.label "px w ciągu">
+<!ENTITY browser.download.alerts.slide.settolight.label "Polecane">
+<!ENTITY browser.ua.label "User-Agent">
+<!ENTITY browser.ua.desc "Uwaga: Ustawienia tej konfiguracji mogą powodować konflikty z wtyczkami, dodatkiem User Agent Switcher i innymi rozszerzeniami.">
+<!ENTITY browser.ua.text.label "Wyświetlany UA:">
+<!ENTITY browser.ua.presets.label "Predefiniowany">
+<!ENTITY browser.ua.presets.this.label "&brandShortName; +">
+<!ENTITY browser.speed-paint.label "Grafika i renderowanie">
+<!ENTITY browser.speed-paint.desc "Uwaga: Zalecane wartości mogą być nieodpowiednie dla twojego typu i otoczenia komputera. Czasami mogą powodować spowolnienie lub utrudnienie przeglądania, ale niektóre z nich mogą sprawiać wrażenie przyspieszenia.">
+<!ENTITY browser.speed-paint.delay.label "Opóźnienie wczytania obrazka inicjującego">
+<!ENTITY browser.speed-paint.notify-backoffcount.label "Maksymalna liczba przeładowań (reflows) do wykonania">
+<!ENTITY browser.speed-paint.notify-backoffcount.never "Bez limitu">
+<!ENTITY browser.speed-paint.notify-interval.label "Przerwa pomiędzy przeładowaniami (reflows)">
+<!ENTITY browser.speed-paint.content-interrupt.label "Nie przerywaj przetwarzania">
+<!ENTITY browser.speed-paint.content-interrupt.desc "Uwaga! &brandShortName; może nie odpowiadać do czasu zakończenia przetwarzania.">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.label "Czas po jakim przetwarzanie zostanie przerwane">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "Uwaga: Nie należy ustawiać 0.">
+<!ENTITY browser.speed-paint.content-switch-threshold.label "Częstotliwość trybu przerwań przełączania progowania">
+<!ENTITY browser.speed-paint.content-switch-threshold.desc "Duża częstotliwość trybu przerwań korzystnie wpływa na długość czasu wczytywania interfejsu. Wartość domyślna: 750000 &#x03BC;s (3/4 ms).">
+<!ENTITY browser.speed-cache.label "Bufor podręczny przeglądarki">
+<!ENTITY browser.speed-cache.check.label "Sprawdzanie bufora pamięci podręcznej stron">
+<!ENTITY browser.speed-cache.check.desc "Uwaga!: Funkcja „&browser.speed-cache.check.once.label;” czyni przeglądarkę szybszą, ale może powodować problemy z niektórymi serwisami internetowymi. Jeżeli witryny nie są aktualizowane prawidłowo, wybierz „&browser.speed-cache.check.each.label;” lub naciskaj co jakiś czas przycisk odświeżania z klawiszem [Shift], aby wymusić odświeżenie witryny.">
+<!ENTITY browser.speed-cache.check.once.label "Raz w ciągu sesji">
+<!ENTITY browser.speed-cache.check.each.label "Cały czas">
+<!ENTITY browser.speed-cache.check.never.label "Nigdy (nie zalecane)">
+<!ENTITY browser.speed-cache.check.auto.label "Gdy wygaśnie ważność strony (zalecane)">
+<!ENTITY browser.speed-cache.memory_enable.label "Uaktywnij bufor podręczny pamięci (zalecane)">
+<!ENTITY browser.speed-cache.memory_capability.label "Bufor podręczny pamięci">
+<!ENTITY browser.speed-cache.trim_on_minimize.label "Przechodź na wolny dostęp do pamięci, gdy &brandShortName; jest zminimalizowany (tylko Windows)">
+<!ENTITY browser.speed-cache.disk_cache_ssl.label "Zapisuj strony z połączeniami SSL w buforze podręcznym (NIEBEZPIECZNE)">
+<!ENTITY browser.speed-cache.prefetch-next.label "Uaktywnij wstępne pobieranie">
+<!ENTITY browser.speed-cache.session-history-viewers.label "Maksymalna liczba stron przechowywanych w pamięci">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "Uwaga: Zwiększa to wydajność podczas używania funkcji Wstecz i Do przodu. Jeśli jest otwarte wiele kart może bardzo zwiększyć użycie pamięci przez program &brandShortName;. Jest to rozwiązanie kompromisowe.">
+<!ENTITY browser.speed-cache.diskCacheFolder.label "Lokalizacja folderu bufora">
+<!ENTITY browser.speed-cache.diskCacheFolder.desc "Pliki bufora będą przetrzymywane w subfolderze o nazwie „Cache” w określonym katalogu. Aby zmiany zostały zastosowane, należy ponownie uruchomić program &brandShortName;.">
+<!ENTITY browser.others.label "Różne">
+<!ENTITY browser.others.geo_enabled.label "Geolokalizacja">
+<!ENTITY browser.others.dns.label "Ustawienia DNS">
+<!ENTITY browser.others.dns.disableIPv6.label "Dezaktywuj wyszukiwania IPv6">
+<!ENTITY browser.others.dns.prefetch.label "Wczytuj wstępnie adresy DNS, by zwiększyć wydajność wczytywania stron">
+<!ENTITY browser.others.nouse_text_smoothing_setting.label "Zawsze wygładzaj tekst (tylko dla Mac)">
+<!ENTITY browser.others.errorPageDisabled.label "Wyświetlaj stronę informacyjną błędu zamiast okienka z wiadomością o błędzie">
+<!ENTITY browser.others.editorExternal "Wyświetlaj źródło w edytorze zewnętrznym">
+<!ENTITY browser.others.editorExternal.path "Ścieżka do edytora:">
+<!ENTITY browser.others.backspace_action.label "Działanie po naciśnięciu klawisza [Backspace] :">
+<!ENTITY browser.others.backspace_action.goBack "Przechodź do poprzedniej strony w historii sesji (tak samo, jak w IE)">
+<!ENTITY browser.others.backspace_action.scrollUp "Przewijaj w górę aktywny dokument">
+<!ENTITY browser.others.backspace_action.nothing "Brak działania">
+<!ENTITY security.title "Bezpieczeństwo">
+<!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.annoy.label "Zezwolenia">
+<!ENTITY security.js.annoy.max_script_run_time.label "Wyświetlaj informację o przekroczeniu czasu wykonania po upływie:">
+<!ENTITY security.js.annoy.disable_scripts_to_close_windows "Dezaktywuj zamykanie okien">
+<!ENTITY security.js.annoy.window_flip "Dezaktywuj przenoszenie okien na pierwszy/drugi plan">
+<!ENTITY security.js.annoy.window_move_resize "Dezaktywuj zmianę rozmiaru i położenia otwartych okien">
+<!ENTITY security.js.annoy.status_change "Dezaktywuj zmienianie pasku stanu">
+<!ENTITY security.js.annoy.change_image "Dezaktywuj zmienianie sposobu otwierania obrazków">
+<!ENTITY security.js.annoy.change_image.desc "Uwaga: Funkcja „&security.js.annoy.change_image;” powoduje brak działania niektórych aplikacji sieciowych np. takich jak Google Map.">
+<!ENTITY security.js.annoy.contextmenu "Nie zezwalaj na blokowanie lub zmianę menu kontekstowego">
+<!ENTITY security.js.annoy.dispatchLeftClickOnly "Zezwalaj tylko na zmiany kliknięcia lewym przyciskiem myszki">
+<!ENTITY security.js.uis.label "Zapobieganie zmian interfejsu użytkownika">
+<!ENTITY security.js.uis.desc1 "Zezwalaj skryptom JavaScript na zmiany następujących elementów:">
+<!ENTITY security.js.uis.desc2 "Zaznacz wszystkie opcje, aby uniknąć zmian interfejsu.">
+<!ENTITY security.js.uis.menubar "paska menu">
+<!ENTITY security.js.uis.resizable "wielkości okien">
+<!ENTITY security.js.uis.scrollbars "pasków przewijania">
+<!ENTITY security.js.uis.toolbar "paska narzędzi nawigacyjnych">
+<!ENTITY security.js.uis.locationbar "paska adresu">
+<!ENTITY security.js.uis.status "paska stanu">
+<!ENTITY security.popupwin.label "Wyskakujące okienka">
+<!ENTITY security.popupwin.tabs.label "Wyskakujące okienka w trakcie przeglądania w kartach otwieraj:">
+<!ENTITY security.popupwin.tabs.0.label "w sposób określony dla ustawień odnośników">
+<!ENTITY security.popupwin.tabs.1.label "w nowym oknie">
+<!ENTITY security.popupwin.tabs.2.label "w sposób określony dla ustawień odnośników, ale otwieraj okna jeśli określono sposób ich wyświetlania (domyślne)">
+<!ENTITY security.popupwin.popup_maximum.label "Maksymalna liczba okienek">
+<!ENTITY security.popupwin.from_plugins.label "Limitowanie wyskakujących okienek z wtyczek:">
+<!ENTITY security.popupwin.from_plugins.0.label "ez ograniczeń">
+<!ENTITY security.popupwin.from_plugins.1.label "limituj do wartości „&security.popupwin.popup_maximum.label;”">
+<!ENTITY security.popupwin.from_plugins.2.label "blokuj wszystkie z wyjątkiem dozwolonych">
+<!ENTITY security.popupwin.from_plugins.3.label "blokuj wszystkie łącznie z dozwolonymi">
+<!ENTITY security.popupwin.event.label "Zezwalaj na otwieranie, gdy:">
+<!ENTITY security.popupwin.event.reset.label "zresetowano formularz">
+<!ENTITY security.popupwin.event.submit.label "wysyłano formularz">
+<!ENTITY security.popupwin.event.select.label "wybrano formularz">
+<!ENTITY security.popupwin.event.change.label "zmieniono tekst">
+<!ENTITY security.popupwin.event.resize.label "zmieniono wielkość okna">
+<!ENTITY security.popupwin.event.input.label "wprowadzono dane">
+<!ENTITY security.popupwin.event.keypress.label "przytrzymano klawisz">
+<!ENTITY security.popupwin.event.keydown.label "wciśnięto klawisz">
+<!ENTITY security.popupwin.event.keyup.label "puszczono klawisz">
+<!ENTITY security.popupwin.event.mouseup.label "puszczono przycisk myszy">
+<!ENTITY security.popupwin.event.mousedown.label "naciśnięto przycisk myszy">
+<!ENTITY security.popupwin.event.click.label "wykonano kliknięcie">
+<!ENTITY security.popupwin.event.dblclick.label "wykonano dwukrotne kliknięcie">
+<!ENTITY security.antivirus.label "Antywirus">
+<!ENTITY security.antivirus.scanWhenDone.label "Wykonuj skanowanie antywirusowe po zakończeniu pobierania">
+<!ENTITY security.antivirus.scanWhenDone.desc "W systemach Windows XP SP2+ i Windows Vista ta wartość wskazuje także, czy pobrane pliki wywołują ostrzeżenia bezpieczeństwa po uruchomieniu">
+<!ENTITY security.antivirus.dontclean.label "Próbuj wyczyścić pobrany plik po wykryciu wirusa">
+<!ENTITY security.antivirus.alertOnEXEOpen.label "Wyświetlaj powiadomienie o otwieraniu (wykonaniu) pliku EXE.">
+<!ENTITY security.ssl.label "SSL">
+<!ENTITY security.ssl.ssl_domain_display.label "Gdy witryna jest bezpieczna, wyświetlaj w pasku adresu:">
+<!ENTITY security.ssl.ssl_domain_display.none.label "tylko favicon">
+<!ENTITY security.ssl.ssl_domain_display.eTLD.label "domenę najwyższego i drugiego poziomu (np., mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.full.label "pełną domenę (np., addons.mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.desc "Gdy witryna używa rozszerzone sprawdzanie (EV) certyfikatów SSL, wyświetla nazwę organizacji, z którą jest połączona.">
+<!ENTITY security.ssl.ssl_override_behavior.label "Zachowanie dialogu „Dodaj wyjątek bezpieczeństwa”, gdy nie powiedzie się bezpieczne połączenie">
+<!ENTITY security.ssl.ssl_override_behavior.dont.label "Nie zgłaszaj aktualnego adresu URL jako wyjątku i nie pobieraj wstępnie certyfikatu SSL.">
+<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Zgłaszaj aktualny adres URL, ale nie pobieraj wstępnie certyfikatu SSL.">
+<!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Zgłaszaj aktualny adres URL i pobieraj wstępnie certyfikat SSL.">
+<!ENTITY security.net.label "Sieć">
+<!ENTITY security.net.redirection-limit.label "Limit przekierowań HTTP">
+<!ENTITY security.net.enableIDN.label "Uaktywnij obsługę IDN (rozpoznawanie domen międzynarodowych)">
+<!ENTITY security.net.show_punycode.label "Wyświetlaj IDN w Punycode">
+<!ENTITY security.net.show_punycode.desc "Zazwyczaj nie jest konieczne wyświetlanie IDN w Punycode. Obecnie &brandShortName; odrzuca niewłaściwe adresy IDN używając listy dozwolonych/niedozwolonych.">
+<!ENTITY security.net.referer.label "Odpowiedzi na żądania nagłówka">
+<!ENTITY security.net.referer.none.label "Nigdy nie wysyłaj (niezalecane)">
+<!ENTITY security.net.referer.none.desc "Uwaga: Wysyłanie odpowiedzi na żądania nagłówka może być czasami wymagane. Jeśli występują problemy z pobraniem niektórych witryn, można to ustawienie zmienić na „&security.net.referer.link.label;” lub „&security.net.referer.all.label;”.">
+<!ENTITY security.net.referer.link.label "Wysyłaj tylko po kliknięciu">
+<!ENTITY security.net.referer.all.label "Wysyłaj także na żądania obrazka">
+<!ENTITY security.net.referer.secureXSite.label "Wysyłaj odpowiedź podczas przechodzenia z witryny bezpiecznej (https) do innej witryny https">
+<!ENTITY security.net.referer.secureXSite.desc "Bez względu na to ustawienie nigdy nie jest wysyłana odpowiedź podczas przechodzenia z serwera https do serwera nie https.">
+<!ENTITY security.privacy.label "Prywatność">
+<!ENTITY security.privacy.history.label "Historia przeglądania">
+<!ENTITY security.privacy.history.expireDays1.label "Pamiętaj strony odwiedzane w ciągu ostatnich">
+<!ENTITY security.privacy.history.expireDays2.label "dni">
+<!ENTITY security.privacy.history.expireSites1.label "Maksymalnie pamiętaj">
+<!ENTITY security.privacy.history.expireSites2.label "odwiedzanych stron">
+<!ENTITY security.privacy.cookie.label "Ciasteczka">
+<!ENTITY security.privacy.cookie.lifetimedays.label "Usuwaj ciasteczka po upływie">
+<!ENTITY security.privacy.passwd.label "Hasło główne">
+<!ENTITY security.privacy.passwd.managepassword.label "Ustawienia hasła głównego">
+<!ENTITY security.privacy.passwd.managepassword.text "&brandShortName; będzie pytał o hasło główne:">
+<!ENTITY security.privacy.passwd.managepassword.askfirsttime "tylko za pierwszym razem, jeśli będzie to wymagane">
+<!ENTITY security.privacy.passwd.managepassword.askeverytime "za każdym razem, jeśli będzie to wymagane">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout "jeśli nie używano przeglądarki przez">
+<!ENTITY security.privacy.passwd.managepassword.timeout.unit "minut lub dłużej">
+<!ENTITY security.privacy.passwd.desc "Ustawienia hasła głównego dostępne są także w opcjach programu &brandShortName;.">
+<!ENTITY http.title "Sieć HTTP">
+<!ENTITY http.connect.label "Połączenia">
+<!ENTITY http.connect.desc "Używając poniższych opcji można dokładnie ustawić połączenia HTTP, by zwiększyć
+wydajność lub kompatybilność. Niektóre serwery proxy wymagają ustawień HTTP/1.0.">
+<!ENTITY http.connect.direct.label "Połączenie bezpośrednie">
+<!ENTITY http.connect.proxy.label "Połączenie proxy">
+<!ENTITY http.connect.HTTP10.label "Użyj HTTP 1.0">
+<!ENTITY http.connect.HTTP11.label "Użyj HTTP 1.1">
+<!ENTITY http.connect.keepAlive.label "Uaktywnij podtrzymywanie połączenia">
+<!ENTITY http.connect.pipeline.label "Uaktywnij przetwarzanie potokowe">
+<!ENTITY http.connect.pipeline.desc "UWAGA: Przetwarzanie potokowe jest eksperymentalną funkcją stworzoną w celu zwiększenia wydajności wczytywania witryn internetowych, ale niestety nie zawsze dobrze współpracuje z niektórymi serwerami sieciowymi i serwerami proxy.">
+<!ENTITY http.connect.HTTP10.accesskey "U">
+<!ENTITY http.connect.HTTP10Proxy.accesskey "H">
+<!ENTITY http.connect.HTTP11.accesskey "T">
+<!ENTITY http.connect.HTTP11Proxy.accesskey "P">
+<!ENTITY http.connect.keepAlive.accesskey "O">
+<!ENTITY http.connect.keepAliveProxy.accesskey "D">
+<!ENTITY http.connect.pipeline.accesskey "E">
+<!ENTITY http.connect.pipelineProxy.accesskey "Z">
+<!ENTITY http.ad.label "Zaawansowane">
+<!ENTITY http.ad.accept.label "Przesyłanie pola „Accept” nagłówka HTTP">
+<!ENTITY http.ad.accept.encoding.label "Kodowanie Accept">
+<!ENTITY http.ad.accept.default.label "Accept">
+<!ENTITY http.ad.maxsession.label "Maksymalna liczba połączeń sesji">
+<!ENTITY http.ad.maxsession.desc "UWAGA: Nie zmieniaj nic, jeżeli nie masz pełnej wiedzy na temat RFC 2616.">
+<!ENTITY http.ad.maxsession.maxpipeliningrequest.label "Maksymalna liczba żądań przetwarzania potokowego:">
+<!ENTITY http.ad.maxsession.maxconnections.label "Maksymalna liczba połączeń (wszystkie):">
+<!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "Maksymalna liczba połączeń (na serwer):">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "Maksymalna liczba połączeń stałych (na serwer):">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "Uwaga: Nie należy utrzymywać więcej niż 2 (RFC 2616) (Domyślne: Firefox 3, IE8:6, Opera, Safari:4, Firefox 2, IE7:2)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "Maksymalna liczba połączeń stałych (przez proxy):">
+<!ENTITY ui.title "Interfejs">
+<!ENTITY ui.mousewheel.label "Kółko myszy">
+<!ENTITY ui.mousewheel.mouseWheelPanel.label "–  kółko myszy +">
+<!ENTITY ui.mousewheel.mouseWheelPanel2.label "klawisz">
+<!ENTITY ui.mousewheel.vertiscroll.label "Przewijanie pionowe">
+<!ENTITY ui.mousewheel.horizscroll.label "Przewijanie poziome">
+<!ENTITY ui.mousewheel.usingJustTheWheel.label "bez modyfikatora">
+<!ENTITY ui.mousewheel.scroll.label "Przewijaj dokument co">
+<!ENTITY ui.mousewheel.scrollLines.label "linie">
+<!ENTITY ui.mousewheel.useSystemDefault.label "Użyj ustawień systemowych">
+<!ENTITY ui.mousewheel.scrollPgUpPgDn.label "Przewijaj stronę o ekran">
+<!ENTITY ui.mousewheel.history.label "Przewijaj historię przeglądania">
+<!ENTITY ui.mousewheel.textsize.label "Powiększ lub pomniejsz tekst">
+<!ENTITY ui.multitouch.label "Ekran dotykowy">
+<!ENTITY ui.multitouch.gestures.label "Gesty Multi-Touch">
+<!ENTITY ui.multitouch.gestures.pinch.in.label "Ściśnięcie">
+<!ENTITY ui.multitouch.gestures.pinch.in.shift.label "Ściśnięcie z klawiszem [Shift]">
+<!ENTITY ui.multitouch.gestures.pinch.out.label "Rozsunięcie">
+<!ENTITY ui.multitouch.gestures.pinch.out.shift.label "Rozsunięcie z klawiszem [Shift]">
+<!ENTITY ui.multitouch.gestures.swipe.label "Przesunięcie (w lewo/w prawo/w górę/w dół)">
+<!ENTITY ui.multitouch.gestures.twist.label "Obrót (w lewo/w prawo)">
+<!ENTITY ui.find.label "Znajdź na stronie">
+<!ENTITY ui.find.findahead.label "Szybkie szukanie (Znajdź wprowadzając)">
+<!ENTITY ui.find.findahead.desc "Podpowiedź: Aby ręcznie rozpocząć szybkie szukanie, należy wpisać /, by znaleźć tekst lub ', by znaleźć odnośnik i następnie szukany tekst.">
+<!ENTITY ui.find.findahead.timeout.label "Wyczyść pole szukania po upływie">
+<!ENTITY ui.find.findahead.timeout.label2 "ms nieaktywności">
+<!ENTITY ui.find.findahead.sound.label "Powiadamiaj dźwiękiem jeśli tekst nie został znaleziony (zmiana wymaga ponownego uruchomienia przeglądarki)">
+<!ENTITY ui.keynav.label "Nawigacja klawiaturą">
+<!ENTITY ui.keynav.tabNavigationBehavior.label "Nawigacja z użyciem klawisza [Tab]">
+<!ENTITY ui.keynav.tabNavigationLinks.label "odnośnikami">
+<!ENTITY ui.keynav.tabNavigationLinks.accesskey "O">
+<!ENTITY ui.keynav.tabNavigationForms.label "przyciskami, przyciskami typu „radio”, okienkami wyboru i listami">
+<!ENTITY ui.keynav.tabNavigationForms.accesskey "P">
+<!ENTITY ui.keynav.tabNavigationTextboxes.label "Uwaga: Przemieszczanie pomiędzy polami tekstowymi jest zawsze realizowane za pomocą klawisza [Tab]">
+<!ENTITY ui.keynav.tabNavigationDesc.label "Po wciśnięciu klawisza [Tab] lub [Shift+Tab] przemieszczaj się pomiędzy:">
+<!ENTITY ui.keynav.accelerators.label "Klawisze skrótów">
+<!ENTITY ui.keynav.acceleratorsBlurb.label "Wartość 0 wyłącza klawisz modyfikujący.">
+<!ENTITY ui.keynav.acceleratorKey.label "Klawisz skrótu:">
+<!ENTITY ui.keynav.acceleratorKey.accesskey "S">
+<!ENTITY ui.keynav.menuAccessKey.label "Klawisz wywołujący menu:">
+<!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.i18n.label "i18n">
+<!ENTITY ui.i18n.locale.label "Oznaczenie języka programu">
+<!ENTITY ui.i18n.locale.eg "(np. pl, en-US, ja, ar-AE)">
+<!ENTITY ui.i18n.bidi.label "Dwukierunkowe wyświetlanie tekstu (BiDi)">
+<!ENTITY ui.i18n.bidi.ui.label "Uaktywnij interfejs BiDi">
+<!ENTITY ui.i18n.bidi.characterset.label "Zestaw znaków">
+<!ENTITY ui.i18n.bidi.characterset.doc.label "Zgodny z dokumentem">
+<!ENTITY ui.i18n.bidi.characterset.default.label "Domyślny zestaw dokumentu">
+<!ENTITY ui.i18n.bidi.controlstextmode.label "Tryb kontroli tekstu">
+<!ENTITY ui.i18n.bidi.controlstextmode.logical.label "Logiczny">
+<!ENTITY ui.i18n.bidi.controlstextmode.visual.label "Wizualny">
+<!ENTITY ui.i18n.bidi.controlstextmode.container.label "Kontener">
+<!ENTITY ui.i18n.bidi.direction.label "Kierunek tekstu">
+<!ENTITY ui.i18n.bidi.direction.ltr.label "-&gt; Od lewej do prawej">
+<!ENTITY ui.i18n.bidi.direction.rtl.label "&lt;- Od prawej do lewej">
+<!ENTITY ui.i18n.bidi.numeral.label "Liczebniki">
+<!ENTITY ui.i18n.bidi.numeral.regular_context.label "Kontekst regularny">
+<!ENTITY ui.i18n.bidi.numeral.hindi_context.label "Kontekst Hindi">
+<!ENTITY ui.i18n.bidi.numeral.arabic.label "Arabskie">
+<!ENTITY ui.i18n.bidi.numeral.hindi.label "Hindi">
+<!ENTITY ui.i18n.bidi.support.label "Dostawca">
+<!ENTITY ui.i18n.bidi.support.mozilla.label "&brandShortName; BiDi">
+<!ENTITY ui.i18n.bidi.support.os.label "OS BiDi">
+<!ENTITY ui.i18n.bidi.support.disable.label "Wyłącz">
+<!ENTITY ui.i18n.bidi.texttype.label "Typ tekstu">
+<!ENTITY ui.i18n.bidi.texttype.charset.label "Domyślny">
+<!ENTITY ui.i18n.bidi.texttype.logical.label "Logiczny">
+<!ENTITY ui.i18n.bidi.texttype.visual.label "Wizualny">
+<!ENTITY ui.i18n.others.label "Różne">
+<!ENTITY ui.i18n.others.scrollbarSide.label "Umieszczaj pionowy pasek przewijania po stronie:">
+<!ENTITY ui.i18n.others.scrollbarSide.uiBase "prawej w LTR, lewej w RTL, bazując na orientacji programu &brandShortName;(domyślne)">
+<!ENTITY ui.i18n.others.scrollbarSide.contentBase "prawej w LTR, lewej w RTL, bazując na orientacji dokumentu">
+<!ENTITY ui.i18n.others.scrollbarSide.right "prawej">
+<!ENTITY ui.i18n.others.scrollbarSide.left "lewej">
+<!ENTITY ui.i18n.others.spellcheckDefault.label "Ustawienia sprawdzania pisowni">
+<!ENTITY ui.i18n.others.spellcheckDefault.disabled "Dezaktywuj sprawdzanie pisownii">
+<!ENTITY ui.i18n.others.spellcheckDefault.multiline "Uaktywnij sprawdzanie pisowni w wielowierszowych elementach np. textarea (domyślne)">
+<!ENTITY ui.i18n.others.spellcheckDefault.all "Uaktywnij sprawdzanie pisowni we wszystkich elementach tekstowych">
+<!ENTITY ui.i18n.others.japanese_specific_transform.label "Zamieniaj odwrotny ukośnik na znak jena w dokumentach kodowanych w języku japońskim">
+<!ENTITY ui.others.label "Różne">
+<!ENTITY ui.others.preference.label "Okna dialogowe ustawień (łącznie z Configuration Mania)">
+<!ENTITY ui.others.preference.instanceAccept.label "Akceptacja zmian (podobnie jak w Mac lub Gnome)">
+<!ENTITY ui.others.preference.animateFadeIn.label "Animacja zanikania (podobnie jak w Mac)">
+<!ENTITY ui.others.xwin.label "Działanie myszy, jak w systemie Unix (X-Window)">
+<!ENTITY ui.others.xwin.autocopy.label "Uaktywnij autokopiowanie zaznaczonego tekstu (tylko w systemach *nix)">
+<!ENTITY ui.others.xwin.paste.label "Kliknięcie środkowym przyciskiem myszy powoduje wklejenie danych zapisanych w schowku">
+<!ENTITY ui.others.xwin.contentLoadURL.label "Kliknięcie środkowym przyciskiem myszy powoduje otwarcie schowka z adresami URL">
+<!ENTITY ui.others.xwin.scrollbarPosition.label "Zezwalaj, by środkowy przycisk myszy regulował pasek przewijania (opcja będzie aktywna po ponownym uruchomieniu)">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.label "Opcje opóźnienia">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "Brak">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "Nieskończone (emulacja motywu)">
+<!ENTITY ui.others.enable_drag_images.label "Wyświetlaj obrazek – jeśli jest określony – podczas przeciągania">
+<!ENTITY ui.others.xul_file_picker "Wyświetlaj wbudowane okno wyboru plików nawet jeśli jest dostępne okno systemowe">
+<!ENTITY debug.title "Debug">
+<!ENTITY debug.debug.label "Informacje diagnostyczne">
+<!ENTITY debug.debug.dump.label "Uaktywnij wyjście JavaScript dump()">
+<!ENTITY debug.debug.jsstrict.label "Wyświetlaj tylko ostrzeżenia JavaScript">
+<!ENTITY debug.debug.chromeerr.label "Wyświetlaj błędy i ostrzeżenia JavaScript">
+<!ENTITY debug.debug.csserr.label "Wyświetlaj błędy przetwarzania CSS">
+<!ENTITY debug.tracemonkey.label "Uaktywnij JIT (TraceMonkey) z JavaScript:">
+<!ENTITY debug.tracemonkey.content.label "w sieci">
+<!ENTITY debug.tracemonkey.chrome.label "w chrome">
+<!ENTITY debug.cache.label "Bufor podręczny">
+<!ENTITY debug.cache.disableXULCache.label "Dezaktywuj bufor podręczny XUL">
+<!ENTITY debug.cache.diskCacheDisable.label "Dezaktywuj bufor podręczny dysku">
+<!ENTITY debug.cache.memoryCacheDisable.label "Dezaktywuj bufor podręczny pamięci">
+<!ENTITY debug.extension.label "Dodatki">
+<!ENTITY debug.extension.get_addons_maxResults.label "Maksymalna liczba wyświetlanych wyników wyszukiwania:">
+<!ENTITY debug.extension.dialog_enable_delay.label "Opóźnienie instalacji dodatków:">
+<!ENTITY debug.extension.noCheckCompatibility.label "Nie sprawdzaj kompatybilności dodatków podczas instalacji/aktualizacji">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "Nie sprawdzaj zabezpieczeń aktualizacji dodatków">
+<!ENTITY debug.extension.installButton.label "Wyświetlaj przycisk „Instaluj” w oknie dodatków">
+<!ENTITY miliseconds "ms">
+<!ENTITY microseconds "&#x03BC;s">
+<!ENTITY seconds "s">
+<!ENTITY days "dni">
+<!ENTITY kilobytes "KB">
+<!ENTITY reset "Domyślne">
+<!ENTITY browse "Przeglądaj…">
+<!ENTITY preview "Podgląd">
+<!ENTITY search "Szukaj">
+<!ENTITY autoSet "Auto">
+<!ENTITY disableSet "Wyłączone">
+<!ENTITY manualSet "Ręcznie">

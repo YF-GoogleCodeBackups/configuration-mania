@@ -23,23 +23,56 @@
 <em:name>Configuration Mania?</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/wiki/</em:homepageURL>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 <!--em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL-->
 <em:optionsURL>chrome://confmania/content/preferences.xul</em:optionsURL>
 
 <em:localized><Description>
-<em:locale>en</em:locale>
+<em:locale>en-US</em:locale>
 <em:name>Configuration Mania</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/wiki/Home</em:homepageURL>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
-<em:locale>ja</em:locale>
+<em:locale>ja-JP</em:locale>
 <em:name>Configuration Mania</em:name>
 <em:description>様々な隠し設定を変更するためのパネル</em:description>
 <em:creator>Popoki Tom</em:creator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/wiki/Home</em:homepageURL>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+</Description></em:localized>
+
+<!--em:localized><Description>
+<em:locale>de-DE</em:locale>
+<em:name>Configuration Mania</em:name>
+<em:description>More Advanced (hidden) configures</em:description>
+<em:creator>Popoki Tom</em:creator>
+<em:translator>Markus Stadler</em:translator>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+</Description></em:localized-->
+<!--em:localized><Description>
+<em:locale>fr</em:locale>
+<em:name>Configuration Mania</em:name>
+<em:description>More Advanced (hidden) configures</em:description>
+<em:creator>Popoki Tom</em:creator>
+<em:translator>myahoo</em:translator>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+</Description></em:localized-->
+<em:localized><Description>
+<em:locale>pl</em:locale>
+<em:name>Configuration Mania</em:name>
+<em:description>More Advanced (hidden) configures</em:description>
+<em:creator>Popoki Tom</em:creator>
+<em:translator>Leszek(teo)Życzkowski</em:translator>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+</Description></em:localized>
+<em:localized><Description>
+<em:locale>zh-CN</em:locale>
+<em:name>Configuration Mania</em:name>
+<em:description>More Advanced (hidden) configures</em:description>
+<em:creator>Popoki Tom</em:creator>
+<em:translator>fang5566</em:translator>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 
 </Description>
