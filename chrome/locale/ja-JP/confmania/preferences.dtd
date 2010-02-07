@@ -71,6 +71,7 @@
 <!ENTITY browser.tabs.tabpreview.label "タブのプレビュー表示 (Firefox3.6+)">
 <!ENTITY browser.tabs.tabpreview.alltabs.label "タブの一覧表示">
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "Ctrl+TAB">
+<!ENTITY browser.tabs.tabpreview.taskbar.label "タスクバー (Windows7)">
 <!ENTITY browser.sessionStore.label "セッションストア">
 <!ENTITY browser.sessionStore.disabled.label "&browser.sessionStore.label;を無効にする">
 <!ENTITY browser.sessionStore.interval.label "セッション状態を保存する時間間隔">

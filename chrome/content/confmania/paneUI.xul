@@ -352,7 +352,7 @@ var gUIPref = {
     <caption label="&ui.find.findahead.label;"/>
     <description>&ui.find.findahead.desc;</description>
     <hbox align="center">
-      <label value="&ui.find.findahead.timeout.label;"/>
+      <label value="&ui.find.findahead.timeout.label;" control="keyNavTypeAHeadTimeout"/>
       <textbox id="keyNavTypeAHeadTimeout" type="number" hidespinbuttons="true" preference="accessibility.typeaheadfind.timeout" size="5"/>
       <label value="&ui.find.findahead.timeout.label2;"/>
     </hbox>

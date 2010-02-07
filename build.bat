@@ -1,4 +1,4 @@
-@echo off
+@rem @echo off
 set EXTENSIONNAME=confmania
 
 if "%1" == "all"	call :all
@@ -16,8 +16,16 @@ goto EOF
 
 :build
 	call :init
+	call :prep
 	call :xpi
 	goto EOF
+
+:prep
+	if exist "%ProgramFiles%\7-Zip\7z.exe" (
+		set ZIP_PROG="%ProgramFiles%\7-Zip\7z.exe" a -tzip -mx=9
+	) else (
+		set ZIP_PROG=zip -9
+	)
 
 :init
 	goto EOF
@@ -27,14 +35,16 @@ goto EOF
 	goto EOF
 
 :jar
+	call :prep
 	cd chrome
-	zip -9r %EXTENSIONNAME%.jar content locale skin -x@..\exclude.lst
+	%ZIP_PROG% -r %EXTENSIONNAME%.jar content locale skin -x@..\exclude.lst
 	cd ..
 	goto EOF
 
 :xpi
+	call :prep
 	call :jar
-	zip -9 %EXTENSIONNAME%.xpi chrome\%EXTENSIONNAME%.jar *.rdf chrome.manifest -x@exclude.lst
+	%ZIP_PROG% %EXTENSIONNAME%.xpi chrome\%EXTENSIONNAME%.jar *.rdf chrome.manifest defaults\preferences\pref.js -x@exclude.lst
 	goto EOF
 
 :EOF

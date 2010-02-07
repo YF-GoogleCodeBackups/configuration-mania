@@ -70,6 +70,7 @@
 <!ENTITY browser.tabs.tabpreview.label "Enable thumbnail preview (Firefox3.6+)">
 <!ENTITY browser.tabs.tabpreview.alltabs.label "on the All tabs panel">
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
+<!ENTITY browser.tabs.tabpreview.taskbar.label "on Taskbar (Windows7)">
 <!ENTITY browser.sessionStore.label "Session Store">
 <!ENTITY browser.sessionStore.disabled.label "Disable &browser.sessionStore.label;">
 <!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
