@@ -380,8 +380,8 @@
 <!ENTITY debug.extension.label "アドオン">
 <!ENTITY debug.extension.get_addons_maxResults.label "表示する検索結果の最大数 :">
 <!ENTITY debug.extension.dialog_enable_delay.label "インストール開始するまでの時間">
-<!ENTITY debug.extension.noCheckCompatibility.label "インストール/更新時のアドオンのバージョンチェックを回避">
-<!ENTITY debug.extension.noCheckUpdateSecurity.label "アドオンの署名チェックを回避">
+<!ENTITY debug.extension.noCheckCompatibility.label "アドオンの以下のバージョンとの適合確認をしない :">
+<!ENTITY debug.extension.noCheckUpdateSecurity.label "アドオンの署名チェックをしない">
 <!ENTITY debug.extension.installButton.label "アドオンダイアログにインストールボタンを表示">
 
 <!ENTITY miliseconds "ミリ秒">

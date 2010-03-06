@@ -60,6 +60,7 @@
   <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
   <preference name="extensions.checkCompatibility" id="extensions.checkCompatibility" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.3.6" id="extensions.checkCompatibility.3.6" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.3.7a" id="extensions.checkCompatibility.3.7a" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
   <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
@@ -106,10 +107,12 @@
   <textbox id="ext-delay" preference="security.dialog_enable_delay" type="number" hidespinbuttons="true" min="0" size="4"/>
   <label value="&miliseconds;"/>
 </hbox>
-<checkbox label="&debug.extension.noCheckCompatibility.label; (Firefox 3.5)"
-          preference="extensions.checkCompatibility"/>
-<checkbox label="&debug.extension.noCheckCompatibility.label; (Firefox 3.6)"
-          preference="extensions.checkCompatibility.3.6"/>
+<groupbox orient="horizontal">
+<caption label="&debug.extension.noCheckCompatibility.label;"/>
+<checkbox label="Firefox 3.5" preference="extensions.checkCompatibility" />
+<checkbox label="Firefox 3.6" preference="extensions.checkCompatibility.3.6" />
+<checkbox label="Firefox 3.7" preference="extensions.checkCompatibility.3.7a" />
+</groupbox>
 <checkbox label="&debug.extension.noCheckUpdateSecurity.label;"
           preference="extensions.checkUpdateSecurity"/>
 <checkbox label="&debug.extension.installButton.label;"

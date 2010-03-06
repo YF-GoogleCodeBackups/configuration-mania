@@ -379,7 +379,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 
 <!ENTITY debug.extension.get_addons_maxResults.label "Maximum number of search results to display :">
 <!ENTITY debug.extension.dialog_enable_delay.label "Time to start add-on installations :">
-<!ENTITY debug.extension.noCheckCompatibility.label "Do Not check add-on compatibility on install/update">
+<!ENTITY debug.extension.noCheckCompatibility.label "Do Not check add-on compatibility with :">
 <!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
 <!ENTITY debug.extension.installButton.label "Show Install button on the add-on dialog">
 
