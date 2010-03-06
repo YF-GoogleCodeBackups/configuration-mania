@@ -152,6 +152,14 @@ var gPrefBrowser = {
     box = document.getElementById("focus-highlight-hbox");
     Array.forEach(box.childNodes, disablefunc);
 
+    disabled = ! document.getElementById("html-webglEnabled").checked;
+    box = document.getElementById("html-webgl-vbox");
+    Array.forEach(box.childNodes, disablefunc);
+
+    disabled = disabled || (! document.getElementById("html-webgl-software-render").checked);
+    box = document.getElementById("html-webgl-hbox");
+    Array.forEach(box.childNodes, disablefunc);
+
     disabled = document.getElementById("tabs-closeButtons").selectedIndex != 1;
     box = document.getElementById("tabs-closeButtons-all-pane");
     Array.forEach(box.childNodes, disablefunc);
@@ -255,22 +263,30 @@ var gPrefBrowser = {
     mData.value = paintDelay * 500;
     document.documentElement.currentPane.userChangedValue(mData);
   },
-  onEditorExternalBrowse : function(){
+  _openBrowse: function(aFilter, aTargetID) {
     // Open File Dialog
     const nsIFilePicker = Components.interfaces.nsIFilePicker;
     var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
     fp.init(window, document.title, nsIFilePicker.modeOpen);
-    fp.appendFilters(nsIFilePicker.filterApps | nsIFilePicker.filterAll);
+    fp.appendFilters(aFilter);
     try{
       var file = Components.classes["@mozilla.org/file/local;1"]
        .createInstance(Components.interfaces.nsILocalFile);
-      file.initWithPath(document.getElementById("others-editorExternal-path").value);
+      file.initWithPath(document.getElementById(aTargetID).value);
       fp.displayDirectory = file.parent;
       fp.defaultString = file.leafName;
     }catch(ex){}
 
-    if(fp.show() == nsIFilePicker.returnOK)
-      document.getElementById("others-editorExternal-path").value = fp.file.path;
+    if(fp.show() == nsIFilePicker.returnOK) {
+      document.getElementById(aTargetID).value = fp.file.path;
+    }
+  },
+  onWebGLOSMesaBrowse : function() {
+    this._openBrowse(Components.interfaces.nsIFilePicker.filterAll, "html-webgl-osmesa-path");
+  },
+  onEditorExternalBrowse : function(){
+    const filter = Components.interfaces.nsIFilePicker.filterApps | Components.interfaces.nsIFilePicker.filterAll;
+    this._openBrowse(filter, "others-editorExternal-path");
   },
   onBrowserCacheDiskCacheFolderBrowse : function(){
     var folderField = document.getElementById("browserCacheDiskCacheFolder");
@@ -340,6 +356,9 @@ var gPrefBrowser = {
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
   <preference id="html5.enable" name="html5.enable" type="bool"/>
   <preference id="svg.enabled" name="svg.enabled" type="bool"/>
+  <preference id="webgl.enabled_for_all_sites" name="webgl.enabled_for_all_sites" type="bool"/>
+  <preference id="webgl.software_render" name="webgl.software_render" type="bool"/>
+  <preference id="webgl.osmesalib" name="webgl.osmesalib" type="string"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
@@ -499,6 +518,18 @@ var gPrefBrowser = {
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.html5.label;" preference="html5.enable"/>
   <checkbox label="&browser.html.enableSVG.label;" preference="svg.enabled"/>
+
+  <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.enabled_for_all_sites"
+            oncommand="gPrefBrowser.updatePrefs();"/>
+  <vbox id="html-webgl-vbox" class="indent">
+    <checkbox id="html-webgl-software-render" label="&browser.html.webgl.software_render.label;" preference="webgl.software_render"
+              oncommand="gPrefBrowser.updatePrefs();"/>
+    <hbox align="center" id="html-webgl-hbox">
+      <label control="html-webgl-osmesa-path" value="&browser.html.webgl.osmesa.path.label;"/>
+      <textbox id="html-webgl-osmesa-path" preference="webgl.osmesalib" flex="1"/>
+      <button label="&browse;" oncommand="gPrefBrowser.onWebGLOSMesaBrowse()"/>
+    </hbox>
+  </vbox>
 
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
   <groupbox>

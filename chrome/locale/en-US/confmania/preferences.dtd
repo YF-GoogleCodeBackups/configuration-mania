@@ -44,6 +44,9 @@
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.html5.label "Enable HTML 5 Parsing">
 <!ENTITY browser.html.enableSVG.label "Enable rendering SVG content">
+<!ENTITY browser.html.webgl.label "Enable WebGL (Firefox 3.7+; takes effect after restart)">
+<!ENTITY browser.html.webgl.software_render.label "Use software rendering">
+<!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib path :">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
