@@ -46,12 +46,9 @@
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane id="paneSecurity" onpaneload="gPrefSecurity.init();">
 
-<script><![CDATA[
+<script type="text/javascript;version=1.8"><![CDATA[
 var gPrefSecurity = {
   init : function(){
-    this.updateIDN();
-    this.updateSendRefererSecureXSite();
-
     document.getElementById("passwordTimeout").value
      = Components.classes["@mozilla.org/security/pk11tokendb;1"]
      .getService(Components.interfaces.nsIPK11TokenDB)
@@ -75,22 +72,28 @@ var gPrefSecurity = {
 
     return val;
   },
-  updateIDN : function(){
-    document.getElementById("showPunycode").disabled = ! document.getElementById("enableIDN").checked;
-    document.getElementById("showPunycodeDesc").disabled = ! document.getElementById("enableIDN").checked;
+  onIDNSyncFrom: function() {
+    let disabled = ! document.getElementById("network.enableIDN").value;
+    for each (let name in ["network.IDN_show_punycode", "showPunycodeDesc"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
   },
-  updateSendRefererSecureXSite: function(){
-    document.getElementById("sendRefererSecureXSite").disabled = document.getElementById("sendReferer").value == "0";
+  onSendRefererSecureXSiteSyncFrom: function() {
+    let disabled = document.getElementById("network.http.sendRefererHeader").value == "0";
+    document.getElementById("network.http.sendSecureXSiteReferrer").disabled = disabled;
+    return undefined; // no override
   },
   updatePasswordAskTimes : function(){
     var radiogroup = document.getElementById("passwordAskTimes");
     var askEveryTimeHidden = document.getElementById("askEveryTimeHidden");
     document.getElementById("passwordTimeout").disabled = (String(radiogroup.value) != "1");
     askEveryTimeHidden.checked = (String(radiogroup.value) == "-1");
-    if(askEveryTimeHidden._initilized)
+    if(askEveryTimeHidden._initilized) {
       document.getElementById("paneSecurity").userChangedValue(askEveryTimeHidden);
-    else
+    } else {
       askEveryTimeHidden._initilized = true;
+    }
   }
 };
 ]]></script>
@@ -266,7 +269,7 @@ var gPrefSecurity = {
     <textbox id="redirection-limit" type="number" hidespinbuttons="true" size="2" preference="network.http.redirection-limit"/>
   </hbox>
   <checkbox id="enableIDN" label="&security.net.enableIDN.label;"
-    preference="network.enableIDN" oncommand="gPrefSecurity.updateIDN();"/>
+    preference="network.enableIDN" onsyncfrompreference="return gPrefSecurity.onIDNSyncFrom();"/>
   <checkbox id="showPunycode" class="indent" label="&security.net.show_punycode.label;"
     preference="network.IDN_show_punycode"/>
   <description id="showPunycodeDesc" class="indent">&security.net.show_punycode.desc;</description>
@@ -274,11 +277,11 @@ var gPrefSecurity = {
 
 <groupbox>
   <caption label="&security.net.referer.label;"/>
-  <radiogroup id="sendReferer" preference="network.http.sendRefererHeader">
-    <radio value="0" label="&security.net.referer.none.label;" oncommand="gPrefSecurity.updateSendRefererSecureXSite()"/>
+  <radiogroup id="sendReferer" preference="network.http.sendRefererHeader" onsyncfrompreference="return gPrefSecurity.onSendRefererSecureXSiteSyncFrom()">
+    <radio value="0" label="&security.net.referer.none.label;"/>
     <description class="indent">&security.net.referer.none.desc;</description>
-    <radio value="1" label="&security.net.referer.link.label;" oncommand="gPrefSecurity.updateSendRefererSecureXSite()"/>
-    <radio value="2" label="&security.net.referer.all.label;" oncommand="gPrefSecurity.updateSendRefererSecureXSite()"/>
+    <radio value="1" label="&security.net.referer.link.label;"/>
+    <radio value="2" label="&security.net.referer.all.label;"/>
   </radiogroup>
   <checkbox id="sendRefererSecureXSite" label="&security.net.referer.secureXSite.label;"
     preference="network.http.sendSecureXSiteReferrer"/>

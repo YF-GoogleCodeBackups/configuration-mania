@@ -48,13 +48,13 @@
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane id="paneBrowser" flex="1" onpaneload="gPrefBrowser.init();">
 
-<script><![CDATA[
+<script type="application/javascript;version=1.8"><![CDATA[
 var gPrefBrowser = {
   init : function(){
     try {
-      var dirSvc = Components.classes["@mozilla.org/file/directory_service;1"]
+      let dirSvc = Components.classes["@mozilla.org/file/directory_service;1"]
        .getService(Components.interfaces.nsIProperties);
-      var cachedir = dirSvc.get((dirSvc.has("ProfLD"))? "ProfLD" : "ProfD", Components.interfaces.nsILocalFile);
+      let cachedir = dirSvc.get((dirSvc.has("ProfLD"))? "ProfLD" : "ProfD", Components.interfaces.nsILocalFile);
       document.getElementById("browserCacheDiskCacheFolder").emptyText = cachedir.path;
     } catch(ex){}
 
@@ -62,8 +62,6 @@ var gPrefBrowser = {
       document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
     }
     gPrefBrowser.initUA();
-
-    gPrefBrowser.updatePrefs();
   },
   initUA : function(){
     var oUAValue = document.getElementById("ua-value");
@@ -118,55 +116,70 @@ var gPrefBrowser = {
     };
     req.send(null);
   },
-  updatePrefs : function(){
-    var disabled, box;
-
-    var disablefunc = function(val){ val.disabled = disabled; };
-
-    disabled = document.getElementById("urlbar-autoComplete-disabled").checked;
-    box = document.getElementById("urlbar-autoComplete-pane");
-    Array.forEach(box.childNodes, disablefunc);
-    box = document.getElementById("urlbar-maxRichResults-pane");
-    Array.forEach(box.childNodes, disablefunc);
-
-    disabled = ! document.getElementById("smartbrowsing-keywordsEnabled").checked;
-    box = document.getElementById("smartbrowsing-keywordsURL-hbox");
-    Array.forEach(box.childNodes, disablefunc);
-
-    disabled = ! document.getElementById("smartbrowsing-domainGuessingEnabled").checked;
-    box = document.getElementById("smartbrowsing-domainGuessingEnabled-hbox");
-    Array.forEach(box.childNodes, disablefunc);
-
-    disabled = document.getElementById("speed-interrupt-parsing").checked;
-    box = document.getElementById("speed-interrupt-parsing-hbox");
-    Array.forEach(box.childNodes, disablefunc);
-
-    disabled = ! document.getElementById("speed-cache-memory-enable").checked;
-    box = document.getElementById("speed-cache-memory-capacity-type");
-    Array.forEach(box.childNodes, disablefunc);
-
-    document.getElementById("html-frameForceResizability").disabled
-     = ! document.getElementById("html-frameEnabled").checked;
-
-    disabled = ! document.getElementById("focus-highlight-enabled").checked;
-    box = document.getElementById("focus-highlight-hbox");
-    Array.forEach(box.childNodes, disablefunc);
-
-    disabled = ! document.getElementById("html-webglEnabled").checked;
-    box = document.getElementById("html-webgl-vbox");
-    Array.forEach(box.childNodes, disablefunc);
-
-    disabled = disabled || (! document.getElementById("html-webgl-software-render").checked);
-    box = document.getElementById("html-webgl-hbox");
-    Array.forEach(box.childNodes, disablefunc);
-
-    disabled = document.getElementById("tabs-closeButtons").selectedIndex != 1;
-    box = document.getElementById("tabs-closeButtons-all-pane");
-    Array.forEach(box.childNodes, disablefunc);
-
-    disabled = ! document.getElementById("others-editorExternal").checked;
-    box = document.getElementById("others-editorExternal-hbox");
-    Array.forEach(box.childNodes, disablefunc);
+  onSmartBrowsingSyncFrom : function () {
+    let disabled = ! document.getElementById("keyword.enabled").value;
+    document.getElementById("keyword.URL").disabled = disabled;
+    return undefined; // no override
+  },
+  onDomainGaussSyncFrom : function () {
+    let disabled = ! document.getElementById("browser.fixup.alternate.enabled").value;
+    for each (let name in ["browser.fixup.alternate.prefix", "browser.fixup.alternate.suffix"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
+  },
+  onAutoCompleteSyncFrom : function (){
+    let disabled = document.getElementById("browser.urlbar.autocomplete.enabled").value;
+    for each (let name in ["browser.urlbar.autoFill", "browser.urlbar.filter.javascript", "browser.urlbar.maxRichResults"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
+  },
+  onHtmlFrameSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.frames.enabled").value;
+    document.getElementById("layout.frames.force_resizability").disabled = disabled;
+    return undefined; // no override
+  },
+  onWebGLSyncFrom : function() {
+    let disabled = ! document.getElementById("webgl.enabled_for_all_sites").value;
+    document.getElementById("webgl.software_render").disabled = disabled;
+    return gPrefBrowser.onWebGLSFRenderSyncFrom();
+  },
+  onWebGLSFRenderSyncFrom : function() {
+    let disabled = ! (document.getElementById("webgl.enabled_for_all_sites").value && document.getElementById("webgl.software_render").value);
+    document.getElementById("webgl.osmesalib").disabled = disabled;
+    return undefined; // no override
+  },
+  onFocusHighlightSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.display.use_focus_colors").value;
+    for each (let name in ["browser.display.focus_background_color", "browser.display.focus_text_color"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
+  },
+  onTabsCloseButtonSyncFrom : function() {
+    let disabled = document.getElementById("browser.tabs.closeButtons").value != 1;
+    for each (let name in ["browser.tabs.tabClipWidth", "browser.tabs.disableBackgroundClose"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
+  },
+  onInterruptParseSyncFrom : function() {
+    let disabled = document.getElementById("content.interrupt.parsing").value;
+    document.getElementById("content.max.tokenizing.time").disabled = disabled;
+    return undefined; // no override
+  },
+  onMemoryEnableSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.cache.memory.enable").value;
+    for each (let name in ["speed-cache-memory-capacity-type", "speed-cache-memory-capacity-type-label", "browser.cache.memory.capacity"]) {
+      document.getElementById(name).disabled = disabled;
+    }
+    return undefined; // no override
+  },
+  onEditorExternalSyncFrom : function() {
+    let disabled = ! document.getElementById("view_source.editor.external").value;
+    document.getElementById("view_source.editor.path").disabled = disabled;
+    return undefined; // no override
   },
   searchKeyword : function(aKeyword){
     if ((aKeyword || "") == "") return;
@@ -243,13 +256,11 @@ var gPrefBrowser = {
     document.getElementById("general.useragent.override").reset();
   },
   onSpeedPaintReset : function(){
-    var expander = document.getElementById("speed-paint");
-    var xpath = document.evaluate(".//*[@preference]", expander, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
-    for ( var e; e = xpath.iterateNext(); ) {
+    let expander = document.getElementById("speed-paint");
+    let xpath = document.evaluate(".//*[@preference]", expander, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+    for (let e; e = xpath.iterateNext();) {
       document.getElementById(e.getAttribute("preference")).reset();
     }
-
-    gPrefBrowser.updatePrefs();
   },
   synchNotifyInterval : function(){
     var paintDelay = document.getElementById("nglayout.initialpaint.delay").value;
@@ -435,12 +446,11 @@ var gPrefBrowser = {
     <description>&browser.smartbrowsing.internetKeywords.desc;</description>
     <vbox>
       <checkbox id="smartbrowsing-keywordsEnabled" preference="keyword.enabled"
-                oncommand="gPrefBrowser.updatePrefs();"
+                onsyncfrompreference="return gPrefBrowser.onSmartBrowsingSyncFrom();"
                 label="&browser.smartbrowsing.internetKeywords.enabled.label;"/>
-      <hbox align="center" id="smartbrowsing-keywordsURL-hbox">
+      <hbox align="center">
         <label control="smartbrowsing-keywordsURL" value="&browser.smartbrowsing.internetKeywords.URL.label;"/>
         <textbox id="smartbrowsing-keywordsURL" preference="keyword.URL" flex="1" class="uri-element"/>
-        <button label="&reset;" oncommand="gPrefBrowser.resetKeywordURL()"/>
       </hbox>
     </vbox>
   </groupbox>
@@ -449,9 +459,9 @@ var gPrefBrowser = {
 
     <checkbox id="smartbrowsing-domainGuessingEnabled"
           label="&browser.smartbrowsing.domainGuessing.enabled.label;"
-          oncommand="gPrefBrowser.updatePrefs()"
+          onsyncfrompreference="return gPrefBrowser.onDomainGaussSyncFrom();"
           preference="browser.fixup.alternate.enabled"/>
-    <hbox id="smartbrowsing-domainGuessingEnabled-hbox" align="center">
+    <hbox align="center">
       <label control="smartbrowsing-domainGuessingPrefix"
              value="&browser.smartbrowsing.domainGuessing.prefix.label;"/>
       <textbox id="smartbrowsing-domainGuessingPrefix"
@@ -469,13 +479,13 @@ var gPrefBrowser = {
   <checkbox label="&browser.urlbar.doubleClickSelectsAll.label;" preference="browser.urlbar.doubleClickSelectsAll"/>
 
   <checkbox label="&browser.urlbar.autoComplete.label;" preference="browser.urlbar.autocomplete.enabled"
-   oncommand="gPrefBrowser.updatePrefs();" id="urlbar-autoComplete-disabled"/>
+   onsyncfrompreference="return gPrefBrowser.onAutoCompleteSyncFrom();" id="urlbar-autoComplete-disabled"/>
   <vbox class="indent" id="urlbar-autoComplete-pane">
     <checkbox label="&browser.urlbar.autoComplete.autoFill.label;"
               preference="browser.urlbar.autoFill" />
     <checkbox label="&browser.urlbar.autoComplete.filterJavaScript.label;"
               preference="browser.urlbar.filter.javascript"/>
-    <hbox align="center" id="urlbar-maxRichResults-pane">
+    <hbox align="center">
       <label value="&browser.urlbar.autoComplete.maxRichResults.label;" control="urlbar-maxRichResults"/>
       <textbox id="urlbar-maxRichResults" type="number" size="2" preference="browser.urlbar.maxRichResults"/>
     </hbox>
@@ -484,7 +494,7 @@ var gPrefBrowser = {
 <expander id="html" label="&browser.html.label;" open="false" clearhidden="true">
   <checkbox label="&browser.html.allowBlink.label;" preference="browser.blink_allowed"/>
   <checkbox id="html-frameEnabled" label="&browser.html.enableFrame.label;"
-   oncommand="gPrefBrowser.updatePrefs();" preference="browser.frames.enabled"/>
+   onsyncfrompreference="return gPrefBrowser.onHtmlFrameSyncFrom();" preference="browser.frames.enabled"/>
   <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
    class="indent" preference="layout.frames.force_resizability"/>
   <groupbox>
@@ -520,14 +530,14 @@ var gPrefBrowser = {
   <checkbox label="&browser.html.enableSVG.label;" preference="svg.enabled"/>
 
   <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.enabled_for_all_sites"
-            oncommand="gPrefBrowser.updatePrefs();"/>
+            onsyncfrompreference="return gPrefBrowser.onWebGLSyncFrom()"/>
   <vbox id="html-webgl-vbox" class="indent">
     <checkbox id="html-webgl-software-render" label="&browser.html.webgl.software_render.label;" preference="webgl.software_render"
-              oncommand="gPrefBrowser.updatePrefs();"/>
-    <hbox align="center" id="html-webgl-hbox">
+              onsyncfrompreference="return gPrefBrowser.onWebGLSFRenderSyncFrom()"/>
+    <hbox align="center">
       <label control="html-webgl-osmesa-path" value="&browser.html.webgl.osmesa.path.label;"/>
       <textbox id="html-webgl-osmesa-path" preference="webgl.osmesalib" flex="1"/>
-      <button label="&browse;" oncommand="gPrefBrowser.onWebGLOSMesaBrowse()"/>
+      <button label="&browse;" control="html-webgl-osmesa-path" oncommand="gPrefBrowser.onWebGLOSMesaBrowse()"/>
     </hbox>
   </vbox>
 
@@ -535,8 +545,9 @@ var gPrefBrowser = {
   <groupbox>
     <caption label="&browser.html.focus.label;"/>
     <checkbox id="focus-highlight-enabled" label="&browser.html.focus.enabled.label;"
-     oncommand="gPrefBrowser.updatePrefs();" preference="browser.display.use_focus_colors"/>
-    <hbox id="focus-highlight-hbox" align="center" class="indent">
+     onsyncfrompreference="return gPrefBrowser.onFocusHighlightSyncFrom();"
+     preference="browser.display.use_focus_colors"/>
+    <hbox align="center" class="indent">
       <label value="&browser.html.focus.bg.label;" control="focus-bg-color"/>
       <colorpicker id="focus-bg-color" type="button" preference="browser.display.focus_background_color"/>
       <label value="&browser.html.focus.fg.label;" control="focus-fg-color"/>
@@ -548,10 +559,10 @@ var gPrefBrowser = {
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
   <groupbox>
     <caption label="&browser.tabs.closeButtons.label;"/>
-    <radiogroup id="tabs-closeButtons" preference="browser.tabs.closeButtons" oncommand="gPrefBrowser.updatePrefs();">
+    <radiogroup preference="browser.tabs.closeButtons" onsyncfrompreference="return gPrefBrowser.onTabsCloseButtonSyncFrom()">
       <radio value="0" label="&browser.tabs.closeButtons.active.label;"/>
       <radio value="1" label="&browser.tabs.closeButtons.all.label;"/>
-      <vbox class="indent" id="tabs-closeButtons-all-pane">
+      <vbox class="indent">
         <hbox align="center">
           <label value="&browser.tabs.tabClipWidth.label;" control="tabs-tabClipWidth"/>
           <textbox class="indent" type="number" hidespinbuttons="true" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
@@ -707,15 +718,15 @@ var gPrefBrowser = {
     <label value="&microseconds;"/>
   </hbox>
   <checkbox preference="content.interrupt.parsing" id="speed-interrupt-parsing"
-   oncommand="gPrefBrowser.updatePrefs();"
+   onsyncfrompreference="return gPrefBrowser.onInterruptParseSyncFrom();"
    label="&browser.speed-paint.content-interrupt.label;"/>
   <label class="indent" value="&browser.speed-paint.content-interrupt.desc;" />
   <vbox class="indent">
-    <hbox align="center" id="speed-interrupt-parsing-hbox">
+    <hbox align="center">
       <label value="&browser.speed-paint.content-max-tokenizing-time.label;" control="speed-max-tokenizing-time"/>
       <textbox id="speed-max-tokenizing-time" type="number" hidespinbuttons="true" preference="content.max.tokenizing.time"
        size="8" onsyncfrompreference="return document.getElementById('content.max.tokenizing.time').value || (parseInt(document.getElementById('speed-notify-interval').value) * 3);"/>
-      <label value="&microseconds;"/>
+      <label value="&microseconds;" control="speed-max-tokenizing-time"/>
     </hbox>
     <label class="indent" value="&browser.speed-paint.content-max-tokenizing-time.desc;" />
   </vbox>
@@ -730,14 +741,15 @@ var gPrefBrowser = {
 </expander>
 <expander id="speed-cache" label="&browser.speed-cache.label;" open="false" clearhidden="true">
   <checkbox id="speed-cache-memory-enable" label="&browser.speed-cache.memory_enable.label;"
-    preference="browser.cache.memory.enable" oncommand="gPrefBrowser.updatePrefs()"/>
+    onsyncfrompreference="return gPrefBrowser.onMemoryEnableSyncFrom();"
+    preference="browser.cache.memory.enable"/>
   <radiogroup class="indent" align="center" orient="horizontal" id="speed-cache-memory-capacity-type">
-    <label value="&browser.speed-cache.memory_capability.label;"/>
+    <label value="&browser.speed-cache.memory_capability.label;" id="speed-cache-memory-capacity-type-label"/>
     <radio value="-1" label="&autoSet;"/>
     <radio value="*" label="&manualSet;"/>
     <textbox id="speed-cache-memory-capacity" type="number" hidespinbuttons="true" min="-1" size="8" preference="browser.cache.memory.capacity"
      onsyncfrompreference="return initRadioGroupConnect2('speed-cache-memory-capacity-type','speed-cache-memory-capacity',-1);"/>
-    <label value="&kilobytes;"/>
+    <label value="&kilobytes;" control="browser-cache-memory-capacity"/>
   </radiogroup>
   <groupbox>
     <caption label="&browser.speed-cache.check.label;"/>
@@ -793,11 +805,11 @@ var gPrefBrowser = {
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
-            oncommand="gPrefBrowser.updatePrefs();"/>
+            onsyncfrompreference="return gPrefBrowser.onEditorExternalSyncFrom()"/>
   <hbox id="others-editorExternal-hbox" class="indent" align="center">
     <label control="others-editorExternal-path" label="&browser.others.editorExternal.path;"/>
     <textbox id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
-    <button label="&browse;" oncommand="gPrefBrowser.onEditorExternalBrowse()"/>
+    <button label="&browse;" control="others-editorExternal-path" oncommand="gPrefBrowser.onEditorExternalBrowse()"/>
   </hbox>
   <groupbox>
     <caption label="&browser.others.backspace_action.label;"/>
