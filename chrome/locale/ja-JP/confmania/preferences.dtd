@@ -367,6 +367,13 @@
 <!ENTITY ui.others.enable_drag_images.label "ドラッグ中に(可能であれば)画像を表示する">
 <!ENTITY ui.others.xul_file_picker "システムのファイルダイアログを使わずにXULファイルダイアログを使用">
 
+<!ENTITY addons.title "アドオン">
+<!ENTITY addons.get_addons_maxResults.label "表示する検索結果の最大数 :">
+<!ENTITY addons.dialog_enable_delay.label "インストール開始するまでの時間">
+<!ENTITY addons.noCheckCompatibility.label "アドオンの以下のバージョンとの適合確認をしない :">
+<!ENTITY addons.noCheckUpdateSecurity.label "アドオンの署名チェックをしない">
+<!ENTITY addons.installButton.label "アドオンダイアログにインストールボタンを表示">
+
 <!ENTITY debug.title "デバッグ">
 <!ENTITY debug.debug.label "デバッグ作業用">
 <!ENTITY debug.debug.dump.label "JavaScript の dump() 出力を有効にする">
@@ -380,12 +387,6 @@
 <!ENTITY debug.cache.disableXULCache.label "XUL キャッシュを無効にする">
 <!ENTITY debug.cache.diskCacheDisable.label "ディスクキャッシュを無効にする">
 <!ENTITY debug.cache.memoryCacheDisable.label "メモリーキャッシュを無効にする">
-<!ENTITY debug.extension.label "アドオン">
-<!ENTITY debug.extension.get_addons_maxResults.label "表示する検索結果の最大数 :">
-<!ENTITY debug.extension.dialog_enable_delay.label "インストール開始するまでの時間">
-<!ENTITY debug.extension.noCheckCompatibility.label "アドオンの以下のバージョンとの適合確認をしない :">
-<!ENTITY debug.extension.noCheckUpdateSecurity.label "アドオンの署名チェックをしない">
-<!ENTITY debug.extension.installButton.label "アドオンダイアログにインストールボタンを表示">
 
 <!ENTITY miliseconds "ミリ秒">
 <!ENTITY microseconds "&#x03bc;秒">

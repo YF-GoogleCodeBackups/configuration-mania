@@ -45,49 +45,37 @@
 
 <overlay id="paneDebugOverlay"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneDebug" orient="vertical">
+<prefpane id="paneAddons" orient="vertical">
 
 <preferences>
-  <preference name="browser.dom.window.dump.enabled" id="browser.dom.window.dump.enabled" type="bool"/>
-  <preference name="javascript.options.strict" id="javascript.options.strict" type="bool"/>
-  <preference name="javascript.options.showInConsole" id="javascript.options.showInConsole" type="bool"/>
-  <preference name="layout.css.report_errors" id="layout.css.report_errors" type="bool"/>
-  <preference name="javascript.options.jit.content" id="javascript.options.jit.content" type="bool"/>
-  <preference name="javascript.options.jit.chrome" id="javascript.options.jit.chrome" type="bool"/>
-  <preference name="nglayout.debug.disable_xul_cache" id="nglayout.debug.disable_xul_cache" type="bool"/>
-  <preference name="browser.cache.disk.enable" id="browser.cache.disk.enable" type="bool" inverted="true"/>
-  <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
+  <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
+  <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
+  <preference name="extensions.checkCompatibility" id="extensions.checkCompatibility" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.3.6" id="extensions.checkCompatibility.3.6" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.3.7a" id="extensions.checkCompatibility.3.7a" type="bool" inverted="true"/>
+  <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
+  <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
 </preferences>
 
-<groupbox>
-<caption label="&debug.debug.label;"/>
-<checkbox label="&debug.debug.dump.label;"
-          preference="browser.dom.window.dump.enabled"/>
-<checkbox label="&debug.debug.jsstrict.label;"
-          preference="javascript.options.strict"/>
-<checkbox label="&debug.debug.chromeerr.label;"
-          preference="javascript.options.showInConsole"/>
-<checkbox label="&debug.debug.csserr.label;"
-          preference="layout.css.report_errors"/>
-</groupbox>
-
+<hbox align="center">
+  <label value="&addons.get_addons_maxResults.label;" control="ext-maxResults"/>
+  <textbox id="ext-maxResults" preference="extensions.getAddons.maxResults" type="number" hidespinbuttons="true" min="1" size="3"/>
+</hbox>
+<hbox align="center">
+  <label value="&addons.dialog_enable_delay.label;" control="ext-delay"/>
+  <textbox id="ext-delay" preference="security.dialog_enable_delay" type="number" hidespinbuttons="true" min="0" size="4"/>
+  <label value="&miliseconds;"/>
+</hbox>
 <groupbox orient="horizontal">
-<caption label="&debug.tracemonkey.label;"/>
-<checkbox label="&debug.tracemonkey.content.label;"
-          preference="javascript.options.jit.content"/>
-<checkbox label="&debug.tracemonkey.chrome.label;"
-          preference="javascript.options.jit.chrome"/>
+<caption label="&addons.noCheckCompatibility.label;"/>
+<checkbox label="Firefox 3.5" preference="extensions.checkCompatibility" />
+<checkbox label="Firefox 3.6" preference="extensions.checkCompatibility.3.6" />
+<checkbox label="Firefox 3.7" preference="extensions.checkCompatibility.3.7a" />
 </groupbox>
-
-<groupbox orient="horizontal">
-<caption label="&debug.cache.label;"/>
-<checkbox label="&debug.cache.disableXULCache.label;"
-          preference="nglayout.debug.disable_xul_cache"/>
-<checkbox label="&debug.cache.diskCacheDisable.label;"
-          preference="browser.cache.disk.enable"/>
-<!--checkbox label="&debug.cache.memoryCacheDisable.label;"
-          preference="browser.cache.memory.enable"/-->
-</groupbox>
+<checkbox label="&addons.noCheckUpdateSecurity.label;"
+          preference="extensions.checkUpdateSecurity"/>
+<checkbox label="&addons.installButton.label;"
+          preference="extensions.hideInstallButton"/>
 
 </prefpane>
 </overlay>

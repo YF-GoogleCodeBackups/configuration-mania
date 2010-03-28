@@ -88,5 +88,6 @@ var gPrefWindow = {
 <prefpane id="paneSecurity" label="&security.title;" src="&cm;/paneSecurity.xul"/>
 <prefpane id="paneHTTP" label="&http.title;" src="&cm;/paneHTTP.xul"/>
 <prefpane id="paneUI" label="&ui.title;" src="&cm;/paneUI.xul"/>
+<prefpane id="paneAddons" label="&addons.title;" src="&cm;/paneAddons.xul"/>
 <prefpane id="paneDebug" label="&debug.title;" src="&cm;/paneDebug.xul"/>
 </prefwindow>

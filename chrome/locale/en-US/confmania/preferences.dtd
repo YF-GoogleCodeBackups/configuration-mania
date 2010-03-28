@@ -365,6 +365,13 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.others.enable_drag_images.label "Display an image (when specified) during dragging">
 <!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">
 
+<!ENTITY addons.title "Add-ons">
+<!ENTITY addons.get_addons_maxResults.label "Maximum number of search results to display :">
+<!ENTITY addons.dialog_enable_delay.label "Time to start add-on installations :">
+<!ENTITY addons.noCheckCompatibility.label "Do Not check add-on compatibility with :">
+<!ENTITY addons.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
+<!ENTITY addons.installButton.label "Show Install button on the add-on dialog">
+
 <!ENTITY debug.title "Debug">
 <!ENTITY debug.debug.label "For Debugging">
 <!ENTITY debug.debug.dump.label "Enable JavaScript dump() output">
@@ -378,13 +385,6 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.cache.disableXULCache.label "Disable XUL Cache">
 <!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
 <!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">
-<!ENTITY debug.extension.label "Add-ons">
-
-<!ENTITY debug.extension.get_addons_maxResults.label "Maximum number of search results to display :">
-<!ENTITY debug.extension.dialog_enable_delay.label "Time to start add-on installations :">
-<!ENTITY debug.extension.noCheckCompatibility.label "Do Not check add-on compatibility with :">
-<!ENTITY debug.extension.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
-<!ENTITY debug.extension.installButton.label "Show Install button on the add-on dialog">
 
 <!ENTITY miliseconds "[ms]">
 <!ENTITY microseconds "[us]">
