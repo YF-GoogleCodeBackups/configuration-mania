@@ -131,8 +131,6 @@ var gPrefSecurity = {
   <preference id="network.http.redirection-limit" name="network.http.redirection-limit" type="int"/>
   <preference id="network.enableIDN" name="network.enableIDN" type="bool"/>
   <preference id="network.IDN_show_punycode" name="network.IDN_show_punycode" type="bool"/>
-  <preference id="network.http.sendRefererHeader" name="network.http.sendRefererHeader" type="int"/>
-  <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
 
   <preference id="browser.history_expire_days" name="browser.history_expire_days" type="int"/>
   <preference id="browser.history_expire_sites" name="browser.history_expire_sites" type="int"/>
@@ -140,6 +138,9 @@ var gPrefSecurity = {
   <preference id="network.cookie.lifetime.days" name="network.cookie.lifetime.days" type="int"/>
   <preference id="security.ask_for_password" name="security.ask_for_password" type="int"/>
   <preference id="security.password_lifetime" name="security.password_lifetime" type="int"/>
+
+  <preference id="network.http.sendRefererHeader" name="network.http.sendRefererHeader" type="int"/>
+  <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
 </preferences>
 
 <tabbox flex="1">
@@ -150,6 +151,7 @@ var gPrefSecurity = {
 <tab label="&security.ssl.label;"/>
 <tab label="&security.net.label;"/>
 <tab label="&security.privacy.label;"/>
+<tab label="&security.referer.label;"/>
 </tabs> 
 <tabpanels flex="1">
 <tabpanel orient="vertical" flex="1">
@@ -207,16 +209,14 @@ var gPrefSecurity = {
   </hbox>
   <label value="&security.popupwin.from_plugins.label;"/>
   <radiogroup class="indent" preference="privacy.popups.disable_from_plugins">
-    <grid>
-    <columns><column/><column/></columns>
-    <rows><row>
+    <hbox>
       <radio value="0" label="&security.popupwin.from_plugins.0.label;"/>
       <radio value="1" label="&security.popupwin.from_plugins.1.label;"/>
-    </row><row>
+    </hbox>
+    <hbox>
       <radio value="2" label="&security.popupwin.from_plugins.2.label;"/>
       <radio value="3" label="&security.popupwin.from_plugins.3.label;"/>
-    </row></rows>
-    </grid>
+    </hbox>
   </radiogroup>
 
   <label value="&security.popupwin.event.label;" control="popupwin-e"/>
@@ -262,8 +262,6 @@ var gPrefSecurity = {
   </radiogroup>
 </tabpanel>
 <tabpanel orient="vertical">
-
-<groupbox>
   <hbox align="center">
     <label control="redirection-limit" value="&security.net.redirection-limit.label;"/>
     <textbox id="redirection-limit" type="number" hidespinbuttons="true" size="2" preference="network.http.redirection-limit"/>
@@ -273,21 +271,6 @@ var gPrefSecurity = {
   <checkbox id="showPunycode" class="indent" label="&security.net.show_punycode.label;"
     preference="network.IDN_show_punycode"/>
   <description id="showPunycodeDesc" class="indent">&security.net.show_punycode.desc;</description>
-</groupbox>
-
-<groupbox>
-  <caption label="&security.net.referer.label;"/>
-  <radiogroup id="sendReferer" preference="network.http.sendRefererHeader" onsyncfrompreference="return gPrefSecurity.onSendRefererSecureXSiteSyncFrom()">
-    <radio value="0" label="&security.net.referer.none.label;"/>
-    <description class="indent">&security.net.referer.none.desc;</description>
-    <radio value="1" label="&security.net.referer.link.label;"/>
-    <radio value="2" label="&security.net.referer.all.label;"/>
-  </radiogroup>
-  <checkbox id="sendRefererSecureXSite" label="&security.net.referer.secureXSite.label;"
-    preference="network.http.sendSecureXSiteReferrer"/>
-  <description class="indent">&security.net.referer.secureXSite.desc;</description>
-</groupbox>
-
 </tabpanel>
 <tabpanel orient="vertical">
 <groupbox>
@@ -343,6 +326,17 @@ var gPrefSecurity = {
 </groupbox>
 <description>&security.privacy.passwd.desc;</description>
 </groupbox>
+</tabpanel>
+<tabpanel orient="vertical">
+  <radiogroup id="sendReferer" preference="network.http.sendRefererHeader" onsyncfrompreference="return gPrefSecurity.onSendRefererSecureXSiteSyncFrom()">
+    <radio value="0" label="&security.referer.none.label;"/>
+    <description class="indent">&security.referer.none.desc;</description>
+    <radio value="1" label="&security.referer.link.label;"/>
+    <radio value="2" label="&security.referer.all.label;"/>
+  </radiogroup>
+  <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite.label;"
+    preference="network.http.sendSecureXSiteReferrer"/>
+  <description class="indent">&security.referer.secureXSite.desc;</description>
 </tabpanel>
 </tabpanels>
 </tabbox>

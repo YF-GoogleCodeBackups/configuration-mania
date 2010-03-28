@@ -217,13 +217,6 @@
 <!ENTITY security.net.enableIDN.label "IDN (国際化ドメイン名) を有効にする">
 <!ENTITY security.net.show_punycode.label "IDN を punycode で表示する">
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
-<!ENTITY security.net.referer.label "Referrer 要求ヘッダ">
-<!ENTITY security.net.referer.none.label "常に送らない (非推奨)">
-<!ENTITY security.net.referer.none.desc "警告: しばしば、Referrer ヘッダが要求されることがあります。もしそのようなことがあった時には、この設定を&quot;&security.net.referer.link.label;&quot;及び&quot;&security.net.referer.all.label;&quot;に変更して下さい。">
-<!ENTITY security.net.referer.link.label "リンクのクリック時のみ送る">
-<!ENTITY security.net.referer.all.label "画像要求も送る">
-<!ENTITY security.net.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送る">
-<!ENTITY security.net.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Referrerは送られません">
 <!ENTITY security.privacy.label "プライバシー">
 <!ENTITY security.privacy.history.label "履歴">
 <!ENTITY security.privacy.history.expireDays1.label  "訪問したページを次の日数だけ記憶する:">
@@ -240,6 +233,13 @@
 <!ENTITY security.privacy.passwd.managepassword.asktimeout   "前回使用後">
 <!ENTITY security.privacy.passwd.managepassword.timeout.unit "分以上経ったとき">
 <!ENTITY security.privacy.passwd.desc "ヒント: マスターパスワードの設定は &brandShortName; の設定ダイアログにあります。">
+<!ENTITY security.referer.label "Referrer">
+<!ENTITY security.referer.none.label "常に送らない (非推奨)">
+<!ENTITY security.referer.none.desc "警告: しばしば、Referrer ヘッダが要求されることがあります。もしそのようなことがあった時には、この設定を&quot;&security.referer.link.label;&quot;及び&quot;&security.referer.all.label;&quot;に変更して下さい。">
+<!ENTITY security.referer.link.label "リンクのクリック時のみ送る">
+<!ENTITY security.referer.all.label "画像要求も送る">
+<!ENTITY security.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送る">
+<!ENTITY security.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Referrerは送られません">
 
 <!ENTITY http.title "HTTP ネットワーク">
 <!ENTITY http.connect.label "接続">

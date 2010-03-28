@@ -214,13 +214,6 @@
 <!ENTITY security.net.enableIDN.label "Enable IDN(Internationalized Domain Names)">
 <!ENTITY security.net.show_punycode.label "Show IDN in punycode">
 <!ENTITY security.net.show_punycode.desc "It is usually no necessary to show IDN in punycode. Current &brandShortName; refuses an illegal IDN address by using the black/white list.">
-<!ENTITY security.net.referer.label "Referrer request-header">
-<!ENTITY security.net.referer.none.label "Never Send (Not recommended)">
-<!ENTITY security.net.referer.none.desc "WARNING: Sending the Referrer header may sometimes be required. If you experience with getting to some sites, this setting can be changed to &quot;&security.net.referer.link.label;&quot; or &quot;&security.net.referer.all.label;&quot;.">
-<!ENTITY security.net.referer.link.label "Send only on clicks">
-<!ENTITY security.net.referer.all.label "Send on image requests as well">
-<!ENTITY security.net.referer.secureXSite.label "Send the Referrer header when navigating from a https site to another https site">
-<!ENTITY security.net.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https server to a non-secure server.">
 <!ENTITY security.privacy.label "Privacy">
 <!ENTITY security.privacy.history.label "Browsing History">
 <!ENTITY security.privacy.history.expireDays1.label  "Remember visited pages for up to">
@@ -237,6 +230,13 @@
 <!ENTITY security.privacy.passwd.managepassword.asktimeout   "If it has not been used for ">
 <!ENTITY security.privacy.passwd.managepassword.timeout.unit "minutes or longer">
 <!ENTITY security.privacy.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
+<!ENTITY security.referer.label "Referrer">
+<!ENTITY security.referer.none.label "Never Send (Not recommended)">
+<!ENTITY security.referer.none.desc "WARNING: Sending the Referrer header may sometimes be required. If you experience with getting to some sites, this setting can be changed to &quot;&security.referer.link.label;&quot; or &quot;&security.referer.all.label;&quot;.">
+<!ENTITY security.referer.link.label "Send only on clicks">
+<!ENTITY security.referer.all.label "Send on image requests as well">
+<!ENTITY security.referer.secureXSite.label "Send the Referrer header when navigating from a https site to another https site">
+<!ENTITY security.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https server to a non-secure server.">
 
 <!ENTITY http.title "HTTP Network">
 <!ENTITY http.connect.label "Connection">
