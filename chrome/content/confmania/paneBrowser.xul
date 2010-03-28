@@ -164,6 +164,14 @@ var gPrefBrowser = {
     }
     return undefined; // no override
   },
+  onHwAccelRenderModeSyncFrom : function() {
+    let val = document.getElementById("mozilla.widget.render-mode").value;
+    return (val == 5)? true : false;
+  },
+  onHwAccelRenderModeSyncTo : function() {
+    let checkbox = document.getElementsByAttribute("preference", "mozilla.widget.render-mode").item(0);
+    return (checkbox.checked)? 5 : -1;
+  },
   onInterruptParseSyncFrom : function() {
     let disabled = document.getElementById("content.interrupt.parsing").value;
     document.getElementById("content.max.tokenizing.time").disabled = disabled;
@@ -410,6 +418,8 @@ var gPrefBrowser = {
 
   <preference id="general.useragent.override" name="general.useragent.override" type="wstring"/>
 
+  <preference id="mozilla.widget.render-mode" name="mozilla.widget.render-mode" type="int"/>
+  <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="nglayout.initialpaint.delay" name="nglayout.initialpaint.delay" type="int"/>
   <preference id="content.notify.backoffcount" name="content.notify.backoffcount" type="int"/>
   <preference id="content.notify.interval" name="content.notify.interval" type="int"/>
@@ -430,7 +440,7 @@ var gPrefBrowser = {
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
   <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
-  <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
+  <preference id="gfx.font_rendering.directwrite.enabled" name="gfx.font_rendering.directwrite.enabled" type="bool"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
@@ -703,6 +713,13 @@ var gPrefBrowser = {
     <description flex="1">&browser.speed-paint.desc;</description>
     <button label="&reset;" oncommand="gPrefBrowser.onSpeedPaintReset();"/>
   </hbox>
+  <groupbox>
+    <caption label="&browser.speed-paint.hwaccel.label;"/>
+    <checkbox label="&browser.speed-paint.hwaccel.render.label;" preference="mozilla.widget.render-mode"
+              onsyncfrompreference="return gPrefBrowser.onHwAccelRenderModeSyncFrom();"
+              onsynctopreference="return gPrefBrowser.onHwAccelRenderModeSyncTo();"/>
+    <checkbox label="&browser.speed-paint.hwaccel.directwrite.label;" preference="gfx.font_rendering.directwrite.enabled"/>
+  </groupbox>
   <hbox align="center">
     <label control="speed-paintDalay" value="&browser.speed-paint.delay.label;"/>
     <textbox id="speed-paintDalay" type="number" hidespinbuttons="true" size="3" preference="nglayout.initialpaint.delay"
