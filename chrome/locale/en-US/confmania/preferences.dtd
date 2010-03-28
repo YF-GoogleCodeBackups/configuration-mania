@@ -311,45 +311,44 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.keynav.acceleratorKey.accesskey  "A">
 <!ENTITY ui.keynav.menuAccessKey.label   "Menu access key:">
 <!ENTITY ui.keynav.menuAccessKey.accesskey   "M">
+<!ENTITY ui.bidi.label "Bidi">
+<!ENTITY ui.bidi.ui.label "Enable Bi-Directional (BiDi) UI">
+<!ENTITY ui.bidi.characterset.label "Charset">
+<!ENTITY ui.bidi.characterset.doc.label "Document-specified">
+<!ENTITY ui.bidi.characterset.default.label "Default charset in document">
+<!ENTITY ui.bidi.controlstextmode.label "Controls">
+<!ENTITY ui.bidi.controlstextmode.logical.label "Logical">
+<!ENTITY ui.bidi.controlstextmode.visual.label "Visual">
+<!ENTITY ui.bidi.controlstextmode.container.label "Container">
+<!ENTITY ui.bidi.direction.label "Direction">
+<!ENTITY ui.bidi.direction.ltr.label "-&gt; Left-to-right">
+<!ENTITY ui.bidi.direction.rtl.label "&lt;- Right-to-left">
+<!ENTITY ui.bidi.numeral.label "Numeral">
+<!ENTITY ui.bidi.numeral.regular_context.label "Regular context">
+<!ENTITY ui.bidi.numeral.hindi_context.label "Hindi context">
+<!ENTITY ui.bidi.numeral.arabic.label "Arabic">
+<!ENTITY ui.bidi.numeral.hindi.label "Hindi">
+<!ENTITY ui.bidi.support.label "Provider">
+<!ENTITY ui.bidi.support.mozilla.label "&brandShortName;">
+<!ENTITY ui.bidi.support.os.label "OS">
+<!ENTITY ui.bidi.support.disable.label "Disable">
+<!ENTITY ui.bidi.texttype.label "Text type">
+<!ENTITY ui.bidi.texttype.charset.label "Default">
+<!ENTITY ui.bidi.texttype.logical.label "Logical">
+<!ENTITY ui.bidi.texttype.visual.label "Visual">
+<!ENTITY ui.bidi.scrollbarSide.label "Place the vertical scrollbar on:">
+<!ENTITY ui.bidi.scrollbarSide.uiBase "Right in LTR, Left in RTL, based on the &brandShortName;'s direction.(Default)">
+<!ENTITY ui.bidi.scrollbarSide.contentBase "Right in LTR, Left in RTL, based on the document's direction.">
+<!ENTITY ui.bidi.scrollbarSide.right "Right side">
+<!ENTITY ui.bidi.scrollbarSide.left "Left side">
 <!ENTITY ui.i18n.label "i18n">
 <!ENTITY ui.i18n.locale.label "Application Locale">
 <!ENTITY ui.i18n.locale.eg "(e.g. en-US, en-GB, ja, ar)">
-<!ENTITY ui.i18n.bidi.label "Bi-Directional (BiDi)">
-<!ENTITY ui.i18n.bidi.ui.label "Enable BiDi UI">
-<!ENTITY ui.i18n.bidi.characterset.label "Charset">
-<!ENTITY ui.i18n.bidi.characterset.doc.label "Document-specified">
-<!ENTITY ui.i18n.bidi.characterset.default.label "Default charset in document">
-<!ENTITY ui.i18n.bidi.controlstextmode.label "Controls">
-<!ENTITY ui.i18n.bidi.controlstextmode.logical.label "Logical">
-<!ENTITY ui.i18n.bidi.controlstextmode.visual.label "Visual">
-<!ENTITY ui.i18n.bidi.controlstextmode.container.label "Container">
-<!ENTITY ui.i18n.bidi.direction.label "Direction">
-<!ENTITY ui.i18n.bidi.direction.ltr.label "-&gt; Left-to-right">
-<!ENTITY ui.i18n.bidi.direction.rtl.label "&lt;- Right-to-left">
-<!ENTITY ui.i18n.bidi.numeral.label "Numeral">
-<!ENTITY ui.i18n.bidi.numeral.regular_context.label "Regular context">
-<!ENTITY ui.i18n.bidi.numeral.hindi_context.label "Hindi context">
-<!ENTITY ui.i18n.bidi.numeral.arabic.label "Arabic">
-<!ENTITY ui.i18n.bidi.numeral.hindi.label "Hindi">
-<!ENTITY ui.i18n.bidi.support.label "Provider">
-<!ENTITY ui.i18n.bidi.support.mozilla.label "&brandShortName;">
-<!ENTITY ui.i18n.bidi.support.os.label "OS">
-<!ENTITY ui.i18n.bidi.support.disable.label "Disable">
-<!ENTITY ui.i18n.bidi.texttype.label "Text type">
-<!ENTITY ui.i18n.bidi.texttype.charset.label "Default">
-<!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
-<!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
-<!ENTITY ui.i18n.others.label "Others">
-<!ENTITY ui.i18n.others.scrollbarSide.label "Place the vertical scrollbar on:">
-<!ENTITY ui.i18n.others.scrollbarSide.uiBase "Right in LTR, Left in RTL, based on the &brandShortName;'s direction.(Default)">
-<!ENTITY ui.i18n.others.scrollbarSide.contentBase "Right in LTR, Left in RTL, based on the document's direction.">
-<!ENTITY ui.i18n.others.scrollbarSide.right "Right side">
-<!ENTITY ui.i18n.others.scrollbarSide.left "Left side">
-<!ENTITY ui.i18n.others.spellcheckDefault.label "Spellchecker Setting">
-<!ENTITY ui.i18n.others.spellcheckDefault.disabled "Disables spellchecker">
-<!ENTITY ui.i18n.others.spellcheckDefault.multiline "Enables spellchecker for multi-line controls (e.g., textarea) (Default)">
-<!ENTITY ui.i18n.others.spellcheckDefault.all "Enables spellchecker for all text controls">
-<!ENTITY ui.i18n.others.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
+<!ENTITY ui.i18n.spellcheckDefault.label "Spellchecker Setting">
+<!ENTITY ui.i18n.spellcheckDefault.disabled "Disables spellchecker">
+<!ENTITY ui.i18n.spellcheckDefault.multiline "Enables spellchecker for multi-line controls (e.g., textarea) (Default)">
+<!ENTITY ui.i18n.spellcheckDefault.all "Enables spellchecker for all text controls">
+<!ENTITY ui.i18n.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
 <!ENTITY ui.others.label "Others">
 <!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
 <!ENTITY ui.others.preference.instanceAccept.label "Accept instance (likely Mac or Gnome)">

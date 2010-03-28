@@ -313,45 +313,44 @@
 <!ENTITY ui.keynav.acceleratorKey.accesskey  "A">
 <!ENTITY ui.keynav.menuAccessKey.label   "メニュー装飾キー(のコード):">
 <!ENTITY ui.keynav.menuAccessKey.accesskey   "M">
+<!ENTITY ui.bidi.label "BiDi">
+<!ENTITY ui.bidi.ui.label "BiDi (双方向テキスト) のインターフェイスを有効に">
+<!ENTITY ui.bidi.characterset.label "文字セット">
+<!ENTITY ui.bidi.characterset.doc.label "文書で定義された文字セット">
+<!ENTITY ui.bidi.characterset.default.label "標準文字セット">
+<!ENTITY ui.bidi.controlstextmode.label "コントロール">
+<!ENTITY ui.bidi.controlstextmode.logical.label "Logical">
+<!ENTITY ui.bidi.controlstextmode.visual.label "Visual">
+<!ENTITY ui.bidi.controlstextmode.container.label "Container">
+<!ENTITY ui.bidi.direction.label "方向">
+<!ENTITY ui.bidi.direction.ltr.label "-&gt; 左から右">
+<!ENTITY ui.bidi.direction.rtl.label "&lt;- 右から左">
+<!ENTITY ui.bidi.numeral.label "数値表現">
+<!ENTITY ui.bidi.numeral.regular_context.label "通常文脈">
+<!ENTITY ui.bidi.numeral.hindi_context.label "ヒンディ語文脈">
+<!ENTITY ui.bidi.numeral.arabic.label "アラビア語">
+<!ENTITY ui.bidi.numeral.hindi.label "ヒンディ語">
+<!ENTITY ui.bidi.support.label "処理担当">
+<!ENTITY ui.bidi.support.mozilla.label "&brandShortName;">
+<!ENTITY ui.bidi.support.os.label "OS">
+<!ENTITY ui.bidi.support.disable.label "無効">
+<!ENTITY ui.bidi.texttype.label "テキストの種類">
+<!ENTITY ui.bidi.texttype.charset.label "文字コードに従う">
+<!ENTITY ui.bidi.texttype.logical.label "Logical">
+<!ENTITY ui.bidi.texttype.visual.label "Visual">
+<!ENTITY ui.bidi.scrollbarSide.label "垂直スクロールバーの位置">
+<!ENTITY ui.bidi.scrollbarSide.uiBase "&brandShortName;の方向に従い、-&gt;(LTR)の場合は右端、&lt;-(RTL)の場合は左端(標準)">
+<!ENTITY ui.bidi.scrollbarSide.contentBase "文書の方向に従い、-&gt;(LTR)の場合は右端、&lt;-(RTL)の場合は左端">
+<!ENTITY ui.bidi.scrollbarSide.right "右端">
+<!ENTITY ui.bidi.scrollbarSide.left "左端">
 <!ENTITY ui.i18n.label "国際化">
 <!ENTITY ui.i18n.locale.label "アプリケーションのロケール(言語)">
 <!ENTITY ui.i18n.locale.eg "(例: ja, en-US, en-GB, ar)">
-<!ENTITY ui.i18n.bidi.label "双方向テキスト (BiDi)">
-<!ENTITY ui.i18n.bidi.ui.label "BiDi のインターフェイスを有効に">
-<!ENTITY ui.i18n.bidi.characterset.label "文字セット">
-<!ENTITY ui.i18n.bidi.characterset.doc.label "文書で定義された文字セット">
-<!ENTITY ui.i18n.bidi.characterset.default.label "標準文字セット">
-<!ENTITY ui.i18n.bidi.controlstextmode.label "コントロール">
-<!ENTITY ui.i18n.bidi.controlstextmode.logical.label "Logical">
-<!ENTITY ui.i18n.bidi.controlstextmode.visual.label "Visual">
-<!ENTITY ui.i18n.bidi.controlstextmode.container.label "Container">
-<!ENTITY ui.i18n.bidi.direction.label "方向">
-<!ENTITY ui.i18n.bidi.direction.ltr.label "-&gt; 左から右">
-<!ENTITY ui.i18n.bidi.direction.rtl.label "&lt;- 右から左">
-<!ENTITY ui.i18n.bidi.numeral.label "数値表現">
-<!ENTITY ui.i18n.bidi.numeral.regular_context.label "通常文脈">
-<!ENTITY ui.i18n.bidi.numeral.hindi_context.label "ヒンディ語文脈">
-<!ENTITY ui.i18n.bidi.numeral.arabic.label "アラビア語">
-<!ENTITY ui.i18n.bidi.numeral.hindi.label "ヒンディ語">
-<!ENTITY ui.i18n.bidi.support.label "処理担当">
-<!ENTITY ui.i18n.bidi.support.mozilla.label "&brandShortName;">
-<!ENTITY ui.i18n.bidi.support.os.label "OS">
-<!ENTITY ui.i18n.bidi.support.disable.label "無効">
-<!ENTITY ui.i18n.bidi.texttype.label "テキストの種類">
-<!ENTITY ui.i18n.bidi.texttype.charset.label "文字コードに従う">
-<!ENTITY ui.i18n.bidi.texttype.logical.label "Logical">
-<!ENTITY ui.i18n.bidi.texttype.visual.label "Visual">
-<!ENTITY ui.i18n.others.label "その他">
-<!ENTITY ui.i18n.others.scrollbarSide.label "垂直スクロールバーの位置">
-<!ENTITY ui.i18n.others.scrollbarSide.uiBase "&brandShortName;の方向に従い、-&gt;(LTR)の場合は右端、&lt;-(RTL)の場合は左端(標準)">
-<!ENTITY ui.i18n.others.scrollbarSide.contentBase "文書の方向に従い、-&gt;(LTR)の場合は右端、&lt;-(RTL)の場合は左端">
-<!ENTITY ui.i18n.others.scrollbarSide.right "右端">
-<!ENTITY ui.i18n.others.scrollbarSide.left "左端">
-<!ENTITY ui.i18n.others.spellcheckDefault.label "スペルチェッカーの設定">
-<!ENTITY ui.i18n.others.spellcheckDefault.disabled "スペルチェッカーを無効にする">
-<!ENTITY ui.i18n.others.spellcheckDefault.multiline "複数行のコントロール(例:textarea)に対して有効にする(標準)">
-<!ENTITY ui.i18n.others.spellcheckDefault.all "すべてのテキスト入力コントロールに対して有効にする">
-<!ENTITY ui.i18n.others.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
+<!ENTITY ui.i18n.spellcheckDefault.label "スペルチェッカーの設定">
+<!ENTITY ui.i18n.spellcheckDefault.disabled "スペルチェッカーを無効にする">
+<!ENTITY ui.i18n.spellcheckDefault.multiline "複数行のコントロール(例:textarea)に対して有効にする(標準)">
+<!ENTITY ui.i18n.spellcheckDefault.all "すべてのテキスト入力コントロールに対して有効にする">
+<!ENTITY ui.i18n.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
 <!ENTITY ui.others.label "その他">
 <!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
 <!ENTITY ui.others.preference.instanceAccept.label "瞬時に設定を適用 (Mac や Gnome のように)">
