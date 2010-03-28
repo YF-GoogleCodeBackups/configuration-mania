@@ -130,7 +130,7 @@ var gPrefBrowser = {
   },
   onAutoCompleteSyncFrom : function (){
     let disabled = document.getElementById("browser.urlbar.autocomplete.enabled").value;
-    for each (let name in ["browser.urlbar.autoFill", "browser.urlbar.filter.javascript", "browser.urlbar.maxRichResults"]) {
+    for each (let name in ["browser.urlbar.autoFill", "browser.urlbar.filter.javascript", "browser.urlbar.maxRichResults", "browser.urlbar.delay"]) {
       document.getElementById(name).disabled = disabled;
     }
     return undefined; // no override
@@ -354,6 +354,7 @@ var gPrefBrowser = {
   <preference id="browser.urlbar.autoFill" name="browser.urlbar.autoFill" type="bool"/>
   <preference id="browser.urlbar.filter.javascript" name="browser.urlbar.filter.javascript" type="bool"/>
   <preference id="browser.urlbar.maxRichResults" name="browser.urlbar.maxRichResults" type="int"/>
+  <preference id="browser.urlbar.delay" name="browser.urlbar.delay" type="int"/>
 
   <preference id="browser.blink_allowed" name="browser.blink_allowed" type="bool"/>
   <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool"/>
@@ -488,6 +489,11 @@ var gPrefBrowser = {
     <hbox align="center">
       <label value="&browser.urlbar.autoComplete.maxRichResults.label;" control="urlbar-maxRichResults"/>
       <textbox id="urlbar-maxRichResults" type="number" size="2" preference="browser.urlbar.maxRichResults"/>
+    </hbox>
+    <hbox align="center">
+      <label value="&browser.urlbar.autoComplete.delay.label;" control="urlbar-delay"/>
+      <textbox id="urlbar-delay" type="number" hidespinbuttons="true" size="4" preference="browser.urlbar.delay"/>
+      <label value="&miliseconds;" control="urlbar-delay"/>
     </hbox>
   </vbox>
 </expander>

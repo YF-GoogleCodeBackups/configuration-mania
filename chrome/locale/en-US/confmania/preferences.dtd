@@ -23,6 +23,7 @@
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
 <!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Filter out bookmarklet (&#34;javascript:&#34; URLs)">
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maximum number of entries">
+<!ENTITY browser.urlbar.autoComplete.delay.label "Wait time of starting to autocomplete : ">
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowBlink.label "Allow blinking text">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
