@@ -419,7 +419,7 @@ var gPrefBrowser = {
   <preference id="general.useragent.override" name="general.useragent.override" type="wstring"/>
 
   <preference id="mozilla.widget.render-mode" name="mozilla.widget.render-mode" type="int"/>
-  <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
+  <preference id="gfx.font_rendering.directwrite.enabled" name="gfx.font_rendering.directwrite.enabled" type="bool"/>
   <preference id="nglayout.initialpaint.delay" name="nglayout.initialpaint.delay" type="int"/>
   <preference id="content.notify.backoffcount" name="content.notify.backoffcount" type="int"/>
   <preference id="content.notify.interval" name="content.notify.interval" type="int"/>
@@ -440,7 +440,7 @@ var gPrefBrowser = {
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
   <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
-  <preference id="gfx.font_rendering.directwrite.enabled" name="gfx.font_rendering.directwrite.enabled" type="bool"/>
+  <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
