@@ -166,11 +166,11 @@ var gPrefBrowser = {
   },
   onHwAccelRenderModeSyncFrom : function() {
     let val = document.getElementById("mozilla.widget.render-mode").value;
-    return (val == 5)? true : false;
+    return (val == 6)? true : false;
   },
   onHwAccelRenderModeSyncTo : function() {
     let checkbox = document.getElementsByAttribute("preference", "mozilla.widget.render-mode").item(0);
-    return (checkbox.checked)? 5 : -1;
+    return (checkbox.checked)? 6 : -1;
   },
   onInterruptParseSyncFrom : function() {
     let disabled = document.getElementById("content.interrupt.parsing").value;
