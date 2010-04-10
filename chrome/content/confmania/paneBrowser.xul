@@ -216,7 +216,7 @@ var gPrefBrowser = {
     }
   },
   resetKeywordURL : function(){//#smartbrowsing-keywordsURL
-    document.getElementById("keyword.URL").reset();
+    gPrefWindow.resetPref(document.getElementById("keyword.URL"));
   },
   getFirefoxUserAgent : function(platform, oscpu, language){
     // cf. nsGlobalWindow.cpp#GetUserAgent
@@ -261,13 +261,13 @@ var gPrefBrowser = {
     document.documentElement.currentPane.userChangedValue(mData);
   },
   resetUserAgent : function(){
-    document.getElementById("general.useragent.override").reset();
+    gPrefWindow.resetPref(document.getElementById("general.useragent.override"));
   },
   onSpeedPaintReset : function(){
     let expander = document.getElementById("speed-paint");
     let xpath = document.evaluate(".//*[@preference]", expander, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
     for (let e; e = xpath.iterateNext();) {
-      document.getElementById(e.getAttribute("preference")).reset();
+      gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
     }
   },
   synchNotifyInterval : function(){
@@ -326,7 +326,7 @@ var gPrefBrowser = {
       folderField.value = fp.file.path;
   },
   resetBrowserCacheDiskCacheFolder : function(){
-    document.getElementById("browserCacheDiskCacheFolder").reset();
+    gPrefWindow.resetPref(document.getElementById("browserCacheDiskCacheFolder"));
   },
   previewAlert : function(title, val){
     var alertsService = Components.classes["@mozilla.org/alerts-service;1"]
@@ -334,8 +334,9 @@ var gPrefBrowser = {
     alertsService.showAlertNotification("", title, val, false, "cookie", null);
   },
   resetAlertsSlide : function(){//#alerts.slide*
-    document.getElementById("alerts.slideIncrement").reset();
-    document.getElementById("alerts.slideIncrementTime").reset();
+    for each (let name in ["alerts.slideIncrement", "alerts.slideIncrementTime"]) {
+      gPrefWindow.resetPref(document.getElementById(name));
+    }
   },
   setAlertsSlideLight : function(){//#alerts.slide*
     document.getElementById("alerts.slideIncrement").value = 10;

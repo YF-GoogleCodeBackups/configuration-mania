@@ -36,18 +36,18 @@ var gPrefWindow = {
 
     var msg = msgtmpl.replace(/__TABNAME__/, currentPane.label);
     if( prompts.confirm(window, srcbtn.label, msg) ) {
-      Array.forEach(currentPane.preferences, gPrefWindow._resetPref);
+      Array.forEach(currentPane.preferences, gPrefWindow.resetPref);
     }
   },
-  _resetPref: function(aPref) {
-    if (aPref.hasUserValue) {
-      aPref.reset();
-     
-      if (aPref.instantApply) {
+  resetPref: function(aPref) {
+    if (aPref.instantApply) {
+      if (aPref.hasUserValue) {
+        aPref.reset();
         aPref.updateElements();
-      } else {
-        aPref.value = p.defaultValue;
       }
+    } else {
+      aPref.value = aPref.defaultValue;
+      aPref.updateElements();
     }
   },
   _contextPrefElem: null,
@@ -69,7 +69,7 @@ var gPrefWindow = {
   onResetPopupClicked: function(event){
     var o = gPrefWindow._contextPrefElem;
     var p = document.getElementById(o.getAttribute("preference"));
-    gPrefWindow._resetPref(p);
+    gPrefWindow.resetPref(p);
   },
   onMkbPopupClicked: function(event){
     var o = gPrefWindow._contextPrefElem;
