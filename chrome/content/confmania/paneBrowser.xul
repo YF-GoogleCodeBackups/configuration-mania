@@ -265,10 +265,9 @@ var gPrefBrowser = {
   },
   onSpeedPaintReset : function(){
     let expander = document.getElementById("speed-paint");
-    let xpath = document.evaluate(".//*[@preference]", expander, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
-    for (let e; e = xpath.iterateNext();) {
+    Array.forEach(expander.querySelectorAll("*[preference]"), function(e) {
       gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
-    }
+    });
   },
   synchNotifyInterval : function(){
     var paintDelay = document.getElementById("nglayout.initialpaint.delay").value;
