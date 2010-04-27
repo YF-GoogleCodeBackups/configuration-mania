@@ -182,7 +182,7 @@ var gPrefSecurity = {
   </groupbox>
 </tabpanel>
 <tabpanel orient="vertical">
-  <label value="&security.js.uis.desc1;"/>
+  <description>&security.js.uis.desc1;</description>
   <checkbox label="&security.js.uis.menubar;" preference="dom.disable_window_open_feature.menubar"/>
   <checkbox label="&security.js.uis.resizable;" preference="dom.disable_window_open_feature.resizable"/>
   <checkbox label="&security.js.uis.scrollbars;" preference="dom.disable_window_open_feature.scrollbars"/>
@@ -190,7 +190,7 @@ var gPrefSecurity = {
   <checkbox label="&security.js.uis.toolbar;" preference="dom.disable_window_open_feature.toolbar"/>
   <checkbox label="&security.js.uis.locationbar;" preference="dom.disable_window_open_feature.location"/>
   <checkbox label="&security.js.uis.status;" preference="dom.disable_window_open_feature.status"/>
-  <label class="emphasis" value="&security.js.uis.desc2;"/>
+  <description class="emphasis">&security.js.uis.desc2;</description>
 </tabpanel>
 </tabpanels>
 </tabbox>
