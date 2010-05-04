@@ -376,6 +376,7 @@
 <!ENTITY addons.noCheckCompatibility.label "アドオンの以下のバージョンとの適合確認をしない :">
 <!ENTITY addons.noCheckUpdateSecurity.label "アドオンの署名チェックをしない">
 <!ENTITY addons.installButton.label "アドオンダイアログにインストールボタンを表示">
+<!ENTITY addons.oopp.label "ブラウザプラグインを&brandShortName;のプロセスと分離して動作させる(OOPP)(Firefox 3.6.4+)">
 
 <!ENTITY debug.title "デバッグ">
 <!ENTITY debug.debug.label "デバッグ作業用">

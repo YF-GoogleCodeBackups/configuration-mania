@@ -55,6 +55,7 @@
   <preference name="extensions.checkCompatibility.3.7a" id="extensions.checkCompatibility.3.7a" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
+  <preference name="dom.ipc.plugins" id="dom.ipc.plugins" type="bool"/>
 </preferences>
 
 <hbox align="center">
@@ -76,6 +77,8 @@
           preference="extensions.checkUpdateSecurity"/>
 <checkbox label="&addons.installButton.label;"
           preference="extensions.hideInstallButton"/>
+<checkbox label="&addons.oopp.label;"
+          preference="dom.ipc.plugins"/>
 
 </prefpane>
 </overlay>
