@@ -70,7 +70,7 @@
 <caption label="&addons.noCheckCompatibility.label;"/>
 <checkbox label="Firefox 3.5" preference="extensions.checkCompatibility" />
 <checkbox label="Firefox 3.6" preference="extensions.checkCompatibility.3.6" />
-<checkbox label="Firefox 3.7" preference="extensions.checkCompatibility.3.7a" />
+<checkbox label="Firefox 3.7a" preference="extensions.checkCompatibility.3.7a" />
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
           preference="extensions.checkUpdateSecurity"/>
