@@ -325,7 +325,7 @@ var gPrefBrowser = {
       folderField.value = fp.file.path;
   },
   resetBrowserCacheDiskCacheFolder : function(){
-    gPrefWindow.resetPref(document.getElementById("browserCacheDiskCacheFolder"));
+    gPrefWindow.resetPref(document.getElementById("browser.cache.disk.parent_directory"));
   },
   previewAlert : function(title, val){
     var alertsService = Components.classes["@mozilla.org/alerts-service;1"]
