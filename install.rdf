@@ -43,11 +43,20 @@
 </Description></em:localized>
 
 <!--em:localized><Description>
-<em:locale>de-DE</em:locale>
+<em:locale>de</em:locale>
 <em:name>Configuration Mania</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
 <em:translator>Markus Stadler</em:translator>
+<em:translator>Erwin D. Glockner (erglo)</em:translator>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+</Description></em:localized-->
+<!--em:localized><Description>
+<em:locale>es-ES</em:locale>
+<em:name>Configuration Mania</em:name>
+<em:description>More Advanced (hidden) configures</em:description>
+<em:creator>Popoki Tom</em:creator>
+<em:translator>HenryGR</em:translator>
 <em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized-->
 <!--em:localized><Description>
@@ -64,6 +73,15 @@
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom</em:creator>
 <em:translator>Leszek(teo)Życzkowski</em:translator>
+<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+</Description></em:localized-->
+<!--em:localized><Description>
+<em:locale>pt-BR</em:locale>
+<em:name>Configuration Mania</em:name>
+<em:description>More Advanced (hidden) configures</em:description>
+<em:creator>Popoki Tom</em:creator>
+<em:translator>Leopardus Tigrinus</em:translator>
+<em:translator>Éctor (petruc)</em:translator>
 <em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized-->
 <!--em:localized><Description>
