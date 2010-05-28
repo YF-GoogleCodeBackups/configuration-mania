@@ -29,8 +29,8 @@
     <option name="Safari 4.0 (iPad 3.2)" platform="iPad" oscpu="CPU iPhone OS 3_2 like Mac OS X" webkit="531.21.10" version="4.0.4 Mobile/7B314"/>
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
-    <option name="Chrome 4.1.249 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="532.5" version="4.1.249.1045"/>
-    <option name="Chrome 4.1.249 (Intel MacOS X 10.6.3)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_3" webkit="532.5" version="4.1.249.1045"/>
+    <option name="Chrome 5.0.375 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="533.4" version="5.0.375"/>
+    <option name="Chrome 5.0.375 (Intel MacOS X 10.6.4)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_4" webkit="533.4" version="5.0.375"/>
   </group>
   <group name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
     <option name="Opera 10.53 (Windows 7)" oscpu="Windows NT 6.1" presto="2.5.22" version="10.53"/>
