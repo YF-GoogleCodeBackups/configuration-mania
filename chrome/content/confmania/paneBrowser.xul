@@ -581,10 +581,10 @@ var gPrefBrowser = {
       <radio value="0" label="&browser.tabs.closeButtons.active.label;"/>
       <radio value="1" label="&browser.tabs.closeButtons.all.label;"/>
       <vbox class="indent">
-        <hbox align="center">
-          <label value="&browser.tabs.tabClipWidth.label;" control="tabs-tabClipWidth"/>
+        <html:div>
+          <label control="tabs-tabClipWidth">&browser.tabs.tabClipWidth.label;</label>
           <textbox class="indent" type="number" hidespinbuttons="true" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
-        </hbox>
+        </html:div>
         <checkbox preference="browser.tabs.disableBackgroundClose" label="&browser.tabs.disableBackgroundClose.label;"/>
       </vbox>
       <radio value="2" label="&browser.tabs.closeButtons.no.label;"/>
@@ -736,32 +736,32 @@ var gPrefBrowser = {
      preference="content.notify.backoffcount" size="2"
      onsyncfrompreference="return initRadioGroupConnect2('speed-notify-backoffcount-gr','speed-notify-backoffcount',-1);"/>
   </radiogroup>
-  <hbox align="center">
+  <html:div>
     <label value="&browser.speed-paint.notify-interval.label;" control="speed-notify-interval"/>
     <textbox id="speed-notify-interval" type="number" hidespinbuttons="true" preference="content.notify.interval" size="6"
      onsyncfrompreference="return gPrefBrowser.syncFrom(this, 120000);"/>
     <label value="&microseconds;"/>
-  </hbox>
+  </html:div>
   <checkbox preference="content.interrupt.parsing" id="speed-interrupt-parsing"
    onsyncfrompreference="return gPrefBrowser.onInterruptParseSyncFrom();"
    label="&browser.speed-paint.content-interrupt.label;"/>
-  <label class="indent" value="&browser.speed-paint.content-interrupt.desc;" />
+  <description class="indent">&browser.speed-paint.content-interrupt.desc;</description>
   <vbox class="indent">
-    <hbox align="center">
+    <html:div>
       <label value="&browser.speed-paint.content-max-tokenizing-time.label;" control="speed-max-tokenizing-time"/>
       <textbox id="speed-max-tokenizing-time" type="number" hidespinbuttons="true" preference="content.max.tokenizing.time"
        size="8" onsyncfrompreference="return document.getElementById('content.max.tokenizing.time').value || (parseInt(document.getElementById('speed-notify-interval').value) * 3);"/>
       <label value="&microseconds;" control="speed-max-tokenizing-time"/>
-    </hbox>
-    <label class="indent" value="&browser.speed-paint.content-max-tokenizing-time.desc;" />
+    </html:div>
+    <description class="indent">&browser.speed-paint.content-max-tokenizing-time.desc;</description>
   </vbox>
-  <hbox align="center">
+  <html:div>
     <label value="&browser.speed-paint.content-switch-threshold.label;" control="speed-switch-threshold"/>
     <textbox id="speed-switch-threshold" type="number" hidespinbuttons="true" preference="content.switch.threshold"
      size="8"
      onsyncfrompreference="return gPrefBrowser.syncFrom(this, 750000);"/>
     <label value="&microseconds;"/>
-  </hbox>
+  </html:div>
   <description class="indent">&browser.speed-paint.content-switch-threshold.desc;</description>
 </expander>
 <expander id="speed-cache" label="&browser.speed-cache.label;" open="false" clearhidden="true">
@@ -779,16 +779,12 @@ var gPrefBrowser = {
   <groupbox>
     <caption label="&browser.speed-cache.check.label;"/>
     <radiogroup id="speed-cache_check" preference="browser.cache.check_doc_frequency">
-      <grid>
-      <columns><column/><column/></columns>
-      <rows><row>
+      <html:div>
         <radio value="0" label="&browser.speed-cache.check.once.label;"/>
         <radio value="3" label="&browser.speed-cache.check.auto.label;"/>
-      </row><row>
         <radio value="1" label="&browser.speed-cache.check.each.label;"/>
         <radio value="2" label="&browser.speed-cache.check.never.label;"/>
-      </row></rows>
-      </grid>
+      </html:div>
     </radiogroup>
     <description>&browser.speed-cache.check.desc;</description>
   </groupbox>
