@@ -33,7 +33,7 @@
 <!ENTITY browser.html.img.anim.label "Animated images should loop">
 <!ENTITY browser.html.img.anim.normal.label "As many times as the image specifies">
 <!ENTITY browser.html.img.anim.once.label "Once">
-<!ENTITY browser.html.img.anim.none.label "None (Stop)">
+<!ENTITY browser.html.img.anim.none.label "Never">
 <!ENTITY browser.html.img.resizing.label "Shrink to fit image">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">

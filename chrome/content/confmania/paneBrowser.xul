@@ -517,14 +517,14 @@ var gPrefBrowser = {
    class="indent" preference="layout.frames.force_resizability"/>
   <groupbox>
     <caption label="&browser.html.img;"/>
-    <hbox align="center">
-      <label value="&browser.html.img.anim.label;" control="html-animation"/>
-      <menulist id="html-animation" preference="image.animation_mode"><menupopup>
-        <menuitem value="normal" label="&browser.html.img.anim.normal.label;"/>
-        <menuitem value="once" label="&browser.html.img.anim.once.label;"/>
-        <menuitem value="none" label="&browser.html.img.anim.none.label;"/>
-      </menupopup></menulist>
-    </hbox>
+    <groupbox>
+      <caption value="&browser.html.img.anim.label;"/>
+      <radiogroup preference="image.animation_mode">
+        <radio value="normal" label="&browser.html.img.anim.normal.label;"/>
+        <radio value="once" label="&browser.html.img.anim.once.label;"/>
+        <radio value="none" label="&browser.html.img.anim.none.label;"/>
+      </radiogroup>
+    </groupbox>
     <checkbox label="&browser.html.img.resizing.label;"
      preference="browser.enable_automatic_image_resizing"/>
     <checkbox label="&browser.html.img.show_image_placeholders.label;"
