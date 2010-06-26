@@ -622,7 +622,7 @@ var gPrefBrowser = {
     <label value="&miliseconds;"/>
   </hbox>
   <groupbox>
-    <caption label="&browser.sessionStore.max_undo.label;"/>
+    <caption flex="1">&browser.sessionStore.max_undo.label;</caption>
     <grid id="sessionStore-MaxUndo-pane">
       <columns><column/><column/></columns>
       <rows><row align="center">
@@ -656,7 +656,7 @@ var gPrefBrowser = {
   <checkbox label="&browser.download.addToRecentDocs.label;"
             preference="browser.download.manager.addToRecentDocs"/>
   <groupbox>
-    <caption label="&browser.download.quitBehavior.label;"/>
+    <caption flex="1">&browser.download.quitBehavior.label;</caption>
     <radiogroup preference="browser.download.manager.quitBehavior">
       <radio value="0" label="&browser.download.quitBehavior.resumeOnRestart.label;"/>
       <radio value="1" label="&browser.download.quitBehavior.pauseOnRestart.label;"/>
@@ -716,7 +716,7 @@ var gPrefBrowser = {
     <button label="&reset;" oncommand="gPrefBrowser.onSpeedPaintReset();"/>
   </hbox>
   <groupbox>
-    <caption label="&browser.speed-paint.hwaccel.label;"/>
+    <caption flex="1">&browser.speed-paint.hwaccel.label;</caption>
     <checkbox label="&browser.speed-paint.hwaccel.render.label;" preference="mozilla.widget.render-mode"
               onsyncfrompreference="return gPrefBrowser.onHwAccelRenderModeSyncFrom();"
               onsynctopreference="return gPrefBrowser.onHwAccelRenderModeSyncTo();"/>
