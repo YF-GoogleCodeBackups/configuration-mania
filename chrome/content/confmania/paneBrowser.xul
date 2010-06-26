@@ -189,32 +189,6 @@ var gPrefBrowser = {
     document.getElementById("view_source.editor.path").disabled = disabled;
     return undefined; // no override
   },
-  searchKeyword : function(aKeyword){
-    if ((aKeyword || "") == "") return;
-    var expanders = document.getElementsByTagName("expander");
-    var listBox = document.getElementById("paneBrowserBox");
-
-    Array.forEach(expanders, function(ex){ex.open = true;});
-
-    var xpathEq = ".//*["+["@label","text()","@value"].map(function(v){
-      return "contains("+v+",'%s')".replace(/%s/, aKeyword.replace(/'/g,"''"));
-    }).join(" or ")+"]";
-    var xpath = document.evaluate(xpathEq, listBox, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
-    for ( var e; e = xpath.iterateNext(); ) {
-      while(e.nodeType != Node.ELEMENT_NODE) e = e.parentNode;
-      document.getElementById("paneBrowserBox")
-       .boxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject)
-       .ensureElementIsVisible(e);
-      e.style.outline = "solid 5px -moz-activehyperlinktext";
-
-      var timer = Components.classes["@mozilla.org/timer;1"]
-       .createInstance(Components.interfaces.nsITimer);
-      timer.initWithCallback({notify: function(aTimer) {
-        e.style.outline = "inherit";
-      }}, 2000, Components.interfaces.nsITimer.TYPE_ONE_SHOT);
-      break;
-    }
-  },
   resetKeywordURL : function(){//#smartbrowsing-keywordsURL
     gPrefWindow.resetPref(document.getElementById("keyword.URL"));
   },
@@ -448,9 +422,6 @@ var gPrefBrowser = {
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
 </preferences>
 
-<hbox pack="end">
-<textbox id="paneBrowser-search" type="search" timeout="500" emptytext="&search;" oncommand="gPrefBrowser.searchKeyword(this.value);"/>
-</hbox>
 <scrollbox orient="vertical" id="paneBrowserBox" flex="1" class="listBox">
 
 <expander id="smartbrowsing" label="&browser.smartbrowsing.label;" open="false" clearhidden="true">
