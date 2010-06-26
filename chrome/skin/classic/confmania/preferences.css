@@ -15,8 +15,37 @@ prefwindow#ConfmaniaPreferences .paneSelector > radio[pane] {
   list-style-image: none;
   -moz-image-region: auto;
 }
-#paneBrowserBox {
-  min-height: 25em;
+
+.subtabs {
+  background-color: -moz-Field;
+  color: -moz-FieldText;
+  overflow: auto;
+}
+button.subtab {
+  -moz-appearance: none;
+  display: block;
+  margin: 0;
+  padding: 2px;
+  border: none;
+  overflow: hidden;
+}
+button.subtab[checked="true"] {
+  background-color: Highlight;
+  color: HighlightText;
+}
+.subtabpanel {
+  overflow: scroll;
+}
+.subtabpanel {
+  visibility: collapse;
+}
+.subtabpanel[selected="true"] {
+  visibility: visible;
+}
+prefwindow[animated="true"] #paneBrowserBoxContainer .subtabpanel {
+  /* For animated or Mac, specify fixed height */
+  max-height: 390px;
+  min-height: 390px;
 }
 
 .emphasis{ font-weight: bold ! important; }
