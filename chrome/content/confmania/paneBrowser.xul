@@ -438,18 +438,20 @@ var gPrefBrowser = {
 </preferences>
 
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
-<vbox id="paneBrowserBoxTab" class="subtabs" flex="1" oncommand="gPrefBrowser.onPaneBrowserBoxTabSelected();" group="pane-browser">
-<button type="radio" group="pane-browser" class="subtab" value="smartbrowsing"  label="&browser.smartbrowsing.label;" crop="end" checked="true"/> 
-<button type="radio" group="pane-browser" class="subtab" value="urlbar"         label="&browser.urlbar.label;"        crop="end" />
-<button type="radio" group="pane-browser" class="subtab" value="html"           label="&browser.html.label;"          crop="end" />
-<button type="radio" group="pane-browser" class="subtab" value="tabs"           label="&browser.tabs.label;"          crop="end" />
-<button type="radio" group="pane-browser" class="subtab" value="sessionstore"   label="&browser.sessionStore.label;"  crop="end" />
-<button type="radio" group="pane-browser" class="subtab" value="bookmarkicon"   label="&browser.bookmarkicon.label;"  crop="end" />
-<button type="radio" group="pane-browser" class="subtab" value="download"       label="&browser.download.label;"      crop="end" />
-<button type="radio" group="pane-browser" class="subtab" value="ua"             label="&browser.ua.label;"            crop="end" />
-<button type="radio" group="pane-browser" class="subtab" value="speed-paint"    label="&browser.speed-paint.label;"   crop="end" />
-<button type="radio" group="pane-browser" class="subtab" value="speed-cache"    label="&browser.speed-cache.label;"   crop="end" />
-<button type="radio" group="pane-browser" class="subtab" value="others"         label="&browser.others.label;"        crop="end" />
+<vbox id="paneBrowserBoxTab" class="subtabs" group="pane-browser"
+      style="max-width: 10em; width: 10em;"
+      oncommand="gPrefBrowser.onPaneBrowserBoxTabSelected();">
+<button type="radio" group="pane-browser" class="subtab" value="smartbrowsing" checked="true">&browser.smartbrowsing.label;</button>
+<button type="radio" group="pane-browser" class="subtab" value="urlbar"                      >&browser.urlbar.label;       </button>
+<button type="radio" group="pane-browser" class="subtab" value="html"                        >&browser.html.label;         </button>
+<button type="radio" group="pane-browser" class="subtab" value="tabs"                        >&browser.tabs.label;         </button>
+<button type="radio" group="pane-browser" class="subtab" value="sessionstore"                >&browser.sessionStore.label; </button>
+<button type="radio" group="pane-browser" class="subtab" value="bookmarkicon"                >&browser.bookmarkicon.label; </button>
+<button type="radio" group="pane-browser" class="subtab" value="download"                    >&browser.download.label;     </button>
+<button type="radio" group="pane-browser" class="subtab" value="ua"                          >&browser.ua.label;           </button>
+<button type="radio" group="pane-browser" class="subtab" value="speed-paint"                 >&browser.speed-paint.label;  </button>
+<button type="radio" group="pane-browser" class="subtab" value="speed-cache"                 >&browser.speed-cache.label;  </button>
+<button type="radio" group="pane-browser" class="subtab" value="others"                      >&browser.others.label;       </button>                
 </vbox>
 <splitter/>
 <deck id="paneBrowserBoxContainer" flex="4">
