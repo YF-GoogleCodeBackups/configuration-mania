@@ -147,7 +147,7 @@
 <!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
 <!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">
 <!ENTITY browser.others.nouse_text_smoothing_setting.label "常にテキストの縁を滑らかに表示する (Macでのみ有効)">
-<!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで通知">
+<!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで表示する">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
 <!ENTITY browser.others.backspace_action.label "Backspaceキー押下時の動作:">

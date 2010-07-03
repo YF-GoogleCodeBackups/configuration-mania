@@ -11,19 +11,19 @@
 <!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
 <!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords enables fast access to services such as search and other information from the Location bar.">
 <!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Enable Internet Keywords">
-<!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL Prefix : ">
+<!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL Prefix :">
 <!ENTITY browser.smartbrowsing.domainGuessing.label "Domain Guessing">
 <!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Automatically add prefix &amp; suffix to the location if a web page isn't found.">
-<!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefix : ">
-<!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Suffix : ">
+<!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefix :">
+<!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Suffix :">
 <!ENTITY browser.urlbar.label "Location Bar">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when clicked">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when double-clicked">
 <!ENTITY browser.urlbar.autoComplete.label "Disable autocomplete">
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
-<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Filter out bookmarklet (&#34;javascript:&#34; URLs)">
+<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Filter out bookmarklet (&quot;javascript:&quot; URLs)">
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maximum number of entries">
-<!ENTITY browser.urlbar.autoComplete.delay.label "Wait time of starting to autocomplete : ">
+<!ENTITY browser.urlbar.autoComplete.delay.label "Wait time of starting to autocomplete :">
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowBlink.label "Allow blinking text">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
@@ -33,8 +33,8 @@
 <!ENTITY browser.html.img.anim.label "Animated images should loop">
 <!ENTITY browser.html.img.anim.normal.label "As many times as the image specifies">
 <!ENTITY browser.html.img.anim.once.label "Once">
-<!ENTITY browser.html.img.anim.none.label "Never">
-<!ENTITY browser.html.img.resizing.label "Shrink to fit image">
+<!ENTITY browser.html.img.anim.none.label "Never (Stop)">
+<!ENTITY browser.html.img.resizing.label "Resize large images to fit in the browser window">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
 <!ENTITY browser.html.color_management.label "Color Management (CMS) (takes effect after restart)">
@@ -124,11 +124,11 @@
 <!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode provides better UI responsiveness at the expense of load time; Default: 750000 ie. 3/4 ms">
 <!ENTITY browser.speed-cache.label "Browser Cache">
 <!ENTITY browser.speed-cache.check.label "Check cache of the pages ...">
-<!ENTITY browser.speed-cache.check.desc "WARNING: &quot;&browser.speed-cache.check.once.label;&quot; makes the browser faster, it may makes troubles in a part of Web service. Please check &quot;&browser.speed-cache.check.each.label;&quot;, if you find that a certain page is not updated correctly. Or, Please push reload button with shift key to force reload page.">
-<!ENTITY browser.speed-cache.check.once.label "Once par session">
+<!ENTITY browser.speed-cache.check.desc "WARNING: &quot;Once per session&quot; speeds up your web browsing but can cause problems on some sites. Check &quot;&browser.speed-cache.check.each.label;&quot; if a page is not updated correctly. You can always use Shift+Reload to force a reload.">
+<!ENTITY browser.speed-cache.check.once.label "Once per session">
 <!ENTITY browser.speed-cache.check.each.label "Each time">
 <!ENTITY browser.speed-cache.check.never.label "Never (Not Recommended)">
-<!ENTITY browser.speed-cache.check.auto.label "When it&#39;s Out Of Date (Preferred)">
+<!ENTITY browser.speed-cache.check.auto.label "When it is out of date (Preferred)">
 <!ENTITY browser.speed-cache.memory_enable.label "Enable cache memory (Never disabled, usually)">
 <!ENTITY browser.speed-cache.memory_capability.label "Cache Memory">
 <!ENTITY browser.speed-cache.trim_on_minimize.label "Swap out memory when &brandShortName; is minimized (Windows Only)">
@@ -144,7 +144,7 @@
 <!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
 <!ENTITY browser.others.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">
-<!ENTITY browser.others.errorPageDisabled.label "Annoy error dialog message, not display error-pages">
+<!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
 <!ENTITY browser.others.backspace_action.label "Action when Pressing [Backspace] :">
@@ -217,11 +217,11 @@
 <!ENTITY security.net.redirection-limit.label "HTTP Redirection limit">
 <!ENTITY security.net.enableIDN.label "Enable IDN(Internationalized Domain Names)">
 <!ENTITY security.net.show_punycode.label "Show IDN in punycode">
-<!ENTITY security.net.show_punycode.desc "It is usually no necessary to show IDN in punycode. Current &brandShortName; refuses an illegal IDN address by using the black/white list.">
+<!ENTITY security.net.show_punycode.desc "There is no need to show IDN in punycode. Current &brandShortName; refuses illegal IDN addresses by using the black/white list.">
 <!ENTITY security.privacy.label "Privacy">
 <!ENTITY security.privacy.history.label "Browsing History">
-<!ENTITY security.privacy.history.expireDays1.label  "Remember visited pages for up to">
-<!ENTITY security.privacy.history.expireDays2.label  "days">
+<!ENTITY security.privacy.history.expireDays1.label "Remember visited pages for up to">
+<!ENTITY security.privacy.history.expireDays2.label "days">
 <!ENTITY security.privacy.history.expireSites1.label "Remember up to">
 <!ENTITY security.privacy.history.expireSites2.label "visited pages">
 <!ENTITY security.privacy.cookie.label "Cookie">
@@ -231,7 +231,7 @@
 <!ENTITY security.privacy.passwd.managepassword.text "&brandShortName; will ask for your master password:">
 <!ENTITY security.privacy.passwd.managepassword.askfirsttime "The first time it is needed">
 <!ENTITY security.privacy.passwd.managepassword.askeverytime "Every time it is needed">
-<!ENTITY security.privacy.passwd.managepassword.asktimeout   "If it has not been used for ">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout "If it has not been used for">
 <!ENTITY security.privacy.passwd.managepassword.timeout.unit "minutes or longer">
 <!ENTITY security.privacy.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
 <!ENTITY security.referer.label "Referrer">
@@ -309,12 +309,12 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
 <!ENTITY ui.keynav.tabNavigationTextboxes.label "Note: text boxes are always part of the tabbing order.">
 <!ENTITY ui.keynav.tabNavigationDesc.label "When Tab or Shift+Tab is pressed, move between:">
-<!ENTITY ui.keynav.accelerators.label  "Keyboard accelerators">
-<!ENTITY ui.keynav.acceleratorsBlurb.label  "A value of zero disables a modifier key.">
-<!ENTITY ui.keynav.acceleratorKey.label  "Accelerator key:">
-<!ENTITY ui.keynav.acceleratorKey.accesskey  "A">
-<!ENTITY ui.keynav.menuAccessKey.label   "Menu access key:">
-<!ENTITY ui.keynav.menuAccessKey.accesskey   "M">
+<!ENTITY ui.keynav.accelerators.label "Keyboard accelerators">
+<!ENTITY ui.keynav.acceleratorsBlurb.label "A value of zero disables a modifier key.">
+<!ENTITY ui.keynav.acceleratorKey.label "Accelerator key:">
+<!ENTITY ui.keynav.acceleratorKey.accesskey "A">
+<!ENTITY ui.keynav.menuAccessKey.label "Menu access key:">
+<!ENTITY ui.keynav.menuAccessKey.accesskey "M">
 <!ENTITY ui.bidi.label "Bidi">
 <!ENTITY ui.bidi.ui.label "Enable Bi-Directional (BiDi) UI">
 <!ENTITY ui.bidi.characterset.label "Charset">
