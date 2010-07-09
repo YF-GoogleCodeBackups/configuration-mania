@@ -7,7 +7,7 @@
 
 <em:id>{c4d362ec-1cff-4ca0-9031-99a8fad7995a}</em:id>
 <!--em:id>{3329801B-F8DD-4503-BDB5-6E0A076B5364}</em:id--><!-- this id is used by somebody in addons.mozilla.org -->
-<em:version>1.12.2010052902</em:version>
+<em:version>1.12.2010071001</em:version>
 
 <!-- Target Application this theme can install into, 
     with minimum and maximum supported versions. --> 
@@ -15,14 +15,14 @@
 <Description>
   <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
   <em:minVersion>3.5</em:minVersion>
-  <em:maxVersion>3.7a4</em:maxVersion>
+  <em:maxVersion>4.0b1</em:maxVersion>
 </Description>
 </em:targetApplication>
 
 <!-- Front End MetaData -->
 <em:name>Configuration Mania?</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
-<em:creator>Popoki Tom</em:creator>
+<em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 <!--em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL-->
 <em:optionsURL>chrome://confmania/content/preferences.xul</em:optionsURL>
