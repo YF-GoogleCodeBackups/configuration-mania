@@ -53,6 +53,7 @@
   <preference name="extensions.checkCompatibility" id="extensions.checkCompatibility" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.3.6" id="extensions.checkCompatibility.3.6" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.3.7a" id="extensions.checkCompatibility.3.7a" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.4.0b" id="extensions.checkCompatibility.4.0b" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
   <preference name="dom.ipc.plugins" id="dom.ipc.plugins" type="bool"/>
@@ -72,6 +73,7 @@
 <checkbox label="Firefox 3.5" preference="extensions.checkCompatibility" />
 <checkbox label="Firefox 3.6" preference="extensions.checkCompatibility.3.6" />
 <checkbox label="Firefox 3.7a" preference="extensions.checkCompatibility.3.7a" />
+<checkbox label="Firefox 4.0b" preference="extensions.checkCompatibility.4.0b" />
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
           preference="extensions.checkUpdateSecurity"/>
