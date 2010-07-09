@@ -21,19 +21,19 @@
     <option name="IE 9 (Windows 7)" value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:webkit}">
-    <option name="Safari 4.0.5 (Intel MacOS X 10.6.3)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_3" webkit="531.22.7" version="4.0.5"/>
-    <option name="Safari 4.0.5 (PowerPC MacOS X 10.5.4)" platform="Macintosh" oscpu="PPC Mac OS X 10_5_4" webkit="531.22.7" version="4.0.5"/>
-    <option name="Safari 4.0.5 (Windows Vista)" platform="Windows" oscpu="Windows NT 6.0" webkit="531.22.7" version="4.0.5"/>
-    <option name="Safari 4.0.5 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="531.21.7" version="4.0.5"/>
+    <option name="Safari 5.0 (Intel MacOS X 10.6.3)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_3" webkit="533.16" version="5.0"/>
+    <option name="Safari 5.0 (PowerPC MacOS X 10.5.8)" platform="Macintosh" oscpu="PPC Mac OS X 10_5_4" webkit="533.16" version="5.0"/>
+    <option name="Safari 5.0 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="533.16" version="5.0"/>
+
     <option name="Safari 4.0 (iPhone 3.1)" platform="iPhone" oscpu="CPU iPhone OS 3_1 like Mac OS X" webkit="528.18" version="4.0 Mobile/7C144"/>
     <option name="Safari 4.0 (iPad 3.2)" platform="iPad" oscpu="CPU iPhone OS 3_2 like Mac OS X" webkit="531.21.10" version="4.0.4 Mobile/7B314"/>
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
-    <option name="Chrome 5.0.375 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="533.4" version="5.0.375"/>
-    <option name="Chrome 5.0.375 (Intel MacOS X 10.6.4)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_4" webkit="533.4" version="5.0.375"/>
+    <option name="Chrome 5.0.375.99 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="533.4" version="5.0.375.99"/>
+    <option name="Chrome 5.0.375.99 (Intel MacOS X 10.6.4)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_4" webkit="533.4" version="5.0.375.99"/>
   </group>
   <group name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
-    <option name="Opera 10.53 (Windows 7)" oscpu="Windows NT 6.1" presto="2.5.22" version="10.53"/>
+    <option name="Opera 10.60 (Windows 7)" oscpu="Windows NT 6.1" presto="2.5.29" version="10.60"/>
   </group>
   <group name="Nintendo DS/Wii" value="">
     <option name="Nintendo DS Browser (Nintendo DSi)" value="Opera/{opt:version} (Nintendo DSi; Opera/466; U; {language})" version="9.50"/>
