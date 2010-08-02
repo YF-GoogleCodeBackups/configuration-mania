@@ -65,11 +65,22 @@ var gPrefBrowser = {
   },
   initUA : function(){
     var oUAValue = document.getElementById("ua-value");
+dump(" ==== aaae "+oUAValue+" \n");
+try {
     oUAValue.emptyText = gPrefBrowser.getFirefoxUserAgent();
+} catch (e) {
+dump(" ==== aaaaaaaaaaaaa \n"+e + "\n");
+}
+dump(" ==== AAAB "+gPrefBrowser.getFirefoxUserAgent() + " \n");
+dump(" ==== aaab "+oUAValue.emptyText+" \n");
 
-    var req = new XMLHttpRequest();
+    var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
+              .createInstance(Components.interfaces.nsIXMLHttpRequest);
+dump(" ==== aaa "+req+" \n");
     req.open("GET", "useragent.xml", true);
+dump(" ==== aaa \n");
     req.onreadystatechange = function (event) {
+dump(" ==== " + req.readyState + "\n");
       if(req.readyState != 4) return;
       var doc = req.responseXML;
 
@@ -227,13 +238,26 @@ var gPrefBrowser = {
     var prefBranch = Components.classes['@mozilla.org/preferences-service;1']
       .getService(Components.interfaces.nsIPrefBranch);
 
+    var isGecko2 = false;
+    var mSecurity = null;
+    try {
+      mSecurity = prefBranch.getCharPref("general.useragent.security");
+    } catch (e) {
+      isGecko2 = true;
+      // "general.useragent.security" is not defined Gecko2 (Firefox 4)
+    }
+    if (prefBranch.getPrefType("general.useragent.security") == prefBranch.PREF_INVALID);
+
     if (platform == null) platform = m.platform;
     if (oscpu    == null) oscpu    = m.oscpu;
     if (language == null) language = m.language;
 
+    if (isGecko2) language = null; // language is not displayed on Gecko2 (Firefox4)
+
     var userAgent = m.appName + "/" + m.appVersion + " ";
-    var mSecurity = prefBranch.getCharPref("general.useragent.security");
-    userAgent += "("+platform+"; "+mSecurity+"; "+oscpu;
+    userAgent += "("+platform+"; ";
+    if (mSecurity) userAgent += mSecurity + "; ";
+    userAgent += oscpu;
     if(language && language != "") userAgent += "; "+language;
     if(m.misc && m.misc != "") userAgent += "; "+m.misc;
     userAgent += ")";
