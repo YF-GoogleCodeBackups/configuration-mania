@@ -65,22 +65,14 @@ var gPrefBrowser = {
   },
   initUA : function(){
     var oUAValue = document.getElementById("ua-value");
-dump(" ==== aaae "+oUAValue+" \n");
-try {
-    oUAValue.emptyText = gPrefBrowser.getFirefoxUserAgent();
-} catch (e) {
-dump(" ==== aaaaaaaaaaaaa \n"+e + "\n");
-}
-dump(" ==== AAAB "+gPrefBrowser.getFirefoxUserAgent() + " \n");
-dump(" ==== aaab "+oUAValue.emptyText+" \n");
+    try {
+      oUAValue.emptyText = gPrefBrowser.getFirefoxUserAgent();
+    } catch (ex) {}
 
     var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
               .createInstance(Components.interfaces.nsIXMLHttpRequest);
-dump(" ==== aaa "+req+" \n");
     req.open("GET", "useragent.xml", true);
-dump(" ==== aaa \n");
     req.onreadystatechange = function (event) {
-dump(" ==== " + req.readyState + "\n");
       if(req.readyState != 4) return;
       var doc = req.responseXML;
 
