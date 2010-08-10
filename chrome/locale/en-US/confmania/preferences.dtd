@@ -49,6 +49,7 @@
 <!ENTITY browser.html.webgl.software_render.label "Use software rendering">
 <!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib path :">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
+<!ENTITY browser.html.zoomSiteSpecific.label "Remember the zoom preferences page by page">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
 <!ENTITY browser.html.focus.bg.label "Background Color">

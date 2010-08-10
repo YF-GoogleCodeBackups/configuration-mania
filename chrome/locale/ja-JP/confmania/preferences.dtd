@@ -50,6 +50,7 @@
 <!ENTITY browser.html.webgl.software_render.label "ソフトウェアレンダリングする">
 <!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib のパス :">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
+<!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
 <!ENTITY browser.html.focus.enabled.label "フォーカスされたオブジェクトをハイライト表示する">
 <!ENTITY browser.html.focus.bg.label "背景色">

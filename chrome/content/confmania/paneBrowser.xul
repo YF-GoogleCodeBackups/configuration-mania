@@ -398,6 +398,7 @@ var gPrefBrowser = {
   <preference id="webgl.software_render" name="webgl.software_render" type="bool"/>
   <preference id="webgl.osmesalib" name="webgl.osmesalib" type="string"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
+  <preference id="browser.zoom.siteSpecific" name="browser.zoom.siteSpecific" type="bool"/>
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
   <preference id="browser.display.focus_text_color" name="browser.display.focus_text_color" type="string"/>
@@ -576,6 +577,8 @@ var gPrefBrowser = {
   </vbox>
 
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
+  <checkbox label="&browser.html.zoomSiteSpecific.label;" preference="browser.zoom.siteSpecific"/>
+
   <groupbox>
     <caption label="&browser.html.focus.label;"/>
     <checkbox id="focus-highlight-enabled" label="&browser.html.focus.enabled.label;"
