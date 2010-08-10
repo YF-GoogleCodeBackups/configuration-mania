@@ -232,13 +232,12 @@ var gPrefBrowser = {
 
     var isGecko2 = false;
     var mSecurity = null;
-    try {
+    if (prefBranch.getPrefType("general.useragent.security") != prefBranch.PREF_INVALID) {
       mSecurity = prefBranch.getCharPref("general.useragent.security");
-    } catch (e) {
+    } else {
       isGecko2 = true;
       // "general.useragent.security" is not defined Gecko2 (Firefox 4)
     }
-    if (prefBranch.getPrefType("general.useragent.security") == prefBranch.PREF_INVALID);
 
     if (platform == null) platform = m.platform;
     if (oscpu    == null) oscpu    = m.oscpu;
