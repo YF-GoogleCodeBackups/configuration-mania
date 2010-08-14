@@ -10,4 +10,9 @@
     <menuitem id="confmania" command="ConfMania:Open"
               label="&confmania.label;" insertafter="menu_preferences"/>
   </menupopup>
+  
+  <menupopup id="appmenu-popup">
+    <menuitem id="appmenu_confmania" command="ConfMania:Open"
+              label="&confmania.label;" insertafter="appmenu_preferences"/>
+  </menupopup>
 </overlay>
