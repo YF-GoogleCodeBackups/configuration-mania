@@ -46,7 +46,7 @@
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
 <!ENTITY browser.html.html5.label "HTML 5 パーサーを有効にする (Firefox 3.6以降)">
 <!ENTITY browser.html.enableSVG.label "SVG を表示する">
-<!ENTITY browser.html.webgl.label "WebGL を有効にする (Firefox 3.7以降; 再起動必要)">
+<!ENTITY browser.html.webgl.label "WebGL を有効にする (Firefox 4.0以降; 再起動必要)">
 <!ENTITY browser.html.webgl.software_render.label "ソフトウェアレンダリングする">
 <!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib のパス :">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
@@ -111,7 +111,7 @@
 <!ENTITY browser.ua.presets.this.label "&brandShortName;のこのバージョン">
 <!ENTITY browser.speed-paint.label "描画とレンダリング">
 <!ENTITY browser.speed-paint.desc "警告: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることによって、動作が遅くあるいは重くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
-<!ENTITY browser.speed-paint.hwaccel.label "ハードウェアアクセラレーション (Firefox 3.7+ Windows) (再起動必要)">
+<!ENTITY browser.speed-paint.hwaccel.label "ハードウェアアクセラレーション (Firefox 4.0+ Windows) (再起動必要)">
 <!ENTITY browser.speed-paint.hwaccel.render.label "Direct2D を有効にする">
 <!ENTITY browser.speed-paint.hwaccel.directwrite.label "DirectWrite を有効にする">
 <!ENTITY browser.speed-paint.label "描画/レンダリング">

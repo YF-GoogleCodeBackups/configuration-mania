@@ -45,7 +45,7 @@
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.html5.label "Enable HTML 5 Parsing">
 <!ENTITY browser.html.enableSVG.label "Enable rendering SVG content">
-<!ENTITY browser.html.webgl.label "Enable WebGL (Firefox 3.7+; takes effect after restart)">
+<!ENTITY browser.html.webgl.label "Enable WebGL (Firefox 4.0+; takes effect after restart)">
 <!ENTITY browser.html.webgl.software_render.label "Use software rendering">
 <!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib path :">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
@@ -110,7 +110,7 @@
 <!ENTITY browser.ua.presets.this.label "&brandShortName;, this version.">
 <!ENTITY browser.speed-paint.label "Paint&amp;Rendering">
 <!ENTITY browser.speed-paint.desc "WARNING: The Recommended values are not always suitable for your line and PC environment. It sometimes make browsing slower or heavy. (But some of them feel browsing faster, which is the Placebo effect :-)">
-<!ENTITY browser.speed-paint.hwaccel.label "Hardware acceleration (Firefox 3.7+ on Windows) (takes effect after restart)">
+<!ENTITY browser.speed-paint.hwaccel.label "Hardware acceleration (Firefox 4.0+ on Windows) (takes effect after restart)">
 <!ENTITY browser.speed-paint.hwaccel.render.label "Enable Direct2D">
 <!ENTITY browser.speed-paint.hwaccel.directwrite.label "Enable DirectWrite">
 <!ENTITY browser.speed-paint.delay.label "Initial paint delay">
