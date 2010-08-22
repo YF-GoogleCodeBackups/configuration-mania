@@ -64,11 +64,11 @@
 <!ENTITY browser.tabs.closeButtons.end.label "タブバーの端に表示 (Firefox1.xの動作)">
 <!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ">
 <!ENTITY browser.tabs.disableBackgroundClose.label "バックグラウンドタブの閉じるボタンを押すことでタブを閉じない">
-<!ENTITY browser.tabs.tabWidth.label "タブの最小/最大サイズ">
+<!ENTITY browser.tabs.tabWidth.label "タブの最小/最大サイズ (Firefox 3.x)">
 <!ENTITY browser.tabs.tabWidth.min.label "最小">
 <!ENTITY browser.tabs.tabWidth.max.label "最大">
 <!ENTITY browser.tabs.seachOpenintab.label "検索バーでの検索結果を新しいタブで開く">
-<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "ページから開く新規タブを現在のタブの右に開く (Firefox3.6以降)">
+<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "ページから開く新規タブを現在のタブの右に開く (Firefox3.6+)">
 <!ENTITY browser.tabs.autoselect.label "自動タブ選択">
 <!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "ブックマークや履歴から開いた新しいタブを選択する">
 <!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "外部アプリやリンクなどに新しいタブが開かれたとき、すぐにそのタブに切り替える">
@@ -223,7 +223,7 @@
 <!ENTITY security.net.show_punycode.label "IDN を punycode で表示する">
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
 <!ENTITY security.privacy.label "プライバシー">
-<!ENTITY security.privacy.history.label "履歴">
+<!ENTITY security.privacy.history.label "履歴 (Firefox 3.x)">
 <!ENTITY security.privacy.history.expireDays1.label  "訪問したページを次の日数だけ記憶する:">
 <!ENTITY security.privacy.history.expireDays2.label  "日">
 <!ENTITY security.privacy.history.expireSites1.label "訪問したページを次の個数だけ記憶する:">
@@ -323,7 +323,7 @@
 <!ENTITY ui.bidi.characterset.label "文字セット">
 <!ENTITY ui.bidi.characterset.doc.label "文書で定義された文字セット">
 <!ENTITY ui.bidi.characterset.default.label "標準文字セット">
-<!ENTITY ui.bidi.controlstextmode.label "コントロール">
+<!ENTITY ui.bidi.controlstextmode.label "コントロール (Firefox 3.x)">
 <!ENTITY ui.bidi.controlstextmode.logical.label "Logical">
 <!ENTITY ui.bidi.controlstextmode.visual.label "Visual">
 <!ENTITY ui.bidi.controlstextmode.container.label "Container">

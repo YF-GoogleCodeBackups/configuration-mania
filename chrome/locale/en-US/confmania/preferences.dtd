@@ -63,7 +63,7 @@
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
 <!ENTITY browser.tabs.disableBackgroundClose.label "Clicking on the close tab button of a tab in backgrund will switch to that tab, not close it">
-<!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width">
+<!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width (Firefox 3.x)">
 <!ENTITY browser.tabs.tabWidth.min.label "Minimum">
 <!ENTITY browser.tabs.tabWidth.max.label "Maximum">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
@@ -220,7 +220,7 @@
 <!ENTITY security.net.show_punycode.label "Show IDN in punycode">
 <!ENTITY security.net.show_punycode.desc "There is no need to show IDN in punycode. Current &brandShortName; refuses illegal IDN addresses by using the black/white list.">
 <!ENTITY security.privacy.label "Privacy">
-<!ENTITY security.privacy.history.label "Browsing History">
+<!ENTITY security.privacy.history.label "Browsing History (Firefox 3.x)">
 <!ENTITY security.privacy.history.expireDays1.label "Remember visited pages for up to">
 <!ENTITY security.privacy.history.expireDays2.label "days">
 <!ENTITY security.privacy.history.expireSites1.label "Remember up to">
@@ -321,7 +321,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY ui.bidi.characterset.label "Charset">
 <!ENTITY ui.bidi.characterset.doc.label "Document-specified">
 <!ENTITY ui.bidi.characterset.default.label "Default charset in document">
-<!ENTITY ui.bidi.controlstextmode.label "Controls">
+<!ENTITY ui.bidi.controlstextmode.label "Controls (Firefox 3.x)">
 <!ENTITY ui.bidi.controlstextmode.logical.label "Logical">
 <!ENTITY ui.bidi.controlstextmode.visual.label "Visual">
 <!ENTITY ui.bidi.controlstextmode.container.label "Container">
