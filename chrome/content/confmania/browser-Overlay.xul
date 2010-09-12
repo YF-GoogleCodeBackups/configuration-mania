@@ -11,7 +11,7 @@
               label="&confmania.label;" insertafter="menu_preferences"/>
   </menupopup>
   
-  <menupopup id="appmenu-popup">
+  <menupopup id="appmenu_customizeMenu">
     <menuitem id="appmenu_confmania" command="ConfMania:Open"
               label="&confmania.label;" insertafter="appmenu_preferences"/>
   </menupopup>
