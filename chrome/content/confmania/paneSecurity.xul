@@ -80,11 +80,6 @@ var gPrefSecurity = {
     }
     return undefined; // no override
   },
-  onSendRefererSecureXSiteSyncFrom: function() {
-    let disabled = document.getElementById("network.http.sendRefererHeader").value == "0";
-    document.getElementById("network.http.sendSecureXSiteReferrer").disabled = disabled;
-    return undefined; // no override
-  },
   updatePasswordAskTimes : function(){
     var radiogroup = document.getElementById("passwordAskTimes");
     var askEveryTimeHidden = document.getElementById("askEveryTimeHidden");
@@ -129,7 +124,6 @@ var gPrefSecurity = {
   <preference id="browser.identity.ssl_domain_display" name="browser.identity.ssl_domain_display" type="int"/>
   <preference id="browser.ssl_override_behavior" name="browser.ssl_override_behavior" type="int"/>
 
-  <preference id="network.http.redirection-limit" name="network.http.redirection-limit" type="int"/>
   <preference id="network.enableIDN" name="network.enableIDN" type="bool"/>
   <preference id="network.IDN_show_punycode" name="network.IDN_show_punycode" type="bool"/>
 
@@ -140,8 +134,6 @@ var gPrefSecurity = {
   <preference id="security.ask_for_password" name="security.ask_for_password" type="int"/>
   <preference id="security.password_lifetime" name="security.password_lifetime" type="int"/>
 
-  <preference id="network.http.sendRefererHeader" name="network.http.sendRefererHeader" type="int"/>
-  <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
 </preferences>
 
 <tabbox flex="1">
@@ -152,7 +144,6 @@ var gPrefSecurity = {
 <tab label="&security.ssl.label;"/>
 <tab label="&security.net.label;"/>
 <tab label="&security.privacy.label;"/>
-<tab label="&security.referer.label;"/>
 </tabs> 
 <tabpanels flex="1">
 <tabpanel orient="vertical" flex="1">
@@ -263,10 +254,6 @@ var gPrefSecurity = {
   </radiogroup>
 </tabpanel>
 <tabpanel orient="vertical">
-  <hbox align="center">
-    <label control="redirection-limit" value="&security.net.redirection-limit.label;"/>
-    <textbox id="redirection-limit" type="number" hidespinbuttons="true" size="2" preference="network.http.redirection-limit"/>
-  </hbox>
   <checkbox id="enableIDN" label="&security.net.enableIDN.label;"
     preference="network.enableIDN" onsyncfrompreference="return gPrefSecurity.onIDNSyncFrom();"/>
   <checkbox id="showPunycode" class="indent" label="&security.net.show_punycode.label;"
@@ -327,17 +314,6 @@ var gPrefSecurity = {
 </groupbox>
 <description>&security.privacy.passwd.desc;</description>
 </groupbox>
-</tabpanel>
-<tabpanel orient="vertical">
-  <radiogroup id="sendReferer" preference="network.http.sendRefererHeader" onsyncfrompreference="return gPrefSecurity.onSendRefererSecureXSiteSyncFrom()">
-    <radio value="0" label="&security.referer.none.label;"/>
-    <description class="indent">&security.referer.none.desc;</description>
-    <radio value="1" label="&security.referer.link.label;"/>
-    <radio value="2" label="&security.referer.all.label;"/>
-  </radiogroup>
-  <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite.label;"
-    preference="network.http.sendSecureXSiteReferrer"/>
-  <description class="indent">&security.referer.secureXSite.desc;</description>
 </tabpanel>
 </tabpanels>
 </tabbox>
