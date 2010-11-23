@@ -2,6 +2,10 @@ overlay	chrome://browser/content/browser.xul	chrome://confmania/content/browser-
 content	confmania	jar:chrome/confmania.jar!/content/confmania/
 
 override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=Linux
+override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=FreeBSD
+override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=OpenBSD
+override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=NetBSD
+override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=SunOS
 
 skin	confmania	classic/1.0	jar:chrome/confmania.jar!/skin/classic/confmania/
 locale	confmania	en-US	jar:chrome/confmania.jar!/locale/en-US/confmania/
