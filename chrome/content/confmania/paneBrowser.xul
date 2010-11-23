@@ -62,6 +62,7 @@ var gPrefBrowser = {
       document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
     }
     gPrefBrowser.initUA();
+    gPrefBrowser.initBrowserBoxTab();
   },
   initUA : function(){
     var oUAValue = document.getElementById("ua-value");
@@ -118,6 +119,20 @@ var gPrefBrowser = {
       });
     };
     req.send(null);
+  },
+  initBrowserBoxTab : function () {
+    gPrefBrowser.onPaneBrowserBoxTabSelected();
+  },
+  onPaneBrowserBoxTabSelected : function () {
+    let paneBrowserBoxTab = document.getElementById("paneBrowserBoxTab");
+    let selectedButton = paneBrowserBoxTab.getElementsByAttribute("checked", "true").item(0);
+    let selectedPanel = document.getElementById(selectedButton.getAttribute("value"));
+    selectedPanel.parentNode.selectedPanel = selectedPanel;
+ 
+    Array.forEach(paneBrowserBoxTab.getElementsByTagName("button"), function(v) {
+      let pane = document.getElementById(v.getAttribute("value"));
+      pane.setAttribute("selected", (v.checked)? "true" : "false");
+    });
   },
   onSmartBrowsingSyncFrom : function () {
     let disabled = ! document.getElementById("keyword.enabled").value;
@@ -191,32 +206,6 @@ var gPrefBrowser = {
     let disabled = ! document.getElementById("view_source.editor.external").value;
     document.getElementById("view_source.editor.path").disabled = disabled;
     return undefined; // no override
-  },
-  searchKeyword : function(aKeyword){
-    if ((aKeyword || "") == "") return;
-    var expanders = document.getElementsByTagName("expander");
-    var listBox = document.getElementById("paneBrowserBox");
-
-    Array.forEach(expanders, function(ex){ex.open = true;});
-
-    var xpathEq = ".//*["+["@label","text()","@value"].map(function(v){
-      return "contains("+v+",'%s')".replace(/%s/, aKeyword.replace(/'/g,"''"));
-    }).join(" or ")+"]";
-    var xpath = document.evaluate(xpathEq, listBox, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
-    for ( var e; e = xpath.iterateNext(); ) {
-      while(e.nodeType != Node.ELEMENT_NODE) e = e.parentNode;
-      document.getElementById("paneBrowserBox")
-       .boxObject.QueryInterface(Components.interfaces.nsIScrollBoxObject)
-       .ensureElementIsVisible(e);
-      e.style.outline = "solid 5px -moz-activehyperlinktext";
-
-      var timer = Components.classes["@mozilla.org/timer;1"]
-       .createInstance(Components.interfaces.nsITimer);
-      timer.initWithCallback({notify: function(aTimer) {
-        e.style.outline = "inherit";
-      }}, 2000, Components.interfaces.nsITimer.TYPE_ONE_SHOT);
-      break;
-    }
   },
   resetKeywordURL : function(){//#smartbrowsing-keywordsURL
     gPrefWindow.resetPref(document.getElementById("keyword.URL"));
@@ -464,12 +453,25 @@ var gPrefBrowser = {
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
 </preferences>
 
-<hbox pack="end">
-<textbox id="paneBrowser-search" type="search" timeout="500" emptytext="&search;" oncommand="gPrefBrowser.searchKeyword(this.value);"/>
-</hbox>
-<scrollbox orient="vertical" id="paneBrowserBox" flex="1" class="listBox">
-
-<expander id="smartbrowsing" label="&browser.smartbrowsing.label;" open="false" clearhidden="true">
+<hbox flex="1" orient="horizontal" id="paneBrowserBox">
+<vbox id="paneBrowserBoxTab" class="subtabs" group="pane-browser"
+      style="max-width: 10em; width: 10em;"
+      oncommand="gPrefBrowser.onPaneBrowserBoxTabSelected();">
+<button type="radio" group="pane-browser" class="subtab" value="smartbrowsing" checked="true">&browser.smartbrowsing.label;</button>
+<button type="radio" group="pane-browser" class="subtab" value="urlbar"                      >&browser.urlbar.label;       </button>
+<button type="radio" group="pane-browser" class="subtab" value="html"                        >&browser.html.label;         </button>
+<button type="radio" group="pane-browser" class="subtab" value="tabs"                        >&browser.tabs.label;         </button>
+<button type="radio" group="pane-browser" class="subtab" value="sessionstore"                >&browser.sessionStore.label; </button>
+<button type="radio" group="pane-browser" class="subtab" value="bookmarkicon"                >&browser.bookmarkicon.label; </button>
+<button type="radio" group="pane-browser" class="subtab" value="download"                    >&browser.download.label;     </button>
+<button type="radio" group="pane-browser" class="subtab" value="ua"                          >&browser.ua.label;           </button>
+<button type="radio" group="pane-browser" class="subtab" value="speed-paint"                 >&browser.speed-paint.label;  </button>
+<button type="radio" group="pane-browser" class="subtab" value="speed-cache"                 >&browser.speed-cache.label;  </button>
+<button type="radio" group="pane-browser" class="subtab" value="others"                      >&browser.others.label;       </button>                
+</vbox>
+<splitter/>
+<deck id="paneBrowserBoxContainer" flex="4">
+<box class="subtabpanel" orient="vertical" id="smartbrowsing">
   <groupbox>
     <caption label="&browser.smartbrowsing.internetKeywords.label;"/>
     <description>&browser.smartbrowsing.internetKeywords.desc;</description>
@@ -502,8 +504,8 @@ var gPrefBrowser = {
                preference="browser.fixup.alternate.suffix" flex="1"/>
     </hbox>
   </groupbox>
-</expander>
-<expander id="urlbar" label="&browser.urlbar.label;" open="false" clearhidden="true">
+</box>
+<box class="subtabpanel" orient="vertical" id="urlbar">
   <checkbox label="&browser.urlbar.clickSelectsAll.label;" preference="browser.urlbar.clickSelectsAll"/>
   <checkbox label="&browser.urlbar.doubleClickSelectsAll.label;" preference="browser.urlbar.doubleClickSelectsAll"/>
 
@@ -524,8 +526,8 @@ var gPrefBrowser = {
       <label value="&miliseconds;" control="urlbar-delay"/>
     </hbox>
   </vbox>
-</expander>
-<expander id="html" label="&browser.html.label;" open="false" clearhidden="true">
+</box>
+<box class="subtabpanel" orient="vertical" id="html">
   <checkbox label="&browser.html.allowBlink.label;" preference="browser.blink_allowed"/>
   <checkbox id="html-frameEnabled" label="&browser.html.enableFrame.label;"
    onsyncfrompreference="return gPrefBrowser.onHtmlFrameSyncFrom();" preference="browser.frames.enabled"/>
@@ -590,8 +592,8 @@ var gPrefBrowser = {
       <colorpicker id="focus-fg-color" type="button" preference="browser.display.focus_text_color"/>
     </hbox>
   </groupbox>
-</expander>
-<expander id="tabs" label="&browser.tabs.label;" open="false" clearhidden="true">
+</box>
+<box class="subtabpanel" orient="vertical" id="tabs">
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
   <groupbox>
     <caption label="&browser.tabs.closeButtons.label;"/>
@@ -631,8 +633,8 @@ var gPrefBrowser = {
     <checkbox label="&browser.tabs.tabpreview.ctrltab.label;" preference="browser.ctrlTab.previews"/>
     <checkbox label="&browser.tabs.tabpreview.taskbar.label;" preference="browser.taskbar.previews.enable"/>
   </groupbox>
-</expander>
-<expander id="sessionstore" label="&browser.sessionStore.label;" open="false" clearhidden="true">
+</box>
+<box class="subtabpanel" orient="vertical" id="sessionstore">
   <checkbox id="sessionStore-Disabled" preference="browser.sessionstore.enabled" label="&browser.sessionStore.disabled.label;"/>
   <hbox align="center" id="sessionStore-Interval-pane">
     <label value="&browser.sessionStore.interval.label;" control="sessionStore-Interval"/>
@@ -663,14 +665,14 @@ var gPrefBrowser = {
       <radio value="2" label="&browser.sessionStore.privacy_level.never.label;"/>
     </radiogroup>
   </groupbox>
-</expander>
-<expander id="bookmarkicon" label="&browser.bookmarkicon.label;" open="false" clearhidden="true">
+</box>
+<box class="subtabpanel" orient="vertical" id="bookmarkicon">
   <checkbox label="&browser.bookmarkicon.siteicons.label;"
    preference="browser.chrome.site_icons"/>
   <checkbox label="&browser.bookmarkicon.favicons.lebel;"
    preference="browser.chrome.favicons"/>
-</expander>
-<expander id="download" label="&browser.download.label;" open="false" clearhidden="true">
+</box>
+<box class="subtabpanel" orient="vertical" id="download">
   <checkbox label="&browser.download.addToRecentDocs.label;"
             preference="browser.download.manager.addToRecentDocs"/>
   <groupbox>
@@ -707,8 +709,8 @@ var gPrefBrowser = {
       </hbox>
     </groupbox>
   </groupbox>
-</expander>
-<expander id="ua" label="&browser.ua.label;" open="false" clearhidden="true">
+</box>
+<box class="subtabpanel" orient="vertical" id="ua">
   <description>&browser.ua.desc;</description>
 
   <hbox align="center">
@@ -727,8 +729,8 @@ var gPrefBrowser = {
     </button>
     <button label="&reset;" oncommand="gPrefBrowser.resetUserAgent();"/>
   </hbox>
-</expander>
-<expander id="speed-paint" label="&browser.speed-paint.label;" open="false" clearhidden="true">
+</box>
+<box class="subtabpanel" orient="vertical" id="speed-paint">
   <hbox align="center">
     <description flex="1">&browser.speed-paint.desc;</description>
     <button label="&reset;" oncommand="gPrefBrowser.onSpeedPaintReset();"/>
@@ -781,8 +783,8 @@ var gPrefBrowser = {
     <label value="&microseconds;"/>
   </html:div>
   <description class="indent">&browser.speed-paint.content-switch-threshold.desc;</description>
-</expander>
-<expander id="speed-cache" label="&browser.speed-cache.label;" open="false" clearhidden="true">
+</box>
+<box class="subtabpanel" orient="vertical" id="speed-cache">
   <checkbox id="speed-cache-memory-enable" label="&browser.speed-cache.memory_enable.label;"
     onsyncfrompreference="return gPrefBrowser.onMemoryEnableSyncFrom();"
     preference="browser.cache.memory.enable"/>
@@ -830,9 +832,9 @@ var gPrefBrowser = {
     </hbox>
     <description>&browser.speed-cache.diskCacheFolder.desc;</description>
   </groupbox>
-</expander>
+</box>
 
-<expander id="others" label="&browser.others.label;" open="false" clearhidden="true">
+<box class="subtabpanel" orient="vertical" id="others">
   <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled"/>
   <groupbox>
     <caption label="&browser.others.dns.label;"/>
@@ -858,8 +860,10 @@ var gPrefBrowser = {
       <radio value="2" label="&browser.others.backspace_action.nothing;"/>
     </radiogroup>
   </groupbox>
-</expander>
-</scrollbox>
+</box>
+
+</deck>
+</hbox>
 
 </prefpane>
 </overlay>

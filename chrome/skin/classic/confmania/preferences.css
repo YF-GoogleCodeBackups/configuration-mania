@@ -6,17 +6,71 @@
   -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
   -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
   -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
-  background-color: -moz-Field;
+  background: -moz-Field;
   color: -moz-FieldText;
 
-  overflow-y: auto;
+  overflow: auto;
 }
 prefwindow#ConfmaniaPreferences .paneSelector > radio[pane] {
   list-style-image: none;
   -moz-image-region: auto;
 }
-#paneBrowserBox {
-  min-height: 25em;
+
+.subtabs, .subtabpanel{
+  -moz-appearance: listbox;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+  background: -moz-Field;
+  color: -moz-FieldText;
+
+  overflow: auto;
+}
+.subtabs {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+button.subtab {
+  -moz-appearance: none;
+  margin: 0;
+  padding: 2px;
+  border: solid 1px transparent;
+  background: -moz-Field;
+  color: -moz-FieldText;
+}
+button.subtab * {
+  background-image: none ! important;
+}
+button.subtab:focus {
+  border: solid 1px Highlight;
+}
+button.subtab[checked="true"] {
+  background: Highlight;
+  color: HighlightText;
+}
+.subtabpanel {
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+.subtabpanel {
+  visibility: collapse;
+  opacity: 0;
+}
+.subtabpanel[selected="true"] {
+  visibility: visible;
+  opacity: 1;
+}
+prefwindow[animated="true"] #paneBrowserBoxContainer .subtabpanel {
+  /* For animated or Mac, specify fixed height */
+  max-height: 390px;
+  min-height: 390px;
+
+  /* Enable animation for switching subtabpanel */
+  -moz-transition-duration: 500ms;
+  -moz-transition-property: opacity;
+  -moz-transition-timing-function: linear;
 }
 
 .emphasis{ font-weight: bold ! important; }
