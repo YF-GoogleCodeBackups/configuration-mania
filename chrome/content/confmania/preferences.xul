@@ -24,9 +24,6 @@ var gPrefWindow = {
   onLoad: function(){
     var prefWin = document.documentElement;
     prefWin.addEventListener("contextmenu", gPrefWindow.onContextMenu, true);
-
-    // Kill animation (on Mac); The animation cause the confmania dialog not to be visible entire.
-    prefWin.__defineGetter__("_shouldAnimate", function(){ return false; });
   },
   onResetSettings: function(event, msgtmpl){
     var currentPane = document.documentElement.currentPane;
