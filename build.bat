@@ -31,20 +31,12 @@ goto EOF
 	goto EOF
 
 :clean
-	del chrome\%EXTENSIONNAME%.jar %EXTENSIONNAME%.xpi
-	goto EOF
-
-:jar
-	call :prep
-	cd chrome
-	%ZIP_PROG% -r %EXTENSIONNAME%.jar content locale skin -x@..\exclude.lst
-	cd ..
+	del %EXTENSIONNAME%.xpi
 	goto EOF
 
 :xpi
 	call :prep
-	call :jar
-	%ZIP_PROG% %EXTENSIONNAME%.xpi chrome\%EXTENSIONNAME%.jar *.rdf chrome.manifest defaults\preferences\pref.js -x@exclude.lst
+	%ZIP_PROG% %EXTENSIONNAME%.xpi chrome\content chrome\skin chrome\locale *.rdf chrome.manifest defaults\preferences\pref.js -x@exclude.lst
 	goto EOF
 
 :EOF

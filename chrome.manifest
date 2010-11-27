@@ -1,5 +1,5 @@
 overlay	chrome://browser/content/browser.xul	chrome://confmania/content/browser-Overlay.xul
-content	confmania	jar:chrome/confmania.jar!/content/confmania/
+content	confmania	chrome/content/confmania/
 
 override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=Linux
 override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=FreeBSD
@@ -7,13 +7,13 @@ override chrome://confmania/content/browser-Overlay.xul chrome://confmania/conte
 override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=NetBSD
 override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=SunOS
 
-skin	confmania	classic/1.0	jar:chrome/confmania.jar!/skin/classic/confmania/
-locale	confmania	en-US	jar:chrome/confmania.jar!/locale/en-US/confmania/
-locale	confmania	ja-JP	jar:chrome/confmania.jar!/locale/ja-JP/confmania/
+skin	confmania	classic/1.0	chrome/skin/classic/confmania/
+locale	confmania	en-US	chrome/locale/en-US/confmania/
+locale	confmania	ja-JP	chrome/locale/ja-JP/confmania/
 
-#locale	confmania	de	jar:chrome/confmania.jar!/locale/de/confmania/
-#locale	confmania	es-ES	jar:chrome/confmania.jar!/locale/es-ES/confmania/
-#locale	confmania	fr	jar:chrome/confmania.jar!/locale/fr/confmania/
-#locale	confmania	pl	jar:chrome/confmania.jar!/locale/pl/confmania/
-#locale	confmania	pt-BR	jar:chrome/confmania.jar!/locale/pt-BR/confmania/
-#locale	confmania	zh-CN	jar:chrome/confmania.jar!/locale/zh-CN/confmania/
+#locale	confmania	de	chrome/locale/de/confmania/
+#locale	confmania	es-ES	chrome/locale/es-ES/confmania/
+#locale	confmania	fr	chrome/locale/fr/confmania/
+#locale	confmania	pl	chrome/locale/pl/confmania/
+#locale	confmania	pt-BR	chrome/locale/pt-BR/confmania/
+#locale	confmania	zh-CN	chrome/locale/zh-CN/confmania/

@@ -8,17 +8,11 @@ init:
 	find . -type f -exec chmod 0644 {} \;
 
 clean:
-	rm -f chrome/$(EXTENSIONNAME).jar $(EXTENSIONNAME).xpi
+	rm -f $(EXTENSIONNAME).xpi
 
-chrome/$(EXTENSIONNAME).jar:
-	cd chrome ; \
-	zip -9qr $(EXTENSIONNAME).jar \
-		content locale skin -x@../exclude.lst ; \
-	cd ..
-
-$(EXTENSIONNAME).xpi: chrome/$(EXTENSIONNAME).jar
-	zip -9q $(EXTENSIONNAME).xpi \
-		chrome/$(EXTENSIONNAME).jar \
+$(EXTENSIONNAME).xpi:
+	zip -9qr $(EXTENSIONNAME).xpi \
+		chrome/content chrome/skin chrome/locale \
 		*.rdf chrome.manifest \
 		defaults/preferences/pref.js \
 		-x@exclude.lst
