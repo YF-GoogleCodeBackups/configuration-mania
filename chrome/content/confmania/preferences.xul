@@ -12,8 +12,8 @@
  windowtype="Browser:Confmania"
  onload="gPrefWindow.onLoad();"
  chromehidden="menubar location directories status extrachrome"
- buttonlabelextra1="&reset;" ondialogextra1="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"
- buttons="accept,cancel,extra1"
+ buttonlabelextra2="&reset;" ondialogextra2="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"
+ buttons="accept,cancel,extra2"
  title="&prefWindow.title;" style="&prefWindow.style;"
  context="prefContextPopup"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -27,7 +27,7 @@ var gPrefWindow = {
   },
   onResetSettings: function(event, msgtmpl){
     var currentPane = document.documentElement.currentPane;
-    var srcbtn = document.documentElement.getButton("extra1");
+    var srcbtn = document.documentElement.getButton("extra2");
     var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
                    .getService(Components.interfaces.nsIPromptService);
 
