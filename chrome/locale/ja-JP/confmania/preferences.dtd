@@ -111,9 +111,6 @@
 <!ENTITY browser.ua.presets.this.label "&brandShortName;のこのバージョン">
 <!ENTITY browser.speed-paint.label "描画とレンダリング">
 <!ENTITY browser.speed-paint.desc "警告: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることによって、動作が遅くあるいは重くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
-<!ENTITY browser.speed-paint.hwaccel.label "ハードウェアアクセラレーション (Firefox 4.0+ Windows) (再起動必要)">
-<!ENTITY browser.speed-paint.hwaccel.render.label "Direct2D を有効にする">
-<!ENTITY browser.speed-paint.hwaccel.directwrite.label "DirectWrite を有効にする">
 <!ENTITY browser.speed-paint.label "描画/レンダリング">
 <!ENTITY browser.speed-paint.delay.label "初期描画待機時間">
 <!ENTITY browser.speed-paint.notify-backoffcount.label "初期レンダリングの待機時間の閾値">
@@ -346,7 +343,7 @@
 <!ENTITY debug.debug.jsstrict.label "JavaScript の厳密なエラーを出力する">
 <!ENTITY debug.debug.chromeerr.label "クロム (chrome) の JavaScript エラー/警告も表示する">
 <!ENTITY debug.debug.csserr.label "スタイルシートの解析エラーも表示する">
-<!ENTITY debug.tracemonkey.label "JavaScriptのJITコンパイラ(TraceMonkey)を有効に:">
+<!ENTITY debug.tracemonkey.label "JavaScriptのJITコンパイラ(TraceMonkey)を有効に(Firefox 3.x):">
 <!ENTITY debug.tracemonkey.content.label "ウェブ上">
 <!ENTITY debug.tracemonkey.chrome.label "クロム (chrome) ">
 <!ENTITY debug.cache.label "キャッシュ">

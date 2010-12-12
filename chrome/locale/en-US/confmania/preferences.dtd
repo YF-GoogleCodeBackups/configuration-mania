@@ -110,9 +110,6 @@
 <!ENTITY browser.ua.presets.this.label "&brandShortName;, this version.">
 <!ENTITY browser.speed-paint.label "Paint&amp;Rendering">
 <!ENTITY browser.speed-paint.desc "WARNING: The Recommended values are not always suitable for your line and PC environment. It sometimes make browsing slower or heavy. (But some of them feel browsing faster, which is the Placebo effect :-)">
-<!ENTITY browser.speed-paint.hwaccel.label "Hardware acceleration (Firefox 4.0+ on Windows) (takes effect after restart)">
-<!ENTITY browser.speed-paint.hwaccel.render.label "Enable Direct2D">
-<!ENTITY browser.speed-paint.hwaccel.directwrite.label "Enable DirectWrite">
 <!ENTITY browser.speed-paint.delay.label "Initial paint delay">
 <!ENTITY browser.speed-paint.notify-backoffcount.label "Max Number of timer-based reflows to perform">
 <!ENTITY browser.speed-paint.notify-backoffcount.never "No limit">
@@ -343,7 +340,7 @@
 <!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
-<!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript ...">
+<!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript (Firefox 3.x) ...">
 <!ENTITY debug.tracemonkey.content.label "on the web">
 <!ENTITY debug.tracemonkey.chrome.label "on chrome">
 <!ENTITY debug.cache.label "Cache">
