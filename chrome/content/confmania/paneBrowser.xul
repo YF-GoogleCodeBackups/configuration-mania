@@ -388,6 +388,7 @@ var gPrefBrowser = {
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
   <preference id="browser.display.focus_text_color" name="browser.display.focus_text_color" type="string"/>
+  <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
 
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
@@ -442,7 +443,6 @@ var gPrefBrowser = {
   <preference id="geo.enabled" name="geo.enabled" type="bool"/>
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
-  <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
   <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
@@ -590,6 +590,7 @@ var gPrefBrowser = {
       <colorpicker id="focus-fg-color" type="button" preference="browser.display.focus_text_color"/>
     </hbox>
   </groupbox>
+  <checkbox label="&browser.html.nouse_text_smoothing_setting.label;" preference="gfx.use_text_smoothing_setting"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="tabs">
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
@@ -833,7 +834,6 @@ var gPrefBrowser = {
     <checkbox label="&browser.others.dns.prefetch.label;" preference="network.dns.disablePrefetch"
      onsyncfrompreference="return gPrefBrowser.syncFrom(this, true);"/>
   </groupbox>
-  <checkbox label="&browser.others.nouse_text_smoothing_setting.label;" preference="gfx.use_text_smoothing_setting"/>
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"

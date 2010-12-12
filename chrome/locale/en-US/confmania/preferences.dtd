@@ -55,6 +55,7 @@
 <!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
 <!ENTITY browser.html.focus.bg.label "Background Color">
 <!ENTITY browser.html.focus.fg.label "Text Color">
+<!ENTITY browser.html.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">
 <!ENTITY browser.tabs.label "TabBrowsing">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab">
 <!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
@@ -142,7 +143,6 @@
 <!ENTITY browser.others.dns.label "DNS Setting">
 <!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
-<!ENTITY browser.others.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">
 <!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
