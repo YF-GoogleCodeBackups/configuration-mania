@@ -46,6 +46,7 @@
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
 <!ENTITY browser.html.html5.label "HTML 5 パーサーを有効にする (Firefox 3.6以降)">
 <!ENTITY browser.html.enableSVG.label "SVG を表示する">
+<!ENTITY browser.html.enableSVGSMIL.label "SMIL を有効にする (Firefox 4.0以降)">
 <!ENTITY browser.html.webgl.label "WebGL を有効にする (Firefox 4.0以降; 再起動必要)">
 <!ENTITY browser.html.webgl.software_render.label "ソフトウェアレンダリングする">
 <!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib のパス :">
