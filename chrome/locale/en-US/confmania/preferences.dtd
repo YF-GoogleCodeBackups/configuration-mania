@@ -343,8 +343,14 @@
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
 <!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript (Firefox 3.x) ...">
-<!ENTITY debug.tracemonkey.content.label "on the web">
-<!ENTITY debug.tracemonkey.chrome.label "on chrome">
+<!ENTITY debug.tracemonkey.content.label "on webpages">
+<!ENTITY debug.tracemonkey.chrome.label "on UI">
+<!ENTITY debug.jit.label "JavaScript JIT Compiler Setting (Firefox 4.0+)">
+<!ENTITY debug.jit.jitprofiling.label "Enable tuning JIT heuristics">
+<!ENTITY debug.jit.methodjit.label "Enable JagerMonkey (baseline JIT)">
+<!ENTITY debug.jit.tracejit.label "Enable TraceMonkey (native-code compiler)">
+<!ENTITY debug.jit.content.label "on webpages">
+<!ENTITY debug.jit.chrome.label "on UI">
 <!ENTITY debug.cache.label "Cache">
 <!ENTITY debug.cache.disableXULCache.label "Disable XUL Cache">
 <!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
