@@ -57,6 +57,7 @@
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
   <preference name="dom.ipc.plugins.enabled" id="dom.ipc.plugins.enabled" type="bool"/>
+  <preference name="extensions.alwaysUnpack" id="extensions.alwaysUnpack" type="bool"/>
 </preferences>
 
 <hbox align="center">
@@ -81,6 +82,8 @@
           preference="extensions.hideInstallButton"/>
 <checkbox label="&addons.oopp.label;"
           preference="dom.ipc.plugins.enabled"/>
+<checkbox label="&addons.alwaysUnpack.label;"
+          preference="extensions.alwaysUnpack"/>
 
 </prefpane>
 </overlay>
