@@ -350,8 +350,8 @@
 <!ENTITY debug.tracemonkey.content.label "ウェブページ">
 <!ENTITY debug.tracemonkey.chrome.label "UI">
 <!ENTITY debug.jit.label "JavaScriptのJITコンパイラ設定(Firefox 4.0以降)">
-<!ENTITY debug.jit.jitprofiling.label "Enable tuning JIT heuristics">
-<!ENTITY debug.jit.methodjit.label "JagerMonkey (baseline JIT)を有効">
+<!ENTITY debug.jit.jitprofiling.label "Tuning JIT heuristicsを有効">
+<!ENTITY debug.jit.methodjit.label "J&#xe4;gerMonkey (baseline JIT)を有効">
 <!ENTITY debug.jit.tracejit.label "TraceMonkey (nativeコードコンパイラ)を有効">
 <!ENTITY debug.jit.content.label "ウェブページ">
 <!ENTITY debug.jit.chrome.label "UI">
