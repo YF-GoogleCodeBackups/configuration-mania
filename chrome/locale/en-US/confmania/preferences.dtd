@@ -156,9 +156,9 @@
 <!ENTITY security.js.label "JavaScript">
 <!ENTITY security.js.annoy.label "More Advanced">
 <!ENTITY security.js.annoy.max_script_run_time.label "Script execution time of which the browser warns">
-<!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable to close non-popup windows">
-<!ENTITY security.js.annoy.window_flip "Disable Raise and Lower windows">
-<!ENTITY security.js.annoy.window_move_resize "Disable Move and Resize existing windows">
+<!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable Closing non-popup windows">
+<!ENTITY security.js.annoy.window_flip "Disable Requesting/Removing window focus">
+<!ENTITY security.js.annoy.window_move_resize "Disable Moving/Resizing existing windows">
 <!ENTITY security.js.annoy.status_change "Disable Changing statusbar">
 <!ENTITY security.js.annoy.change_image "Disable Changing images">
 <!ENTITY security.js.annoy.change_image.desc "Caution: The setting &quot;&security.js.annoy.change_image;&quot; cause some web applications (such as Google Map) not to work.">

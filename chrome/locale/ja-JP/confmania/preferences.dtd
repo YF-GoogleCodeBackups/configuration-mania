@@ -37,7 +37,6 @@
 <!ENTITY browser.html.img.resizing.label "ページサイズに合わせて画像を縮小">
 <!ENTITY browser.html.img.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
 <!ENTITY browser.html.img.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
-<!ENTITY browser.html.color_management_enabled.label "カラーマネージメント(CMS)を有効に(再起動必要)">
 <!ENTITY browser.html.color_management.label "カラーマネージメント(CMS) (再起動必要)">
 <!ENTITY browser.html.color_management.mode.label "モード">
 <!ENTITY browser.html.color_management.mode.off.label "CMS無効">
@@ -103,7 +102,6 @@
 <!ENTITY browser.download.alerts.label "通知アラート表示の設定">
 <!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
 <!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
-<!ENTITY browser.download.alerts.slide.prefix.label "">
 <!ENTITY browser.download.alerts.slide.per.label "ピクセルづつ動かす。時間間隔は">
 <!ENTITY browser.download.alerts.slide.settolight.label "軽い設定にする">
 <!ENTITY browser.ua.label "UserAgent">
@@ -111,9 +109,8 @@
 <!ENTITY browser.ua.text.label "UA文字列 :">
 <!ENTITY browser.ua.presets.label "プリセット">
 <!ENTITY browser.ua.presets.this.label "&brandShortName;のこのバージョン">
-<!ENTITY browser.speed-paint.label "描画とレンダリング">
-<!ENTITY browser.speed-paint.desc "警告: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることによって、動作が遅くあるいは重くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
 <!ENTITY browser.speed-paint.label "描画/レンダリング">
+<!ENTITY browser.speed-paint.desc "警告: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることによって、動作が遅くあるいは重くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
 <!ENTITY browser.speed-paint.delay.label "初期描画待機時間">
 <!ENTITY browser.speed-paint.notify-backoffcount.label "初期レンダリングの待機時間の閾値">
 <!ENTITY browser.speed-paint.notify-backoffcount.never "制限しない">
@@ -125,13 +122,13 @@
 <!ENTITY browser.speed-paint.content-switch-threshold.label "High→Low frequency interrupt mode 切替待機時間閾値">
 <!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode はインターフェースの反応を速くするために、ページの読み込み処理を遅くします。; 標準: 750000 則ち 3/4 ミリ秒">
 <!ENTITY browser.speed-cache.label "ブラウザのキャッシュ">
-<!ENTITY browser.speed-cache.memory_enable.label "キャッシュメモリーを有効に (通常、決して無効にしないで下さい)">
 <!ENTITY browser.speed-cache.check.label "ページのキャッシュの確認の頻度">
 <!ENTITY browser.speed-cache.check.desc "警告: &quot;&browser.speed-cache.check.once.label;&quot; で高速化されますが、一部の Web サービスに支障が出るかもしれません。また、ページが正しく更新されない不具合がある場合、&quot;&browser.speed-cache.check.each.label;&quot;に設定して下さい。もしくは、シフトキーを押しながら再読込ボタンをクリックして、強制読込をしてください。">
 <!ENTITY browser.speed-cache.check.once.label "セッション毎">
 <!ENTITY browser.speed-cache.check.each.label "アクセスする度に">
 <!ENTITY browser.speed-cache.check.never.label "しない">
 <!ENTITY browser.speed-cache.check.auto.label "更新されたら (推奨)">
+<!ENTITY browser.speed-cache.memory_enable.label "キャッシュメモリーを有効に (通常、決して無効にしないで下さい)">
 <!ENTITY browser.speed-cache.memory_capability.label "使用容量">
 <!ENTITY browser.speed-cache.trim_on_minimize.label "&brandShortName;の最小化時にメモリの内容をスワップアウトする (Windowsのみ)">
 <!ENTITY browser.speed-cache.disk_cache_ssl.label "SSL 通信の分もキャッシュに貯める (セキュリティリスク有り)">
@@ -143,7 +140,6 @@
 <!ENTITY browser.others.label "その他">
 <!ENTITY browser.others.geo_enabled.label "位置情報通信機能を有効にする">
 <!ENTITY browser.others.websocket_enabled.label "WebSocket 機能を有効にする (Firefox 4.0以降)">
-<!ENTITY browser.others.disableIPv6.label "IPv6でDNSを問い合わせしない">
 <!ENTITY browser.others.dns.label "名前解決(DNS)">
 <!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
 <!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">
@@ -160,22 +156,22 @@
 <!ENTITY security.js.annoy.label "詳細設定">
 <!ENTITY security.js.annoy.max_script_run_time.label "警告するスクリプト実行時間">
 <!ENTITY security.js.annoy.disable_scripts_to_close_windows "スクリプトからポップアップウィンドウを閉じれなくする">
-<!ENTITY security.js.annoy.window_flip "ウィンドウのフォーカス(前面か背面か)の切り替えを無効に">
-<!ENTITY security.js.annoy.window_move_resize "ウィンドウの移動または大きさの変更を無効に">
-<!ENTITY security.js.annoy.status_change "ステータスバーのテキストの変更を無効に">
-<!ENTITY security.js.annoy.change_image "画像の置き換えを無効に">
+<!ENTITY security.js.annoy.window_flip "ウィンドウのフォーカスの取得とはずすのを無効にする">
+<!ENTITY security.js.annoy.window_move_resize "ウィンドウの移動または大きさの変更を無効にする">
+<!ENTITY security.js.annoy.status_change "ステータスバーのテキストの変更を無効にする">
+<!ENTITY security.js.annoy.change_image "画像の置き換えを無効にする">
 <!ENTITY security.js.annoy.change_image.desc "注意: &quot;&security.js.annoy.change_image;&quot;の設定によって、いくつかのウェブアプリケーション(Google マップなど)が動作しなくなります。">
-<!ENTITY security.js.annoy.contextmenu "コンテキストメニューイベントの取得を無効に">
+<!ENTITY security.js.annoy.contextmenu "コンテキストメニューイベントの取得を無効にする">
 <!ENTITY security.js.annoy.dispatchLeftClickOnly "左クリックのみイベント処理を許可">
 <!ENTITY security.js.uis.label "UI 擬装対策">
-<!ENTITY security.js.uis.desc1 "JavaScript で開かれたウインドウで以下を強制可視表示/有効 : ">
+<!ENTITY security.js.uis.desc1 "JavaScript で開かれたウインドウで以下を強制可視表示/有効 :">
+<!ENTITY security.js.uis.desc2 "UI 擬装 (UI Spoof) への対処として、全項目をチェックしてください。">
 <!ENTITY security.js.uis.menubar "メニューバー">
 <!ENTITY security.js.uis.resizable "サイズ変更可能性">
 <!ENTITY security.js.uis.scrollbars "スクロールバー">
 <!ENTITY security.js.uis.toolbar "ツールバー">
 <!ENTITY security.js.uis.locationbar "場所バー">
 <!ENTITY security.js.uis.status "ステータスバー">
-<!ENTITY security.js.uis.desc2 "UI 擬装 (UI Spoof) への対処として、全項目をチェックしてください。">
 <!ENTITY security.popupwin.label "ポップアップ">
 <!ENTITY security.popupwin.tabs.label "タブブラウジングでのポップアップ(window.open)の扱い:">
 <!ENTITY security.popupwin.tabs.0.label "リンクの設定と同様に処理">
@@ -222,8 +218,8 @@
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
 <!ENTITY security.privacy.label "プライバシー">
 <!ENTITY security.privacy.history.label "履歴 (Firefox 3.x)">
-<!ENTITY security.privacy.history.expireDays1.label  "訪問したページを次の日数だけ記憶する:">
-<!ENTITY security.privacy.history.expireDays2.label  "日">
+<!ENTITY security.privacy.history.expireDays1.label "訪問したページを次の日数だけ記憶する:">
+<!ENTITY security.privacy.history.expireDays2.label "日">
 <!ENTITY security.privacy.history.expireSites1.label "訪問したページを次の個数だけ記憶する:">
 <!ENTITY security.privacy.history.expireSites2.label "件">
 <!ENTITY security.privacy.cookie.label "Cookie">
@@ -233,7 +229,7 @@
 <!ENTITY security.privacy.passwd.managepassword.text "マスターパスワードが求められるとき:">
 <!ENTITY security.privacy.passwd.managepassword.askfirsttime "必要になった初回のみ">
 <!ENTITY security.privacy.passwd.managepassword.askeverytime "必要になったとき毎回">
-<!ENTITY security.privacy.passwd.managepassword.asktimeout   "前回使用後">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout "前回使用後">
 <!ENTITY security.privacy.passwd.managepassword.timeout.unit "分以上経ったとき">
 <!ENTITY security.privacy.passwd.desc "ヒント: マスターパスワードの設定は &brandShortName; の設定ダイアログにあります。">
 
@@ -272,12 +268,12 @@
 <!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
 <!ENTITY ui.keynav.tabNavigationTextboxes.label "注意: テキストボックスは常にタブ操作の対象になります">
 <!ENTITY ui.keynav.tabNavigationDesc.label "Tab または Shift+Tab が入力されたときに移動:">
-<!ENTITY ui.keynav.accelerators.label  "キーボードアクセラレータ">
-<!ENTITY ui.keynav.acceleratorsBlurb.label  "0 に値を設定すると装飾キーを無効にします。">
-<!ENTITY ui.keynav.acceleratorKey.label  "装飾キー(のコード):">
-<!ENTITY ui.keynav.acceleratorKey.accesskey  "A">
-<!ENTITY ui.keynav.menuAccessKey.label   "メニュー装飾キー(のコード):">
-<!ENTITY ui.keynav.menuAccessKey.accesskey   "M">
+<!ENTITY ui.keynav.accelerators.label "キーボードアクセラレータ">
+<!ENTITY ui.keynav.acceleratorsBlurb.label "0 に値を設定すると装飾キーを無効にします。">
+<!ENTITY ui.keynav.acceleratorKey.label "装飾キー(のコード):">
+<!ENTITY ui.keynav.acceleratorKey.accesskey "A">
+<!ENTITY ui.keynav.menuAccessKey.label "メニュー装飾キー(のコード):">
+<!ENTITY ui.keynav.menuAccessKey.accesskey "M">
 <!ENTITY ui.bidi.label "BiDi">
 <!ENTITY ui.bidi.ui.label "BiDi (双方向テキスト) のインターフェイスを有効に">
 <!ENTITY ui.bidi.characterset.label "文字セット">
