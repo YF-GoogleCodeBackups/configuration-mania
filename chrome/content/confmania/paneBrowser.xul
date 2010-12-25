@@ -158,11 +158,6 @@ var gPrefBrowser = {
     document.getElementById("layout.frames.force_resizability").disabled = disabled;
     return undefined; // no override
   },
-  onSVGSyncFrom : function() {
-    let disabled = ! document.getElementById("svg.enabled").value;
-    document.getElementById("svg.smil.enabled").disabled = disabled;
-    return undefined; // no override
-  },
   onWebGLSyncFrom : function() {
     let disabled = ! document.getElementById("webgl.enabled_for_all_sites").value;
     document.getElementById("webgl.software_render").disabled = disabled;
@@ -560,10 +555,8 @@ var gPrefBrowser = {
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.html5.label;" preference="html5.enable"/>
-  <checkbox label="&browser.html.enableSVG.label;" preference="svg.enabled"
-            onsyncfrompreference="return gPrefBrowser.onSVGSyncFrom()"/>
-  <checkbox class="indent"
-            label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
+  <checkbox label="&browser.html.enableSVG.label;" preference="svg.enabled"/>
+  <checkbox label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
   <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.enabled_for_all_sites"
             onsyncfrompreference="return gPrefBrowser.onWebGLSyncFrom()"/>
   <vbox id="html-webgl-vbox" class="indent">
