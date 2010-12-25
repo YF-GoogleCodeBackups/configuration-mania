@@ -641,11 +641,11 @@ var gPrefBrowser = {
       <rows><row align="center">
         <label value="&browser.sessionStore.max_undo.windows.label;" control="sessionStore-MaxWindowsUndo"/>
         <textbox id="sessionStore-MaxWindowsUndo" type="number"
-         hidespinbuttons="true" min="1" preference="browser.sessionstore.max_windows_undo" size="3"/>
+         hidespinbuttons="true" min="0" preference="browser.sessionstore.max_windows_undo" size="3"/>
       </row><row align="center">
         <label value="&browser.sessionStore.max_undo.tabs.label;" control="sessionStore-MaxTabsUndo"/>
         <textbox id="sessionStore-MaxTabsUndo" type="number"
-         hidespinbuttons="true" min="1" preference="browser.sessionstore.max_tabs_undo" size="3"/>
+         hidespinbuttons="true" min="0" preference="browser.sessionstore.max_tabs_undo" size="3"/>
       </row></rows>
     </grid>
   </groupbox>
