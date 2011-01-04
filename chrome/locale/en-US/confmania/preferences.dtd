@@ -201,7 +201,6 @@
 <!ENTITY security.antivirus.label "Anti-Virus">
 <!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
 <!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">
-<!ENTITY security.antivirus.dontclean.label "Try to clean a downloaded file when a virus is detected">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE.">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ...">

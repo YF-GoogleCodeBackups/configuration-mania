@@ -200,7 +200,6 @@
 <!ENTITY security.antivirus.label "ウイルス対策">
 <!ENTITY security.antivirus.scanWhenDone.label "ダウンロード完了時にウイルススキャンを実行する">
 <!ENTITY security.antivirus.scanWhenDone.desc "Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く場合にセキュリティの警告を表示するかにも反映します">
-<!ENTITY security.antivirus.dontclean.label "ダウンロードされたファイルからウイルスが検出されたら駆除を試みる">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.ssl_domain_display.label "セキュアなサイトにアクセスしているとき、ロケーションバーのURLのすぐ左に表示するもの">
