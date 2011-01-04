@@ -400,7 +400,6 @@ var gPrefBrowser = {
   <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
   <preference id="browser.taskbar.previews.enable" name="browser.taskbar.previews.enable" type="bool"/>
 
-  <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool" inverted="true"/>
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
   <preference id="browser.sessionstore.max_windows_undo" name="browser.sessionstore.max_windows_undo" type="int"/>
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
@@ -628,7 +627,6 @@ var gPrefBrowser = {
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="sessionstore">
-  <checkbox id="sessionStore-Disabled" preference="browser.sessionstore.enabled" label="&browser.sessionStore.disabled.label;"/>
   <hbox align="center" id="sessionStore-Interval-pane">
     <label value="&browser.sessionStore.interval.label;" control="sessionStore-Interval"/>
     <textbox id="sessionStore-Interval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>

@@ -79,7 +79,6 @@
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "Ctrl+TAB">
 <!ENTITY browser.tabs.tabpreview.taskbar.label "タスクバー (Windows7)">
 <!ENTITY browser.sessionStore.label "セッションストア">
-<!ENTITY browser.sessionStore.disabled.label "&browser.sessionStore.label;を無効にする">
 <!ENTITY browser.sessionStore.interval.label "セッション状態を保存する時間間隔">
 <!ENTITY browser.sessionStore.max_undo.label "記憶する最近閉じたウィンドウおよびタブの数">
 <!ENTITY browser.sessionStore.max_undo.windows.label "最近閉じたウィンドウ数">

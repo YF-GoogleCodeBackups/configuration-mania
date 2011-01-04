@@ -79,7 +79,6 @@
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
 <!ENTITY browser.tabs.tabpreview.taskbar.label "on Taskbar (Windows7)">
 <!ENTITY browser.sessionStore.label "Session Store">
-<!ENTITY browser.sessionStore.disabled.label "Disable &browser.sessionStore.label;">
 <!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
 <!ENTITY browser.sessionStore.max_undo.label "Number of closures to remember for restoration">
 <!ENTITY browser.sessionStore.max_undo.windows.label "Number of window closures :">
