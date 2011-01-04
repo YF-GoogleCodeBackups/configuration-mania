@@ -64,7 +64,6 @@
 <!ENTITY browser.tabs.closeButtons.no.label "Not any close button">
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
-<!ENTITY browser.tabs.disableBackgroundClose.label "Clicking on the close tab button of a tab in backgrund will switch to that tab, not close it">
 <!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width (Firefox 3.x)">
 <!ENTITY browser.tabs.tabWidth.min.label "Minimum">
 <!ENTITY browser.tabs.tabWidth.max.label "Maximum">

@@ -64,7 +64,6 @@
 <!ENTITY browser.tabs.closeButtons.no.label "常に表示しない">
 <!ENTITY browser.tabs.closeButtons.end.label "タブバーの端に表示 (Firefox1.xの動作)">
 <!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ">
-<!ENTITY browser.tabs.disableBackgroundClose.label "バックグラウンドタブの閉じるボタンを押すことでタブを閉じない">
 <!ENTITY browser.tabs.tabWidth.label "タブの最小/最大サイズ (Firefox 3.x)">
 <!ENTITY browser.tabs.tabWidth.min.label "最小">
 <!ENTITY browser.tabs.tabWidth.max.label "最大">

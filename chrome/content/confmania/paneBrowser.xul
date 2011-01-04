@@ -177,9 +177,7 @@ var gPrefBrowser = {
   },
   onTabsCloseButtonSyncFrom : function() {
     let disabled = document.getElementById("browser.tabs.closeButtons").value != 1;
-    for each (let name in ["browser.tabs.tabClipWidth", "browser.tabs.disableBackgroundClose"]) {
-      document.getElementById(name).disabled = disabled;
-    }
+    document.getElementById("browser.tabs.tabClipWidth").disabled = disabled;
     return undefined; // no override
   },
   onInterruptParseSyncFrom : function() {
@@ -388,7 +386,6 @@ var gPrefBrowser = {
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
   <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
-  <preference id="browser.tabs.disableBackgroundClose" name="browser.tabs.disableBackgroundClose" type="bool"/>
   <preference id="browser.tabs.tabMinWidth" name="browser.tabs.tabMinWidth" type="int"/>
   <preference id="browser.tabs.tabMaxWidth" name="browser.tabs.tabMaxWidth" type="int"/>
   <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
@@ -597,7 +594,6 @@ var gPrefBrowser = {
           <label control="tabs-tabClipWidth">&browser.tabs.tabClipWidth.label;</label>
           <textbox class="indent" type="number" hidespinbuttons="true" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
         </html:div>
-        <checkbox preference="browser.tabs.disableBackgroundClose" label="&browser.tabs.disableBackgroundClose.label;"/>
       </vbox>
       <radio value="2" label="&browser.tabs.closeButtons.no.label;"/>
       <radio value="3" label="&browser.tabs.closeButtons.end.label;"/>
