@@ -102,6 +102,7 @@
 <!ENTITY browser.download.alerts.label "通知アラート表示の設定">
 <!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
 <!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
+<!ENTITY browser.download.alerts.slide.prefix.label "">
 <!ENTITY browser.download.alerts.slide.per.label "ピクセルづつ動かす。時間間隔は">
 <!ENTITY browser.download.alerts.slide.settolight.label "軽い設定にする">
 <!ENTITY browser.ua.label "UserAgent">
