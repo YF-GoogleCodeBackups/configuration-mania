@@ -64,7 +64,6 @@
 <!ENTITY browser.tabs.closeButtons.no.label "常に表示しない">
 <!ENTITY browser.tabs.closeButtons.end.label "タブバーの端に表示 (Firefox1.xの動作)">
 <!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ">
-<!ENTITY browser.tabs.disableBackgroundClose.label "バックグラウンドタブの閉じるボタンを押すことでタブを閉じない">
 <!ENTITY browser.tabs.tabWidth.label "タブの最小/最大サイズ (Firefox 3.x)">
 <!ENTITY browser.tabs.tabWidth.min.label "最小">
 <!ENTITY browser.tabs.tabWidth.max.label "最大">
@@ -79,7 +78,6 @@
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "Ctrl+TAB">
 <!ENTITY browser.tabs.tabpreview.taskbar.label "タスクバー (Windows7)">
 <!ENTITY browser.sessionStore.label "セッションストア">
-<!ENTITY browser.sessionStore.disabled.label "&browser.sessionStore.label;を無効にする">
 <!ENTITY browser.sessionStore.interval.label "セッション状態を保存する時間間隔">
 <!ENTITY browser.sessionStore.max_undo.label "記憶する最近閉じたウィンドウおよびタブの数">
 <!ENTITY browser.sessionStore.max_undo.windows.label "最近閉じたウィンドウ数">
@@ -201,7 +199,6 @@
 <!ENTITY security.antivirus.label "ウイルス対策">
 <!ENTITY security.antivirus.scanWhenDone.label "ダウンロード完了時にウイルススキャンを実行する">
 <!ENTITY security.antivirus.scanWhenDone.desc "Windows XP SP2 と Windows Vista では、この値は、ダウンロードされたファイルを開く場合にセキュリティの警告を表示するかにも反映します">
-<!ENTITY security.antivirus.dontclean.label "ダウンロードされたファイルからウイルスが検出されたら駆除を試みる">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.ssl_domain_display.label "セキュアなサイトにアクセスしているとき、ロケーションバーのURLのすぐ左に表示するもの">
@@ -261,6 +258,10 @@
 <!ENTITY ui.find.findahead.timeout.label "停止状態が">
 <!ENTITY ui.find.findahead.timeout.label2 "ミリ秒続いたら現在の検索をクリアする">
 <!ENTITY ui.find.findahead.sound.label "入力文字が見つからないときサウンドを鳴らす (再起動必要)">
+<!ENTITY ui.find.casesensitive.label "大文字/小文字">
+<!ENTITY ui.find.casesensitive.insensitive "大文字/小文字を区別しない">
+<!ENTITY ui.find.casesensitive.sensitive "大文字/小文字を区別する">
+<!ENTITY ui.find.casesensitive.auto "検索単語に大文字を含んでいるが大文字だけではないときに限って大文字/小文字を区別する">
 <!ENTITY ui.keynav.label "キーボード">
 <!ENTITY ui.keynav.tabNavigationBehavior.label "タブキーによるフォーカス制御">
 <!ENTITY ui.keynav.tabNavigationLinks.label "リンク">

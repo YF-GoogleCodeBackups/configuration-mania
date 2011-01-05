@@ -64,7 +64,6 @@
 <!ENTITY browser.tabs.closeButtons.no.label "Not any close button">
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
-<!ENTITY browser.tabs.disableBackgroundClose.label "Clicking on the close tab button of a tab in backgrund will switch to that tab, not close it">
 <!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width (Firefox 3.x)">
 <!ENTITY browser.tabs.tabWidth.min.label "Minimum">
 <!ENTITY browser.tabs.tabWidth.max.label "Maximum">
@@ -79,7 +78,6 @@
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
 <!ENTITY browser.tabs.tabpreview.taskbar.label "on Taskbar (Windows7)">
 <!ENTITY browser.sessionStore.label "Session Store">
-<!ENTITY browser.sessionStore.disabled.label "Disable &browser.sessionStore.label;">
 <!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
 <!ENTITY browser.sessionStore.max_undo.label "Number of closures to remember for restoration">
 <!ENTITY browser.sessionStore.max_undo.windows.label "Number of window closures :">
@@ -201,7 +199,6 @@
 <!ENTITY security.antivirus.label "Anti-Virus">
 <!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
 <!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">
-<!ENTITY security.antivirus.dontclean.label "Try to clean a downloaded file when a virus is detected">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE.">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ...">
@@ -261,6 +258,10 @@
 <!ENTITY ui.find.findahead.timeout.label "Clear the current search after">
 <!ENTITY ui.find.findahead.timeout.label2 "[ms] of inactivity">
 <!ENTITY ui.find.findahead.sound.label "Play a sound when typed text isn't found (takes effect after restart)">
+<!ENTITY ui.find.casesensitive.label "Case sensitivity mode">
+<!ENTITY ui.find.casesensitive.insensitive "Case-insensitive">
+<!ENTITY ui.find.casesensitive.sensitive "Case-sensitive">
+<!ENTITY ui.find.casesensitive.auto "Case-sensitive only if the search string contains upper-case characters but isn't all-caps">
 <!ENTITY ui.keynav.label "Key Navigation">
 <!ENTITY ui.keynav.tabNavigationBehavior.label "Tab Focus Navigation">
 <!ENTITY ui.keynav.tabNavigationLinks.label "Links">

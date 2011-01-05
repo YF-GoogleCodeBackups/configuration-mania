@@ -158,18 +158,13 @@ var gPrefBrowser = {
     document.getElementById("layout.frames.force_resizability").disabled = disabled;
     return undefined; // no override
   },
-  onSVGSyncFrom : function() {
-    let disabled = ! document.getElementById("svg.enabled").value;
-    document.getElementById("svg.smil.enabled").disabled = disabled;
-    return undefined; // no override
-  },
   onWebGLSyncFrom : function() {
     let disabled = ! document.getElementById("webgl.enabled_for_all_sites").value;
-    document.getElementById("webgl.software_render").disabled = disabled;
+    document.getElementById("webgl.force_osmesa").disabled = disabled;
     return gPrefBrowser.onWebGLSFRenderSyncFrom();
   },
   onWebGLSFRenderSyncFrom : function() {
-    let disabled = ! (document.getElementById("webgl.enabled_for_all_sites").value && document.getElementById("webgl.software_render").value);
+    let disabled = ! (document.getElementById("webgl.enabled_for_all_sites").value && document.getElementById("webgl.force_osmesa").value);
     document.getElementById("webgl.osmesalib").disabled = disabled;
     return undefined; // no override
   },
@@ -182,9 +177,7 @@ var gPrefBrowser = {
   },
   onTabsCloseButtonSyncFrom : function() {
     let disabled = document.getElementById("browser.tabs.closeButtons").value != 1;
-    for each (let name in ["browser.tabs.tabClipWidth", "browser.tabs.disableBackgroundClose"]) {
-      document.getElementById(name).disabled = disabled;
-    }
+    document.getElementById("browser.tabs.tabClipWidth").disabled = disabled;
     return undefined; // no override
   },
   onInterruptParseSyncFrom : function() {
@@ -381,7 +374,7 @@ var gPrefBrowser = {
   <preference id="svg.enabled" name="svg.enabled" type="bool"/>
   <preference id="svg.smil.enabled" name="svg.smil.enabled" type="bool"/>
   <preference id="webgl.enabled_for_all_sites" name="webgl.enabled_for_all_sites" type="bool"/>
-  <preference id="webgl.software_render" name="webgl.software_render" type="bool"/>
+  <preference id="webgl.force_osmesa" name="webgl.force_osmesa" type="bool"/>
   <preference id="webgl.osmesalib" name="webgl.osmesalib" type="string"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.zoom.siteSpecific" name="browser.zoom.siteSpecific" type="bool"/>
@@ -393,7 +386,6 @@ var gPrefBrowser = {
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
   <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
-  <preference id="browser.tabs.disableBackgroundClose" name="browser.tabs.disableBackgroundClose" type="bool"/>
   <preference id="browser.tabs.tabMinWidth" name="browser.tabs.tabMinWidth" type="int"/>
   <preference id="browser.tabs.tabMaxWidth" name="browser.tabs.tabMaxWidth" type="int"/>
   <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
@@ -405,7 +397,6 @@ var gPrefBrowser = {
   <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
   <preference id="browser.taskbar.previews.enable" name="browser.taskbar.previews.enable" type="bool"/>
 
-  <preference id="browser.sessionstore.enabled" name="browser.sessionstore.enabled" type="bool" inverted="true"/>
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
   <preference id="browser.sessionstore.max_windows_undo" name="browser.sessionstore.max_windows_undo" type="int"/>
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
@@ -560,14 +551,12 @@ var gPrefBrowser = {
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.html5.label;" preference="html5.enable"/>
-  <checkbox label="&browser.html.enableSVG.label;" preference="svg.enabled"
-            onsyncfrompreference="return gPrefBrowser.onSVGSyncFrom()"/>
-  <checkbox class="indent"
-            label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
+  <checkbox label="&browser.html.enableSVG.label;" preference="svg.enabled"/>
+  <checkbox label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
   <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.enabled_for_all_sites"
             onsyncfrompreference="return gPrefBrowser.onWebGLSyncFrom()"/>
   <vbox id="html-webgl-vbox" class="indent">
-    <checkbox id="html-webgl-software-render" label="&browser.html.webgl.software_render.label;" preference="webgl.software_render"
+    <checkbox id="html-webgl-software-render" label="&browser.html.webgl.software_render.label;" preference="webgl.force_osmesa"
               onsyncfrompreference="return gPrefBrowser.onWebGLSFRenderSyncFrom()"/>
     <hbox align="center">
       <label control="html-webgl-osmesa-path" value="&browser.html.webgl.osmesa.path.label;"/>
@@ -605,7 +594,6 @@ var gPrefBrowser = {
           <label control="tabs-tabClipWidth">&browser.tabs.tabClipWidth.label;</label>
           <textbox class="indent" type="number" hidespinbuttons="true" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
         </html:div>
-        <checkbox preference="browser.tabs.disableBackgroundClose" label="&browser.tabs.disableBackgroundClose.label;"/>
       </vbox>
       <radio value="2" label="&browser.tabs.closeButtons.no.label;"/>
       <radio value="3" label="&browser.tabs.closeButtons.end.label;"/>
@@ -635,7 +623,6 @@ var gPrefBrowser = {
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="sessionstore">
-  <checkbox id="sessionStore-Disabled" preference="browser.sessionstore.enabled" label="&browser.sessionStore.disabled.label;"/>
   <hbox align="center" id="sessionStore-Interval-pane">
     <label value="&browser.sessionStore.interval.label;" control="sessionStore-Interval"/>
     <textbox id="sessionStore-Interval" type="number" hidespinbuttons="true" min="1" preference="browser.sessionstore.interval" size="6"/>
@@ -648,11 +635,11 @@ var gPrefBrowser = {
       <rows><row align="center">
         <label value="&browser.sessionStore.max_undo.windows.label;" control="sessionStore-MaxWindowsUndo"/>
         <textbox id="sessionStore-MaxWindowsUndo" type="number"
-         hidespinbuttons="true" min="1" preference="browser.sessionstore.max_windows_undo" size="3"/>
+         hidespinbuttons="true" min="0" preference="browser.sessionstore.max_windows_undo" size="3"/>
       </row><row align="center">
         <label value="&browser.sessionStore.max_undo.tabs.label;" control="sessionStore-MaxTabsUndo"/>
         <textbox id="sessionStore-MaxTabsUndo" type="number"
-         hidespinbuttons="true" min="1" preference="browser.sessionstore.max_tabs_undo" size="3"/>
+         hidespinbuttons="true" min="0" preference="browser.sessionstore.max_tabs_undo" size="3"/>
       </row></rows>
     </grid>
   </groupbox>

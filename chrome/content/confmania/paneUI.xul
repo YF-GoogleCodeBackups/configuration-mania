@@ -194,6 +194,7 @@ var gUIPref = {
 
   <preference id="accessibility.typeaheadfind.timeout" name="accessibility.typeaheadfind.timeout" type="int"/>
   <preference id="accessibility.typeaheadfind.enablesound" name="accessibility.typeaheadfind.enablesound" type="string"/>
+  <preference id="accessibility.typeaheadfind.casesensitive" name="accessibility.typeaheadfind.casesensitive" type="int"/>
 
   <preference id="accessibility.tabfocus" name="accessibility.tabfocus" type="int"/>
   <preference id="ui.key.accelKey" name="ui.key.accelKey" type="int"/>
@@ -360,6 +361,14 @@ var gUIPref = {
     </hbox>
     <checkbox id="keyNavTypeAHeadSound" label="&ui.find.findahead.sound.label;"
      preference="accessibility.typeaheadfind.enablesound"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&ui.find.casesensitive.label;"/>
+    <radiogroup preference="accessibility.typeaheadfind.casesensitive">
+      <radio value="0" label="&ui.find.casesensitive.insensitive;"/>
+      <radio value="1" label="&ui.find.casesensitive.sensitive;"/>
+      <radio value="-1" label="&ui.find.casesensitive.auto;"/>
+    </radiogroup>
   </groupbox>
 </tabpanel>
 <tabpanel orient="vertical">
