@@ -257,6 +257,10 @@
 <!ENTITY ui.find.findahead.timeout.label "停止状態が">
 <!ENTITY ui.find.findahead.timeout.label2 "ミリ秒続いたら現在の検索をクリアする">
 <!ENTITY ui.find.findahead.sound.label "入力文字が見つからないときサウンドを鳴らす (再起動必要)">
+<!ENTITY ui.find.casesensitive.label "大文字/小文字">
+<!ENTITY ui.find.casesensitive.insensitive "大文字/小文字を区別しない">
+<!ENTITY ui.find.casesensitive.sensitive "大文字/小文字を区別する">
+<!ENTITY ui.find.casesensitive.auto "検索単語に大文字を含んでいるが大文字だけではないときに限って大文字/小文字を区別する">
 <!ENTITY ui.keynav.label "キーボード">
 <!ENTITY ui.keynav.tabNavigationBehavior.label "タブキーによるフォーカス制御">
 <!ENTITY ui.keynav.tabNavigationLinks.label "リンク">

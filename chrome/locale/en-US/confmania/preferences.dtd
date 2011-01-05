@@ -258,6 +258,10 @@
 <!ENTITY ui.find.findahead.timeout.label "Clear the current search after">
 <!ENTITY ui.find.findahead.timeout.label2 "[ms] of inactivity">
 <!ENTITY ui.find.findahead.sound.label "Play a sound when typed text isn't found (takes effect after restart)">
+<!ENTITY ui.find.casesensitive.label "Case sensitivity mode">
+<!ENTITY ui.find.casesensitive.insensitive "Case-insensitive">
+<!ENTITY ui.find.casesensitive.sensitive "Case-sensitive">
+<!ENTITY ui.find.casesensitive.auto "Case-sensitive only if the search string contains upper-case characters but isn't all-caps">
 <!ENTITY ui.keynav.label "Key Navigation">
 <!ENTITY ui.keynav.tabNavigationBehavior.label "Tab Focus Navigation">
 <!ENTITY ui.keynav.tabNavigationLinks.label "Links">
