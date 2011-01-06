@@ -524,7 +524,7 @@ var gPrefBrowser = {
   <groupbox>
     <caption label="&browser.html.img;"/>
     <groupbox>
-      <caption value="&browser.html.img.anim.label;"/>
+      <caption label="&browser.html.img.anim.label;"/>
       <radiogroup preference="image.animation_mode">
         <radio value="normal" label="&browser.html.img.anim.normal.label;"/>
         <radio value="once" label="&browser.html.img.anim.once.label;"/>
