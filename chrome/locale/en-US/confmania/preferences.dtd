@@ -215,13 +215,14 @@
 <!ENTITY security.net.show_punycode.label "Show IDN in punycode">
 <!ENTITY security.net.show_punycode.desc "There is no need to show IDN in punycode. Current &brandShortName; refuses illegal IDN addresses by using the black/white list.">
 <!ENTITY security.privacy.label "Privacy">
-<!ENTITY security.privacy.history.label "Browsing History (Firefox 3.x)">
-<!ENTITY security.privacy.history.expireDays1.label "Remember visited pages for up to">
-<!ENTITY security.privacy.history.expireDays2.label "days">
-<!ENTITY security.privacy.history.expireSites1.label "Remember up to">
-<!ENTITY security.privacy.history.expireSites2.label "visited pages">
-<!ENTITY security.privacy.cookie.label "Cookie">
-<!ENTITY security.privacy.cookie.lifetimedays.label "Accept cookies for">
+<!ENTITY security.privacy.history.label "History">
+<!ENTITY security.privacy.history.history.label "Browsing History (Firefox 3.x)">
+<!ENTITY security.privacy.history.history.expireDays1.label "Remember visited pages for up to">
+<!ENTITY security.privacy.history.history.expireDays2.label "days">
+<!ENTITY security.privacy.history.history.expireSites1.label "Remember up to">
+<!ENTITY security.privacy.history.history.expireSites2.label "visited pages">
+<!ENTITY security.privacy.history.cookie.label "Cookie">
+<!ENTITY security.privacy.history.cookie.lifetimedays.label "Accept cookies for">
 <!ENTITY security.privacy.passwd.label "Master Password">
 <!ENTITY security.privacy.passwd.managepassword.label "Master Password Timeout">
 <!ENTITY security.privacy.passwd.managepassword.text "&brandShortName; will ask for your master password:">

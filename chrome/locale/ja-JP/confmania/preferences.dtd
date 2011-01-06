@@ -215,13 +215,14 @@
 <!ENTITY security.net.show_punycode.label "IDN を punycode で表示する">
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
 <!ENTITY security.privacy.label "プライバシー">
-<!ENTITY security.privacy.history.label "履歴 (Firefox 3.x)">
-<!ENTITY security.privacy.history.expireDays1.label "訪問したページを次の日数だけ記憶する:">
-<!ENTITY security.privacy.history.expireDays2.label "日">
-<!ENTITY security.privacy.history.expireSites1.label "訪問したページを次の個数だけ記憶する:">
-<!ENTITY security.privacy.history.expireSites2.label "件">
-<!ENTITY security.privacy.cookie.label "Cookie">
-<!ENTITY security.privacy.cookie.lifetimedays.label "有効期限を限定:">
+<!ENTITY security.privacy.history.label "履歴">
+<!ENTITY security.privacy.history.history.label "履歴 (Firefox 3.x)">
+<!ENTITY security.privacy.history.history.expireDays1.label "訪問したページを次の日数だけ記憶する:">
+<!ENTITY security.privacy.history.history.expireDays2.label "日">
+<!ENTITY security.privacy.history.history.expireSites1.label "訪問したページを次の個数だけ記憶する:">
+<!ENTITY security.privacy.history.history.expireSites2.label "件">
+<!ENTITY security.privacy.history.cookie.label "Cookie">
+<!ENTITY security.privacy.history.cookie.lifetimedays.label "有効期限を限定:">
 <!ENTITY security.privacy.passwd.label "マスターパスワード">
 <!ENTITY security.privacy.passwd.managepassword.label "マスターパスワードの期限">
 <!ENTITY security.privacy.passwd.managepassword.text "マスターパスワードが求められるとき:">
