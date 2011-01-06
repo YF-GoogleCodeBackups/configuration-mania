@@ -44,6 +44,7 @@
 ]>
 
 <overlay id="paneSecurityOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane id="paneSecurity" onpaneload="gPrefSecurity.init();">
 
@@ -189,9 +190,11 @@ var gPrefSecurity = {
 <tabpanel orient="vertical">
   <label value="&security.popupwin.tabs.label;"/>
   <radiogroup class="indent" preference="browser.link.open_newwindow.restriction">
-    <radio value="0" label="&security.popupwin.tabs.0.label;"/>
-    <radio value="1" label="&security.popupwin.tabs.1.label;"/>
-    <radio value="2" label="&security.popupwin.tabs.2.label;"/>
+    <html:div>
+      <radio value="0" label="&security.popupwin.tabs.0.label;"/>
+      <radio value="1" label="&security.popupwin.tabs.1.label;"/>
+      <radio value="2" label="&security.popupwin.tabs.2.label;"/>
+    </html:div>
   </radiogroup>
 
   <hbox align="center">
@@ -200,18 +203,16 @@ var gPrefSecurity = {
   </hbox>
   <label value="&security.popupwin.from_plugins.label;"/>
   <radiogroup class="indent" preference="privacy.popups.disable_from_plugins">
-    <hbox>
+    <html:div>
       <radio value="0" label="&security.popupwin.from_plugins.0.label;"/>
       <radio value="1" label="&security.popupwin.from_plugins.1.label;"/>
-    </hbox>
-    <hbox>
       <radio value="2" label="&security.popupwin.from_plugins.2.label;"/>
       <radio value="3" label="&security.popupwin.from_plugins.3.label;"/>
-    </hbox>
+    </html:div>
   </radiogroup>
 
   <label value="&security.popupwin.event.label;" control="popupwin-e"/>
-  <listbox class="indent" id="popupwin-e" rows="5" preference="dom.popup_allowed_events" onsyncfrompreference="return gPrefSecurity.syncFromPopupwin()" onsynctopreference="return gPrefSecurity.syncToPopupwin()">
+  <listbox class="indent" id="popupwin-e" rows="4" preference="dom.popup_allowed_events" onsyncfrompreference="return gPrefSecurity.syncFromPopupwin()" onsynctopreference="return gPrefSecurity.syncToPopupwin()">
     <listitem type="checkbox" value="reset" label="&security.popupwin.event.reset.label;"/>
     <listitem type="checkbox" value="submit" label="&security.popupwin.event.submit.label;"/>
     <listitem type="checkbox" value="select" label="&security.popupwin.event.select.label;"/>
