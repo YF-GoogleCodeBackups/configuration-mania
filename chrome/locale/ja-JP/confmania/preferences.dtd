@@ -215,6 +215,8 @@
 <!ENTITY security.net.show_punycode.label "IDN を punycode で表示する">
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
 <!ENTITY security.privacy.label "プライバシー">
+<!ENTITY security.privacy.form.label "フォーム">
+<!ENTITY security.privacy.form.autofillForms.label "ログインフォームを自動入力する">
 <!ENTITY security.privacy.history.label "履歴">
 <!ENTITY security.privacy.history.history.label "履歴 (Firefox 3.x)">
 <!ENTITY security.privacy.history.history.expireDays1.label "訪問したページを次の日数だけ記憶する:">
