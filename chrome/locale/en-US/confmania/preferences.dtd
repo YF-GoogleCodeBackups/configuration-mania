@@ -336,7 +336,7 @@
 <!ENTITY addons.noCheckCompatibility.label "Do Not check add-on compatibility with :">
 <!ENTITY addons.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
 <!ENTITY addons.installButton.label "Show Install button on the add-on dialog (Firefox 3.x)">
-<!ENTITY addons.oopp.label "Run browser plugins in a processing thread separate from the main &brandShortName; process (OOPP) (Firefox 3.6.4+)">
+<!ENTITY addons.oopp.label "Run browser plugins in an own process (OOPP) (Firefox 3.6.4+)">
 <!ENTITY addons.alwaysUnpack.label "Always unpack XPI file (Firefox 4.0+)">
 
 <!ENTITY debug.title "Debug">

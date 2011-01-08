@@ -336,7 +336,7 @@
 <!ENTITY addons.noCheckCompatibility.label "アドオンの以下のバージョンとの適合確認をしない :">
 <!ENTITY addons.noCheckUpdateSecurity.label "アドオンの署名チェックをしない">
 <!ENTITY addons.installButton.label "アドオンダイアログにインストールボタンを表示(Firefox 3.x)">
-<!ENTITY addons.oopp.label "ブラウザプラグインを&brandShortName;のプロセスと分離して動作させる(OOPP)(Firefox 3.6.4+)">
+<!ENTITY addons.oopp.label "ブラウザプラグインを独自プロセスで動作(OOPP)(Firefox 3.6.4+)">
 <!ENTITY addons.alwaysUnpack.label "XPIファイルを常に展開する (Firefox 4.0以降)">
 
 <!ENTITY debug.title "デバッグ">
