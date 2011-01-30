@@ -32,7 +32,7 @@ prefwindow#ConfmaniaPreferences .paneSelector > radio[pane] {
   overflow-x: hidden;
   overflow-y: auto;
 }
-button.subtab {
+radio.subtab {
   -moz-appearance: none;
   margin: 0;
   padding: 2px;
@@ -40,15 +40,15 @@ button.subtab {
   background: -moz-Field;
   color: -moz-FieldText;
 }
-button.subtab * {
+radio.subtab * {
   background-image: none ! important;
 }
-button.subtab:focus {
-  border: solid 1px Highlight;
-}
-button.subtab[checked="true"] {
+radio.subtab[selected] {
   background: Highlight;
   color: HighlightText;
+}
+radio.subtab .radio-spacer-box, radio.subtab .radio-check {
+  display: none;
 }
 .subtabpanel {
   overflow-x: auto;

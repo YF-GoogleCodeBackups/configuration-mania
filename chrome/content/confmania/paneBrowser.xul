@@ -125,14 +125,14 @@ var gPrefBrowser = {
   },
   onPaneBrowserBoxTabSelected : function () {
     let paneBrowserBoxTab = document.getElementById("paneBrowserBoxTab");
-    let selectedButton = paneBrowserBoxTab.getElementsByAttribute("checked", "true").item(0);
-    let selectedPanel = document.getElementById(selectedButton.getAttribute("value"));
+    let selectedPanel = document.getElementById(paneBrowserBoxTab.value);
     selectedPanel.parentNode.selectedPanel = selectedPanel;
- 
-    Array.forEach(paneBrowserBoxTab.getElementsByTagName("button"), function(v) {
-      let pane = document.getElementById(v.getAttribute("value"));
-      pane.setAttribute("selected", (v.checked)? "true" : "false");
-    });
+
+    for (let i = 0; i < paneBrowserBoxTab.itemCount; i++) {
+      let radioItem = paneBrowserBoxTab.getItemAtIndex(i);
+      let pane = document.getElementById(radioItem.value);
+      pane.setAttribute("selected", (radioItem.selected)? "true" : "false");
+    }
   },
   onSmartBrowsingSyncFrom : function () {
     let disabled = ! document.getElementById("keyword.enabled").value;
@@ -442,21 +442,21 @@ var gPrefBrowser = {
 </preferences>
 
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
-<vbox id="paneBrowserBoxTab" class="subtabs" group="pane-browser"
-      style="max-width: 10em; width: 10em;"
-      oncommand="gPrefBrowser.onPaneBrowserBoxTabSelected();">
-<button type="radio" group="pane-browser" class="subtab" value="smartbrowsing" checked="true">&browser.smartbrowsing.label;</button>
-<button type="radio" group="pane-browser" class="subtab" value="urlbar"                      >&browser.urlbar.label;       </button>
-<button type="radio" group="pane-browser" class="subtab" value="html"                        >&browser.html.label;         </button>
-<button type="radio" group="pane-browser" class="subtab" value="tabs"                        >&browser.tabs.label;         </button>
-<button type="radio" group="pane-browser" class="subtab" value="sessionstore"                >&browser.sessionStore.label; </button>
-<button type="radio" group="pane-browser" class="subtab" value="bookmarkicon"                >&browser.bookmarkicon.label; </button>
-<button type="radio" group="pane-browser" class="subtab" value="download"                    >&browser.download.label;     </button>
-<button type="radio" group="pane-browser" class="subtab" value="ua"                          >&browser.ua.label;           </button>
-<button type="radio" group="pane-browser" class="subtab" value="speed-paint"                 >&browser.speed-paint.label;  </button>
-<button type="radio" group="pane-browser" class="subtab" value="speed-cache"                 >&browser.speed-cache.label;  </button>
-<button type="radio" group="pane-browser" class="subtab" value="others"                      >&browser.others.label;       </button>                
-</vbox>
+<radiogroup id="paneBrowserBoxTab" class="subtabs"
+ orient="vertical" style="max-width: 10em; width: 10em;"
+ value="smartbrowsing" oncommand="gPrefBrowser.onPaneBrowserBoxTabSelected();">
+  <radio class="subtab" value="smartbrowsing" label="&browser.smartbrowsing.label;"/>
+  <radio class="subtab" value="urlbar"        label="&browser.urlbar.label;"       />
+  <radio class="subtab" value="html"          label="&browser.html.label;"         />
+  <radio class="subtab" value="tabs"          label="&browser.tabs.label;"         />
+  <radio class="subtab" value="sessionstore"  label="&browser.sessionStore.label;" />
+  <radio class="subtab" value="bookmarkicon"  label="&browser.bookmarkicon.label;" />
+  <radio class="subtab" value="download"      label="&browser.download.label;"     />
+  <radio class="subtab" value="ua"            label="&browser.ua.label;"           />
+  <radio class="subtab" value="speed-paint"   label="&browser.speed-paint.label;"  />
+  <radio class="subtab" value="speed-cache"   label="&browser.speed-cache.label;"  />
+  <radio class="subtab" value="others"        label="&browser.others.label;"       />
+</radiogroup>
 <splitter/>
 <deck id="paneBrowserBoxContainer" flex="4">
 <box class="subtabpanel" orient="vertical" id="smartbrowsing">
@@ -629,7 +629,7 @@ var gPrefBrowser = {
     <label value="&miliseconds;"/>
   </hbox>
   <groupbox>
-    <caption flex="1">&browser.sessionStore.max_undo.label;</caption>
+    <caption label="&browser.sessionStore.max_undo.label;"/>
     <grid id="sessionStore-MaxUndo-pane">
       <columns><column/><column/></columns>
       <rows><row align="center">
@@ -663,7 +663,7 @@ var gPrefBrowser = {
   <checkbox label="&browser.download.addToRecentDocs.label;"
             preference="browser.download.manager.addToRecentDocs"/>
   <groupbox>
-    <caption flex="1">&browser.download.quitBehavior.label;</caption>
+    <caption label="&browser.download.quitBehavior.label;"/>
     <radiogroup preference="browser.download.manager.quitBehavior">
       <radio value="0" label="&browser.download.quitBehavior.resumeOnRestart.label;"/>
       <radio value="1" label="&browser.download.quitBehavior.pauseOnRestart.label;"/>
