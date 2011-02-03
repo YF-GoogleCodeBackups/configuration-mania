@@ -56,6 +56,13 @@
 <!ENTITY browser.html.focus.bg.label "背景色">
 <!ENTITY browser.html.focus.fg.label "文字色">
 <!ENTITY browser.html.nouse_text_smoothing_setting.label "常にテキストの縁を滑らかに表示する (Macでのみ有効)">
+<!ENTITY browser.html.acceleration.label "ハードウェアアクセラレーション (Firefox 4.0+)">
+<!ENTITY browser.html.acceleration.disabled.label "ハードウェアアクセラレーションを使用しない">
+<!ENTITY browser.html.acceleration.force-enabled.label "グラフィックスドライバのブラックリストを無視して常に有効にする">
+<!ENTITY browser.html.acceleration.d2d-disabled.label "Direct2D を使用しない (Windows)">
+<!ENTITY browser.html.acceleration.d2d-force-enabled.label "グラフィックスドライバのブラックリストを無視して常に有効にする (Windows)">
+<!ENTITY browser.html.acceleration.prefer-opengl.label "OpenGL を使用する (Windows)">
+<!ENTITY browser.html.acceleration.prefer-d3d9.label "Direct3D 9 を使用する (Windows)">
 <!ENTITY browser.tabs.label "タブブラウジング">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
 <!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所">

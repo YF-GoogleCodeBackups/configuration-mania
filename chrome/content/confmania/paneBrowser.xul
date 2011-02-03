@@ -175,6 +175,16 @@ var gPrefBrowser = {
     }
     return undefined; // no override
   },
+  onAccelerationSyncFrom : function() {
+    let disabled = document.getElementById("layers.acceleration.disabled").value;
+    document.getElementById("layers.acceleration.force-enabled").disabled = disabled;
+    return undefined; // no override
+  },
+  onDirect2DSyncFrom : function() {
+    let disabled = document.getElementById("gfx.direct2d.disabled").value;
+    document.getElementById("gfx.direct2d.force-enabled").disabled = disabled;
+    return undefined; // no override
+  },
   onTabsCloseButtonSyncFrom : function() {
     let disabled = document.getElementById("browser.tabs.closeButtons").value != 1;
     document.getElementById("browser.tabs.tabClipWidth").disabled = disabled;
@@ -382,6 +392,12 @@ var gPrefBrowser = {
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
   <preference id="browser.display.focus_text_color" name="browser.display.focus_text_color" type="string"/>
   <preference id="gfx.use_text_smoothing_setting" name="gfx.use_text_smoothing_setting" type="bool" inverted="true"/>
+  <preference id="layers.acceleration.disabled" name="layers.acceleration.disabled" type="bool"/>
+  <preference id="layers.acceleration.force-enabled" name="layers.acceleration.force-enabled" type="bool"/>
+  <preference id="gfx.direct2d.disabled" name="gfx.direct2d.disabled" type="bool"/>
+  <preference id="gfx.direct2d.force-enabled" name="gfx.direct2d.force-enabled" type="bool"/>
+  <preference id="layers.prefer-opengl" name="layers.prefer-opengl" type="bool"/>
+  <preference id="layers.prefer-d3d9" name="layers.prefer-d3d9" type="bool"/>
 
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
@@ -581,6 +597,26 @@ var gPrefBrowser = {
     </hbox>
   </groupbox>
   <checkbox label="&browser.html.nouse_text_smoothing_setting.label;" preference="gfx.use_text_smoothing_setting"/>
+  <groupbox>
+    <caption label="&browser.html.acceleration.label;"/> 
+    
+    <checkbox label="&browser.html.acceleration.disabled.label;"
+              onsyncfrompreference="return gPrefBrowser.onAccelerationSyncFrom();"
+              preference="layers.acceleration.disabled"/>
+    <checkbox label="&browser.html.acceleration.force-enabled.label;"
+              class="indent"
+              preference="layers.acceleration.force-enabled"/>
+    <checkbox label="&browser.html.acceleration.d2d-disabled.label;"
+              onsyncfrompreference="return gPrefBrowser.onDirect2DSyncFrom();"
+              preference="gfx.direct2d.disabled"/>
+    <checkbox label="&browser.html.acceleration.d2d-force-enabled.label;"
+              class="indent"
+              preference="gfx.direct2d.force-enabled"/>
+    <checkbox label="&browser.html.acceleration.prefer-opengl.label;"
+              preference="layers.prefer-opengl"/>
+    <checkbox label="&browser.html.acceleration.prefer-d3d9.label;"
+              preference="layers.prefer-d3d9"/>
+  </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="tabs">
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
