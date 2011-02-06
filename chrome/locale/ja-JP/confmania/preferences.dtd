@@ -84,6 +84,9 @@
 <!ENTITY browser.tabs.tabpreview.alltabs.label "タブの一覧表示">
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "Ctrl+TAB">
 <!ENTITY browser.tabs.tabpreview.taskbar.label "タスクバー (Windows7)">
+<!ENTITY browser.tabs.animation.label "アニメーション (Firefox 4.0+)">
+<!ENTITY browser.tabs.animation.animate_tab.label "タブの開閉">
+<!ENTITY browser.tabs.animation.panorama.label "タブグループ (Panorama)">
 <!ENTITY browser.sessionStore.label "セッションストア">
 <!ENTITY browser.sessionStore.interval.label "セッション状態を保存する時間間隔">
 <!ENTITY browser.sessionStore.max_undo.label "記憶する最近閉じたウィンドウおよびタブの数">
@@ -94,6 +97,11 @@
 <!ENTITY browser.sessionStore.privacy_level.any.label "すべてのサイトで保存">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">
 <!ENTITY browser.sessionStore.privacy_level.never.label "決して保存しない">
+<!ENTITY browser.sessionStore.concurrent.label "最大同時リストア数 (Firefox 4.0+)">
+<!ENTITY browser.sessionStore.concurrent.all.label "すべてのタブをリストアする">
+<!ENTITY browser.sessionStore.concurrent.bartab.label "アクティブなタブに限ってリストアする。他のタブはアクティブになるまでリストアしない。">
+<!ENTITY browser.sessionStore.concurrent.number.label "最大">
+<!ENTITY browser.sessionStore.concurrent.number.label2 "個のタブを同時にリストアする">
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン(ファビコン)">
 <!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
@@ -149,6 +157,7 @@
 <!ENTITY browser.others.dns.label "名前解決(DNS)">
 <!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
 <!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">
+<!ENTITY browser.others.prompts_tab_modal_enabled.label "alert()/prompt()/confirm()をタブモーダルモードで表示する (Firefox 4.0+)">
 <!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで表示する">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
