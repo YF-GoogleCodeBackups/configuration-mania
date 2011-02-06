@@ -142,6 +142,7 @@
 <!ENTITY browser.others.dns.label "DNS Setting">
 <!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
+<!ENTITY browser.others.prompts_tab_modal_enabled.label "Use tab modal dialog for alert()/prompt()/confirm() (Firefox 4.0+)">
 <!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
