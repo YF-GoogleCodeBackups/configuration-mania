@@ -90,6 +90,11 @@
 <!ENTITY browser.sessionStore.privacy_level.any.label "すべてのサイトで保存">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">
 <!ENTITY browser.sessionStore.privacy_level.never.label "決して保存しない">
+<!ENTITY browser.sessionStore.concurrent.label "最大同時リストア数 (Firefox 4.0+)">
+<!ENTITY browser.sessionStore.concurrent.all.label "すべてのタブをリストアする">
+<!ENTITY browser.sessionStore.concurrent.bartab.label "アクティブなタブに限ってリストアする。他のタブはアクティブになるまでリストアしない。">
+<!ENTITY browser.sessionStore.concurrent.number.label "最大">
+<!ENTITY browser.sessionStore.concurrent.number.label2 "個のタブを同時にリストアする">
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン(ファビコン)">
 <!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
