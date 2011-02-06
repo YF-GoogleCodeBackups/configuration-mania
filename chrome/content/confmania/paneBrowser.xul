@@ -404,6 +404,7 @@ var gPrefBrowser = {
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
   <preference id="browser.sessionstore.resume_from_crash" name="browser.sessionstore.resume_from_crash" type="bool"/>
   <preference id="browser.sessionstore.privacy_level" name="browser.sessionstore.privacy_level" type="int"/>
+  <preference id="browser.sessionstore.max_concurrent_tabs" name="browser.sessionstore.max_concurrent_tabs" type="int"/>
 
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
@@ -659,6 +660,21 @@ var gPrefBrowser = {
       <radio value="0" label="&browser.sessionStore.privacy_level.any.label;"/>
       <radio value="1" label="&browser.sessionStore.privacy_level.unenc.label;"/>
       <radio value="2" label="&browser.sessionStore.privacy_level.never.label;"/>
+    </radiogroup>
+  </groupbox>
+  <groupbox>
+    <caption label="&browser.sessionStore.concurrent.label;"/>
+    <radiogroup id="sessionStore-max-concurrent-tabs-gr">
+      <radio value="-1" label="&browser.sessionStore.concurrent.all.label;"/>
+      <radio value="0" label="&browser.sessionStore.concurrent.bartab.label;"/>
+      <hbox align="center">
+        <radio value="*" label="&browser.sessionStore.concurrent.number.label;"/>
+        <textbox id="sessionStore-max-concurrent-tabs"
+            type="number" hidespinbuttons="true" size="2" min="-1"
+            preference="browser.sessionstore.max_concurrent_tabs"
+            onsyncfrompreference="return initRadioGroupConnect2('sessionStore-max-concurrent-tabs-gr','sessionStore-max-concurrent-tabs',3);"/>
+        <label value="&browser.sessionStore.concurrent.number.label2;"/>
+      </hbox>
     </radiogroup>
   </groupbox>
 </box>
