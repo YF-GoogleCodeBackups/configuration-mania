@@ -412,12 +412,15 @@ var gPrefBrowser = {
   <preference id="browser.allTabs.previews" name="browser.allTabs.previews" type="bool"/>
   <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
   <preference id="browser.taskbar.previews.enable" name="browser.taskbar.previews.enable" type="bool"/>
+  <preference id="browser.tabs.animate" name="browser.tabs.animate" type="bool"/>
+  <preference id="browser.panorama.animate_zoom" name="browser.panorama.animate_zoom" type="bool"/>
 
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
   <preference id="browser.sessionstore.max_windows_undo" name="browser.sessionstore.max_windows_undo" type="int"/>
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
   <preference id="browser.sessionstore.resume_from_crash" name="browser.sessionstore.resume_from_crash" type="bool"/>
   <preference id="browser.sessionstore.privacy_level" name="browser.sessionstore.privacy_level" type="int"/>
+  <preference id="browser.sessionstore.max_concurrent_tabs" name="browser.sessionstore.max_concurrent_tabs" type="int"/>
 
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
@@ -451,6 +454,8 @@ var gPrefBrowser = {
   <preference id="network.websocket.enabled" name="network.websocket.enabled" type="bool"/>
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
+  <checkbox label="&browser.others.prompts_tab_modal_enabled.label;" preference="prompts.tab_modal.enabled"/>
+  <preference id="prompts.tab_modal.enabled" name="prompts.tab_modal.enabled" type="bool"/>
   <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
@@ -657,6 +662,11 @@ var gPrefBrowser = {
     <checkbox label="&browser.tabs.tabpreview.ctrltab.label;" preference="browser.ctrlTab.previews"/>
     <checkbox label="&browser.tabs.tabpreview.taskbar.label;" preference="browser.taskbar.previews.enable"/>
   </groupbox>
+  <groupbox>
+    <caption label="&browser.tabs.animation.label;"/> 
+    <checkbox label="&browser.tabs.animation.animate_tab.label;" preference="browser.tabs.animate"/>
+    <checkbox label="&browser.tabs.animation.panorama.label;" preference="browser.panorama.animate_zoom"/>
+  </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="sessionstore">
   <hbox align="center" id="sessionStore-Interval-pane">
@@ -686,6 +696,21 @@ var gPrefBrowser = {
       <radio value="0" label="&browser.sessionStore.privacy_level.any.label;"/>
       <radio value="1" label="&browser.sessionStore.privacy_level.unenc.label;"/>
       <radio value="2" label="&browser.sessionStore.privacy_level.never.label;"/>
+    </radiogroup>
+  </groupbox>
+  <groupbox>
+    <caption label="&browser.sessionStore.concurrent.label;"/>
+    <radiogroup id="sessionStore-max-concurrent-tabs-gr">
+      <radio value="-1" label="&browser.sessionStore.concurrent.all.label;"/>
+      <radio value="0" label="&browser.sessionStore.concurrent.bartab.label;"/>
+      <hbox align="center">
+        <radio value="*" label="&browser.sessionStore.concurrent.number.label;"/>
+        <textbox id="sessionStore-max-concurrent-tabs"
+            type="number" hidespinbuttons="true" size="2" min="-1"
+            preference="browser.sessionstore.max_concurrent_tabs"
+            onsyncfrompreference="return initRadioGroupConnect2('sessionStore-max-concurrent-tabs-gr','sessionStore-max-concurrent-tabs',3);"/>
+        <label value="&browser.sessionStore.concurrent.number.label2;"/>
+      </hbox>
     </radiogroup>
   </groupbox>
 </box>
@@ -859,6 +884,8 @@ var gPrefBrowser = {
     <checkbox label="&browser.others.dns.prefetch.label;" preference="network.dns.disablePrefetch"
      onsyncfrompreference="return gPrefBrowser.syncFrom(this, true);"/>
   </groupbox>
+
+  <checkbox label="&browser.others.prompts_tab_modal_enabled.label;" preference="prompts.tab_modal.enabled"/>
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
