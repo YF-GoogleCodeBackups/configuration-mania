@@ -77,6 +77,9 @@
 <!ENTITY browser.tabs.tabpreview.alltabs.label "on the All tabs panel">
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
 <!ENTITY browser.tabs.tabpreview.taskbar.label "on Taskbar (Windows7)">
+<!ENTITY browser.tabs.animation.label "Animation (Firefox 4.0+)">
+<!ENTITY browser.tabs.animation.animate_tab.label "Opening/Closing tab">
+<!ENTITY browser.tabs.animation.panorama.label "Tab Groups (Panorama)">
 <!ENTITY browser.sessionStore.label "Session Store">
 <!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
 <!ENTITY browser.sessionStore.max_undo.label "Number of closures to remember for restoration">
