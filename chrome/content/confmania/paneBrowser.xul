@@ -159,12 +159,12 @@ var gPrefBrowser = {
     return undefined; // no override
   },
   onWebGLSyncFrom : function() {
-    let disabled = ! document.getElementById("webgl.enabled_for_all_sites").value;
+    let disabled = ! document.getElementById("webgl.disabled").value;
     document.getElementById("webgl.force_osmesa").disabled = disabled;
     return gPrefBrowser.onWebGLSFRenderSyncFrom();
   },
   onWebGLSFRenderSyncFrom : function() {
-    let disabled = ! (document.getElementById("webgl.enabled_for_all_sites").value && document.getElementById("webgl.force_osmesa").value);
+    let disabled = ! (document.getElementById("webgl.disabled").value && document.getElementById("webgl.force_osmesa").value);
     document.getElementById("webgl.osmesalib").disabled = disabled;
     return undefined; // no override
   },
@@ -383,7 +383,7 @@ var gPrefBrowser = {
   <preference id="html5.enable" name="html5.enable" type="bool"/>
   <preference id="svg.enabled" name="svg.enabled" type="bool"/>
   <preference id="svg.smil.enabled" name="svg.smil.enabled" type="bool"/>
-  <preference id="webgl.enabled_for_all_sites" name="webgl.enabled_for_all_sites" type="bool"/>
+  <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
   <preference id="webgl.force_osmesa" name="webgl.force_osmesa" type="bool"/>
   <preference id="webgl.osmesalib" name="webgl.osmesalib" type="string"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
@@ -574,7 +574,7 @@ var gPrefBrowser = {
   <checkbox label="&browser.html.html5.label;" preference="html5.enable"/>
   <checkbox label="&browser.html.enableSVG.label;" preference="svg.enabled"/>
   <checkbox label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
-  <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.enabled_for_all_sites"
+  <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.disabled"
             onsyncfrompreference="return gPrefBrowser.onWebGLSyncFrom()"/>
   <vbox id="html-webgl-vbox" class="indent">
     <checkbox id="html-webgl-software-render" label="&browser.html.webgl.software_render.label;" preference="webgl.force_osmesa"
