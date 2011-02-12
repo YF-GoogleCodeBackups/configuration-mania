@@ -396,8 +396,6 @@ var gPrefBrowser = {
   <preference id="layers.acceleration.force-enabled" name="layers.acceleration.force-enabled" type="bool"/>
   <preference id="gfx.direct2d.disabled" name="gfx.direct2d.disabled" type="bool"/>
   <preference id="gfx.direct2d.force-enabled" name="gfx.direct2d.force-enabled" type="bool"/>
-  <preference id="layers.prefer-opengl" name="layers.prefer-opengl" type="bool"/>
-  <preference id="layers.prefer-d3d9" name="layers.prefer-d3d9" type="bool"/>
 
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
@@ -617,10 +615,6 @@ var gPrefBrowser = {
     <checkbox label="&browser.html.acceleration.d2d-force-enabled.label;"
               class="indent"
               preference="gfx.direct2d.force-enabled"/>
-    <checkbox label="&browser.html.acceleration.prefer-opengl.label;"
-              preference="layers.prefer-opengl"/>
-    <checkbox label="&browser.html.acceleration.prefer-d3d9.label;"
-              preference="layers.prefer-d3d9"/>
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="tabs">

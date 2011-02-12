@@ -61,8 +61,6 @@
 <!ENTITY browser.html.acceleration.force-enabled.label "Force acceleration on, ignoring blacklists">
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Disable the automatic detection and use of direct2d (Windows)">
 <!ENTITY browser.html.acceleration.d2d-force-enabled.label "enable Direct2D regardless of automatic detection or blacklisting (Windows)">
-<!ENTITY browser.html.acceleration.prefer-opengl.label "Use OpenGL (Windows)">
-<!ENTITY browser.html.acceleration.prefer-d3d9.label "Use Direct3D 9 (Windows)">
 <!ENTITY browser.tabs.label "TabBrowsing">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab">
 <!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
