@@ -68,6 +68,12 @@ var gPrefWindow = {
     var p = document.getElementById(o.getAttribute("preference"));
     gPrefWindow.resetPref(p);
   },
+  onCopyNamePopupClicked: function(event){
+    var o = gPrefWindow._contextPrefElem;
+    var clipboard = Components.classes["@mozilla.org/widget/clipboardhelper;1"]
+                    .getService(Components.interfaces.nsIClipboardHelper);
+    clipboard.copyString(o.getAttribute("preference"));
+  },
   onMkbPopupClicked: function(event){
     var o = gPrefWindow._contextPrefElem;
     openURL("http://kb.mozillazine.org/"+encodeURI(o.getAttribute("preference")));
@@ -76,8 +82,10 @@ var gPrefWindow = {
 ]]></script>
 <popupset>
   <menupopup id="prefContextPopup">
-    <menuitem label="&prefWindow.context.reset.label;" accesskey="&prefWindow.context.reset.accesskey;" onclick="gPrefWindow.onResetPopupClicked(event);" />
-    <menuitem label="&prefWindow.context.mkb.label;" accesskey="&prefWindow.context.mkb.accesskey;" onclick="gPrefWindow.onMkbPopupClicked(event);" />
+    <menuitem label="&prefWindow.context.reset.label;" accesskey="&prefWindow.context.reset.accesskey;" onclick="gPrefWindow.onResetPopupClicked(event);"/>
+    <menuseparator/>
+    <menuitem label="&prefWindow.context.copyName.label;" accesskey="&prefWindow.context.copyName.accesskey;" onclick="gPrefWindow.onCopyNamePopupClicked(event);"/>
+    <menuitem label="&prefWindow.context.mkb.label;" accesskey="&prefWindow.context.mkb.accesskey;" onclick="gPrefWindow.onMkbPopupClicked(event);"/>
   </menupopup>
 </popupset>
 
