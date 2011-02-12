@@ -2,7 +2,7 @@
 <!DOCTYPE window SYSTEM "chrome://confmania/locale/confmania.dtd">
 
 <overlay id="confmania-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <script type="application/x-javascript" src="chrome://confmania/content/browser-Overlay.js"></script>
+  <script type="application/javascript" src="chrome://confmania/content/browser-Overlay.js"></script>
   <commandset id="mainCommandSet">
     <command id="ConfMania:Open" oncommand="window['ConfMania'].open()"/>
   </commandset>
