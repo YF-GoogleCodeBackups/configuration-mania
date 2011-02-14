@@ -47,8 +47,10 @@ radio.subtab[selected] {
   background: Highlight;
   color: HighlightText;
 }
-radio.subtab .radio-spacer-box, radio.subtab .radio-check {
-  display: none;
+radio.subtab .radio-spacer-box,
+radio.subtab .radio-check,
+radio.subtab .radio-check-box1 {
+  visibility: collapse;
 }
 .subtabpanel {
   overflow-x: auto;
