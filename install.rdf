@@ -7,7 +7,7 @@
 
 <em:id>{c4d362ec-1cff-4ca0-9031-99a8fad7995a}</em:id>
 <!--em:id>{3329801B-F8DD-4503-BDB5-6E0A076B5364}</em:id--><!-- this id is used by somebody in addons.mozilla.org -->
-<em:version>1.14.2011022201</em:version>
+<em:version>1.14.2011040901</em:version>
 
 <!-- Target Application this theme can install into, 
     with minimum and maximum supported versions. --> 
@@ -46,7 +46,7 @@
 <em:localized><Description>
 <em:locale>de</em:locale>
 <em:name>Configuration Mania</em:name>
-<em:description>More Advanced (hidden) configures</em:description>
+<em:description>Zusätzliche fortgeschrittene (versteckte) Einstellungen</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>Markus Stadler</em:translator>
 <em:translator>Erwin D. Glockner (erglo)</em:translator>
@@ -82,7 +82,6 @@
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>Leopardus Tigrinus</em:translator>
-<em:translator>Éctor (petruc)</em:translator>
 <em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
