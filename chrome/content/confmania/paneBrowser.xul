@@ -312,6 +312,15 @@ var gPrefBrowser = {
     const filter = Components.interfaces.nsIFilePicker.filterApps | Components.interfaces.nsIFilePicker.filterAll;
     this._openBrowse(filter, "others-editorExternal-path");
   },
+  onBrowserCacheDiskCacheFolderSyncTo : function() {
+    var e = document.getElementById("browserCacheDiskCacheFolder");
+    if (e.value == "") {
+      gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
+      return null;
+    } else {
+      return undefined;
+    }
+  },
   onBrowserCacheDiskCacheFolderBrowse : function(){
     var folderField = document.getElementById("browserCacheDiskCacheFolder");
 
@@ -861,7 +870,9 @@ var gPrefBrowser = {
   <groupbox>
     <caption label="&browser.speed-cache.diskCacheFolder.label;"/>
     <hbox align="center">
-      <textbox id="browserCacheDiskCacheFolder" flex="1" preference="browser.cache.disk.parent_directory"/>
+      <textbox id="browserCacheDiskCacheFolder" flex="1"
+               preference="browser.cache.disk.parent_directory"
+               onsynctopreference="return gPrefBrowser.onBrowserCacheDiskCacheFolderSyncTo();"/>
       <button label="&browse;" oncommand="gPrefBrowser.onBrowserCacheDiskCacheFolderBrowse();"/>
       <button label="&reset;" oncommand="gPrefBrowser.resetBrowserCacheDiskCacheFolder()"/>
     </hbox>
