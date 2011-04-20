@@ -15,6 +15,9 @@ prefwindow#ConfmaniaPreferences .paneSelector > radio[pane] {
   list-style-image: none;
   -moz-image-region: auto;
 }
+prefwindow#ConfmaniaPreferences image.paneButtonIcon {
+  display: none;
+}
 
 .subtabs, .subtabpanel{
   -moz-appearance: listbox;
