@@ -15,6 +15,7 @@ function initRadioGroupConnect2(groupid,dataid,defaultdat){
    +"}else{"
    +"document.documentElement.currentPane.userChangedValue(mData);"
    +"}event.stopPropagation();";
+  const _oncommandHandler = new Function("event", _oncommand);
 
   var oOthers; var found = false;
   Array.forEach(mGroup._getRadioChildren(), function(oRadio){
@@ -22,7 +23,7 @@ function initRadioGroupConnect2(groupid,dataid,defaultdat){
     if(oRadio.value == "*"){
       oOthers = oRadio;
     }else{
-      oRadio.setAttribute("oncommand", _oncommand);
+      oRadio.addEventListener("command", _oncommandHandler, false);
       if(oRadio.value == String(val)){
         found = true;
         mGroup.selectedItem = oRadio;
