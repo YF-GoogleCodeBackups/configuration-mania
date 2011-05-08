@@ -249,15 +249,22 @@ var gPrefBrowser = {
         if(fooComment && fooComment != "") userAgent += " ("+fooComment+")";
       }
     };
-    fooSubComment(m.product, m.productSub, m.productComment);
-    fooSubComment(m.vendor, m.vendorSub, m.vendorComment);
+    // In Gecko2, m.productComment and m.vendorComment are removed.
+    fooSubComment(m.product, m.productSub, m.productComment || null);
+    fooSubComment(m.vendor, m.vendorSub, m.vendorComment || null);
 
-    var extras = pref.getBranch("general.useragent.extra.");
-    var pCount = {value : 0};
-    var list = extras.getChildList("", pCount);
-    list = list.sort();
-    for (var i = 0; i < pCount.value; i++){
-      userAgent += " "+prefBranch.getCharPref("general.useragent.extra."+list[i]);
+    if (isGecko2) {
+      var appInfo = Components.classes['@mozilla.org/xre/app-info;1']
+        .getService(Components.interfaces.nsIXULAppInfo);
+      userAgent += " " + appInfo.name + "/" + appInfo.version;
+    } else {
+      var extras = pref.getBranch("general.useragent.extra.");
+      var pCount = {value : 0};
+      var list = extras.getChildList("", pCount);
+      list = list.sort();
+      for (var i = 0; i < pCount.value; i++){
+        userAgent += " "+prefBranch.getCharPref("general.useragent.extra."+list[i]);
+      }
     }
     return userAgent;
   },
