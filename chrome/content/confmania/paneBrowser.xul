@@ -442,6 +442,7 @@ var gPrefBrowser = {
   <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
   <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
   <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
+  <preference id="browser.download.manager.flashCount" name="browser.download.manager.flashCount" type="int"/>
   <preference id="alerts.slideIncrement" name="alerts.slideIncrement" type="int"/>
   <preference id="alerts.slideIncrementTime" name="alerts.slideIncrementTime" type="int"/>
   <preference id="alerts.totalOpenTime" name="alerts.totalOpenTime" type="int"/>
@@ -744,6 +745,11 @@ var gPrefBrowser = {
 
   <checkbox label="&browser.download.showAlertOnComplete.label;"
             preference="browser.download.manager.showAlertOnComplete"/>
+  <hbox align="center">
+    <label control="browserDLFlashCount" value="&browser.download.flashCount.label;"/>
+    <textbox id="browserDLFlashCount" type="number" size="3" min="0" preference="browser.download.manager.flashCount"/>
+    <label value="&browser.download.flashCount.label2;"/>
+  </hbox>
   <groupbox>
     <caption label="&browser.download.alerts.label;"/>
     <hbox align="center">

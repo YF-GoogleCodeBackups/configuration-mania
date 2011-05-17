@@ -112,6 +112,8 @@
 <!ENTITY browser.download.quitBehavior.pauseOnRestart.label "中止して、次回&brandShortName;起動時も自動的には再開しない">
 <!ENTITY browser.download.quitBehavior.cancelOnQuit.label "&brandShortName;終了時にキャンセルする">
 <!ENTITY browser.download.showAlertOnComplete.label "ダウンロード終了時に通知する">
+<!ENTITY browser.download.flashCount.label "ダウンロード終了時に">
+<!ENTITY browser.download.flashCount.label2 "回ダウンロードウィンドウを点滅させる">
 <!ENTITY browser.download.alerts.label "通知アラート表示の設定">
 <!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
 <!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
