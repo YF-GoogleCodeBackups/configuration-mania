@@ -111,7 +111,9 @@
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">
 <!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Pause but will not resume downloads automatically when &brandShortName; restarted">
 <!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
-<!ENTITY browser.download.showAlertOnComplete.label "Show alert on complete download">
+<!ENTITY browser.download.showAlertOnComplete.label "Show alert on download completed">
+<!ENTITY browser.download.flashCount.label "Blink the downloads window">
+<!ENTITY browser.download.flashCount.label2 "times on download completed.">
 <!ENTITY browser.download.alerts.label "The Alerts configuration">
 <!ENTITY browser.download.alerts.totalOpenTime "Show alerts for">
 <!ENTITY browser.download.alerts.slide.label "Speed of alert slide-animation">
