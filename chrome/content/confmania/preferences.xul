@@ -17,9 +17,9 @@
  title="&prefWindow.title;" style="&prefWindow.style;"
  context="prefContextPopup"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<script src="&cm;/xconnect.js"/>
-<script src="chrome://global/content/contentAreaUtils.js"/>
-<script><![CDATA[
+<script type="application/javascript" src="&cm;/xconnect.js"/>
+<script type="application/javascript" src="chrome://global/content/contentAreaUtils.js"/>
+<script type="application/javascript"><![CDATA[
 var gPrefWindow = {
   onLoad: function(){
     var prefWin = document.documentElement;

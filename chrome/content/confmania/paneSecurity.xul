@@ -48,7 +48,7 @@
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane id="paneSecurity" onpaneload="gPrefSecurity.init();">
 
-<script type="text/javascript;version=1.8"><![CDATA[
+<script type="application/javascript;version=1.8"><![CDATA[
 var gPrefSecurity = {
   init : function(){
     document.getElementById("passwordTimeout").value
