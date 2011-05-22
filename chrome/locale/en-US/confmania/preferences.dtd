@@ -107,13 +107,16 @@
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
-<!ENTITY browser.download.quitBehavior.label "What should happen to in-progress downloads when &brandShortName; quited">
+<!ENTITY browser.download.quitBehavior.label "When &brandShortName; quited but downloads in progress:">
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">
 <!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Pause but will not resume downloads automatically when &brandShortName; restarted">
 <!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
+<!ENTITY browser.download.flashCount.label "On download completed, the downloads window blinks:">
+<!ENTITY browser.download.flashCount.never.label "Never.">
+<!ENTITY browser.download.flashCount.infinite.label "until window is brought into foreground">
+<!ENTITY browser.download.flashCount.finite.label "">
+<!ENTITY browser.download.flashCount.finite.label2 "times">
 <!ENTITY browser.download.showAlertOnComplete.label "Show alert on download completed">
-<!ENTITY browser.download.flashCount.label "Blink the downloads window">
-<!ENTITY browser.download.flashCount.label2 "times on download completed.">
 <!ENTITY browser.download.alerts.label "The Alerts configuration">
 <!ENTITY browser.download.alerts.totalOpenTime "Show alerts for">
 <!ENTITY browser.download.alerts.slide.label "Speed of alert slide-animation">

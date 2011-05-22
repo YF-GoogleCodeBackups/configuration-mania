@@ -441,8 +441,8 @@ var gPrefBrowser = {
 
   <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
   <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
-  <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
   <preference id="browser.download.manager.flashCount" name="browser.download.manager.flashCount" type="int"/>
+  <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
   <preference id="alerts.slideIncrement" name="alerts.slideIncrement" type="int"/>
   <preference id="alerts.slideIncrementTime" name="alerts.slideIncrementTime" type="int"/>
   <preference id="alerts.totalOpenTime" name="alerts.totalOpenTime" type="int"/>
@@ -743,13 +743,24 @@ var gPrefBrowser = {
     </radiogroup>
   </groupbox>
 
+  <groupbox>
+    <caption label="&browser.download.flashCount.label;"/>
+    <radiogroup id="browserDLFlashCount-gr">
+      <radio value="0" label="&browser.download.flashCount.never.label;"/>
+      <radio value="-1" label="&browser.download.flashCount.infinite.label;"/>
+      <hbox align="center">
+        <radio value="*" label="&browser.download.flashCount.finite.label;"/>
+        <textbox id="browserDLFlashCount" type="number"
+                 hidespinbuttons="true" size="3" min="-1"
+                 preference="browser.download.manager.flashCount"
+                 onsyncfrompreference="return initRadioGroupConnect2('browserDLFlashCount-gr','browserDLFlashCount',2);"/>
+        <label value="&browser.download.flashCount.finite.label2;"/>
+      </hbox>
+    </radiogroup>
+  </groupbox>
   <checkbox label="&browser.download.showAlertOnComplete.label;"
             preference="browser.download.manager.showAlertOnComplete"/>
-  <hbox align="center">
-    <label control="browserDLFlashCount" value="&browser.download.flashCount.label;"/>
-    <textbox id="browserDLFlashCount" type="number" size="3" min="0" preference="browser.download.manager.flashCount"/>
-    <label value="&browser.download.flashCount.label2;"/>
-  </hbox>
+
   <groupbox>
     <caption label="&browser.download.alerts.label;"/>
     <hbox align="center">
