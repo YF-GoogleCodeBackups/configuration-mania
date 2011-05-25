@@ -309,7 +309,9 @@ var gPrefBrowser = {
     }catch(ex){}
 
     if(fp.show() == nsIFilePicker.returnOK) {
-      document.getElementById(aTargetID).value = fp.file.path;
+      var targetElem = document.getElementById(aTargetID);
+      targetElem.value = fp.file.path;
+      document.documentElement.currentPane.userChangedValue(targetElem);
     }
   },
   onWebGLOSMesaBrowse : function() {
@@ -343,8 +345,10 @@ var gPrefBrowser = {
       fp.defaultString = file.leafName;
     }catch(ex){throw ex}
 
-    if(fp.show() == nsIFilePicker.returnOK)
+    if(fp.show() == nsIFilePicker.returnOK) {
       folderField.value = fp.file.path;
+      document.documentElement.currentPane.userChangedValue(folderField);
+    }
   },
   resetBrowserCacheDiskCacheFolder : function(){
     gPrefWindow.resetPref(document.getElementById("browser.cache.disk.parent_directory"));
