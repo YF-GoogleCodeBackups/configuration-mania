@@ -46,10 +46,10 @@
 
 <overlay id="paneUIOverlay"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneUI" onpaneload="gUIPref.init();">
+<prefpane id="paneUI" onpaneload="gPrefWindow.prefUI.init();">
 
-<script><![CDATA[
-var gUIPref = {
+<script type="application/javascript;version=1.8"><![CDATA[
+gPrefWindow.prefUI = {
   init : function(){
     this.updateMouseWheelMode();
 
@@ -238,7 +238,7 @@ var gUIPref = {
 <tabpanel orient="vertical">
   <groupbox>
     <caption align="center">
-      <menulist id="mousewheelOriental" label="Vertical" oncommand="gUIPref.updateMouseWheelMode();">
+      <menulist id="mousewheelOriental" label="Vertical" oncommand="gPrefWindow.prefUI.updateMouseWheelMode();">
         <menupopup>
           <menuitem label="&ui.mousewheel.vertiscroll.label;" value="v" selected="true"/>
           <menuitem label="&ui.mousewheel.horizscroll.label;" value="h"/>
@@ -246,7 +246,7 @@ var gUIPref = {
       </menulist>
       <label value="&ui.mousewheel.mouseWheelPanel.label;"/>
       <menulist id="mousewheelMod" label="&ui.mousewheel.usingJustTheWheel.label;"
-       oncommand="gUIPref.updateMouseWheelMode();">
+       oncommand="gPrefWindow.prefUI.updateMouseWheelMode();">
         <menupopup>
           <menuitem label="&ui.mousewheel.usingJustTheWheel.label;" value="No" selected="true"/>
           <menuitem label="Alt" value="Alt"/>
@@ -257,16 +257,16 @@ var gUIPref = {
       <label value="&ui.mousewheel.mouseWheelPanel2.label;"/>
     </caption>
 
-    <radiogroup id="mousewheelAction" oncommand="gUIPref.changed_mousewheelAction();">
+    <radiogroup id="mousewheelAction" oncommand="gPrefWindow.prefUI.changed_mousewheelAction();">
       <hbox align="start">
         <radio value="0" label="&ui.mousewheel.scroll.label;"/>
         <vbox align="start">
           <hbox align="center">
-            <textbox id="mousewheelNumlines" type="number" size="3" onchange="gUIPref.changed_mousewheelNumlines();"/>
+            <textbox id="mousewheelNumlines" type="number" size="3" onchange="gPrefWindow.prefUI.changed_mousewheelNumlines();"/>
             <label value="&ui.mousewheel.scrollLines.label;"/>
           </hbox>
           <checkbox id="mousewheelSysNumlines" label="&ui.mousewheel.useSystemDefault.label;"
-           oncommand="gUIPref.changed_mousewheelSysNumlines();"/>
+           oncommand="gPrefWindow.prefUI.changed_mousewheelSysNumlines();"/>
         </vbox>
       </hbox>
       <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
@@ -378,10 +378,10 @@ var gUIPref = {
     <!-- gData var and kTabTo* consts are declared in pref-keynav.js -->
     <checkbox id="tabNavigationLinks" class="indent" label="&ui.keynav.tabNavigationLinks.label;"
      accesskey="&ui.keynav.tabNavigationLinks.accesskey;"
-     oncommand="gUIPref.tabNavPrefChanged();"/>
+     oncommand="gPrefWindow.prefUI.tabNavPrefChanged();"/>
     <checkbox id="tabNavigationForms" class="indent" label="&ui.keynav.tabNavigationForms.label;"
      accesskey="&ui.keynav.tabNavigationForms.accesskey;"
-     oncommand="gUIPref.tabNavPrefChanged();"/>
+     oncommand="gPrefWindow.prefUI.tabNavPrefChanged();"/>
     <description value="&ui.keynav.tabNavigationTextboxes.label;"/>
     <textbox hidden="true" id="tabFocus" preference="accessibility.tabfocus"/>
   </groupbox>

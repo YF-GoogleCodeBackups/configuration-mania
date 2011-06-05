@@ -46,10 +46,10 @@
 <overlay id="paneBrowserOverlay"
  xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneBrowser" flex="1" onpaneload="gPrefBrowser.init();">
+<prefpane id="paneBrowser" flex="1" onpaneload="gPrefWindow.prefBrowser.init();">
 
 <script type="application/javascript;version=1.8"><![CDATA[
-var gPrefBrowser = {
+gPrefWindow.prefBrowser = {
   init : function(){
     try {
       let dirSvc = Components.classes["@mozilla.org/file/directory_service;1"]
@@ -61,13 +61,13 @@ var gPrefBrowser = {
     if (! document.documentElement.instantApply) {
       document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
     }
-    gPrefBrowser.initUA();
-    gPrefBrowser.initBrowserBoxTab();
+    gPrefWindow.prefBrowser.initUA();
+    gPrefWindow.prefBrowser.initBrowserBoxTab();
   },
   initUA : function(){
     var oUAValue = document.getElementById("ua-value");
     try {
-      oUAValue.emptyText = gPrefBrowser.getFirefoxUserAgent();
+      oUAValue.emptyText = gPrefWindow.prefBrowser.getFirefoxUserAgent();
     } catch (ex) {}
 
     var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
@@ -86,7 +86,7 @@ var gPrefBrowser = {
       const OPT_PARAM_GENERIC        = /\{opt:([a-zA-Z]+)\??\}/g;
       const OPT_PARAM_DEFAULT        = /\{opt:default\}/g;
       const OS_PARAM_OPTIONAL        = /\{\w+\?\}/g;
-      const UA_FIREFOX_DEFAULT = gPrefBrowser.getFirefoxUserAgent("{opt:platform}", "{opt:oscpu}", null);
+      const UA_FIREFOX_DEFAULT = gPrefWindow.prefBrowser.getFirefoxUserAgent("{opt:platform}", "{opt:oscpu}", null);
 
       Array.forEach(doc.getElementsByTagName("group"), function(b) {
         var name = b.getAttribute("name");
@@ -121,7 +121,7 @@ var gPrefBrowser = {
     req.send(null);
   },
   initBrowserBoxTab : function () {
-    gPrefBrowser.onPaneBrowserBoxTabSelected();
+    gPrefWindow.prefBrowser.onPaneBrowserBoxTabSelected();
   },
   onPaneBrowserBoxTabSelected : function () {
     let paneBrowserBoxTab = document.getElementById("paneBrowserBoxTab");
@@ -161,7 +161,7 @@ var gPrefBrowser = {
   onWebGLSyncFrom : function() {
     let disabled = ! document.getElementById("webgl.disabled").value;
     document.getElementById("webgl.force_osmesa").disabled = disabled;
-    return gPrefBrowser.onWebGLSFRenderSyncFrom();
+    return gPrefWindow.prefBrowser.onWebGLSFRenderSyncFrom();
   },
   onWebGLSFRenderSyncFrom : function() {
     let disabled = ! (document.getElementById("webgl.disabled").value && document.getElementById("webgl.force_osmesa").value);
@@ -484,7 +484,7 @@ var gPrefBrowser = {
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
 <radiogroup id="paneBrowserBoxTab" class="subtabs"
  orient="vertical" style="max-width: 10em; width: 10em;"
- value="smartbrowsing" oncommand="gPrefBrowser.onPaneBrowserBoxTabSelected();">
+ value="smartbrowsing" oncommand="gPrefWindow.prefBrowser.onPaneBrowserBoxTabSelected();">
   <radio class="subtab" value="smartbrowsing" label="&browser.smartbrowsing.label;"/>
   <radio class="subtab" value="urlbar"        label="&browser.urlbar.label;"       />
   <radio class="subtab" value="html"          label="&browser.html.label;"         />
@@ -505,7 +505,7 @@ var gPrefBrowser = {
     <description>&browser.smartbrowsing.internetKeywords.desc;</description>
     <vbox>
       <checkbox id="smartbrowsing-keywordsEnabled" preference="keyword.enabled"
-                onsyncfrompreference="return gPrefBrowser.onSmartBrowsingSyncFrom();"
+                onsyncfrompreference="return gPrefWindow.prefBrowser.onSmartBrowsingSyncFrom();"
                 label="&browser.smartbrowsing.internetKeywords.enabled.label;"/>
       <hbox align="center">
         <label control="smartbrowsing-keywordsURL" value="&browser.smartbrowsing.internetKeywords.URL.label;"/>
@@ -518,7 +518,7 @@ var gPrefBrowser = {
 
     <checkbox id="smartbrowsing-domainGuessingEnabled"
           label="&browser.smartbrowsing.domainGuessing.enabled.label;"
-          onsyncfrompreference="return gPrefBrowser.onDomainGaussSyncFrom();"
+          onsyncfrompreference="return gPrefWindow.prefBrowser.onDomainGaussSyncFrom();"
           preference="browser.fixup.alternate.enabled"/>
     <hbox align="center">
       <label control="smartbrowsing-domainGuessingPrefix"
@@ -538,7 +538,7 @@ var gPrefBrowser = {
   <checkbox label="&browser.urlbar.doubleClickSelectsAll.label;" preference="browser.urlbar.doubleClickSelectsAll"/>
 
   <checkbox label="&browser.urlbar.autoComplete.label;" preference="browser.urlbar.autocomplete.enabled"
-   onsyncfrompreference="return gPrefBrowser.onAutoCompleteSyncFrom();" id="urlbar-autoComplete-disabled"/>
+   onsyncfrompreference="return gPrefWindow.prefBrowser.onAutoCompleteSyncFrom();" id="urlbar-autoComplete-disabled"/>
   <vbox class="indent" id="urlbar-autoComplete-pane">
     <checkbox label="&browser.urlbar.autoComplete.autoFill.label;"
               preference="browser.urlbar.autoFill" />
@@ -558,7 +558,7 @@ var gPrefBrowser = {
 <box class="subtabpanel" orient="vertical" id="html">
   <checkbox label="&browser.html.allowBlink.label;" preference="browser.blink_allowed"/>
   <checkbox id="html-frameEnabled" label="&browser.html.enableFrame.label;"
-   onsyncfrompreference="return gPrefBrowser.onHtmlFrameSyncFrom();" preference="browser.frames.enabled"/>
+   onsyncfrompreference="return gPrefWindow.prefBrowser.onHtmlFrameSyncFrom();" preference="browser.frames.enabled"/>
   <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
    class="indent" preference="layout.frames.force_resizability"/>
   <groupbox>
@@ -594,14 +594,14 @@ var gPrefBrowser = {
   <checkbox label="&browser.html.enableSVG.label;" preference="svg.enabled"/>
   <checkbox label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
   <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.disabled"
-            onsyncfrompreference="return gPrefBrowser.onWebGLSyncFrom()"/>
+            onsyncfrompreference="return gPrefWindow.prefBrowser.onWebGLSyncFrom()"/>
   <vbox id="html-webgl-vbox" class="indent">
     <checkbox id="html-webgl-software-render" label="&browser.html.webgl.software_render.label;" preference="webgl.force_osmesa"
-              onsyncfrompreference="return gPrefBrowser.onWebGLSFRenderSyncFrom()"/>
+              onsyncfrompreference="return gPrefWindow.prefBrowser.onWebGLSFRenderSyncFrom()"/>
     <hbox align="center">
       <label control="html-webgl-osmesa-path" value="&browser.html.webgl.osmesa.path.label;"/>
       <textbox id="html-webgl-osmesa-path" preference="webgl.osmesalib" flex="1"/>
-      <button label="&browse;" control="html-webgl-osmesa-path" oncommand="gPrefBrowser.onWebGLOSMesaBrowse()"/>
+      <button label="&browse;" control="html-webgl-osmesa-path" oncommand="gPrefWindow.prefBrowser.onWebGLOSMesaBrowse()"/>
     </hbox>
   </vbox>
 
@@ -611,7 +611,7 @@ var gPrefBrowser = {
   <groupbox>
     <caption label="&browser.html.focus.label;"/>
     <checkbox id="focus-highlight-enabled" label="&browser.html.focus.enabled.label;"
-     onsyncfrompreference="return gPrefBrowser.onFocusHighlightSyncFrom();"
+     onsyncfrompreference="return gPrefWindow.prefBrowser.onFocusHighlightSyncFrom();"
      preference="browser.display.use_focus_colors"/>
     <hbox align="center" class="indent">
       <label value="&browser.html.focus.bg.label;" control="focus-bg-color"/>
@@ -625,13 +625,13 @@ var gPrefBrowser = {
     <caption label="&browser.html.acceleration.label;"/> 
     
     <checkbox label="&browser.html.acceleration.disabled.label;"
-              onsyncfrompreference="return gPrefBrowser.onAccelerationSyncFrom();"
+              onsyncfrompreference="return gPrefWindow.prefBrowser.onAccelerationSyncFrom();"
               preference="layers.acceleration.disabled"/>
     <checkbox label="&browser.html.acceleration.force-enabled.label;"
               class="indent"
               preference="layers.acceleration.force-enabled"/>
     <checkbox label="&browser.html.acceleration.d2d-disabled.label;"
-              onsyncfrompreference="return gPrefBrowser.onDirect2DSyncFrom();"
+              onsyncfrompreference="return gPrefWindow.prefBrowser.onDirect2DSyncFrom();"
               preference="gfx.direct2d.disabled"/>
     <checkbox label="&browser.html.acceleration.d2d-force-enabled.label;"
               class="indent"
@@ -642,7 +642,7 @@ var gPrefBrowser = {
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
   <groupbox>
     <caption label="&browser.tabs.closeButtons.label;"/>
-    <radiogroup preference="browser.tabs.closeButtons" onsyncfrompreference="return gPrefBrowser.onTabsCloseButtonSyncFrom()">
+    <radiogroup preference="browser.tabs.closeButtons" onsyncfrompreference="return gPrefWindow.prefBrowser.onTabsCloseButtonSyncFrom()">
       <radio value="0" label="&browser.tabs.closeButtons.active.label;"/>
       <radio value="1" label="&browser.tabs.closeButtons.all.label;"/>
       <vbox class="indent">
@@ -782,9 +782,9 @@ var gPrefBrowser = {
         <label value="&miliseconds;"/>
       </hbox>
       <hbox pack="end">
-        <button id="alertsPreviewButton" label="&preview;" oncommand="gPrefBrowser.previewAlert(this.label, this.label);"/>
-        <button label="&reset;" oncommand="gPrefBrowser.resetAlertsSlide();"/>
-        <button label="&browser.download.alerts.slide.settolight.label;" oncommand="gPrefBrowser.setAlertsSlideLight();"/>
+        <button id="alertsPreviewButton" label="&preview;" oncommand="gPrefWindow.prefBrowser.previewAlert(this.label, this.label);"/>
+        <button label="&reset;" oncommand="gPrefWindow.prefBrowser.resetAlertsSlide();"/>
+        <button label="&browser.download.alerts.slide.settolight.label;" oncommand="gPrefWindow.prefBrowser.setAlertsSlideLight();"/>
       </hbox>
     </groupbox>
   </groupbox>
@@ -798,7 +798,7 @@ var gPrefBrowser = {
   </hbox>
   <hbox align="center" pack="end">
     <button type="menu" label="&browser.ua.presets.label;"
-     oncommand="gPrefBrowser.onUserAgentPresetCommanded(event);">
+     oncommand="gPrefWindow.prefBrowser.onUserAgentPresetCommanded(event);">
       <menupopup id="ua-presets-popup">
         <menu label="&browser.ua.presets.this.label;">
           <menupopup id="ua-presets-this-popup"/>
@@ -806,18 +806,18 @@ var gPrefBrowser = {
         <menuseparator/>
       </menupopup>
     </button>
-    <button label="&reset;" oncommand="gPrefBrowser.resetUserAgent();"/>
+    <button label="&reset;" oncommand="gPrefWindow.prefBrowser.resetUserAgent();"/>
   </hbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="speed-paint">
   <hbox align="center">
     <description flex="1">&browser.speed-paint.desc;</description>
-    <button label="&reset;" oncommand="gPrefBrowser.onSpeedPaintReset();"/>
+    <button label="&reset;" oncommand="gPrefWindow.prefBrowser.onSpeedPaintReset();"/>
   </hbox>
   <hbox align="center">
     <label control="speed-paintDalay" value="&browser.speed-paint.delay.label;"/>
     <textbox id="speed-paintDalay" type="number" hidespinbuttons="true" size="3" preference="nglayout.initialpaint.delay"
-     onsyncfrompreference="return gPrefBrowser.syncFrom(this, 250);"/>
+     onsyncfrompreference="return gPrefWindow.prefBrowser.syncFrom(this, 250);"/>
     <label value="&miliseconds;"/>
   </hbox>
   <label value="&browser.speed-paint.notify-backoffcount.label;"/>
@@ -831,11 +831,11 @@ var gPrefBrowser = {
   <html:div>
     <label value="&browser.speed-paint.notify-interval.label;" control="speed-notify-interval"/>
     <textbox id="speed-notify-interval" type="number" hidespinbuttons="true" preference="content.notify.interval" size="6"
-     onsyncfrompreference="return gPrefBrowser.syncFrom(this, 120000);"/>
+     onsyncfrompreference="return gPrefWindow.prefBrowser.syncFrom(this, 120000);"/>
     <label value="&microseconds;"/>
   </html:div>
   <checkbox preference="content.interrupt.parsing" id="speed-interrupt-parsing"
-   onsyncfrompreference="return gPrefBrowser.onInterruptParseSyncFrom();"
+   onsyncfrompreference="return gPrefWindow.prefBrowser.onInterruptParseSyncFrom();"
    label="&browser.speed-paint.content-interrupt.label;"/>
   <description class="indent">&browser.speed-paint.content-interrupt.desc;</description>
   <vbox class="indent">
@@ -851,14 +851,14 @@ var gPrefBrowser = {
     <label value="&browser.speed-paint.content-switch-threshold.label;" control="speed-switch-threshold"/>
     <textbox id="speed-switch-threshold" type="number" hidespinbuttons="true" preference="content.switch.threshold"
      size="8"
-     onsyncfrompreference="return gPrefBrowser.syncFrom(this, 750000);"/>
+     onsyncfrompreference="return gPrefWindow.prefBrowser.syncFrom(this, 750000);"/>
     <label value="&microseconds;"/>
   </html:div>
   <description class="indent">&browser.speed-paint.content-switch-threshold.desc;</description>
 </box>
 <box class="subtabpanel" orient="vertical" id="speed-cache">
   <checkbox id="speed-cache-memory-enable" label="&browser.speed-cache.memory_enable.label;"
-    onsyncfrompreference="return gPrefBrowser.onMemoryEnableSyncFrom();"
+    onsyncfrompreference="return gPrefWindow.prefBrowser.onMemoryEnableSyncFrom();"
     preference="browser.cache.memory.enable"/>
   <radiogroup class="indent" align="center" orient="horizontal" id="speed-cache-memory-capacity-type">
     <label value="&browser.speed-cache.memory_capability.label;" id="speed-cache-memory-capacity-type-label"/>
@@ -900,9 +900,9 @@ var gPrefBrowser = {
     <hbox align="center">
       <textbox id="browserCacheDiskCacheFolder" flex="1"
                preference="browser.cache.disk.parent_directory"
-               onsynctopreference="return gPrefBrowser.onBrowserCacheDiskCacheFolderSyncTo();"/>
-      <button label="&browse;" oncommand="gPrefBrowser.onBrowserCacheDiskCacheFolderBrowse();"/>
-      <button label="&reset;" oncommand="gPrefBrowser.resetBrowserCacheDiskCacheFolder()"/>
+               onsynctopreference="return gPrefWindow.prefBrowser.onBrowserCacheDiskCacheFolderSyncTo();"/>
+      <button label="&browse;" oncommand="gPrefWindow.prefBrowser.onBrowserCacheDiskCacheFolderBrowse();"/>
+      <button label="&reset;" oncommand="gPrefWindow.prefBrowser.resetBrowserCacheDiskCacheFolder()"/>
     </hbox>
     <description>&browser.speed-cache.diskCacheFolder.desc;</description>
   </groupbox>
@@ -915,18 +915,18 @@ var gPrefBrowser = {
     <caption label="&browser.others.dns.label;"/>
     <checkbox label="&browser.others.dns.disableIPv6.label;" preference="network.dns.disableIPv6"/>
     <checkbox label="&browser.others.dns.prefetch.label;" preference="network.dns.disablePrefetch"
-     onsyncfrompreference="return gPrefBrowser.syncFrom(this, true);"/>
+     onsyncfrompreference="return gPrefWindow.prefBrowser.syncFrom(this, true);"/>
   </groupbox>
 
   <checkbox label="&browser.others.prompts_tab_modal_enabled.label;" preference="prompts.tab_modal.enabled"/>
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
-            onsyncfrompreference="return gPrefBrowser.onEditorExternalSyncFrom()"/>
+            onsyncfrompreference="return gPrefWindow.prefBrowser.onEditorExternalSyncFrom()"/>
   <hbox id="others-editorExternal-hbox" class="indent" align="center">
     <label control="others-editorExternal-path" label="&browser.others.editorExternal.path;"/>
     <textbox id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
-    <button label="&browse;" control="others-editorExternal-path" oncommand="gPrefBrowser.onEditorExternalBrowse()"/>
+    <button label="&browse;" control="others-editorExternal-path" oncommand="gPrefWindow.prefBrowser.onEditorExternalBrowse()"/>
   </hbox>
   <groupbox>
     <caption label="&browser.others.backspace_action.label;"/>

@@ -46,10 +46,10 @@
 <overlay id="paneSecurityOverlay"
  xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneSecurity" onpaneload="gPrefSecurity.init();">
+<prefpane id="paneSecurity" onpaneload="gPrefWindow.prefSecurity.init();">
 
 <script type="application/javascript;version=1.8"><![CDATA[
-var gPrefSecurity = {
+gPrefWindow.prefSecurity = {
   init : function(){
     document.getElementById("passwordTimeout").value
      = Components.classes["@mozilla.org/security/pk11tokendb;1"]
@@ -213,7 +213,7 @@ var gPrefSecurity = {
   </radiogroup>
 
   <label value="&security.popupwin.event.label;" control="popupwin-e"/>
-  <listbox class="indent" id="popupwin-e" rows="4" preference="dom.popup_allowed_events" onsyncfrompreference="return gPrefSecurity.syncFromPopupwin()" onsynctopreference="return gPrefSecurity.syncToPopupwin()">
+  <listbox class="indent" id="popupwin-e" rows="4" preference="dom.popup_allowed_events" onsyncfrompreference="return gPrefWindow.prefSecurity.syncFromPopupwin()" onsynctopreference="return gPrefWindow.prefSecurity.syncToPopupwin()">
     <listitem type="checkbox" value="reset" label="&security.popupwin.event.reset.label;"/>
     <listitem type="checkbox" value="submit" label="&security.popupwin.event.submit.label;"/>
     <listitem type="checkbox" value="select" label="&security.popupwin.event.select.label;"/>
@@ -254,7 +254,7 @@ var gPrefSecurity = {
 </tabpanel>
 <tabpanel orient="vertical">
   <checkbox id="enableIDN" label="&security.net.enableIDN.label;"
-    preference="network.enableIDN" onsyncfrompreference="return gPrefSecurity.onIDNSyncFrom();"/>
+    preference="network.enableIDN" onsyncfrompreference="return gPrefWindow.prefSecurity.onIDNSyncFrom();"/>
   <checkbox id="showPunycode" class="indent" label="&security.net.show_punycode.label;"
     preference="network.IDN_show_punycode"/>
   <description id="showPunycodeDesc" class="indent">&security.net.show_punycode.desc;</description>
@@ -310,14 +310,14 @@ var gPrefSecurity = {
           <radiogroup id="passwordAskTimes" preference="security.ask_for_password">
             <!-- Components.interfaces.nsIPK11Token.ASK_FIRST_TIME == 0 -->
             <radio value="0" label="&security.privacy.passwd.managepassword.askfirsttime;"
-              oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
+              oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
             <!-- Components.interfaces.nsIPK11Token.ASK_EVERY_TIME == -1 -->
             <radio value="-1" label="&security.privacy.passwd.managepassword.askeverytime;"
-              oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
+              oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
             <hbox align="center">
               <!-- Components.interfaces.nsIPK11Token.ASK_EXPIRE_TIME == 1 -->
               <radio value="1" label="&security.privacy.passwd.managepassword.asktimeout;"
-                oncommand="gPrefSecurity.updatePasswordAskTimes();"/>
+                oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
               <textbox id="passwordTimeout" type="number" hidespinbuttons="true" size="4" label="security.password_lifetime"/>
               <label value="&security.privacy.passwd.managepassword.timeout.unit;"/>
             </hbox>
