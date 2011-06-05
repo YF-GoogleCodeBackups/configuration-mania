@@ -503,7 +503,7 @@ var gUIPref = {
         <radio value="-1" label="&ui.others.xwin.uiSubmenuDelay.inf.label;"/>
         <radio value="*" label="&manualSet;"/>
         <textbox id="uiSubmenuDelay" type="number" hidespinbuttons="true" min="-1" size="4" preference="ui.submenuDelay"
-          onsyncfrompreference="return initRadioGroupConnect2('uiSubmenuDelay-radio','uiSubmenuDelay',0);"/>
+          onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('uiSubmenuDelay-radio','uiSubmenuDelay',0);"/>
         <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
       </radiogroup>
     </groupbox>
