@@ -17,7 +17,6 @@
  title="&prefWindow.title;" style="&prefWindow.style;"
  context="prefContextPopup"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<script type="application/javascript" src="&cm;/xconnect.js"/>
 <script type="application/javascript" src="chrome://global/content/contentAreaUtils.js"/>
 <script type="application/javascript"><![CDATA[
 var gPrefWindow = {
@@ -77,6 +76,48 @@ var gPrefWindow = {
   onMkbPopupClicked: function(event){
     var o = gPrefWindow._contextPrefElem;
     openURL("http://kb.mozillazine.org/"+encodeURI(o.getAttribute("preference")));
+  },
+
+  radioGrConnSyncFrom: function (groupid, dataid, defaultdat) {
+        var mData = document.getElementById(dataid);
+        var mGroup = document.getElementById(groupid);
+        var preference = document.getElementById(mData.getAttribute("preference"));
+        var val = preference.value;
+
+        if (defaultdat != null && val == null) {
+            val = defaultdat;
+        }
+
+        const _oncommandHandler = function (event) {
+            var oRadio = event.target;
+            var mData = oRadio.mData;
+            mData.value = oRadio.value;
+            if (mData.value == "") {
+              document.getElementById(mData.getAttribute('preference')).reset();
+            }else{
+              document.documentElement.currentPane.userChangedValue(mData);
+            }
+            event.stopPropagation();
+        };
+
+        var oOthers = null;
+        var found = false;
+        Array.forEach(mGroup._getRadioChildren(), function (oRadio) {
+            oRadio.mData = mData;
+            if (oRadio.value == "*"){
+                oOthers = oRadio;
+            } else {
+                oRadio.addEventListener("command", _oncommandHandler, false);
+                if(oRadio.value == String(val)){
+                    found = true;
+                    mGroup.selectedItem = oRadio;
+                }
+            }
+        });
+        if (!found) {
+            mGroup.selectedItem = oOthers;
+        }
+        return val;
   }
 };
 ]]></script>

@@ -723,7 +723,7 @@ var gPrefBrowser = {
         <textbox id="sessionStore-max-concurrent-tabs"
             type="number" hidespinbuttons="true" size="2" min="-1"
             preference="browser.sessionstore.max_concurrent_tabs"
-            onsyncfrompreference="return initRadioGroupConnect2('sessionStore-max-concurrent-tabs-gr','sessionStore-max-concurrent-tabs',3);"/>
+            onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('sessionStore-max-concurrent-tabs-gr','sessionStore-max-concurrent-tabs',3);"/>
         <label value="&browser.sessionStore.concurrent.number.label2;"/>
       </hbox>
     </radiogroup>
@@ -757,7 +757,7 @@ var gPrefBrowser = {
         <textbox id="browserDLFlashCount" type="number"
                  hidespinbuttons="true" size="3" min="-1"
                  preference="browser.download.manager.flashCount"
-                 onsyncfrompreference="return initRadioGroupConnect2('browserDLFlashCount-gr','browserDLFlashCount',2);"/>
+                 onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('browserDLFlashCount-gr','browserDLFlashCount',2);"/>
         <label value="&browser.download.flashCount.finite.label2;"/>
       </hbox>
     </radiogroup>
@@ -826,7 +826,7 @@ var gPrefBrowser = {
     <radio value="*" label="&manualSet;"/>
     <textbox id="speed-notify-backoffcount" type="number" hidespinbuttons="true" min="-1" value="-1"
      preference="content.notify.backoffcount" size="2"
-     onsyncfrompreference="return initRadioGroupConnect2('speed-notify-backoffcount-gr','speed-notify-backoffcount',-1);"/>
+     onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('speed-notify-backoffcount-gr','speed-notify-backoffcount',-1);"/>
   </radiogroup>
   <html:div>
     <label value="&browser.speed-paint.notify-interval.label;" control="speed-notify-interval"/>
@@ -865,7 +865,7 @@ var gPrefBrowser = {
     <radio value="-1" label="&autoSet;"/>
     <radio value="*" label="&manualSet;"/>
     <textbox id="speed-cache-memory-capacity" type="number" hidespinbuttons="true" min="-1" size="8" preference="browser.cache.memory.capacity"
-     onsyncfrompreference="return initRadioGroupConnect2('speed-cache-memory-capacity-type','speed-cache-memory-capacity',-1);"/>
+     onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('speed-cache-memory-capacity-type','speed-cache-memory-capacity',-1);"/>
     <label value="&kilobytes;" control="browser-cache-memory-capacity"/>
   </radiogroup>
   <groupbox>
@@ -891,7 +891,7 @@ var gPrefBrowser = {
       <radio value="*" label="&manualSet;"/>
       <textbox id="session-history-viewers" type="number" min="-1" value="-1" size="2"
        preference="browser.sessionhistory.max_total_viewers"
-       onsyncfrompreference="return initRadioGroupConnect2('session-history-viewers-gr','session-history-viewers',-1);"/>
+       onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('session-history-viewers-gr','session-history-viewers',-1);"/>
     </radiogroup>
     <description>&browser.speed-cache.session-history-viewers.desc;</description>
   </groupbox>
