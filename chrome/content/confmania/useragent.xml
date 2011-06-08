@@ -28,8 +28,8 @@
     <option name="Safari 5.0.2 (iPad; iOS 4.2.1)" platform="iPad" oscpu="CPU iPhone OS 4_2_1 like Mac OS X" webkit="533.17.9" safari="6533.18.5" version="4.2.1 Mobile/8C148"/>
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
-    <option name="Chrome 11.0.696.574 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="534.24" version="11.0.696.574"/>
-    <option name="Chrome 11.0.696.574 (Intel MacOS X 10.6.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_7" webkit="534.24" version="11.0.696.574"/>
+    <option name="Chrome 12.0.742.914 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="534.30" version="12.0.742.914"/>
+    <option name="Chrome 12.0.742.914 (Intel MacOS X 10.6.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_6_7" webkit="534.30" version="12.0.742.914"/>
 
     <option name="Chrome 4.0 (Nexus S; Android 2.3 Gingerbread)" value="Mozilla/5.0 (Linux; U; Android 2.3.1; {language}; Nexus S Build/GRH78) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"/>
   </group>
