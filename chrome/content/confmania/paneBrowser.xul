@@ -69,6 +69,9 @@ gPrefWindow.prefBrowser = {
     try {
       oUAValue.emptyText = gPrefWindow.prefBrowser.getFirefoxUserAgent();
     } catch (ex) {}
+    var prefBranch = Components.classes['@mozilla.org/preferences-service;1']
+      .getService(Components.interfaces.nsIPrefBranch);
+    var language = prefBranch.getCharPref("general.useragent.locale");
 
     var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
               .createInstance(Components.interfaces.nsIXMLHttpRequest);
@@ -108,7 +111,7 @@ gPrefWindow.prefBrowser = {
         value = value.replace(OPT_PARAM_GENERIC, function(str, optattr) {
           return o.getAttribute(optattr) || b.getAttribute(optattr) || "";
         });
-        value = value.replace(OS_PARAM_LANGUAGE, m.language);
+        value = value.replace(OS_PARAM_LANGUAGE, language);
         value = value.replace(OS_PARAM_OPTIONAL, "");
 
         var oMenupopup = menupopuptable[bname];
@@ -225,15 +228,17 @@ gPrefWindow.prefBrowser = {
       mSecurity = prefBranch.getCharPref("general.useragent.security");
     } else {
       isGecko2 = true;
-      // "general.useragent.security" is not defined Gecko2 (Firefox 4)
+      // "general.useragent.security" is not defined Gecko2 (Firefox 4+)
     }
-
+    
     if (platform == null) platform = m.platform;
     if (oscpu    == null) oscpu    = m.oscpu;
-    if (language == null) language = m.language;
-
-    if (isGecko2) language = null; // language is not displayed on Gecko2 (Firefox4)
-
+    if (isGecko2) {
+      language = null; // language is not displayed on Gecko2 (Firefox4+)
+    } else {
+      if (language == null) language = m.language;
+    }
+    
     var userAgent = m.appName + "/" + m.appVersion + " ";
     userAgent += "("+platform+"; ";
     if (mSecurity) userAgent += mSecurity + "; ";
