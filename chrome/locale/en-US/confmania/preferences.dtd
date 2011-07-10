@@ -302,9 +302,6 @@
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
 <!ENTITY ui.bidi.label "Bidi">
 <!ENTITY ui.bidi.ui.label "Enable Bi-Directional (BiDi) UI">
-<!ENTITY ui.bidi.characterset.label "Charset">
-<!ENTITY ui.bidi.characterset.doc.label "Document-specified">
-<!ENTITY ui.bidi.characterset.default.label "Default charset in document">
 <!ENTITY ui.bidi.controlstextmode.label "Controls (Firefox 3.x)">
 <!ENTITY ui.bidi.controlstextmode.logical.label "Logical">
 <!ENTITY ui.bidi.controlstextmode.visual.label "Visual">
