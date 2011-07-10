@@ -302,9 +302,6 @@
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
 <!ENTITY ui.bidi.label "BiDi">
 <!ENTITY ui.bidi.ui.label "BiDi (双方向テキスト) のインターフェイスを有効に">
-<!ENTITY ui.bidi.characterset.label "文字セット">
-<!ENTITY ui.bidi.characterset.doc.label "文書で定義された文字セット">
-<!ENTITY ui.bidi.characterset.default.label "標準文字セット">
 <!ENTITY ui.bidi.controlstextmode.label "コントロール (Firefox 3.x)">
 <!ENTITY ui.bidi.controlstextmode.logical.label "Logical">
 <!ENTITY ui.bidi.controlstextmode.visual.label "Visual">
