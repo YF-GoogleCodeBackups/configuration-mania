@@ -394,6 +394,8 @@ gPrefWindow.prefBrowser = {
   <preference id="browser.urlbar.filter.javascript" name="browser.urlbar.filter.javascript" type="bool"/>
   <preference id="browser.urlbar.maxRichResults" name="browser.urlbar.maxRichResults" type="int"/>
   <preference id="browser.urlbar.delay" name="browser.urlbar.delay" type="int"/>
+  <preference id="browser.urlbar.formatting.enabled" name="browser.urlbar.formatting.enabled" type="bool"/>
+  <preference id="browser.urlbar.trimURLs" name="browser.urlbar.trimURLs" type="bool"/>
 
   <preference id="browser.blink_allowed" name="browser.blink_allowed" type="bool"/>
   <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool"/>
@@ -559,6 +561,11 @@ gPrefWindow.prefBrowser = {
       <label value="&miliseconds;" control="urlbar-delay"/>
     </hbox>
   </vbox>
+  <groupbox>
+    <caption label="&browser.urlbar.formatting.label;"/>
+    <checkbox label="&browser.urlbar.formatting.formatting-enabled.label;" preference="browser.urlbar.formatting.enabled"/>
+    <checkbox label="&browser.urlbar.formatting.trimURLs.label;" preference="browser.urlbar.trimURLs"/>
+  </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="html">
   <checkbox label="&browser.html.allowBlink.label;" preference="browser.blink_allowed"/>
