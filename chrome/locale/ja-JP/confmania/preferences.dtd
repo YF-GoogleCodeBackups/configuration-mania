@@ -26,6 +26,9 @@
 <!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "&#34;javascript:&#34;のアドレス（ブックマークレット）を表示しない">
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "最大表示項目数">
 <!ENTITY browser.urlbar.autoComplete.delay.label "自動補完を始めるまでの待ち時間 : ">
+<!ENTITY browser.urlbar.formatting.label "整形">
+<!ENTITY browser.urlbar.formatting.formatting-enabled.label "ドメイン名を強調表示 (Firefox 6+)">
+<!ENTITY browser.urlbar.formatting.trimURLs.label "http:// を省略して表示 (Firefox 7)">
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowBlink.label "点滅テキストを有効にする">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
