@@ -477,7 +477,6 @@ gPrefWindow.prefBrowser = {
   <preference id="browser.cache.disk.parent_directory" name="browser.cache.disk.parent_directory" type="string"/>
 
   <preference id="geo.enabled" name="geo.enabled" type="bool"/>
-  <preference id="network.websocket.enabled" name="network.websocket.enabled" type="bool"/>
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
   <checkbox label="&browser.others.prompts_tab_modal_enabled.label;" preference="prompts.tab_modal.enabled"/>
@@ -922,7 +921,6 @@ gPrefWindow.prefBrowser = {
 
 <box class="subtabpanel" orient="vertical" id="others">
   <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled"/>
-  <checkbox label="&browser.others.websocket_enabled.label;" preference="network.websocket.enabled"/>
   <groupbox>
     <caption label="&browser.others.dns.label;"/>
     <checkbox label="&browser.others.dns.disableIPv6.label;" preference="network.dns.disableIPv6"/>
