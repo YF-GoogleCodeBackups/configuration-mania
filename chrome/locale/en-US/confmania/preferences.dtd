@@ -26,6 +26,10 @@
 <!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Filter out bookmarklet (&quot;javascript:&quot; URLs)">
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maximum number of entries">
 <!ENTITY browser.urlbar.autoComplete.delay.label "Wait time of starting to autocomplete :">
+<!ENTITY browser.urlbar.formatting.label "Formatting">
+<!ENTITY browser.urlbar.formatting.formatting-enabled.label "Enable domain highlighting. (Firefox 6+)">
+<!ENTITY browser.urlbar.formatting.trimURLs.label "Drop http:// prefix. (Firefox 7)">
+
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowBlink.label "Allow blinking text">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
@@ -158,7 +162,6 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
 <!ENTITY browser.others.label "Others">
 <!ENTITY browser.others.geo_enabled.label "Enable Geolocation">
-<!ENTITY browser.others.websocket_enabled.label "Enable WebSocket (Firefox 4.0+)">
 <!ENTITY browser.others.dns.label "DNS Setting">
 <!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
