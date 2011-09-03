@@ -52,8 +52,6 @@
   <preference name="javascript.options.strict" id="javascript.options.strict" type="bool"/>
   <preference name="javascript.options.showInConsole" id="javascript.options.showInConsole" type="bool"/>
   <preference name="layout.css.report_errors" id="layout.css.report_errors" type="bool"/>
-  <preference name="javascript.options.jit.content" id="javascript.options.jit.content" type="bool"/>
-  <preference name="javascript.options.jit.chrome" id="javascript.options.jit.chrome" type="bool"/>
   <preference name="javascript.options.jitprofiling.content" id="javascript.options.jitprofiling.content" type="bool"/>
   <preference name="javascript.options.jitprofiling.chrome" id="javascript.options.jitprofiling.chrome" type="bool"/>
   <preference name="javascript.options.methodjit.content" id="javascript.options.methodjit.content" type="bool"/>
@@ -75,14 +73,6 @@
           preference="javascript.options.showInConsole"/>
 <checkbox label="&debug.debug.csserr.label;"
           preference="layout.css.report_errors"/>
-</groupbox>
-
-<groupbox orient="horizontal">
-<caption label="&debug.tracemonkey.label;"/>
-<checkbox label="&debug.tracemonkey.content.label;"
-          preference="javascript.options.jit.content"/>
-<checkbox label="&debug.tracemonkey.chrome.label;"
-          preference="javascript.options.jit.chrome"/>
 </groupbox>
 
 <groupbox>

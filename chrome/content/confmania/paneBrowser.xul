@@ -97,8 +97,6 @@
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
   <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
-  <preference id="browser.tabs.tabMinWidth" name="browser.tabs.tabMinWidth" type="int"/>
-  <preference id="browser.tabs.tabMaxWidth" name="browser.tabs.tabMaxWidth" type="int"/>
   <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
   <preference id="browser.tabs.insertRelatedAfterCurrent" name="browser.tabs.insertRelatedAfterCurrent" type="bool"/>
   <preference id="browser.tabs.loadBookmarksInBackground" name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
@@ -335,13 +333,6 @@
       <radio value="2" label="&browser.tabs.closeButtons.no.label;"/>
       <radio value="3" label="&browser.tabs.closeButtons.end.label;"/>
     </radiogroup>
-  </groupbox>
-  <groupbox orient="horizontal" align="center">
-    <caption label="&browser.tabs.tabWidth.label;"/>
-    <label value="&browser.tabs.tabWidth.min.label;" control="tabs-tabMinWidth"/>
-    <textbox id="tabs-tabMinWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMinWidth" size="4"/>
-    <label value="&browser.tabs.tabWidth.max.label;" control="tabs-tabMaxWidth"/>
-    <textbox id="tabs-tabMaxWidth" type="number" hidespinbuttons="true" preference="browser.tabs.tabMaxWidth" size="4"/>
   </groupbox>
 
   <checkbox label="&browser.tabs.seachOpenintab.label;" preference="browser.search.openintab"/>
