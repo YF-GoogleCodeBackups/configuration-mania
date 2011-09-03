@@ -56,6 +56,8 @@
   <preference name="extensions.checkCompatibility.5.0" id="extensions.checkCompatibility.5.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.6.0a" id="extensions.checkCompatibility.6.0a" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.6.0" id="extensions.checkCompatibility.6.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.7.0a" id="extensions.checkCompatibility.7.0a" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.7.0" id="extensions.checkCompatibility.7.0" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
   <preference name="dom.ipc.plugins.enabled" id="dom.ipc.plugins.enabled" type="bool"/>
@@ -71,14 +73,20 @@
   <textbox id="ext-delay" preference="security.dialog_enable_delay" type="number" hidespinbuttons="true" min="0" size="4"/>
   <label value="&miliseconds;"/>
 </hbox>
-<groupbox orient="horizontal">
+<groupbox>
 <caption label="&addons.noCheckCompatibility.label;"/>
+<hbox>
 <checkbox label="Firefox 3.5" preference="extensions.checkCompatibility"/>
 <checkbox label="Firefox 3.6" preference="extensions.checkCompatibility.3.6"/>
 <checkbox label="Firefox 4.0" preference="extensions.checkCompatibility.4.0"/>
 <checkbox label="Firefox 5.0" preference="extensions.checkCompatibility.5.0"/>
+</hbox>
+<hbox>
 <checkbox label="Firefox 6.0a" preference="extensions.checkCompatibility.6.0a"/>
 <checkbox label="Firefox 6.0" preference="extensions.checkCompatibility.6.0"/>
+<checkbox label="Firefox 7.0a" preference="extensions.checkCompatibility.7.0a"/>
+<checkbox label="Firefox 7.0" preference="extensions.checkCompatibility.7.0"/>
+</hbox>
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
           preference="extensions.checkUpdateSecurity"/>

@@ -26,6 +26,9 @@
 <!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "&#34;javascript:&#34;のアドレス（ブックマークレット）を表示しない">
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "最大表示項目数">
 <!ENTITY browser.urlbar.autoComplete.delay.label "自動補完を始めるまでの待ち時間 : ">
+<!ENTITY browser.urlbar.formatting.label "整形">
+<!ENTITY browser.urlbar.formatting.formatting-enabled.label "ドメイン名を強調表示 (Firefox 6+)">
+<!ENTITY browser.urlbar.formatting.trimURLs.label "http:// を省略して表示 (Firefox 7)">
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowBlink.label "点滅テキストを有効にする">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
@@ -158,7 +161,6 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
 <!ENTITY browser.others.label "その他">
 <!ENTITY browser.others.geo_enabled.label "位置情報通信機能を有効にする">
-<!ENTITY browser.others.websocket_enabled.label "WebSocket 機能を有効にする (Firefox 4.0以降)">
 <!ENTITY browser.others.dns.label "名前解決(DNS)">
 <!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
 <!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">
