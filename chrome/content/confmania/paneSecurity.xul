@@ -214,74 +214,50 @@
     preference="network.IDN_show_punycode"/>
   <description id="showPunycodeDesc" class="indent">&security.net.show_punycode.desc;</description>
 </tabpanel>
-<tabpanel>
-  <tabbox flex="1">
-    <tabs>
-      <tab label="&security.privacy.form.label;"/>
-      <tab label="&security.privacy.history.label;"/>
-      <tab label="&security.privacy.passwd.label;"/>
-    </tabs>
-    <tabpanels>
-      <tabpanel orient="vertical">
-        <checkbox label="&security.privacy.form.autofillForms.label;"
-                  preference="signon.autofillForms"/>
-      </tabpanel>
-      <tabpanel orient="vertical">
-        <groupbox>
-          <caption label="&security.privacy.history.history.label;"/>
-          <hbox align="center">
-            <label value="&security.privacy.history.history.expireDays1.label;"
-                   control="histDay"/>
-            <textbox id="histDay"
-                     type="number"
-                     size="4"
-                     preference="browser.history_expire_days"/>
-            <label value="&security.privacy.history.history.expireDays2.label;"/>
-          </hbox>
-          <hbox align="center">
-            <label value="&security.privacy.history.history.expireSites1.label;"
-                   control="histSites"/>
-            <textbox id="histSites"
-                     type="number"
-                     size="6"
-                     preference="browser.history_expire_sites"/>
-            <label value="&security.privacy.history.history.expireSites2.label;"/>
-          </hbox>
-        </groupbox>
-        <groupbox>
-          <caption label="&security.privacy.history.cookie.label;"/>
-          <hbox align="center">
-            <label value="&security.privacy.history.cookie.lifetimedays.label;" control="cookieLifetimeDays"/>
-            <textbox id="cookieLifetimeDays" type="number" hidespinbuttons="true" size="2" preference="network.cookie.lifetime.days"/>
-            <label value="&days;"/>
-          </hbox>
-        </groupbox>
-      </tabpanel>
-      <tabpanel orient="vertical">
-        <groupbox>
-          <caption label="&security.privacy.passwd.managepassword.label;"/>
-          <checkbox hidden="true" id="askEveryTimeHidden" preference="signon.expireMasterPassword"/>
-          <label value="&security.privacy.passwd.managepassword.text;"/>
-          <radiogroup id="passwordAskTimes" preference="security.ask_for_password">
-            <!-- Components.interfaces.nsIPK11Token.ASK_FIRST_TIME == 0 -->
-            <radio value="0" label="&security.privacy.passwd.managepassword.askfirsttime;"
-              oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
-            <!-- Components.interfaces.nsIPK11Token.ASK_EVERY_TIME == -1 -->
-            <radio value="-1" label="&security.privacy.passwd.managepassword.askeverytime;"
-              oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
-            <hbox align="center">
-              <!-- Components.interfaces.nsIPK11Token.ASK_EXPIRE_TIME == 1 -->
-              <radio value="1" label="&security.privacy.passwd.managepassword.asktimeout;"
-                oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
-              <textbox id="passwordTimeout" type="number" hidespinbuttons="true" size="4" label="security.password_lifetime"/>
-              <label value="&security.privacy.passwd.managepassword.timeout.unit;"/>
-            </hbox>
-          </radiogroup>
-        </groupbox>
-        <description>&security.privacy.passwd.desc;</description>
-      </tabpanel>
-    </tabpanels>
-  </tabbox>
+<tabpanel orient="vertical">
+  <hbox>
+    <groupbox>
+      <caption label="&security.privacy.form.label;"/>
+      <checkbox label="&security.privacy.form.autofillForms.label;"
+                preference="signon.autofillForms"/>
+    </groupbox>
+    <groupbox>
+      <caption label="&security.privacy.history.label;"/>
+
+      <groupbox>
+        <caption label="&security.privacy.history.cookie.label;"/>
+        <hbox align="center">
+          <label value="&security.privacy.history.cookie.lifetimedays.label;" control="cookieLifetimeDays"/>
+          <textbox id="cookieLifetimeDays" type="number" hidespinbuttons="true" size="2" preference="network.cookie.lifetime.days"/>
+          <label value="&days;"/>
+        </hbox>
+      </groupbox>
+    </groupbox>
+  </hbox>
+  <groupbox>
+    <caption label="&security.privacy.passwd.label;"/>
+    <groupbox>
+      <caption label="&security.privacy.passwd.managepassword.label;"/>
+      <checkbox hidden="true" id="askEveryTimeHidden" preference="signon.expireMasterPassword"/>
+      <label value="&security.privacy.passwd.managepassword.text;"/>
+      <radiogroup id="passwordAskTimes" preference="security.ask_for_password">
+        <!-- Components.interfaces.nsIPK11Token.ASK_FIRST_TIME == 0 -->
+        <radio value="0" label="&security.privacy.passwd.managepassword.askfirsttime;"
+          oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
+        <!-- Components.interfaces.nsIPK11Token.ASK_EVERY_TIME == -1 -->
+        <radio value="-1" label="&security.privacy.passwd.managepassword.askeverytime;"
+          oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
+        <hbox align="center">
+          <!-- Components.interfaces.nsIPK11Token.ASK_EXPIRE_TIME == 1 -->
+          <radio value="1" label="&security.privacy.passwd.managepassword.asktimeout;"
+            oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
+          <textbox id="passwordTimeout" type="number" hidespinbuttons="true" size="4" label="security.password_lifetime"/>
+          <label value="&security.privacy.passwd.managepassword.timeout.unit;"/>
+        </hbox>
+      </radiogroup>
+    </groupbox>
+    <description>&security.privacy.passwd.desc;</description>
+  </groupbox>
 </tabpanel>
 </tabpanels>
 </tabbox>

@@ -96,7 +96,6 @@
   <preference id="ui.key.menuAccessKey" name="ui.key.menuAccessKey" type="int"/>
 
   <preference id="bidi.browser.ui" name="bidi.browser.ui" type="bool"/>
-  <preference id="bidi.controlstextmode" name="bidi.controlstextmode" type="int"/>
   <preference id="bidi.direction" name="bidi.direction" type="int"/>
   <preference id="bidi.numeral" name="bidi.numeral" type="int"/>
   <preference id="bidi.support" name="bidi.support" type="int"/>
@@ -301,14 +300,6 @@
       <grid>
       <columns><column/><column flex="1"/></columns>
       <rows>
-      <row align="center">
-        <label value="&ui.bidi.controlstextmode.label;"/>
-        <radiogroup id="bidi-controlstextmode" orient="horizontal" preference="bidi.controlstextmode">
-          <radio value="1" label="&ui.bidi.controlstextmode.logical.label;"/>
-          <radio value="2" label="&ui.bidi.controlstextmode.visual.label;"/>
-          <radio value="3" label="&ui.bidi.controlstextmode.container.label;"/>
-        </radiogroup>
-      </row>
       <row align="center">
         <label value="&ui.bidi.direction.label;"/>
         <radiogroup id="bidi-direction" orient="horizontal" preference="bidi.direction">
