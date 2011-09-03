@@ -227,6 +227,15 @@ gPrefWindow.prefBrowser = {
     mData.value = event.target.value;
     document.documentElement.currentPane.userChangedValue(mData);
   },
+  onUserAgentSyncTo: function() {
+    var e = document.getElementById("ua-value");
+    if (e.value == "") {
+      gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
+      return null;
+    } else {
+      return undefined;
+    }
+  },
   resetUserAgent : function(){
     gPrefWindow.resetPref(document.getElementById("general.useragent.override"));
   },

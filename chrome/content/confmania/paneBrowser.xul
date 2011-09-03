@@ -475,7 +475,8 @@
 
   <hbox align="center">
     <label value="&browser.ua.text.label;" control="ua-value"/>
-    <textbox id="ua-value" flex="1" preference="general.useragent.override"/>
+    <textbox id="ua-value" flex="1" preference="general.useragent.override"
+             onsynctopreference="return gPrefWindow.prefBrowser.onUserAgentSyncTo();"/>
   </hbox>
   <hbox align="center" pack="end">
     <button type="menu" label="&browser.ua.presets.label;"
