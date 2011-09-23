@@ -21,6 +21,8 @@ gPrefWindow.prefBrowser = {
     var prefBranch = Components.classes['@mozilla.org/preferences-service;1']
       .getService(Components.interfaces.nsIPrefBranch);
     var language = prefBranch.getCharPref("general.useragent.locale");
+    var appversion = Components.classes["@mozilla.org/xre/app-info;1"]
+      .getService(Components.interfaces.nsIXULAppInfo).version;
 
     var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
               .createInstance(Components.interfaces.nsIXMLHttpRequest);
@@ -29,12 +31,11 @@ gPrefWindow.prefBrowser = {
       if(req.readyState != 4) return;
       var doc = req.responseXML;
 
-      var m = Components.classes['@mozilla.org/network/protocol;1?name=http']
-       .getService(Components.interfaces.nsIHttpProtocolHandler);
       var presetpopup = document.getElementById("ua-presets-popup");
       var menupopuptable = {"{opt:this}": document.getElementById("ua-presets-this-popup")};
 
       const OS_PARAM_LANGUAGE        = /\{language\??\}/g;
+      const OS_PARAM_APP_VERSION     = /\{appversion\??\}/g;
       const OPT_PARAM_GENERIC        = /\{opt:([a-zA-Z]+)\??\}/g;
       const OPT_PARAM_DEFAULT        = /\{opt:default\}/g;
       const OS_PARAM_OPTIONAL        = /\{\w+\?\}/g;
@@ -60,8 +61,9 @@ gPrefWindow.prefBrowser = {
         value = value.replace(OPT_PARAM_GENERIC, function(str, optattr) {
           return o.getAttribute(optattr) || b.getAttribute(optattr) || "";
         });
-        value = value.replace(OS_PARAM_LANGUAGE, language);
         value = value.replace(OS_PARAM_OPTIONAL, "");
+        value = value.replace(OS_PARAM_LANGUAGE, language);
+        value = value.replace(OS_PARAM_APP_VERSION, appversion);
 
         var oMenupopup = menupopuptable[bname];
         var oMenuItem = document.createElement("menuitem");
@@ -336,3 +338,4 @@ gPrefWindow.prefBrowser = {
     return (val != null)? val : defaultValue;
   }
 };
+

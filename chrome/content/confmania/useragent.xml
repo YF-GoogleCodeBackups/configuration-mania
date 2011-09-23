@@ -10,11 +10,11 @@
     <option name="Linux x64" oscpu="Linux x86_64" platform="X11"/>
     <option name="FreeBSD x86" oscpu="FreeBSD i686" platform="X11"/>
     <option name="FreeBSD x64" oscpu="FreeBSD x86_64" platform="X11"/>
+    <option name="Mobile Android ARMv7" value="{opt:default} Fennec/{appversion}" oscpu="Linux armv7l" platform="Android"/>
   </group>
   <group name="Microsoft Internet Explorer" value="Mozilla/4.0 (compatible; MSIE {opt:version}; {opt:oscpu}{opt:extra})">
     <option name="IE 6 (Windows XP SP3, .NET 1.0~2.0)" version="6.0" oscpu="Windows NT 5.1" extra="; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727"/>
     <option name="IE 7 (Windows XP SP3, .NET 1.0~2.0)" version="7.0" oscpu="Windows NT 5.1" extra="; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727"/>
-    <option name="IE 8 (Windows Vista SP2, .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.0" extra="; Trident/4.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.21022; .NET CLR 3.5.30729"/>
     <option name="IE 8 (Windows 7 x86 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.4506.2152; Media Center PC 6.0"/>
     <option name="IE 8 (Windows 7 x64 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1; Win64; x64" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.4506.2152; Media Center PC 6.0"/>
     <option name="IE 8 (Windows 7 x64 WOW64 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1; WOW64" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.4506.2152; Media Center PC 6.0"/>
@@ -27,14 +27,14 @@
     <option name="Safari 5.0.2 (iPhone; iOS 4.3.3)" platform="iPhone" oscpu="CPU iPhone OS 4_3_3 like Mac OS X" webkit="533.17.9" safari="6533.18.5" version="5.0.2 Mobile/8J2"/>
     <option name="Safari 5.0.2 (iPad; iOS 4.3.3)" platform="iPad" oscpu="CPU OS 4_3_3 like Mac OS X" webkit="533.17.9" safari="6533.18.5" version="5.0.2 Mobile/8J3"/>
   </group>
-  <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
+  <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
     <option name="Chrome 14.0.835.0 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="535.1" version="14.0.835.0"/>
     <option name="Chrome 14.0.835.0 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="535.1" version="14.0.835.0"/>
 
     <option name="Chrome 4.0 (Nexus S; Android 2.3.4 Gingerbread)" value="Mozilla/5.0 (Linux; U; Android 2.3.4; {language}; Nexus S Build/GRI20) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"/>
   </group>
   <group name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
-    <option name="Opera 11.50 (Windows 7)" oscpu="Windows NT 6.1" presto="2.9.168" version="11.50"/>
+    <option name="Opera 11.51 (Windows 7)" oscpu="Windows NT 6.1" presto="2.9.168" version="11.51"/>
   </group>
   <group name="Nintendo DS/Wii" value="">
     <option name="Nintendo DS Browser (Nintendo DSi)" value="Opera/{opt:version} (Nintendo DSi; Opera/466; U; {language})" version="9.50"/>
