@@ -1,6 +1,9 @@
 overlay	chrome://browser/content/browser.xul	chrome://confmania/content/browser-Overlay.xul
 content	confmania	chrome/content/confmania/
 
+override chrome://confmania/content/options.xul chrome://confmania/content/preferences.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<7.0
+override chrome://confmania/content/preferences.xul chrome://confmania/content/preferences-fennec.xul application={a23983c0-fd0e-11dc-95ff-0800200c9a66}
+
 override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=Linux
 override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=FreeBSD
 override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=OpenBSD
