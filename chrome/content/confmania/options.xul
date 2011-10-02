@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <setting type="control" title="Configuration Mania">
+    <button label="Open" oncommand="openDialog('chrome://confmania/content/preferences.xul', 'confmania', 'chrome,titlebar,toolbar,centerscreen,resizable,modal');" />
+  </setting>
+</vbox>
