@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is the Configuration Mania.
+   -
+   - The Initial Developer of the Original Code is Popoki Tom.
+   - Portions created by the Initial Developer are Copyright (C) 2004
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -     Popoki Tom (cat_in_136) (Configuration Mania)
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+]>
+
+<overlay id="paneDebugOverlay"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneDebug" orient="vertical">
+
+<preferences>
+  <preference name="browser.dom.window.dump.enabled" id="browser.dom.window.dump.enabled" type="bool"/>
+  <preference name="javascript.options.strict" id="javascript.options.strict" type="bool"/>
+  <preference name="javascript.options.showInConsole" id="javascript.options.showInConsole" type="bool"/>
+  <preference name="layout.css.report_errors" id="layout.css.report_errors" type="bool"/>
+  <preference name="javascript.options.jitprofiling.content" id="javascript.options.jitprofiling.content" type="bool"/>
+  <preference name="javascript.options.jitprofiling.chrome" id="javascript.options.jitprofiling.chrome" type="bool"/>
+  <preference name="javascript.options.methodjit.content" id="javascript.options.methodjit.content" type="bool"/>
+  <preference name="javascript.options.methodjit.chrome" id="javascript.options.methodjit.chrome" type="bool"/>
+  <preference name="javascript.options.tracejit.content" id="javascript.options.tracejit.content" type="bool"/>
+  <preference name="javascript.options.tracejit.chrome" id="javascript.options.tracejit.chrome" type="bool"/>
+  <preference name="nglayout.debug.disable_xul_cache" id="nglayout.debug.disable_xul_cache" type="bool"/>
+  <preference name="browser.cache.disk.enable" id="browser.cache.disk.enable" type="bool" inverted="true"/>
+  <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
+</preferences>
+
+<groupbox>
+<caption label="&debug.debug.label;"/>
+<checkbox label="&debug.debug.dump.label;"
+          preference="browser.dom.window.dump.enabled"/>
+<checkbox label="&debug.debug.jsstrict.label;"
+          preference="javascript.options.strict"/>
+<checkbox label="&debug.debug.chromeerr.label;"
+          preference="javascript.options.showInConsole"/>
+<checkbox label="&debug.debug.csserr.label;"
+          preference="layout.css.report_errors"/>
+</groupbox>
+
+<groupbox>
+<caption label="&debug.jit.label;"/>
+<hbox align="center">
+<label value="&debug.jit.jitprofiling.label;"/>
+<checkbox label="&debug.jit.content.label;" preference="javascript.options.jitprofiling.content"/>
+<checkbox label="&debug.jit.chrome.label;" preference="javascript.options.jitprofiling.chrome"/>
+</hbox>
+<hbox align="center">
+<label value="&debug.jit.methodjit.label;"/>
+<checkbox label="&debug.jit.content.label;" preference="javascript.options.methodjit.content"/>
+<checkbox label="&debug.jit.chrome.label;" preference="javascript.options.methodjit.chrome"/>
+</hbox>
+<hbox align="center">
+<label value="&debug.jit.tracejit.label;"/>
+<checkbox label="&debug.jit.content.label;" preference="javascript.options.tracejit.content"/>
+<checkbox label="&debug.jit.chrome.label;" preference="javascript.options.tracejit.chrome"/>
+</hbox>
+</groupbox>
+
+<groupbox orient="horizontal">
+<caption label="&debug.cache.label;"/>
+<checkbox label="&debug.cache.disableXULCache.label;"
+          preference="nglayout.debug.disable_xul_cache"/>
+<checkbox label="&debug.cache.diskCacheDisable.label;"
+          preference="browser.cache.disk.enable"/>
+<!--checkbox label="&debug.cache.memoryCacheDisable.label;"
+          preference="browser.cache.memory.enable"/-->
+</groupbox>
+
+</prefpane>
+</overlay>

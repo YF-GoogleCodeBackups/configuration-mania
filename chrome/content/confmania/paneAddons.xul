@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is the Configuration Mania.
+   -
+   - The Initial Developer of the Original Code is Popoki Tom.
+   - Portions created by the Initial Developer are Copyright (C) 2010
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -     Popoki Tom (cat_in_136) (Configuration Mania)
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+]>
+
+<overlay id="paneDebugOverlay"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneAddons" orient="vertical">
+
+<preferences>
+  <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
+  <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
+  <preference name="extensions.checkCompatibility.4.0" id="extensions.checkCompatibility.4.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.5.0" id="extensions.checkCompatibility.5.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.6.0" id="extensions.checkCompatibility.6.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.7.0" id="extensions.checkCompatibility.7.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.8.0a" id="extensions.checkCompatibility.8.0a" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.8.0" id="extensions.checkCompatibility.8.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.9.0a" id="extensions.checkCompatibility.9.0a" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.9.0" id="extensions.checkCompatibility.9.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
+  <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
+  <preference name="dom.ipc.plugins.enabled" id="dom.ipc.plugins.enabled" type="bool"/>
+  <preference name="extensions.alwaysUnpack" id="extensions.alwaysUnpack" type="bool"/>
+</preferences>
+
+<hbox align="center">
+  <label value="&addons.get_addons_maxResults.label;" control="ext-maxResults"/>
+  <textbox id="ext-maxResults" preference="extensions.getAddons.maxResults" type="number" hidespinbuttons="true" min="1" size="3"/>
+</hbox>
+<hbox align="center">
+  <label value="&addons.dialog_enable_delay.label;" control="ext-delay"/>
+  <textbox id="ext-delay" preference="security.dialog_enable_delay" type="number" hidespinbuttons="true" min="0" size="4"/>
+  <label value="&miliseconds;"/>
+</hbox>
+<groupbox>
+<caption label="&addons.noCheckCompatibility.label;"/>
+<hbox>
+<checkbox label="Firefox 4.0" preference="extensions.checkCompatibility.4.0"/>
+<checkbox label="Firefox 5.0" preference="extensions.checkCompatibility.5.0"/>
+<checkbox label="Firefox 6.0" preference="extensions.checkCompatibility.6.0"/>
+<checkbox label="Firefox 7.0" preference="extensions.checkCompatibility.7.0"/>
+</hbox>
+<hbox>
+<checkbox label="Firefox 8.0a" preference="extensions.checkCompatibility.8.0a"/>
+<checkbox label="Firefox 8.0" preference="extensions.checkCompatibility.8.0"/>
+<checkbox label="Firefox 9.0a" preference="extensions.checkCompatibility.9.0a"/>
+<checkbox label="Firefox 9.0" preference="extensions.checkCompatibility.9.0"/>
+</hbox>
+</groupbox>
+<checkbox label="&addons.noCheckUpdateSecurity.label;"
+          preference="extensions.checkUpdateSecurity"/>
+<checkbox label="&addons.installButton.label;"
+          preference="extensions.hideInstallButton"/>
+<checkbox label="&addons.oopp.label;"
+          preference="dom.ipc.plugins.enabled"/>
+<checkbox label="&addons.alwaysUnpack.label;"
+          preference="extensions.alwaysUnpack"/>
+
+</prefpane>
+</overlay>
