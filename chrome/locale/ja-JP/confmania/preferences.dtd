@@ -231,6 +231,7 @@
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "現在のURLを例外として予め自動で入力しておくが、SSL証明書の取得は自動で行わない。">
 <!ENTITY security.ssl.ssl_override_behavior.prefetch.label "現在のURLを例外として予め入力し、さらにSSL証明書も自動取得する。">
 <!ENTITY security.net.label "ネットワーク">
+<!ENTITY security.net.redirection-limit.label "HTTP リダイレクト限界数">
 <!ENTITY security.net.enableIDN.label "IDN (国際化ドメイン名) を有効にする">
 <!ENTITY security.net.show_punycode.label "IDN を punycode で表示する">
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
@@ -253,6 +254,44 @@
 <!ENTITY security.privacy.passwd.managepassword.asktimeout "前回使用後">
 <!ENTITY security.privacy.passwd.managepassword.timeout.unit "分以上経ったとき">
 <!ENTITY security.privacy.passwd.desc "ヒント: マスターパスワードの設定は &brandShortName; の設定ダイアログにあります。">
+<!ENTITY security.referer.label "Referrer">
+<!ENTITY security.referer.none.label "常に送らない (非推奨)">
+<!ENTITY security.referer.none.desc "警告: しばしば、Referrer ヘッダが要求されることがあります。もしそのようなことがあった時には、この設定を&quot;&security.referer.link.label;&quot;及び&quot;&security.referer.all.label;&quot;に変更して下さい。">
+<!ENTITY security.referer.link.label "リンクのクリック時のみ送る">
+<!ENTITY security.referer.all.label "画像要求も送る">
+<!ENTITY security.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送る">
+<!ENTITY security.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Referrerは送られません">
+
+<!ENTITY http.title "HTTP ネットワーク">
+<!ENTITY http.connect.label "接続">
+<!ENTITY http.connect.desc "HTTP 接続はこれらの設定を使ってパフォーマンスや互換性を増すように調整されています。いくつかのプロキシサーバは、例えば HTTP/1.0 を要求することが知られています。">
+<!ENTITY http.connect.direct.label "直接接続の設定">
+<!ENTITY http.connect.proxy.label "プロキシ接続の設定">
+<!ENTITY http.connect.HTTP10.label "HTTP 1.0 を使う">
+<!ENTITY http.connect.HTTP11.label "HTTP 1.1 を使う">
+<!ENTITY http.connect.keepAlive.label "接続の持続 (Keep-Alive) を有効にする">
+<!ENTITY http.connect.pipeline.label "パイプラインを有効にする">
+<!ENTITY http.connect.pipeline.desc "警告: パイプラインは、まだ実験的な機能です。この機能を利用するとページの読み込み速度が向上しますが、一部のウェブ サーバやプロキシではそれら自身の不具合によって速度が落ちたり、まったく接続できなくなったりします。">
+<!ENTITY http.connect.HTTP10.accesskey "U">
+<!ENTITY http.connect.HTTP10Proxy.accesskey "S">
+<!ENTITY http.connect.HTTP11.accesskey "E">
+<!ENTITY http.connect.HTTP11Proxy.accesskey "T">
+<!ENTITY http.connect.keepAlive.accesskey "K">
+<!ENTITY http.connect.keepAliveProxy.accesskey "A">
+<!ENTITY http.connect.pipeline.accesskey "P">
+<!ENTITY http.connect.pipelineProxy.accesskey "N">
+<!ENTITY http.ad.label "詳細">
+<!ENTITY http.ad.accept.label "送信される 'Accept' HTTP ヘッダ">
+<!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
+<!ENTITY http.ad.accept.default.label "Accept">
+<!ENTITY http.ad.maxsession.label "最大セッション接続">
+<!ENTITY http.ad.maxsession.desc "警告: RFC 2616 を完全に理解していないならば設定を変更しないでください。">
+<!ENTITY http.ad.maxsession.maxpipeliningrequest.label "最大パイプライン要求数">
+<!ENTITY http.ad.maxsession.maxconnections.label "最大接続数 (延べ)">
+<!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "最大接続数 (サーバ当たり)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "注意: 2 を超えるべからず (RFC 2616), (標準値: Firefox3,IE8:6, Opera,Safari:4, Firefox2,IE7:2)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
 
 <!ENTITY ui.title "インターフェイス">
 <!ENTITY ui.mousewheel.label "マウスホイール">
