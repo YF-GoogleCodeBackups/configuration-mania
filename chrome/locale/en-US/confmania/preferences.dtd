@@ -232,6 +232,7 @@
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate.">
 <!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Pre-populate the current URL and pre-fetch the certificate.">
 <!ENTITY security.net.label "Network">
+<!ENTITY security.net.redirection-limit.label "HTTP Redirection limit">
 <!ENTITY security.net.enableIDN.label "Enable IDN(Internationalized Domain Names)">
 <!ENTITY security.net.show_punycode.label "Show IDN in punycode">
 <!ENTITY security.net.show_punycode.desc "There is no need to show IDN in punycode. Current &brandShortName; refuses illegal IDN addresses by using the black/white list.">
@@ -254,6 +255,45 @@
 <!ENTITY security.privacy.passwd.managepassword.asktimeout "If it has not been used for">
 <!ENTITY security.privacy.passwd.managepassword.timeout.unit "minutes or longer">
 <!ENTITY security.privacy.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
+<!ENTITY security.referer.label "Referrer">
+<!ENTITY security.referer.none.label "Never Send (Not recommended)">
+<!ENTITY security.referer.none.desc "WARNING: Sending the Referrer header may sometimes be required. If you experience with getting to some sites, this setting can be changed to &quot;&security.referer.link.label;&quot; or &quot;&security.referer.all.label;&quot;.">
+<!ENTITY security.referer.link.label "Send only on clicks">
+<!ENTITY security.referer.all.label "Send on image requests as well">
+<!ENTITY security.referer.secureXSite.label "Send the Referrer header when navigating from a https site to another https site">
+<!ENTITY security.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https server to a non-secure server.">
+
+<!ENTITY http.title "HTTP Network">
+<!ENTITY http.connect.label "Connection">
+<!ENTITY http.connect.desc "HTTP connections may be fine-tuned using these options to
+enhance either performance or compatibility. Some proxy servers, for example, are known to require HTTP/1.0.">
+<!ENTITY http.connect.direct.label "Direct Connection Options">
+<!ENTITY http.connect.proxy.label "Proxy Connection Options">
+<!ENTITY http.connect.HTTP10.label "Use HTTP 1.0">
+<!ENTITY http.connect.HTTP11.label "Use HTTP 1.1">
+<!ENTITY http.connect.keepAlive.label "Enable Keep-Alive">
+<!ENTITY http.connect.pipeline.label "Enable Pipelining">
+<!ENTITY http.connect.pipeline.desc "WARNING: pipelining is an experimental feature, designed to improve page-load performance, that is unfortunately not well supported by some web servers and proxies.">
+<!ENTITY http.connect.HTTP10.accesskey "U">
+<!ENTITY http.connect.HTTP10Proxy.accesskey "S">
+<!ENTITY http.connect.HTTP11.accesskey "E">
+<!ENTITY http.connect.HTTP11Proxy.accesskey "T">
+<!ENTITY http.connect.keepAlive.accesskey "K">
+<!ENTITY http.connect.keepAliveProxy.accesskey "A">
+<!ENTITY http.connect.pipeline.accesskey "P">
+<!ENTITY http.connect.pipelineProxy.accesskey "N">
+<!ENTITY http.ad.label "Advanced">
+<!ENTITY http.ad.accept.label "Transmitted 'Accept' HTTP Headers">
+<!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
+<!ENTITY http.ad.accept.default.label "Accept">
+<!ENTITY http.ad.maxsession.label "Maximum session connenction">
+<!ENTITY http.ad.maxsession.desc "WARNING: Do not change this unless you have a complete understanding of RFC 2616.">
+<!ENTITY http.ad.maxsession.maxpipeliningrequest.label "Max pipelining Request">
+<!ENTITY http.ad.maxsession.maxconnections.label "Max Connection (Total)">
+<!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "Max Connection (per Server)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "Max Persistent Connection (per Server)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "Caution: SHOULD NOT maintain more than 2 (RFC 2616) (Default: Firefox3,IE8:6, Opera,Safari:4, Firefox2,IE7:2)">
+<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "Max Persistent Connection (via Proxy)">
 
 <!ENTITY ui.title "UI">
 <!ENTITY ui.mousewheel.label "Mouse wheel">
