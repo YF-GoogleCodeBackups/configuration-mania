@@ -30,6 +30,11 @@ gPrefWindow.prefSecurity = {
     }
     return undefined; // no override
   },
+  onSendRefererSecureXSiteSyncFrom: function() {
+    let disabled = document.getElementById("network.http.sendRefererHeader").value == "0";
+    document.getElementById("network.http.sendSecureXSiteReferrer").disabled = disabled;
+    return undefined; // no override
+  },
   updatePasswordAskTimes : function(){
     var radiogroup = document.getElementById("passwordAskTimes");
     var askEveryTimeHidden = document.getElementById("askEveryTimeHidden");
