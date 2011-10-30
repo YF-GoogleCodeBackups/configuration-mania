@@ -101,7 +101,7 @@
 <!ENTITY browser.sessionStore.privacy_level.any.label "for any site">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
 <!ENTITY browser.sessionStore.privacy_level.never.label "Never">
-<!ENTITY browser.sessionStore.concurrent.label "Number of concurrently restored tabs (Firefox 4.0+)">
+<!ENTITY browser.sessionStore.concurrent.label "Number of concurrently restored tabs (Firefox 4-7)">
 <!ENTITY browser.sessionStore.concurrent.all.label "All tabs can restore at the same time">
 <!ENTITY browser.sessionStore.concurrent.bartab.label "Only the selected tab in each window will be restored. Other tabs won't be restored until they are selected.">
 <!ENTITY browser.sessionStore.concurrent.number.label "Restore up to">
