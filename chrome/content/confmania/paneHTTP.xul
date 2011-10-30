@@ -66,15 +66,6 @@
   <preference id="network.http.max-persistent-connections-per-server" name="network.http.max-persistent-connections-per-server" type="int"/>
   <preference id="network.http.max-persistent-connections-per-proxy" name="network.http.max-persistent-connections-per-proxy" type="int"/>
 </preferences>
-<script><![CDATA[
-var gHTTPPane = {
-  resetAdvMaxSess : function(){
-    Array.forEach(document.getElementById("http-ad-maxsess").getElementsByTagName("textbox"), function(elem){
-      gPrefWindow.resetPref(document.getElementById(elem.getAttribute("preference")));
-    });
-  }
-};
-]]></script>
 
 <tabbox flex="1">
 <tabs>
@@ -131,7 +122,7 @@ var gHTTPPane = {
   <caption label="&http.ad.maxsession.label;"/>
   <hbox>
     <description flex="1" class="emphasis">&http.ad.maxsession.desc;</description>
-    <button label="&reset;" oncommand="gHTTPPane.resetAdvMaxSess();"/>
+    <button label="&reset;" oncommand="gPrefWindow.prefHTTP.resetAdvMaxSess();"/>
   </hbox>
   <hbox align="center">
     <label control="maxpipeliningrequest" value="&http.ad.maxsession.maxpipeliningrequest.label;"/>
