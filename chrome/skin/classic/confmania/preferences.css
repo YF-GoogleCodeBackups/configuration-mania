@@ -79,5 +79,12 @@ prefwindow[animated="true"] #paneBrowserBoxContainer .subtabpanel {
 }
 
 .emphasis{ font-weight: bold ! important; }
+vbox.warning {
+  color: #f00;
+  background-color: #fff;
+  border: double 5px #f00;
+  border-radius: 5px;
+  margin: 2px;
+}
 
 *|*:-moz-any-link:hover{ color: -moz-nativehyperlinktext; text-decoration: underline; }
