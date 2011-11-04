@@ -67,6 +67,10 @@
   <preference id="network.http.max-persistent-connections-per-proxy" name="network.http.max-persistent-connections-per-proxy" type="int"/>
 </preferences>
 
+<vbox orient="vertical" class="warning">
+<description>&harmfulWarning;</description>
+</vbox>
+
 <tabbox flex="1">
 <tabs>
 <tab label="&http.connect.label;"/>
@@ -120,34 +124,36 @@
 </groupbox>
 <groupbox id="http-ad-maxsess">
   <caption label="&http.ad.maxsession.label;"/>
-  <hbox>
-    <description flex="1" class="emphasis">&http.ad.maxsession.desc;</description>
-    <button label="&reset;" oncommand="gPrefWindow.prefHTTP.resetAdvMaxSess();"/>
-  </hbox>
-  <hbox align="center">
-    <label control="maxpipeliningrequest" value="&http.ad.maxsession.maxpipeliningrequest.label;"/>
-    <textbox id="maxpipeliningrequest" type="number" hidespinbuttons="true" min="1" size="1" preference="network.http.pipelining.maxrequests"/>
-  </hbox>
-  <hbox align="center">
-    <label control="maxconnections" value="&http.ad.maxsession.maxconnections.label;"/>
-    <textbox id="maxconnections" type="number" hidespinbuttons="true" min="1" size="2" preference="network.http.max-connections"/>
-  </hbox>
-  <hbox class="indent" align="center">
-    <label control="maxconnectionsPerServer" value="&http.ad.maxsession.maxconnectionsPerServer.label;"/>
-    <textbox id="maxconnectionsPerServer" type="number" hidespinbuttons="true" min="1" size="1" preference="network.http.max-connections-per-server"/>
-  </hbox>
-  <vbox class="indent">
-    <hbox align="center">
-      <label control="maxpersistentconnectionsPerServer" value="&http.ad.maxsession.maxpersistentconnectionsPerServer.label;"/>
-      <textbox id="maxpersistentconnectionsPerServer" min="1" type="number" hidespinbuttons="true" size="1" preference="network.http.max-persistent-connections-per-server"/>
-    </hbox>
-    <description class="indent">&http.ad.maxsession.maxpersistentconnectionsPerServer.caution;</description>
-  </vbox>
-  <hbox class="indent" align="center">
-    <label control="maxpersistentconnectionsPerProxy" value="&http.ad.maxsession.maxpersistentconnectionsPerProxy.label;"/>
-    <textbox id="maxpersistentconnectionsPerProxy" min="1" type="number" hidespinbuttons="true" size="1" preference="network.http.max-persistent-connections-per-proxy"/>
-  </hbox>
-
+  <grid>
+    <columns><column/><column/></columns>
+    <rows>
+      <row align="center">
+        <label control="maxpipeliningrequest" value="&http.ad.maxsession.maxpipeliningrequest.label;"/>
+        <textbox id="maxpipeliningrequest" type="number" hidespinbuttons="true" min="1" size="4" preference="network.http.pipelining.maxrequests"/>
+      </row>
+      <row align="center">
+        <label control="maxconnections" value="&http.ad.maxsession.maxconnections.label;"/>
+        <textbox id="maxconnections" type="number" hidespinbuttons="true" min="1" size="4" preference="network.http.max-connections"/>
+      </row>
+    </rows>
+  </grid>
+  <grid class="indent">
+    <columns><column/><column/></columns>
+    <rows>
+      <row align="center">
+        <label control="maxconnectionsPerServer" value="&http.ad.maxsession.maxconnectionsPerServer.label;"/>
+        <textbox id="maxconnectionsPerServer" type="number" hidespinbuttons="true" min="1" size="1" preference="network.http.max-connections-per-server"/>
+      </row>
+      <row align="center">
+        <label control="maxpersistentconnectionsPerServer" value="&http.ad.maxsession.maxpersistentconnectionsPerServer.label;"/>
+        <textbox id="maxpersistentconnectionsPerServer" min="1" type="number" hidespinbuttons="true" size="1" preference="network.http.max-persistent-connections-per-server"/>
+      </row>
+      <row align="center">
+        <label control="maxpersistentconnectionsPerProxy" value="&http.ad.maxsession.maxpersistentconnectionsPerProxy.label;"/>
+        <textbox id="maxpersistentconnectionsPerProxy" min="1" type="number" hidespinbuttons="true" size="1" preference="network.http.max-persistent-connections-per-proxy"/>
+      </row>
+    </rows>
+  </grid>
 </groupbox>
 </tabpanel>
 </tabpanels>
