@@ -59,8 +59,8 @@
   <preference name="extensions.checkCompatibility.7.0" id="extensions.checkCompatibility.7.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.8.0a" id="extensions.checkCompatibility.8.0a" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.8.0" id="extensions.checkCompatibility.8.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.9.0a" id="extensions.checkCompatibility.8.0a" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.9.0" id="extensions.checkCompatibility.8.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.9.0a" id="extensions.checkCompatibility.9.0a" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.9.0" id="extensions.checkCompatibility.9.0" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
   <preference name="dom.ipc.plugins.enabled" id="dom.ipc.plugins.enabled" type="bool"/>
