@@ -285,12 +285,10 @@
 <!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
 <!ENTITY http.ad.accept.default.label "Accept">
 <!ENTITY http.ad.maxsession.label "最大セッション接続">
-<!ENTITY http.ad.maxsession.desc "警告: RFC 2616 を完全に理解していないならば設定を変更しないでください。">
 <!ENTITY http.ad.maxsession.maxpipeliningrequest.label "最大パイプライン要求数">
 <!ENTITY http.ad.maxsession.maxconnections.label "最大接続数 (延べ)">
 <!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "最大接続数 (サーバ当たり)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
-<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.caution "注意: 2 を超えるべからず (RFC 2616), (標準値: Firefox3,IE8:6, Opera,Safari:4, Firefox2,IE7:2)">
 <!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
 
 <!ENTITY ui.title "インターフェイス">
