@@ -74,9 +74,6 @@
 <!ENTITY browser.tabs.closeButtons.no.label "常に表示しない">
 <!ENTITY browser.tabs.closeButtons.end.label "タブバーの端に表示 (Firefox1.xの動作)">
 <!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ">
-<!ENTITY browser.tabs.tabWidth.label "タブの最小/最大サイズ (Firefox 3.x)">
-<!ENTITY browser.tabs.tabWidth.min.label "最小">
-<!ENTITY browser.tabs.tabWidth.max.label "最大">
 <!ENTITY browser.tabs.seachOpenintab.label "検索バーでの検索結果を新しいタブで開く">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "ページから開く新規タブを現在のタブの右に開く (Firefox3.6+)">
 <!ENTITY browser.tabs.autoselect.label "自動タブ選択">
@@ -304,10 +301,6 @@
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
 <!ENTITY ui.bidi.label "BiDi">
 <!ENTITY ui.bidi.ui.label "BiDi (双方向テキスト) のインターフェイスを有効に">
-<!ENTITY ui.bidi.controlstextmode.label "コントロール (Firefox 3.x)">
-<!ENTITY ui.bidi.controlstextmode.logical.label "Logical">
-<!ENTITY ui.bidi.controlstextmode.visual.label "Visual">
-<!ENTITY ui.bidi.controlstextmode.container.label "Container">
 <!ENTITY ui.bidi.direction.label "方向">
 <!ENTITY ui.bidi.direction.ltr.label "-&gt; 左から右">
 <!ENTITY ui.bidi.direction.rtl.label "&lt;- 右から左">
@@ -367,9 +360,6 @@
 <!ENTITY debug.debug.jsstrict.label "JavaScript の厳密なエラーを出力する">
 <!ENTITY debug.debug.chromeerr.label "クロム (chrome) の JavaScript エラー/警告も表示する">
 <!ENTITY debug.debug.csserr.label "スタイルシートの解析エラーも表示する">
-<!ENTITY debug.tracemonkey.label "JavaScriptのJITコンパイラ(TraceMonkey)を有効に(Firefox 3.x):">
-<!ENTITY debug.tracemonkey.content.label "ウェブページ">
-<!ENTITY debug.tracemonkey.chrome.label "UI">
 <!ENTITY debug.jit.label "JavaScriptのJITコンパイラ設定(Firefox 4.0以降)">
 <!ENTITY debug.jit.jitprofiling.label "Tuning JIT heuristicsを有効">
 <!ENTITY debug.jit.methodjit.label "J&#xe4;gerMonkey (baseline JIT)を有効">

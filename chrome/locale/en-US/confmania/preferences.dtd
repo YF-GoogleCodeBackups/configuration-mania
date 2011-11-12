@@ -75,9 +75,6 @@
 <!ENTITY browser.tabs.closeButtons.no.label "Not any close button">
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
-<!ENTITY browser.tabs.tabWidth.label "Minimum/Maximum tab width (Firefox 3.x)">
-<!ENTITY browser.tabs.tabWidth.min.label "Minimum">
-<!ENTITY browser.tabs.tabWidth.max.label "Maximum">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab (Firefox 3.6+)">
 <!ENTITY browser.tabs.autoselect.label "Auto tab selection">
@@ -305,10 +302,6 @@
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
 <!ENTITY ui.bidi.label "Bidi">
 <!ENTITY ui.bidi.ui.label "Enable Bi-Directional (BiDi) UI">
-<!ENTITY ui.bidi.controlstextmode.label "Controls (Firefox 3.x)">
-<!ENTITY ui.bidi.controlstextmode.logical.label "Logical">
-<!ENTITY ui.bidi.controlstextmode.visual.label "Visual">
-<!ENTITY ui.bidi.controlstextmode.container.label "Container">
 <!ENTITY ui.bidi.direction.label "Direction">
 <!ENTITY ui.bidi.direction.ltr.label "-&gt; Left-to-right">
 <!ENTITY ui.bidi.direction.rtl.label "&lt;- Right-to-left">
@@ -368,9 +361,6 @@
 <!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
-<!ENTITY debug.tracemonkey.label "Enable JIT (TraceMonkey) with JavaScript (Firefox 3.x) ...">
-<!ENTITY debug.tracemonkey.content.label "on webpages">
-<!ENTITY debug.tracemonkey.chrome.label "on UI">
 <!ENTITY debug.jit.label "JavaScript JIT Compiler Setting (Firefox 4.0+)">
 <!ENTITY debug.jit.jitprofiling.label "Enable tuning JIT heuristics">
 <!ENTITY debug.jit.methodjit.label "Enable JagerMonkey (baseline JIT)">
