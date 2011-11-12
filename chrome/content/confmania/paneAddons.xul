@@ -50,12 +50,9 @@
 <preferences>
   <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
   <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
-  <preference name="extensions.checkCompatibility" id="extensions.checkCompatibility" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.3.6" id="extensions.checkCompatibility.3.6" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.4.0" id="extensions.checkCompatibility.4.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.5.0" id="extensions.checkCompatibility.5.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.6.0" id="extensions.checkCompatibility.6.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.7.0a" id="extensions.checkCompatibility.7.0a" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.7.0" id="extensions.checkCompatibility.7.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.8.0a" id="extensions.checkCompatibility.8.0a" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.8.0" id="extensions.checkCompatibility.8.0" type="bool" inverted="true"/>
@@ -79,19 +76,14 @@
 <groupbox>
 <caption label="&addons.noCheckCompatibility.label;"/>
 <hbox>
-<checkbox label="Firefox 3.5" preference="extensions.checkCompatibility"/>
-<checkbox label="Firefox 3.6" preference="extensions.checkCompatibility.3.6"/>
 <checkbox label="Firefox 4.0" preference="extensions.checkCompatibility.4.0"/>
 <checkbox label="Firefox 5.0" preference="extensions.checkCompatibility.5.0"/>
+<checkbox label="Firefox 6.0" preference="extensions.checkCompatibility.6.0"/>
+<checkbox label="Firefox 7.0" preference="extensions.checkCompatibility.7.0"/>
 </hbox>
 <hbox>
-<checkbox label="Firefox 6.0" preference="extensions.checkCompatibility.6.0"/>
-<checkbox label="Firefox 7.0a" preference="extensions.checkCompatibility.7.0a"/>
-<checkbox label="Firefox 7.0" preference="extensions.checkCompatibility.7.0"/>
 <checkbox label="Firefox 8.0a" preference="extensions.checkCompatibility.8.0a"/>
 <checkbox label="Firefox 8.0" preference="extensions.checkCompatibility.8.0"/>
-</hbox>
-<hbox>
 <checkbox label="Firefox 9.0a" preference="extensions.checkCompatibility.9.0a"/>
 <checkbox label="Firefox 9.0" preference="extensions.checkCompatibility.9.0"/>
 </hbox>
