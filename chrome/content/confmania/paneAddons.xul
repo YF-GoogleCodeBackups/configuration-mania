@@ -92,8 +92,6 @@
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
           preference="extensions.checkUpdateSecurity"/>
-<checkbox label="&addons.installButton.label;"
-          preference="extensions.hideInstallButton"/>
 <checkbox label="&addons.oopp.label;"
           preference="dom.ipc.plugins.enabled"/>
 <checkbox label="&addons.alwaysUnpack.label;"

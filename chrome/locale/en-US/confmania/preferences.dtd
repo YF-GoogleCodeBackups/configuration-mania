@@ -51,8 +51,8 @@
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.html5.label "Enable HTML 5 Parsing">
 <!ENTITY browser.html.enableSVG.label "Enable rendering SVG content">
-<!ENTITY browser.html.enableSVGSMIL.label "Enable SMIL content (Firefox 4.0+)">
-<!ENTITY browser.html.webgl.label "Enable WebGL (Firefox 4.0+; takes effect after restart)">
+<!ENTITY browser.html.enableSVGSMIL.label "Enable SMIL content">
+<!ENTITY browser.html.webgl.label "Enable WebGL (takes effect after restart)">
 <!ENTITY browser.html.webgl.software_render.label "Use software rendering">
 <!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib path :">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
@@ -62,7 +62,7 @@
 <!ENTITY browser.html.focus.bg.label "Background Color">
 <!ENTITY browser.html.focus.fg.label "Text Color">
 <!ENTITY browser.html.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">
-<!ENTITY browser.html.acceleration.label "Hardware acceleration (Firefox 4.0+)">
+<!ENTITY browser.html.acceleration.label "Hardware acceleration">
 <!ENTITY browser.html.acceleration.disabled.label "Disable acceleration for all widgets">
 <!ENTITY browser.html.acceleration.force-enabled.label "Force acceleration on, ignoring blacklists">
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Disable the automatic detection and use of direct2d (Windows)">
@@ -76,16 +76,16 @@
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
-<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab (Firefox 3.6+)">
+<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab">
 <!ENTITY browser.tabs.autoselect.label "Auto tab selection">
 <!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
 <!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
 <!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "When closed tab, Focus back to the tab that opened it">
-<!ENTITY browser.tabs.tabpreview.label "Enable thumbnail preview (Firefox3.6+)">
+<!ENTITY browser.tabs.tabpreview.label "Enable thumbnail preview">
 <!ENTITY browser.tabs.tabpreview.alltabs.label "on the All tabs panel">
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
 <!ENTITY browser.tabs.tabpreview.taskbar.label "on Taskbar (Windows7)">
-<!ENTITY browser.tabs.animation.label "Animation (Firefox 4.0+)">
+<!ENTITY browser.tabs.animation.label "Animation">
 <!ENTITY browser.tabs.animation.animate_tab.label "Opening/Closing tab">
 <!ENTITY browser.tabs.animation.panorama.label "Tab Groups (Panorama)">
 <!ENTITY browser.sessionStore.label "Session Store">
@@ -162,7 +162,7 @@
 <!ENTITY browser.others.dns.label "DNS Setting">
 <!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
-<!ENTITY browser.others.prompts_tab_modal_enabled.label "Use tab modal dialog for alert()/prompt()/confirm() (Firefox 4.0+)">
+<!ENTITY browser.others.prompts_tab_modal_enabled.label "Use tab modal dialog for alert()/prompt()/confirm()">
 <!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
@@ -240,11 +240,6 @@
 <!ENTITY security.privacy.form.label "Form">
 <!ENTITY security.privacy.form.autofillForms.label "Automatically fill sign-in forms">
 <!ENTITY security.privacy.history.label "History">
-<!ENTITY security.privacy.history.history.label "Browsing History (Firefox 3.x)">
-<!ENTITY security.privacy.history.history.expireDays1.label "Remember visited pages for up to">
-<!ENTITY security.privacy.history.history.expireDays2.label "days">
-<!ENTITY security.privacy.history.history.expireSites1.label "Remember up to">
-<!ENTITY security.privacy.history.history.expireSites2.label "visited pages">
 <!ENTITY security.privacy.history.cookie.label "Cookie">
 <!ENTITY security.privacy.history.cookie.lifetimedays.label "Accept cookies for">
 <!ENTITY security.privacy.passwd.label "Master Password">
@@ -389,9 +384,8 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY addons.dialog_enable_delay.label "Time to start add-on installations :">
 <!ENTITY addons.noCheckCompatibility.label "Do Not check add-on compatibility with :">
 <!ENTITY addons.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
-<!ENTITY addons.installButton.label "Show Install button on the add-on dialog (Firefox 3.x)">
-<!ENTITY addons.oopp.label "Run browser plugins in an own process (OOPP) (Firefox 3.6.4+)">
-<!ENTITY addons.alwaysUnpack.label "Always unpack XPI file (Firefox 4.0+)">
+<!ENTITY addons.oopp.label "Run browser plugins in an own process (OOPP)">
+<!ENTITY addons.alwaysUnpack.label "Always unpack XPI file">
 
 <!ENTITY debug.title "Debug">
 <!ENTITY debug.debug.label "For Debugging">
@@ -399,7 +393,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
-<!ENTITY debug.jit.label "JavaScript JIT Compiler Setting (Firefox 4.0+)">
+<!ENTITY debug.jit.label "JavaScript JIT Compiler Setting">
 <!ENTITY debug.jit.jitprofiling.label "Enable tuning JIT heuristics">
 <!ENTITY debug.jit.methodjit.label "Enable JagerMonkey (baseline JIT)">
 <!ENTITY debug.jit.tracejit.label "Enable TraceMonkey (native-code compiler)">
