@@ -49,7 +49,6 @@
 <!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
 <!ENTITY browser.html.html5.label "HTML 5 パーサーを有効にする">
-<!ENTITY browser.html.enableSVG.label "SVG を表示する">
 <!ENTITY browser.html.enableSVGSMIL.label "SMIL を有効にする">
 <!ENTITY browser.html.webgl.label "WebGL を有効にする (再起動必要)">
 <!ENTITY browser.html.webgl.software_render.label "ソフトウェアレンダリングする">
