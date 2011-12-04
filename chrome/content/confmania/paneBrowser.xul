@@ -489,7 +489,7 @@
   <hbox align="center">
     <label control="speed-paintDalay" value="&browser.speed-paint.delay.label;"/>
     <textbox id="speed-paintDalay" type="number" hidespinbuttons="true" size="3" preference="nglayout.initialpaint.delay"
-     onsyncfrompreference="return gPrefWindow.prefBrowser.syncFrom(this, 250);"/>
+     onsyncfrompreference="return gPrefWindow.syncFrom(this, 250);"/>
     <label value="&miliseconds;"/>
   </hbox>
   <label value="&browser.speed-paint.notify-backoffcount.label;"/>
@@ -503,7 +503,7 @@
   <html:div>
     <label value="&browser.speed-paint.notify-interval.label;" control="speed-notify-interval"/>
     <textbox id="speed-notify-interval" type="number" hidespinbuttons="true" preference="content.notify.interval" size="6"
-     onsyncfrompreference="return gPrefWindow.prefBrowser.syncFrom(this, 120000);"/>
+     onsyncfrompreference="return gPrefWindow.syncFrom(this, 120000);"/>
     <label value="&microseconds;"/>
   </html:div>
   <checkbox preference="content.interrupt.parsing" id="speed-interrupt-parsing"
@@ -523,7 +523,7 @@
     <label value="&browser.speed-paint.content-switch-threshold.label;" control="speed-switch-threshold"/>
     <textbox id="speed-switch-threshold" type="number" hidespinbuttons="true" preference="content.switch.threshold"
      size="8"
-     onsyncfrompreference="return gPrefWindow.prefBrowser.syncFrom(this, 750000);"/>
+     onsyncfrompreference="return gPrefWindow.syncFrom(this, 750000);"/>
     <label value="&microseconds;"/>
   </html:div>
   <description class="indent">&browser.speed-paint.content-switch-threshold.desc;</description>
@@ -586,7 +586,7 @@
     <caption label="&browser.others.dns.label;"/>
     <checkbox label="&browser.others.dns.disableIPv6.label;" preference="network.dns.disableIPv6"/>
     <checkbox label="&browser.others.dns.prefetch.label;" preference="network.dns.disablePrefetch"
-     onsyncfrompreference="return gPrefWindow.prefBrowser.syncFrom(this, true);"/>
+     onsyncfrompreference="return gPrefWindow.syncFrom(this, true);"/>
   </groupbox>
 
   <checkbox label="&browser.others.prompts_tab_modal_enabled.label;" preference="prompts.tab_modal.enabled"/>

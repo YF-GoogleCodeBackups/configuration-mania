@@ -340,11 +340,6 @@ gPrefWindow.prefBrowser = {
     } else {
       return undefined;
     }
-  },
-
-  syncFrom : function(elem,defaultValue){
-    var val = document.getElementById(elem.getAttribute("preference")).value;
-    return (val != null)? val : defaultValue;
   }
 };
 
