@@ -65,6 +65,21 @@ var gPrefWindow = {
     openURL("http://kb.mozillazine.org/"+encodeURI(prefstr));
   },
 
+  syncFrom : function(elem,defaultValue){
+    var val = document.getElementById(elem.getAttribute("preference")).value;
+    return (val != null)? val : defaultValue;
+  },
+  syncTo : function(elem,defaultValue){
+    var value = elem.value;
+    if (elem.localName == "checkbox") { value = elem.checked; }
+    if (elem.localName == "colorpicker") { value = elem.color; }
+    if (value == defaultValue) {
+      gPrefWindow.resetPref(document.getElementById(elem.getAttribute("preference")));
+      return null;
+    } else {
+      return undefined;
+    }
+  },
   radioGrConnSyncFrom: function (groupid, dataid, defaultdat) {
         var mData = document.getElementById(dataid);
         var mGroup = document.getElementById(groupid);

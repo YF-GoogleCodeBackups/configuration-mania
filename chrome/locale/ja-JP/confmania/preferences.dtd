@@ -382,6 +382,7 @@
 <!ENTITY addons.dialog_enable_delay.label "インストール開始するまでの時間">
 <!ENTITY addons.noCheckCompatibility.label "アドオンの以下のバージョンとの適合確認をしない :">
 <!ENTITY addons.noCheckUpdateSecurity.label "アドオンの署名チェックをしない">
+<!ENTITY addons.allowNonBuiltInCerts.label "XPIファイルのダウンロードや更新の時に非ビルトイン証明書の使用を許可する">
 <!ENTITY addons.oopp.label "ブラウザプラグインを独自プロセスで動作(OOPP)">
 <!ENTITY addons.alwaysUnpack.label "XPIファイルを常に展開する">
 

@@ -61,6 +61,7 @@
   <preference name="extensions.checkCompatibility.11.0a" id="extensions.checkCompatibility.11.0a" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.11.0" id="extensions.checkCompatibility.11.0" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
+  <preference name="extensions.install.requireBuiltInCerts" id="extensions.install.requireBuiltInCerts" type="bool" inverted="true"/>
   <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
   <preference name="dom.ipc.plugins.enabled" id="dom.ipc.plugins.enabled" type="bool"/>
   <preference name="extensions.alwaysUnpack" id="extensions.alwaysUnpack" type="bool"/>
@@ -95,6 +96,9 @@
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
           preference="extensions.checkUpdateSecurity"/>
+<checkbox label="&addons.allowNonBuiltInCerts.label;"
+          preference="extensions.install.requireBuiltInCerts"
+          onsynctopreference="return gPrefWindow.syncTo(this, false);"/>
 <checkbox label="&addons.oopp.label;"
           preference="dom.ipc.plugins.enabled"/>
 <checkbox label="&addons.alwaysUnpack.label;"
