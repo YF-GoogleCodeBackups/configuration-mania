@@ -332,6 +332,15 @@ gPrefWindow.prefBrowser = {
     document.getElementById("alerts.slideIncrement").value = 10;
     document.getElementById("alerts.slideIncrementTime").value = 20;
   },
+  onOthersHistoryExpirationMaxPagesSyncTo: function() {
+    var e = document.getElementById("others-historyExpirationMaxPages");
+    if (e.value == -1) {
+      gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
+      return null;
+    } else {
+      return undefined;
+    }
+  },
 
   syncFrom : function(elem,defaultValue){
     var val = document.getElementById(elem.getAttribute("preference")).value;
