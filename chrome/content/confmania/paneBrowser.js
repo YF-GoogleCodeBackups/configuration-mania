@@ -229,15 +229,6 @@ gPrefWindow.prefBrowser = {
     mData.value = event.target.value;
     document.documentElement.currentPane.userChangedValue(mData);
   },
-  onUserAgentSyncTo: function() {
-    var e = document.getElementById("ua-value");
-    if (e.value == "") {
-      gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
-      return null;
-    } else {
-      return undefined;
-    }
-  },
   resetUserAgent : function(){
     gPrefWindow.resetPref(document.getElementById("general.useragent.override"));
   },
@@ -286,15 +277,6 @@ gPrefWindow.prefBrowser = {
     const filter = Components.interfaces.nsIFilePicker.filterApps | Components.interfaces.nsIFilePicker.filterAll;
     this._openBrowse(filter, "others-editorExternal-path");
   },
-  onBrowserCacheDiskCacheFolderSyncTo : function() {
-    var e = document.getElementById("browserCacheDiskCacheFolder");
-    if (e.value == "") {
-      gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
-      return null;
-    } else {
-      return undefined;
-    }
-  },
   onBrowserCacheDiskCacheFolderBrowse : function(){
     var folderField = document.getElementById("browserCacheDiskCacheFolder");
 
@@ -331,15 +313,6 @@ gPrefWindow.prefBrowser = {
   setAlertsSlideLight : function(){//#alerts.slide*
     document.getElementById("alerts.slideIncrement").value = 10;
     document.getElementById("alerts.slideIncrementTime").value = 20;
-  },
-  onOthersHistoryExpirationMaxPagesSyncTo: function() {
-    var e = document.getElementById("others-historyExpirationMaxPages");
-    if (e.value == -1) {
-      gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
-      return null;
-    } else {
-      return undefined;
-    }
   }
 };
 

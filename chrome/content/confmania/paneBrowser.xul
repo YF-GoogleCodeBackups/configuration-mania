@@ -466,7 +466,7 @@
   <hbox align="center">
     <label value="&browser.ua.text.label;" control="ua-value"/>
     <textbox id="ua-value" flex="1" preference="general.useragent.override"
-             onsynctopreference="return gPrefWindow.prefBrowser.onUserAgentSyncTo();"/>
+             onsynctopreference="return gPrefWindow.syncTo(this, '');"/>
   </hbox>
   <hbox align="center" pack="end">
     <button type="menu" label="&browser.ua.presets.label;"
@@ -572,7 +572,7 @@
     <hbox align="center">
       <textbox id="browserCacheDiskCacheFolder" flex="1"
                preference="browser.cache.disk.parent_directory"
-               onsynctopreference="return gPrefWindow.prefBrowser.onBrowserCacheDiskCacheFolderSyncTo();"/>
+               onsynctopreference="return gPrefWindow.syncTo(this, '');"/>
       <button label="&browse;" oncommand="gPrefWindow.prefBrowser.onBrowserCacheDiskCacheFolderBrowse();"/>
       <button label="&reset;" oncommand="gPrefWindow.prefBrowser.resetBrowserCacheDiskCacheFolder()"/>
     </hbox>
@@ -617,7 +617,7 @@
         <textbox id="others-historyExpirationMaxPages" type="number" size="4" min="-1"
              preference="places.history.expiration.max_pages"
              onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('others-historyExpirationMaxPages-gr','others-historyExpirationMaxPages',-1);"
-             onsynctopreference="return gPrefWindow.prefBrowser.onOthersHistoryExpirationMaxPagesSyncTo();"/>
+             onsynctopreference="return gPrefWindow.syncTo(this, -1);"/>
       </hbox>
     </radiogroup>
   </groupbox>
