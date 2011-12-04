@@ -169,6 +169,7 @@
 <!ENTITY browser.others.backspace_action.goBack "ページの履歴を戻る(IEと同じ動作)">
 <!ENTITY browser.others.backspace_action.scrollUp "ページをスクロールアップ">
 <!ENTITY browser.others.backspace_action.nothing "何もしない">
+<!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
 
 <!ENTITY security.title "セキュリティ">
 <!ENTITY security.js.label "JavaScript">
