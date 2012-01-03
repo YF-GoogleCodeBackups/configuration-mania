@@ -404,7 +404,7 @@
 <!ENTITY debug.cache.memoryCacheDisable.label "メモリーキャッシュを無効にする">
 
 <!ENTITY miliseconds "ミリ秒">
-<!ENTITY microseconds "&#x03bc;秒">
+<!ENTITY microseconds "マイクロ秒">
 <!ENTITY seconds "秒">
 <!ENTITY days "日">
 <!ENTITY kilobytes "KB">
