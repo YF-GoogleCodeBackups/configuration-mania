@@ -23,7 +23,7 @@
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
 <!ENTITY browser.urlbar.autoComplete.label "自動補完を無効にする">
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "ロケーションバーに入力したURLを自動的に補完">
-<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "&#34;javascript:&#34;のアドレス（ブックマークレット）を表示しない">
+<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "&quot;javascript:&quot;のアドレス（ブックマークレット）を表示しない">
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "最大表示項目数">
 <!ENTITY browser.urlbar.autoComplete.delay.label "自動補完を始めるまでの待ち時間 : ">
 <!ENTITY browser.urlbar.formatting.label "整形">
@@ -119,7 +119,7 @@
 <!ENTITY browser.download.alerts.label "通知アラート表示の設定">
 <!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
 <!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
-<!ENTITY browser.download.alerts.slide.prefix.label "">
+<!ENTITY browser.download.alerts.slide.prefix.label " ">
 <!ENTITY browser.download.alerts.slide.per.label "ピクセルづつ動かす。時間間隔は">
 <!ENTITY browser.download.alerts.slide.settolight.label "軽い設定にする">
 <!ENTITY browser.ua.label "UserAgent">
@@ -373,7 +373,7 @@
 <!ENTITY ui.others.xwin.scrollbarPosition.label "中央ボタンでスクロールバーを調整できるようにする(再起動必要)">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.label "サブメニュー表示遅延時間">
 <!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "なし">
-<!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "&#x221e; (Motif の真似)">
+<!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "∞ (Motif の真似)">
 <!ENTITY ui.others.enable_drag_images.label "ドラッグ中に(可能であれば)画像を表示する">
 <!ENTITY ui.others.xul_file_picker "システムのファイルダイアログを使わずにXULファイルダイアログを使用">
 
@@ -404,7 +404,7 @@
 <!ENTITY debug.cache.memoryCacheDisable.label "メモリーキャッシュを無効にする">
 
 <!ENTITY miliseconds "ミリ秒">
-<!ENTITY microseconds "&#x03bc;秒">
+<!ENTITY microseconds "μ秒">
 <!ENTITY seconds "秒">
 <!ENTITY days "日">
 <!ENTITY kilobytes "KB">
