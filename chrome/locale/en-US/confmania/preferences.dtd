@@ -183,9 +183,9 @@
 <!ENTITY security.js.annoy.change_image.desc "Caution: The setting &quot;&security.js.annoy.change_image;&quot; cause some web applications (such as Google Map) not to work.">
 <!ENTITY security.js.annoy.contextmenu "Disallow to dispatch contextmenu events">
 <!ENTITY security.js.annoy.dispatchLeftClickOnly "Allow to dispatch left click only">
-<!ENTITY security.js.uis.label "Anti UI spoof">
+<!ENTITY security.js.uis.label "UI-Spoofing">
 <!ENTITY security.js.uis.desc1 "Disable hiding (and Enable) when opened by JavaScript :">
-<!ENTITY security.js.uis.desc2 "Make all items checked so as to avoid UI spool.">
+<!ENTITY security.js.uis.desc2 "Checking all items prevent browser UI-spoofing attacks.">
 <!ENTITY security.js.uis.menubar "Menubar">
 <!ENTITY security.js.uis.resizable "Resizable">
 <!ENTITY security.js.uis.scrollbars "Scroll bars">
@@ -260,8 +260,7 @@
 
 <!ENTITY http.title "HTTP Network">
 <!ENTITY http.connect.label "Connection">
-<!ENTITY http.connect.desc "HTTP connections may be fine-tuned using these options to
-enhance either performance or compatibility. Some proxy servers, for example, are known to require HTTP/1.0.">
+<!ENTITY http.connect.desc "HTTP connections may be fine-tuned using these options to enhance either performance or compatibility. Some proxy servers, for example, are known to require HTTP/1.0.">
 <!ENTITY http.connect.direct.label "Direct Connection Options">
 <!ENTITY http.connect.proxy.label "Proxy Connection Options">
 <!ENTITY http.connect.HTTP10.label "Use HTTP 1.0">
@@ -281,7 +280,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY http.ad.accept.label "Transmitted 'Accept' HTTP Headers">
 <!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
 <!ENTITY http.ad.accept.default.label "Accept">
-<!ENTITY http.ad.maxsession.label "Maximum session connenction">
+<!ENTITY http.ad.maxsession.label "Maximum session connection">
 <!ENTITY http.ad.maxsession.maxpipeliningrequest.label "Max pipelining Request">
 <!ENTITY http.ad.maxsession.maxconnections.label "Max Connection (Total)">
 <!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "Max Connection (per Server)">
@@ -406,7 +405,7 @@ enhance either performance or compatibility. Some proxy servers, for example, ar
 <!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">
 
 <!ENTITY miliseconds "[ms]">
-<!ENTITY microseconds "[us]">
+<!ENTITY microseconds "[μs]">
 <!ENTITY seconds "seconds">
 <!ENTITY days "days">
 <!ENTITY kilobytes "KB">
