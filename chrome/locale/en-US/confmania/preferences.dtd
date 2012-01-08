@@ -195,6 +195,8 @@
 <!ENTITY security.js.uis.locationbar "Location bar">
 <!ENTITY security.js.uis.status "Status bar">
 <!ENTITY security.popupwin.label "Popup Win.">
+<!ENTITY security.popupwin.onblock.label "When block popup windows:">
+<!ENTITY security.popupwin.onblock.displayNotification.label "Display a notification bar at the top of the content area">
 <!ENTITY security.popupwin.tabs.label "On opening Popup Windows (window.open) on the Tabbed Browsing:">
 <!ENTITY security.popupwin.tabs.0.label "Same as the link's setting">
 <!ENTITY security.popupwin.tabs.1.label "Open new window">

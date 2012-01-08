@@ -194,6 +194,8 @@
 <!ENTITY security.js.uis.locationbar "場所バー">
 <!ENTITY security.js.uis.status "ステータスバー">
 <!ENTITY security.popupwin.label "ポップアップ">
+<!ENTITY security.popupwin.onblock.label "ポップアップウィンドウをブロックしたとき:">
+<!ENTITY security.popupwin.onblock.displayNotification.label "コンテンツ領域の上部に通知バーを表示する">
 <!ENTITY security.popupwin.tabs.label "タブブラウジングでのポップアップ(window.open)の扱い:">
 <!ENTITY security.popupwin.tabs.0.label "リンクの設定と同様に処理">
 <!ENTITY security.popupwin.tabs.1.label "ウィンドウを開く">
