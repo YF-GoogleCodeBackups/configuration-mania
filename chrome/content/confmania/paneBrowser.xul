@@ -152,6 +152,7 @@
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
+  <preference id="accessibility.accesskeycausesactivation" name="accessibility.accesskeycausesactivation" type="bool"/>
   <preference id="places.history.expiration.max_pages" name="places.history.expiration.max_pages" type="int"/>
 </preferences>
 
@@ -606,6 +607,11 @@
       <radio value="1" label="&browser.others.backspace_action.scrollUp;"/>
       <radio value="2" label="&browser.others.backspace_action.nothing;"/>
     </radiogroup>
+  </groupbox>
+  <groupbox>
+    <caption label="&browser.others.accesibility.label;"/>
+    <checkbox label="&browser.others.accesibility.accesskeycauseactivation.label;"
+              preference="accessibility.accesskeycausesactivation"/>
   </groupbox>
 
   <groupbox>
