@@ -25,7 +25,7 @@
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
 <!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Filter out bookmarklet (&quot;javascript:&quot; URLs)">
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maximum number of entries">
-<!ENTITY browser.urlbar.autoComplete.delay.label "Wait time of starting to autocomplete :">
+<!ENTITY browser.urlbar.autoComplete.delay.label "Delay for starting to autocomplete :">
 <!ENTITY browser.urlbar.formatting.label "Formatting">
 <!ENTITY browser.urlbar.formatting.formatting-enabled.label "Enable domain highlighting. (Firefox 6+)">
 <!ENTITY browser.urlbar.formatting.trimURLs.label "Drop http:// prefix. (Firefox 7)">
@@ -57,7 +57,7 @@
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.zoomSiteSpecific.label "Remember the zoom preferences page by page">
 <!ENTITY browser.html.focus.label "Highlight Focus">
-<!ENTITY browser.html.focus.enabled.label "Make focused object highlighted">
+<!ENTITY browser.html.focus.enabled.label "Highlight focused objects with color">
 <!ENTITY browser.html.focus.bg.label "Background Color">
 <!ENTITY browser.html.focus.fg.label "Text Color">
 <!ENTITY browser.html.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">
@@ -67,11 +67,11 @@
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Disable the automatic detection and use of direct2d (Windows)">
 <!ENTITY browser.html.acceleration.d2d-force-enabled.label "enable Direct2D regardless of automatic detection or blacklisting (Windows)">
 <!ENTITY browser.tabs.label "TabBrowsing">
-<!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window with the last tab">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
 <!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
 <!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
 <!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">
-<!ENTITY browser.tabs.closeButtons.no.label "Not any close button">
+<!ENTITY browser.tabs.closeButtons.no.label "No close button">
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
@@ -79,7 +79,7 @@
 <!ENTITY browser.tabs.autoselect.label "Auto tab selection">
 <!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
 <!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
-<!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "When closed tab, Focus back to the tab that opened it">
+<!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "When closing a tab, Focus back to the tab that opened it">
 <!ENTITY browser.tabs.tabpreview.label "Enable thumbnail preview">
 <!ENTITY browser.tabs.tabpreview.alltabs.label "on the All tabs panel">
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
@@ -113,7 +113,7 @@
 <!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
 <!ENTITY browser.download.flashCount.label "On download completed, the downloads window blinks:">
 <!ENTITY browser.download.flashCount.never.label "Never.">
-<!ENTITY browser.download.flashCount.infinite.label "until window is brought into foreground">
+<!ENTITY browser.download.flashCount.infinite.label "until the window is brought into foreground">
 <!ENTITY browser.download.flashCount.finite.label "">
 <!ENTITY browser.download.flashCount.finite.label2 "times">
 <!ENTITY browser.download.showAlertOnComplete.label "Show alert on download completed">
@@ -153,7 +153,7 @@
 <!ENTITY browser.speed-cache.disk_cache_ssl.label "Also store SSL-connection pages in the cache (INSECURE)">
 <!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
 <!ENTITY browser.speed-cache.session-history-viewers.label "Max Number of pages stored in memory">
-<!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: This improves performance when pressing Back and Forward, If you have a lot of tabs, &brandShortName;'s memory usage can climb dramatically. It's a trade-off.">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: The recently visited pages can be faster when pressing Back and Forward. If you open a lot of tabs, &brandShortName;'s memory usage can increse dramatically. It is a trade-off.">
 <!ENTITY browser.speed-cache.diskCacheFolder.label "Cache Folder Location">
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
 <!ENTITY browser.others.label "Others">
@@ -174,7 +174,7 @@
 <!ENTITY security.title "Security">
 <!ENTITY security.js.label "JavaScript">
 <!ENTITY security.js.annoy.label "More Advanced">
-<!ENTITY security.js.annoy.max_script_run_time.label "Script execution time of which the browser warns">
+<!ENTITY security.js.annoy.max_script_run_time.label "The browser warns when a script is running over ">
 <!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable Closing non-popup windows">
 <!ENTITY security.js.annoy.window_flip "Disable Requesting/Removing window focus">
 <!ENTITY security.js.annoy.window_move_resize "Disable Moving/Resizing existing windows">
@@ -197,8 +197,8 @@
 <!ENTITY security.popupwin.tabs.0.label "Same as the link's setting">
 <!ENTITY security.popupwin.tabs.1.label "Open new window">
 <!ENTITY security.popupwin.tabs.2.label "Same as the link's setting, but open window if specified how to be displayed (Default)">
-<!ENTITY security.popupwin.popup_maximum.label "Maximum count of the windows">
-<!ENTITY security.popupwin.from_plugins.label "Limit to Popup Windows from plugins:">
+<!ENTITY security.popupwin.popup_maximum.label "Max number of popup windows">
+<!ENTITY security.popupwin.from_plugins.label "Restrictions on plugin-initiated popup windows:">
 <!ENTITY security.popupwin.from_plugins.0.label "No restrictions">
 <!ENTITY security.popupwin.from_plugins.1.label "Limit the numbers to &quot;&security.popupwin.popup_maximum.label;&quot;">
 <!ENTITY security.popupwin.from_plugins.2.label "Block all except whitelisted">
@@ -219,8 +219,8 @@
 <!ENTITY security.popupwin.event.dblclick.label "Double Clicked">
 <!ENTITY security.antivirus.label "Anti-Virus">
 <!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
-<!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+ and Windows Vista, this value also indicates whether downloaded files trigger a security warning upon launch.">
-<!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE.">
+<!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+/Vista/7, this value also indicates whether downloaded files trigger a security warning upon launch.">
+<!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE file.">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ...">
 <!ENTITY security.ssl.ssl_domain_display.none.label "favicon only">
@@ -232,8 +232,8 @@
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate.">
 <!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Pre-populate the current URL and pre-fetch the certificate.">
 <!ENTITY security.net.label "Network">
-<!ENTITY security.net.redirection-limit.label "HTTP Redirection limit">
-<!ENTITY security.net.enableIDN.label "Enable IDN(Internationalized Domain Names)">
+<!ENTITY security.net.redirection-limit.label "Max number of HTTP redirections to follow:">
+<!ENTITY security.net.enableIDN.label "Enable IDN (Internationalized Domain Names)">
 <!ENTITY security.net.show_punycode.label "Show IDN in punycode">
 <!ENTITY security.net.show_punycode.desc "There is no need to show IDN in punycode. Current &brandShortName; refuses illegal IDN addresses by using the black/white list.">
 <!ENTITY security.privacy.label "Privacy">
@@ -366,7 +366,7 @@
 <!ENTITY ui.i18n.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
 <!ENTITY ui.others.label "Others">
 <!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
-<!ENTITY ui.others.preference.instanceAccept.label "Apply instance (likely Mac or Gnome)">
+<!ENTITY ui.others.preference.instanceAccept.label "Apply instance and the dialog is modeless  (likely Mac or Gnome)">
 <!ENTITY ui.others.preference.animateFadeIn.label "Animate fade-in (likely Mac)">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) style mouse behavior">
 <!ENTITY ui.others.xwin.autocopy.label "Enable auto-copy selected text (takes effect only *nix)">
@@ -381,7 +381,7 @@
 
 <!ENTITY addons.title "Add-ons">
 <!ENTITY addons.get_addons_maxResults.label "Maximum number of search results to display :">
-<!ENTITY addons.dialog_enable_delay.label "Time to start add-on installations :">
+<!ENTITY addons.dialog_enable_delay.label "Delay before starting add-on installations :">
 <!ENTITY addons.noCheckCompatibility.label "Do Not check add-on compatibility with :">
 <!ENTITY addons.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
 <!ENTITY addons.allowNonBuiltInCerts.label "Allow non-built-in certs to be used for downloading XPIs and update.">
