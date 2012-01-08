@@ -48,6 +48,7 @@
 <!ENTITY browser.html.color_management.mode.on.label "有効にする">
 <!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
+<!ENTITY browser.html.3d-transforms.label "CSS 3D Transforms を有効にする (Firefox 8+)">
 <!ENTITY browser.html.html5.label "HTML 5 パーサーを有効にする">
 <!ENTITY browser.html.enableSVGSMIL.label "SMIL を有効にする">
 <!ENTITY browser.html.webgl.label "WebGL を有効にする (再起動必要)">
