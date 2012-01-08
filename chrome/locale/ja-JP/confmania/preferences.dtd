@@ -288,11 +288,12 @@
 
 <!ENTITY ui.title "インターフェイス">
 <!ENTITY ui.mousewheel.label "マウスホイール">
-<!ENTITY ui.mousewheel.mouseWheelPanel.label "での動作 (装飾キー：">
-<!ENTITY ui.mousewheel.mouseWheelPanel2.label ")">
 <!ENTITY ui.mousewheel.vertiscroll.label "縦のスクロール">
 <!ENTITY ui.mousewheel.horizscroll.label "横のスクロール">
-<!ENTITY ui.mousewheel.usingJustTheWheel.label "なし">
+<!ENTITY ui.mousewheel.usingJustTheWheel.label "装飾キーなし">
+<!ENTITY ui.mousewheel.withAlt.label "Alt">
+<!ENTITY ui.mousewheel.withCtrl.label "Ctrl">
+<!ENTITY ui.mousewheel.withShift.label "Shift">
 <!ENTITY ui.mousewheel.scroll.label "ドキュメントを">
 <!ENTITY ui.mousewheel.scrollLines.label "行づつスクロールする">
 <!ENTITY ui.mousewheel.useSystemDefault.label "システムの標準設定を使用する">

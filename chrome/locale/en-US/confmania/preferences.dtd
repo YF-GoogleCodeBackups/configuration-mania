@@ -289,11 +289,12 @@
 
 <!ENTITY ui.title "UI">
 <!ENTITY ui.mousewheel.label "Mouse wheel">
-<!ENTITY ui.mousewheel.mouseWheelPanel.label "mouse wheel behavior with">
-<!ENTITY ui.mousewheel.mouseWheelPanel2.label "key">
 <!ENTITY ui.mousewheel.vertiscroll.label "Vertical-scroll">
 <!ENTITY ui.mousewheel.horizscroll.label "Horizontal-scroll">
-<!ENTITY ui.mousewheel.usingJustTheWheel.label "No Modifier">
+<!ENTITY ui.mousewheel.usingJustTheWheel.label "No Modifier key">
+<!ENTITY ui.mousewheel.withAlt.label "Alt">
+<!ENTITY ui.mousewheel.withCtrl.label "Ctrl">
+<!ENTITY ui.mousewheel.withShift.label "Shift">
 <!ENTITY ui.mousewheel.scroll.label "Scroll document by">
 <!ENTITY ui.mousewheel.scrollLines.label "lines.">
 <!ENTITY ui.mousewheel.useSystemDefault.label "Use system default">
