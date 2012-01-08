@@ -68,6 +68,8 @@
   <preference id="dom.disable_window_open_feature.location" name="dom.disable_window_open_feature.location" type="bool"/>
   <preference id="dom.disable_window_open_feature.status" name="dom.disable_window_open_feature.status" type="bool"/>
 
+  <preference id="privacy.popups.statusbar_icon_enabled" name="privacy.popups.statusbar_icon_enabled" type="bool"/>
+  <preference id="privacy.popups.showBrowserMessage" name="privacy.popups.showBrowserMessage" type="bool"/>
   <preference id="browser.link.open_newwindow.restriction" name="browser.link.open_newwindow.restriction" type="int"/>
   <preference id="dom.popup_maximum" name="dom.popup_maximum" type="int"/>
   <preference id="privacy.popups.disable_from_plugins" name="privacy.popups.disable_from_plugins" type="int"/>
@@ -148,6 +150,11 @@
 </tabpanel>
 
 <tabpanel orient="vertical">
+  <label value="&security.popupwin.onblock.label;" control="popupwin-displayPopupsNotification"/>
+  <checkbox class="indent" id="popupwin-displayPopupsNotification"
+            label="&security.popupwin.onblock.displayNotification.label;"
+            preference="privacy.popups.showBrowserMessage"/>
+
   <label value="&security.popupwin.tabs.label;"/>
   <radiogroup class="indent" preference="browser.link.open_newwindow.restriction">
     <html:div>
