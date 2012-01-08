@@ -326,7 +326,11 @@
 <!ENTITY ui.keynav.tabNavigationForms.label "Buttons, radio buttons, checkboxes, and lists">
 <!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
 <!ENTITY ui.keynav.tabNavigationTextboxes.label "Note: text boxes are always part of the tabbing order.">
-<!ENTITY ui.keynav.tabNavigationDesc.label "When Tab or Shift+Tab is pressed, move between:">
+<!ENTITY ui.keynav.browseWithCaret.label "Browse With Caret">
+<!ENTITY ui.keynav.browseWithCaret.shortcut.label "Use the F7 shortcut to toggle caret browsing">
+<!ENTITY ui.keynav.browseWithCaret.shortcut.accesskey "F">
+<!ENTITY ui.keynav.browseWithCaret.warn.label "Warn me before turning on caret browsing">
+<!ENTITY ui.keynav.browseWithCaret.warn.accesskey "W">
 <!ENTITY ui.keynav.accelerators.label "Keyboard accelerators">
 <!ENTITY ui.keynav.acceleratorsBlurb.label "A value of zero disables a modifier key.">
 <!ENTITY ui.keynav.acceleratorKey.label "Accelerator key:">

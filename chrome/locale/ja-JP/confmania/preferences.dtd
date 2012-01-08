@@ -325,7 +325,11 @@
 <!ENTITY ui.keynav.tabNavigationForms.label "ボタン、ラジオボタン、チェックボックス、リスト">
 <!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
 <!ENTITY ui.keynav.tabNavigationTextboxes.label "注意: テキストボックスは常にタブ操作の対象になります">
-<!ENTITY ui.keynav.tabNavigationDesc.label "Tab または Shift+Tab が入力されたときに移動:">
+<!ENTITY ui.keynav.browseWithCaret.label "キャレットブラウズ">
+<!ENTITY ui.keynav.browseWithCaret.shortcut.label "F7 キーを押したときキャレットブラウズモードに切り替える">
+<!ENTITY ui.keynav.browseWithCaret.shortcut.accesskey "F">
+<!ENTITY ui.keynav.browseWithCaret.warn.label "キャレットブラウズを有効にする前に警告を出す">
+<!ENTITY ui.keynav.browseWithCaret.warn.accesskey "W">
 <!ENTITY ui.keynav.accelerators.label "キーボードアクセラレータ">
 <!ENTITY ui.keynav.acceleratorsBlurb.label "0 に値を設定すると装飾キーを無効にします。">
 <!ENTITY ui.keynav.acceleratorKey.label "装飾キー(のコード):">

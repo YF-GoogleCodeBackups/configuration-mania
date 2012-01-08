@@ -92,6 +92,8 @@
   <preference id="accessibility.typeaheadfind.casesensitive" name="accessibility.typeaheadfind.casesensitive" type="int"/>
 
   <preference id="accessibility.tabfocus" name="accessibility.tabfocus" type="int"/>
+  <preference id="accessibility.browsewithcaret_shortcut.enabled" name="accessibility.browsewithcaret_shortcut.enabled" type="bool"/>
+  <preference id="accessibility.warn_on_browsewithcaret" name="accessibility.warn_on_browsewithcaret" type="bool"/>
   <preference id="ui.key.accelKey" name="ui.key.accelKey" type="int"/>
   <preference id="ui.key.menuAccessKey" name="ui.key.menuAccessKey" type="int"/>
 
@@ -367,18 +369,33 @@
   </groupbox>
 </tabpanel>
 <tabpanel orient="vertical">
-  <groupbox align="start">
+  <groupbox>
     <caption label="&ui.keynav.tabNavigationBehavior.label;"/>
-    <description value="&ui.keynav.tabNavigationDesc.label;"/>
-    <!-- gData var and kTabTo* consts are declared in pref-keynav.js -->
-    <checkbox id="tabNavigationLinks" class="indent" label="&ui.keynav.tabNavigationLinks.label;"
-     accesskey="&ui.keynav.tabNavigationLinks.accesskey;"
-     oncommand="gPrefWindow.prefUI.tabNavPrefChanged();"/>
-    <checkbox id="tabNavigationForms" class="indent" label="&ui.keynav.tabNavigationForms.label;"
-     accesskey="&ui.keynav.tabNavigationForms.accesskey;"
-     oncommand="gPrefWindow.prefUI.tabNavPrefChanged();"/>
+    <hbox>
+      <checkbox id="tabNavigationLinks" preference="accessibility.tabfocus"
+                label="&ui.keynav.tabNavigationLinks.label;"
+                accesskey="&ui.keynav.tabNavigationLinks.accesskey;"
+                onsyncfrompreference="return gPrefWindow.prefUI.onTabNavSyncFrom(this);"
+                onsynctopreference="return gPrefWindow.prefUI.onTabNavSyncTo(this);"/>
+      <checkbox id="tabNavigationForms" preference="accessibility.tabfocus"
+                label="&ui.keynav.tabNavigationForms.label;"
+                accesskey="&ui.keynav.tabNavigationForms.accesskey;"
+                onsyncfrompreference="return gPrefWindow.prefUI.onTabNavSyncFrom(this);"
+                onsynctopreference="return gPrefWindow.prefUI.onTabNavSyncTo(this);"/>
+    </hbox>
     <description value="&ui.keynav.tabNavigationTextboxes.label;"/>
-    <textbox hidden="true" id="tabFocus" preference="accessibility.tabfocus"/>
+  </groupbox>
+
+  <groupbox align="start">
+    <caption label="&ui.keynav.browseWithCaret.label;"/>
+    <checkbox label="&ui.keynav.browseWithCaret.shortcut.label;"
+              accesskey="&ui.keynav.browseWithCaret.shortcut.accesskey;"
+              preference="accessibility.browsewithcaret_shortcut.enabled"
+              onsyncfrompreference="gPrefWindow.prefUI.onBrowseWithCaretSyncFrom();"/>
+    <checkbox label="&ui.keynav.browseWithCaret.warn.label;"
+              accesskey="&ui.keynav.browseWithCaret.warn.accesskey;"
+              class="indent"
+              preference="accessibility.warn_on_browsewithcaret"/>
   </groupbox>
 
   <groupbox>
