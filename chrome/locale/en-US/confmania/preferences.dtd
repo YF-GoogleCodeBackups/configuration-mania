@@ -402,6 +402,8 @@
 <!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
+<!ENTITY debug.devtools.label "Developer Tools">
+<!ENTITY debug.devtools.inspector_enabled.label "Enable Inspector">
 <!ENTITY debug.jit.label "JavaScript JIT Compiler Setting">
 <!ENTITY debug.jit.jitprofiling.label "Enable tuning JIT heuristics">
 <!ENTITY debug.jit.methodjit.label "Enable JagerMonkey (baseline JIT)">
