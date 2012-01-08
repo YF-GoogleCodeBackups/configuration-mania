@@ -169,6 +169,8 @@
 <!ENTITY browser.others.backspace_action.goBack "Go back a page in the session history (same as IE)">
 <!ENTITY browser.others.backspace_action.scrollUp "Scroll up in the current document">
 <!ENTITY browser.others.backspace_action.nothing "Do nothing">
+<!ENTITY browser.others.accesibility.label "Accesibility">
+<!ENTITY browser.others.accesibility.accesskeycauseactivation.label "Activate the element (e.g. follow a link) using an access key">
 <!ENTITY browser.others.historyExpirationMaxPages.label "Max number of unique URLs to retain in history">
 
 <!ENTITY security.title "Security">
