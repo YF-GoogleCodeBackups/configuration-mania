@@ -1,10 +1,6 @@
 gPrefWindow.prefUI = {
   init : function(){
-    var tabNavPref = parseInt(document.getElementById("tabFocus").value) | 1;
-    document.getElementById("tabNavigationLinks").checked = ((tabNavPref & 4) != 0);
-    document.getElementById("tabNavigationForms").checked = ((tabNavPref & 2) != 0);
     this.initMultitouchPopup();
-    this.tabNavPrefChanged();
   },
   initMultitouchPopup: function(){
     var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
@@ -40,16 +36,23 @@ gPrefWindow.prefUI = {
     document.getElementById(numlinesid).disabled = disabled;
   },
 
-  tabNavPrefChanged : function(){
-    var tabNavPref = 1;
-    if(document.getElementById("tabNavigationLinks").checked) tabNavPref |= 4;
-    if(document.getElementById("tabNavigationForms").checked) tabNavPref |= 2;
-    var tabFocus = document.getElementById("tabFocus");
-    tabFocus.value = tabNavPref;
-    this.updateValueAt(tabFocus);
+  onTabNavSyncFrom : function(aField) {
+    let curval = document.getElementById("accessibility.tabfocus").value;
+    let bit = (aField.id == "tabNavigationLinks")? 4 : 2;
+    return (curval & bit) != 0;
   },
-
-  updateValueAt : function(target){
-    document.getElementById("paneUI").userChangedValue(target);
+  onTabNavSyncTo : function(aField) {
+    let curval = document.getElementById("accessibility.tabfocus").value;
+    curval |= 1; // Textboxes are always part of the tab order
+    let bit = (aField.id == "tabNavigationLinks")? 4 : 2;
+    if (aField.checked) {
+      return curval | bit;
+    } else {
+      return curval & ~bit;
+    }
+  },
+  onBrowseWithCaretSyncFrom : function() {
+    let disabled = ! document.getElementById("accessibility.browsewithcaret_shortcut.enabled").value;
+    document.getElementById("accessibility.warn_on_browsewithcaret").disabled = disabled;
   }
 };
