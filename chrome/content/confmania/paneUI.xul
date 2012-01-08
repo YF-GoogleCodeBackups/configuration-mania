@@ -129,72 +129,174 @@
 </tabs>
 <tabpanels flex="1">
 <tabpanel orient="vertical">
-  <groupbox>
-    <caption align="center">
-      <menulist id="mousewheelOriental" label="Vertical" oncommand="gPrefWindow.prefUI.updateMouseWheelMode();">
-        <menupopup>
-          <menuitem label="&ui.mousewheel.vertiscroll.label;" value="v" selected="true"/>
-          <menuitem label="&ui.mousewheel.horizscroll.label;" value="h"/>
-        </menupopup>
-      </menulist>
-      <label value="&ui.mousewheel.mouseWheelPanel.label;"/>
-      <menulist id="mousewheelMod" label="&ui.mousewheel.usingJustTheWheel.label;"
-       oncommand="gPrefWindow.prefUI.updateMouseWheelMode();">
-        <menupopup>
-          <menuitem label="&ui.mousewheel.usingJustTheWheel.label;" value="No" selected="true"/>
-          <menuitem label="Alt" value="Alt"/>
-          <menuitem label="Ctrl" value="Ctrl"/>
-          <menuitem label="Shift" value="Shift"/>
-        </menupopup>
-      </menulist>
-      <label value="&ui.mousewheel.mouseWheelPanel2.label;"/>
-    </caption>
-
-    <radiogroup id="mousewheelAction" oncommand="gPrefWindow.prefUI.changed_mousewheelAction();">
-      <hbox align="start">
-        <radio value="0" label="&ui.mousewheel.scroll.label;"/>
-        <vbox align="start">
-          <hbox align="center">
-            <textbox id="mousewheelNumlines" type="number" size="3" onchange="gPrefWindow.prefUI.changed_mousewheelNumlines();"/>
-            <label value="&ui.mousewheel.scrollLines.label;"/>
-          </hbox>
-          <checkbox id="mousewheelSysNumlines" label="&ui.mousewheel.useSystemDefault.label;"
-           oncommand="gPrefWindow.prefUI.changed_mousewheelSysNumlines();"/>
-        </vbox>
-      </hbox>
-      <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
-      <radio value="2" label="&ui.mousewheel.history.label;"/>
-      <radio value="3" label="&ui.mousewheel.textsize.label;"/>
-    </radiogroup>
-  </groupbox>
-
-  <!-- __DATA__ -->
-  <data hidden="true">
-    <textbox id="mousewheelWithNoKeyAction" preference="mousewheel.withnokey.action"/>
-    <textbox id="mousewheelWithNoKeyNumlines" preference="mousewheel.withnokey.numlines"/>
-    <textbox id="mousewheelWithNoKeySysNumlines" preference="mousewheel.withnokey.sysnumlines"/>
-    <textbox id="mousewheelWithAltKeyAction" preference="mousewheel.withaltkey.action"/>
-    <textbox id="mousewheelWithAltKeyNumlines" preference="mousewheel.withaltkey.numlines"/>
-    <textbox id="mousewheelWithAltKeySysNumlines" preference="mousewheel.withaltkey.sysnumlines"/>
-    <textbox id="mousewheelWithCtrlKeyAction" preference="mousewheel.withcontrolkey.action"/>
-    <textbox id="mousewheelWithCtrlKeyNumlines" preference="mousewheel.withcontrolkey.numlines"/>
-    <textbox id="mousewheelWithCtrlKeySysNumlines" preference="mousewheel.withcontrolkey.sysnumlines"/>
-    <textbox id="mousewheelWithShiftKeyAction" preference="mousewheel.withshiftkey.action"/>
-    <textbox id="mousewheelWithShiftKeyNumlines" preference="mousewheel.withshiftkey.numlines"/>
-    <textbox id="mousewheelWithShiftKeySysNumlines" preference="mousewheel.withshiftkey.sysnumlines"/>
-    <textbox id="mousewheelHorizScrollWithNoKeyAction" preference="mousewheel.horizscroll.withnokey.action"/>
-    <textbox id="mousewheelHorizScrollWithNoKeyNumlines" preference="mousewheel.horizscroll.withnokey.numlines"/>
-    <textbox id="mousewheelHorizScrollWithNoKeySysNumlines" preference="mousewheel.horizscroll.withnokey.sysnumlines"/>
-    <textbox id="mousewheelHorizScrollWithAltKeyAction" preference="mousewheel.horizscroll.withaltkey.action"/>
-    <textbox id="mousewheelHorizScrollWithAltKeyNumlines" preference="mousewheel.horizscroll.withaltkey.numlines"/>
-    <textbox id="mousewheelHorizScrollWithAltKeySysNumlines" preference="mousewheel.horizscroll.withaltkey.sysnumlines"/>
-    <textbox id="mousewheelHorizScrollWithCtrlKeyAction" preference="mousewheel.horizscroll.withcontrolkey.action"/>
-    <textbox id="mousewheelHorizScrollWithCtrlKeyNumlines" preference="mousewheel.horizscroll.withcontrolkey.numlines"/>
-    <textbox id="mousewheelHorizScrollWithCtrlKeySysNumlines" preference="mousewheel.horizscroll.withcontrolkey.sysnumlines"/>
-    <textbox id="mousewheelHorizScrollWithShiftKeyAction" preference="mousewheel.horizscroll.withshiftkey.action"/>
-    <textbox id="mousewheelHorizScrollWithShiftKeyNumlines" preference="mousewheel.horizscroll.withshiftkey.numlines"/>
-    <textbox id="mousewheelHorizScrollWithShiftKeySysNumlines" preference="mousewheel.horizscroll.withshiftkey.sysnumlines"/>
-  </data>
+  <tabbox flex="1">
+  <tabs>
+    <tab label="&ui.mousewheel.vertiscroll.label;"/>
+    <tab label="&ui.mousewheel.horizscroll.label;"/>
+  </tabs>
+  <tabpanels>
+    <tabpanel>
+      <tabbox flex="1">
+        <tabs>
+          <tab label="&ui.mousewheel.usingJustTheWheel.label;"/>
+          <tab label="&ui.mousewheel.withAlt.label;"/>
+          <tab label="&ui.mousewheel.withCtrl.label;"/>
+          <tab label="&ui.mousewheel.withShift.label;"/>
+        </tabs>
+        <tabpanels>
+          <tabpanel>
+            <radiogroup preference="mousewheel.withnokey.action">
+              <hbox align="start">
+                <radio value="0" label="&ui.mousewheel.scroll.label;"/>
+                <vbox align="start">
+                  <hbox align="center">
+                    <textbox type="number" size="3" preference="mousewheel.withnokey.numlines"/>
+                    <label value="&ui.mousewheel.scrollLines.label;"/>
+                  </hbox>
+                  <checkbox label="&ui.mousewheel.useSystemDefault.label;" preference="mousewheel.withnokey.sysnumlines" onsyncfrompreference="gPrefWindow.prefUI.onUseSystemDefaultSyncFrom(this)"/>
+                </vbox>
+              </hbox>
+              <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
+              <radio value="2" label="&ui.mousewheel.history.label;"/>
+              <radio value="3" label="&ui.mousewheel.textsize.label;"/>
+            </radiogroup>
+          </tabpanel>
+          <tabpanel>
+            <radiogroup preference="mousewheel.withaltkey.action">
+              <hbox align="start">
+                <radio value="0" label="&ui.mousewheel.scroll.label;"/>
+                <vbox align="start">
+                  <hbox align="center">
+                    <textbox type="number" size="3" preference="mousewheel.withaltkey.numlines"/>
+                    <label value="&ui.mousewheel.scrollLines.label;"/>
+                  </hbox>
+                  <checkbox label="&ui.mousewheel.useSystemDefault.label;" preference="mousewheel.withaltkey.sysnumlines" onsyncfrompreference="gPrefWindow.prefUI.onUseSystemDefaultSyncFrom(this)"/>
+                </vbox>
+              </hbox>
+              <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
+              <radio value="2" label="&ui.mousewheel.history.label;"/>
+              <radio value="3" label="&ui.mousewheel.textsize.label;"/>
+            </radiogroup>
+          </tabpanel>
+          <tabpanel>
+            <radiogroup preference="mousewheel.withctrlkey.action">
+              <hbox align="start">
+                <radio value="0" label="&ui.mousewheel.scroll.label;"/>
+                <vbox align="start">
+                  <hbox align="center">
+                    <textbox type="number" size="3" preference="mousewheel.withctrlkey.numlines"/>
+                    <label value="&ui.mousewheel.scrollLines.label;"/>
+                  </hbox>
+                  <checkbox label="&ui.mousewheel.useSystemDefault.label;" preference="mousewheel.withctrlkey.sysnumlines" onsyncfrompreference="gPrefWindow.prefUI.onUseSystemDefaultSyncFrom(this)"/>
+                </vbox>
+              </hbox>
+              <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
+              <radio value="2" label="&ui.mousewheel.history.label;"/>
+              <radio value="3" label="&ui.mousewheel.textsize.label;"/>
+            </radiogroup>
+          </tabpanel>
+          <tabpanel>
+            <radiogroup preference="mousewheel.withaltkey.action">
+              <hbox align="start">
+                <radio value="0" label="&ui.mousewheel.scroll.label;"/>
+                <vbox align="start">
+                  <hbox align="center">
+                    <textbox type="number" size="3" preference="mousewheel.withaltkey.numlines"/>
+                    <label value="&ui.mousewheel.scrollLines.label;"/>
+                  </hbox>
+                  <checkbox label="&ui.mousewheel.useSystemDefault.label;" preference="mousewheel.withaltkey.sysnumlines" onsyncfrompreference="gPrefWindow.prefUI.onUseSystemDefaultSyncFrom(this)"/>
+                </vbox>
+              </hbox>
+              <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
+              <radio value="2" label="&ui.mousewheel.history.label;"/>
+              <radio value="3" label="&ui.mousewheel.textsize.label;"/>
+            </radiogroup>
+          </tabpanel>
+        </tabpanels>
+      </tabbox>
+    </tabpanel>
+    <tabpanel>
+      <tabbox flex="1">
+        <tabs>
+          <tab label="&ui.mousewheel.usingJustTheWheel.label;"/>
+          <tab label="&ui.mousewheel.withAlt.label;"/>
+          <tab label="&ui.mousewheel.withCtrl.label;"/>
+          <tab label="&ui.mousewheel.withShift.label;"/>
+        </tabs>
+        <tabpanels>
+          <tabpanel>
+            <radiogroup preference="mousewheel.horizscroll.withnokey.action">
+              <hbox align="start">
+                <radio value="0" label="&ui.mousewheel.scroll.label;"/>
+                <vbox align="start">
+                  <hbox align="center">
+                    <textbox type="number" size="3" preference="mousewheel.horizscroll.withnokey.numlines"/>
+                    <label value="&ui.mousewheel.scrollLines.label;"/>
+                  </hbox>
+                  <checkbox label="&ui.mousewheel.useSystemDefault.label;" preference="mousewheel.horizscroll.withnokey.sysnumlines" onsyncfrompreference="gPrefWindow.prefUI.onUseSystemDefaultSyncFrom(this)"/>
+                </vbox>
+              </hbox>
+              <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
+              <radio value="2" label="&ui.mousewheel.history.label;"/>
+              <radio value="3" label="&ui.mousewheel.textsize.label;"/>
+            </radiogroup>
+          </tabpanel>
+          <tabpanel>
+            <radiogroup preference="mousewheel.horizscroll.withaltkey.action">
+              <hbox align="start">
+                <radio value="0" label="&ui.mousewheel.scroll.label;"/>
+                <vbox align="start">
+                  <hbox align="center">
+                    <textbox type="number" size="3" preference="mousewheel.horizscroll.withaltkey.numlines"/>
+                    <label value="&ui.mousewheel.scrollLines.label;"/>
+                  </hbox>
+                  <checkbox label="&ui.mousewheel.useSystemDefault.label;" preference="mousewheel.horizscroll.withaltkey.sysnumlines" onsyncfrompreference="gPrefWindow.prefUI.onUseSystemDefaultSyncFrom(this)"/>
+                </vbox>
+              </hbox>
+              <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
+              <radio value="2" label="&ui.mousewheel.history.label;"/>
+              <radio value="3" label="&ui.mousewheel.textsize.label;"/>
+            </radiogroup>
+          </tabpanel>
+          <tabpanel>
+            <radiogroup preference="mousewheel.horizscroll.withctrlkey.action">
+              <hbox align="start">
+                <radio value="0" label="&ui.mousewheel.scroll.label;"/>
+                <vbox align="start">
+                  <hbox align="center">
+                    <textbox type="number" size="3" preference="mousewheel.horizscroll.withctrlkey.numlines"/>
+                    <label value="&ui.mousewheel.scrollLines.label;"/>
+                  </hbox>
+                  <checkbox label="&ui.mousewheel.useSystemDefault.label;" preference="mousewheel.horizscroll.withctrlkey.sysnumlines" onsyncfrompreference="gPrefWindow.prefUI.onUseSystemDefaultSyncFrom(this)"/>
+                </vbox>
+              </hbox>
+              <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
+              <radio value="2" label="&ui.mousewheel.history.label;"/>
+              <radio value="3" label="&ui.mousewheel.textsize.label;"/>
+            </radiogroup>
+          </tabpanel>
+          <tabpanel>
+            <radiogroup preference="mousewheel.horizscroll.withaltkey.action">
+              <hbox align="start">
+                <radio value="0" label="&ui.mousewheel.scroll.label;"/>
+                <vbox align="start">
+                  <hbox align="center">
+                    <textbox type="number" size="3" preference="mousewheel.horizscroll.withaltkey.numlines"/>
+                    <label value="&ui.mousewheel.scrollLines.label;"/>
+                  </hbox>
+                  <checkbox label="&ui.mousewheel.useSystemDefault.label;" preference="mousewheel.horizscroll.withaltkey.sysnumlines" onsyncfrompreference="gPrefWindow.prefUI.onUseSystemDefaultSyncFrom(this)"/>
+                </vbox>
+              </hbox>
+              <radio value="1" label="&ui.mousewheel.scrollPgUpPgDn.label;"/>
+              <radio value="2" label="&ui.mousewheel.history.label;"/>
+              <radio value="3" label="&ui.mousewheel.textsize.label;"/>
+            </radiogroup>
+          </tabpanel>
+        </tabpanels>
+      </tabbox>
+    </tabpanel>
+  </tabpanels>
+  </tabbox>
 </tabpanel>
 <tabpanel id="multitouch-box" orient="vertical">
   <groupbox id="multitouch-gestures-box">

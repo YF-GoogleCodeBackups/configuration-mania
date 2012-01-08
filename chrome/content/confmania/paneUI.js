@@ -1,7 +1,5 @@
 gPrefWindow.prefUI = {
   init : function(){
-    this.updateMouseWheelMode();
-
     var tabNavPref = parseInt(document.getElementById("tabFocus").value) | 1;
     document.getElementById("tabNavigationLinks").checked = ((tabNavPref & 4) != 0);
     document.getElementById("tabNavigationForms").checked = ((tabNavPref & 2) != 0);
@@ -36,57 +34,10 @@ gPrefWindow.prefUI = {
       e.setAttribute("sizetopopup", "none");
     });
   },
-  _currentIDs : {mousewheelAction : "mousewheelWithNoKeyAction",
-                 mousewheelNumlines : "mousewheelWithNoKeyNumlines",
-                 mousewheelSysNumlines : "mousewheelWithNoKeySysNumlines"},
-  updateMouseWheelMode : function(){
-    var prefix = "mousewheel";
-    if(this.isHorizScroll()) prefix += "HorizScroll"
-    prefix += "With" + this.getModKey() + "Key";
-
-    this._currentIDs["mousewheelAction"] = prefix + "Action";
-    this._currentIDs["mousewheelNumlines"] = prefix + "Numlines";
-    this._currentIDs["mousewheelSysNumlines"] = prefix + "SysNumlines";
-
-    document.getElementById("mousewheelAction").selectedIndex =
-     parseInt( document.getElementById(this._currentIDs["mousewheelAction"]).value );
-    document.getElementById("mousewheelNumlines").value =
-     document.getElementById(this._currentIDs["mousewheelNumlines"]).value;
-    document.getElementById("mousewheelSysNumlines").checked =
-     document.getElementById(this._currentIDs["mousewheelSysNumlines"]).value == "true";
-    this.mousewheelNumlineDoEnabled();
-  },
-  changed_mousewheelAction : function(){
-    var mousewheelAction = document.getElementById(this._currentIDs["mousewheelAction"]);
-    mousewheelAction.value = document.getElementById("mousewheelAction").value;
-
-    this.updateValueAt(mousewheelAction);
-    return false;
-  },
-  changed_mousewheelNumlines : function(){
-    var mousewheelNumlines = document.getElementById(this._currentIDs["mousewheelNumlines"]);
-    mousewheelNumlines.value = document.getElementById("mousewheelNumlines").value;
-
-    this.updateValueAt(mousewheelNumlines);
-    return false;
-  },
-  changed_mousewheelSysNumlines : function(){
-    var mousewheelSysNumlines = document.getElementById(this._currentIDs["mousewheelSysNumlines"]);
-    mousewheelSysNumlines.value = document.getElementById("mousewheelSysNumlines").value;
-    this.mousewheelNumlineDoEnabled();
-
-    this.updateValueAt(mousewheelSysNumlines);
-    return false;
-  },
-  mousewheelNumlineDoEnabled : function(){
-    document.getElementById("mousewheelNumlines").disabled
-     = document.getElementById("mousewheelSysNumlines").checked;
-  },
-  isHorizScroll : function(){
-    return document.getElementById("mousewheelOriental").value == "h";
-  },
-  getModKey : function(){// (No|Alt|Ctrl|Shift)
-    return document.getElementById("mousewheelMod").value;
+  onUseSystemDefaultSyncFrom : function(elem) {
+    let disabled = document.getElementById(elem.getAttribute("preference")).value;
+    let numlinesid = elem.getAttribute("preference").replace(/\.[^\.]*$/, ".numlines");
+    document.getElementById(numlinesid).disabled = disabled;
   },
 
   tabNavPrefChanged : function(){
