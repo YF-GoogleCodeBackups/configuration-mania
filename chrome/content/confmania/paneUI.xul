@@ -139,9 +139,9 @@
       <tabbox flex="1">
         <tabs>
           <tab label="&ui.mousewheel.usingJustTheWheel.label;"/>
-          <tab label="Alt"/>
-          <tab label="Ctrl"/>
-          <tab label="Shift"/>
+          <tab label="&ui.mousewheel.withAlt.label;"/>
+          <tab label="&ui.mousewheel.withCtrl.label;"/>
+          <tab label="&ui.mousewheel.withShift.label;"/>
         </tabs>
         <tabpanels>
           <tabpanel>
@@ -219,9 +219,9 @@
       <tabbox flex="1">
         <tabs>
           <tab label="&ui.mousewheel.usingJustTheWheel.label;"/>
-          <tab label="Alt"/>
-          <tab label="Ctrl"/>
-          <tab label="Shift"/>
+          <tab label="&ui.mousewheel.withAlt.label;"/>
+          <tab label="&ui.mousewheel.withCtrl.label;"/>
+          <tab label="&ui.mousewheel.withShift.label;"/>
         </tabs>
         <tabpanels>
           <tabpanel>
