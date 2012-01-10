@@ -275,7 +275,7 @@
   </groupbox>
 </tabpanel>
 <tabpanel orient="vertical">
-  <radiogroup id="sendReferer" preference="network.http.sendRefererHeader" onsyncfrompreference="return gPrefSecurity.onSendRefererSecureXSiteSyncFrom()">
+  <radiogroup id="sendReferer" preference="network.http.sendRefererHeader" onsyncfrompreference="return gPrefWindow.prefSecurity.onSendRefererSecureXSiteSyncFrom()">
     <radio value="0" label="&security.referer.none.label;"/>
     <description class="indent">&security.referer.none.desc;</description>
     <radio value="1" label="&security.referer.link.label;"/>
