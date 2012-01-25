@@ -20,12 +20,18 @@
 <script type="application/javascript" src="chrome://global/content/contentAreaUtils.js"/>
 <script type="application/javascript" src="preferences.js"></script>
 
+<commandset>
+  <command id="ConfManiaPopup:Reset" oncommand="gPrefWindow.onResetPopupClicked(event);"/>
+  <command id="ConfManiaPopup:CopyName" oncommand="gPrefWindow.onCopyNamePopupClicked(event);"/>
+  <command id="ConfManiaPopup:Mkb" oncommand="gPrefWindow.onMkbPopupClicked(event)"/>
+</commandset>
+
 <popupset>
   <menupopup id="prefContextPopup">
-    <menuitem label="&prefWindow.context.reset.label;" accesskey="&prefWindow.context.reset.accesskey;" onclick="gPrefWindow.onResetPopupClicked(event);"/>
+    <menuitem label="&prefWindow.context.reset.label;" accesskey="&prefWindow.context.reset.accesskey;" command="ConfManiaPopup:Reset"/>
     <menuseparator/>
-    <menuitem label="&prefWindow.context.copyName.label;" accesskey="&prefWindow.context.copyName.accesskey;" onclick="gPrefWindow.onCopyNamePopupClicked(event);"/>
-    <menuitem label="&prefWindow.context.mkb.label;" accesskey="&prefWindow.context.mkb.accesskey;" onclick="gPrefWindow.onMkbPopupClicked(event);"/>
+    <menuitem label="&prefWindow.context.copyName.label;" accesskey="&prefWindow.context.copyName.accesskey;" command="ConfManiaPopup:CopyName"/>
+    <menuitem label="&prefWindow.context.mkb.label;" accesskey="&prefWindow.context.mkb.accesskey;" command="ConfManiaPopup:Mkb"/>
   </menupopup>
 </popupset>
 
