@@ -372,6 +372,11 @@
 <!ENTITY ui.i18n.spellcheckDefault.multiline "複数行のコントロール(例:textarea)に対して有効にする(標準)">
 <!ENTITY ui.i18n.spellcheckDefault.all "すべてのテキスト入力コントロールに対して有効にする">
 <!ENTITY ui.i18n.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
+<!ENTITY ui.contextmenu.label "コンテキストメニュー">
+<!ENTITY ui.contextmenu.click_hold_context_menus.label "クリックアンドホールドでコンテキストメニューを開く (昔のMac OS インタフェースを再現します)">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.label "サブメニュー表示遅延時間">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.none.label "なし">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.inf.label "∞ (Motif の真似)">
 <!ENTITY ui.others.label "その他">
 <!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
 <!ENTITY ui.others.preference.instanceAccept.label "モードレスダイアログで瞬時に設定を適用 (Mac や Gnome のように)">
@@ -381,9 +386,6 @@
 <!ENTITY ui.others.xwin.paste.label "中央クリックで張り付ける">
 <!ENTITY ui.others.xwin.contentLoadURL.label "中央クリックでクリップボードに格納された URL へ行く">
 <!ENTITY ui.others.xwin.scrollbarPosition.label "中央ボタンでスクロールバーを調整できるようにする(再起動必要)">
-<!ENTITY ui.others.xwin.uiSubmenuDelay.label "サブメニュー表示遅延時間">
-<!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "なし">
-<!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "∞ (Motif の真似)">
 <!ENTITY ui.others.enable_drag_images.label "ドラッグ中に(可能であれば)画像を表示する">
 <!ENTITY ui.others.xul_file_picker "システムのファイルダイアログを使わずにXULファイルダイアログを使用">
 
