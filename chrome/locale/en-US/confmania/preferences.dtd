@@ -373,6 +373,11 @@
 <!ENTITY ui.i18n.spellcheckDefault.multiline "Enables spellchecker for multi-line controls (e.g., textarea) (Default)">
 <!ENTITY ui.i18n.spellcheckDefault.all "Enables spellchecker for all text controls">
 <!ENTITY ui.i18n.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
+<!ENTITY ui.contextmenu.label "Context menu">
+<!ENTITY ui.contextmenu.click_hold_context_menus.label "Enable click-and-hold context menus (Emulate old Mac OS interface)">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.label "Submenu Delay">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.none.label "None">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
 <!ENTITY ui.others.label "Others">
 <!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
 <!ENTITY ui.others.preference.instanceAccept.label "Apply instance and the dialog is modeless  (likely Mac or Gnome)">
@@ -382,9 +387,6 @@
 <!ENTITY ui.others.xwin.paste.label "Paste when clicked middle mouse button">
 <!ENTITY ui.others.xwin.contentLoadURL.label "Go to URL stored in clipboard by middle mouse click">
 <!ENTITY ui.others.xwin.scrollbarPosition.label "Allow middle mouse button to adjust scroll bar (takes effect after restart)">
-<!ENTITY ui.others.xwin.uiSubmenuDelay.label "Submenu Delay">
-<!ENTITY ui.others.xwin.uiSubmenuDelay.none.label "None">
-<!ENTITY ui.others.xwin.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
 <!ENTITY ui.others.enable_drag_images.label "Display an image (when specified) during dragging">
 <!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">
 

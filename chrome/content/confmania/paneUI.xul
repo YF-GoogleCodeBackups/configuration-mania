@@ -108,13 +108,15 @@
   <preference id="layout.spellcheckDefault" name="layout.spellcheckDefault" type="int"/>
   <preference id="layout.enable_japanese_specific_transform" name="layout.enable_japanese_specific_transform" type="bool"/>
 
+  <preference id="ui.click_hold_context_menus" name="ui.click_hold_context_menus" type="bool"/>
+  <preference id="ui.submenuDelay" name="ui.submenuDelay" type="int"/>
+
   <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
   <preference id="browser.preferences.animateFadeIn" name="browser.preferences.animateFadeIn" type="bool"/>
   <preference id="clipboard.autocopy" name="clipboard.autocopy" type="bool"/>
   <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
   <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
   <preference id="middlemouse.scrollbarPosition" name="middlemouse.scrollbarPosition" type="bool"/>
-  <preference id="ui.submenuDelay" name="ui.submenuDelay" type="int"/>
   <preference id="nglayout.enable_drag_images" name="nglayout.enable_drag_images" type="bool"/>
   <preference id="ui.allow_platform_file_picker" name="ui.allow_platform_file_picker" type="bool" inverted="true"/>
 </preferences>
@@ -127,6 +129,7 @@
 <tab label="&ui.keynav.label;"/>
 <tab label="&ui.bidi.label;"/>
 <tab label="&ui.i18n.label;"/>
+<tab label="&ui.contextmenu.label;"/>
 <tab label="&ui.others.label;"/>
 </tabs>
 <tabpanels flex="1">
@@ -482,6 +485,23 @@
   <checkbox label="&ui.i18n.japanese_specific_transform.label;" preference="layout.enable_japanese_specific_transform"/>
 </tabpanel>
 <tabpanel orient="vertical">
+  <checkbox label="&ui.contextmenu.click_hold_context_menus.label;"
+            preference="ui.click_hold_context_menus"/>
+  <groupbox>
+    <caption label="&ui.contextmenu.uiSubmenuDelay.label;"/>
+    <radiogroup id="uiSubmenuDelay-radio">
+      <radio value="0" label="&ui.contextmenu.uiSubmenuDelay.none.label;"/>
+      <radio value="-1" label="&ui.contextmenu.uiSubmenuDelay.inf.label;"/>
+      <hbox align="center">
+        <radio value="*" label="&manualSet;"/>
+        <textbox id="uiSubmenuDelay" type="number" hidespinbuttons="true" min="-1" size="4" preference="ui.submenuDelay"
+          onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('uiSubmenuDelay-radio','uiSubmenuDelay',0);"/>
+        <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
+      </hbox>
+    </radiogroup>
+  </groupbox>
+</tabpanel>
+<tabpanel orient="vertical">
   <groupbox>
     <caption label="&ui.others.preference.label;"/>
     <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
@@ -493,17 +513,6 @@
     <checkbox label="&ui.others.xwin.paste.label;" preference="middlemouse.paste"/>
     <checkbox label="&ui.others.xwin.contentLoadURL.label;" preference="middlemouse.contentLoadURL"/>
     <checkbox label="&ui.others.xwin.scrollbarPosition.label;" preference="middlemouse.scrollbarPosition"/>
-    <groupbox>
-      <caption label="&ui.others.xwin.uiSubmenuDelay.label;"/>
-      <radiogroup id="uiSubmenuDelay-radio" orient="horizontal" align="center">
-        <radio value="0" label="&ui.others.xwin.uiSubmenuDelay.none.label;"/>
-        <radio value="-1" label="&ui.others.xwin.uiSubmenuDelay.inf.label;"/>
-        <radio value="*" label="&manualSet;"/>
-        <textbox id="uiSubmenuDelay" type="number" hidespinbuttons="true" min="-1" size="4" preference="ui.submenuDelay"
-          onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('uiSubmenuDelay-radio','uiSubmenuDelay',0);"/>
-        <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
-      </radiogroup>
-    </groupbox>
   </groupbox>
   <checkbox label="&ui.others.enable_drag_images.label;" preference="nglayout.enable_drag_images"/>
   <checkbox label="&ui.others.xul_file_picker;" preference="ui.allow_platform_file_picker"/>
