@@ -29,11 +29,27 @@ gPrefWindow.prefUI = {
       e.appendChild(oMenupop.cloneNode(true));
       e.setAttribute("sizetopopup", "none");
     });
+
+    gPrefWindow.prefUI.initI18nBoxTab();
   },
   onUseSystemDefaultSyncFrom : function(elem) {
     let disabled = document.getElementById(elem.getAttribute("preference")).value;
     let numlinesid = elem.getAttribute("preference").replace(/\.[^\.]*$/, ".numlines");
     document.getElementById(numlinesid).disabled = disabled;
+  },
+  initI18nBoxTab : function () {
+    gPrefWindow.prefUI.onPaneUIBoxTabSelected();
+  },
+  onPaneUIBoxTabSelected : function () {
+    let paneUIBoxTab = document.getElementById("paneUIBoxTab");
+    let selectedPanel = document.getElementById(paneUIBoxTab.value);
+    selectedPanel.parentNode.selectedPanel = selectedPanel;
+
+    for (let i = 0; i < paneUIBoxTab.itemCount; i++) {
+      let radioItem = paneUIBoxTab.getItemAtIndex(i);
+      let pane = document.getElementById(radioItem.value);
+      pane.setAttribute("selected", (radioItem.selected)? "true" : "false");
+    }
   },
 
   onTabNavSyncFrom : function(aField) {
