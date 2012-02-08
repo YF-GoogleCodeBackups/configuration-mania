@@ -121,19 +121,23 @@
   <preference id="ui.allow_platform_file_picker" name="ui.allow_platform_file_picker" type="bool" inverted="true"/>
 </preferences>
 
-<tabbox flex="1">
-<tabs>
-<tab label="&ui.mousewheel.label;"/>
-<tab label="&ui.multitouch.label;"/>
-<tab label="&ui.find.label;"/>
-<tab label="&ui.keynav.label;"/>
-<tab label="&ui.bidi.label;"/>
-<tab label="&ui.i18n.label;"/>
-<tab label="&ui.contextmenu.label;"/>
-<tab label="&ui.others.label;"/>
-</tabs>
-<tabpanels flex="1">
-<tabpanel orient="vertical">
+
+<hbox flex="1" orient="horizontal" id="paneUIBox">
+<radiogroup id="paneUIBoxTab" class="subtabs"
+ orient="vertical" style="max-width: 10em; width: 10em;"
+ value="ui-pane-mousewheel" oncommand="gPrefWindow.prefUI.onPaneUIBoxTabSelected();">
+  <radio class="subtab" value="ui-pane-mousewheel"  label="&ui.mousewheel.label;"/>
+  <radio class="subtab" value="ui-pane-multitouch"  label="&ui.multitouch.label;"/>
+  <radio class="subtab" value="ui-pane-findahead"   label="&ui.find.label;"/>
+  <radio class="subtab" value="ui-pane-keynav"      label="&ui.keynav.label;"/>
+  <radio class="subtab" value="ui-pane-bidi"        label="&ui.bidi.label;"/>
+  <radio class="subtab" value="ui-pane-i18n"        label="&ui.i18n.label;"/>
+  <radio class="subtab" value="ui-pane-contextmenu" label="&ui.contextmenu.label;"/>
+  <radio class="subtab" value="ui-pane-others"      label="&ui.others.label;"/>
+</radiogroup>
+<splitter/>
+<deck id="paneBrowserBoxContainer" flex="4">
+<box class="subtabpanel" orient="vertical" id="ui-pane-mousewheel">
   <tabbox flex="1">
   <tabs>
     <tab label="&ui.mousewheel.vertiscroll.label;"/>
@@ -302,8 +306,8 @@
     </tabpanel>
   </tabpanels>
   </tabbox>
-</tabpanel>
-<tabpanel id="multitouch-box" orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-multitouch">
   <groupbox id="multitouch-gestures-box">
     <caption label="&ui.multitouch.gestures.label;"/>
     <hbox>
@@ -349,8 +353,8 @@
       <menulist editable="true" preference="browser.gesture.twist.right" flex="1"/>
     </groupbox>
   </groupbox>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-findahead">
   <groupbox>
     <caption label="&ui.find.findahead.label;"/>
     <description>&ui.find.findahead.desc;</description>
@@ -370,8 +374,8 @@
       <radio value="-1" label="&ui.find.casesensitive.auto;"/>
     </radiogroup>
   </groupbox>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-keynav">
   <groupbox>
     <caption label="&ui.keynav.tabNavigationBehavior.label;"/>
     <hbox>
@@ -415,8 +419,8 @@
       <textbox id="menuAccessKeyValue" type="number" hidespinbuttons="true" preference="ui.key.menuAccessKey" size="5"/>
     </hbox>
   </groupbox>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-bidi">
     <vbox>
       <checkbox label="&ui.bidi.ui.label;" preference="bidi.browser.ui"/>
       <grid>
@@ -466,8 +470,8 @@
           <radio value="3" label="&ui.bidi.scrollbarSide.left;"/>
         </radiogroup>
       </groupbox>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-i18n">
   <hbox align="center">
     <label value="&ui.i18n.locale.label;" control="contentLocale"/>
     <textbox id="contentLocale" preference="general.useragent.locale" size="8"/>
@@ -483,8 +487,8 @@
     </radiogroup>
   </groupbox>
   <checkbox label="&ui.i18n.japanese_specific_transform.label;" preference="layout.enable_japanese_specific_transform"/>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-contextmenu">
   <checkbox label="&ui.contextmenu.click_hold_context_menus.label;"
             preference="ui.click_hold_context_menus"/>
   <groupbox>
@@ -500,8 +504,8 @@
       </hbox>
     </radiogroup>
   </groupbox>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-others">
   <groupbox>
     <caption label="&ui.others.preference.label;"/>
     <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
@@ -516,9 +520,9 @@
   </groupbox>
   <checkbox label="&ui.others.enable_drag_images.label;" preference="nglayout.enable_drag_images"/>
   <checkbox label="&ui.others.xul_file_picker;" preference="ui.allow_platform_file_picker"/>
-</tabpanel>
-</tabpanels>
-</tabbox>
+</box>
+</deck>
+</hbox>
 
 </prefpane>
 </overlay>
