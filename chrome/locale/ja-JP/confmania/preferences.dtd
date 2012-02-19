@@ -280,16 +280,24 @@
 <!ENTITY http.connect.keepAliveProxy.accesskey "A">
 <!ENTITY http.connect.pipeline.accesskey "P">
 <!ENTITY http.connect.pipelineProxy.accesskey "N">
-<!ENTITY http.ad.label "詳細">
-<!ENTITY http.ad.accept.label "送信される 'Accept' HTTP ヘッダ">
-<!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
-<!ENTITY http.ad.accept.default.label "Accept">
-<!ENTITY http.ad.maxsession.label "最大セッション接続">
-<!ENTITY http.ad.maxsession.maxpipeliningrequest.label "最大パイプライン要求数">
-<!ENTITY http.ad.maxsession.maxconnections.label "最大接続数 (延べ)">
-<!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "最大接続数 (サーバ当たり)">
-<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
-<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
+<!ENTITY http.connect.pipelineSSL.label "HTTPSに対してパイプラインを有効にする">
+<!ENTITY http.connect.pipelineSSL.accesskey "L">
+<!ENTITY http.connect.spdy.label "SPDYプロトコルを有効にする (Firefox11+)">
+<!ENTITY http.connect.spdy.accesskey "D">
+<!ENTITY http.maxconn.label "最大接続数">
+<!ENTITY http.maxconn.maxpipeliningrequest.label "最大パイプライン要求数">
+<!ENTITY http.maxconn.maxconnections.label "最大接続数 (延べ)">
+<!ENTITY http.maxconn.maxconnectionsPerServer.label "最大接続数 (サーバ当たり)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
+<!ENTITY http.timeout.label "タイムアウト">
+<!ENTITY http.timeout.connection-retry.label "接続の試行">
+<!ENTITY http.timeout.keep-alive.label "接続の持続 (Keep-Alive)">
+<!ENTITY http.timeout.spdy.label "SPDY (Firefox11+)">
+<!ENTITY http.header.label "ヘッダ">
+<!ENTITY http.header.encoding.label "Accept-Encoding">
+<!ENTITY http.header.accept.label "Accept (コンテンツ)">
+<!ENTITY http.header.accept-image.label "Accept (画像)">
 
 <!ENTITY ui.title "インターフェイス">
 <!ENTITY ui.mousewheel.label "マウスホイール">
