@@ -145,6 +145,10 @@
   <preference id="browser.cache.disk.parent_directory" name="browser.cache.disk.parent_directory" type="string"/>
 
   <preference id="geo.enabled" name="geo.enabled" type="bool"/>
+  <preference id="full-screen-api.enabled" name="full-screen-api.enabled" type="bool"/>
+  <preference id="dom.battery.enabled" name="dom.battery.enabled" type="bool"/>
+  <preference id="dom.sms.enabled" name="dom.sms.enabled" type="bool"/>
+  <preference id="dom.vibrator.enabled" name="dom.vibrator.enabled" type="bool"/>
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
   <checkbox label="&browser.others.prompts_tab_modal_enabled.label;" preference="prompts.tab_modal.enabled"/>
@@ -585,6 +589,11 @@
 
 <box class="subtabpanel" orient="vertical" id="others">
   <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled"/>
+  <checkbox label="&browser.others.full_screen_enabled.label;" preference="full-screen-api.enabled"/>
+  <checkbox label="&browser.others.dom_battery_enabled.label;" preference="dom.battery.enabled"/>
+  <checkbox label="&browser.others.dom_sms_enabled.label;" preference="dom.sms.enabled"/>
+  <checkbox label="&browser.others.dom_vibrator_enabled.label;" preference="dom.vibrator.enabled"/>
+
   <groupbox>
     <caption label="&browser.others.dns.label;"/>
     <checkbox label="&browser.others.dns.disableIPv6.label;" preference="network.dns.disableIPv6"/>
