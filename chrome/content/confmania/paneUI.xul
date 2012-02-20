@@ -88,7 +88,7 @@
   <preference id="browser.gesture.twist.left"      name="browser.gesture.twist.left"      type="string"/>
 
   <preference id="accessibility.typeaheadfind.timeout" name="accessibility.typeaheadfind.timeout" type="int"/>
-  <preference id="accessibility.typeaheadfind.enablesound" name="accessibility.typeaheadfind.enablesound" type="string"/>
+  <preference id="accessibility.typeaheadfind.enablesound" name="accessibility.typeaheadfind.enablesound" type="bool"/>
   <preference id="accessibility.typeaheadfind.casesensitive" name="accessibility.typeaheadfind.casesensitive" type="int"/>
 
   <preference id="accessibility.tabfocus" name="accessibility.tabfocus" type="int"/>
