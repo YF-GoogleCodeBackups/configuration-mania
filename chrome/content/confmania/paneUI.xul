@@ -138,7 +138,7 @@
 <splitter/>
 <deck id="paneBrowserBoxContainer" flex="4">
 <box class="subtabpanel" orient="vertical" id="ui-pane-mousewheel">
-  <tabbox flex="1">
+  <tabbox flex="1" style="margin: 3px;">
   <tabs>
     <tab label="&ui.mousewheel.vertiscroll.label;"/>
     <tab label="&ui.mousewheel.horizscroll.label;"/>
