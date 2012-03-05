@@ -56,15 +56,23 @@
   <preference id="network.http.proxy.version" name="network.http.proxy.version" type="string"/>
   <preference id="network.http.proxy.keep-alive" name="network.http.proxy.keep-alive" type="bool"/>
   <preference id="network.http.proxy.pipelining" name="network.http.proxy.pipelining" type="bool"/>
+  <preference id="network.http.pipelining.ssl" name="network.http.pipelining.ssl" type="bool"/>
+  <preference id="network.http.spdy.enabled" name="network.http.spdy.enabled" type="bool"/>
 
-  <preference id="network.http.accept-encoding" name="network.http.accept-encoding" type="string"/>
-  <preference id="network.http.accept.default" name="network.http.accept.default" type="string"/>
+  <preference id="network.http.connection-retry-timeout" name="network.http.connection-retry-timeout" type="int"/>
+  <preference id="network.http.keep-alive.timeout" name="network.http.keep-alive.timeout" type="int"/>
+  <preference id="network.http.spdy.timeout" name="network.http.keep-alive.timeout" type="int"/>
 
   <preference id="network.http.pipelining.maxrequests" name="network.http.pipelining.maxrequests" type="int"/>
   <preference id="network.http.max-connections" name="network.http.max-connections" type="int"/>
   <preference id="network.http.max-connections-per-server" name="network.http.max-connections-per-server" type="int"/>
   <preference id="network.http.max-persistent-connections-per-server" name="network.http.max-persistent-connections-per-server" type="int"/>
   <preference id="network.http.max-persistent-connections-per-proxy" name="network.http.max-persistent-connections-per-proxy" type="int"/>
+
+
+  <preference id="network.http.accept-encoding" name="network.http.accept-encoding" type="string"/>
+  <preference id="network.http.accept.default" name="network.http.accept.default" type="string"/>
+  <preference id="image.http.accept" name="image.http.accept" type="string"/>
 </preferences>
 
 <vbox orient="vertical" class="warning">
@@ -74,7 +82,9 @@
 <tabbox flex="1">
 <tabs>
 <tab label="&http.connect.label;"/>
-<tab label="&http.ad.label;"/>
+<tab label="&http.maxconn.label;"/>
+<tab label="&http.timeout.label;"/>
+<tab label="&http.header.label;"/>
 </tabs>
 <tabpanels flex="1">
 <tabpanel orient="vertical">
@@ -108,31 +118,24 @@
                 preference="network.http.proxy.pipelining"/>
     </groupbox>
   </hbox>
+  <checkbox label="&http.connect.pipelineSSL.label;"
+            accesskey="&http.connect.pipelineSSL.accesskey;"
+            preference="network.http.pipelining.ssl"/>
   <description>&http.connect.pipeline.desc;</description>
+  <checkbox label="&http.connect.spdy.label;"
+            accesskey="&http.connect.spdy.accesskey;"
+            preference="network.http.spdy.enabled"/>
 </tabpanel>
 <tabpanel orient="vertical">
-<groupbox>
-  <caption label="&http.ad.accept.label;"/>
-  <hbox align="center">
-    <label value="&http.ad.accept.encoding.label;" control="HTTPAcceptEncoding"/>
-    <textbox id="HTTPAcceptEncoding" flex="1" preference="network.http.accept-encoding"/>
-  </hbox>
-  <hbox align="center">
-    <label value="&http.ad.accept.default.label;" control="HTTPAccept"/>
-    <textbox id="HTTPAccept" flex="1" preference="network.http.accept.default"/>
-  </hbox>
-</groupbox>
-<groupbox id="http-ad-maxsess">
-  <caption label="&http.ad.maxsession.label;"/>
   <grid>
     <columns><column/><column/></columns>
     <rows>
       <row align="center">
-        <label control="maxpipeliningrequest" value="&http.ad.maxsession.maxpipeliningrequest.label;"/>
+        <label control="maxpipeliningrequest" value="&http.maxconn.maxpipeliningrequest.label;"/>
         <textbox id="maxpipeliningrequest" type="number" hidespinbuttons="true" min="1" size="4" preference="network.http.pipelining.maxrequests"/>
       </row>
       <row align="center">
-        <label control="maxconnections" value="&http.ad.maxsession.maxconnections.label;"/>
+        <label control="maxconnections" value="&http.maxconn.maxconnections.label;"/>
         <textbox id="maxconnections" type="number" hidespinbuttons="true" min="1" size="4" preference="network.http.max-connections"/>
       </row>
     </rows>
@@ -141,20 +144,60 @@
     <columns><column/><column/></columns>
     <rows>
       <row align="center">
-        <label control="maxconnectionsPerServer" value="&http.ad.maxsession.maxconnectionsPerServer.label;"/>
+        <label control="maxconnectionsPerServer" value="&http.maxconn.maxconnectionsPerServer.label;"/>
         <textbox id="maxconnectionsPerServer" type="number" hidespinbuttons="true" min="1" size="1" preference="network.http.max-connections-per-server"/>
       </row>
       <row align="center">
-        <label control="maxpersistentconnectionsPerServer" value="&http.ad.maxsession.maxpersistentconnectionsPerServer.label;"/>
+        <label control="maxpersistentconnectionsPerServer" value="&http.maxconn.maxpersistentconnectionsPerServer.label;"/>
         <textbox id="maxpersistentconnectionsPerServer" min="1" type="number" hidespinbuttons="true" size="1" preference="network.http.max-persistent-connections-per-server"/>
       </row>
       <row align="center">
-        <label control="maxpersistentconnectionsPerProxy" value="&http.ad.maxsession.maxpersistentconnectionsPerProxy.label;"/>
+        <label control="maxpersistentconnectionsPerProxy" value="&http.maxconn.maxpersistentconnectionsPerProxy.label;"/>
         <textbox id="maxpersistentconnectionsPerProxy" min="1" type="number" hidespinbuttons="true" size="1" preference="network.http.max-persistent-connections-per-proxy"/>
       </row>
     </rows>
   </grid>
-</groupbox>
+</tabpanel>
+<tabpanel orient="vertical">
+  <grid>
+    <columns><column/><column/><column/></columns>
+    <rows>
+      <row align="center">
+        <label control="httptimeoutconnectionretry" value="&http.timeout.connection-retry.label;"/>
+        <textbox id="httptimeoutconnectionretry" type="number" hidespinbuttons="true" min="0" size="4" preference="network.http.connection-retry-timeout"/>
+        <label value="&miliseconds;"/>
+      </row>
+      <row align="center">
+        <label control="httptimeoutkeepalive" value="&http.timeout.keep-alive.label;"/>
+        <textbox id="httptimeoutkeepalive" type="number" hidespinbuttons="true" min="0" size="4" preference="network.http.keep-alive.timeout"/>
+        <label value="&seconds;"/>
+      </row>
+      <row align="center">
+        <label control="httptimeoutspdy" value="&http.timeout.spdy.label;"/>
+        <textbox id="httptimeoutspdy" type="number" hidespinbuttons="true" min="0" size="4" preference="network.http.spdy.timeout"/>
+        <label value="&seconds;"/>
+      </row>
+    </rows>
+  </grid>
+</tabpanel>
+<tabpanel orient="vertical">
+  <grid>
+    <columns><column/><column flex="1"/></columns>
+    <rows>
+      <row align="center">
+        <label value="&http.header.encoding.label;" control="HTTPAcceptEncoding"/>
+        <textbox id="HTTPAcceptEncoding" preference="network.http.accept-encoding"/>
+      </row>
+      <row align="center">
+        <label value="&http.header.accept.label;" control="HTTPAccept"/>
+        <textbox id="HTTPAccept" preference="network.http.accept.default"/>
+      </row>
+      <row align="center">
+        <label value="&http.header.accept-image.label;" control="HTTPAccept4IMG"/>
+        <textbox id="HTTPAccept4IMG" preference="image.http.accept"/>
+      </row>
+    </rows>
+  </grid>
 </tabpanel>
 </tabpanels>
 </tabbox>
