@@ -21,17 +21,17 @@
     <option name="IE 9 (Windows 7)" value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
-    <option name="Safari 5.1.2 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="534.52.7" safari="534.52.7" version="5.1.2"/>
-    <option name="Safari 5.1.2 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="534.52.7" safari="534.52.7" version="5.1.2"/>
+    <option name="Safari 5.1.4 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="534.54.16" safari="534.54.16" version="5.1.4"/>
+    <option name="Safari 5.1.4 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="534.54.16" safari="534.54.16" version="5.1.4"/>
 
-    <option name="Safari 5.1 (iPhone; iOS 5.0.1)" platform="iPhone" oscpu="CPU iPhone OS 5_0_1 like Mac OS X" webkit="534.46" safari="7534.48.3" version="5.1 Mobile/9A406"/>
-    <option name="Safari 5.1 (iPad; iOS 5.0.1)" platform="iPhone" oscpu="CPU OS 5_0_1 like Mac OS X" webkit="534.46" safari="7534.48.3" version="5.1 Mobile/9A406"/>
+    <option name="Safari 5.1 (iPhone; iOS 5.1)" platform="iPhone" oscpu="CPU iPhone OS 5_1 like Mac OS X" webkit="534.46" safari="7534.48.3" version="5.1 Mobile/9B179"/>
+    <option name="Safari 5.1 (iPad; iOS 5.1)" platform="iPhone" oscpu="CPU OS 5_1 like Mac OS X" webkit="534.46" safari="7534.48.3" version="5.1 Mobile/9B176"/>
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
-    <option name="Chrome 17.0.963.56 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="535.11" version="17.0.963.56"/>
-    <option name="Chrome 17.0.963.56 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="535.11" version="17.0.963.56"/>
+    <option name="Chrome 17.0.963.79 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="535.11" version="17.0.963.79"/>
+    <option name="Chrome 17.0.963.79 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="535.11" version="17.0.963.79"/>
 
-    <option name="Chrome 4.0 (Nexus S; Android 2.3.4 Gingerbread)" value="Mozilla/5.0 (Linux; U; Android 2.3.4; {language}; Nexus S Build/GRI20) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"/>
+    <option name="Chrome 4.0 (Galaxy Nexus; Android 4.0 ICS)" value="Mozilla/5.0 (Linux; U; Android 4.0; {language}; Galaxy Nexus Build/IFL10C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"/>
   </group>
   <group name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
     <option name="Opera 11.61 (Windows 7)" oscpu="Windows NT 6.1" presto="2.10.229" version="11.61"/>
