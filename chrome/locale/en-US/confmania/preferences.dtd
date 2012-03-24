@@ -159,6 +159,10 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
 <!ENTITY browser.others.label "Others">
 <!ENTITY browser.others.geo_enabled.label "Enable Geolocation">
+<!ENTITY browser.others.full_screen_enabled.label "Enable Full Screen API (Firefox10+)">
+<!ENTITY browser.others.dom_battery_enabled.label "Enable Battery Status API (Firefox11+)">
+<!ENTITY browser.others.dom_sms_enabled.label "Enable Messaging (SMS) API (Firefox11+)">
+<!ENTITY browser.others.dom_vibrator_enabled.label "Enable Vibration API (Firefox11+)">
 <!ENTITY browser.others.dns.label "DNS Setting">
 <!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
@@ -281,16 +285,24 @@
 <!ENTITY http.connect.keepAliveProxy.accesskey "A">
 <!ENTITY http.connect.pipeline.accesskey "P">
 <!ENTITY http.connect.pipelineProxy.accesskey "N">
-<!ENTITY http.ad.label "Advanced">
-<!ENTITY http.ad.accept.label "Transmitted 'Accept' HTTP Headers">
-<!ENTITY http.ad.accept.encoding.label "Accept-Encoding">
-<!ENTITY http.ad.accept.default.label "Accept">
-<!ENTITY http.ad.maxsession.label "Maximum session connection">
-<!ENTITY http.ad.maxsession.maxpipeliningrequest.label "Max pipelining Request">
-<!ENTITY http.ad.maxsession.maxconnections.label "Max Connection (Total)">
-<!ENTITY http.ad.maxsession.maxconnectionsPerServer.label "Max Connection (per Server)">
-<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerServer.label "Max Persistent Connection (per Server)">
-<!ENTITY http.ad.maxsession.maxpersistentconnectionsPerProxy.label "Max Persistent Connection (via Proxy)">
+<!ENTITY http.connect.pipelineSSL.label "Enable Pipelining for HTTPS">
+<!ENTITY http.connect.pipelineSSL.accesskey "L">
+<!ENTITY http.connect.spdy.label "Enable SPDY Protocol (Firefox11+)">
+<!ENTITY http.connect.spdy.accesskey "D">
+<!ENTITY http.maxconn.label "Max Connections">
+<!ENTITY http.maxconn.maxpipeliningrequest.label "Max pipelining Request">
+<!ENTITY http.maxconn.maxconnections.label "Max Connections (Total)">
+<!ENTITY http.maxconn.maxconnectionsPerServer.label "Max Connections (per Server)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "Max Persistent Connections (per Server)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "Max Persistent Connections (via Proxy)">
+<!ENTITY http.timeout.label "Timeout">
+<!ENTITY http.timeout.connection-retry.label "Connection retry">
+<!ENTITY http.timeout.keep-alive.label "Keep-Alive">
+<!ENTITY http.timeout.spdy.label "SPDY (Firefox11+)">
+<!ENTITY http.header.label "Header">
+<!ENTITY http.header.encoding.label "Accept-Encoding">
+<!ENTITY http.header.accept.label "Accept (for Content)">
+<!ENTITY http.header.accept-image.label "Accept (for Image)">
 
 <!ENTITY ui.title "UI">
 <!ENTITY ui.mousewheel.label "Mouse wheel">
