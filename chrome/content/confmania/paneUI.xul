@@ -509,6 +509,7 @@
   <groupbox>
     <caption label="&ui.others.preference.label;"/>
     <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
+    <description class="indent">&ui.others.preference.instanceAccept.desc;</description>
     <checkbox label="&ui.others.preference.animateFadeIn.label;" preference="browser.preferences.animateFadeIn"/>
   </groupbox>
   <groupbox>

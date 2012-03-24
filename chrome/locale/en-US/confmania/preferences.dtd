@@ -393,6 +393,7 @@
 <!ENTITY ui.others.label "Others">
 <!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
 <!ENTITY ui.others.preference.instanceAccept.label "Apply instance and the dialog is modeless  (likely Mac or Gnome)">
+<!ENTITY ui.others.preference.instanceAccept.desc "Do not unselect on Mac OS X. See Mozilla bugzilla 641288 (http://bugzil.la/641288).">
 <!ENTITY ui.others.preference.animateFadeIn.label "Animate fade-in (likely Mac)">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) style mouse behavior">
 <!ENTITY ui.others.xwin.autocopy.label "Enable auto-copy selected text (takes effect only *nix)">
