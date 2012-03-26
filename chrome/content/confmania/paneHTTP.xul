@@ -47,7 +47,9 @@
    - ***** END LICENSE BLOCK ***** -->
 
 <overlay id="paneHTTPOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneHTTP">
+<prefpane id="paneHTTP" flex="1" onpaneload="gPrefWindow.prefHTTP.init();">
+
+<script type="application/javascript;version=1.8" src="paneHTTP.js"></script>
 
 <preferences>
   <preference id="network.http.version" name="network.http.version" type="string"/>
@@ -75,19 +77,19 @@
   <preference id="image.http.accept" name="image.http.accept" type="string"/>
 </preferences>
 
-<vbox orient="vertical" class="warning">
-<description>&harmfulWarning;</description>
-</vbox>
-
-<tabbox flex="1">
-<tabs>
-<tab label="&http.connect.label;"/>
-<tab label="&http.maxconn.label;"/>
-<tab label="&http.timeout.label;"/>
-<tab label="&http.header.label;"/>
-</tabs>
-<tabpanels flex="1">
-<tabpanel orient="vertical">
+<hbox flex="1" orient="horizontal" id="paneHTTPBox">
+<radiogroup id="paneHTTPBoxTab" class="subtabs"
+ orient="vertical" style="max-width: 10em; width: 10em;"
+ value="http-pane-connect" oncommand="gPrefWindow.prefHTTP.onPaneHTTPBoxTabSelected();">
+  <radio class="subtab" value="http-pane-connect" label="&http.connect.label;"/>
+  <radio class="subtab" value="http-pane-maxconn" label="&http.maxconn.label;"/>
+  <radio class="subtab" value="http-pane-timeout" label="&http.timeout.label;"/>
+  <radio class="subtab" value="http-pane-header"  label="&http.header.label;"/>
+</radiogroup>
+<splitter/>
+<deck id="paneHTTPBoxContainer" flex="4">
+<box class="subtabpanel" orient="vertical" id="http-pane-connect">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
   <description>&http.connect.desc;</description>
   <hbox>
     <groupbox flex="1">
@@ -125,8 +127,9 @@
   <checkbox label="&http.connect.spdy.label;"
             accesskey="&http.connect.spdy.accesskey;"
             preference="network.http.spdy.enabled"/>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="http-pane-maxconn">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
   <grid>
     <columns><column/><column/></columns>
     <rows>
@@ -157,8 +160,9 @@
       </row>
     </rows>
   </grid>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="http-pane-timeout">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
   <grid>
     <columns><column/><column/><column/></columns>
     <rows>
@@ -179,8 +183,9 @@
       </row>
     </rows>
   </grid>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="http-pane-header">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
   <grid>
     <columns><column/><column flex="1"/></columns>
     <rows>
@@ -198,9 +203,9 @@
       </row>
     </rows>
   </grid>
-</tabpanel>
-</tabpanels>
-</tabbox>
+</box>
+</deck>
+</hbox>
 
 </prefpane>
 </overlay>
