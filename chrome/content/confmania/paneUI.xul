@@ -136,7 +136,7 @@
   <radio class="subtab" value="ui-pane-others"      label="&ui.others.label;"/>
 </radiogroup>
 <splitter/>
-<deck id="paneBrowserBoxContainer" flex="4">
+<deck id="paneUIBoxContainer" flex="4">
 <box class="subtabpanel" orient="vertical" id="ui-pane-mousewheel">
   <tabbox flex="1" style="margin: 3px;">
   <tabs>
