@@ -4,6 +4,8 @@ gPrefWindow.prefSecurity = {
      = Components.classes["@mozilla.org/security/pk11tokendb;1"]
      .getService(Components.interfaces.nsIPK11TokenDB)
      .getInternalKeyToken().getAskPasswordTimeout();
+
+    gPrefWindow.prefSecurity.onPaneSecurityBoxTabSelected();
   },
   syncFromPopupwin: function() {
     var mData = document.getElementById("dom.popup_allowed_events");
@@ -44,6 +46,17 @@ gPrefWindow.prefSecurity = {
       document.getElementById("paneSecurity").userChangedValue(askEveryTimeHidden);
     } else {
       askEveryTimeHidden._initilized = true;
+    }
+  },
+  onPaneSecurityBoxTabSelected : function () {
+    let paneSecurityBoxTab = document.getElementById("paneSecurityBoxTab");
+    let selectedPanel = document.getElementById(paneSecurityBoxTab.value);
+    selectedPanel.parentNode.selectedPanel = selectedPanel;
+
+    for (let i = 0; i < paneSecurityBoxTab.itemCount; i++) {
+      let radioItem = paneSecurityBoxTab.getItemAtIndex(i);
+      let pane = document.getElementById(radioItem.value);
+      pane.setAttribute("selected", (radioItem.selected)? "true" : "false");
     }
   }
 };
