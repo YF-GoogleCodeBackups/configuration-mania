@@ -46,7 +46,7 @@
 <overlay id="paneSecurityOverlay"
  xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneSecurity" onpaneload="gPrefWindow.prefSecurity.init();">
+<prefpane id="paneSecurity" flex="1" onpaneload="gPrefWindow.prefSecurity.init();">
 
 <script type="application/javascript;version=1.8" src="paneSecurity.js"></script>
 
@@ -97,59 +97,56 @@
   <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
 </preferences>
 
-<tabbox flex="1">
-<tabs>
-<tab label="&security.js.label;"/>
-<tab label="&security.popupwin.label;"/>
-<tab label="&security.antivirus.label;"/>
-<tab label="&security.ssl.label;"/>
-<tab label="&security.net.label;"/>
-<tab label="&security.privacy.label;"/>
-<tab label="&security.referer.label;"/>
-</tabs> 
-<tabpanels flex="1">
-<tabpanel orient="vertical" flex="1">
 
-<tabbox class="settingsBox">
-<tabs>
-<tab label="&security.js.annoy.label;"/>
-<tab label="&security.js.uis.label;"/>
-</tabs>
-<tabpanels flex="1">
-<tabpanel orient="vertical">
-  <groupbox align="center" orient="horizontal">
-    <label value="&security.js.annoy.max_script_run_time.label;" control="max_script_run_time"/>
-    <textbox id="max_script_run_time" type="number" hidespinbuttons="true" preference="dom.max_script_run_time" size="2"/>
-    <label value="&seconds;"/>
-  </groupbox>
-
+<hbox flex="1" orient="horizontal" id="paneSecurityBox">
+<radiogroup id="paneSecurityBoxTab" class="subtabs"
+ orient="vertical" style="max-width: 10em; width: 10em;"
+ value="security-pane-js" oncommand="gPrefWindow.prefSecurity.onPaneSecurityBoxTabSelected();">
+  <radio class="subtab" value="security-pane-js"        label="&security.js.label;"/>
+  <radio class="subtab" value="security-pane-popupwin"  label="&security.popupwin.label;"/>
+  <radio class="subtab" value="security-pane-antivirus" label="&security.antivirus.label;"/>
+  <radio class="subtab" value="security-pane-ssl"       label="&security.ssl.label;"/>
+  <radio class="subtab" value="security-pane-net"       label="&security.net.label;"/>
+  <radio class="subtab" value="security-pane-privacy"   label="&security.privacy.label;"/>
+  <radio class="subtab" value="security-pane-referer"   label="&security.referer.label;"/>
+</radiogroup>
+<splitter/>
+<deck id="paneSecurityBoxContainer" flex="4">
+<box class="subtabpanel" orient="vertical" id="security-pane-js">
   <groupbox>
-    <checkbox preference="dom.allow_scripts_to_close_windows" label="&security.js.annoy.disable_scripts_to_close_windows;"/>
-    <checkbox preference="dom.disable_window_flip" label="&security.js.annoy.window_flip;"/>
-    <checkbox preference="dom.disable_window_move_resize" label="&security.js.annoy.window_move_resize;"/>
-    <checkbox preference="dom.disable_window_status_change" label="&security.js.annoy.status_change;"/>
-    <checkbox preference="dom.disable_image_src_set" label="&security.js.annoy.change_image;"/>
-    <description class="indent">&security.js.annoy.change_image.desc;</description>
-    <checkbox preference="dom.event.contextmenu.enabled" label="&security.js.annoy.contextmenu;"/>
-    <checkbox preference="nglayout.events.dispatchLeftClickOnly" label="&security.js.annoy.dispatchLeftClickOnly;"/>
-  </groupbox>
-</tabpanel>
-<tabpanel orient="vertical">
-  <description>&security.js.uis.desc1;</description>
-  <checkbox label="&security.js.uis.menubar;" preference="dom.disable_window_open_feature.menubar"/>
-  <checkbox label="&security.js.uis.resizable;" preference="dom.disable_window_open_feature.resizable"/>
-  <checkbox label="&security.js.uis.scrollbars;" preference="dom.disable_window_open_feature.scrollbars"/>
-  <!--checkbox id="security-uis-titlebar" label="Title" preference="dom.disable_window_open_feature.titlebar"/-->
-  <checkbox label="&security.js.uis.toolbar;" preference="dom.disable_window_open_feature.toolbar"/>
-  <checkbox label="&security.js.uis.locationbar;" preference="dom.disable_window_open_feature.location"/>
-  <checkbox label="&security.js.uis.status;" preference="dom.disable_window_open_feature.status"/>
-  <description class="emphasis">&security.js.uis.desc2;</description>
-</tabpanel>
-</tabpanels>
-</tabbox>
-</tabpanel>
+    <caption label="&security.js.annoy.label;"/>
 
-<tabpanel orient="vertical">
+    <groupbox align="center" orient="horizontal">
+      <label value="&security.js.annoy.max_script_run_time.label;" control="max_script_run_time"/>
+      <textbox id="max_script_run_time" type="number" hidespinbuttons="true" preference="dom.max_script_run_time" size="2"/>
+      <label value="&seconds;"/>
+    </groupbox>
+    <groupbox>
+      <checkbox preference="dom.allow_scripts_to_close_windows" label="&security.js.annoy.disable_scripts_to_close_windows;"/>
+      <checkbox preference="dom.disable_window_flip" label="&security.js.annoy.window_flip;"/>
+      <checkbox preference="dom.disable_window_move_resize" label="&security.js.annoy.window_move_resize;"/>
+      <checkbox preference="dom.disable_window_status_change" label="&security.js.annoy.status_change;"/>
+      <checkbox preference="dom.disable_image_src_set" label="&security.js.annoy.change_image;"/>
+      <description class="indent">&security.js.annoy.change_image.desc;</description>
+      <checkbox preference="dom.event.contextmenu.enabled" label="&security.js.annoy.contextmenu;"/>
+      <checkbox preference="nglayout.events.dispatchLeftClickOnly" label="&security.js.annoy.dispatchLeftClickOnly;"/>
+    </groupbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&security.js.uis.label;"/>
+
+    <description>&security.js.uis.desc1;</description>
+    <checkbox label="&security.js.uis.menubar;" preference="dom.disable_window_open_feature.menubar"/>
+    <checkbox label="&security.js.uis.resizable;" preference="dom.disable_window_open_feature.resizable"/>
+    <checkbox label="&security.js.uis.scrollbars;" preference="dom.disable_window_open_feature.scrollbars"/>
+    <!--checkbox id="security-uis-titlebar" label="Title" preference="dom.disable_window_open_feature.titlebar"/-->
+    <checkbox label="&security.js.uis.toolbar;" preference="dom.disable_window_open_feature.toolbar"/>
+    <checkbox label="&security.js.uis.locationbar;" preference="dom.disable_window_open_feature.location"/>
+    <checkbox label="&security.js.uis.status;" preference="dom.disable_window_open_feature.status"/>
+    <description class="emphasis">&security.js.uis.desc2;</description>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-popupwin">
   <label value="&security.popupwin.onblock.label;" control="popupwin-displayPopupsNotification"/>
   <checkbox class="indent" id="popupwin-displayPopupsNotification"
             label="&security.popupwin.onblock.displayNotification.label;"
@@ -157,11 +154,9 @@
 
   <label value="&security.popupwin.tabs.label;"/>
   <radiogroup class="indent" preference="browser.link.open_newwindow.restriction">
-    <html:div>
-      <radio value="0" label="&security.popupwin.tabs.0.label;"/>
-      <radio value="1" label="&security.popupwin.tabs.1.label;"/>
-      <radio value="2" label="&security.popupwin.tabs.2.label;"/>
-    </html:div>
+    <radio value="0" label="&security.popupwin.tabs.0.label;"/>
+    <radio value="1" label="&security.popupwin.tabs.1.label;"/>
+    <radio value="2" label="&security.popupwin.tabs.2.label;"/>
   </radiogroup>
 
   <hbox align="center">
@@ -170,12 +165,10 @@
   </hbox>
   <label value="&security.popupwin.from_plugins.label;"/>
   <radiogroup class="indent" preference="privacy.popups.disable_from_plugins">
-    <html:div>
-      <radio value="0" label="&security.popupwin.from_plugins.0.label;"/>
-      <radio value="1" label="&security.popupwin.from_plugins.1.label;"/>
-      <radio value="2" label="&security.popupwin.from_plugins.2.label;"/>
-      <radio value="3" label="&security.popupwin.from_plugins.3.label;"/>
-    </html:div>
+    <radio value="0" label="&security.popupwin.from_plugins.0.label;"/>
+    <radio value="1" label="&security.popupwin.from_plugins.1.label;"/>
+    <radio value="2" label="&security.popupwin.from_plugins.2.label;"/>
+    <radio value="3" label="&security.popupwin.from_plugins.3.label;"/>
   </radiogroup>
 
   <label value="&security.popupwin.event.label;" control="popupwin-e"/>
@@ -194,16 +187,54 @@
     <listitem type="checkbox" value="click" label="&security.popupwin.event.click.label;"/>
     <listitem type="checkbox" value="dblclick" label="&security.popupwin.event.dblclick.label;"/>
   </listbox>
-</tabpanel>
+  <checkbox class="indent" id="popupwin-displayPopupsNotification"
+            label="&security.popupwin.onblock.displayNotification.label;"
+            preference="privacy.popups.showBrowserMessage"/>
 
-<tabpanel orient="vertical">
+  <label value="&security.popupwin.tabs.label;"/>
+  <radiogroup class="indent" preference="browser.link.open_newwindow.restriction">
+    <radio value="0" label="&security.popupwin.tabs.0.label;"/>
+    <radio value="1" label="&security.popupwin.tabs.1.label;"/>
+    <radio value="2" label="&security.popupwin.tabs.2.label;"/>
+  </radiogroup>
+
+  <hbox align="center">
+    <label value="&security.popupwin.popup_maximum.label;" control="popupwin-popup_maximum"/>
+    <textbox id="popupwin-popup_maximum" type="number" hidespinbuttons="true" preference="dom.popup_maximum" size="2"/>
+  </hbox>
+  <label value="&security.popupwin.from_plugins.label;"/>
+  <radiogroup class="indent" preference="privacy.popups.disable_from_plugins">
+    <radio value="0" label="&security.popupwin.from_plugins.0.label;"/>
+    <radio value="1" label="&security.popupwin.from_plugins.1.label;"/>
+    <radio value="2" label="&security.popupwin.from_plugins.2.label;"/>
+    <radio value="3" label="&security.popupwin.from_plugins.3.label;"/>
+  </radiogroup>
+
+  <label value="&security.popupwin.event.label;" control="popupwin-e"/>
+  <listbox class="indent" id="popupwin-e" rows="4" preference="dom.popup_allowed_events" onsyncfrompreference="return gPrefWindow.prefSecurity.syncFromPopupwin()" onsynctopreference="return gPrefWindow.prefSecurity.syncToPopupwin()">
+    <listitem type="checkbox" value="reset" label="&security.popupwin.event.reset.label;"/>
+    <listitem type="checkbox" value="submit" label="&security.popupwin.event.submit.label;"/>
+    <listitem type="checkbox" value="select" label="&security.popupwin.event.select.label;"/>
+    <listitem type="checkbox" value="change" label="&security.popupwin.event.change.label;"/>
+    <listitem type="checkbox" value="resize" label="&security.popupwin.event.resize.label;"/>
+    <listitem type="checkbox" value="input" label="&security.popupwin.event.input.label;"/>
+    <listitem type="checkbox" value="keypress" label="&security.popupwin.event.keypress.label;"/>
+    <listitem type="checkbox" value="keydown" label="&security.popupwin.event.keydown.label;"/>
+    <listitem type="checkbox" value="keyup" label="&security.popupwin.event.keyup.label;"/>
+    <listitem type="checkbox" value="mouseup" label="&security.popupwin.event.mouseup.label;"/>
+    <listitem type="checkbox" value="mousedown" label="&security.popupwin.event.mousedown.label;"/>
+    <listitem type="checkbox" value="click" label="&security.popupwin.event.click.label;"/>
+    <listitem type="checkbox" value="dblclick" label="&security.popupwin.event.dblclick.label;"/>
+  </listbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-antivirus">
   <checkbox label="&security.antivirus.scanWhenDone.label;"
    preference="browser.download.manager.scanWhenDone"/>
   <description class="indent">&security.antivirus.scanWhenDone.desc;</description>
   <checkbox label="&security.antivirus.alertOnEXEOpen.label;"
    preference="browser.download.manager.alertOnEXEOpen"/>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-ssl">
   <description>&security.ssl.ssl_domain_display.label;</description>
   <radiogroup class="indent" preference="browser.identity.ssl_domain_display">
     <radio value="0" label="&security.ssl.ssl_domain_display.none.label;"/>
@@ -217,8 +248,8 @@
     <radio value="1" label="&security.ssl.ssl_override_behavior.nofetch.label;"/>
     <radio value="2" label="&security.ssl.ssl_override_behavior.prefetch.label;"/>
   </radiogroup>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-net">
   <hbox align="center">
     <label control="redirection-limit" value="&security.net.redirection-limit.label;"/>
     <textbox id="redirection-limit" type="number" hidespinbuttons="true" size="2" preference="network.http.redirection-limit"/>
@@ -228,27 +259,25 @@
   <checkbox id="showPunycode" class="indent" label="&security.net.show_punycode.label;"
     preference="network.IDN_show_punycode"/>
   <description id="showPunycodeDesc" class="indent">&security.net.show_punycode.desc;</description>
-</tabpanel>
-<tabpanel orient="vertical">
-  <hbox>
-    <groupbox>
-      <caption label="&security.privacy.form.label;"/>
-      <checkbox label="&security.privacy.form.autofillForms.label;"
-                preference="signon.autofillForms"/>
-    </groupbox>
-    <groupbox>
-      <caption label="&security.privacy.history.label;"/>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-privacy">
+  <groupbox>
+    <caption label="&security.privacy.form.label;"/>
+    <checkbox label="&security.privacy.form.autofillForms.label;"
+              preference="signon.autofillForms"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&security.privacy.history.label;"/>
 
-      <groupbox>
-        <caption label="&security.privacy.history.cookie.label;"/>
-        <hbox align="center">
-          <label value="&security.privacy.history.cookie.lifetimedays.label;" control="cookieLifetimeDays"/>
-          <textbox id="cookieLifetimeDays" type="number" hidespinbuttons="true" size="2" preference="network.cookie.lifetime.days"/>
-          <label value="&days;"/>
-        </hbox>
-      </groupbox>
+    <groupbox>
+      <caption label="&security.privacy.history.cookie.label;"/>
+      <hbox align="center">
+        <label value="&security.privacy.history.cookie.lifetimedays.label;" control="cookieLifetimeDays"/>
+        <textbox id="cookieLifetimeDays" type="number" hidespinbuttons="true" size="2" preference="network.cookie.lifetime.days"/>
+        <label value="&days;"/>
+      </hbox>
     </groupbox>
-  </hbox>
+  </groupbox>
   <groupbox>
     <caption label="&security.privacy.passwd.label;"/>
     <groupbox>
@@ -273,8 +302,9 @@
     </groupbox>
     <description>&security.privacy.passwd.desc;</description>
   </groupbox>
-</tabpanel>
-<tabpanel orient="vertical">
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-referer">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
   <radiogroup id="sendReferer" preference="network.http.sendRefererHeader" onsyncfrompreference="return gPrefWindow.prefSecurity.onSendRefererSecureXSiteSyncFrom()">
     <radio value="0" label="&security.referer.none.label;"/>
     <description class="indent">&security.referer.none.desc;</description>
@@ -284,9 +314,9 @@
   <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite.label;"
     preference="network.http.sendSecureXSiteReferrer"/>
   <description class="indent">&security.referer.secureXSite.desc;</description>
-</tabpanel>
-</tabpanels>
-</tabbox>
+</box>
+</deck>
+</hbox>
 
 </prefpane>
 </overlay>

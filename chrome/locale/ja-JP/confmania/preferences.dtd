@@ -98,7 +98,7 @@
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">
 <!ENTITY browser.sessionStore.privacy_level.never.label "決して保存しない">
 <!ENTITY browser.sessionStore.concurrent.label "最大同時リストア数 (Firefox 4〜7)">
-<!ENTITY browser.sessionStore.concurrent.all.label "すべてのタブをリストアする">
+<!ENTITY browser.sessionStore.concurrent.all.label "すべてのタブを同時にリストアする">
 <!ENTITY browser.sessionStore.concurrent.bartab.label "アクティブなタブに限ってリストアする。他のタブはアクティブになるまでリストアしない。">
 <!ENTITY browser.sessionStore.concurrent.number.label "最大">
 <!ENTITY browser.sessionStore.concurrent.number.label2 "個のタブを同時にリストアする">
@@ -153,7 +153,7 @@
 <!ENTITY browser.speed-cache.disk_cache_ssl.label "SSL 通信の分もキャッシュに貯める (セキュリティリスク有り)">
 <!ENTITY browser.speed-cache.prefetch-next.label "リンク・プリフェッチ(先読み)を有効にする">
 <!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
-<!ENTITY browser.speed-cache.session-history-viewers.desc "注意: この値を増やすと、戻る/進むがより速くなります。しかし、タブを多く開いている時などに&brandShortName;がより多くのメモリを消費するようになります。つまりトレードオフが存在します。">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "注意: この値を増やすと、戻る/進むがより速くなります。しかし、タブの数が増えるにつれて&brandShortName;がより多くのメモリを消費するようになります。つまりトレードオフが存在します。">
 <!ENTITY browser.speed-cache.diskCacheFolder.label "キャッシュの保存先">
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
 <!ENTITY browser.others.label "その他">
@@ -260,7 +260,7 @@
 <!ENTITY security.privacy.passwd.desc "ヒント: マスターパスワードの設定は &brandShortName; の設定ダイアログにあります。">
 <!ENTITY security.referer.label "Referrer">
 <!ENTITY security.referer.none.label "常に送らない (非推奨)">
-<!ENTITY security.referer.none.desc "警告: しばしば、Referrer ヘッダが要求されることがあります。もしそのようなことがあった時には、この設定を&quot;&security.referer.link.label;&quot;及び&quot;&security.referer.all.label;&quot;に変更して下さい。">
+<!ENTITY security.referer.none.desc "警告: いくつかのサイトでは、Referrer ヘッダを要求します。そのようなとき、&quot;&security.referer.link.label;&quot;または&quot;&security.referer.all.label;&quot;を選択してください。">
 <!ENTITY security.referer.link.label "リンクのクリック時のみ送る">
 <!ENTITY security.referer.all.label "画像要求も送る">
 <!ENTITY security.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送る">
@@ -392,6 +392,7 @@
 <!ENTITY ui.others.label "その他">
 <!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
 <!ENTITY ui.others.preference.instanceAccept.label "モードレスダイアログで瞬時に設定を適用 (Mac や Gnome のように)">
+<!ENTITY ui.others.preference.instanceAccept.desc "Mac OS Xではチェックを外さないでください。詳細は Mozilla bugzilla 641288 (http://bugzil.la/641288) を参照">
 <!ENTITY ui.others.preference.animateFadeIn.label "フェードインのアニメーションをする (Mac のように)">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) スタイルのマウス動作">
 <!ENTITY ui.others.xwin.autocopy.label "選択テキストの自動コピーを有効にする(*nixでのみ有効)">

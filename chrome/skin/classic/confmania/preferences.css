@@ -68,6 +68,8 @@ radio.subtab .radio-check-box1 {
   opacity: 1;
 }
 prefwindow[animated="true"] #paneBrowserBoxContainer .subtabpanel,
+prefwindow[animated="true"] #paneSecurityBoxContainer .subtabpanel,
+prefwindow[animated="true"] #paneHTTPBoxContainer .subtabpanel,
 prefwindow[animated="true"] #paneUIBoxContainer .subtabpanel {
   /* For animated or Mac, specify fixed height */
   max-height: 390px;
