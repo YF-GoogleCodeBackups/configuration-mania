@@ -21,11 +21,11 @@
 <!ENTITY browser.urlbar.label "Location Bar">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when clicked">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when double-clicked">
-<!ENTITY browser.urlbar.autoComplete.label "Disable autocomplete">
+<!ENTITY browser.urlbar.autoComplete.label "Disable the autocomplete">
 <!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
 <!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Filter out bookmarklet (&quot;javascript:&quot; URLs)">
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maximum number of entries">
-<!ENTITY browser.urlbar.autoComplete.delay.label "Delay for starting to autocomplete :">
+<!ENTITY browser.urlbar.autoComplete.delay.label "Wait time on the autocomplete :">
 <!ENTITY browser.urlbar.formatting.label "Formatting">
 <!ENTITY browser.urlbar.formatting.formatting-enabled.label "Enable domain highlighting. (Firefox 6+)">
 <!ENTITY browser.urlbar.formatting.trimURLs.label "Drop http:// prefix. (Firefox 7)">
@@ -42,7 +42,7 @@
 <!ENTITY browser.html.img.anim.none.label "Never (Stop)">
 <!ENTITY browser.html.img.resizing.label "Resize large images to fit in the browser window">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
-<!ENTITY browser.html.img.force_inline_alttext.label "Force ALT text for missing images to be layed out inline">
+<!ENTITY browser.html.img.force_inline_alttext.label "Force broken images' alt text to be displayed inline">
 <!ENTITY browser.html.color_management.label "Color Management (CMS) (takes effect after restart)">
 <!ENTITY browser.html.color_management.mode.label "Mode">
 <!ENTITY browser.html.color_management.mode.off.label "Disable CMS">
@@ -98,9 +98,9 @@
 <!ENTITY browser.sessionStore.privacy_level.any.label "for any site">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
 <!ENTITY browser.sessionStore.privacy_level.never.label "Never">
-<!ENTITY browser.sessionStore.concurrent.label "Number of concurrently restored tabs (Firefox 4-7)">
-<!ENTITY browser.sessionStore.concurrent.all.label "All tabs can restore at the same time">
-<!ENTITY browser.sessionStore.concurrent.bartab.label "Only the selected tab in each window will be restored. Other tabs won't be restored until they are selected.">
+<!ENTITY browser.sessionStore.concurrent.label "Number of concurrently-restored tabs (Firefox 4-7)">
+<!ENTITY browser.sessionStore.concurrent.all.label "Restore all tabs at the same time">
+<!ENTITY browser.sessionStore.concurrent.bartab.label "Restore only the selected tab in each window. Other tabs won't be restored until they are selected.">
 <!ENTITY browser.sessionStore.concurrent.number.label "Restore up to">
 <!ENTITY browser.sessionStore.concurrent.number.label2 "tabs concurrently">
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
@@ -140,7 +140,7 @@
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.label "Maximum time to interrupt the process">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "Caution: Do not set 0.">
 <!ENTITY browser.speed-paint.content-switch-threshold.label "High-&gt;Low frequency interrupt mode switch Threshold">
-<!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode provides better UI responsiveness at the expense of load time; Default: 750000 ie. 3/4 ms">
+<!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode provides better UI responsiveness at the expense of load time; Default: 750000 i.e. 3/4 ms">
 <!ENTITY browser.speed-cache.label "Browser Cache">
 <!ENTITY browser.speed-cache.check.label "Check cache of the pages ...">
 <!ENTITY browser.speed-cache.check.desc "WARNING: &quot;Once per session&quot; speeds up your web browsing but can cause problems on some sites. Check &quot;&browser.speed-cache.check.each.label;&quot; if a page is not updated correctly. You can always use Shift+Reload to force a reload.">
@@ -154,10 +154,10 @@
 <!ENTITY browser.speed-cache.disk_cache_ssl.label "Also store SSL-connection pages in the cache (INSECURE)">
 <!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
 <!ENTITY browser.speed-cache.session-history-viewers.label "Max Number of pages stored in memory">
-<!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: The recently visited pages can be faster when pressing Back and Forward. If you open a lot of tabs, &brandShortName;'s memory usage can increse dramatically. It is a trade-off.">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: Increasing the value speeds up &quot;Back&quot; and &quot;Forward&quot;. But &brandShortName;'s memory usage can increase dramatically with increasing number of tabs. It is a trade-off.">
 <!ENTITY browser.speed-cache.diskCacheFolder.label "Cache Folder Location">
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
-<!ENTITY browser.others.label "Others">
+<!ENTITY browser.others.label "Other">
 <!ENTITY browser.others.geo_enabled.label "Enable Geolocation">
 <!ENTITY browser.others.full_screen_enabled.label "Enable Full Screen API (Firefox10+)">
 <!ENTITY browser.others.dom_battery_enabled.label "Enable Battery Status API (Firefox11+)">
@@ -181,7 +181,7 @@
 <!ENTITY security.title "Security">
 <!ENTITY security.js.label "JavaScript">
 <!ENTITY security.js.annoy.label "More Advanced">
-<!ENTITY security.js.annoy.max_script_run_time.label "The browser warns when a script is running over ">
+<!ENTITY security.js.annoy.max_script_run_time.label "The browser warns when a script is running over">
 <!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable Closing non-popup windows">
 <!ENTITY security.js.annoy.window_flip "Disable Requesting/Removing window focus">
 <!ENTITY security.js.annoy.window_move_resize "Disable Moving/Resizing existing windows">
@@ -233,9 +233,9 @@
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ...">
 <!ENTITY security.ssl.ssl_domain_display.none.label "favicon only">
-<!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD (effective top-level domain) along with the second-level domain (e.g., mozilla.org)">
-<!ENTITY security.ssl.ssl_domain_display.full.label "the full domain (e.g., addons.mozilla.org)">
-<!ENTITY security.ssl.ssl_domain_display.desc "When the site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to .">
+<!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD (effective top-level domain) along with the second-level domain (e.g. mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.full.label "the full domain (e.g. addons.mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.desc "When the site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to.">
 <!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed">
 <!ENTITY security.ssl.ssl_override_behavior.dont.label "Do Not pre-populate the current URL as an exception and Do Not pre-fetch the SSL certificate.">
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate.">
@@ -261,11 +261,11 @@
 <!ENTITY security.privacy.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
 <!ENTITY security.referer.label "Referrer">
 <!ENTITY security.referer.none.label "Never Send (Not recommended)">
-<!ENTITY security.referer.none.desc "WARNING: Sending the Referrer header may sometimes be required. If you experience with getting to some sites, this setting can be changed to &quot;&security.referer.link.label;&quot; or &quot;&security.referer.all.label;&quot;.">
+<!ENTITY security.referer.none.desc "WARNING: Some site may require the Referrer header. In that case, Select &quot;&security.referer.link.label;&quot; or &quot;&security.referer.all.label;&quot;.">
 <!ENTITY security.referer.link.label "Send only on clicks">
 <!ENTITY security.referer.all.label "Send on image requests as well">
 <!ENTITY security.referer.secureXSite.label "Send the Referrer header when navigating from a https site to another https site">
-<!ENTITY security.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https server to a non-secure server.">
+<!ENTITY security.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https site to a non-secure site.">
 
 <!ENTITY http.title "HTTP Network">
 <!ENTITY http.connect.label "Connection">
@@ -382,7 +382,7 @@
 <!ENTITY ui.i18n.locale.eg "(e.g. en-US, en-GB, ja, ar)">
 <!ENTITY ui.i18n.spellcheckDefault.label "Spellchecker Setting">
 <!ENTITY ui.i18n.spellcheckDefault.disabled "Disables spellchecker">
-<!ENTITY ui.i18n.spellcheckDefault.multiline "Enables spellchecker for multi-line controls (e.g., textarea) (Default)">
+<!ENTITY ui.i18n.spellcheckDefault.multiline "Enables spellchecker for multi-line controls (e.g. textarea) (Default)">
 <!ENTITY ui.i18n.spellcheckDefault.all "Enables spellchecker for all text controls">
 <!ENTITY ui.i18n.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
 <!ENTITY ui.contextmenu.label "Context menu">
@@ -390,9 +390,10 @@
 <!ENTITY ui.contextmenu.uiSubmenuDelay.label "Submenu Delay">
 <!ENTITY ui.contextmenu.uiSubmenuDelay.none.label "None">
 <!ENTITY ui.contextmenu.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
-<!ENTITY ui.others.label "Others">
+<!ENTITY ui.others.label "Other">
 <!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
 <!ENTITY ui.others.preference.instanceAccept.label "Apply instance and the dialog is modeless  (likely Mac or Gnome)">
+<!ENTITY ui.others.preference.instanceAccept.desc "Do not unselect on Mac OS X. See Mozilla bugzilla 641288 (http://bugzil.la/641288).">
 <!ENTITY ui.others.preference.animateFadeIn.label "Animate fade-in (likely Mac)">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) style mouse behavior">
 <!ENTITY ui.others.xwin.autocopy.label "Enable auto-copy selected text (takes effect only *nix)">
