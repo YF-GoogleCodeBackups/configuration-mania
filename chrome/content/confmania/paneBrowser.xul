@@ -121,6 +121,7 @@
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
 
+  <preference id="browser.altClickSave" name="browser.altClickSave" type="bool" inverted="true"/>
   <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
   <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
   <preference id="browser.download.manager.flashCount" name="browser.download.manager.flashCount" type="int"/>
@@ -430,6 +431,8 @@
    preference="browser.chrome.favicons"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="download">
+  <checkbox label="&browser.download.disableAltClickSave.label;"
+            preference="browser.altClickSave"/>
   <checkbox label="&browser.download.addToRecentDocs.label;"
             preference="browser.download.manager.addToRecentDocs"/>
   <groupbox>
