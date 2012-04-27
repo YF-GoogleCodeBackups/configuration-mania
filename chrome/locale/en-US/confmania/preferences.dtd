@@ -14,6 +14,7 @@
 <!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords enables fast access to services such as search and other information from the Location bar.">
 <!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Enable Internet Keywords">
 <!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL Prefix :">
+<!ENTITY browser.smartbrowsing.internetKeywords.URL.emptyText "the default search engine">
 <!ENTITY browser.smartbrowsing.domainGuessing.label "Domain Guessing">
 <!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Automatically add prefix &amp; suffix to the location if a web page isn't found.">
 <!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefix :">

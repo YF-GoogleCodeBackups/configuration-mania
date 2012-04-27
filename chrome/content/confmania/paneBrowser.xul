@@ -189,7 +189,7 @@
                 label="&browser.smartbrowsing.internetKeywords.enabled.label;"/>
       <hbox align="center">
         <label control="smartbrowsing-keywordsURL" value="&browser.smartbrowsing.internetKeywords.URL.label;"/>
-        <textbox id="smartbrowsing-keywordsURL" preference="keyword.URL" flex="1" class="uri-element"/>
+        <textbox id="smartbrowsing-keywordsURL" preference="keyword.URL" flex="1" class="uri-element" placeholder="&browser.smartbrowsing.internetKeywords.URL.emptyText;"/>
       </hbox>
     </vbox>
   </groupbox>
