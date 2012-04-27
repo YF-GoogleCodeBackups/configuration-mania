@@ -69,6 +69,9 @@
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Disable the automatic detection and use of direct2d (Windows)">
 <!ENTITY browser.html.acceleration.d2d-force-enabled.label "enable Direct2D regardless of automatic detection or blacklisting (Windows)">
 <!ENTITY browser.tabs.label "TabBrowsing">
+<!ENTITY browser.tabs.newtab.label "New Tab (Firefox 13+)">
+<!ENTITY browser.tabs.newtab.url.label "URL:">
+<!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
 <!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
 <!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">

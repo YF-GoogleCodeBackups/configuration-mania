@@ -94,6 +94,9 @@
   <preference id="gfx.direct2d.disabled" name="gfx.direct2d.disabled" type="bool"/>
   <preference id="gfx.direct2d.force-enabled" name="gfx.direct2d.force-enabled" type="bool"/>
 
+
+  <preference id="browser.newtab.url" name="browser.newtab.url" type="string"/>
+  <preference id="browser.newtabpage.enabled" name="browser.newtabpage.enabled" type="bool"/>
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
   <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
@@ -324,6 +327,19 @@
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="tabs">
+  <groupbox>
+    <caption label="&browser.tabs.newtab.label;"/>
+    <hbox align="center">
+      <label value="&browser.tabs.newtab.url.label;" control="newtab-url"/>
+      <menulist id="newtab-url" editable="true" preference="browser.newtab.url" flex="1">
+        <menupopup>
+          <menuitem label="about:blank"/>
+          <menuitem label="about:newtab"/>
+        </menupopup>
+      </menulist>
+    </hbox>
+    <checkbox label="&browser.tabs.newtab.newtabpageEnabled.label;" preference="browser.newtabpage.enabled"/>
+  </groupbox>
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
   <groupbox>
     <caption label="&browser.tabs.closeButtons.label;"/>

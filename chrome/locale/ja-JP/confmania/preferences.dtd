@@ -68,6 +68,9 @@
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Direct2D を使用しない (Windows)">
 <!ENTITY browser.html.acceleration.d2d-force-enabled.label "グラフィックスドライバのブラックリストを無視して常に有効にする (Windows)">
 <!ENTITY browser.tabs.label "タブブラウジング">
+<!ENTITY browser.tabs.newtab.label "新しいタブ (Firefox 13+)">
+<!ENTITY browser.tabs.newtab.url.label "URL:">
+<!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
 <!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所">
 <!ENTITY browser.tabs.closeButtons.active.label "アクティブなタブのみ表示">
