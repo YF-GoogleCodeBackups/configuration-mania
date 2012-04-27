@@ -111,6 +111,7 @@
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab &amp; location bar">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
 <!ENTITY browser.download.label "Download">
+<!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links (Firefox 13+)">
 <!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
 <!ENTITY browser.download.quitBehavior.label "When &brandShortName; quited but downloads in progress:">
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">

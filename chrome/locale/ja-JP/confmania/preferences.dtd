@@ -110,6 +110,7 @@
 <!ENTITY browser.bookmarkicon.siteicons.label "タブやロケーションバーにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
 <!ENTITY browser.download.label "ダウンロード">
+<!ENTITY browser.download.disableAltClickSave.label "ALT+Click または ALT+ENTER でリンク先をダウンロードしない (Firefox 13+)">
 <!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
 <!ENTITY browser.download.quitBehavior.label "&brandShortName;終了時の進行中のダウンロードの処理">
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "中止するが、次回&brandShortName;起動時に自動的に再開">
