@@ -425,9 +425,9 @@
 <!ENTITY debug.devtools.label "開発ツール">
 <!ENTITY debug.devtools.inspector_enabled.label "インスペクタを有効にする">
 <!ENTITY debug.jit.label "JavaScriptのJITコンパイラ設定">
-<!ENTITY debug.jit.jitprofiling.label "Tuning JIT heuristicsを有効">
-<!ENTITY debug.jit.methodjit.label "JaegerMonkey (baseline JIT)を有効(Firefox4-10)">
-<!ENTITY debug.jit.tracejit.label "TraceMonkey (nativeコードコンパイラ)を有効(Firefox4-10)">
+<!ENTITY debug.jit.jitprofiling.label "Tuning JIT heuristics">
+<!ENTITY debug.jit.methodjit.label "JaegerMonkey (Firefox4-10)">
+<!ENTITY debug.jit.tracejit.label "TraceMonkey (Firefox4-10)">
 <!ENTITY debug.jit.content.label "ウェブページ">
 <!ENTITY debug.jit.chrome.label "UI">
 <!ENTITY debug.cache.label "キャッシュ">

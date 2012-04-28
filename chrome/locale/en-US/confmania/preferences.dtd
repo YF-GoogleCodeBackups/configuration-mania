@@ -426,9 +426,9 @@
 <!ENTITY debug.devtools.label "Developer Tools">
 <!ENTITY debug.devtools.inspector_enabled.label "Enable Inspector">
 <!ENTITY debug.jit.label "JavaScript JIT Compiler Setting">
-<!ENTITY debug.jit.jitprofiling.label "Enable tuning JIT heuristics">
-<!ENTITY debug.jit.methodjit.label "Enable JaegerMonkey (baseline JIT) (Firefox4-10)">
-<!ENTITY debug.jit.tracejit.label "Enable TraceMonkey (native-code compiler) (Firefox4-10)">
+<!ENTITY debug.jit.jitprofiling.label "Tuning JIT heuristics">
+<!ENTITY debug.jit.methodjit.label "JaegerMonkey (Firefox4-10)">
+<!ENTITY debug.jit.tracejit.label "TraceMonkey (Firefox4-10)">
 <!ENTITY debug.jit.content.label "on webpages">
 <!ENTITY debug.jit.chrome.label "on UI">
 <!ENTITY debug.cache.label "Cache">
