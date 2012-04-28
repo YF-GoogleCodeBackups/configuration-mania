@@ -366,7 +366,7 @@
     <checkbox label="&browser.tabs.autoselect.loadDivertedInBackground.label;" preference="browser.tabs.loadDivertedInBackground"/>
     <checkbox label="&browser.tabs.autoselect.selectOwnerOnClose.label;" preference="browser.tabs.selectOwnerOnClose"/>
   </groupbox>
-  <groupbox orient="horizontal">
+  <groupbox>
     <caption label="&browser.tabs.tabpreview.label;"/>
     <checkbox label="&browser.tabs.tabpreview.alltabs.label;" preference="browser.allTabs.previews"/>
     <checkbox label="&browser.tabs.tabpreview.ctrltab.label;" preference="browser.ctrlTab.previews"/>
