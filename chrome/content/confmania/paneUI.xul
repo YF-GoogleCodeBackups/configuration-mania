@@ -45,6 +45,7 @@
 ]>
 
 <overlay id="paneUIOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane id="paneUI" onpaneload="gPrefWindow.prefUI.init();">
 
@@ -378,7 +379,7 @@
 <box class="subtabpanel" orient="vertical" id="ui-pane-keynav">
   <groupbox>
     <caption label="&ui.keynav.tabNavigationBehavior.label;"/>
-    <hbox>
+    <vbox>
       <checkbox id="tabNavigationLinks" preference="accessibility.tabfocus"
                 label="&ui.keynav.tabNavigationLinks.label;"
                 accesskey="&ui.keynav.tabNavigationLinks.accesskey;"
@@ -389,7 +390,7 @@
                 accesskey="&ui.keynav.tabNavigationForms.accesskey;"
                 onsyncfrompreference="return gPrefWindow.prefUI.onTabNavSyncFrom(this);"
                 onsynctopreference="return gPrefWindow.prefUI.onTabNavSyncTo(this);"/>
-    </hbox>
+    </vbox>
     <description value="&ui.keynav.tabNavigationTextboxes.label;"/>
   </groupbox>
 
@@ -409,15 +410,15 @@
     <caption label="&ui.keynav.accelerators.label;"/>
     <label value="&ui.keynav.acceleratorsBlurb.label;"/>
 
-    <hbox align="center">
+    <html:div>
       <label value="&ui.keynav.acceleratorKey.label;"
        accesskey="&ui.keynav.acceleratorKey.accesskey;" control="acceleratorKeyValue"/>
       <textbox id="acceleratorKeyValue" type="number" hidespinbuttons="true" preference="ui.key.accelKey" size="5"/>
-    </hbox>
-    <hbox align="center">
+    </html:div>
+    <html:div>
       <label value="&ui.keynav.menuAccessKey.label;" accesskey="&ui.keynav.menuAccessKey.accesskey;" control="menuAccessKeyValue"/>
       <textbox id="menuAccessKeyValue" type="number" hidespinbuttons="true" preference="ui.key.menuAccessKey" size="5"/>
-    </hbox>
+    </html:div>
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-bidi">
