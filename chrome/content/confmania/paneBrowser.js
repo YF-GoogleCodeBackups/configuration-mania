@@ -4,7 +4,7 @@ gPrefWindow.prefBrowser = {
       let dirSvc = Components.classes["@mozilla.org/file/directory_service;1"]
        .getService(Components.interfaces.nsIProperties);
       let cachedir = dirSvc.get((dirSvc.has("ProfLD"))? "ProfLD" : "ProfD", Components.interfaces.nsILocalFile);
-      document.getElementById("browserCacheDiskCacheFolder").emptyText = cachedir.path;
+      document.getElementById("browserCacheDiskCacheFolder").placeholder = cachedir.path;
     } catch(ex){}
 
     if (! document.documentElement.instantApply) {
@@ -16,7 +16,7 @@ gPrefWindow.prefBrowser = {
   initUA : function(){
     var oUAValue = document.getElementById("ua-value");
     try {
-      oUAValue.emptyText = gPrefWindow.prefBrowser.getFirefoxUserAgent();
+      oUAValue.placeholder = gPrefWindow.prefBrowser.getFirefoxUserAgent();
     } catch (ex) {}
     var prefBranch = Components.classes['@mozilla.org/preferences-service;1']
       .getService(Components.interfaces.nsIPrefBranch);
@@ -287,7 +287,7 @@ gPrefWindow.prefBrowser = {
     try{
       var file = Components.classes["@mozilla.org/file/local;1"]
        .createInstance(Components.interfaces.nsILocalFile);
-      file.initWithPath((folderField.value == "")? folderField.emptyText : folderField.value);
+      file.initWithPath((folderField.value == "")? folderField.placeholder : folderField.value);
       fp.displayDirectory = file.parent;
       fp.defaultString = file.leafName;
     }catch(ex){throw ex}
