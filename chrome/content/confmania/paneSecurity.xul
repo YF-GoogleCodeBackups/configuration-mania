@@ -116,7 +116,7 @@
   <groupbox>
     <caption label="&security.js.annoy.label;"/>
 
-    <groupbox align="center">
+    <groupbox>
       <html:div>
         <label value="&security.js.annoy.max_script_run_time.label;" control="max_script_run_time"/>
         <textbox id="max_script_run_time" type="number" hidespinbuttons="true" preference="dom.max_script_run_time" size="2"/>
