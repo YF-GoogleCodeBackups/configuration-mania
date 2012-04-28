@@ -116,10 +116,12 @@
   <groupbox>
     <caption label="&security.js.annoy.label;"/>
 
-    <groupbox align="center" orient="horizontal">
-      <label value="&security.js.annoy.max_script_run_time.label;" control="max_script_run_time"/>
-      <textbox id="max_script_run_time" type="number" hidespinbuttons="true" preference="dom.max_script_run_time" size="2"/>
-      <label value="&seconds;"/>
+    <groupbox align="center">
+      <html:div>
+        <label value="&security.js.annoy.max_script_run_time.label;" control="max_script_run_time"/>
+        <textbox id="max_script_run_time" type="number" hidespinbuttons="true" preference="dom.max_script_run_time" size="2"/>
+        <label value="&seconds;"/>
+      </html:div>
     </groupbox>
     <groupbox>
       <checkbox preference="dom.allow_scripts_to_close_windows" label="&security.js.annoy.disable_scripts_to_close_windows;"/>
