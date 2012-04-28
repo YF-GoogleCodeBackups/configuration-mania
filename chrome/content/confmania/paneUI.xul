@@ -391,7 +391,7 @@
                 onsyncfrompreference="return gPrefWindow.prefUI.onTabNavSyncFrom(this);"
                 onsynctopreference="return gPrefWindow.prefUI.onTabNavSyncTo(this);"/>
     </vbox>
-    <description value="&ui.keynav.tabNavigationTextboxes.label;"/>
+    <description>&ui.keynav.tabNavigationTextboxes.label;</description>
   </groupbox>
 
   <groupbox align="start">
