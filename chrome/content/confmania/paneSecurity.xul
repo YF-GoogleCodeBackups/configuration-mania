@@ -189,45 +189,6 @@
     <listitem type="checkbox" value="click" label="&security.popupwin.event.click.label;"/>
     <listitem type="checkbox" value="dblclick" label="&security.popupwin.event.dblclick.label;"/>
   </listbox>
-  <checkbox class="indent" id="popupwin-displayPopupsNotification"
-            label="&security.popupwin.onblock.displayNotification.label;"
-            preference="privacy.popups.showBrowserMessage"/>
-
-  <label value="&security.popupwin.tabs.label;"/>
-  <radiogroup class="indent" preference="browser.link.open_newwindow.restriction">
-    <radio value="0" label="&security.popupwin.tabs.0.label;"/>
-    <radio value="1" label="&security.popupwin.tabs.1.label;"/>
-    <radio value="2" label="&security.popupwin.tabs.2.label;"/>
-  </radiogroup>
-
-  <hbox align="center">
-    <label value="&security.popupwin.popup_maximum.label;" control="popupwin-popup_maximum"/>
-    <textbox id="popupwin-popup_maximum" type="number" hidespinbuttons="true" preference="dom.popup_maximum" size="2"/>
-  </hbox>
-  <label value="&security.popupwin.from_plugins.label;"/>
-  <radiogroup class="indent" preference="privacy.popups.disable_from_plugins">
-    <radio value="0" label="&security.popupwin.from_plugins.0.label;"/>
-    <radio value="1" label="&security.popupwin.from_plugins.1.label;"/>
-    <radio value="2" label="&security.popupwin.from_plugins.2.label;"/>
-    <radio value="3" label="&security.popupwin.from_plugins.3.label;"/>
-  </radiogroup>
-
-  <label value="&security.popupwin.event.label;" control="popupwin-e"/>
-  <listbox class="indent" id="popupwin-e" rows="4" preference="dom.popup_allowed_events" onsyncfrompreference="return gPrefWindow.prefSecurity.syncFromPopupwin()" onsynctopreference="return gPrefWindow.prefSecurity.syncToPopupwin()">
-    <listitem type="checkbox" value="reset" label="&security.popupwin.event.reset.label;"/>
-    <listitem type="checkbox" value="submit" label="&security.popupwin.event.submit.label;"/>
-    <listitem type="checkbox" value="select" label="&security.popupwin.event.select.label;"/>
-    <listitem type="checkbox" value="change" label="&security.popupwin.event.change.label;"/>
-    <listitem type="checkbox" value="resize" label="&security.popupwin.event.resize.label;"/>
-    <listitem type="checkbox" value="input" label="&security.popupwin.event.input.label;"/>
-    <listitem type="checkbox" value="keypress" label="&security.popupwin.event.keypress.label;"/>
-    <listitem type="checkbox" value="keydown" label="&security.popupwin.event.keydown.label;"/>
-    <listitem type="checkbox" value="keyup" label="&security.popupwin.event.keyup.label;"/>
-    <listitem type="checkbox" value="mouseup" label="&security.popupwin.event.mouseup.label;"/>
-    <listitem type="checkbox" value="mousedown" label="&security.popupwin.event.mousedown.label;"/>
-    <listitem type="checkbox" value="click" label="&security.popupwin.event.click.label;"/>
-    <listitem type="checkbox" value="dblclick" label="&security.popupwin.event.dblclick.label;"/>
-  </listbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="security-pane-antivirus">
   <checkbox label="&security.antivirus.scanWhenDone.label;"
