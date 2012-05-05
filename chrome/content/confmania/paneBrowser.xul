@@ -97,6 +97,7 @@
 
   <preference id="browser.newtab.url" name="browser.newtab.url" type="string"/>
   <preference id="browser.newtabpage.enabled" name="browser.newtabpage.enabled" type="bool"/>
+  <preference id="browser.pagethumbnails.capturing_disabled" name="browser.pagethumbnails.capturing_disabled" type="bool"/>
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
   <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
@@ -339,7 +340,8 @@
         </menupopup>
       </menulist>
     </hbox>
-    <checkbox label="&browser.tabs.newtab.newtabpageEnabled.label;" preference="browser.newtabpage.enabled"/>
+    <checkbox label="&browser.tabs.newtab.newtabpageEnabled.label;" preference="browser.newtabpage.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onNewtabNewtabpageEnabledSyncFrom();"/>
+    <checkbox class="indent" label="&browser.tabs.newtab.thumbCapturingDisabled.label;" preference="browser.pagethumbnails.capturing_disabled"/>
   </groupbox>
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
   <groupbox>

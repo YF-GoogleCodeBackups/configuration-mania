@@ -139,6 +139,11 @@ gPrefWindow.prefBrowser = {
     document.getElementById("gfx.direct2d.force-enabled").disabled = disabled;
     return undefined; // no override
   },
+  onNewtabNewtabpageEnabledSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.newtabpage.enabled").value;
+    document.getElementById("browser.pagethumbnails.capturing_disabled").disabled = disabled;
+    return undefined; // no override
+  },
   onTabsCloseButtonSyncFrom : function() {
     let disabled = document.getElementById("browser.tabs.closeButtons").value != 1;
     document.getElementById("browser.tabs.tabClipWidth").disabled = disabled;
