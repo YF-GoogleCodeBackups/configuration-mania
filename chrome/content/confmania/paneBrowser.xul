@@ -163,6 +163,7 @@
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
   <preference id="accessibility.accesskeycausesactivation" name="accessibility.accesskeycausesactivation" type="bool"/>
   <preference id="places.history.expiration.max_pages" name="places.history.expiration.max_pages" type="int"/>
+  <preference id="app.update.channel" name="app.update.channel" type="string"/>
 </preferences>
 
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
@@ -656,6 +657,21 @@
              onsynctopreference="return gPrefWindow.syncTo(this, -1);"/>
       </hbox>
     </radiogroup>
+  </groupbox>
+
+  <groupbox>
+    <caption label="&browser.others.appUpdateChannel.label;"/>
+    <hbox align="center">
+      <menulist id="others-appUpdateChannel" preference="app.update.channel"><menupopup>
+        <menuitem value="release" label="&browser.others.appUpdateChannel.release.label;"/>
+        <menuitem value="esr" label="&browser.others.appUpdateChannel.esr.label;"/>
+        <menuitem value="beta" label="&browser.others.appUpdateChannel.beta.label;"/>
+        <menuitem value="aurora" label="&browser.others.appUpdateChannel.aurora.label;"/>
+        <menuitem value="nightly" label="&browser.others.appUpdateChannel.nightly.label;"/>
+        <menuitem value="default" label="&browser.others.appUpdateChannel.default.label;"/>
+      </menupopup></menulist>
+      <button label="&reset;" oncommand="gPrefWindow.prefBrowser.resetAppUpdateChannel()"/>
+    </hbox>
   </groupbox>
 </box>
 
