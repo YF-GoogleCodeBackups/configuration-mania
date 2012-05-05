@@ -313,6 +313,9 @@ gPrefWindow.prefBrowser = {
   setAlertsSlideLight : function(){//#alerts.slide*
     document.getElementById("alerts.slideIncrement").value = 10;
     document.getElementById("alerts.slideIncrementTime").value = 20;
+  },
+  resetAppUpdateChannel : function() {
+    gPrefWindow.resetPref(document.getElementById("app.update.channel"));
   }
 };
 
