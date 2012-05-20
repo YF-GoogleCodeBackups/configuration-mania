@@ -51,7 +51,6 @@
 <!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.3d-transforms.label "Enable CSS 3D Transforms (Firefox 8+)">
-<!ENTITY browser.html.html5.label "Enable HTML 5 Parsing">
 <!ENTITY browser.html.enableSVGSMIL.label "Enable SMIL content">
 <!ENTITY browser.html.webgl.label "Enable WebGL (takes effect after restart)">
 <!ENTITY browser.html.webgl.software_render.label "Use software rendering">

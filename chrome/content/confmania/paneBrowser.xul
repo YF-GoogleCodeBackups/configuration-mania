@@ -78,7 +78,6 @@
   <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
   <preference id="layout.3d-transforms.enabled" name="layout.3d-transforms.enabled" type="bool"/>
-  <preference id="html5.parser.enable" name="html5.parser.enable" type="bool"/>
   <preference id="svg.smil.enabled" name="svg.smil.enabled" type="bool"/>
   <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
   <preference id="webgl.force_osmesa" name="webgl.force_osmesa" type="bool"/>
@@ -281,7 +280,6 @@
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.3d-transforms.label;" preference="layout.3d-transforms.enabled"/>
-  <checkbox label="&browser.html.html5.label;" preference="html5.parser.enable"/>
   <checkbox label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
   <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.disabled"
             onsyncfrompreference="return gPrefWindow.prefBrowser.onWebGLSyncFrom()"/>
