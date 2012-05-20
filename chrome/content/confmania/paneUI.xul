@@ -97,6 +97,7 @@
   <preference id="accessibility.warn_on_browsewithcaret" name="accessibility.warn_on_browsewithcaret" type="bool"/>
   <preference id="ui.key.accelKey" name="ui.key.accelKey" type="int"/>
   <preference id="ui.key.menuAccessKey" name="ui.key.menuAccessKey" type="int"/>
+  <preference id="accessibility.accesskeycausesactivation" type="bool"/>
 
   <preference id="bidi.browser.ui" name="bidi.browser.ui" type="bool"/>
   <preference id="bidi.direction" name="bidi.direction" type="int"/>
@@ -419,6 +420,12 @@
       <label value="&ui.keynav.menuAccessKey.label;" accesskey="&ui.keynav.menuAccessKey.accesskey;" control="menuAccessKeyValue"/>
       <textbox id="menuAccessKeyValue" type="number" hidespinbuttons="true" preference="ui.key.menuAccessKey" size="5"/>
     </html:div>
+  </groupbox>
+  <groupbox>
+    <caption label="&ui.keynav.accesibility.label;"/>
+    <checkbox label="&ui.keynav.accesibility.accesskeycauseactivation.label;"
+              accesskey="&ui.keynav.accesibility.accesskeycauseactivation.accesskey;"
+              preference="accessibility.accesskeycausesactivation"/>
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-bidi">
