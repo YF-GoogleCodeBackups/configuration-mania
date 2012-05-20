@@ -97,6 +97,10 @@
 <!ENTITY browser.sessionStore.max_undo.windows.label "Number of window closures :">
 <!ENTITY browser.sessionStore.max_undo.tabs.label "Number of tab closures :">
 <!ENTITY browser.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
+<!ENTITY browser.sessionStore.warnOnQuit.label "Ask if &brandShortName; save the session on quit/restart or not">
+<!ENTITY browser.sessionStore.warnOnQuit.desc "Note: This pref is only applicable when you set &brandShortName; to show your home page or the blank page on startup.">
+<!ENTITY browser.sessionStore.showQuitWarning.label "Never ask on quit">
+<!ENTITY browser.sessionStore.warnOnRestart.label "Never ask on restart">
 <!ENTITY browser.sessionStore.privacy_level.label "Store extra session data :">
 <!ENTITY browser.sessionStore.privacy_level.any.label "for any site">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
