@@ -192,6 +192,7 @@
 <!ENTITY browser.others.appUpdateChannel.aurora.label "Aurora (Pre-beta)">
 <!ENTITY browser.others.appUpdateChannel.nightly.label "Nightly build">
 <!ENTITY browser.others.appUpdateChannel.default.label "No update">
+<!ENTITY browser.others.warnOnAboutConfig.label "Show the warning message on about:config">
 
 <!ENTITY security.title "Security">
 <!ENTITY security.js.label "JavaScript">

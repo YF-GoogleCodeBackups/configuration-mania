@@ -191,6 +191,7 @@
 <!ENTITY browser.others.appUpdateChannel.aurora.label "Aurora (プリベータ)">
 <!ENTITY browser.others.appUpdateChannel.nightly.label "ナイトリー版">
 <!ENTITY browser.others.appUpdateChannel.default.label "更新しない">
+<!ENTITY browser.others.warnOnAboutConfig.label "about:config で警告を表示する">
 
 <!ENTITY security.title "セキュリティ">
 <!ENTITY security.js.label "JavaScript">
