@@ -181,8 +181,6 @@
 <!ENTITY browser.others.backspace_action.goBack "ページの履歴を戻る(IEと同じ動作)">
 <!ENTITY browser.others.backspace_action.scrollUp "ページをスクロールアップ">
 <!ENTITY browser.others.backspace_action.nothing "何もしない">
-<!ENTITY browser.others.accesibility.label "アクセシビリティ">
-<!ENTITY browser.others.accesibility.accesskeycauseactivation.label "アクセスキーでその要素をアクティブにする(例えばリンク先に移動)">
 <!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
 <!ENTITY browser.others.appUpdateChannel.label "更新チャネル">
 <!ENTITY browser.others.appUpdateChannel.release.label "安定版">
@@ -369,6 +367,9 @@
 <!ENTITY ui.keynav.acceleratorKey.accesskey "A">
 <!ENTITY ui.keynav.menuAccessKey.label "メニュー装飾キー(のコード):">
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.keynav.accesibility.label "アクセシビリティ">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.label "アクセスキーでその要素をアクティブにする(例えばリンク先に移動)">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.accesskey "E">
 <!ENTITY ui.bidi.label "BiDi">
 <!ENTITY ui.bidi.ui.label "BiDi (双方向テキスト) のインターフェイスを有効に">
 <!ENTITY ui.bidi.direction.label "方向">
