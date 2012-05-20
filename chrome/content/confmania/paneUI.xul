@@ -429,55 +429,53 @@
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-bidi">
-    <vbox>
-      <checkbox label="&ui.bidi.ui.label;" preference="bidi.browser.ui"/>
-      <grid>
-      <columns><column/><column flex="1"/></columns>
-      <rows>
+  <checkbox label="&ui.bidi.ui.label;" preference="bidi.browser.ui"/>
+  <grid>
+    <columns><column/><column flex="1"/></columns>
+    <rows>
       <row align="center">
         <label value="&ui.bidi.direction.label;"/>
-        <radiogroup id="bidi-direction" orient="horizontal" preference="bidi.direction">
-          <radio value="1" label="&ui.bidi.direction.ltr.label;"/>
-          <radio value="2" label="&ui.bidi.direction.rtl.label;"/>
-        </radiogroup>
+        <menulist id="bidi-direction" preference="bidi.direction"><menupopup>
+          <menuitem value="1" label="&ui.bidi.direction.ltr.label;"/>
+          <menuitem value="2" label="&ui.bidi.direction.rtl.label;"/>
+        </menupopup></menulist>
       </row>
       <row align="center">
         <label control="bidi-numeral" value="&ui.bidi.numeral.label;"/>
-        <radiogroup id="bidi-numeral" orient="horizontal" preference="bidi.numeral">
-          <radio value="0" label="&ui.bidi.numeral.regular_context.label;"/>
-          <radio value="1" label="&ui.bidi.numeral.hindi_context.label;"/>
-          <radio value="2" label="&ui.bidi.numeral.arabic.label;"/>
-          <radio value="3" label="&ui.bidi.numeral.hindi.label;"/>
-        </radiogroup>
+        <menulist id="bidi-numeral" preference="bidi.numeral"><menupopup>
+          <menuitem value="0" label="&ui.bidi.numeral.regular_context.label;"/>
+          <menuitem value="1" label="&ui.bidi.numeral.hindi_context.label;"/>
+          <menuitem value="2" label="&ui.bidi.numeral.arabic.label;"/>
+          <menuitem value="3" label="&ui.bidi.numeral.hindi.label;"/>
+        </menupopup></menulist>
       </row>
       <row align="center">
         <label value="&ui.bidi.support.label;"/>
-        <radiogroup id="bidi-provider" orient="horizontal" preference="bidi.support">
-          <radio value="1" label="&ui.bidi.support.mozilla.label;"/>
-          <radio value="2" label="&ui.bidi.support.os.label;"/>
-          <radio value="3" label="&ui.bidi.support.disable.label;"/>
-        </radiogroup>
+        <menulist id="bidi-provider" preference="bidi.support"><menupopup>
+          <menuitem value="1" label="&ui.bidi.support.mozilla.label;"/>
+          <menuitem value="2" label="&ui.bidi.support.os.label;"/>
+          <menuitem value="3" label="&ui.bidi.support.disable.label;"/>
+        </menupopup></menulist>
       </row>
       <row align="center">
         <label value="&ui.bidi.texttype.label;"/>
-        <radiogroup id="bidi-texttype" orient="horizontal" preference="bidi.texttype">
-          <radio value="1" label="&ui.bidi.texttype.charset.label;"/>
-          <radio value="2" label="&ui.bidi.texttype.logical.label;"/>
-          <radio value="3" label="&ui.bidi.texttype.visual.label;"/>
-        </radiogroup>
+        <menulist id="bidi-texttype" preference="bidi.texttype"><menupopup>
+          <menuitem value="1" label="&ui.bidi.texttype.charset.label;"/>
+          <menuitem value="2" label="&ui.bidi.texttype.logical.label;"/>
+          <menuitem value="3" label="&ui.bidi.texttype.visual.label;"/>
+        </menupopup></menulist>
       </row>
-      </rows>
-      </grid>
-    </vbox>
-      <groupbox>
-        <caption label="&ui.bidi.scrollbarSide.label;"/>
-        <radiogroup preference="layout.scrollbar.side">
-          <radio value="0" label="&ui.bidi.scrollbarSide.uiBase;"/>
-          <radio value="1" label="&ui.bidi.scrollbarSide.contentBase;"/>
-          <radio value="2" label="&ui.bidi.scrollbarSide.right;"/>
-          <radio value="3" label="&ui.bidi.scrollbarSide.left;"/>
-        </radiogroup>
-      </groupbox>
+    </rows>
+  </grid>
+  <groupbox>
+    <caption label="&ui.bidi.scrollbarSide.label;"/>
+    <radiogroup preference="layout.scrollbar.side">
+      <radio value="0" label="&ui.bidi.scrollbarSide.uiBase;"/>
+      <radio value="1" label="&ui.bidi.scrollbarSide.contentBase;"/>
+      <radio value="2" label="&ui.bidi.scrollbarSide.right;"/>
+      <radio value="3" label="&ui.bidi.scrollbarSide.left;"/>
+    </radiogroup>
+  </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-i18n">
   <hbox align="center">
