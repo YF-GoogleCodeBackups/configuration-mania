@@ -182,8 +182,6 @@
 <!ENTITY browser.others.backspace_action.goBack "Go back a page in the session history (same as IE)">
 <!ENTITY browser.others.backspace_action.scrollUp "Scroll up in the current document">
 <!ENTITY browser.others.backspace_action.nothing "Do nothing">
-<!ENTITY browser.others.accesibility.label "Accesibility">
-<!ENTITY browser.others.accesibility.accesskeycauseactivation.label "Activate the element (e.g. follow a link) using an access key">
 <!ENTITY browser.others.historyExpirationMaxPages.label "Max number of unique URLs to retain in history">
 <!ENTITY browser.others.appUpdateChannel.label "Update channel">
 <!ENTITY browser.others.appUpdateChannel.release.label "Stable Release">
@@ -370,6 +368,9 @@
 <!ENTITY ui.keynav.acceleratorKey.accesskey "A">
 <!ENTITY ui.keynav.menuAccessKey.label "Menu access key:">
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.keynav.accesibility.label "Accesibility">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.label "Activate the element (e.g. follow a link) using an access key">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.accesskey "E">
 <!ENTITY ui.bidi.label "Bidi">
 <!ENTITY ui.bidi.ui.label "Enable Bi-Directional (BiDi) UI">
 <!ENTITY ui.bidi.direction.label "Direction">
