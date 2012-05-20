@@ -96,6 +96,10 @@
 <!ENTITY browser.sessionStore.max_undo.windows.label "最近閉じたウィンドウ数">
 <!ENTITY browser.sessionStore.max_undo.tabs.label "最近閉じたタブ数">
 <!ENTITY browser.sessionStore.resume_from_crash.label "クラッシュ後の&brandShortName;起動時に、ウィンドウとタブを復元する">
+<!ENTITY browser.sessionStore.warnOnQuit.label "&brandShortName; 終了/再起動時にセッションを保存するか尋ねる">
+<!ENTITY browser.sessionStore.warnOnQuit.desc "注意：&brandShortName; を起動するときホームページまたは空白ページを表示するよう設定したとき、この設定は有効です。">
+<!ENTITY browser.sessionStore.showQuitWarning.label "終了時には尋ねない">
+<!ENTITY browser.sessionStore.warnOnRestart.label "再起動時には尋ねない">
 <!ENTITY browser.sessionStore.privacy_level.label "URL以外の付加的情報の扱い">
 <!ENTITY browser.sessionStore.privacy_level.any.label "すべてのサイトで保存">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">

@@ -114,6 +114,9 @@
   <preference id="browser.sessionstore.max_windows_undo" name="browser.sessionstore.max_windows_undo" type="int"/>
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
   <preference id="browser.sessionstore.resume_from_crash" name="browser.sessionstore.resume_from_crash" type="bool"/>
+  <preference id="browser.warnOnQuit" name="browser.warnOnQuit" type="bool"/>
+  <preference id="browser.showQuitWarning" name="browser.showQuitWarning" type="bool" inverted="true"/>
+  <preference id="browser.warnOnRestart" name="browser.warnOnRestart" type="bool" inverted="true"/>
   <preference id="browser.sessionstore.privacy_level" name="browser.sessionstore.privacy_level" type="int"/>
   <preference id="browser.sessionstore.max_concurrent_tabs" name="browser.sessionstore.max_concurrent_tabs" type="int"/>
 
@@ -399,6 +402,16 @@
     </grid>
   </groupbox>
   <checkbox preference="browser.sessionstore.resume_from_crash" label="&browser.sessionStore.resume_from_crash.label;"/>
+  <vbox>
+    <checkbox preference="browser.warnOnQuit"
+              label="&browser.sessionStore.warnOnQuit.label;"
+              onsyncfrompreference="return gPrefWindow.prefBrowser.onSessionStoreWarnOnQuitSyncFrom();"/>
+    <hbox class="indent" align="center">
+      <checkbox preference="browser.showQuitWarning" label="&browser.sessionStore.showQuitWarning.label;"/>
+      <checkbox preference="browser.warnOnRestart" label="&browser.sessionStore.warnOnRestart.label;"/>
+    </hbox>
+    <description>&browser.sessionStore.warnOnQuit.desc;</description>
+  </vbox>
   <groupbox>
     <caption label="&browser.sessionStore.privacy_level.label;"/>
     <radiogroup preference="browser.sessionstore.privacy_level">
