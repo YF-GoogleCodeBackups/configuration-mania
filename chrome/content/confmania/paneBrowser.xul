@@ -78,7 +78,6 @@
   <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
   <preference id="layout.3d-transforms.enabled" name="layout.3d-transforms.enabled" type="bool"/>
-  <preference id="html5.parser.enable" name="html5.parser.enable" type="bool"/>
   <preference id="svg.smil.enabled" name="svg.smil.enabled" type="bool"/>
   <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
   <preference id="webgl.force_osmesa" name="webgl.force_osmesa" type="bool"/>
@@ -116,6 +115,9 @@
   <preference id="browser.sessionstore.max_windows_undo" name="browser.sessionstore.max_windows_undo" type="int"/>
   <preference id="browser.sessionstore.max_tabs_undo" name="browser.sessionstore.max_tabs_undo" type="int"/>
   <preference id="browser.sessionstore.resume_from_crash" name="browser.sessionstore.resume_from_crash" type="bool"/>
+  <preference id="browser.warnOnQuit" name="browser.warnOnQuit" type="bool"/>
+  <preference id="browser.showQuitWarning" name="browser.showQuitWarning" type="bool" inverted="true"/>
+  <preference id="browser.warnOnRestart" name="browser.warnOnRestart" type="bool" inverted="true"/>
   <preference id="browser.sessionstore.privacy_level" name="browser.sessionstore.privacy_level" type="int"/>
   <preference id="browser.sessionstore.max_concurrent_tabs" name="browser.sessionstore.max_concurrent_tabs" type="int"/>
 
@@ -162,8 +164,9 @@
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
-  <preference id="accessibility.accesskeycausesactivation" name="accessibility.accesskeycausesactivation" type="bool"/>
   <preference id="places.history.expiration.max_pages" name="places.history.expiration.max_pages" type="int"/>
+  <preference id="app.update.channel" name="app.update.channel" type="string"/>
+  <preference id="general.warnOnAboutConfig" name="general.warnOnAboutConfig" type="bool"/>
 </preferences>
 
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
@@ -281,7 +284,6 @@
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.3d-transforms.label;" preference="layout.3d-transforms.enabled"/>
-  <checkbox label="&browser.html.html5.label;" preference="html5.parser.enable"/>
   <checkbox label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
   <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.disabled"
             onsyncfrompreference="return gPrefWindow.prefBrowser.onWebGLSyncFrom()"/>
@@ -402,6 +404,16 @@
     </grid>
   </groupbox>
   <checkbox preference="browser.sessionstore.resume_from_crash" label="&browser.sessionStore.resume_from_crash.label;"/>
+  <vbox>
+    <checkbox preference="browser.warnOnQuit"
+              label="&browser.sessionStore.warnOnQuit.label;"
+              onsyncfrompreference="return gPrefWindow.prefBrowser.onSessionStoreWarnOnQuitSyncFrom();"/>
+    <hbox class="indent" align="center">
+      <checkbox preference="browser.showQuitWarning" label="&browser.sessionStore.showQuitWarning.label;"/>
+      <checkbox preference="browser.warnOnRestart" label="&browser.sessionStore.warnOnRestart.label;"/>
+    </hbox>
+    <description>&browser.sessionStore.warnOnQuit.desc;</description>
+  </vbox>
   <groupbox>
     <caption label="&browser.sessionStore.privacy_level.label;"/>
     <radiogroup preference="browser.sessionstore.privacy_level">
@@ -640,11 +652,6 @@
       <radio value="2" label="&browser.others.backspace_action.nothing;"/>
     </radiogroup>
   </groupbox>
-  <groupbox>
-    <caption label="&browser.others.accesibility.label;"/>
-    <checkbox label="&browser.others.accesibility.accesskeycauseactivation.label;"
-              preference="accessibility.accesskeycausesactivation"/>
-  </groupbox>
 
   <groupbox>
     <caption label="&browser.others.historyExpirationMaxPages.label;"/>
@@ -659,6 +666,22 @@
       </hbox>
     </radiogroup>
   </groupbox>
+
+  <groupbox>
+    <caption label="&browser.others.appUpdateChannel.label;"/>
+    <hbox align="center">
+      <menulist id="others-appUpdateChannel" preference="app.update.channel"><menupopup>
+        <menuitem value="release" label="&browser.others.appUpdateChannel.release.label;"/>
+        <menuitem value="esr" label="&browser.others.appUpdateChannel.esr.label;"/>
+        <menuitem value="beta" label="&browser.others.appUpdateChannel.beta.label;"/>
+        <menuitem value="aurora" label="&browser.others.appUpdateChannel.aurora.label;"/>
+        <menuitem value="nightly" label="&browser.others.appUpdateChannel.nightly.label;"/>
+        <menuitem value="default" label="&browser.others.appUpdateChannel.default.label;"/>
+      </menupopup></menulist>
+      <button label="&reset;" oncommand="gPrefWindow.prefBrowser.resetAppUpdateChannel()"/>
+    </hbox>
+  </groupbox>
+  <checkbox preference="general.warnOnAboutConfig" label="&browser.others.warnOnAboutConfig.label;"/>
 </box>
 
 </deck>

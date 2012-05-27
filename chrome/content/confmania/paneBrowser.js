@@ -149,6 +149,12 @@ gPrefWindow.prefBrowser = {
     document.getElementById("browser.tabs.tabClipWidth").disabled = disabled;
     return undefined; // no override
   },
+  onSessionStoreWarnOnQuitSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.warnOnQuit").value;
+    document.getElementById("browser.showQuitWarning").disabled = disabled;
+    document.getElementById("browser.warnOnRestart").disabled = disabled;
+    return undefined; // no override
+  },
   onInterruptParseSyncFrom : function() {
     let disabled = document.getElementById("content.interrupt.parsing").value;
     document.getElementById("content.max.tokenizing.time").disabled = disabled;
@@ -318,6 +324,9 @@ gPrefWindow.prefBrowser = {
   setAlertsSlideLight : function(){//#alerts.slide*
     document.getElementById("alerts.slideIncrement").value = 10;
     document.getElementById("alerts.slideIncrementTime").value = 20;
+  },
+  resetAppUpdateChannel : function() {
+    gPrefWindow.resetPref(document.getElementById("app.update.channel"));
   }
 };
 

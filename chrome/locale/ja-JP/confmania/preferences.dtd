@@ -50,7 +50,6 @@
 <!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
 <!ENTITY browser.html.3d-transforms.label "CSS 3D Transforms を有効にする (Firefox 8+)">
-<!ENTITY browser.html.html5.label "HTML 5 パーサーを有効にする">
 <!ENTITY browser.html.enableSVGSMIL.label "SMIL を有効にする">
 <!ENTITY browser.html.webgl.label "WebGL を有効にする (再起動必要)">
 <!ENTITY browser.html.webgl.software_render.label "ソフトウェアレンダリングする">
@@ -98,6 +97,10 @@
 <!ENTITY browser.sessionStore.max_undo.windows.label "最近閉じたウィンドウ数">
 <!ENTITY browser.sessionStore.max_undo.tabs.label "最近閉じたタブ数">
 <!ENTITY browser.sessionStore.resume_from_crash.label "クラッシュ後の&brandShortName;起動時に、ウィンドウとタブを復元する">
+<!ENTITY browser.sessionStore.warnOnQuit.label "&brandShortName; 終了/再起動時にセッションを保存するか尋ねる">
+<!ENTITY browser.sessionStore.warnOnQuit.desc "注意：&brandShortName; を起動するときホームページまたは空白ページを表示するよう設定したとき、この設定は有効です。">
+<!ENTITY browser.sessionStore.showQuitWarning.label "終了時には尋ねない">
+<!ENTITY browser.sessionStore.warnOnRestart.label "再起動時には尋ねない">
 <!ENTITY browser.sessionStore.privacy_level.label "URL以外の付加的情報の扱い">
 <!ENTITY browser.sessionStore.privacy_level.any.label "すべてのサイトで保存">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">
@@ -179,9 +182,15 @@
 <!ENTITY browser.others.backspace_action.goBack "ページの履歴を戻る(IEと同じ動作)">
 <!ENTITY browser.others.backspace_action.scrollUp "ページをスクロールアップ">
 <!ENTITY browser.others.backspace_action.nothing "何もしない">
-<!ENTITY browser.others.accesibility.label "アクセシビリティ">
-<!ENTITY browser.others.accesibility.accesskeycauseactivation.label "アクセスキーでその要素をアクティブにする(例えばリンク先に移動)">
 <!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
+<!ENTITY browser.others.appUpdateChannel.label "更新チャネル">
+<!ENTITY browser.others.appUpdateChannel.release.label "安定版">
+<!ENTITY browser.others.appUpdateChannel.esr.label "ESR">
+<!ENTITY browser.others.appUpdateChannel.beta.label "ベータ/リリース候補版">
+<!ENTITY browser.others.appUpdateChannel.aurora.label "Aurora (プリベータ)">
+<!ENTITY browser.others.appUpdateChannel.nightly.label "ナイトリー版">
+<!ENTITY browser.others.appUpdateChannel.default.label "更新しない">
+<!ENTITY browser.others.warnOnAboutConfig.label "about:config で警告を表示する">
 
 <!ENTITY security.title "セキュリティ">
 <!ENTITY security.js.label "JavaScript">
@@ -359,6 +368,9 @@
 <!ENTITY ui.keynav.acceleratorKey.accesskey "A">
 <!ENTITY ui.keynav.menuAccessKey.label "メニュー装飾キー(のコード):">
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.keynav.accesibility.label "アクセシビリティ">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.label "アクセスキーでその要素をアクティブにする(例えばリンク先に移動)">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.accesskey "E">
 <!ENTITY ui.bidi.label "BiDi">
 <!ENTITY ui.bidi.ui.label "BiDi (双方向テキスト) のインターフェイスを有効に">
 <!ENTITY ui.bidi.direction.label "方向">
