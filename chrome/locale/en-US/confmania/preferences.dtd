@@ -51,7 +51,6 @@
 <!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.3d-transforms.label "Enable CSS 3D Transforms (Firefox 8+)">
-<!ENTITY browser.html.html5.label "Enable HTML 5 Parsing">
 <!ENTITY browser.html.enableSVGSMIL.label "Enable SMIL content">
 <!ENTITY browser.html.webgl.label "Enable WebGL (takes effect after restart)">
 <!ENTITY browser.html.webgl.software_render.label "Use software rendering">
@@ -99,6 +98,10 @@
 <!ENTITY browser.sessionStore.max_undo.windows.label "Number of window closures :">
 <!ENTITY browser.sessionStore.max_undo.tabs.label "Number of tab closures :">
 <!ENTITY browser.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
+<!ENTITY browser.sessionStore.warnOnQuit.label "Ask if &brandShortName; save the session on quit/restart or not">
+<!ENTITY browser.sessionStore.warnOnQuit.desc "Note: This pref is only applicable when you set &brandShortName; to show your home page or the blank page on startup.">
+<!ENTITY browser.sessionStore.showQuitWarning.label "Never ask on quit">
+<!ENTITY browser.sessionStore.warnOnRestart.label "Never ask on restart">
 <!ENTITY browser.sessionStore.privacy_level.label "Store extra session data :">
 <!ENTITY browser.sessionStore.privacy_level.any.label "for any site">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
@@ -180,9 +183,15 @@
 <!ENTITY browser.others.backspace_action.goBack "Go back a page in the session history (same as IE)">
 <!ENTITY browser.others.backspace_action.scrollUp "Scroll up in the current document">
 <!ENTITY browser.others.backspace_action.nothing "Do nothing">
-<!ENTITY browser.others.accesibility.label "Accesibility">
-<!ENTITY browser.others.accesibility.accesskeycauseactivation.label "Activate the element (e.g. follow a link) using an access key">
 <!ENTITY browser.others.historyExpirationMaxPages.label "Max number of unique URLs to retain in history">
+<!ENTITY browser.others.appUpdateChannel.label "Update channel">
+<!ENTITY browser.others.appUpdateChannel.release.label "Stable Release">
+<!ENTITY browser.others.appUpdateChannel.esr.label "ESR">
+<!ENTITY browser.others.appUpdateChannel.beta.label "Beta / Release Candidate">
+<!ENTITY browser.others.appUpdateChannel.aurora.label "Aurora (Pre-beta)">
+<!ENTITY browser.others.appUpdateChannel.nightly.label "Nightly build">
+<!ENTITY browser.others.appUpdateChannel.default.label "No update">
+<!ENTITY browser.others.warnOnAboutConfig.label "Show the warning message on about:config">
 
 <!ENTITY security.title "Security">
 <!ENTITY security.js.label "JavaScript">
@@ -360,6 +369,9 @@
 <!ENTITY ui.keynav.acceleratorKey.accesskey "A">
 <!ENTITY ui.keynav.menuAccessKey.label "Menu access key:">
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.keynav.accesibility.label "Accesibility">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.label "Activate the element (e.g. follow a link) using an access key">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.accesskey "E">
 <!ENTITY ui.bidi.label "Bidi">
 <!ENTITY ui.bidi.ui.label "Enable Bi-Directional (BiDi) UI">
 <!ENTITY ui.bidi.direction.label "Direction">
