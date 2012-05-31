@@ -408,7 +408,7 @@
     <checkbox preference="browser.warnOnQuit"
               label="&browser.sessionStore.warnOnQuit.label;"
               onsyncfrompreference="return gPrefWindow.prefBrowser.onSessionStoreWarnOnQuitSyncFrom();"/>
-    <vbox class="indent" align="center">
+    <vbox class="indent">
       <checkbox preference="browser.showQuitWarning" label="&browser.sessionStore.showQuitWarning.label;"/>
       <checkbox preference="browser.warnOnRestart" label="&browser.sessionStore.warnOnRestart.label;"/>
     </vbox>
