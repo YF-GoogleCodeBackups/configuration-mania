@@ -20,21 +20,21 @@
     <option name="IE 8 (Windows 7 x64 WOW64 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1; WOW64" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.4506.2152; Media Center PC 6.0"/>
     <option name="IE 9 (Windows 7)" value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"/>
   </group>
-  <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
-    <option name="Safari 5.1.5 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="534.55.3" safari="534.55.3" version="5.1.5"/>
-    <option name="Safari 5.1.5 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="534.55.3" safari="534.55.3" version="5.1.5"/>
-
-    <option name="Safari 5.1 (iPhone; iOS 5.1)" platform="iPhone" oscpu="CPU iPhone OS 5_1 like Mac OS X" webkit="534.46" safari="7534.48.3" version="5.1 Mobile/9B179"/>
-    <option name="Safari 5.1 (iPad; iOS 5.1)" platform="iPhone" oscpu="CPU OS 5_1 like Mac OS X" webkit="534.46" safari="7534.48.3" version="5.1 Mobile/9B176"/>
-  </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
-    <option name="Chrome 18.0.1025.162 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="535.19" version="18.0.1025.162"/>
-    <option name="Chrome 18.0.1025.162 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="535.19" version="18.0.1025.162"/>
+    <option name="Chrome 19.0.1084.46 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="536.5" version="19.0.1084.46"/>
+    <option name="Chrome 19.0.1084.46 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="536.5" version="19.0.1084.46"/>
 
     <option name="Chrome 4.0 (Galaxy Nexus; Android 4.0 ICS)" value="Mozilla/5.0 (Linux; U; Android 4.0; {language}; Galaxy Nexus Build/IFL10C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"/>
   </group>
+  <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
+    <option name="Safari 5.1.7 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="534.57.2" safari="534.57.2" version="5.1.7"/>
+    <option name="Safari 5.1.7 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="534.57.2" safari="534.57.2" version="5.1.7"/>
+
+    <option name="Safari 5.1 (iPhone; iOS 5.1.1)" platform="iPhone" oscpu="CPU iPhone OS 5_1_1 like Mac OS X" webkit="534.46" safari="7534.48.3" version="5.1 Mobile/9B206"/>
+    <option name="Safari 5.1 (iPad; iOS 5.1.1)" platform="iPad" oscpu="CPU OS 5_1 like Mac OS X" webkit="534.46" safari="7534.48.3" version="5.1 Mobile/9B176"/>
+  </group>
   <group name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
-    <option name="Opera 11.62 (Windows 7)" oscpu="Windows NT 6.1" presto="2.10.229" version="11.62"/>
+    <option name="Opera 11.64 (Windows 7)" oscpu="Windows NT 6.1" presto="2.10.229" version="11.64"/>
   </group>
   <group name="Nintendo DS/Wii" value="">
     <option name="Nintendo DS Browser (Nintendo DSi)" value="Opera/{opt:version} (Nintendo DSi; Opera/466; U; {language})" version="9.50"/>
