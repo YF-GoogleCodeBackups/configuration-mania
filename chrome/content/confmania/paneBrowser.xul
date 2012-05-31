@@ -408,10 +408,10 @@
     <checkbox preference="browser.warnOnQuit"
               label="&browser.sessionStore.warnOnQuit.label;"
               onsyncfrompreference="return gPrefWindow.prefBrowser.onSessionStoreWarnOnQuitSyncFrom();"/>
-    <hbox class="indent" align="center">
+    <vbox class="indent" align="center">
       <checkbox preference="browser.showQuitWarning" label="&browser.sessionStore.showQuitWarning.label;"/>
       <checkbox preference="browser.warnOnRestart" label="&browser.sessionStore.warnOnRestart.label;"/>
-    </hbox>
+    </vbox>
     <description>&browser.sessionStore.warnOnQuit.desc;</description>
   </vbox>
   <groupbox>
