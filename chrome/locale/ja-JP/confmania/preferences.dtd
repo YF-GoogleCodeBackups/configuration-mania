@@ -236,8 +236,8 @@
 <!ENTITY security.popupwin.event.keypress.label "キーを押した">
 <!ENTITY security.popupwin.event.keydown.label "キー押下">
 <!ENTITY security.popupwin.event.keyup.label "キーを離した">
-<!ENTITY security.popupwin.event.mouseup.label "マウスボタン押下">
-<!ENTITY security.popupwin.event.mousedown.label "マウスボタンを離した">
+<!ENTITY security.popupwin.event.mouseup.label "マウスボタンを離した">
+<!ENTITY security.popupwin.event.mousedown.label "マウスボタンを押下">
 <!ENTITY security.popupwin.event.click.label "クリック">
 <!ENTITY security.popupwin.event.dblclick.label "ダブルクリック">
 <!ENTITY security.antivirus.label "ウイルス対策">
