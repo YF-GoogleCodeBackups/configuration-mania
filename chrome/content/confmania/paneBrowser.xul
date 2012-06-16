@@ -76,6 +76,7 @@
   <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
   <preference id="gfx.color_management.enabled" name="gfx.color_management.enabled" type="bool"/>
   <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
+  <preference id="plugins.click_to_play" name="plugins.click_to_play" type="bool"/>
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
   <preference id="layout.3d-transforms.enabled" name="layout.3d-transforms.enabled" type="bool"/>
   <preference id="svg.smil.enabled" name="svg.smil.enabled" type="bool"/>
@@ -281,6 +282,10 @@
         <menuitem value="2" label="&browser.html.color_management.mode.tagged.label;"/>
       </menupopup></menulist>
     </hbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&browser.html.plugins.label;"/>
+    <checkbox label="&browser.html.plugins.click_to_play.label;" preference="plugins.click_to_play"/>
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.3d-transforms.label;" preference="layout.3d-transforms.enabled"/>
