@@ -26,7 +26,7 @@ gPrefWindow.prefBrowser = {
 
     var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
               .createInstance(Components.interfaces.nsIXMLHttpRequest);
-    req.open("GET", "useragent.xml", true);
+    req.open("GET", "chrome://confmania/content/useragent.xml", true);
     req.onreadystatechange = function (event) {
       if(req.readyState != 4) return;
       var doc = req.responseXML;
