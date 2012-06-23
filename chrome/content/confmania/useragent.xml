@@ -34,7 +34,7 @@
     <option name="Safari 5.1 (iPad; iOS 5.1.1)" platform="iPad" oscpu="CPU OS 5_1 like Mac OS X" webkit="534.46" safari="7534.48.3" version="5.1 Mobile/9B176"/>
   </group>
   <group name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
-    <option name="Opera 11.64 (Windows 7)" oscpu="Windows NT 6.1" presto="2.10.229" version="11.64"/>
+    <option name="Opera 12.00 (Windows 7)" oscpu="Windows NT 6.1" presto="2.10.289" version="12.00"/>
   </group>
   <group name="Nintendo DS/Wii" value="">
     <option name="Nintendo DS Browser (Nintendo DSi)" value="Opera/{opt:version} (Nintendo DSi; Opera/466; U; {language})" version="9.50"/>
