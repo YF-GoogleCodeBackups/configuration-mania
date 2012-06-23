@@ -185,13 +185,6 @@
 <!ENTITY browser.others.backspace_action.scrollUp "ページをスクロールアップ">
 <!ENTITY browser.others.backspace_action.nothing "何もしない">
 <!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
-<!ENTITY browser.others.appUpdateChannel.label "更新チャネル">
-<!ENTITY browser.others.appUpdateChannel.release.label "安定版">
-<!ENTITY browser.others.appUpdateChannel.esr.label "ESR">
-<!ENTITY browser.others.appUpdateChannel.beta.label "ベータ/リリース候補版">
-<!ENTITY browser.others.appUpdateChannel.aurora.label "Aurora (プリベータ)">
-<!ENTITY browser.others.appUpdateChannel.nightly.label "ナイトリー版">
-<!ENTITY browser.others.appUpdateChannel.default.label "更新しない">
 <!ENTITY browser.others.warnOnAboutConfig.label "about:config で警告を表示する">
 
 <!ENTITY security.title "セキュリティ">

@@ -166,7 +166,6 @@
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
   <preference id="places.history.expiration.max_pages" name="places.history.expiration.max_pages" type="int"/>
-  <preference id="app.update.channel" name="app.update.channel" type="string"/>
   <preference id="general.warnOnAboutConfig" name="general.warnOnAboutConfig" type="bool"/>
 </preferences>
 
@@ -672,20 +671,6 @@
     </radiogroup>
   </groupbox>
 
-  <groupbox>
-    <caption label="&browser.others.appUpdateChannel.label;"/>
-    <hbox align="center">
-      <menulist id="others-appUpdateChannel" preference="app.update.channel"><menupopup>
-        <menuitem value="release" label="&browser.others.appUpdateChannel.release.label;"/>
-        <menuitem value="esr" label="&browser.others.appUpdateChannel.esr.label;"/>
-        <menuitem value="beta" label="&browser.others.appUpdateChannel.beta.label;"/>
-        <menuitem value="aurora" label="&browser.others.appUpdateChannel.aurora.label;"/>
-        <menuitem value="nightly" label="&browser.others.appUpdateChannel.nightly.label;"/>
-        <menuitem value="default" label="&browser.others.appUpdateChannel.default.label;"/>
-      </menupopup></menulist>
-      <button label="&reset;" oncommand="gPrefWindow.prefBrowser.resetAppUpdateChannel()"/>
-    </hbox>
-  </groupbox>
   <checkbox preference="general.warnOnAboutConfig" label="&browser.others.warnOnAboutConfig.label;"/>
 </box>
 

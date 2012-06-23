@@ -186,13 +186,6 @@
 <!ENTITY browser.others.backspace_action.scrollUp "Scroll up in the current document">
 <!ENTITY browser.others.backspace_action.nothing "Do nothing">
 <!ENTITY browser.others.historyExpirationMaxPages.label "Max number of unique URLs to retain in history">
-<!ENTITY browser.others.appUpdateChannel.label "Update channel">
-<!ENTITY browser.others.appUpdateChannel.release.label "Stable Release">
-<!ENTITY browser.others.appUpdateChannel.esr.label "ESR">
-<!ENTITY browser.others.appUpdateChannel.beta.label "Beta / Release Candidate">
-<!ENTITY browser.others.appUpdateChannel.aurora.label "Aurora (Pre-beta)">
-<!ENTITY browser.others.appUpdateChannel.nightly.label "Nightly build">
-<!ENTITY browser.others.appUpdateChannel.default.label "No update">
 <!ENTITY browser.others.warnOnAboutConfig.label "Show the warning message on about:config">
 
 <!ENTITY security.title "Security">
