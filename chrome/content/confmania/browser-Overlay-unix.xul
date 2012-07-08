@@ -4,15 +4,19 @@
 <overlay id="confmania-Overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script type="application/javascript" src="chrome://confmania/content/browser-Overlay.js"></script>
   <commandset id="mainCommandSet">
-    <command id="ConfMania:Open"/>
+    <command id="ConfMania:Open" oncommand="void(0);"/>
   </commandset>
+  <keyset id="mainKeyset">
+    <!-- Placeholder for keyconfig -->
+    <key id="key_ConfMania" command="ConfMania:Open"/>
+  </keyset>
   <menupopup id="menu_EditPopup">
-    <menuitem id="confmania" command="ConfMania:Open"
+    <menuitem id="confmania" command="ConfMania:Open" key="key_ConfMania"
               label="&confmania.label;" insertafter="menu_preferences"/>
   </menupopup>
   
   <menupopup id="appmenu_customizeMenu">
-    <menuitem id="appmenu_confmania" command="ConfMania:Open"
+    <menuitem id="appmenu_confmania" command="ConfMania:Open" key="key_ConfMania"
               label="&confmania.label;" insertafter="appmenu_preferences"/>
   </menupopup>
 </overlay>
