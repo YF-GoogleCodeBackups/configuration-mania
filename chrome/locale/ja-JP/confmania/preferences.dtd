@@ -80,7 +80,7 @@
 <!ENTITY browser.tabs.closeButtons.no.label "常に表示しない">
 <!ENTITY browser.tabs.closeButtons.end.label "タブバーの端に表示 (Firefox1.xの動作)">
 <!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ">
-<!ENTITY browser.tabs.seachOpenintab.label "検索バーでの検索結果を新しいタブで開く">
+<!ENTITY browser.tabs.seachOpenintab.label "検索バーからEnterキーで検索した時、検索結果を新しいタブで開く">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "ページから開く新規タブを現在のタブの右に開く">
 <!ENTITY browser.tabs.autoselect.label "自動タブ選択">
 <!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "ブックマークや履歴から開いた新しいタブを選択する">
