@@ -81,7 +81,7 @@
 <!ENTITY browser.tabs.closeButtons.no.label "No close button">
 <!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
-<!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar">
+<!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar with ENTER key">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab">
 <!ENTITY browser.tabs.autoselect.label "Auto tab selection">
 <!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
