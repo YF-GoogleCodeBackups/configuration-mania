@@ -21,8 +21,8 @@
     <option name="IE 9 (Windows 7)" value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"/>
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
-    <option name="Chrome 19.0.1084.46 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="536.5" version="19.0.1084.46"/>
-    <option name="Chrome 19.0.1084.46 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="536.5" version="19.0.1084.46"/>
+    <option name="Chrome 20.0.1132.57 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="536.10" version="20.0.1132.57"/>
+    <option name="Chrome 20.0.1132.57 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="536.10" version="20.0.1132.57"/>
 
     <option name="Chrome 4.0 (Galaxy Nexus; Android 4.0 ICS)" value="Mozilla/5.0 (Linux; U; Android 4.0; {language}; Galaxy Nexus Build/IFL10C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"/>
   </group>
