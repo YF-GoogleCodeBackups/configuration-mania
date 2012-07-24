@@ -346,7 +346,7 @@
         </menupopup>
       </menulist>
     </hbox>
-    <checkbox label="&browser.tabs.newtab.newtabpageEnabled.label;" preference="browser.newtabpage.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onNewtabNewtabpageEnabledSyncFrom();"/>
+    <checkbox label="&browser.tabs.newtab.newtabpageEnabled.label;" preference="browser.newtabpage.enabled"/>
     <checkbox class="indent" label="&browser.tabs.newtab.thumbCapturingDisabled.label;" preference="browser.pagethumbnails.capturing_disabled"/>
   </groupbox>
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
