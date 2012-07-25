@@ -114,7 +114,7 @@
 <!ENTITY browser.sessionStore.concurrent.number.label "Restore up to">
 <!ENTITY browser.sessionStore.concurrent.number.label2 "tabs concurrently">
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
-<!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab &amp; location bar">
+<!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab (and (up-to Firefox 13) location bar)">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links (Firefox 13+)">
