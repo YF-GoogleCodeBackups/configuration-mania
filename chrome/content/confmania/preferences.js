@@ -14,6 +14,23 @@ var gPrefWindow = {
       Array.forEach(currentPane.preferences, gPrefWindow.resetPref);
     }
   },
+  onResetAllSettings: function(event){
+    var currentPane = document.documentElement.currentPane;
+    var srcbtn = document.documentElement.getButton("extra1");
+    var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                   .getService(Components.interfaces.nsIPromptService);
+
+    if( prompts.confirm(window, srcbtn.label, "reset all ok? [experimental]") ) {
+      Array.forEach(document.documentElement.preferencePanes, function (v) {
+        document.documentElement.showPane(v);
+      });
+      window.setTimeout(function () {
+        Array.forEach(document.documentElement.preferencePanes, function (v) {
+          Array.forEach(v.preferences, gPrefWindow.resetPref);
+        })
+      }, 1000);
+    }
+  },
   resetPref: function(aPref) {
     if (aPref.instantApply) {
       if (aPref.hasUserValue) {
