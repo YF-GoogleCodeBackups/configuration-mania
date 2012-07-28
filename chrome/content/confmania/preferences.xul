@@ -12,8 +12,11 @@
  windowtype="Browser:Confmania"
  onload="gPrefWindow.onLoad();"
  chromehidden="menubar location directories status extrachrome"
+
+ buttonlabelextra1="Reset All" ondialogextra1="gPrefWindow.onResetAllSettings()"
+
  buttonlabelextra2="&reset;" ondialogextra2="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"
- buttons="accept,cancel,extra2"
+ buttons="accept,cancel,extra1,extra2"
  title="&prefWindow.title;" style="&prefWindow.style;"
  context="prefContextPopup"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
