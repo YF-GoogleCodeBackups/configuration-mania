@@ -343,6 +343,7 @@
         <menupopup>
           <menuitem label="about:blank"/>
           <menuitem label="about:newtab"/>
+          <menuitem label="about:home"/>
         </menupopup>
       </menulist>
     </hbox>
