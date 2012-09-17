@@ -16,15 +16,15 @@
     <option name="IE 6 (Windows XP SP3, .NET 1.0~2.0)" version="6.0" oscpu="Windows NT 5.1" extra="; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727"/>
     <option name="IE 7 (Windows XP SP3, .NET 1.0~2.0)" version="7.0" oscpu="Windows NT 5.1" extra="; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727"/>
     <option name="IE 8 (Windows 7 x86 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.4506.2152; Media Center PC 6.0"/>
-    <option name="IE 8 (Windows 7 x64 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1; Win64; x64" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.4506.2152; Media Center PC 6.0"/>
-    <option name="IE 8 (Windows 7 x64 WOW64 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1; WOW64" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.4506.2152; Media Center PC 6.0"/>
     <option name="IE 9 (Windows 7)" value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"/>
+    <option name="IE 10 (Windows 8)" value="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)"/>
+    <option name="IE 10 (Windows 8 RT)" value="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0)"/>
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
     <option name="Chrome 21.0.1180.75 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.1" version="21.0.1180.75"/>
     <option name="Chrome 21.0.1180.75 (Intel MacOS X 10.7)" platform="Macintosh" oscpu="Intel Mac OS X 10_7" webkit="537.1" version="21.0.1180.75"/>
 
-    <option name="Chrome 4.0 (Galaxy Nexus; Android 4.0 ICS)" value="Mozilla/5.0 (Linux; U; Android 4.0; {language}; Galaxy Nexus Build/IFL10C) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30"/>
+    <option name="Chrome 21.0.1180.75 (Galaxy Nexus)" platform="Linux" oscpu="Android 4.0.4; Galaxy Nexus Build/IMM76B" webkit="537.1" version="21.0.1180.75 Mobile"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
     <option name="Safari 6.0 (Intel MacOS X 10.8)" platform="Macintosh" oscpu="Intel Mac OS X 10_8" webkit="536.26" safari="536.26" version="6.0"/>
@@ -33,7 +33,7 @@
     <option name="Safari 6.0 (iPad; iOS 6.0)" platform="iPad" oscpu="CPU OS 6_0 like Mac OS X" webkit="536.26" safari="8536.25" version="6.0 Mobile/10A5355d"/>
   </group>
   <group name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
-    <option name="Opera 12.01 (Windows 7)" oscpu="Windows NT 6.1" presto="2.10.289" version="12.01"/>
+    <option name="Opera 12.02 (Windows 7)" oscpu="Windows NT 6.1" presto="2.10.289" version="12.02"/>
   </group>
   <group name="Nintendo DS/Wii" value="">
     <option name="Nintendo DS Browser (Nintendo 3DS)" value="Opera/{opt:version} (Nintendo 3DS; U; ; {language})" version="1.7498.JP"/>
