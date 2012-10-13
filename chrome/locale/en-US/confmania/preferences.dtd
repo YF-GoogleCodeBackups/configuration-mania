@@ -316,6 +316,22 @@
 
 <!ENTITY ui.title "UI">
 <!ENTITY ui.mousewheel.label "Mouse wheel">
+<!ENTITY ui.mousewheel.binding.label "Mouse wheel binding (Firefox 17+)">
+<!ENTITY ui.mousewheel.binding.default.label "Default">
+<!ENTITY ui.mousewheel.binding.with_alt.label "Alt">
+<!ENTITY ui.mousewheel.binding.with_control.label "Ctrl">
+<!ENTITY ui.mousewheel.binding.with_meta.label "Meta">
+<!ENTITY ui.mousewheel.binding.with_shift.label "Shift">
+<!ENTITY ui.mousewheel.binding.with_win.label "Win">
+<!ENTITY ui.mousewheel.binding.action.label "Action">
+<!ENTITY ui.mousewheel.binding.action.do_nothing.label "Do nothing">
+<!ENTITY ui.mousewheel.binding.action.scroll.label "Scroll contents">
+<!ENTITY ui.mousewheel.binding.action.go_history.label "Go back or forward in the history">
+<!ENTITY ui.mousewheel.binding.action.zoom.label "Zoom in or out the contents">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_x.label "Multiplier X">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_y.label "Multiplier Y">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_z.label "Multiplier Z">
+<!ENTITY ui.mousewheel.legacy.label "Mouse Wheel Option (Firefox 4-16)">
 <!ENTITY ui.mousewheel.vertiscroll.label "Vertical-scroll">
 <!ENTITY ui.mousewheel.horizscroll.label "Horizontal-scroll">
 <!ENTITY ui.mousewheel.usingJustTheWheel.label "No Modifier key">

@@ -47,11 +47,35 @@
 <overlay id="paneUIOverlay"
  xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneUI" onpaneload="gPrefWindow.prefUI.init();">
+<prefpane flex="1" id="paneUI" onpaneload="gPrefWindow.prefUI.init();">
 
 <script type="application/javascript;version=1.8" src="paneUI.js"></script>
 
 <preferences>
+  <preference type="int" id="mousewheel.default.action" name="mousewheel.default.action"/>
+  <preference type="int" id="mousewheel.default.delta_multiplier_x" name="mousewheel.default.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.default.delta_multiplier_y" name="mousewheel.default.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.default.delta_multiplier_z" name="mousewheel.default.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_alt.action" name="mousewheel.with_alt.action"/>
+  <preference type="int" id="mousewheel.with_alt.delta_multiplier_x" name="mousewheel.with_alt.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_alt.delta_multiplier_y" name="mousewheel.with_alt.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_alt.delta_multiplier_z" name="mousewheel.with_alt.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_control.action" name="mousewheel.with_control.action"/>
+  <preference type="int" id="mousewheel.with_control.delta_multiplier_x" name="mousewheel.with_control.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_control.delta_multiplier_y" name="mousewheel.with_control.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_control.delta_multiplier_z" name="mousewheel.with_control.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_meta.action" name="mousewheel.with_meta.action"/>
+  <preference type="int" id="mousewheel.with_meta.delta_multiplier_x" name="mousewheel.with_meta.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_meta.delta_multiplier_y" name="mousewheel.with_meta.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_meta.delta_multiplier_z" name="mousewheel.with_meta.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_shift.action" name="mousewheel.with_shift.action"/>
+  <preference type="int" id="mousewheel.with_shift.delta_multiplier_x" name="mousewheel.with_shift.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_shift.delta_multiplier_y" name="mousewheel.with_shift.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_shift.delta_multiplier_z" name="mousewheel.with_shift.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_win.action" name="mousewheel.with_win.action"/>
+  <preference type="int" id="mousewheel.with_win.delta_multiplier_x" name="mousewheel.with_win.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_win.delta_multiplier_y" name="mousewheel.with_win.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_win.delta_multiplier_z" name="mousewheel.with_win.delta_multiplier_z"/>
   <preference type="int" id="mousewheel.withnokey.action" name="mousewheel.withnokey.action"/>
   <preference type="int" id="mousewheel.withnokey.numlines" name="mousewheel.withnokey.numlines"/>
   <preference type="bool" id="mousewheel.withnokey.sysnumlines" name="mousewheel.withnokey.sysnumlines"/>
@@ -140,7 +164,79 @@
 <splitter/>
 <deck id="paneUIBoxContainer" flex="4">
 <box class="subtabpanel" orient="vertical" id="ui-pane-mousewheel">
-  <tabbox flex="1" style="margin: 3px;">
+  <groupbox>
+    <caption label="&ui.mousewheel.binding.label;"/>
+
+    <data>
+      <mousewheelkeies id="ui-pane-data-mousewheelkeies" xmlns="">
+        <mousewheelkey name="default"     />
+        <mousewheelkey name="with_alt"    />
+        <mousewheelkey name="with_control"/>
+        <mousewheelkey name="with_meta"   />
+        <mousewheelkey name="with_shift"  />
+        <mousewheelkey name="with_win"    />
+      </mousewheelkeies>
+    </data>
+
+    <tabbox flex="1">
+      <tabs>
+        <tab label="&ui.mousewheel.binding.default.label;"     />
+        <tab label="&ui.mousewheel.binding.with_alt.label;"    />
+        <tab label="&ui.mousewheel.binding.with_control.label;"/>
+        <tab label="&ui.mousewheel.binding.with_meta.label;"   />
+        <tab label="&ui.mousewheel.binding.with_shift.label;"  />
+        <tab label="&ui.mousewheel.binding.with_win.label;"    />
+      </tabs>
+      <tabpanels datasources="#ui-pane-data-mousewheelkeies" ref="*" querytype="xml">
+        <template>
+          <query expr="mousewheelkey">
+            <assign var="?action" expr="concat('mousewheel.',@name,'.action')"/>
+            <assign var="?delta_multiplier_x" expr="concat('mousewheel.',@name,'.delta_multiplier_x')"/>
+            <assign var="?delta_multiplier_y" expr="concat('mousewheel.',@name,'.delta_multiplier_y')"/>
+            <assign var="?delta_multiplier_z" expr="concat('mousewheel.',@name,'.delta_multiplier_z')"/>
+          </query>
+          <action>
+            <tabpanel uri="?">
+              <grid>
+                <columns><column/><column/><column/></columns>
+                <rows>
+                  <row align="center">
+                    <label value="&ui.mousewheel.binding.action.label;"/>
+                    <menulist preference="?action"><menupopup>
+                      <menuitem value="0" label="&ui.mousewheel.binding.action.do_nothing.label;"/>
+                      <menuitem value="1" label="&ui.mousewheel.binding.action.scroll.label;"/>
+                      <menuitem value="2" label="&ui.mousewheel.binding.action.go_history.label;"/>
+                      <menuitem value="3" label="&ui.mousewheel.binding.action.zoom.label;"/>
+                    </menupopup></menulist>
+                  </row>
+                  <row align="center">
+                    <label value="&ui.mousewheel.binding.delta_multiplier_x.label;"/>
+                    <textbox type="number" preference="?delta_multiplier_x"/>
+                    <label value="%"/>
+                  </row>
+                  <row align="center">
+                    <label value="&ui.mousewheel.binding.delta_multiplier_y.label;"/>
+                    <textbox type="number" preference="?delta_multiplier_y"/>
+                    <label value="%"/>
+                  </row>
+                  <row align="center">
+                    <label value="&ui.mousewheel.binding.delta_multiplier_z.label;"/>
+                    <textbox type="number" preference="?delta_multiplier_z"/>
+                    <label value="%"/>
+                  </row>
+                </rows>
+              </grid>
+            </tabpanel>
+          </action>
+        </template>
+      </tabpanels>
+    </tabbox>
+  </groupbox>
+
+<groupbox>
+  <caption label="&ui.mousewheel.legacy.label;"/>
+
+  <tabbox flex="1">
   <tabs>
     <tab label="&ui.mousewheel.vertiscroll.label;"/>
     <tab label="&ui.mousewheel.horizscroll.label;"/>
@@ -308,6 +404,8 @@
     </tabpanel>
   </tabpanels>
   </tabbox>
+</groupbox>
+
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-multitouch">
   <groupbox id="multitouch-gestures-box">

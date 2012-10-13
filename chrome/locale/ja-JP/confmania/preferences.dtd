@@ -315,6 +315,22 @@
 
 <!ENTITY ui.title "インターフェイス">
 <!ENTITY ui.mousewheel.label "マウスホイール">
+<!ENTITY ui.mousewheel.binding.label "マウスホイールの割り当て (Firefox 17)">
+<!ENTITY ui.mousewheel.binding.default.label "デフォルト">
+<!ENTITY ui.mousewheel.binding.with_alt.label "Alt">
+<!ENTITY ui.mousewheel.binding.with_control.label "Ctrl">
+<!ENTITY ui.mousewheel.binding.with_meta.label "Meta">
+<!ENTITY ui.mousewheel.binding.with_shift.label "Shift">
+<!ENTITY ui.mousewheel.binding.with_win.label "Win">
+<!ENTITY ui.mousewheel.binding.action.label "動作">
+<!ENTITY ui.mousewheel.binding.action.do_nothing.label "何もしない">
+<!ENTITY ui.mousewheel.binding.action.scroll.label "スクロールする">
+<!ENTITY ui.mousewheel.binding.action.go_history.label "戻る・進む">
+<!ENTITY ui.mousewheel.binding.action.zoom.label "拡大・縮小">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_x.label "X方向の乗数">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_y.label "Y方向の乗数">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_z.label "Z方向の乗数">
+<!ENTITY ui.mousewheel.legacy.label "マウスホイールの設定 (Firefox 4-16)">
 <!ENTITY ui.mousewheel.vertiscroll.label "縦のスクロール">
 <!ENTITY ui.mousewheel.horizscroll.label "横のスクロール">
 <!ENTITY ui.mousewheel.usingJustTheWheel.label "装飾キーなし">
