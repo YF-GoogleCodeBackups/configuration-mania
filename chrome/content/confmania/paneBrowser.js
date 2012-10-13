@@ -39,7 +39,10 @@ gPrefWindow.prefBrowser = {
       const OPT_PARAM_GENERIC        = /\{opt:([a-zA-Z]+)\??\}/g;
       const OPT_PARAM_DEFAULT        = /\{opt:default\}/g;
       const OS_PARAM_OPTIONAL        = /\{\w+\?\}/g;
-      const UA_FIREFOX_DEFAULT = gPrefWindow.prefBrowser.getFirefoxUserAgent("{opt:platform}", "{opt:oscpu}", null);
+      const UA_FIREFOX_DEFAULT       = gPrefWindow.prefBrowser.getFirefoxUserAgent({
+        platform: "{opt:platform}",
+        oscpu: "{opt:oscpu}"
+      });
 
       Array.forEach(doc.getElementsByTagName("group"), function(b) {
         var name = b.getAttribute("name");
@@ -170,65 +173,80 @@ gPrefWindow.prefBrowser = {
   resetKeywordURL : function(){//#smartbrowsing-keywordsURL
     gPrefWindow.resetPref(document.getElementById("keyword.URL"));
   },
-  getFirefoxUserAgent : function(platform, oscpu, language){
-    // cf. nsGlobalWindow.cpp#GetUserAgent
-    var m = Components.classes['@mozilla.org/network/protocol;1?name=http']
+  getFirefoxUserAgent : function(option) {
+    let ua = "";
+    // cf. nsHttpHandler.cpp#BuildUserAgent()
+    let m = Components.classes['@mozilla.org/network/protocol;1?name=http']
       .getService(Components.interfaces.nsIHttpProtocolHandler);
-    var pref = Components.classes['@mozilla.org/preferences-service;1']
-      .getService(Components.interfaces.nsIPrefService);
-    var prefBranch = Components.classes['@mozilla.org/preferences-service;1']
-      .getService(Components.interfaces.nsIPrefBranch);
+    let appInfo = Components.classes['@mozilla.org/xre/app-info;1']
+      .getService(Components.interfaces.nsIXULAppInfo);
+    let versionComp = Components.classes['@mozilla.org/xpcom/version-comparator;1']
+      .getService(Components.interfaces.nsIVersionComparator);
 
-    var isGecko2 = false;
-    var mSecurity = null;
-    if (prefBranch.getPrefType("general.useragent.security") != prefBranch.PREF_INVALID) {
-      mSecurity = prefBranch.getCharPref("general.useragent.security");
-    } else {
-      isGecko2 = true;
-      // "general.useragent.security" is not defined Gecko2 (Firefox 4+)
+    if (option == null) {
+      option = {
+        platform:     m.platform,
+        compatDevice: undefined,
+        oscpu:        m.oscpu,
+        misc:         undefined
+      };
     }
-    
-    if (platform == null) platform = m.platform;
-    if (oscpu    == null) oscpu    = m.oscpu;
-    if (isGecko2) {
-      language = null; // language is not displayed on Gecko2 (Firefox4+)
-    } else {
-      if (language == null) language = m.language;
-    }
-    
-    var userAgent = m.appName + "/" + m.appVersion + " ";
-    userAgent += "("+platform+"; ";
-    if (mSecurity) userAgent += mSecurity + "; ";
-    userAgent += oscpu;
-    if(language && language != "") userAgent += "; "+language;
-    if(m.misc && m.misc != "") userAgent += "; "+m.misc;
-    userAgent += ")";
 
-    var fooSubComment = function(foo,fooSub,fooComment){
-      if(foo && foo != ""){
-        userAgent += " "+foo;
-        if(fooSub && fooSub != "") userAgent += "/"+fooSub;
-        if(fooComment && fooComment != "") userAgent += " ("+fooComment+")";
-      }
-    };
-    // In Gecko2, m.productComment and m.vendorComment are removed.
-    fooSubComment(m.product, m.productSub, m.productComment || null);
-    fooSubComment(m.vendor, m.vendorSub, m.vendorComment || null);
-
-    if (isGecko2) {
-      var appInfo = Components.classes['@mozilla.org/xre/app-info;1']
-        .getService(Components.interfaces.nsIXULAppInfo);
-      userAgent += " " + appInfo.name + "/" + appInfo.version;
+    let firefoxVersion = appInfo.version;
+    let geckotrail     = firefoxVersion;
+    if (versionComp.compare(appInfo.version, "10.0") < 0) {
+      // If Firefox 4-9: firefox version contains full, and geckotrail is buildID.
+      firefoxVersion   = appInfo.version;
+      geckotrail       = appInfo.appBuildID.substring(0,8);
+    } else if (versionComp.compare(appInfo.version, "16.0") < 0) {
+      // If Firefox 10-15: firefox version contains full, and geckotrail is same as firefox version.
+      firefoxVersion   = appInfo.version;
+      geckotrail       = firefoxVersion;
     } else {
-      var extras = pref.getBranch("general.useragent.extra.");
-      var pCount = {value : 0};
-      var list = extras.getChildList("", pCount);
-      list = list.sort();
-      for (var i = 0; i < pCount.value; i++){
-        userAgent += " "+prefBranch.getCharPref("general.useragent.extra."+list[i]);
-      }
+      // If Firefox 16-: firefox version is just only major version, and geckotrail is same as firefox version.
+      firefoxVersion   = appInfo.version.toString().split(".").splice(0, 2).join(".");
+      geckotrail       = firefoxVersion;
     }
-    return userAgent;
+
+    if (option.misc === undefined) {
+      option.misc = "rv:" + firefoxVersion;
+    }
+
+    // Application portion
+    ua += m.appName; // legacy app name
+    ua += "/";
+    ua += m.appVersion; // legacy app version
+    ua += " ";
+
+    // Application comment
+    ua += "(";
+    if (!!option.platform) {
+      ua += option.platform;
+      ua += "; ";
+    }
+    if (!!option.compatDevice) {
+      ua += option.compatDevice;
+      ua += "; ";
+    } else if (!!option.oscpu) {
+      ua += option.oscpu;
+      ua += "; ";
+    }
+    ua += option.misc || "";
+    ua += ")";
+
+    // Product portion
+    ua += " ";
+    ua += "Gecko";
+    ua += "/";
+    ua += geckotrail;
+
+    // App portion
+    ua += " ";
+    ua += "Firefox";
+    ua += "/";
+    ua += firefoxVersion;
+
+    return ua;
   },
   onUserAgentPresetCommanded : function(event) {
     var mData = document.getElementById("ua-value");
