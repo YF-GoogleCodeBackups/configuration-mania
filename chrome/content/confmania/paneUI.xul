@@ -139,6 +139,7 @@
 
   <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
   <preference id="browser.preferences.animateFadeIn" name="browser.preferences.animateFadeIn" type="bool"/>
+  <preference id="browser.preferences.inContent" name="browser.preferences.inContent" type="bool"/>
   <preference id="clipboard.autocopy" name="clipboard.autocopy" type="bool"/>
   <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
   <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
@@ -616,6 +617,7 @@
     <description class="indent">&ui.others.preference.instanceAccept.desc;</description>
     <checkbox label="&ui.others.preference.animateFadeIn.label;" preference="browser.preferences.animateFadeIn"/>
   </groupbox>
+  <checkbox label="&ui.others.preference.inContent.label;" preference="browser.preferences.inContent"/>
   <groupbox>
     <caption label="&ui.others.xwin.label;"/>
     <checkbox label="&ui.others.xwin.autocopy.label;" preference="clipboard.autocopy"/>
