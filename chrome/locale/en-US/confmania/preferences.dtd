@@ -284,15 +284,15 @@
 <!ENTITY http.connect.proxy.label "Proxy Connection Options">
 <!ENTITY http.connect.HTTP10.label "Use HTTP 1.0">
 <!ENTITY http.connect.HTTP11.label "Use HTTP 1.1">
-<!ENTITY http.connect.keepAlive.label "Enable Keep-Alive">
+<!ENTITY http.connect.disableKeepAlive.label "Disable Keep-Alive (up-to Firefox 16)">
 <!ENTITY http.connect.pipeline.label "Enable Pipelining">
 <!ENTITY http.connect.pipeline.desc "WARNING: pipelining is an experimental feature, designed to improve page-load performance, that is unfortunately not well supported by some web servers and proxies.">
 <!ENTITY http.connect.HTTP10.accesskey "U">
 <!ENTITY http.connect.HTTP10Proxy.accesskey "S">
 <!ENTITY http.connect.HTTP11.accesskey "E">
 <!ENTITY http.connect.HTTP11Proxy.accesskey "T">
-<!ENTITY http.connect.keepAlive.accesskey "K">
-<!ENTITY http.connect.keepAliveProxy.accesskey "A">
+<!ENTITY http.connect.disableKeepAlive.accesskey "K">
+<!ENTITY http.connect.disableKeepAliveProxy.accesskey "A">
 <!ENTITY http.connect.pipeline.accesskey "P">
 <!ENTITY http.connect.pipelineProxy.accesskey "N">
 <!ENTITY http.connect.pipelineSSL.label "Enable Pipelining for HTTPS">

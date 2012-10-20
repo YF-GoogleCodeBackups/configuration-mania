@@ -283,15 +283,15 @@
 <!ENTITY http.connect.proxy.label "プロキシ接続の設定">
 <!ENTITY http.connect.HTTP10.label "HTTP 1.0 を使う">
 <!ENTITY http.connect.HTTP11.label "HTTP 1.1 を使う">
-<!ENTITY http.connect.keepAlive.label "接続の持続 (Keep-Alive) を有効にする">
+<!ENTITY http.connect.disableKeepAlive.label "Keep-Alive を無効にする">
 <!ENTITY http.connect.pipeline.label "パイプラインを有効にする">
 <!ENTITY http.connect.pipeline.desc "警告: パイプラインは、まだ実験的な機能です。この機能を利用するとページの読み込み速度が向上しますが、一部のウェブ サーバやプロキシではそれら自身の不具合によって速度が落ちたり、まったく接続できなくなったりします。">
 <!ENTITY http.connect.HTTP10.accesskey "U">
 <!ENTITY http.connect.HTTP10Proxy.accesskey "S">
 <!ENTITY http.connect.HTTP11.accesskey "E">
 <!ENTITY http.connect.HTTP11Proxy.accesskey "T">
-<!ENTITY http.connect.keepAlive.accesskey "K">
-<!ENTITY http.connect.keepAliveProxy.accesskey "A">
+<!ENTITY http.connect.disableKeepAlive.accesskey "K">
+<!ENTITY http.connect.disableKeepAliveProxy.accesskey "A">
 <!ENTITY http.connect.pipeline.accesskey "P">
 <!ENTITY http.connect.pipelineProxy.accesskey "N">
 <!ENTITY http.connect.pipelineSSL.label "HTTPSに対してパイプラインを有効にする">
