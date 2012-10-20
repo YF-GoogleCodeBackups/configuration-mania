@@ -129,7 +129,7 @@
 <!ENTITY browser.download.flashCount.finite.label "">
 <!ENTITY browser.download.flashCount.finite.label2 "times">
 <!ENTITY browser.download.showAlertOnComplete.label "Show alert on download completed">
-<!ENTITY browser.download.alerts.label "The Alerts configuration">
+<!ENTITY browser.download.alerts.label "The Alerts configuration (up-to Firefox 16)">
 <!ENTITY browser.download.alerts.totalOpenTime "Show alerts for">
 <!ENTITY browser.download.alerts.slide.label "Speed of alert slide-animation">
 <!ENTITY browser.download.alerts.slide.prefix.label "Move the alerts by">

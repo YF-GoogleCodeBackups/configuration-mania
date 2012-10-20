@@ -128,7 +128,7 @@
 <!ENTITY browser.download.flashCount.finite.label "点滅を">
 <!ENTITY browser.download.flashCount.finite.label2 "回させる">
 <!ENTITY browser.download.showAlertOnComplete.label "ダウンロード終了時に通知する">
-<!ENTITY browser.download.alerts.label "通知アラート表示の設定">
+<!ENTITY browser.download.alerts.label "通知アラート表示の設定 (Firefox16迄)">
 <!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
 <!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
 <!ENTITY browser.download.alerts.slide.prefix.label " ">
