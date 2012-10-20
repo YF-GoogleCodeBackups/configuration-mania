@@ -53,10 +53,10 @@
 
 <preferences>
   <preference id="network.http.version" name="network.http.version" type="string"/>
-  <preference id="network.http.keep-alive" name="network.http.keep-alive" type="bool"/>
+  <preference id="network.http.keep-alive" name="network.http.keep-alive" type="bool" inverted="true"/>
   <preference id="network.http.pipelining" name="network.http.pipelining" type="bool"/>
   <preference id="network.http.proxy.version" name="network.http.proxy.version" type="string"/>
-  <preference id="network.http.proxy.keep-alive" name="network.http.proxy.keep-alive" type="bool"/>
+  <preference id="network.http.proxy.keep-alive" name="network.http.proxy.keep-alive" type="bool" inverted="true"/>
   <preference id="network.http.proxy.pipelining" name="network.http.proxy.pipelining" type="bool"/>
   <preference id="network.http.pipelining.ssl" name="network.http.pipelining.ssl" type="bool"/>
   <preference id="network.http.spdy.enabled" name="network.http.spdy.enabled" type="bool"/>
@@ -98,8 +98,8 @@
         <radio value="1.0" label="&http.connect.HTTP10.label;" accesskey="&http.connect.HTTP10.accesskey;"/>
         <radio value="1.1" label="&http.connect.HTTP11.label;" accesskey="&http.connect.HTTP11.accesskey;"/>
       </radiogroup>
-      <checkbox id="enableKeepAlive" label="&http.connect.keepAlive.label;"
-                accesskey="&http.connect.keepAlive.accesskey;"
+      <checkbox id="disableKeepAlive" label="&http.connect.disableKeepAlive.label;"
+                accesskey="&http.connect.disableKeepAlive.accesskey;"
                 preference="network.http.keep-alive"/>
       <checkbox id="enablePipelining" label="&http.connect.pipeline.label;"
                 accesskey="&http.connect.pipeline.accesskey;"
@@ -112,8 +112,8 @@
         <radio value="1.0" label="&http.connect.HTTP10.label;" accesskey="&http.connect.HTTP10Proxy.accesskey;"/>
         <radio value="1.1" label="&http.connect.HTTP11.label;" accesskey="&http.connect.HTTP11Proxy.accesskey;"/>
       </radiogroup>
-      <checkbox id="enableKeepAliveProxy" label="&http.connect.keepAlive.label;"
-                accesskey="&http.connect.keepAliveProxy.accesskey;"
+      <checkbox id="enableKeepAliveProxy" label="&http.connect.disableKeepAlive.label;"
+                accesskey="&http.connect.disableKeepAliveProxy.accesskey;"
                 preference="network.http.proxy.keep-alive"/>
       <checkbox id="enablePipeliningProxy" label="&http.connect.pipeline.label;"
                 accesskey="&http.connect.pipelineProxy.accesskey;"
