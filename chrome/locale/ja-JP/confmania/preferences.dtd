@@ -301,7 +301,7 @@
 <!ENTITY http.maxconn.label "最大接続数">
 <!ENTITY http.maxconn.maxpipeliningrequest.label "最大パイプライン要求数">
 <!ENTITY http.maxconn.maxconnections.label "最大接続数 (延べ)">
-<!ENTITY http.maxconn.maxconnectionsPerServer.label "最大接続数 (サーバ当たり)">
+<!ENTITY http.maxconn.maxconnectionsPerServer.label "最大接続数 (サーバ当たり) (Firefox16迄)">
 <!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
 <!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
 <!ENTITY http.timeout.label "タイムアウト">
