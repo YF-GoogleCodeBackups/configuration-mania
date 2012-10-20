@@ -302,7 +302,7 @@
 <!ENTITY http.maxconn.label "Max Connections">
 <!ENTITY http.maxconn.maxpipeliningrequest.label "Max pipelining Request">
 <!ENTITY http.maxconn.maxconnections.label "Max Connections (Total)">
-<!ENTITY http.maxconn.maxconnectionsPerServer.label "Max Connections (per Server)">
+<!ENTITY http.maxconn.maxconnectionsPerServer.label "Max Connections (per Server) (up-to Firefox 16)">
 <!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "Max Persistent Connections (per Server)">
 <!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "Max Persistent Connections (via Proxy)">
 <!ENTITY http.timeout.label "Timeout">
