@@ -2,38 +2,22 @@ const Cc = Components.classes;
 const Ci = Components.interfaces;
 const Cu = Components.utils;
 
-function _import(params, src, scope) {
-    const IOS = Cc["@mozilla.org/network/io-service;1"]
-      .getService(Ci.nsIIOService);
+Cu.import("resource://gre/modules/Services.jsm");
+
+function convertUrl(params, src) {
     let uri = null;
     if (params.installPath.isDirectory()) {
         let filepath = params.installPath.clone();
         src.split("/").forEach(function(v) { filepath.append(v); } );
-        uri = IOS.newFileURI(filepath).spec;
+        uri = Services.io.newFileURI(filepath).spec;
     } else {
-        let jarfileuri = IOS.newFileURI(params.installPath).spec;
+        let jarfileuri = Services.io.newFileURI(params.installPath).spec;
         uri = "jar:" + jarfileuri + "!/" + src;
     }
 
-    Cu.import(uri, scope);
+    return uri;
 }
 
-function handleChromeManifestFile(params, aMode) {
-    let appVer = Cc["@mozilla.org/xre/app-info;1"]
-      .getService(Ci.nsIXULAppInfo)
-      .platformVersion;
-    let comp = Cc["@mozilla.org/xpcom/version-comparator;1"]
-      .getService(Ci.nsIVersionComparator)
-      .compare(appVer, "10.0");
-
-    if (comp < 0) {
-        if (aMode == "setup") {
-            Components.manager.addBootstrappedManifestLocation(params.installPath);
-        } else if (aMode == "release") {
-            Components.manager.removeBootstrappedManifestLocation(params.installPath);
-        }
-    }
-}
 
 function BrowserWindowObserver(params, handlers) {
     this.params = params;
@@ -64,25 +48,19 @@ var _gWindowListener = null;
 var _gScope = null;
 
 function startup(params, aReason) {
-    // setup the chrome.manifest.
-    handleChromeManifestFile(params, "setup");
-
     // load main lib.
     _gScope = {};
-    _import(params, "lib/main.js", _gScope);
+    Cu.import(convertUrl(params, "lib/main.js"), _gScope);
 
     // notify startup to main lib.
     _gScope.startup(params, aReason);
-    let ww = Cc["@mozilla.org/embedcomp/window-watcher;1"]
-      .getService(Ci.nsIWindowWatcher);
-    let wm = Cc["@mozilla.org/appshell/window-mediator;1"]
-      .getService(Ci.nsIWindowMediator);
+    
     _gWindowListener = new BrowserWindowObserver(params, {
         onStartup: _gScope.browserWindowStartup,
         onShutdown: _gScope.browserWindowShutdown
     });
-    ww.registerNotification(_gWindowListener);
-    let winenu = wm.getEnumerator("navigator:browser");
+    Services.ww.registerNotification(_gWindowListener);
+    let winenu = Services.wm.getEnumerator("navigator:browser");
     while (winenu.hasMoreElements()) {
         _gScope.browserWindowStartup(params, winenu.getNext());
     }
@@ -90,21 +68,16 @@ function startup(params, aReason) {
 }
 
 function shutdown(params, aReason) {
-    // release the chrome.manifest.
-    handleChromeManifestFile(params, "release");
-
     // notify startup to main lib.
     _gScope.shutdown(params, aReason);
-    let ww = Cc["@mozilla.org/embedcomp/window-watcher;1"]
-      .getService(Ci.nsIWindowWatcher);
-    let wm = Cc["@mozilla.org/appshell/window-mediator;1"]
-      .getService(Ci.nsIWindowMediator);
-    ww.unregisterNotification(_gWindowListener);
+    Services.ww.unregisterNotification(_gWindowListener);
     _gWindowListener = null;
-    let winenu = wm.getEnumerator("navigator:browser");
+    let winenu = Services.wm.getEnumerator("navigator:browser");
     while (winenu.hasMoreElements()) {
         _gScope.browserWindowShutdown(params, winenu.getNext());
     }
+
+    Cu.unload(convertUrl(params, "lib/main.js"));
 }
 
 function install(params, aReason) {
