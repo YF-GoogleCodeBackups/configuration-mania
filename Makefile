@@ -14,6 +14,8 @@ $(EXTENSIONNAME).xpi:
 	zip -9qr $(EXTENSIONNAME).xpi \
 		chrome/content chrome/skin chrome/locale \
 		*.rdf chrome.manifest \
+		bootstrap.js \
+		lib/*.js \
 		defaults/preferences/pref.js \
 		-x@exclude.lst
 #		components \

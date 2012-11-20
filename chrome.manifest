@@ -1,11 +1,4 @@
-overlay	chrome://browser/content/browser.xul	chrome://confmania/content/browser-Overlay.xul
 content	confmania	chrome/content/confmania/
-
-override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=Linux
-override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=FreeBSD
-override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=OpenBSD
-override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=NetBSD
-override chrome://confmania/content/browser-Overlay.xul chrome://confmania/content/browser-Overlay-unix.xul os=SunOS
 
 skin	confmania	classic/1.0	chrome/skin/classic/confmania/
 locale	confmania	en-US	chrome/locale/en-US/confmania/
