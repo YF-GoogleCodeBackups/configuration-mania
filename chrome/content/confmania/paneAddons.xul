@@ -61,10 +61,10 @@
   <preference name="extensions.checkCompatibility.12.0" id="extensions.checkCompatibility.12.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.13.0" id="extensions.checkCompatibility.13.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.14.0" id="extensions.checkCompatibility.14.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.15.0a" id="extensions.checkCompatibility.15.0a" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.15.0" id="extensions.checkCompatibility.15.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.16.0a" id="extensions.checkCompatibility.16.0a" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.16.0" id="extensions.checkCompatibility.16.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.17.0" id="extensions.checkCompatibility.17.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.18.0" id="extensions.checkCompatibility.18.0" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.install.requireBuiltInCerts" id="extensions.install.requireBuiltInCerts" type="bool" inverted="true"/>
   <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
@@ -97,10 +97,10 @@
 <checkbox label="12.0" preference="extensions.checkCompatibility.12.0"/>
 <checkbox label="13.0" preference="extensions.checkCompatibility.13.0"/>
 <checkbox label="14.0" preference="extensions.checkCompatibility.14.0"/>
-<checkbox label="15.0a" preference="extensions.checkCompatibility.15.0a"/>
 <checkbox label="15.0" preference="extensions.checkCompatibility.15.0"/>
-<checkbox label="16.0a" preference="extensions.checkCompatibility.16.0a"/>
 <checkbox label="16.0" preference="extensions.checkCompatibility.16.0"/>
+<checkbox label="17.0" preference="extensions.checkCompatibility.17.0"/>
+<checkbox label="18.0" preference="extensions.checkCompatibility.18.0"/>
 </hbox>
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
