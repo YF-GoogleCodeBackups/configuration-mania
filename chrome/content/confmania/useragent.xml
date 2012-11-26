@@ -22,11 +22,11 @@
     <option name="IE 10 (Windows 8 RT)" value="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; ARM; Trident/6.0)"/>
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
-    <option name="Chrome 22.0.1229.94 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.4" version="22.0.1229.94"/>
-    <option name="Chrome 22.0.1229.94 (Windows 8)" platform="Windows" oscpu="Windows NT 6.2" webkit="537.4" version="22.0.1229.94"/>
-    <option name="Chrome 22.0.1229.94 (MacOS X 10.8)" platform="Macintosh" oscpu="Intel Mac OS X 10_8" webkit="537.4" version="22.0.1229.94"/>
+    <option name="Chrome 23.0.1271.64 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.11" version="23.0.1271.64"/>
+    <option name="Chrome 23.0.1271.64 (Windows 8)" platform="Windows" oscpu="Windows NT 6.2" webkit="537.11" version="23.0.1271.64"/>
+    <option name="Chrome 23.0.1271.64 (MacOS X 10.8)" platform="Macintosh" oscpu="Intel Mac OS X 10_8" webkit="537.11" version="23.0.1271.64"/>
 
-    <option name="Chrome 22.0.1229.94 (Galaxy Nexus; Android 4.1)" platform="Linux" oscpu="Android 4.1.1; Galaxy Nexus Build/JRO03C" webkit="537.4" version="22.0.1229.94 Mobile"/>
+    <option name="Chrome 23.0.1271.64 (Galaxy Nexus; Android 4.1)" platform="Linux" oscpu="Android 4.1.1; Galaxy Nexus Build/JRO03C" webkit="537.11" version="23.0.1271.64 Mobile"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
     <option name="Safari 6.0.1 (Intel MacOS X 10.8)" platform="Macintosh" oscpu="Intel Mac OS X 10_8" webkit="536.26.14" safari="536.26.14" version="6.0.1"/>
@@ -35,7 +35,7 @@
     <option name="Safari 6.0 (iPhone; iOS 6.0)" platform="iPhone" oscpu="CPU iPhone OS 6_0 like Mac OS X" webkit="536.26" safari="8536.25" version="6.0 Mobile/10A5376e"/>
   </group>
   <group name="Opera" value="Opera/9.80 ({opt:oscpu}; U; {language}) Presto/{opt:presto} Version/{opt:version}">
-    <option name="Opera 12.02 (Windows 7)" oscpu="Windows NT 6.1" presto="2.10.289" version="12.02"/>
+    <option name="Opera 12.11 (Windows 7)" oscpu="Windows NT 6.1" presto="2.12.388" version="12.11"/>
   </group>
   <group name="Googlebot">
     <option name="Googlebot 2.1" value="Mozilla/5.0 (compatible; Googlebot/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
