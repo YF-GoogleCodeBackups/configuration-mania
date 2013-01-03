@@ -1,6 +1,7 @@
 gPrefWindow.prefUI = {
   init : function(){
-    this.initMultitouchPopup();
+    gPrefWindow.prefUI.initMultitouchPopup();
+    gPrefWindow.prefUI.initUIBoxTab();
   },
   initMultitouchPopup: function(){
     var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
@@ -38,6 +39,9 @@ gPrefWindow.prefUI = {
     document.getElementById(numlinesid).disabled = disabled;
   },
   initI18nBoxTab : function () {
+    gPrefWindow.prefUI.onPaneUIBoxTabSelected();
+  },
+  initUIBoxTab : function () {
     gPrefWindow.prefUI.onPaneUIBoxTabSelected();
   },
   onPaneUIBoxTabSelected : function () {
