@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/in-content/preferences.css"?>
+<?xml-stylesheet href="chrome://confmania/skin/preferences.css"?>
+
+<!--
+<?xul-overlay href="paneBrowser.xul"?>
+<?xul-overlay href="paneSecurity.xul"?>
+<?xul-overlay href="paneHTTP.xul"?>
+<?xul-overlay href="paneUI.xul"?>
+<?xul-overlay href="paneAddons.xul"?>
+<?xul-overlay href="paneDebug.xul"?>
+-->
+
+<!DOCTYPE prefwindow [
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY cm "chrome://confmania/content">
+]>
+
+<page title="&prefWindow.title;"
+ context="prefContextPopup"
+ onload="gPrefWindow.onLoad();"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+ xmlns:html="http://www.w3.org/1999/xhtml">
+
+<script type="application/javascript" src="chrome://global/content/contentAreaUtils.js"/>
+<script type="application/javascript" src="preferences_in_content.js"/>
+
+<commandset>
+  <command id="ConfManiaPopup:Reset" oncommand="gPrefWindow.onResetPopupClicked(event);"/>
+  <command id="ConfManiaPopup:CopyName" oncommand="gPrefWindow.onCopyNamePopupClicked(event);"/>
+  <command id="ConfManiaPopup:Mkb" oncommand="gPrefWindow.onMkbPopupClicked(event)"/>
+</commandset>
+
+<popupset>
+  <menupopup id="prefContextPopup">
+    <menuitem label="&prefWindow.context.reset.label;" accesskey="&prefWindow.context.reset.accesskey;" command="ConfManiaPopup:Reset"/>
+    <menuseparator/>
+    <menuitem label="&prefWindow.context.copyName.label;" accesskey="&prefWindow.context.copyName.accesskey;" command="ConfManiaPopup:CopyName"/>
+    <menuitem label="&prefWindow.context.mkb.label;" accesskey="&prefWindow.context.mkb.accesskey;" command="ConfManiaPopup:Mkb"/>
+  </menupopup>
+</popupset>
+
+<hbox id="header">
+  <toolbarbutton id="back-btn" class="nav-button header-button"
+                 oncommand="history.back();" disabled="true"/>
+  <toolbarbutton id="forward-btn" class="nav-button header-button"
+                 oncommand="history.forward();" disabled="true"/>
+</hbox>
+
+<hbox class="main-content" flex="1">
+  <prefpane data-category="landing" flex="1" id="mainPrefPane">
+    <vbox>
+      <html:h1 class="indent-small">&prefWindow.title;</html:h1>
+      <hbox id="preferences-home" flex="1">
+        <button label="&browser.title;" class="landingButton"
+                oncommand="gPrefWindow.gotoPref('paneBrowser');"/>
+        <button label="&security.title;" class="landingButton"
+                oncommand="gPrefWindow.gotoPref('paneSecurity');"/>
+        <button label="&http.title;" class="landingButton"
+                oncommand="gPrefWindow.gotoPref('paneHTTP');"/>
+        <button label="&ui.title;" class="landingButton"
+                oncommand="gPrefWindow.gotoPref('paneUI');"/>
+        <button label="&addons.title;" class="landingButton"
+                oncommand="gPrefWindow.gotoPref('paneAddons');"/>
+        <button label="&debug.title;" class="landingButton"
+                oncommand="gPrefWindow.gotoPref('paneDebug');"/>
+      </hbox>
+    </vbox>
+  </prefpane>
+
+  <prefpane data-category="paneBrowser" id="paneBrowser" label="&browser.title;" src="&cm;/paneBrowser.xul"/>
+  <prefpane data-category="paneSecurity" id="paneSecurity" label="&security.title;" src="&cm;/paneSecurity.xul"/>
+  <prefpane data-category="paneHTTP" id="paneHTTP" label="&http.title;" src="&cm;/paneHTTP.xul"/>
+  <prefpane data-category="paneUI" id="paneUI" label="&ui.title;" src="&cm;/paneUI.xul"/>
+  <prefpane data-category="paneAddons" id="paneAddons" label="&addons.title;" src="&cm;/paneAddons.xul"/>
+  <prefpane data-category="paneDebug" id="paneDebug" label="&debug.title;" src="&cm;/paneDebug.xul"/>
+
+</hbox>
+
+</page>

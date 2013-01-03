@@ -340,3 +340,4 @@ gPrefWindow.prefBrowser = {
   }
 };
 
+document.getElementById("paneBrowser").addEventListener("paneload", gPrefWindow.prefBrowser.init, false);
