@@ -71,12 +71,12 @@
     </vbox>
   </prefpane>
 
-  <prefpane data-category="paneBrowser" id="paneBrowser" label="&browser.title;" src="&cm;/paneBrowser.xul"/>
-  <prefpane data-category="paneSecurity" id="paneSecurity" label="&security.title;" src="&cm;/paneSecurity.xul"/>
-  <prefpane data-category="paneHTTP" id="paneHTTP" label="&http.title;" src="&cm;/paneHTTP.xul"/>
-  <prefpane data-category="paneUI" id="paneUI" label="&ui.title;" src="&cm;/paneUI.xul"/>
-  <prefpane data-category="paneAddons" id="paneAddons" label="&addons.title;" src="&cm;/paneAddons.xul"/>
-  <prefpane data-category="paneDebug" id="paneDebug" label="&debug.title;" src="&cm;/paneDebug.xul"/>
+  <prefpane data-category="paneBrowser" id="paneBrowser" label="&browser.title;" flex="1" src="&cm;/paneBrowser.xul"/>
+  <prefpane data-category="paneSecurity" id="paneSecurity" label="&security.title;" flex="1" src="&cm;/paneSecurity.xul"/>
+  <prefpane data-category="paneHTTP" id="paneHTTP" label="&http.title;" flex="1" src="&cm;/paneHTTP.xul"/>
+  <prefpane data-category="paneUI" id="paneUI" label="&ui.title;" flex="1" src="&cm;/paneUI.xul"/>
+  <prefpane data-category="paneAddons" id="paneAddons" label="&addons.title;" flex="1" src="&cm;/paneAddons.xul"/>
+  <prefpane data-category="paneDebug" id="paneDebug" label="&debug.title;" flex="1" src="&cm;/paneDebug.xul"/>
 
 </hbox>
 
