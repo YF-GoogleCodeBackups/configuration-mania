@@ -53,7 +53,7 @@
 <hbox class="main-content" flex="1">
   <prefpane data-category="landing" flex="1" id="mainPrefPane">
     <vbox>
-      <html:h1 class="indent-small">&prefWindow.title;</html:h1>
+      <hbox class="heading"><html:h1 class="indent-small">&prefWindow.title;</html:h1></hbox>
       <hbox id="preferences-home" flex="1">
         <button label="&browser.title;" class="landingButton"
                 oncommand="gPrefWindow.gotoPref('paneBrowser');"/>

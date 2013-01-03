@@ -169,6 +169,8 @@
   <preference id="general.warnOnAboutConfig" name="general.warnOnAboutConfig" type="bool"/>
 </preferences>
 
+<hbox class="heading"><html:h1 class="indent-small">&browser.title;</html:h1></hbox>
+
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
 <radiogroup id="paneBrowserBoxTab" class="subtabs"
  orient="vertical" style="max-width: 10em; width: 10em;"
