@@ -22,7 +22,6 @@ var gPrefWindow = {
       };
       OverlayLoadObserver.prototype = {
         observe: function (aSubject, aTopic, aData) {
-Components.utils.reportError("observe() " + [this._pane.src, aSubject,aTopic,aData].join(","));
           try {
             this._pane.loaded = true;
 
