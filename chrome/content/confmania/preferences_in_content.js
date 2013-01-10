@@ -51,8 +51,10 @@ var gPrefWindow = {
       if (elems[i].getAttribute("data-category") == aDataCategory) {
         gPrefWindow.loadPrefPane(elems[i]);
         elems[i].hidden = false;
+        elems[i].selected = true;
       } else {
         elems[i].hidden = true;
+        elems[i].selected = false;
       }
     }
   },
@@ -67,10 +69,10 @@ var gPrefWindow = {
   },
 
   // =========================
-  // Context menu
+  // Dialog buttons
   // =========================
   onResetSettings: function(event, msgtmpl){
-    var currentPane = document.documentElement.currentPane;
+    var currentPane = gPrefWindow.getCurrentPrefPane();
     var srcbtn = document.documentElement.getButton("extra2");
     var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
                    .getService(Components.interfaces.nsIPromptService);
@@ -80,6 +82,9 @@ var gPrefWindow = {
       Array.forEach(currentPane.preferences, gPrefWindow.resetPref);
     }
   },
+  // =========================
+  // Context menu
+  // =========================
   resetPref: function(aPref) {
     if (aPref.instantApply) {
       if (aPref.hasUserValue) {
@@ -131,6 +136,14 @@ var gPrefWindow = {
     openURL("http://kb.mozillazine.org/"+encodeURI(prefstr));
   },
 
+  getCurrentPrefPane: function(){
+    // for prefwindow
+    if (document.documentElement.tagName == "prefwindow") {
+      return document.documentElement.currentPane;
+    }
+    // otherwise (i.e. in-content)
+    return document.querySelector("prefpane[selected=true]");
+  },
   syncFrom : function(elem,defaultValue){
     var val = document.getElementById(elem.getAttribute("preference")).value;
     return (val != null)? val : defaultValue;
@@ -165,7 +178,7 @@ var gPrefWindow = {
             if (mData.value == "") {
               document.getElementById(mData.getAttribute('preference')).reset();
             }else{
-              document.documentElement.currentPane.userChangedValue(mData);
+              gPrefWindow.getCurrentPrefPane().userChangedValue(mData);
             }
             event.stopPropagation();
         };
