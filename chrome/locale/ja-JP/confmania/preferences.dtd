@@ -54,7 +54,7 @@
 <!ENTITY browser.html.3d-transforms.label "CSS 3D Transforms を有効にする (Firefox 8+)">
 <!ENTITY browser.html.enableSVGSMIL.label "SMIL を有効にする">
 <!ENTITY browser.html.webgl.label "WebGL を有効にする (再起動必要)">
-<!ENTITY browser.html.webgl.software_render.label "ソフトウェアレンダリングする">
+<!ENTITY browser.html.webgl.software_render.label "ソフトウェアレンダリングする (Firefox 4-17)">
 <!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib のパス :">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">
