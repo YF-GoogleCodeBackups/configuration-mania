@@ -2,11 +2,6 @@ gPrefWindow.prefHTTP = {
   init : function() {
     gPrefWindow.prefHTTP.onPaneHTTPBoxTabSelected();
   },
-  resetAdvMaxSess : function(){
-    Array.forEach(document.getElementById("http-ad-maxsess").getElementsByTagName("textbox"), function(elem){
-      gPrefWindow.resetPref(document.getElementById(elem.getAttribute("preference")));
-    });
-  },
   onPaneHTTPBoxTabSelected : function () {
     let paneHTTPBoxTab = document.getElementById("paneHTTPBoxTab");
     let selectedPanel = document.getElementById(paneHTTPBoxTab.value);

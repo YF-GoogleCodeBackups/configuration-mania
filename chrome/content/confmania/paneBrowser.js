@@ -170,9 +170,6 @@ gPrefWindow.prefBrowser = {
     document.getElementById("view_source.editor.path").disabled = disabled;
     return undefined; // no override
   },
-  resetKeywordURL : function(){//#smartbrowsing-keywordsURL
-    gPrefWindow.resetPref(document.getElementById("keyword.URL"));
-  },
   getFirefoxUserAgent : function(option) {
     let ua = "";
     // cf. nsHttpHandler.cpp#BuildUserAgent()

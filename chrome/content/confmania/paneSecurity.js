@@ -27,9 +27,7 @@ gPrefWindow.prefSecurity = {
   },
   onIDNSyncFrom: function() {
     let disabled = ! document.getElementById("network.enableIDN").value;
-    for each (let name in ["network.IDN_show_punycode", "showPunycodeDesc"]) {
-      document.getElementById(name).disabled = disabled;
-    }
+    document.getElementById("network.IDN_show_punycode").disabled = disabled;
     return undefined; // no override
   },
   onSendRefererSecureXSiteSyncFrom: function() {
