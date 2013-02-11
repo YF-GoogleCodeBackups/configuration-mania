@@ -253,14 +253,22 @@ tc.tests = {
     let target = this.document.getElementById("ua-value");
     let origval = target.value;
 
+    let hasValue = function(aPref) {
+      if (aPref.instantApply) {
+        return (aPref.hasUserValue);
+      } else {
+        return (aPref.value !== undefined);
+      }
+    }
+
     target.value = "***USER DEFINED VALUE***";
     target.click();
-    assert.isTrue(this.document.getElementById("general.useragent.override").hasUserValue);
+    assert.isTrue(hasValue(this.document.getElementById("general.useragent.override")));
 
     let resetBtn = this.document.querySelector("#ua hbox button[oncommand*=resetUserAgent]");
     resetBtn.click();
     assert.equals("", target.value);
-    assert.isFalse(this.document.getElementById("general.useragent.override").hasUserValue);
+    assert.isFalse(hasValue(this.document.getElementById("general.useragent.override")));
 
     target.value = origval;
     target.click();
@@ -279,16 +287,24 @@ tc.tests = {
     let target = this.document.getElementById("browserCacheDiskCacheFolder");
     let origval = target.value;
 
+    let hasValue = function(aPref) {
+      if (aPref.instantApply) {
+        return (aPref.hasUserValue);
+      } else {
+        return (aPref.value !== undefined);
+      }
+    }
+
     let file = Services.dirsvc.get("TmpD", Ci.nsIFile);
     file.append("test" + (new Date()).getTime() + "d");
     target.value = file.path;
     target.click();
-    assert.isTrue(this.document.getElementById("browser.cache.disk.parent_directory").hasUserValue);
+    assert.isTrue(hasValue(this.document.getElementById("browser.cache.disk.parent_directory")));
 
     let resetBtn = this.document.querySelector("#speed-cache button[oncommand*=resetBrowserCacheDiskCacheFolder]");
     resetBtn.click();
     assert.equals("", target.value);
-    assert.isFalse(this.document.getElementById("browser.cache.disk.parent_directory").hasUserValue);
+    assert.isFalse(hasValue(this.document.getElementById("browser.cache.disk.parent_directory")));
 
     target.value = origval;
     target.click();

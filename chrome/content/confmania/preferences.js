@@ -21,7 +21,7 @@ var gPrefWindow = {
         aPref.updateElements();
       }
     } else {
-      aPref.value = aPref.defaultValue;
+      aPref.value = (aPref.defaultValue === null)? undefined :aPref.defaultValue;
       aPref.updateElements();
     }
   },
