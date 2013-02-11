@@ -39,7 +39,7 @@ tc.tests = {
   // TEST ####################
   
   testInit: function() {
-    assert.isDefined(this.win.gPrefWindow.prefHTTP);
+    assert.isDefined(this.window.gPrefWindow.prefHTTP);
   },
   testOnPaneHTTPBoxTabSelected: function() {
     let paneHTTPBoxTab = this.document.getElementById("paneHTTPBoxTab");

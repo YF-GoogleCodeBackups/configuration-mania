@@ -21,6 +21,30 @@ function sleep(aWait) {
   }
 }
 
+function DialogObserver(windowtype, handlers) {
+  this.windowtype = windowtype;
+  this.handlers = handlers;
+}
+DialogObserver.prototype = {
+  observe: function (aSubject, aTopic, aData) {
+    if (aTopic == "domwindowopened") {
+      aSubject.QueryInterface(Ci.nsIDOMWindow)
+        .addEventListener("load", this, false);
+    } else if (aTopic == "domwindowclosed") {
+      if (aSubject.document.documentElement.getAttribute("windowtype") == this.windowtype) {
+        this.handlers.onClose(aSubject);
+      }
+    }
+  },
+  handleEvent: function(aEvent) {
+    let aWindow = aEvent.currentTarget;
+    aWindow.removeEventListener(aEvent.type, this, false);
+    if (aWindow.document.documentElement.getAttribute("windowtype") == this.windowtype) {
+      this.handlers.onOpen(aWindow);
+    }
+  }
+};
+
 var tc = new TestCase();
 tc.tests = {
   setUp: function() {
@@ -32,40 +56,139 @@ tc.tests = {
   // TEST ####################
   
   testOpenConfMania: function() {
-    assert.isDefined(this.win.gPrefWindow);
+    let origIAvalue = Services.prefs.getBoolPref("browser.preferences.instantApply");
 
     let cmd = this.win.document.getElementById("ConfMania:Open");
     assert.isDefined(cmd);
 
-    cmd.click();
-    sleep(2000);
-    let cmwin = Services.wm.getMostRecentWindow("Browser:Confmania");
-    assert.isDefined(cmwin);
+    var dialogHandler = { onOpen: function(){}, onClose: function(){} };
+    let dialogObserver = new DialogObserver("Browser:Confmania", dialogHandler);
+    try {
+      Services.ww.registerNotification(dialogObserver);
 
-    cmd.click();
-    let cmwin2 = Services.wm.getMostRecentWindow("Browser:Confmania");
-    assert.isTrue(cmwin === cmwin2);
+      // instantApply.
+      {
+        Services.prefs.setBoolPref("browser.preferences.instantApply", true);
+
+        cmd.click();
+        sleep(2000);
+        let cmwin = Services.wm.getMostRecentWindow("Browser:Confmania");
+        assert.isDefined(cmwin);
+
+        cmd.click();
+        let cmwin2 = Services.wm.getMostRecentWindow("Browser:Confmania");
+        assert.isTrue(cmwin === cmwin2);
+
+        cmwin.close();
+      }
+      // non-instantApply.
+      {
+        Services.prefs.setBoolPref("browser.preferences.instantApply", false);
+
+        let confmaniaIsOpened = false;
+        dialogHandler.onOpen = function (cmwin) {
+          sleep(100);
+          confmaniaIsOpened = true;
+          cmwin.close();
+        };
+        cmd.click();
+        dialogHandler.onOpen = function () {};
+
+        assert.isTrue(confmaniaIsOpened);
+      }
+    } catch (e) {
+      throw e;
+    } finally {
+      Services.ww.unregisterNotification(dialogObserver);
+
+      Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
+    }
   },
 
   testLoadAllPane: function() {
-    let cmwin = Services.wm.getMostRecentWindow("Browser:Confmania");
-    let document = cmwin.document;
-    let prefWin  = document.documentElement;
+    let origIAvalue = Services.prefs.getBoolPref("browser.preferences.instantApply");
 
-    assert.isTrue(prefWin.currentPane.loaded);
+    let cmd = this.win.document.getElementById("ConfMania:Open");
+    assert.isDefined(cmd);
 
-    assert.equals(
-      "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug",
-      Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
-    );
+    var dialogHandler = { onOpen: function(){}, onClose: function(){} };
+    let dialogObserver = new DialogObserver("Browser:Confmania", dialogHandler);
+    try {
+      Services.ww.registerNotification(dialogObserver);
 
-    for each (let [k,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
-      prefWin.showPane(document.getElementById(v));
-      sleep(2000);
-      assert.equals(v, prefWin.currentPane.id);
-      assert.isTrue(prefWin.currentPane.loaded);
+      // instantApply.
+      {
+        Services.prefs.setBoolPref("browser.preferences.instantApply", true);
 
-      assert.isTrue(prefWin.currentPane.childNodes.length > 0);
+        cmd.click();
+        sleep(2000);
+
+        let cmwin = Services.wm.getMostRecentWindow("Browser:Confmania");
+        let document = cmwin.document;
+        let prefWin  = document.documentElement;
+
+        assert.isTrue(prefWin.currentPane.loaded);
+
+        assert.equals(
+          "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug",
+          Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
+        );
+
+        for each (let [k,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
+          prefWin.showPane(document.getElementById(v));
+          sleep(2000);
+          assert.equals(v, prefWin.currentPane.id);
+          assert.isTrue(prefWin.currentPane.loaded);
+
+          assert.isTrue(prefWin.currentPane.childNodes.length > 0);
+        }
+
+        cmwin.close();
+      }
+      // non-instantApply.
+      {
+        Services.prefs.setBoolPref("browser.preferences.instantApply", false);
+
+        let exception = undefined;
+        dialogHandler.onOpen = function (cmwin) {
+          try {
+            let document = cmwin.document;
+            let prefWin  = document.documentElement;
+
+            assert.isTrue(prefWin.currentPane.loaded);
+
+            assert.equals(
+              "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug",
+              Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
+            );
+
+            for each (let [k,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
+              prefWin.showPane(document.getElementById(v));
+              sleep(2000);
+              assert.equals(v, prefWin.currentPane.id);
+              assert.isTrue(prefWin.currentPane.loaded);
+
+              assert.isTrue(prefWin.currentPane.childNodes.length > 0);
+            }
+          } catch (e) {
+            exception = e;
+          } finally {
+            cmwin.close();
+          }
+        };
+        cmd.click();
+        dialogHandler.onOpen = function () {};
+
+        if (!!exception) {
+          throw exception;
+        }
+      }
+    } catch (e) {
+      throw e;
+    } finally {
+      Services.ww.unregisterNotification(dialogObserver);
+
+      Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
     }
   },
 }

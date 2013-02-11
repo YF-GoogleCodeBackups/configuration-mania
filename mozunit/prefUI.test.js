@@ -39,7 +39,7 @@ tc.tests = {
   // TEST ####################
   
   testInit: function() {
-    assert.isDefined(this.win.gPrefWindow.prefUI);
+    assert.isDefined(this.window.gPrefWindow.prefUI);
   },
   testInitMultitouchPopup: function() {
     let menulists = this.document.querySelectorAll("#multitouch-gestures-box menulist");
