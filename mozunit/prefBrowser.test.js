@@ -39,7 +39,7 @@ tc.tests = {
   // TEST ####################
   
   testInit: function() {
-    assert.isDefined(this.win.gPrefWindow.prefBrowser);
+    assert.isDefined(this.window.gPrefWindow.prefBrowser);
 
     assert.isTrue(this.document.getElementById("browserCacheDiskCacheFolder").placeholder != "");
   },

@@ -39,7 +39,7 @@ tc.tests = {
   // TEST ####################
   
   testInit: function() {
-    assert.isDefined(this.win.gPrefWindow.prefSecurity);
+    assert.isDefined(this.window.gPrefWindow.prefSecurity);
   },
   testSyncFromPopwin: function() {
     let mData = this.document.getElementById("dom.popup_allowed_events");
