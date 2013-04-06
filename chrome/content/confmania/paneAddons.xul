@@ -51,21 +51,14 @@
 <preferences>
   <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
   <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
-  <preference name="extensions.checkCompatibility.4.0" id="extensions.checkCompatibility.4.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.5.0" id="extensions.checkCompatibility.5.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.6.0" id="extensions.checkCompatibility.6.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.7.0" id="extensions.checkCompatibility.7.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.8.0" id="extensions.checkCompatibility.8.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.9.0" id="extensions.checkCompatibility.9.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.10.0" id="extensions.checkCompatibility.10.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.11.0" id="extensions.checkCompatibility.11.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.12.0" id="extensions.checkCompatibility.12.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.13.0" id="extensions.checkCompatibility.13.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.14.0" id="extensions.checkCompatibility.14.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.15.0" id="extensions.checkCompatibility.15.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.16.0" id="extensions.checkCompatibility.16.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.17.0" id="extensions.checkCompatibility.17.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.18.0" id="extensions.checkCompatibility.18.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.19.0" id="extensions.checkCompatibility.19.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.20.0" id="extensions.checkCompatibility.20.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.21.0" id="extensions.checkCompatibility.21.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.22.0" id="extensions.checkCompatibility.22.0" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.install.requireBuiltInCerts" id="extensions.install.requireBuiltInCerts" type="bool" inverted="true"/>
   <preference name="extensions.hideInstallButton" id="extensions.hideInstallButton" type="bool" inverted="true"/>
@@ -87,23 +80,14 @@
 <groupbox>
 <caption label="&addons.noCheckCompatibility.label;"/>
 <hbox>
-<checkbox label="4.0" preference="extensions.checkCompatibility.4.0"/>
-<checkbox label="5.0" preference="extensions.checkCompatibility.5.0"/>
-<checkbox label="6.0" preference="extensions.checkCompatibility.6.0"/>
-<checkbox label="7.0" preference="extensions.checkCompatibility.7.0"/>
-<checkbox label="8.0" preference="extensions.checkCompatibility.8.0"/>
-<checkbox label="9.0" preference="extensions.checkCompatibility.9.0"/>
-<checkbox label="10.0" preference="extensions.checkCompatibility.10.0"/>
-<checkbox label="11.0" preference="extensions.checkCompatibility.11.0"/>
-</hbox>
-<hbox>
-<checkbox label="12.0" preference="extensions.checkCompatibility.12.0"/>
-<checkbox label="13.0" preference="extensions.checkCompatibility.13.0"/>
-<checkbox label="14.0" preference="extensions.checkCompatibility.14.0"/>
-<checkbox label="15.0" preference="extensions.checkCompatibility.15.0"/>
-<checkbox label="16.0" preference="extensions.checkCompatibility.16.0"/>
-<checkbox label="17.0" preference="extensions.checkCompatibility.17.0"/>
-<checkbox label="18.0" preference="extensions.checkCompatibility.18.0"/>
+<checkbox label="15" preference="extensions.checkCompatibility.15.0"/>
+<checkbox label="16" preference="extensions.checkCompatibility.16.0"/>
+<checkbox label="17" preference="extensions.checkCompatibility.17.0"/>
+<checkbox label="18" preference="extensions.checkCompatibility.18.0"/>
+<checkbox label="19" preference="extensions.checkCompatibility.19.0"/>
+<checkbox label="20" preference="extensions.checkCompatibility.20.0"/>
+<checkbox label="21" preference="extensions.checkCompatibility.21.0"/>
+<checkbox label="22" preference="extensions.checkCompatibility.22.0"/>
 </hbox>
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
