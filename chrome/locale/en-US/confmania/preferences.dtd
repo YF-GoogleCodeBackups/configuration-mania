@@ -28,8 +28,8 @@
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maximum number of entries">
 <!ENTITY browser.urlbar.autoComplete.delay.label "Wait time on the autocomplete :">
 <!ENTITY browser.urlbar.formatting.label "Formatting">
-<!ENTITY browser.urlbar.formatting.formatting-enabled.label "Enable domain highlighting. (Firefox 6+)">
-<!ENTITY browser.urlbar.formatting.trimURLs.label "Drop http:// prefix. (Firefox 7)">
+<!ENTITY browser.urlbar.formatting.formatting-enabled.label "Enable domain highlighting.">
+<!ENTITY browser.urlbar.formatting.trimURLs.label "Drop http:// prefix.">
 
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowBlink.label "Allow blinking text">
@@ -50,9 +50,9 @@
 <!ENTITY browser.html.color_management.mode.on.label "Enable for rendered graphics">
 <!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
 <!ENTITY browser.html.plugins.label "Plugins">
-<!ENTITY browser.html.plugins.click_to_play.label "Do not load the plugin content until you click on it (Firefox 14+)">
+<!ENTITY browser.html.plugins.click_to_play.label "Do not load the plugin content until you click on it">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
-<!ENTITY browser.html.3d-transforms.label "Enable CSS 3D Transforms (Firefox 8+)">
+<!ENTITY browser.html.3d-transforms.label "Enable CSS 3D Transforms">
 <!ENTITY browser.html.enableSVGSMIL.label "Enable SMIL content">
 <!ENTITY browser.html.webgl.label "Enable WebGL (takes effect after restart)">
 <!ENTITY browser.html.webgl.software_render.label "Use software rendering (Firefox 4-17)">
@@ -70,10 +70,10 @@
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Disable the automatic detection and use of direct2d (Windows)">
 <!ENTITY browser.html.acceleration.d2d-force-enabled.label "enable Direct2D regardless of automatic detection or blacklisting (Windows)">
 <!ENTITY browser.tabs.label "TabBrowsing">
-<!ENTITY browser.tabs.newtab.label "New Tab (Firefox 13+)">
+<!ENTITY browser.tabs.newtab.label "New Tab">
 <!ENTITY browser.tabs.newtab.url.label "URL:">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
-<!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages (Firefox 14+)">
+<!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
 <!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
 <!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
@@ -108,16 +108,11 @@
 <!ENTITY browser.sessionStore.privacy_level.any.label "for any site">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
 <!ENTITY browser.sessionStore.privacy_level.never.label "Never">
-<!ENTITY browser.sessionStore.concurrent.label "Number of concurrently-restored tabs (Firefox 4-7)">
-<!ENTITY browser.sessionStore.concurrent.all.label "Restore all tabs at the same time">
-<!ENTITY browser.sessionStore.concurrent.bartab.label "Restore only the selected tab in each window. Other tabs won't be restored until they are selected.">
-<!ENTITY browser.sessionStore.concurrent.number.label "Restore up to">
-<!ENTITY browser.sessionStore.concurrent.number.label2 "tabs concurrently">
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
-<!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab (and (up-to Firefox 13) location bar)">
+<!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
 <!ENTITY browser.download.label "Download">
-<!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links (Firefox 13+)">
+<!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links">
 <!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
 <!ENTITY browser.download.quitBehavior.label "When &brandShortName; quited but downloads in progress:">
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">
@@ -129,12 +124,6 @@
 <!ENTITY browser.download.flashCount.finite.label "">
 <!ENTITY browser.download.flashCount.finite.label2 "times">
 <!ENTITY browser.download.showAlertOnComplete.label "Show alert on download completed">
-<!ENTITY browser.download.alerts.label "The Alerts configuration (up-to Firefox 16)">
-<!ENTITY browser.download.alerts.totalOpenTime "Show alerts for">
-<!ENTITY browser.download.alerts.slide.label "Speed of alert slide-animation">
-<!ENTITY browser.download.alerts.slide.prefix.label "Move the alerts by">
-<!ENTITY browser.download.alerts.slide.per.label "pixels per">
-<!ENTITY browser.download.alerts.slide.settolight.label "Set light-weight conf.">
 <!ENTITY browser.ua.label "User-Agent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.text.label "UA string :">
@@ -170,10 +159,10 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
 <!ENTITY browser.others.label "Other">
 <!ENTITY browser.others.geo_enabled.label "Enable Geolocation">
-<!ENTITY browser.others.full_screen_enabled.label "Enable Full Screen API (Firefox10+)">
-<!ENTITY browser.others.dom_battery_enabled.label "Enable Battery Status API (Firefox11+)">
-<!ENTITY browser.others.dom_sms_enabled.label "Enable Messaging (SMS) API (Firefox11+)">
-<!ENTITY browser.others.dom_vibrator_enabled.label "Enable Vibration API (Firefox11+)">
+<!ENTITY browser.others.full_screen_enabled.label "Enable Full Screen API">
+<!ENTITY browser.others.dom_battery_enabled.label "Enable Battery Status API">
+<!ENTITY browser.others.dom_sms_enabled.label "Enable Messaging (SMS) API">
+<!ENTITY browser.others.dom_vibrator_enabled.label "Enable Vibration API">
 <!ENTITY browser.others.dns.label "DNS Setting">
 <!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
@@ -284,31 +273,27 @@
 <!ENTITY http.connect.proxy.label "Proxy Connection Options">
 <!ENTITY http.connect.HTTP10.label "Use HTTP 1.0">
 <!ENTITY http.connect.HTTP11.label "Use HTTP 1.1">
-<!ENTITY http.connect.disableKeepAlive.label "Disable Keep-Alive (up-to Firefox 16)">
 <!ENTITY http.connect.pipeline.label "Enable Pipelining">
 <!ENTITY http.connect.pipeline.desc "WARNING: pipelining is an experimental feature, designed to improve page-load performance, that is unfortunately not well supported by some web servers and proxies.">
 <!ENTITY http.connect.HTTP10.accesskey "U">
 <!ENTITY http.connect.HTTP10Proxy.accesskey "S">
 <!ENTITY http.connect.HTTP11.accesskey "E">
 <!ENTITY http.connect.HTTP11Proxy.accesskey "T">
-<!ENTITY http.connect.disableKeepAlive.accesskey "K">
-<!ENTITY http.connect.disableKeepAliveProxy.accesskey "A">
 <!ENTITY http.connect.pipeline.accesskey "P">
 <!ENTITY http.connect.pipelineProxy.accesskey "N">
 <!ENTITY http.connect.pipelineSSL.label "Enable Pipelining for HTTPS">
 <!ENTITY http.connect.pipelineSSL.accesskey "L">
-<!ENTITY http.connect.spdy.label "Enable SPDY Protocol (Firefox11+)">
+<!ENTITY http.connect.spdy.label "Enable SPDY Protocol">
 <!ENTITY http.connect.spdy.accesskey "D">
 <!ENTITY http.maxconn.label "Max Connections">
 <!ENTITY http.maxconn.maxpipeliningrequest.label "Max pipelining Request">
 <!ENTITY http.maxconn.maxconnections.label "Max Connections (Total)">
-<!ENTITY http.maxconn.maxconnectionsPerServer.label "Max Connections (per Server) (up-to Firefox 16)">
 <!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "Max Persistent Connections (per Server)">
 <!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "Max Persistent Connections (via Proxy)">
 <!ENTITY http.timeout.label "Timeout">
 <!ENTITY http.timeout.connection-retry.label "Connection retry">
 <!ENTITY http.timeout.keep-alive.label "Keep-Alive">
-<!ENTITY http.timeout.spdy.label "SPDY (Firefox11+)">
+<!ENTITY http.timeout.spdy.label "SPDY">
 <!ENTITY http.header.label "Header">
 <!ENTITY http.header.encoding.label "Accept-Encoding">
 <!ENTITY http.header.accept.label "Accept (for Content)">
@@ -316,7 +301,7 @@
 
 <!ENTITY ui.title "UI">
 <!ENTITY ui.mousewheel.label "Mouse wheel">
-<!ENTITY ui.mousewheel.binding.label "Mouse wheel binding (Firefox 17+)">
+<!ENTITY ui.mousewheel.binding.label "Mouse wheel binding">
 <!ENTITY ui.mousewheel.binding.default.label "Default">
 <!ENTITY ui.mousewheel.binding.with_alt.label "Alt">
 <!ENTITY ui.mousewheel.binding.with_control.label "Ctrl">
@@ -331,19 +316,6 @@
 <!ENTITY ui.mousewheel.binding.delta_multiplier_x.label "Multiplier X">
 <!ENTITY ui.mousewheel.binding.delta_multiplier_y.label "Multiplier Y">
 <!ENTITY ui.mousewheel.binding.delta_multiplier_z.label "Multiplier Z">
-<!ENTITY ui.mousewheel.legacy.label "Mouse Wheel Option (Firefox 4-16)">
-<!ENTITY ui.mousewheel.vertiscroll.label "Vertical-scroll">
-<!ENTITY ui.mousewheel.horizscroll.label "Horizontal-scroll">
-<!ENTITY ui.mousewheel.usingJustTheWheel.label "No Modifier key">
-<!ENTITY ui.mousewheel.withAlt.label "Alt">
-<!ENTITY ui.mousewheel.withCtrl.label "Ctrl">
-<!ENTITY ui.mousewheel.withShift.label "Shift">
-<!ENTITY ui.mousewheel.scroll.label "Scroll document by">
-<!ENTITY ui.mousewheel.scrollLines.label "lines.">
-<!ENTITY ui.mousewheel.useSystemDefault.label "Use system default">
-<!ENTITY ui.mousewheel.scrollPgUpPgDn.label "Scroll a page up or a page down">
-<!ENTITY ui.mousewheel.history.label "Move back and forward in the browsing history">
-<!ENTITY ui.mousewheel.textsize.label "Make the text larger or smaller">
 <!ENTITY ui.multitouch.label "Multi-Touch">
 <!ENTITY ui.multitouch.gestures.label "Multi-Touch Gestures">
 <!ENTITY ui.multitouch.gestures.pinch.in.label "Pinch-in">
@@ -424,7 +396,7 @@
 <!ENTITY ui.others.preference.instanceAccept.label "Apply instance and the dialog is modeless  (likely Mac or Gnome)">
 <!ENTITY ui.others.preference.instanceAccept.desc "Do not unselect on Mac OS X. See Mozilla bugzilla 641288 (http://bugzil.la/641288).">
 <!ENTITY ui.others.preference.animateFadeIn.label "Animate fade-in (likely Mac)">
-<!ENTITY ui.others.preference.inContent.label "Open Firefox Preference in tab instead of dialog (Firefox 15+)">
+<!ENTITY ui.others.preference.inContent.label "Open Firefox Preference in tab instead of dialog">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) style mouse behavior">
 <!ENTITY ui.others.xwin.autocopy.label "Enable auto-copy selected text (takes effect only *nix)">
 <!ENTITY ui.others.xwin.paste.label "Paste when clicked middle mouse button">
@@ -451,9 +423,7 @@
 <!ENTITY debug.devtools.label "Developer Tools">
 <!ENTITY debug.devtools.inspector_enabled.label "Enable Inspector">
 <!ENTITY debug.jit.label "JavaScript JIT Compiler Setting">
-<!ENTITY debug.jit.jitprofiling.label "Tuning JIT heuristics (Firefox4-10)">
 <!ENTITY debug.jit.methodjit.label "JaegerMonkey">
-<!ENTITY debug.jit.tracejit.label "TraceMonkey (Firefox4-10)">
 <!ENTITY debug.jit.content.label "on webpages">
 <!ENTITY debug.jit.chrome.label "on UI">
 <!ENTITY debug.cache.label "Cache">

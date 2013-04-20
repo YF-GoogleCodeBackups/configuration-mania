@@ -309,9 +309,6 @@ tc.tests = {
     target.value = origval;
     target.click();
   },
-  testPreviewAlert: function() {
-    this.window.gPrefWindow.prefBrowser.previewAlert("title", "value");
-  },
   //testResetAlertsSlide: function() {
   //},
   //testSetAlertsSlideLight: function() {

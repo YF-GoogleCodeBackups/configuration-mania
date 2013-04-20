@@ -33,11 +33,6 @@ gPrefWindow.prefUI = {
 
     gPrefWindow.prefUI.initI18nBoxTab();
   },
-  onUseSystemDefaultSyncFrom : function(elem) {
-    let disabled = document.getElementById(elem.getAttribute("preference")).value;
-    let numlinesid = elem.getAttribute("preference").replace(/\.[^\.]*$/, ".numlines");
-    document.getElementById(numlinesid).disabled = disabled;
-  },
   initI18nBoxTab : function () {
     gPrefWindow.prefUI.onPaneUIBoxTabSelected();
   },

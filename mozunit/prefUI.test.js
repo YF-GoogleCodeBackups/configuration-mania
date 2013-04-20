@@ -57,24 +57,6 @@ tc.tests = {
       assert.equals("none", menulists[i].getAttribute("sizetopopup"));
     }
   },
-  testOnUseSystemDefaultSyncFrom: function() {
-    let direction = ["", "horizscroll."];
-    let keys = "withnokey withaltkey withcontrolkey withshiftkey".split(" ");
-    for (let u = 0; u < direction.length; u++) {
-      for (let v = 0; v < keys.length; v++) {
-        let prefix = direction[u] + keys[v];
-        let checkbox = this.document.querySelector("checkbox[preference='mousewheel."+prefix+".sysnumlines']");
-        let target = this.document.querySelector("textbox[preference='mousewheel."+prefix+".numlines']");
-
-        if (!checkbox) throw new Error(JSON.stringify({prefix: prefix, rule: "checkbox[preference='mousewheel."+prefix+".sysnumlines']"}));
-
-        for (let i = 0; i < 2; i++) {
-          assert.equals(!checkbox.checked, !target.disabled);
-          checkbox.click();
-        }
-      }
-    }
-  },
   testInitI18nBoxTab: function() {
     // ref testOnPaneUIBoxTabSelected
   },
