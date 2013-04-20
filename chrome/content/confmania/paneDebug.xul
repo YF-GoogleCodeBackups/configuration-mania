@@ -53,12 +53,8 @@
   <preference name="javascript.options.showInConsole" id="javascript.options.showInConsole" type="bool"/>
   <preference name="layout.css.report_errors" id="layout.css.report_errors" type="bool"/>
   <preference name="devtools.inspector.enabled" id="devtools.inspector.enabled" type="bool"/>
-  <preference name="javascript.options.jitprofiling.content" id="javascript.options.jitprofiling.content" type="bool"/>
-  <preference name="javascript.options.jitprofiling.chrome" id="javascript.options.jitprofiling.chrome" type="bool"/>
   <preference name="javascript.options.methodjit.content" id="javascript.options.methodjit.content" type="bool"/>
   <preference name="javascript.options.methodjit.chrome" id="javascript.options.methodjit.chrome" type="bool"/>
-  <preference name="javascript.options.tracejit.content" id="javascript.options.tracejit.content" type="bool"/>
-  <preference name="javascript.options.tracejit.chrome" id="javascript.options.tracejit.chrome" type="bool"/>
   <preference name="nglayout.debug.disable_xul_cache" id="nglayout.debug.disable_xul_cache" type="bool"/>
   <preference name="browser.cache.disk.enable" id="browser.cache.disk.enable" type="bool" inverted="true"/>
   <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
@@ -85,19 +81,9 @@
 <groupbox>
 <caption label="&debug.jit.label;"/>
 <hbox align="center">
-<label value="&debug.jit.jitprofiling.label;"/>
-<checkbox label="&debug.jit.content.label;" preference="javascript.options.jitprofiling.content"/>
-<checkbox label="&debug.jit.chrome.label;" preference="javascript.options.jitprofiling.chrome"/>
-</hbox>
-<hbox align="center">
 <label value="&debug.jit.methodjit.label;"/>
 <checkbox label="&debug.jit.content.label;" preference="javascript.options.methodjit.content"/>
 <checkbox label="&debug.jit.chrome.label;" preference="javascript.options.methodjit.chrome"/>
-</hbox>
-<hbox align="center">
-<label value="&debug.jit.tracejit.label;"/>
-<checkbox label="&debug.jit.content.label;" preference="javascript.options.tracejit.content"/>
-<checkbox label="&debug.jit.chrome.label;" preference="javascript.options.tracejit.chrome"/>
 </hbox>
 </groupbox>
 
