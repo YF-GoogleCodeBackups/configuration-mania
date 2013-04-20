@@ -74,7 +74,6 @@
   <preference id="browser.enable_automatic_image_resizing" name="browser.enable_automatic_image_resizing" type="bool"/>
   <preference id="browser.display.show_image_placeholders" name="browser.display.show_image_placeholders" type="bool"/>
   <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
-  <preference id="gfx.color_management.enabled" name="gfx.color_management.enabled" type="bool"/>
   <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
   <preference id="plugins.click_to_play" name="plugins.click_to_play" type="bool"/>
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
