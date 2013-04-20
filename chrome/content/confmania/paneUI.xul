@@ -47,7 +47,7 @@
 <overlay id="paneUIOverlay"
  xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane flex="1" id="paneUI" onpaneload="gPrefWindow.prefUI.init();">
+<prefpane flex="1" id="paneUI">
 
 <script type="application/javascript;version=1.8" src="paneUI.js"></script>
 
@@ -124,6 +124,7 @@
   <preference id="ui.allow_platform_file_picker" name="ui.allow_platform_file_picker" type="bool" inverted="true"/>
 </preferences>
 
+<hbox class="heading"><html:h1 class="indent-small">&ui.title;</html:h1></hbox>
 
 <hbox flex="1" orient="horizontal" id="paneUIBox">
 <radiogroup id="paneUIBoxTab" class="subtabs"

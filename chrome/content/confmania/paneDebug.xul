@@ -44,6 +44,7 @@
 ]>
 
 <overlay id="paneDebugOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane id="paneDebug" orient="vertical">
 
@@ -59,6 +60,8 @@
   <preference name="browser.cache.disk.enable" id="browser.cache.disk.enable" type="bool" inverted="true"/>
   <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
 </preferences>
+
+<hbox class="heading"><html:h1 class="indent-small">&debug.title;</html:h1></hbox>
 
 <groupbox>
 <caption label="&debug.debug.label;"/>

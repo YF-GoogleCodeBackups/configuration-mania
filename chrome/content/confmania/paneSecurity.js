@@ -58,3 +58,5 @@ gPrefWindow.prefSecurity = {
     }
   }
 };
+
+document.getElementById("paneSecurity").addEventListener("paneload", gPrefWindow.prefSecurity.init, false);

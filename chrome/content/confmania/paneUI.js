@@ -71,3 +71,5 @@ gPrefWindow.prefUI = {
     document.getElementById("accessibility.warn_on_browsewithcaret").disabled = disabled;
   }
 };
+
+document.getElementById("paneUI").addEventListener("paneload", gPrefWindow.prefUI.init, false);

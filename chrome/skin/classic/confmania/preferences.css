@@ -18,6 +18,9 @@ prefwindow#ConfmaniaPreferences .paneSelector > radio[pane] {
 prefwindow#ConfmaniaPreferences image.paneButtonIcon {
   display: none;
 }
+prefwindow#ConfmaniaPreferences prefpane hbox.heading {
+  display: none; /* display only for in-content */
+}
 
 .subtabs, .subtabpanel{
   -moz-appearance: listbox;
