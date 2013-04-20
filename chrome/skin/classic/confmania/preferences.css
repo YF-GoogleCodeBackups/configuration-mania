@@ -76,13 +76,9 @@ prefwindow[animated="true"] #paneUIBoxContainer .subtabpanel {
   min-height: 390px;
 
   /* Enable animation for switching subtabpanel */
-  -moz-transition-duration: 500ms;
-  -moz-transition-property: opacity;
-  -moz-transition-timing-function: linear;
   transition-duration: 500ms;
   transition-property: opacity;
   transition-timing-function: linear;
-  /* TODO -moz-transition-* is no longer prefixed in Firefox16+ */
 }
 
 .emphasis{ font-weight: bold ! important; }
