@@ -63,7 +63,7 @@
 
   <preference id="network.http.connection-retry-timeout" name="network.http.connection-retry-timeout" type="int"/>
   <preference id="network.http.keep-alive.timeout" name="network.http.keep-alive.timeout" type="int"/>
-  <preference id="network.http.spdy.timeout" name="network.http.keep-alive.timeout" type="int"/>
+  <preference id="network.http.spdy.timeout" name="network.http.spdy.timeout" type="int"/>
 
   <preference id="network.http.pipelining.maxrequests" name="network.http.pipelining.maxrequests" type="int"/>
   <preference id="network.http.max-connections" name="network.http.max-connections" type="int"/>
