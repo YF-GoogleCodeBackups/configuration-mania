@@ -7,9 +7,6 @@ gPrefWindow.prefBrowser = {
       document.getElementById("browserCacheDiskCacheFolder").placeholder = cachedir.path;
     } catch(ex){}
 
-    if (! document.documentElement.instantApply) {
-      document.getElementById("alertsPreviewButton").setAttribute("style", "display:none;");
-    }
     gPrefWindow.prefBrowser.initUA();
     gPrefWindow.prefBrowser.initBrowserBoxTab();
   },
@@ -320,20 +317,6 @@ gPrefWindow.prefBrowser = {
   },
   resetBrowserCacheDiskCacheFolder : function(){
     gPrefWindow.resetPref(document.getElementById("browser.cache.disk.parent_directory"));
-  },
-  previewAlert : function(title, val){
-    var alertsService = Components.classes["@mozilla.org/alerts-service;1"]
-     .getService(Components.interfaces.nsIAlertsService);
-    alertsService.showAlertNotification("", title, val, false, "cookie", null);
-  },
-  resetAlertsSlide : function(){//#alerts.slide*
-    for each (let name in ["alerts.slideIncrement", "alerts.slideIncrementTime"]) {
-      gPrefWindow.resetPref(document.getElementById(name));
-    }
-  },
-  setAlertsSlideLight : function(){//#alerts.slide*
-    document.getElementById("alerts.slideIncrement").value = 10;
-    document.getElementById("alerts.slideIncrementTime").value = 20;
   }
 };
 

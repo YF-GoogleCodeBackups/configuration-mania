@@ -28,8 +28,8 @@
 <!ENTITY browser.urlbar.autoComplete.maxRichResults.label "最大表示項目数">
 <!ENTITY browser.urlbar.autoComplete.delay.label "自動補完を始めるまでの待ち時間 : ">
 <!ENTITY browser.urlbar.formatting.label "整形">
-<!ENTITY browser.urlbar.formatting.formatting-enabled.label "ドメイン名を強調表示 (Firefox 6+)">
-<!ENTITY browser.urlbar.formatting.trimURLs.label "http:// を省略して表示 (Firefox 7)">
+<!ENTITY browser.urlbar.formatting.formatting-enabled.label "ドメイン名を強調表示">
+<!ENTITY browser.urlbar.formatting.trimURLs.label "http:// を省略して表示">
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowBlink.label "点滅テキストを有効にする">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
@@ -49,9 +49,9 @@
 <!ENTITY browser.html.color_management.mode.on.label "有効にする">
 <!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
 <!ENTITY browser.html.plugins.label "プラグイン">
-<!ENTITY browser.html.plugins.click_to_play.label "プラグインコンテンツはクリックしたら読み込む (Firefox 14+)">
+<!ENTITY browser.html.plugins.click_to_play.label "プラグインコンテンツはクリックしたら読み込む">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
-<!ENTITY browser.html.3d-transforms.label "CSS 3D Transforms を有効にする (Firefox 8+)">
+<!ENTITY browser.html.3d-transforms.label "CSS 3D Transforms を有効にする">
 <!ENTITY browser.html.enableSVGSMIL.label "SMIL を有効にする">
 <!ENTITY browser.html.webgl.label "WebGL を有効にする (再起動必要)">
 <!ENTITY browser.html.webgl.software_render.label "ソフトウェアレンダリングする (Firefox 4-17)">
@@ -69,10 +69,10 @@
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Direct2D を使用しない (Windows)">
 <!ENTITY browser.html.acceleration.d2d-force-enabled.label "グラフィックスドライバのブラックリストを無視して常に有効にする (Windows)">
 <!ENTITY browser.tabs.label "タブブラウジング">
-<!ENTITY browser.tabs.newtab.label "新しいタブ (Firefox 13+)">
+<!ENTITY browser.tabs.newtab.label "新しいタブ">
 <!ENTITY browser.tabs.newtab.url.label "URL:">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
-<!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする (Firefox14+)">
+<!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
 <!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所">
 <!ENTITY browser.tabs.closeButtons.active.label "アクティブなタブのみ表示">
@@ -107,16 +107,11 @@
 <!ENTITY browser.sessionStore.privacy_level.any.label "すべてのサイトで保存">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">
 <!ENTITY browser.sessionStore.privacy_level.never.label "決して保存しない">
-<!ENTITY browser.sessionStore.concurrent.label "最大同時リストア数 (Firefox 4〜7)">
-<!ENTITY browser.sessionStore.concurrent.all.label "すべてのタブを同時にリストアする">
-<!ENTITY browser.sessionStore.concurrent.bartab.label "アクティブなタブに限ってリストアする。他のタブはアクティブになるまでリストアしない。">
-<!ENTITY browser.sessionStore.concurrent.number.label "最大">
-<!ENTITY browser.sessionStore.concurrent.number.label2 "個のタブを同時にリストアする">
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン(ファビコン)">
-<!ENTITY browser.bookmarkicon.siteicons.label "タブ(Firefox 13以下はさらにロケーションバー)にアイコンを表示する">
+<!ENTITY browser.bookmarkicon.siteicons.label "タブにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
 <!ENTITY browser.download.label "ダウンロード">
-<!ENTITY browser.download.disableAltClickSave.label "ALT+Click または ALT+ENTER でリンク先をダウンロードしない (Firefox 13+)">
+<!ENTITY browser.download.disableAltClickSave.label "ALT+Click または ALT+ENTER でリンク先をダウンロードしない">
 <!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
 <!ENTITY browser.download.quitBehavior.label "&brandShortName;終了時の進行中のダウンロードの処理">
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "中止するが、次回&brandShortName;起動時に自動的に再開">
@@ -128,12 +123,6 @@
 <!ENTITY browser.download.flashCount.finite.label "点滅を">
 <!ENTITY browser.download.flashCount.finite.label2 "回させる">
 <!ENTITY browser.download.showAlertOnComplete.label "ダウンロード終了時に通知する">
-<!ENTITY browser.download.alerts.label "通知アラート表示の設定 (Firefox16迄)">
-<!ENTITY browser.download.alerts.totalOpenTime "通知アラートを隠すまでの時間">
-<!ENTITY browser.download.alerts.slide.label "スライドアニメーションの速度">
-<!ENTITY browser.download.alerts.slide.prefix.label " ">
-<!ENTITY browser.download.alerts.slide.per.label "ピクセルづつ動かす。時間間隔は">
-<!ENTITY browser.download.alerts.slide.settolight.label "軽い設定にする">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "警告: おそらくこの設定が一部のプラグインや &quot;User Agent Switcher&quot; などと競合するかもしれません。">
 <!ENTITY browser.ua.text.label "UA文字列 :">
@@ -169,10 +158,10 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
 <!ENTITY browser.others.label "その他">
 <!ENTITY browser.others.geo_enabled.label "位置情報通信機能を有効にする">
-<!ENTITY browser.others.full_screen_enabled.label "フルスクリーンAPIを有効にする(Firefox10+)">
-<!ENTITY browser.others.dom_battery_enabled.label "バッテリーステータスAPIを有効にする(Firefox11+)">
-<!ENTITY browser.others.dom_sms_enabled.label "メッセージング(SMS)APIを有効にする(Firefox11+)">
-<!ENTITY browser.others.dom_vibrator_enabled.label "バイブレーションAPIを有効にする(Firefox11+)">
+<!ENTITY browser.others.full_screen_enabled.label "フルスクリーンAPIを有効にする">
+<!ENTITY browser.others.dom_battery_enabled.label "バッテリーステータスAPIを有効にする">
+<!ENTITY browser.others.dom_sms_enabled.label "メッセージング(SMS)APIを有効にする">
+<!ENTITY browser.others.dom_vibrator_enabled.label "バイブレーションAPIを有効にする">
 <!ENTITY browser.others.dns.label "名前解決(DNS)">
 <!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
 <!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">
@@ -283,31 +272,27 @@
 <!ENTITY http.connect.proxy.label "プロキシ接続の設定">
 <!ENTITY http.connect.HTTP10.label "HTTP 1.0 を使う">
 <!ENTITY http.connect.HTTP11.label "HTTP 1.1 を使う">
-<!ENTITY http.connect.disableKeepAlive.label "Keep-Alive を無効にする">
 <!ENTITY http.connect.pipeline.label "パイプラインを有効にする">
 <!ENTITY http.connect.pipeline.desc "警告: パイプラインは、まだ実験的な機能です。この機能を利用するとページの読み込み速度が向上しますが、一部のウェブ サーバやプロキシではそれら自身の不具合によって速度が落ちたり、まったく接続できなくなったりします。">
 <!ENTITY http.connect.HTTP10.accesskey "U">
 <!ENTITY http.connect.HTTP10Proxy.accesskey "S">
 <!ENTITY http.connect.HTTP11.accesskey "E">
 <!ENTITY http.connect.HTTP11Proxy.accesskey "T">
-<!ENTITY http.connect.disableKeepAlive.accesskey "K">
-<!ENTITY http.connect.disableKeepAliveProxy.accesskey "A">
 <!ENTITY http.connect.pipeline.accesskey "P">
 <!ENTITY http.connect.pipelineProxy.accesskey "N">
 <!ENTITY http.connect.pipelineSSL.label "HTTPSに対してパイプラインを有効にする">
 <!ENTITY http.connect.pipelineSSL.accesskey "L">
-<!ENTITY http.connect.spdy.label "SPDYプロトコルを有効にする (Firefox11+)">
+<!ENTITY http.connect.spdy.label "SPDYプロトコルを有効にする">
 <!ENTITY http.connect.spdy.accesskey "D">
 <!ENTITY http.maxconn.label "最大接続数">
 <!ENTITY http.maxconn.maxpipeliningrequest.label "最大パイプライン要求数">
 <!ENTITY http.maxconn.maxconnections.label "最大接続数 (延べ)">
-<!ENTITY http.maxconn.maxconnectionsPerServer.label "最大接続数 (サーバ当たり) (Firefox16迄)">
 <!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
 <!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
 <!ENTITY http.timeout.label "タイムアウト">
 <!ENTITY http.timeout.connection-retry.label "接続の試行">
 <!ENTITY http.timeout.keep-alive.label "接続の持続 (Keep-Alive)">
-<!ENTITY http.timeout.spdy.label "SPDY (Firefox11+)">
+<!ENTITY http.timeout.spdy.label "SPDY">
 <!ENTITY http.header.label "ヘッダ">
 <!ENTITY http.header.encoding.label "Accept-Encoding">
 <!ENTITY http.header.accept.label "Accept (コンテンツ)">
@@ -315,7 +300,7 @@
 
 <!ENTITY ui.title "インターフェイス">
 <!ENTITY ui.mousewheel.label "マウスホイール">
-<!ENTITY ui.mousewheel.binding.label "マウスホイールの割り当て (Firefox 17)">
+<!ENTITY ui.mousewheel.binding.label "マウスホイールの割り当て">
 <!ENTITY ui.mousewheel.binding.default.label "デフォルト">
 <!ENTITY ui.mousewheel.binding.with_alt.label "Alt">
 <!ENTITY ui.mousewheel.binding.with_control.label "Ctrl">
@@ -330,19 +315,6 @@
 <!ENTITY ui.mousewheel.binding.delta_multiplier_x.label "X方向の乗数">
 <!ENTITY ui.mousewheel.binding.delta_multiplier_y.label "Y方向の乗数">
 <!ENTITY ui.mousewheel.binding.delta_multiplier_z.label "Z方向の乗数">
-<!ENTITY ui.mousewheel.legacy.label "マウスホイールの設定 (Firefox 4-16)">
-<!ENTITY ui.mousewheel.vertiscroll.label "縦のスクロール">
-<!ENTITY ui.mousewheel.horizscroll.label "横のスクロール">
-<!ENTITY ui.mousewheel.usingJustTheWheel.label "装飾キーなし">
-<!ENTITY ui.mousewheel.withAlt.label "Alt">
-<!ENTITY ui.mousewheel.withCtrl.label "Ctrl">
-<!ENTITY ui.mousewheel.withShift.label "Shift">
-<!ENTITY ui.mousewheel.scroll.label "ドキュメントを">
-<!ENTITY ui.mousewheel.scrollLines.label "行づつスクロールする">
-<!ENTITY ui.mousewheel.useSystemDefault.label "システムの標準設定を使用する">
-<!ENTITY ui.mousewheel.scrollPgUpPgDn.label "1 ページ単位に上下にスクロールする">
-<!ENTITY ui.mousewheel.history.label "履歴の中で 戻る/進む">
-<!ENTITY ui.mousewheel.textsize.label "テキストを大きくしたり小さくしたりする">
 <!ENTITY ui.multitouch.label "マルチタッチ">
 <!ENTITY ui.multitouch.gestures.label "マルチタッチ・ジェスチャー">
 <!ENTITY ui.multitouch.gestures.pinch.in.label "ピンチイン">
@@ -423,7 +395,7 @@
 <!ENTITY ui.others.preference.instanceAccept.label "モードレスダイアログで瞬時に設定を適用 (Mac や Gnome のように)">
 <!ENTITY ui.others.preference.instanceAccept.desc "Mac OS Xではチェックを外さないでください。詳細は Mozilla bugzilla 641288 (http://bugzil.la/641288) を参照">
 <!ENTITY ui.others.preference.animateFadeIn.label "フェードインのアニメーションをする (Mac のように)">
-<!ENTITY ui.others.preference.inContent.label "設定画面をダイアログではなくタブで開く (Firefox 15+)">
+<!ENTITY ui.others.preference.inContent.label "設定画面をダイアログではなくタブで開く">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) スタイルのマウス動作">
 <!ENTITY ui.others.xwin.autocopy.label "選択テキストの自動コピーを有効にする(*nixでのみ有効)">
 <!ENTITY ui.others.xwin.paste.label "中央クリックで張り付ける">
@@ -450,9 +422,7 @@
 <!ENTITY debug.devtools.label "開発ツール">
 <!ENTITY debug.devtools.inspector_enabled.label "インスペクタを有効にする">
 <!ENTITY debug.jit.label "JavaScriptのJITコンパイラ設定">
-<!ENTITY debug.jit.jitprofiling.label "Tuning JIT heuristics (Firefox4-10)">
 <!ENTITY debug.jit.methodjit.label "JaegerMonkey">
-<!ENTITY debug.jit.tracejit.label "TraceMonkey (Firefox4-10)">
 <!ENTITY debug.jit.content.label "ウェブページ">
 <!ENTITY debug.jit.chrome.label "UI">
 <!ENTITY debug.cache.label "キャッシュ">

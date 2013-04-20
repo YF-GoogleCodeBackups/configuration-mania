@@ -120,7 +120,6 @@
   <preference id="browser.showQuitWarning" name="browser.showQuitWarning" type="bool" inverted="true"/>
   <preference id="browser.warnOnRestart" name="browser.warnOnRestart" type="bool" inverted="true"/>
   <preference id="browser.sessionstore.privacy_level" name="browser.sessionstore.privacy_level" type="int"/>
-  <preference id="browser.sessionstore.max_concurrent_tabs" name="browser.sessionstore.max_concurrent_tabs" type="int"/>
 
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
@@ -427,21 +426,6 @@
       <radio value="2" label="&browser.sessionStore.privacy_level.never.label;"/>
     </radiogroup>
   </groupbox>
-  <groupbox>
-    <caption label="&browser.sessionStore.concurrent.label;"/>
-    <radiogroup id="sessionStore-max-concurrent-tabs-gr">
-      <radio value="-1" label="&browser.sessionStore.concurrent.all.label;"/>
-      <radio value="0" label="&browser.sessionStore.concurrent.bartab.label;"/>
-      <hbox align="center">
-        <radio value="*" label="&browser.sessionStore.concurrent.number.label;"/>
-        <textbox id="sessionStore-max-concurrent-tabs"
-            type="number" hidespinbuttons="true" size="2" min="-1"
-            preference="browser.sessionstore.max_concurrent_tabs"
-            onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('sessionStore-max-concurrent-tabs-gr','sessionStore-max-concurrent-tabs',3);"/>
-        <label value="&browser.sessionStore.concurrent.number.label2;"/>
-      </hbox>
-    </radiogroup>
-  </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="bookmarkicon">
   <checkbox label="&browser.bookmarkicon.siteicons.label;"
@@ -480,30 +464,6 @@
   </groupbox>
   <checkbox label="&browser.download.showAlertOnComplete.label;"
             preference="browser.download.manager.showAlertOnComplete"/>
-
-  <groupbox>
-    <caption label="&browser.download.alerts.label;"/>
-    <hbox align="center">
-      <label control="browserTotalOpenTime" value="&browser.download.alerts.totalOpenTime;"/>
-      <textbox id="browserTotalOpenTime" type="number" hidespinbuttons="true" size="5" preference="alerts.totalOpenTime"/>
-      <label value="&miliseconds;"/>
-    </hbox>
-    <groupbox>
-      <caption label="&browser.download.alerts.slide.label;"/>
-      <hbox align="center">
-        <label value="&browser.download.alerts.slide.prefix.label;" control="browserSlideIncrement"/>
-        <textbox id="browserSlideIncrement" type="number" size="3" min="1" preference="alerts.slideIncrement"/>
-        <label value="&browser.download.alerts.slide.per.label;" control="browserSlideIncrementTime"/>
-        <textbox id="browserSlideIncrementTime" type="number" hidespinbuttons="true" size="5" preference="alerts.slideIncrementTime"/>
-        <label value="&miliseconds;"/>
-      </hbox>
-      <hbox pack="end">
-        <button id="alertsPreviewButton" label="&preview;" oncommand="gPrefWindow.prefBrowser.previewAlert(this.label, this.label);"/>
-        <button label="&reset;" oncommand="gPrefWindow.prefBrowser.resetAlertsSlide();"/>
-        <button label="&browser.download.alerts.slide.settolight.label;" oncommand="gPrefWindow.prefBrowser.setAlertsSlideLight();"/>
-      </hbox>
-    </groupbox>
-  </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="ua">
   <description>&browser.ua.desc;</description>
