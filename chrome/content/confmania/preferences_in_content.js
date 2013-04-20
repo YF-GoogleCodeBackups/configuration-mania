@@ -1,7 +1,71 @@
 var gPrefWindow = {
   onLoad: function(){
+    // In-content
+    document.documentElement.instantApply = true;
+    window.history.replaceState("landing", document.title);
+    window.addEventListener("popstate", gPrefWindow.onStatePopped, true);
+    gPrefWindow.showPanel("landing");
+    gPrefWindow.updateCommands();
+
+    // context menu
     var prefWin = document.documentElement;
     prefWin.addEventListener("contextmenu", gPrefWindow.onContextMenu, true);
+  },
+
+  // =========================
+  // In-content
+  // =========================
+  loadPrefPane: function(aPane) {
+    if (!aPane.loaded) {
+      var OverlayLoadObserver = function(aPane) {
+        this._pane = aPane;
+      };
+      OverlayLoadObserver.prototype = {
+        observe: function (aSubject, aTopic, aData) {
+          try {
+            this._pane.loaded = true;
+
+            // fire onpaneload event.
+            var event = document.createEvent("Events");
+            event.initEvent("paneload", true, true);
+            return !this._pane.dispatchEvent(event);
+          } catch (e) {
+            Components.utils.reportError(e);
+          }
+        }
+      };
+
+      var obs = new OverlayLoadObserver(aPane);
+      document.loadOverlay(aPane.src, obs);
+    }
+  },
+  updateCommands: function() {
+    var webNav = window.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
+                 .getInterface(Components.interfaces.nsIWebNavigation);
+    document.getElementById("back-btn").disabled = !webNav.canGoBack;
+    document.getElementById("forward-btn").disabled = !webNav.canGoForward;
+  },
+  showPanel: function(aDataCategory) {
+    var elems = document.getElementsByTagName("prefpane");
+    for (var i = 0; i < elems.length; i++) {
+      if (elems[i].getAttribute("data-category") == aDataCategory) {
+        gPrefWindow.loadPrefPane(elems[i]);
+        elems[i].hidden = false;
+        elems[i].selected = true;
+      } else {
+        elems[i].hidden = true;
+        elems[i].selected = false;
+      }
+    }
+  },
+  onStatePopped: function(aEvent) {
+    gPrefWindow.updateCommands();
+    gPrefWindow.showPanel(aEvent.state);
+  },
+  gotoPref: function(page) {
+    gPrefWindow.showPanel(page);
+    window.history.pushState(page, document.title);
+    gPrefWindow.updateCommands();
   },
 
   // =========================
@@ -28,7 +92,7 @@ var gPrefWindow = {
         aPref.updateElements();
       }
     } else {
-      aPref.value = (aPref.defaultValue === null)? undefined :aPref.defaultValue;
+      aPref.value = aPref.defaultValue;
       aPref.updateElements();
     }
   },

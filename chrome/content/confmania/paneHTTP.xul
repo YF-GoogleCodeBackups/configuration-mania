@@ -46,8 +46,10 @@
    -
    - ***** END LICENSE BLOCK ***** -->
 
-<overlay id="paneHTTPOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneHTTP" flex="1" onpaneload="gPrefWindow.prefHTTP.init();">
+<overlay id="paneHTTPOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneHTTP" flex="1">
 
 <script type="application/javascript;version=1.8" src="paneHTTP.js"></script>
 
@@ -73,6 +75,8 @@
   <preference id="network.http.accept.default" name="network.http.accept.default" type="string"/>
   <preference id="image.http.accept" name="image.http.accept" type="string"/>
 </preferences>
+
+<hbox class="heading"><html:h1 class="indent-small">&http.title;</html:h1></hbox>
 
 <hbox flex="1" orient="horizontal" id="paneHTTPBox">
 <radiogroup id="paneHTTPBoxTab" class="subtabs"

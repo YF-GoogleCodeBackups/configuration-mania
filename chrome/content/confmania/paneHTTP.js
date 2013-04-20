@@ -14,3 +14,5 @@ gPrefWindow.prefHTTP = {
     }
   }
 };
+
+document.getElementById("paneHTTP").addEventListener("paneload", gPrefWindow.prefHTTP.init, false);

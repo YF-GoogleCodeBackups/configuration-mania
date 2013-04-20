@@ -46,7 +46,7 @@
 <overlay id="paneSecurityOverlay"
  xmlns:html="http://www.w3.org/1999/xhtml"
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-<prefpane id="paneSecurity" flex="1" onpaneload="gPrefWindow.prefSecurity.init();">
+<prefpane id="paneSecurity" flex="1">
 
 <script type="application/javascript;version=1.8" src="paneSecurity.js"></script>
 
@@ -97,6 +97,7 @@
   <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
 </preferences>
 
+<hbox class="heading"><html:h1 class="indent-small">&security.title;</html:h1></hbox>
 
 <hbox flex="1" orient="horizontal" id="paneSecurityBox">
 <radiogroup id="paneSecurityBoxTab" class="subtabs"

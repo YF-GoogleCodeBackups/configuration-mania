@@ -245,7 +245,7 @@ gPrefWindow.prefBrowser = {
   onUserAgentPresetCommanded : function(event) {
     var mData = document.getElementById("ua-value");
     mData.value = event.target.value;
-    document.documentElement.currentPane.userChangedValue(mData);
+    gPrefWindow.getCurrentPrefPane().userChangedValue(mData);
   },
   resetUserAgent : function(){
     gPrefWindow.resetPref(document.getElementById("general.useragent.override"));
@@ -262,11 +262,11 @@ gPrefWindow.prefBrowser = {
 
     var mData = document.getElementById("speed-notify-interval");
     mData.value = paintDelay * 1000;
-    document.documentElement.currentPane.userChangedValue(mData);
+    gPrefWindow.getCurrentPrefPane().userChangedValue(mData);
 
     mData = document.getElementById("speed-max-tokenizing-time");
     mData.value = paintDelay * 500;
-    document.documentElement.currentPane.userChangedValue(mData);
+    gPrefWindow.getCurrentPrefPane().userChangedValue(mData);
   },
   _openBrowse: function(aFilter, aTargetID) {
     // Open File Dialog
@@ -285,7 +285,7 @@ gPrefWindow.prefBrowser = {
     if(fp.show() == nsIFilePicker.returnOK) {
       var targetElem = document.getElementById(aTargetID);
       targetElem.value = fp.file.path;
-      document.documentElement.currentPane.userChangedValue(targetElem);
+      gPrefWindow.getCurrentPrefPane().userChangedValue(targetElem);
     }
   },
   onWebGLOSMesaBrowse : function() {
@@ -312,7 +312,7 @@ gPrefWindow.prefBrowser = {
 
     if(fp.show() == nsIFilePicker.returnOK) {
       folderField.value = fp.file.path;
-      document.documentElement.currentPane.userChangedValue(folderField);
+      gPrefWindow.getCurrentPrefPane().userChangedValue(folderField);
     }
   },
   resetBrowserCacheDiskCacheFolder : function(){
@@ -320,3 +320,4 @@ gPrefWindow.prefBrowser = {
   }
 };
 
+document.getElementById("paneBrowser").addEventListener("paneload", gPrefWindow.prefBrowser.init, false);
