@@ -53,7 +53,6 @@
 <!ENTITY browser.html.plugins.click_to_play.label "Do not load the plugin content until you click on it">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.3d-transforms.label "Enable CSS 3D Transforms">
-<!ENTITY browser.html.enableSVGSMIL.label "Enable SMIL content">
 <!ENTITY browser.html.webgl.label "Enable WebGL (takes effect after restart)">
 <!ENTITY browser.html.webgl.software_render.label "Use software rendering (Firefox 4-17)">
 <!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib path :">
@@ -88,7 +87,7 @@
 <!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
 <!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "When closing a tab, Focus back to the tab that opened it">
 <!ENTITY browser.tabs.tabpreview.label "Enable thumbnail preview">
-<!ENTITY browser.tabs.tabpreview.alltabs.label "on the All tabs panel">
+<!ENTITY browser.tabs.tabpreview.alltabs.label "on the All tabs panel (up-to Firefox 21)">
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
 <!ENTITY browser.tabs.tabpreview.taskbar.label "on Taskbar (Windows7)">
 <!ENTITY browser.tabs.animation.label "Animation">
