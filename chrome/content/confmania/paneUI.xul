@@ -420,8 +420,8 @@
     <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
     <description class="indent">&ui.others.preference.instanceAccept.desc;</description>
     <checkbox label="&ui.others.preference.animateFadeIn.label;" preference="browser.preferences.animateFadeIn"/>
+    <checkbox label="&ui.others.preference.inContent.label;" preference="browser.preferences.inContent"/>
   </groupbox>
-  <checkbox label="&ui.others.preference.inContent.label;" preference="browser.preferences.inContent"/>
   <groupbox>
     <caption label="&ui.others.xwin.label;"/>
     <checkbox label="&ui.others.xwin.autocopy.label;" preference="clipboard.autocopy"/>
