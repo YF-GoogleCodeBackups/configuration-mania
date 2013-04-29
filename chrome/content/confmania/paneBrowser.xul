@@ -78,7 +78,6 @@
   <preference id="plugins.click_to_play" name="plugins.click_to_play" type="bool"/>
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
   <preference id="layout.3d-transforms.enabled" name="layout.3d-transforms.enabled" type="bool"/>
-  <preference id="svg.smil.enabled" name="svg.smil.enabled" type="bool"/>
   <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
   <preference id="webgl.force_osmesa" name="webgl.force_osmesa" type="bool"/>
   <preference id="webgl.osmesalib" name="webgl.osmesalib" type="string"/>
@@ -285,7 +284,6 @@
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.3d-transforms.label;" preference="layout.3d-transforms.enabled"/>
-  <checkbox label="&browser.html.enableSVGSMIL.label;" preference="svg.smil.enabled"/>
   <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.disabled"
             onsyncfrompreference="return gPrefWindow.prefBrowser.onWebGLSyncFrom()"/>
   <vbox id="html-webgl-vbox" class="indent">
