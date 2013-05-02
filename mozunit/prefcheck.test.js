@@ -54,12 +54,23 @@ tc.tests = {
   testPrefElemExistance: function() {
     let editElems = this.document.querySelectorAll("*[preference]");
 
-    Array.forEach(editElems, (function(v) {
-      let prefElem = this.document.getElementById(v.getAttribute("preference"));
-      if (!(prefElem instanceof XULElement) || (prefElem.tagName !== "preference")) {
-        assert.fail("\"" + v.id + "\" elem could not found.");
+    let isTemplateAction = function(v) {
+      for (let elem = v.parentNode; elem != null; elem = elem.parentNode) {
+        if ((elem instanceof XULElement) && (elem.tagName === "action")) {
+          return true;
+        }
       }
-      assert.equals(prefElem.name, v.getAttribute("preference"));
+      return false;
+    };
+
+    Array.forEach(editElems, (function(v) {
+      if (!isTemplateAction(v)) {
+        let prefElem = this.document.getElementById(v.getAttribute("preference"));
+        if (!(prefElem instanceof XULElement) || (prefElem.tagName !== "preference")) {
+          assert.fail("\"" + v.getAttribute("preference") + "\" elem could not found.");
+        }
+        assert.equals(prefElem.name, v.getAttribute("preference"));
+      }
     }).bind(this));
   },
 }

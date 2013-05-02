@@ -68,7 +68,6 @@
   <preference id="dom.disable_window_open_feature.location" name="dom.disable_window_open_feature.location" type="bool"/>
   <preference id="dom.disable_window_open_feature.status" name="dom.disable_window_open_feature.status" type="bool"/>
 
-  <preference id="privacy.popups.statusbar_icon_enabled" name="privacy.popups.statusbar_icon_enabled" type="bool"/>
   <preference id="privacy.popups.showBrowserMessage" name="privacy.popups.showBrowserMessage" type="bool"/>
   <preference id="browser.link.open_newwindow.restriction" name="browser.link.open_newwindow.restriction" type="int"/>
   <preference id="dom.popup_maximum" name="dom.popup_maximum" type="int"/>
@@ -86,8 +85,6 @@
   <preference id="network.IDN_show_punycode" name="network.IDN_show_punycode" type="bool"/>
 
   <preference id="signon.autofillForms" name="signon.autofillForms" type="bool"/>
-  <preference id="browser.history_expire_days" name="browser.history_expire_days" type="int"/>
-  <preference id="browser.history_expire_sites" name="browser.history_expire_sites" type="int"/>
   <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
   <preference id="network.cookie.lifetime.days" name="network.cookie.lifetime.days" type="int"/>
   <preference id="security.ask_for_password" name="security.ask_for_password" type="int"/>
@@ -259,7 +256,7 @@
           <!-- Components.interfaces.nsIPK11Token.ASK_EXPIRE_TIME == 1 -->
           <radio value="1" label="&security.privacy.passwd.managepassword.asktimeout;"
             oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
-          <textbox id="passwordTimeout" type="number" hidespinbuttons="true" size="4" label="security.password_lifetime"/>
+          <textbox id="passwordTimeout" type="number" hidespinbuttons="true" size="4" preference="security.password_lifetime"/>
           <label value="&security.privacy.passwd.managepassword.timeout.unit;"/>
         </hbox>
       </radiogroup>

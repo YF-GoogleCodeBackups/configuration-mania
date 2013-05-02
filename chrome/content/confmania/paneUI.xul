@@ -97,7 +97,7 @@
   <preference id="accessibility.warn_on_browsewithcaret" name="accessibility.warn_on_browsewithcaret" type="bool"/>
   <preference id="ui.key.accelKey" name="ui.key.accelKey" type="int"/>
   <preference id="ui.key.menuAccessKey" name="ui.key.menuAccessKey" type="int"/>
-  <preference id="accessibility.accesskeycausesactivation" type="bool"/>
+  <preference id="accessibility.accesskeycausesactivation" name="accessibility.accesskeycausesactivation" type="bool"/>
 
   <preference id="bidi.browser.ui" name="bidi.browser.ui" type="bool"/>
   <preference id="bidi.direction" name="bidi.direction" type="int"/>
