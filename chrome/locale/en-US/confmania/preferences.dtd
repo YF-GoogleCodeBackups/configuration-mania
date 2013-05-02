@@ -421,6 +421,7 @@
 <!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
+<!ENTITY debug.debug.extensionslogging.label "Show errors &amp; warnings about addon installation and update">
 <!ENTITY debug.devtools.label "Developer Tools">
 <!ENTITY debug.devtools.inspector_enabled.label "Enable Inspector">
 <!ENTITY debug.devtools.chrome_enabled.label "Enable to run JavaScript code in the chrome context of the Scratchpad.">
