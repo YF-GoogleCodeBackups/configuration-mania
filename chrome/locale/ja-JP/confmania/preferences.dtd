@@ -422,6 +422,7 @@
 <!ENTITY debug.debug.csserr.label "スタイルシートの解析エラーも表示する">
 <!ENTITY debug.devtools.label "開発ツール">
 <!ENTITY debug.devtools.inspector_enabled.label "インスペクタを有効にする">
+<!ENTITY debug.devtools.debugger_remote_enabled.label "Android Firefoxに対するリモートデバッグを有効にする">
 <!ENTITY debug.jit.label "JavaScriptのJITコンパイラ設定">
 <!ENTITY debug.jit.methodjit.label "JaegerMonkey">
 <!ENTITY debug.jit.content.label "ウェブページ">
