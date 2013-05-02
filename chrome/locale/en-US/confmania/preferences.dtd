@@ -117,6 +117,7 @@
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">
 <!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Pause but will not resume downloads automatically when &brandShortName; restarted">
 <!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
+<!ENTITY browser.download.nouseToolkitUI.label "Use download panel (Firefox 19+)">
 <!ENTITY browser.download.flashCount.label "On download completed, the downloads window blinks:">
 <!ENTITY browser.download.flashCount.never.label "Never.">
 <!ENTITY browser.download.flashCount.infinite.label "until the window is brought into foreground">

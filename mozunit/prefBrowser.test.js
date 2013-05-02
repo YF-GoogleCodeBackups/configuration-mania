@@ -184,6 +184,23 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnDownloadUseToolkitUISyncFrom: function() {
+    let checkbox = this.document.querySelector("checkbox[preference='browser.download.useToolkitUI']");
+    let label = this.document.querySelector("label[control='browserDLFlashCount-gr']");
+    let radiogroup = this.document.getElementById("browserDLFlashCount-gr");
+    let target = this.document.querySelector("textbox[preference='browser.download.manager.flashCount']")
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, label.disabled);
+      assert.equals(checkbox.checked, radiogroup.disabled);
+      for (let j = 0; j < radiogroup.itemCount; j++) {
+        assert.equals(checkbox.checked, radiogroup.getItemAtIndex(j).disabled);
+      }
+      assert.equals(checkbox.checked, target.disabled);
+
+      checkbox.click();
+    }
+  },
   testOnInterruptParseSyncFrom: function() {
     let checkbox = this.document.getElementById("speed-interrupt-parsing");
     let target = this.document.getElementById("speed-max-tokenizing-time");

@@ -125,6 +125,7 @@
   <preference id="browser.altClickSave" name="browser.altClickSave" type="bool" inverted="true"/>
   <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
   <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
+  <preference id="browser.download.useToolkitUI" name="browser.download.useToolkitUI" type="bool" inverted="true"/>
   <preference id="browser.download.manager.flashCount" name="browser.download.manager.flashCount" type="int"/>
   <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
 
@@ -443,9 +444,10 @@
     </radiogroup>
   </groupbox>
 
-  <groupbox>
-    <caption label="&browser.download.flashCount.label;"/>
-    <radiogroup id="browserDLFlashCount-gr">
+  <checkbox label="&browser.download.nouseToolkitUI.label;" preference="browser.download.useToolkitUI" onsyncfrompreference="return gPrefWindow.prefBrowser.onDownloadNouseToolkitUISyncFrom();"/>
+  <vbox class="indent">
+    <label value="&browser.download.flashCount.label;" control="browserDLFlashCount-gr"/>
+    <radiogroup class="indent" id="browserDLFlashCount-gr">
       <radio value="0" label="&browser.download.flashCount.never.label;"/>
       <radio value="-1" label="&browser.download.flashCount.infinite.label;"/>
       <hbox align="center">
@@ -457,7 +459,8 @@
         <label value="&browser.download.flashCount.finite.label2;"/>
       </hbox>
     </radiogroup>
-  </groupbox>
+  </vbox>
+
   <checkbox label="&browser.download.showAlertOnComplete.label;"
             preference="browser.download.manager.showAlertOnComplete"/>
 </box>
