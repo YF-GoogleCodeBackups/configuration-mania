@@ -53,6 +53,7 @@
   <preference name="javascript.options.strict" id="javascript.options.strict" type="bool"/>
   <preference name="javascript.options.showInConsole" id="javascript.options.showInConsole" type="bool"/>
   <preference name="layout.css.report_errors" id="layout.css.report_errors" type="bool"/>
+  <preference name="extensions.logging.enabled" id="extensions.logging.enabled" type="bool"/>
   <preference name="devtools.inspector.enabled" id="devtools.inspector.enabled" type="bool"/>
   <preference name="devtools.chrome.enabled" id="devtools.chrome.enabled" type="bool"/>
   <preference name="devtools.debugger.remote-enabled" id="devtools.debugger.remote-enabled" type="bool"/>
@@ -75,6 +76,8 @@
           preference="javascript.options.showInConsole"/>
 <checkbox label="&debug.debug.csserr.label;"
           preference="layout.css.report_errors"/>
+<checkbox label="&debug.debug.extensionslogging.label;"
+          preference="extensions.logging.enabled"/>
 </groupbox>
 
 <groupbox>
