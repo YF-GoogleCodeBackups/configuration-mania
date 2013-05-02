@@ -69,6 +69,10 @@ gPrefWindow.prefUI = {
   onBrowseWithCaretSyncFrom : function() {
     let disabled = ! document.getElementById("accessibility.browsewithcaret_shortcut.enabled").value;
     document.getElementById("accessibility.warn_on_browsewithcaret").disabled = disabled;
+  },
+  onLocaleMatchOSSyncFrom : function() {
+    let disabled = document.getElementById("intl.locale.matchOS").value;
+    document.getElementById("general.useragent.locale").disabled = disabled;
   }
 };
 
