@@ -423,6 +423,7 @@
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
 <!ENTITY debug.devtools.label "Developer Tools">
 <!ENTITY debug.devtools.inspector_enabled.label "Enable Inspector">
+<!ENTITY debug.devtools.chrome_enabled.label "Enable to run JavaScript code in the chrome context of the Scratchpad.">
 <!ENTITY debug.devtools.debugger_remote_enabled.label "Enable remote debugging for Android Firefox">
 <!ENTITY debug.jit.label "JavaScript JIT Compiler Setting">
 <!ENTITY debug.jit.methodjit.label "JaegerMonkey">
