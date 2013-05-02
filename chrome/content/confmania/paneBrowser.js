@@ -150,6 +150,13 @@ gPrefWindow.prefBrowser = {
     document.getElementById("browser.warnOnRestart").disabled = disabled;
     return undefined; // no override
   },
+  onDownloadNouseToolkitUISyncFrom : function() {
+    let disabled = document.getElementById("browser.download.useToolkitUI").value;
+    document.getElementById("browserDLFlashCount-gr").disabled = disabled;
+    document.querySelector("label[control='browserDLFlashCount-gr']").disabled = disabled;
+    document.getElementById("browser.download.manager.flashCount").disabled = disabled;
+    return undefined; // no override
+  },
   onInterruptParseSyncFrom : function() {
     let disabled = document.getElementById("content.interrupt.parsing").value;
     document.getElementById("content.max.tokenizing.time").disabled = disabled;
