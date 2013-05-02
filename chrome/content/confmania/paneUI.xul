@@ -107,6 +107,7 @@
   <preference id="layout.scrollbar.side" name="layout.scrollbar.side" type="int"/>
 
   <preference id="general.useragent.locale" name="general.useragent.locale" type="string"/>
+  <preference id="intl.locale.matchOS" name="intl.locale.matchOS" type="bool"/>
   <preference id="layout.spellcheckDefault" name="layout.spellcheckDefault" type="int"/>
   <preference id="layout.enable_japanese_specific_transform" name="layout.enable_japanese_specific_transform" type="bool"/>
 
@@ -381,11 +382,14 @@
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-i18n">
-  <hbox align="center">
-    <label value="&ui.i18n.locale.label;" control="contentLocale"/>
-    <textbox id="contentLocale" preference="general.useragent.locale" size="8"/>
-    <label value="&ui.i18n.locale.eg;"/>
-  </hbox>
+  <groupbox>
+    <hbox align="center">
+      <label value="&ui.i18n.locale.label;" control="contentLocale"/>
+      <textbox id="contentLocale" preference="general.useragent.locale" size="8"/>
+      <label value="&ui.i18n.locale.eg;"/>
+    </hbox>
+    <checkbox class="indent" label="&ui.i18n.locale.matchOS.label;" preference="intl.locale.matchOS" onsyncfrompreference="gPrefWindow.prefUI.onLocaleMatchOSSyncFrom(this)"/>
+  </groupbox>
 
   <groupbox>
     <caption label="&ui.i18n.spellcheckDefault.label;"/>

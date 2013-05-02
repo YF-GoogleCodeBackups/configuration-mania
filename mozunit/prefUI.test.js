@@ -134,4 +134,13 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnLocaleMatchOSSyncFrom: function() {
+    let checkbox = this.document.querySelector("checkbox[preference='intl.locale.matchOS']");
+    let target = this.document.querySelector("checkbox[preference='general.useragent.locale']");
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, target.disabled);
+      checkbox.click();
+    }
+  },
 }

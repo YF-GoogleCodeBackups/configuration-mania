@@ -379,6 +379,7 @@
 <!ENTITY ui.i18n.label "国際化">
 <!ENTITY ui.i18n.locale.label "アプリケーションのロケール(言語)">
 <!ENTITY ui.i18n.locale.eg "(例: ja, en-US, en-GB, ar)">
+<!ENTITY ui.i18n.locale.matchOS.label "OSのロケールを使う">
 <!ENTITY ui.i18n.spellcheckDefault.label "スペルチェッカーの設定">
 <!ENTITY ui.i18n.spellcheckDefault.disabled "スペルチェッカーを無効にする">
 <!ENTITY ui.i18n.spellcheckDefault.multiline "複数行のコントロール(例:textarea)に対して有効にする(標準)">

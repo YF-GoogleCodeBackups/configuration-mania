@@ -380,6 +380,7 @@
 <!ENTITY ui.i18n.label "i18n">
 <!ENTITY ui.i18n.locale.label "Application Locale">
 <!ENTITY ui.i18n.locale.eg "(e.g. en-US, en-GB, ja, ar)">
+<!ENTITY ui.i18n.locale.matchOS.label "Use the OS's locale">
 <!ENTITY ui.i18n.spellcheckDefault.label "Spellchecker Setting">
 <!ENTITY ui.i18n.spellcheckDefault.disabled "Disables spellchecker">
 <!ENTITY ui.i18n.spellcheckDefault.multiline "Enables spellchecker for multi-line controls (e.g. textarea) (Default)">
