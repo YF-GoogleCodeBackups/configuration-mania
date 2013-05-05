@@ -56,6 +56,7 @@ tc.tests = {
   // TEST ####################
   
   testOpenConfMania: function() {
+    let origICvalue = Services.prefs.getBoolPref("browser.preferences.inContent");
     let origIAvalue = Services.prefs.getBoolPref("browser.preferences.instantApply");
 
     let cmd = this.win.document.getElementById("ConfMania:Open");
@@ -66,8 +67,36 @@ tc.tests = {
     try {
       Services.ww.registerNotification(dialogObserver);
 
+      // inContent.
+      {
+        Services.prefs.setBoolPref("browser.preferences.inContent", true);
+        Services.prefs.setBoolPref("browser.preferences.instantApply", true);
+
+        let browserWin = Services.wm.getMostRecentWindow("navigator:browser");
+
+        cmd.click();
+        sleep(2000);
+
+        assert.equals(browserWin.getBrowser().currentURI.spec,
+                      "chrome://confmania/content/preferences_in_content.xul");
+
+        browserWin.getBrowser().removeCurrentTab();
+
+        Services.prefs.setBoolPref("browser.preferences.inContent", true);
+        Services.prefs.setBoolPref("browser.preferences.instantApply", false);
+
+        cmd.click();
+        sleep(2000);
+
+        assert.equals(browserWin.getBrowser().currentURI.spec,
+                      "chrome://confmania/content/preferences_in_content.xul");
+
+        browserWin.getBrowser().removeCurrentTab();
+      }
+
       // instantApply.
       {
+        Services.prefs.setBoolPref("browser.preferences.inContent", false);
         Services.prefs.setBoolPref("browser.preferences.instantApply", true);
 
         cmd.click();
@@ -83,6 +112,7 @@ tc.tests = {
       }
       // non-instantApply.
       {
+        Services.prefs.setBoolPref("browser.preferences.inContent", false);
         Services.prefs.setBoolPref("browser.preferences.instantApply", false);
 
         let confmaniaIsOpened = false;
@@ -101,12 +131,122 @@ tc.tests = {
     } finally {
       Services.ww.unregisterNotification(dialogObserver);
 
+      Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
       Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
     }
   },
 
-  testLoadAllPane: function() {
+  testLoadAllPaneInContent: function() {
     let origIAvalue = Services.prefs.getBoolPref("browser.preferences.instantApply");
+    let origICvalue = Services.prefs.getBoolPref("browser.preferences.inContent");
+
+    let cmd = this.win.document.getElementById("ConfMania:Open");
+    assert.isDefined(cmd);
+
+    try {
+      // in-content
+      {
+        Services.prefs.setBoolPref("browser.preferences.inContent", true);
+        Services.prefs.setBoolPref("browser.preferences.instantApply", true);
+
+        cmd.click();
+        sleep(2000);
+
+        let browserWin = Services.wm.getMostRecentWindow("navigator:browser");
+
+        assert.equals(browserWin.getBrowser().currentURI.spec,
+                      "chrome://confmania/content/preferences_in_content.xul");
+
+        let win = browserWin.getBrowser().contentWindow;
+
+        assert.isTrue(win.document.documentElement.instantApply);
+
+        let backbtn = win.document.getElementById("back-btn");
+        let forwardbtn = win.document.getElementById("forward-btn");
+        assert.isTrue(backbtn.disabled);
+        assert.isTrue(forwardbtn.disabled);
+
+        let landingButton = win.document.querySelectorAll("button.landingButton");
+        for each (let [i,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
+          let mainPane = win.document.getElementById("mainPrefPane");
+          let thePane = win.document.getElementById(v);
+
+          assert.isTrue(mainPane.selected);
+          assert.isFalse(thePane.selected);
+          assert.isFalse(mainPane.hidden);
+          assert.isTrue(thePane.hidden);
+
+          landingButton[i].click();
+          sleep(1000);
+          assert.isFalse(mainPane.selected);
+          assert.isTrue(thePane.selected);
+          assert.isTrue(mainPane.hidden);
+          assert.isFalse(thePane.hidden);
+
+          assert.isTrue(thePane.loaded);
+          assert.isTrue(thePane.childNodes.length > 0);
+
+          assert.isFalse(backbtn.disabled);
+          assert.isTrue(forwardbtn.disabled);
+
+          win.history.back();
+          sleep(100);
+          assert.isTrue(mainPane.selected);
+          assert.isFalse(thePane.selected);
+          assert.isFalse(mainPane.hidden);
+          assert.isTrue(thePane.hidden);
+
+          assert.isTrue(backbtn.disabled);
+          assert.isFalse(forwardbtn.disabled);
+
+          forwardbtn.click();
+          sleep(100);
+          assert.isFalse(mainPane.selected);
+          assert.isTrue(thePane.selected);
+          assert.isTrue(mainPane.hidden);
+          assert.isFalse(thePane.hidden);
+
+          assert.isFalse(backbtn.disabled);
+          assert.isTrue(forwardbtn.disabled);
+
+          backbtn.click();
+          sleep(100);
+
+          assert.isTrue(backbtn.disabled);
+          assert.isFalse(forwardbtn.disabled);
+        }
+
+        browserWin.getBrowser().removeCurrentTab();
+      }
+      // in-content
+      {
+        Services.prefs.setBoolPref("browser.preferences.inContent", true);
+        Services.prefs.setBoolPref("browser.preferences.instantApply", false);
+
+        cmd.click();
+        sleep(2000);
+
+        let browserWin = Services.wm.getMostRecentWindow("navigator:browser");
+
+        assert.equals(browserWin.getBrowser().currentURI.spec,
+                      "chrome://confmania/content/preferences_in_content.xul");
+
+        let win = browserWin.getBrowser().contentWindow;
+
+        assert.isTrue(win.document.documentElement.instantApply);
+
+        browserWin.getBrowser().removeCurrentTab();
+      }
+    } catch (e) {
+      throw e;
+    } finally {
+      Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
+      Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
+    }
+  },
+  testLoadAllPaneOnDialog: function() {
+    let origIAvalue = Services.prefs.getBoolPref("browser.preferences.instantApply");
+    let origICvalue = Services.prefs.getBoolPref("browser.preferences.inContent");
 
     let cmd = this.win.document.getElementById("ConfMania:Open");
     assert.isDefined(cmd);
@@ -118,6 +258,7 @@ tc.tests = {
 
       // instantApply.
       {
+        Services.prefs.setBoolPref("browser.preferences.inContent", false);
         Services.prefs.setBoolPref("browser.preferences.instantApply", true);
 
         cmd.click();
@@ -129,6 +270,8 @@ tc.tests = {
 
         assert.isTrue(prefWin.currentPane.loaded);
 
+        assert.isTrue(document.documentElement.instantApply);
+
         assert.equals(
           "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug",
           Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
@@ -136,7 +279,7 @@ tc.tests = {
 
         for each (let [k,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
           prefWin.showPane(document.getElementById(v));
-          sleep(2000);
+          sleep(1000);
           assert.equals(v, prefWin.currentPane.id);
           assert.isTrue(prefWin.currentPane.loaded);
 
@@ -147,6 +290,7 @@ tc.tests = {
       }
       // non-instantApply.
       {
+        Services.prefs.setBoolPref("browser.preferences.inContent", false);
         Services.prefs.setBoolPref("browser.preferences.instantApply", false);
 
         let exception = undefined;
@@ -157,6 +301,8 @@ tc.tests = {
 
             assert.isTrue(prefWin.currentPane.loaded);
 
+            assert.isFalse(document.documentElement.instantApply);
+
             assert.equals(
               "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug",
               Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
@@ -164,7 +310,7 @@ tc.tests = {
 
             for each (let [k,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
               prefWin.showPane(document.getElementById(v));
-              sleep(2000);
+              sleep(1000);
               assert.equals(v, prefWin.currentPane.id);
               assert.isTrue(prefWin.currentPane.loaded);
 
@@ -188,6 +334,7 @@ tc.tests = {
     } finally {
       Services.ww.unregisterNotification(dialogObserver);
 
+      Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
       Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
     }
   },
