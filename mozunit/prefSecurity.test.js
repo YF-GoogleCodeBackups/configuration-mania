@@ -94,12 +94,12 @@ tc.tests = {
     mData.value = origval;
     this.window.gPrefWindow.prefSecurity.syncFromPopupwin();
   },
-  testOnIDNSyncFrom: function() {
-    let checkbox = this.document.getElementById("enableIDN");
+  testOnDisableIDNSyncFrom: function() {
+    let checkbox = this.document.getElementById("disableIDN");
     let target = this.document.getElementById("showPunycode");
 
     for (let i = 0; i < 2; i++) {
-      assert.equals(checkbox.checked, !target.disabled);
+      assert.equals(checkbox.checked, target.disabled);
       checkbox.click();
     }
   },
