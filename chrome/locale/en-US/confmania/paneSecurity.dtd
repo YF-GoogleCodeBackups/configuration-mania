@@ -1,0 +1,88 @@
+<!ENTITY security.title "Security">
+<!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.annoy.label "More Advanced">
+<!ENTITY security.js.annoy.max_script_run_time.label "The browser warns when a script is running over">
+<!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable Closing non-popup windows">
+<!ENTITY security.js.annoy.window_flip "Disable Requesting/Removing window focus">
+<!ENTITY security.js.annoy.window_move_resize "Disable Moving/Resizing existing windows">
+<!ENTITY security.js.annoy.status_change "Disable Changing statusbar">
+<!ENTITY security.js.annoy.change_image "Disable Changing images">
+<!ENTITY security.js.annoy.change_image.desc "Caution: The setting &quot;&security.js.annoy.change_image;&quot; cause some web applications (such as Google Map) not to work.">
+<!ENTITY security.js.annoy.contextmenu "Disallow to dispatch contextmenu events">
+<!ENTITY security.js.annoy.dispatchLeftClickOnly "Allow to dispatch left click only">
+<!ENTITY security.js.uis.label "UI-Spoofing">
+<!ENTITY security.js.uis.desc1 "Disable hiding (and Enable) when opened by JavaScript :">
+<!ENTITY security.js.uis.desc2 "Checking all items prevent browser UI-spoofing attacks.">
+<!ENTITY security.js.uis.menubar "Menubar">
+<!ENTITY security.js.uis.resizable "Resizable">
+<!ENTITY security.js.uis.scrollbars "Scroll bars">
+<!ENTITY security.js.uis.toolbar "Tool bar">
+<!ENTITY security.js.uis.locationbar "Location bar">
+<!ENTITY security.js.uis.status "Status bar">
+<!ENTITY security.popupwin.label "Popup Win.">
+<!ENTITY security.popupwin.onblock.label "When block popup windows:">
+<!ENTITY security.popupwin.onblock.displayNotification.label "Display a notification bar at the top of the content area">
+<!ENTITY security.popupwin.tabs.label "On opening Popup Windows (window.open) on the Tabbed Browsing:">
+<!ENTITY security.popupwin.tabs.0.label "Same as the link's setting">
+<!ENTITY security.popupwin.tabs.1.label "Open new window">
+<!ENTITY security.popupwin.tabs.2.label "Same as the link's setting, but open window if specified how to be displayed (Default)">
+<!ENTITY security.popupwin.popup_maximum.label "Max number of popup windows">
+<!ENTITY security.popupwin.from_plugins.label "Restrictions on plugin-initiated popup windows:">
+<!ENTITY security.popupwin.from_plugins.0.label "No restrictions">
+<!ENTITY security.popupwin.from_plugins.1.label "Limit the numbers to &quot;&security.popupwin.popup_maximum.label;&quot;">
+<!ENTITY security.popupwin.from_plugins.2.label "Block all except whitelisted">
+<!ENTITY security.popupwin.from_plugins.3.label "Block all even those on whitelisted">
+<!ENTITY security.popupwin.event.label "Allow to open when:">
+<!ENTITY security.popupwin.event.reset.label "Reset form">
+<!ENTITY security.popupwin.event.submit.label "Submit form">
+<!ENTITY security.popupwin.event.select.label "Selected a form">
+<!ENTITY security.popupwin.event.change.label "Changed a text">
+<!ENTITY security.popupwin.event.resize.label "Resized windows">
+<!ENTITY security.popupwin.event.input.label "Input">
+<!ENTITY security.popupwin.event.keypress.label "Pressed Key">
+<!ENTITY security.popupwin.event.keydown.label "Key Down">
+<!ENTITY security.popupwin.event.keyup.label "Key Up">
+<!ENTITY security.popupwin.event.mouseup.label "Mouse Up">
+<!ENTITY security.popupwin.event.mousedown.label "Mouse Down">
+<!ENTITY security.popupwin.event.click.label "Clicked">
+<!ENTITY security.popupwin.event.dblclick.label "Double Clicked">
+<!ENTITY security.antivirus.label "Anti-Virus">
+<!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
+<!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+/Vista/7, this value also indicates whether downloaded files trigger a security warning upon launch.">
+<!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE file.">
+<!ENTITY security.ssl.label "SSL">
+<!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ...">
+<!ENTITY security.ssl.ssl_domain_display.none.label "favicon only">
+<!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD (effective top-level domain) along with the second-level domain (e.g. mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.full.label "the full domain (e.g. addons.mozilla.org)">
+<!ENTITY security.ssl.ssl_domain_display.desc "When the site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to.">
+<!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed">
+<!ENTITY security.ssl.ssl_override_behavior.dont.label "Do Not pre-populate the current URL as an exception and Do Not pre-fetch the SSL certificate.">
+<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate.">
+<!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Pre-populate the current URL and pre-fetch the certificate.">
+<!ENTITY security.net.label "Network">
+<!ENTITY security.net.redirection-limit.label "Max number of HTTP redirections to follow:">
+<!ENTITY security.net.enableIDN.label "Enable IDN (Internationalized Domain Names)">
+<!ENTITY security.net.show_punycode.label "Show IDN in punycode">
+<!ENTITY security.net.show_punycode.desc "There is no need to show IDN in punycode. Current &brandShortName; refuses illegal IDN addresses by using the black/white list.">
+<!ENTITY security.privacy.label "Privacy">
+<!ENTITY security.privacy.form.label "Form">
+<!ENTITY security.privacy.form.autofillForms.label "Automatically fill sign-in forms">
+<!ENTITY security.privacy.history.label "History">
+<!ENTITY security.privacy.history.cookie.label "Cookie">
+<!ENTITY security.privacy.history.cookie.lifetimedays.label "Accept cookies for">
+<!ENTITY security.privacy.passwd.label "Master Password">
+<!ENTITY security.privacy.passwd.managepassword.label "Master Password Timeout">
+<!ENTITY security.privacy.passwd.managepassword.text "&brandShortName; will ask for your master password:">
+<!ENTITY security.privacy.passwd.managepassword.askfirsttime "The first time it is needed">
+<!ENTITY security.privacy.passwd.managepassword.askeverytime "Every time it is needed">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout "If it has not been used for">
+<!ENTITY security.privacy.passwd.managepassword.timeout.unit "minutes or longer">
+<!ENTITY security.privacy.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
+<!ENTITY security.referer.label "Referrer">
+<!ENTITY security.referer.none.label "Never Send (Not recommended)">
+<!ENTITY security.referer.none.desc "WARNING: Some site may require the Referrer header. In that case, Select &quot;&security.referer.link.label;&quot; or &quot;&security.referer.all.label;&quot;.">
+<!ENTITY security.referer.link.label "Send only on clicks">
+<!ENTITY security.referer.all.label "Send on image requests as well">
+<!ENTITY security.referer.secureXSite.label "Send the Referrer header when navigating from a https site to another https site">
+<!ENTITY security.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https site to a non-secure site.">

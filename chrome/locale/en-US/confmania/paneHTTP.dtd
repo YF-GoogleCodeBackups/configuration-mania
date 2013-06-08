@@ -1,0 +1,32 @@
+<!ENTITY http.title "HTTP Network">
+<!ENTITY http.connect.label "Connection">
+<!ENTITY http.connect.desc "HTTP connections may be fine-tuned using these options to enhance either performance or compatibility. Some proxy servers, for example, are known to require HTTP/1.0.">
+<!ENTITY http.connect.direct.label "Direct Connection Options">
+<!ENTITY http.connect.proxy.label "Proxy Connection Options">
+<!ENTITY http.connect.HTTP10.label "Use HTTP 1.0">
+<!ENTITY http.connect.HTTP11.label "Use HTTP 1.1">
+<!ENTITY http.connect.pipeline.label "Enable Pipelining">
+<!ENTITY http.connect.pipeline.desc "WARNING: pipelining is an experimental feature, designed to improve page-load performance, that is unfortunately not well supported by some web servers and proxies.">
+<!ENTITY http.connect.HTTP10.accesskey "U">
+<!ENTITY http.connect.HTTP10Proxy.accesskey "S">
+<!ENTITY http.connect.HTTP11.accesskey "E">
+<!ENTITY http.connect.HTTP11Proxy.accesskey "T">
+<!ENTITY http.connect.pipeline.accesskey "P">
+<!ENTITY http.connect.pipelineProxy.accesskey "N">
+<!ENTITY http.connect.pipelineSSL.label "Enable Pipelining for HTTPS">
+<!ENTITY http.connect.pipelineSSL.accesskey "L">
+<!ENTITY http.connect.spdy.label "Enable SPDY Protocol">
+<!ENTITY http.connect.spdy.accesskey "D">
+<!ENTITY http.maxconn.label "Max Connections">
+<!ENTITY http.maxconn.maxpipeliningrequest.label "Max pipelining Request">
+<!ENTITY http.maxconn.maxconnections.label "Max Connections (Total)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "Max Persistent Connections (per Server)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "Max Persistent Connections (via Proxy)">
+<!ENTITY http.timeout.label "Timeout">
+<!ENTITY http.timeout.connection-retry.label "Connection retry">
+<!ENTITY http.timeout.keep-alive.label "Keep-Alive">
+<!ENTITY http.timeout.spdy.label "SPDY">
+<!ENTITY http.header.label "Header">
+<!ENTITY http.header.encoding.label "Accept-Encoding">
+<!ENTITY http.header.accept.label "Accept (for Content)">
+<!ENTITY http.header.accept-image.label "Accept (for Image)">

@@ -1,0 +1,14 @@
+<!ENTITY debug.title "デバッグ">
+<!ENTITY debug.debug.label "デバッグ作業用">
+<!ENTITY debug.debug.dump.label "JavaScript の dump() 出力を有効にする">
+<!ENTITY debug.debug.jsstrict.label "JavaScript の厳密なエラーを出力する">
+<!ENTITY debug.debug.chromeerr.label "クロム (chrome) の JavaScript エラー/警告も表示する">
+<!ENTITY debug.debug.csserr.label "スタイルシートの解析エラーも表示する">
+<!ENTITY debug.debug.extensionslogging.label "アドオンのインストール・更新時のエラー/警告を表示する">
+<!ENTITY debug.devtools.label "開発ツール">
+<!ENTITY debug.devtools.chrome_enabled.label "スクラッチパッドでクロムコンテクストでJavaScriptコードの実行を有効にする">
+<!ENTITY debug.devtools.debugger_remote_enabled.label "Android Firefoxに対するリモートデバッグを有効にする">
+<!ENTITY debug.cache.label "キャッシュ">
+<!ENTITY debug.cache.disableXULCache.label "XUL キャッシュを無効にする">
+<!ENTITY debug.cache.diskCacheDisable.label "ディスクキャッシュを無効にする">
+<!ENTITY debug.cache.memoryCacheDisable.label "メモリーキャッシュを無効にする">
