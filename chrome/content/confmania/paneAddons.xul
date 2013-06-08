@@ -41,6 +41,8 @@
 %brandDTD;
 <!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
 %preferencesDTD;
+<!ENTITY % paneAddonsDTD SYSTEM "chrome://confmania/locale/paneAddons.dtd">
+%paneAddonsDTD;
 ]>
 
 <overlay id="paneDebugOverlay"

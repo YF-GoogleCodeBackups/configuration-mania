@@ -1,0 +1,32 @@
+<!ENTITY http.title "HTTP ネットワーク">
+<!ENTITY http.connect.label "接続">
+<!ENTITY http.connect.desc "HTTP 接続はこれらの設定を使ってパフォーマンスや互換性を増すように調整されています。いくつかのプロキシサーバは、例えば HTTP/1.0 を要求することが知られています。">
+<!ENTITY http.connect.direct.label "直接接続の設定">
+<!ENTITY http.connect.proxy.label "プロキシ接続の設定">
+<!ENTITY http.connect.HTTP10.label "HTTP 1.0 を使う">
+<!ENTITY http.connect.HTTP11.label "HTTP 1.1 を使う">
+<!ENTITY http.connect.pipeline.label "パイプラインを有効にする">
+<!ENTITY http.connect.pipeline.desc "警告: パイプラインは、まだ実験的な機能です。この機能を利用するとページの読み込み速度が向上しますが、一部のウェブ サーバやプロキシではそれら自身の不具合によって速度が落ちたり、まったく接続できなくなったりします。">
+<!ENTITY http.connect.HTTP10.accesskey "U">
+<!ENTITY http.connect.HTTP10Proxy.accesskey "S">
+<!ENTITY http.connect.HTTP11.accesskey "E">
+<!ENTITY http.connect.HTTP11Proxy.accesskey "T">
+<!ENTITY http.connect.pipeline.accesskey "P">
+<!ENTITY http.connect.pipelineProxy.accesskey "N">
+<!ENTITY http.connect.pipelineSSL.label "HTTPSに対してパイプラインを有効にする">
+<!ENTITY http.connect.pipelineSSL.accesskey "L">
+<!ENTITY http.connect.spdy.label "SPDYプロトコルを有効にする">
+<!ENTITY http.connect.spdy.accesskey "D">
+<!ENTITY http.maxconn.label "最大接続数">
+<!ENTITY http.maxconn.maxpipeliningrequest.label "最大パイプライン要求数">
+<!ENTITY http.maxconn.maxconnections.label "最大接続数 (延べ)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "最大持続接続数 (サーバ当たり)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "最大持続接続数 (プロキシ経由)">
+<!ENTITY http.timeout.label "タイムアウト">
+<!ENTITY http.timeout.connection-retry.label "接続の試行">
+<!ENTITY http.timeout.keep-alive.label "接続の持続 (Keep-Alive)">
+<!ENTITY http.timeout.spdy.label "SPDY">
+<!ENTITY http.header.label "ヘッダ">
+<!ENTITY http.header.encoding.label "Accept-Encoding">
+<!ENTITY http.header.accept.label "Accept (コンテンツ)">
+<!ENTITY http.header.accept-image.label "Accept (画像)">

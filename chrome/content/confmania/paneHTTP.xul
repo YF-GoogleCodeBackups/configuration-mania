@@ -1,12 +1,5 @@
 <?xml version="1.0"?>
 
-<!DOCTYPE overlay [
-<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
-%brandDTD;
-<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
-%preferencesDTD;
-]>
-
 <!-- ***** BEGIN LICENSE BLOCK *****
    - Version: MPL 1.1/GPL 2.0/LGPL 2.1
    -
@@ -45,6 +38,15 @@
    - the terms of any one of the MPL, the GPL or the LGPL.
    -
    - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY % paneHTTPDTD SYSTEM "chrome://confmania/locale/paneHTTP.dtd">
+%paneHTTPDTD;
+]>
 
 <overlay id="paneHTTPOverlay"
  xmlns:html="http://www.w3.org/1999/xhtml"

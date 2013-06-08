@@ -41,6 +41,8 @@
 %brandDTD;
 <!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
 %preferencesDTD;
+<!ENTITY % paneBrowserDTD SYSTEM "chrome://confmania/locale/paneBrowser.dtd">
+%paneBrowserDTD;
 ]>
 
 <overlay id="paneBrowserOverlay"

@@ -6,6 +6,19 @@
 <!DOCTYPE prefwindow [
 <!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
 %preferencesDTD;
+<!ENTITY % paneBrowserDTD SYSTEM "chrome://confmania/locale/paneBrowser.dtd">
+%paneBrowserDTD;
+<!ENTITY % paneSecurityDTD SYSTEM "chrome://confmania/locale/paneSecurity.dtd">
+%paneSecurityDTD;
+<!ENTITY % paneHTTPDTD SYSTEM "chrome://confmania/locale/paneHTTP.dtd">
+%paneHTTPDTD;
+<!ENTITY % paneUIDTD SYSTEM "chrome://confmania/locale/paneUI.dtd">
+%paneUIDTD;
+<!ENTITY % paneAddonsDTD SYSTEM "chrome://confmania/locale/paneAddons.dtd">
+%paneAddonsDTD;
+<!ENTITY % paneDebugDTD SYSTEM "chrome://confmania/locale/paneDebug.dtd">
+%paneDebugDTD;
+
 <!ENTITY cm "chrome://confmania/content">
 ]>
 <prefwindow type="prefwindow" id="ConfmaniaPreferences"
