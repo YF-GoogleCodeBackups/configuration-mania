@@ -26,6 +26,10 @@
 <!ENTITY browser.html.enableFrame.label "フレームを有効にする">
 <!ENTITY browser.html.frameForceResizability.label "フレームを強制的にサイズ変更できるようにする">
 <!ENTITY browser.html.img "画像">
+<!ENTITY browser.html.img.loadImages.label "画像を自動的に読み込む">
+<!ENTITY browser.html.img.loadImagesExceptions.label "例外サイト...">
+<!ENTITY browser.html.img.loadImagesExceptions.title "例外サイト - 画像の読み込み">
+<!ENTITY browser.html.img.loadImagesExceptions.desc "画像の読み込みを許可するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
 <!ENTITY browser.html.img.anim.label "アニメーション画像の繰り返し:">
 <!ENTITY browser.html.img.anim.normal.label "画像が指定している回数">
 <!ENTITY browser.html.img.anim.once.label "一回だけ">

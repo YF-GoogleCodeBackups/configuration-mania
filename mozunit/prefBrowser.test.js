@@ -116,6 +116,29 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnHTMLLoadImageSyncFrom: function() {
+    let pref = this.document.getElementById("permissions.default.image");
+    let origval = pref.value;
+
+    pref.value = 0;  assert.equals(false, this.window.gPrefWindow.prefBrowser.onHTMLLoadImageSyncFrom());
+    pref.value = 1;  assert.equals(true,  this.window.gPrefWindow.prefBrowser.onHTMLLoadImageSyncFrom());
+    pref.value = 2;  assert.equals(false, this.window.gPrefWindow.prefBrowser.onHTMLLoadImageSyncFrom());
+    pref.value = 3;  assert.equals(true,  this.window.gPrefWindow.prefBrowser.onHTMLLoadImageSyncFrom());
+
+    pref.value = origval;
+  },
+  testOnHTMLLoadImageSyncTo: function() {
+    let pref = this.document.getElementById("permissions.default.image");
+    let origval = pref.value;
+    let checkbox = this.document.getElementById("html-loadImages");
+
+    for (let i = 0; i < 2; i++) {
+      checkbox.click();
+      assert.equals((checkbox.checked)? 1 : 2, pref.value);
+    }
+
+    pref.value = origval;
+  },
   testOnWebGLSyncFrom: function() {
     let checkbox = this.document.getElementById("html-webglEnabled");
     let target = this.document.getElementById("html-webgl-software-render");
