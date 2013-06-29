@@ -1,5 +1,6 @@
 <!ENTITY security.title "Security">
 <!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.enableJavaScript.label "Enable JavaScript">
 <!ENTITY security.js.annoy.label "More Advanced">
 <!ENTITY security.js.annoy.max_script_run_time.label "The browser warns when a script is running over">
 <!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable Closing non-popup windows">
