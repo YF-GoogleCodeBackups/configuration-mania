@@ -112,6 +112,27 @@ gPrefWindow.prefBrowser = {
     document.getElementById("layout.frames.force_resizability").disabled = disabled;
     return undefined; // no override
   },
+  onHTMLLoadImageSyncFrom : function() {
+    let pref = document.getElementById("permissions.default.image");
+    return (pref.value == 1 || pref.value == 3);
+  },
+  onHTMLLoadImageSyncTo : function() {
+    return (document.getElementById("html-loadImages").checked) ? 1 : 2;
+  },
+  onHTMLShowImageExceptionsCommand : function() {
+    let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "image" };
+    params.windowTitle = document.getElementById("html-showImageExceptions").getAttribute("data-dialog-title");
+    params.introText   = document.getElementById("html-showImageExceptions").getAttribute("data-dialog-desc");
+
+    if (openDialog) { // in-Content
+      openDialog("chrome://browser/content/preferences/permissions.xul", 
+                 "Browser:Permissions", "resizable=yes", params);
+    } else if (document.documentElement.openWindow) {
+      document.documentElement.openWindow("Browser:Permissions",
+                                          "chrome://browser/content/preferences/permissions.xul",
+                                          "", params);
+    }
+  },
   onWebGLSyncFrom : function() {
     let disabled = ! document.getElementById("webgl.disabled").value;
     document.getElementById("webgl.force_osmesa").disabled = disabled;

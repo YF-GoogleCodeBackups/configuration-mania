@@ -72,6 +72,7 @@
   <preference id="browser.blink_allowed" name="browser.blink_allowed" type="bool"/>
   <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool"/>
   <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
+  <preference id="permissions.default.image" name="permissions.default.image" type="int"/>
   <preference id="image.animation_mode" name="image.animation_mode" type="string"/>
   <preference id="browser.enable_automatic_image_resizing" name="browser.enable_automatic_image_resizing" type="bool"/>
   <preference id="browser.display.show_image_placeholders" name="browser.display.show_image_placeholders" type="bool"/>
@@ -255,6 +256,20 @@
    class="indent" preference="layout.frames.force_resizability"/>
   <groupbox>
     <caption label="&browser.html.img;"/>
+
+    <hbox>
+      <checkbox id="html-loadImages"
+                flex="1"
+                label="&browser.html.img.loadImages.label;"
+                preference="permissions.default.image"
+                onsyncfrompreference="return gPrefWindow.prefBrowser.onHTMLLoadImageSyncFrom();"
+                onsynctopreference="return gPrefWindow.prefBrowser.onHTMLLoadImageSyncTo();"/>
+      <button label="&browser.html.img.loadImagesExceptions.label;"
+              id="html-showImageExceptions"
+              data-dialog-title="&browser.html.img.loadImagesExceptions.title;"
+              data-dialog-desc="&browser.html.img.loadImagesExceptions.desc;"
+              oncommand="gPrefWindow.prefBrowser.onHTMLShowImageExceptionsCommand();"/>
+    </hbox>
     <groupbox>
       <caption label="&browser.html.img.anim.label;"/>
       <radiogroup preference="image.animation_mode">

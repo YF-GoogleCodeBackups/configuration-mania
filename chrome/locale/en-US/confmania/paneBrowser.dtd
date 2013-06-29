@@ -26,6 +26,10 @@
 <!ENTITY browser.html.enableFrame.label "Enable frames">
 <!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
 <!ENTITY browser.html.img "Image">
+<!ENTITY browser.html.img.loadImages.label "Block images automatically">
+<!ENTITY browser.html.img.loadImagesExceptions.label "Exceptions">
+<!ENTITY browser.html.img.loadImagesExceptions.title "Exceptions - Images">
+<!ENTITY browser.html.img.loadImagesExceptions.desc "You can specify which websites are allowed to load images. Type the exact address of the site you want to manage and then click Block or Allow.">
 <!ENTITY browser.html.img.anim.label "Animated images should loop">
 <!ENTITY browser.html.img.anim.normal.label "As many times as the image specifies">
 <!ENTITY browser.html.img.anim.once.label "Once">
