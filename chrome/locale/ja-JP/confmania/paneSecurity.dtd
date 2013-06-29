@@ -1,5 +1,6 @@
 <!ENTITY security.title "セキュリティ">
 <!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.enableJavaScript.label "JavaScript を有効にする">
 <!ENTITY security.js.annoy.label "詳細設定">
 <!ENTITY security.js.annoy.max_script_run_time.label "警告するスクリプト実行時間">
 <!ENTITY security.js.annoy.disable_scripts_to_close_windows "スクリプトからポップアップウィンドウを閉じれなくする">

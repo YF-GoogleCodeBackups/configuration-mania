@@ -53,6 +53,7 @@
 <script type="application/javascript;version=1.8" src="paneSecurity.js"></script>
 
 <preferences>
+  <preference id="javascript.enabled" name="javascript.enabled" type="bool"/>
   <preference id="dom.max_script_run_time" name="dom.max_script_run_time" type="int"/>
   <preference id="dom.allow_scripts_to_close_windows" name="dom.allow_scripts_to_close_windows" type="bool" inverted="true"/>
   <preference id="dom.disable_window_flip" name="dom.disable_window_flip" type="bool"/>
@@ -113,6 +114,8 @@
 <splitter/>
 <deck id="paneSecurityBoxContainer" flex="4">
 <box class="subtabpanel" orient="vertical" id="security-pane-js">
+  <checkbox preference="javascript.enabled"
+            label="&security.js.enableJavaScript.label;"/>
   <groupbox>
     <caption label="&security.js.annoy.label;"/>
 
