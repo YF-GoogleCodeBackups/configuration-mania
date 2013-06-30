@@ -67,6 +67,8 @@
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
+<!ENTITY browser.tabs.tabBarLocation.label "Tab bar location">
+<!ENTITY browser.tabs.tabBarLocation.topTab.label "Tabs on Top">
 <!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
 <!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
 <!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">

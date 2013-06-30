@@ -67,6 +67,8 @@
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
+<!ENTITY browser.tabs.tabBarLocation.label "タブバーの位置">
+<!ENTITY browser.tabs.tabBarLocation.topTab.label "タブを上部に表示">
 <!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所">
 <!ENTITY browser.tabs.closeButtons.active.label "アクティブなタブのみ表示">
 <!ENTITY browser.tabs.closeButtons.all.label "全てのタブに表示 (標準)">
