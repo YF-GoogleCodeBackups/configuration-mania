@@ -18,3 +18,7 @@ $(EXTENSIONNAME).xpi:
 		-x@exclude.lst
 #		components \
 	chmod 0644 $(EXTENSIONNAME).xpi
+
+# Joke
+love:
+	@echo "`basename $(MAKE)`: Don't know how to make love. Stop."
