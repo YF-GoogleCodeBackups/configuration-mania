@@ -94,6 +94,91 @@ tc.tests = {
     mData.value = origval;
     this.window.gPrefWindow.prefSecurity.syncFromPopupwin();
   },
+  testOnSSLProtocolVersionsSyncFrom: function() {
+    let mData = [this.document.getElementById("security.tls.version.min"),
+                 this.document.getElementById("security.tls.version.max")];
+    let origval = Array.map(mData, function (v) { return v.value; });
+    let target = [this.document.getElementById("allowSSL30"),
+                  this.document.getElementById("allowTLS10"),
+                  this.document.getElementById("allowTLS11"),
+                  this.document.getElementById("allowTLS12")];
+
+    let applyValues = (function() {
+      for (let i = 0; i < mData.length; i++) {
+        mData[i].value = arguments[i];
+      }
+      this.window.gPrefWindow.prefSecurity.__UpdateSslBoxes();      
+    }).bind(this);
+
+    const TESTCASE = [
+      { min: 0, max: 0, expected: "-..." },
+      { min: 0, max: 1, expected: "xx.." },
+      { min: 0, max: 2, expected: "x-x." },
+      { min: 0, max: 3, expected: "x--x" },
+      { min: 1, max: 1, expected: ".-.." },
+      { min: 1, max: 2, expected: ".xx." },
+      { min: 1, max: 3, expected: ".x-x" },
+      { min: 2, max: 2, expected: "..-." },
+      { min: 2, max: 3, expected: "..xx" },
+      { min: 3, max: 3, expected: "...-" },
+    ];
+    for (let tc_id = 0; tc_id < TESTCASE.length; tc_id++) {
+      let tc = TESTCASE[tc_id];
+      applyValues(tc.min, tc.max);
+
+      let result = "";
+      for (let i = 0; i < target.length; i++) {
+        let val = " ";
+        if (!target[i].checked && !target[i].disabled) {
+          result += ".";
+        } else if (target[i].checked && !target[i].disabled) {
+          result += "x";
+        } else if (target[i].checked && target[i].disabled && (target[i].getAttribute("nogray") == "true")) {
+          result += "-";
+        } else {
+          result += "E";
+        }
+      }
+
+      if (result !== tc.expected) {
+        assert.fail("TC " + JSON.stringify(tc) + " : [" + tc.expected + "] is expected but actual is [" + result + "].");
+      }
+    }
+
+    applyValues.apply(this, origval);
+  },
+  testOnSSLProtocolVersionsSyncTo: function() {
+    let mData = [this.document.getElementById("security.tls.version.min"),
+                 this.document.getElementById("security.tls.version.max")];
+    let origval = Array.map(mData, function (v) { return v.value; });
+    let target = [this.document.getElementById("allowSSL30"),
+                  this.document.getElementById("allowTLS10"),
+                  this.document.getElementById("allowTLS11"),
+                  this.document.getElementById("allowTLS12")];
+
+    for (let min = 0; min < target.length; min++) {
+      for (let max = min; max < target.length; max++) {
+        for (let i = 0; i < target.length; i++) {
+          target[i].checked = false;
+          target[i].disabled = false;
+        }
+        target[min].click();
+        target[max].click();
+
+        if ((mData[0].value !== min) || (mData[1].value !== max)) {
+          assert.fail("TC " + JSON.stringify({min: min, max: max}) + ": " +
+                      JSON.stringify([min, max]) + " is expected but actual is " +
+                      JSON.stringify([mData[0].value, mData[1].value]) + ".");
+        }
+      }
+    }
+
+
+    for (let i = 0; i < mData.length; i++) {
+      mData[i].value = origval[i];
+    }
+    this.window.gPrefWindow.prefSecurity.__UpdateSslBoxes();      
+  },
   testOnDisableIDNSyncFrom: function() {
     let checkbox = this.document.getElementById("disableIDN");
     let target = this.document.getElementById("showPunycode");
