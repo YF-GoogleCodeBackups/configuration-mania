@@ -190,6 +190,8 @@
     <listitem type="checkbox" value="mousedown" label="&security.popupwin.event.mousedown.label;"/>
     <listitem type="checkbox" value="click" label="&security.popupwin.event.click.label;"/>
     <listitem type="checkbox" value="dblclick" label="&security.popupwin.event.dblclick.label;"/>
+    <listitem type="checkbox" value="touchstart" label="&security.popupwin.event.touchstart.label;"/>
+    <listitem type="checkbox" value="touchend" label="&security.popupwin.event.touchend.label;"/>
   </listbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="security-pane-antivirus">

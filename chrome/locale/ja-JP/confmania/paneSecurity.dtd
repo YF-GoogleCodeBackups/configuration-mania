@@ -47,6 +47,8 @@
 <!ENTITY security.popupwin.event.mousedown.label "マウスボタンを押下">
 <!ENTITY security.popupwin.event.click.label "クリック">
 <!ENTITY security.popupwin.event.dblclick.label "ダブルクリック">
+<!ENTITY security.popupwin.event.touchstart.label "タッチ開始">
+<!ENTITY security.popupwin.event.touchend.label "タッチ終了">
 <!ENTITY security.antivirus.label "ウイルス対策">
 <!ENTITY security.antivirus.scanWhenDone.label "ダウンロード完了時にウイルススキャンを実行する">
 <!ENTITY security.antivirus.scanWhenDone.desc "Windows XP SP2+/Vista/7 では、この値は、ダウンロードされたファイルを開く場合にセキュリティの警告を表示するかにも反映します">
