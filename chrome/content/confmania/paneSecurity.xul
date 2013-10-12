@@ -80,6 +80,10 @@
   <preference id="browser.download.manager.scanWhenDone" name="browser.download.manager.scanWhenDone" type="bool"/>
   <preference id="browser.download.manager.alertOnEXEOpen" name="browser.download.manager.alertOnEXEOpen" type="bool"/>
 
+  <preference id="security.tls.version.min" name="security.tls.version.min" type="int"/>
+  <preference id="security.tls.version.max" name="security.tls.version.max" type="int"/>
+  <preference id="security.mixed_content.block_active_content" name="security.mixed_content.block_active_content" type="bool"/>
+  <preference id="security.mixed_content.block_display_content" name="security.mixed_content.block_display_content" type="bool"/>
   <preference id="browser.ssl_override_behavior" name="browser.ssl_override_behavior" type="int"/>
 
   <preference id="network.http.redirection-limit" name="network.http.redirection-limit" type="int"/>
@@ -202,6 +206,45 @@
    preference="browser.download.manager.alertOnEXEOpen"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="security-pane-ssl">
+  <groupbox align="start">
+    <caption label="&security.ssl.SSLProtocolVersions.caption;"/>
+    <description>&security.ssl.limit.description;</description>
+    <hbox align="center">
+      <label id="allowEnable"
+             value="&security.ssl.limit.enable.label;"/>
+      <checkbox id="allowSSL30"
+                class="nogray-disabled"
+                label="&security.ssl.limit.ssl30.label;"
+                accesskey="&security.ssl.limit.ssl30.accesskey;"
+                oncommand="gPrefWindow.prefSecurity.onUpdateSslPrefs();"/>
+      <checkbox id="allowTLS10"
+                class="nogray-disabled"
+                label="&security.ssl.limit.tls10.label;"
+                accesskey="&security.ssl.limit.tls10.accesskey;"
+                oncommand="gPrefWindow.prefSecurity.onUpdateSslPrefs();"/>
+      <checkbox id="allowTLS11"
+                class="nogray-disabled"
+                label="&security.ssl.limit.tls11.label;"
+                accesskey="&security.ssl.limit.tls11.accesskey;"
+                oncommand="gPrefWindow.prefSecurity.onUpdateSslPrefs();"/>
+      <checkbox id="allowTLS12"
+                class="nogray-disabled"
+                label="&security.ssl.limit.tls12.label;"
+                accesskey="&security.ssl.limit.tls12.accesskey;"
+                oncommand="gPrefWindow.prefSecurity.onUpdateSslPrefs();"/>
+    </hbox>
+  </groupbox>
+  <groupbox align="start">
+    <caption label="&security.ssl.SSLMixedContent.caption;"/>
+    <checkbox id="blockActiveContent"
+              label="&security.ssl.block.activecontent;"
+              accesskey="&security.ssl.block.activecontent.accesskey;"
+              preference="security.mixed_content.block_active_content"/>
+    <checkbox id="blockDisplayContent"
+              label="&security.ssl.block.displaycontent;"
+              accesskey="&security.ssl.block.displaycontent.accesskey;"
+              preference="security.mixed_content.block_display_content"/>
+  </groupbox>
   <description>&security.ssl.ssl_override_behavior.label;</description>
   <radiogroup class="indent" preference="browser.ssl_override_behavior">
     <radio value="0" label="&security.ssl.ssl_override_behavior.dont.label;"/>
