@@ -119,6 +119,7 @@
 <!ENTITY browser.download.flashCount.finite.label "点滅を">
 <!ENTITY browser.download.flashCount.finite.label2 "回させる">
 <!ENTITY browser.download.showAlertOnComplete.label "ダウンロード終了時に通知する">
+<!ENTITY browser.download.disableAnimateNotifications.label "ダウンロード開始・終了時にダウンロードインディケータのアニメーション通知をしない (Firefox 25+)">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "警告: おそらくこの設定が一部のプラグインや &quot;User Agent Switcher&quot; などと競合するかもしれません。">
 <!ENTITY browser.ua.text.label "UA文字列 :">
