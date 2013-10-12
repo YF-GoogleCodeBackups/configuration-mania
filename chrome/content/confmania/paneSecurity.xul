@@ -210,39 +210,39 @@
     <caption label="&security.ssl.SSLProtocolVersions.caption;"/>
     <description>&security.ssl.limit.description;</description>
     <hbox align="center">
-      <label id="allowEnable"
-             value="&security.ssl.limit.enable.label;"/>
+      <label value="&security.ssl.limit.enable.label;"/>
+      <data preference="security.tls.version.min"
+            preference-editable="true"
+            onsyncfrompreference="return gPrefWindow.prefSecurity.onSSLProtocolVersionsSyncFrom();"/>
+      <data preference="security.tls.version.max"
+            preference-editable="true"
+            onsyncfrompreference="return gPrefWindow.prefSecurity.onSSLProtocolVersionsSyncFrom();"/>
       <checkbox id="allowSSL30"
                 class="nogray-disabled"
                 label="&security.ssl.limit.ssl30.label;"
-                accesskey="&security.ssl.limit.ssl30.accesskey;"
-                oncommand="gPrefWindow.prefSecurity.onUpdateSslPrefs();"/>
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
       <checkbox id="allowTLS10"
                 class="nogray-disabled"
                 label="&security.ssl.limit.tls10.label;"
-                accesskey="&security.ssl.limit.tls10.accesskey;"
-                oncommand="gPrefWindow.prefSecurity.onUpdateSslPrefs();"/>
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
       <checkbox id="allowTLS11"
                 class="nogray-disabled"
                 label="&security.ssl.limit.tls11.label;"
-                accesskey="&security.ssl.limit.tls11.accesskey;"
-                oncommand="gPrefWindow.prefSecurity.onUpdateSslPrefs();"/>
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
       <checkbox id="allowTLS12"
                 class="nogray-disabled"
                 label="&security.ssl.limit.tls12.label;"
-                accesskey="&security.ssl.limit.tls12.accesskey;"
-                oncommand="gPrefWindow.prefSecurity.onUpdateSslPrefs();"/>
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
+    </hbox>
+    <hbox align="center" class="indent">
+      <button label="&reset;" oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsReset();"/>
     </hbox>
   </groupbox>
   <groupbox align="start">
     <caption label="&security.ssl.SSLMixedContent.caption;"/>
-    <checkbox id="blockActiveContent"
-              label="&security.ssl.block.activecontent;"
-              accesskey="&security.ssl.block.activecontent.accesskey;"
+    <checkbox label="&security.ssl.block.activecontent;"
               preference="security.mixed_content.block_active_content"/>
-    <checkbox id="blockDisplayContent"
-              label="&security.ssl.block.displaycontent;"
-              accesskey="&security.ssl.block.displaycontent.accesskey;"
+    <checkbox label="&security.ssl.block.displaycontent;"
               preference="security.mixed_content.block_display_content"/>
   </groupbox>
   <description>&security.ssl.ssl_override_behavior.label;</description>
