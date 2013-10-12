@@ -54,6 +54,22 @@
 <!ENTITY security.antivirus.scanWhenDone.desc "Windows XP SP2+/Vista/7 では、この値は、ダウンロードされたファイルを開く場合にセキュリティの警告を表示するかにも反映します">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
 <!ENTITY security.ssl.label "SSL">
+<!ENTITY security.ssl.SSLProtocolVersions.caption "SSL プロトコルのバージョン">
+<!ENTITY security.ssl.limit.description "安全な接続に使用する暗号化プロトコルを制限できます。単一のバージョンまたは連続するバージョンの範囲を選択してください。">
+<!ENTITY security.ssl.limit.enable.label "有効:">
+<!ENTITY security.ssl.limit.ssl30.label "SSL 3.0">
+<!ENTITY security.ssl.limit.ssl30.accesskey "3">
+<!ENTITY security.ssl.limit.tls10.label "TLS 1.0">
+<!ENTITY security.ssl.limit.tls10.accesskey "T">
+<!ENTITY security.ssl.limit.tls11.label "TLS 1.1">
+<!ENTITY security.ssl.limit.tls11.accesskey "1">
+<!ENTITY security.ssl.limit.tls12.label "TLS 1.2">
+<!ENTITY security.ssl.limit.tls12.accesskey "2">
+<!ENTITY security.ssl.SSLMixedContent.caption "SSL 混在コンテンツ">
+<!ENTITY security.ssl.block.activecontent "暗号化されたページ上の安全でないコンテンツは読み込まない">
+<!ENTITY security.ssl.block.activecontent.accesskey "D">
+<!ENTITY security.ssl.block.displaycontent "暗号化されたページ上の混在コンテンツは読み込まない">
+<!ENTITY security.ssl.block.displaycontent.accesskey "m">
 <!ENTITY security.ssl.ssl_override_behavior.label "安全な接続ができなかったときの、&quot;セキュリティ例外の追加&quot;ダイアログの振る舞い">
 <!ENTITY security.ssl.ssl_override_behavior.dont.label "現在のURLを例外として自動入力せず、SSL証明書の取得も行わない。">
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "現在のURLを例外として予め自動で入力しておくが、SSL証明書の取得は自動で行わない。">

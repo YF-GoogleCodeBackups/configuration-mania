@@ -54,6 +54,22 @@
 <!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+/Vista/7, this value also indicates whether downloaded files trigger a security warning upon launch.">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE file.">
 <!ENTITY security.ssl.label "SSL">
+<!ENTITY security.ssl.SSLProtocolVersions.caption "SSL Protocol Versions">
+<!ENTITY security.ssl.limit.description "You can restrict which encryption protocols to use for secure connections. Choose a single version or a contiguous range of versions.">
+<!ENTITY security.ssl.limit.enable.label "Enable:">
+<!ENTITY security.ssl.limit.ssl30.label "SSL 3.0">
+<!ENTITY security.ssl.limit.ssl30.accesskey "3">
+<!ENTITY security.ssl.limit.tls10.label "TLS 1.0">
+<!ENTITY security.ssl.limit.tls10.accesskey "T">
+<!ENTITY security.ssl.limit.tls11.label "TLS 1.1">
+<!ENTITY security.ssl.limit.tls11.accesskey "1">
+<!ENTITY security.ssl.limit.tls12.label "TLS 1.2">
+<!ENTITY security.ssl.limit.tls12.accesskey "2">
+<!ENTITY security.ssl.SSLMixedContent.caption "Mixed Content">
+<!ENTITY security.ssl.block.activecontent "Don't load insecure content on encrypted pages">
+<!ENTITY security.ssl.block.activecontent.accesskey "D">
+<!ENTITY security.ssl.block.displaycontent "Don't load other types of mixed content on encrypted pages">
+<!ENTITY security.ssl.block.displaycontent.accesskey "m">
 <!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed">
 <!ENTITY security.ssl.ssl_override_behavior.dont.label "Do Not pre-populate the current URL as an exception and Do Not pre-fetch the SSL certificate.">
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate.">
