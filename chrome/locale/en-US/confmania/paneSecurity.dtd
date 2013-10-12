@@ -52,11 +52,6 @@
 <!ENTITY security.antivirus.scanWhenDone.desc "On Windows XP SP2+/Vista/7, this value also indicates whether downloaded files trigger a security warning upon launch.">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE file.">
 <!ENTITY security.ssl.label "SSL">
-<!ENTITY security.ssl.ssl_domain_display.label "When the site is secure, Display on the left of the URL in the Location Bar ...">
-<!ENTITY security.ssl.ssl_domain_display.none.label "favicon only">
-<!ENTITY security.ssl.ssl_domain_display.eTLD.label "eTLD (effective top-level domain) along with the second-level domain (e.g. mozilla.org)">
-<!ENTITY security.ssl.ssl_domain_display.full.label "the full domain (e.g. addons.mozilla.org)">
-<!ENTITY security.ssl.ssl_domain_display.desc "When the site uses Extended Validation (EV) SSL certificates, displays the Organization name you are connecting to.">
 <!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed">
 <!ENTITY security.ssl.ssl_override_behavior.dont.label "Do Not pre-populate the current URL as an exception and Do Not pre-fetch the SSL certificate.">
 <!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate.">

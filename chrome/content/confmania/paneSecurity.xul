@@ -80,7 +80,6 @@
   <preference id="browser.download.manager.scanWhenDone" name="browser.download.manager.scanWhenDone" type="bool"/>
   <preference id="browser.download.manager.alertOnEXEOpen" name="browser.download.manager.alertOnEXEOpen" type="bool"/>
 
-  <preference id="browser.identity.ssl_domain_display" name="browser.identity.ssl_domain_display" type="int"/>
   <preference id="browser.ssl_override_behavior" name="browser.ssl_override_behavior" type="int"/>
 
   <preference id="network.http.redirection-limit" name="network.http.redirection-limit" type="int"/>
@@ -201,13 +200,6 @@
    preference="browser.download.manager.alertOnEXEOpen"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="security-pane-ssl">
-  <description>&security.ssl.ssl_domain_display.label;</description>
-  <radiogroup class="indent" preference="browser.identity.ssl_domain_display">
-    <radio value="0" label="&security.ssl.ssl_domain_display.none.label;"/>
-    <radio value="1" label="&security.ssl.ssl_domain_display.eTLD.label;"/>
-    <radio value="2" label="&security.ssl.ssl_domain_display.full.label;"/>
-  </radiogroup>
-  <description class="indent">&security.ssl.ssl_domain_display.desc;</description>
   <description>&security.ssl.ssl_override_behavior.label;</description>
   <radiogroup class="indent" preference="browser.ssl_override_behavior">
     <radio value="0" label="&security.ssl.ssl_override_behavior.dont.label;"/>
