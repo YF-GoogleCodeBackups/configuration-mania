@@ -107,7 +107,6 @@ tc.tests = {
       for (let i = 0; i < mData.length; i++) {
         mData[i].value = arguments[i];
       }
-      this.window.gPrefWindow.prefSecurity.__UpdateSslBoxes();      
     }).bind(this);
 
     const TESTCASE = [
@@ -147,7 +146,7 @@ tc.tests = {
 
     applyValues.apply(this, origval);
   },
-  testOnSSLProtocolVersionsSyncTo: function() {
+  testOnSSLProtocolVersionsChange: function() {
     let mData = [this.document.getElementById("security.tls.version.min"),
                  this.document.getElementById("security.tls.version.max")];
     let origval = Array.map(mData, function (v) { return v.value; });
@@ -173,11 +172,33 @@ tc.tests = {
       }
     }
 
+    for (let i = 0; i < mData.length; i++) {
+      mData[i].value = origval[i];
+    }
+  },
+  testOnSSLProtocolVersionsReset: function() {
+    let mData = [this.document.getElementById("security.tls.version.min"),
+                 this.document.getElementById("security.tls.version.max")];
+    let origval = Array.map(mData, function (v) { return v.value; });
+    let target = [this.document.getElementById("allowSSL30"),
+                  this.document.getElementById("allowTLS10"),
+                  this.document.getElementById("allowTLS11"),
+                  this.document.getElementById("allowTLS12")];
+
+    mData[0].value = 0;
+    mData[1].value = target.length - 1;
+
+    let resetBtn = this.document.querySelector("#security-pane-ssl groupbox button[oncommand*=onSSLProtocolVersionsReset]");
+    resetBtn.click();
+
+    assert.isFalse(mData[0].hasUserValue);
+    assert.isFalse(mData[1].hasUserValue);
+    assert.isTrue(target[mData[0].value].checked);
+    assert.isTrue(target[mData[1].value].checked);
 
     for (let i = 0; i < mData.length; i++) {
       mData[i].value = origval[i];
     }
-    this.window.gPrefWindow.prefSecurity.__UpdateSslBoxes();      
   },
   testOnDisableIDNSyncFrom: function() {
     let checkbox = this.document.getElementById("disableIDN");
