@@ -118,7 +118,8 @@
 <!ENTITY browser.download.flashCount.infinite.label "until the window is brought into foreground">
 <!ENTITY browser.download.flashCount.finite.label "">
 <!ENTITY browser.download.flashCount.finite.label2 "times">
-<!ENTITY browser.download.showAlertOnComplete.label "Show alert on download completed">
+<!ENTITY browser.download.showAlertOnComplete.label "Show alert when a download completes">
+<!ENTITY browser.download.disableAnimateNotifications.label "Disable the animated notifications of the Download Indicator when a download starts or completes. (Firefox 25+)">
 <!ENTITY browser.ua.label "User-Agent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.text.label "UA string :">

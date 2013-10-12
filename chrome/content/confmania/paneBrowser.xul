@@ -132,6 +132,7 @@
   <preference id="browser.download.useToolkitUI" name="browser.download.useToolkitUI" type="bool" inverted="true"/>
   <preference id="browser.download.manager.flashCount" name="browser.download.manager.flashCount" type="int"/>
   <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
+  <preference id="browser.download.animateNotifications" name="browser.download.animateNotifications" type="bool" inverted="true"/>
 
   <preference id="general.useragent.override" name="general.useragent.override" type="wstring"/>
 
@@ -485,6 +486,8 @@
 
   <checkbox label="&browser.download.showAlertOnComplete.label;"
             preference="browser.download.manager.showAlertOnComplete"/>
+  <checkbox label="&browser.download.disableAnimateNotifications.label;"
+            preference="browser.download.animateNotifications"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="ua">
   <description>&browser.ua.desc;</description>
