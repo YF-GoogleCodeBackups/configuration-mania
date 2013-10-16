@@ -319,6 +319,11 @@ gPrefWindow.prefBrowser = {
   onWebGLOSMesaBrowse : function() {
     this._openBrowse(Components.interfaces.nsIFilePicker.filterAll, "html-webgl-osmesa-path");
   },
+  onOthersGeoEnabledSyncFrom : function () {
+    let disabled = document.getElementById("geo.enabled").value;
+    document.getElementById("others-geoExceptions").disabled = disabled;
+    return undefined; // no override
+  },
   onOthersGeoExceptionsCommand : function() {
     let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "geo" };
     params.windowTitle = document.getElementById("others-geoExceptions").getAttribute("data-dialog-title");
