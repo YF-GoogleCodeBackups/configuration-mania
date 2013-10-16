@@ -611,12 +611,12 @@
 
 <box class="subtabpanel" orient="vertical" id="others">
   <hbox>
-      <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled" flex="1"/>
-      <button label="&browser.others.geoExceptions.label;"
-              id="others-geoExceptions"
-              data-dialog-title="&browser.others.geoExceptions.title;"
-              data-dialog-desc="&browser.others.geoExceptions.desc;"
-              oncommand="gPrefWindow.prefBrowser.onOthersGeoExceptionsCommand();"/>
+    <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled" flex="1" onsynctopreference="return gPrefWindow.prefBrowser.onOthersGeoEnabledSyncFrom();"/>
+    <button label="&browser.others.geoExceptions.label;"
+            id="others-geoExceptions"
+            data-dialog-title="&browser.others.geoExceptions.title;"
+            data-dialog-desc="&browser.others.geoExceptions.desc;"
+            oncommand="gPrefWindow.prefBrowser.onOthersGeoExceptionsCommand();"/>
   </hbox>
   <checkbox label="&browser.others.full_screen_enabled.label;" preference="full-screen-api.enabled"/>
   <checkbox label="&browser.others.dom_battery_enabled.label;" preference="dom.battery.enabled"/>

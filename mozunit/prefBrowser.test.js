@@ -321,6 +321,17 @@ tc.tests = {
   //},
   //testOnWebGLOSMesaBrowse: function() {
   //},
+  testOnOthersGeoEnabledSyncFrom : function () {
+    let checkbox = this.document.querySelector("checkbox[preference='geo.enabled']");
+    let target = this.document.getElementById("others-geoExceptions");
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, !target.disabled);
+      checkbox.click();
+    }
+  },
+  //testOnOthersGeoExceptionsCommand : function() {
+  //},
   //testOnnBrowserCacheDiskCacheFolderBrowse: function() {
   //},
   testResetBrowserCacheDiskFolder: function() {
