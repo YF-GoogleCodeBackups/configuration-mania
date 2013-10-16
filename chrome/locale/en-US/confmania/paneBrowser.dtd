@@ -155,6 +155,9 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
 <!ENTITY browser.others.label "Other">
 <!ENTITY browser.others.geo_enabled.label "Enable Geolocation">
+<!ENTITY browser.others.geoExceptions.label "Exceptions">
+<!ENTITY browser.others.geoExceptions.title "Exceptions - Geolocation">
+<!ENTITY browser.others.geoExceptions.desc "You can specify which websites are allowed to access your location. Type the exact address of the site you want to manage and then click Block or Allow.">
 <!ENTITY browser.others.full_screen_enabled.label "Enable Full Screen API">
 <!ENTITY browser.others.dom_battery_enabled.label "Enable Battery Status API">
 <!ENTITY browser.others.dom_sms_enabled.label "Enable Messaging (SMS) API">

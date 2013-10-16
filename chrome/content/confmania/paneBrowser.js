@@ -319,6 +319,20 @@ gPrefWindow.prefBrowser = {
   onWebGLOSMesaBrowse : function() {
     this._openBrowse(Components.interfaces.nsIFilePicker.filterAll, "html-webgl-osmesa-path");
   },
+  onOthersGeoExceptionsCommand : function() {
+    let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "geo" };
+    params.windowTitle = document.getElementById("others-geoExceptions").getAttribute("data-dialog-title");
+    params.introText   = document.getElementById("others-geoExceptions").getAttribute("data-dialog-desc");
+
+    if (openDialog) { // in-Content
+      openDialog("chrome://browser/content/preferences/permissions.xul", 
+                 "Browser:Permissions", "resizable=yes", params);
+    } else if (document.documentElement.openWindow) {
+      document.documentElement.openWindow("Browser:Permissions",
+                                          "chrome://browser/content/preferences/permissions.xul",
+                                          "", params);
+    }
+  },
   onEditorExternalBrowse : function(){
     const filter = Components.interfaces.nsIFilePicker.filterApps | Components.interfaces.nsIFilePicker.filterAll;
     this._openBrowse(filter, "others-editorExternal-path");

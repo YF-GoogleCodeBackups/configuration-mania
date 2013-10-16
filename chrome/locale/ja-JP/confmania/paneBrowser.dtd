@@ -155,6 +155,9 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
 <!ENTITY browser.others.label "その他">
 <!ENTITY browser.others.geo_enabled.label "位置情報通信機能を有効にする">
+<!ENTITY browser.others.geoExceptions.label "例外サイト...">
+<!ENTITY browser.others.geoExceptions.title "例外サイト - 位置情報">
+<!ENTITY browser.others.geoExceptions.desc "位置情報の通知を許可するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
 <!ENTITY browser.others.full_screen_enabled.label "フルスクリーンAPIを有効にする">
 <!ENTITY browser.others.dom_battery_enabled.label "バッテリーステータスAPIを有効にする">
 <!ENTITY browser.others.dom_sms_enabled.label "メッセージング(SMS)APIを有効にする">
