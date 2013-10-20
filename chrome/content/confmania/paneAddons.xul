@@ -53,8 +53,6 @@
 <preferences>
   <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
   <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
-  <preference name="extensions.checkCompatibility.15.0" id="extensions.checkCompatibility.15.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.16.0" id="extensions.checkCompatibility.16.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.17.0" id="extensions.checkCompatibility.17.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.18.0" id="extensions.checkCompatibility.18.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.19.0" id="extensions.checkCompatibility.19.0" type="bool" inverted="true"/>
