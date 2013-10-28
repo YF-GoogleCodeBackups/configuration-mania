@@ -338,6 +338,25 @@ gPrefWindow.prefBrowser = {
                                           "", params);
     }
   },
+  onOthersFullScreenEnabledSyncFrom : function () {
+    let disabled = document.getElementById("full-screen-api.enabled").value;
+    document.getElementById("others-full_screenExceptions").disabled = disabled;
+    return undefined; // no override
+  },
+  onOthersFullScreenExceptionsCommand : function() {
+    let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "fullscreen" };
+    params.windowTitle = document.getElementById("others-full_screenExceptions").getAttribute("data-dialog-title");
+    params.introText   = document.getElementById("others-full_screenExceptions").getAttribute("data-dialog-desc");
+
+    if (openDialog) { // in-Content
+      openDialog("chrome://browser/content/preferences/permissions.xul", 
+                 "Browser:Permissions", "resizable=yes", params);
+    } else if (document.documentElement.openWindow) {
+      document.documentElement.openWindow("Browser:Permissions",
+                                          "chrome://browser/content/preferences/permissions.xul",
+                                          "", params);
+    }
+  },
   onEditorExternalBrowse : function(){
     const filter = Components.interfaces.nsIFilePicker.filterApps | Components.interfaces.nsIFilePicker.filterAll;
     this._openBrowse(filter, "others-editorExternal-path");

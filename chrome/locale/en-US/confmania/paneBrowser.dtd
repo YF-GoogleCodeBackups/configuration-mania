@@ -159,6 +159,9 @@
 <!ENTITY browser.others.geoExceptions.title "Exceptions - Geolocation">
 <!ENTITY browser.others.geoExceptions.desc "You can specify which websites are allowed to access your location. Type the exact address of the site you want to manage and then click Block or Allow.">
 <!ENTITY browser.others.full_screen_enabled.label "Enable Full Screen API">
+<!ENTITY browser.others.full_screenExceptions.label "Exceptions">
+<!ENTITY browser.others.full_screenExceptions.title "Exceptions - Full Screen">
+<!ENTITY browser.others.full_screenExceptions.desc "You can specify which websites are allowed to enter fullscreen. Type the exact address of the site you want to manage and then click Block or Allow.">
 <!ENTITY browser.others.dom_battery_enabled.label "Enable Battery Status API">
 <!ENTITY browser.others.dom_sms_enabled.label "Enable Messaging (SMS) API">
 <!ENTITY browser.others.dom_vibrator_enabled.label "Enable Vibration API">

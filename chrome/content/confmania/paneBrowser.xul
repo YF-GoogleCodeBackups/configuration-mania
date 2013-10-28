@@ -618,7 +618,14 @@
             data-dialog-desc="&browser.others.geoExceptions.desc;"
             oncommand="gPrefWindow.prefBrowser.onOthersGeoExceptionsCommand();"/>
   </hbox>
-  <checkbox label="&browser.others.full_screen_enabled.label;" preference="full-screen-api.enabled"/>
+  <hbox>
+    <checkbox label="&browser.others.full_screen_enabled.label;" preference="full-screen-api.enabled" flex="1" onsynctopreference="return gPrefWindow.prefBrowser.onOthersFullScreenEnabledSyncFrom();"/>
+    <button label="&browser.others.full_screenExceptions.label;"
+            id="others-full_screenExceptions"
+            data-dialog-title="&browser.others.full_screenExceptions.title;"
+            data-dialog-desc="&browser.others.full_screenExceptions.desc;"
+            oncommand="gPrefWindow.prefBrowser.onOthersFullScreenExceptionsCommand();"/>
+  </hbox>
   <checkbox label="&browser.others.dom_battery_enabled.label;" preference="dom.battery.enabled"/>
   <checkbox label="&browser.others.dom_sms_enabled.label;" preference="dom.sms.enabled"/>
   <checkbox label="&browser.others.dom_vibrator_enabled.label;" preference="dom.vibrator.enabled"/>
