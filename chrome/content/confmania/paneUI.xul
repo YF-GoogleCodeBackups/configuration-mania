@@ -123,6 +123,8 @@
   <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
   <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
   <preference id="middlemouse.scrollbarPosition" name="middlemouse.scrollbarPosition" type="bool"/>
+  <preference id="layout.word_select.eat_space_to_next_word" name="layout.word_select.eat_space_to_next_word" type="bool"/>
+  <preference id="layout.word_select.stop_at_punctuation" name="layout.word_select.stop_at_punctuation" type="bool" inverted="true"/>
   <preference id="nglayout.enable_drag_images" name="nglayout.enable_drag_images" type="bool"/>
   <preference id="ui.allow_platform_file_picker" name="ui.allow_platform_file_picker" type="bool" inverted="true"/>
 </preferences>
@@ -434,6 +436,11 @@
     <checkbox label="&ui.others.xwin.paste.label;" preference="middlemouse.paste"/>
     <checkbox label="&ui.others.xwin.contentLoadURL.label;" preference="middlemouse.contentLoadURL"/>
     <checkbox label="&ui.others.xwin.scrollbarPosition.label;" preference="middlemouse.scrollbarPosition"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&ui.others.word_select.label;"/>
+    <checkbox label="&ui.others.word_select.eat_space_to_next_word.label;" preference="layout.word_select.eat_space_to_next_word"/>
+    <checkbox label="&ui.others.word_select.eat_punctuation.label;" preference="layout.word_select.stop_at_punctuation"/>
   </groupbox>
   <checkbox label="&ui.others.enable_drag_images.label;" preference="nglayout.enable_drag_images"/>
   <checkbox label="&ui.others.xul_file_picker;" preference="ui.allow_platform_file_picker"/>

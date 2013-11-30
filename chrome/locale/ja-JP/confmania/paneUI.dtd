@@ -102,5 +102,8 @@
 <!ENTITY ui.others.xwin.paste.label "中央クリックで張り付ける">
 <!ENTITY ui.others.xwin.contentLoadURL.label "中央クリックでクリップボードに格納された URL へ行く">
 <!ENTITY ui.others.xwin.scrollbarPosition.label "中央ボタンでスクロールバーを調整できるようにする(再起動必要)">
+<!ENTITY ui.others.word_select.label "テキストをダブルクリックした時の選択動作">
+<!ENTITY ui.others.word_select.eat_space_to_next_word.label "後続の空白も選択する">
+<!ENTITY ui.others.word_select.eat_punctuation.label "囲んでいる句読点も選択する">
 <!ENTITY ui.others.enable_drag_images.label "ドラッグ中に(可能であれば)画像を表示する">
 <!ENTITY ui.others.xul_file_picker "システムのファイルダイアログを使わずにXULファイルダイアログを使用">

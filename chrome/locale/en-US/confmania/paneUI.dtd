@@ -102,5 +102,8 @@
 <!ENTITY ui.others.xwin.paste.label "Paste when clicked middle mouse button">
 <!ENTITY ui.others.xwin.contentLoadURL.label "Go to URL stored in clipboard by middle mouse click">
 <!ENTITY ui.others.xwin.scrollbarPosition.label "Allow middle mouse button to adjust scroll bar (takes effect after restart)">
+<!ENTITY ui.others.word_select.label "Selection behavior when double-clicking text">
+<!ENTITY ui.others.word_select.eat_space_to_next_word.label "Select the space up to the following word">
+<!ENTITY ui.others.word_select.eat_punctuation.label "Select the surrounding punctuation">
 <!ENTITY ui.others.enable_drag_images.label "Display an image (when specified) during dragging">
 <!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">
