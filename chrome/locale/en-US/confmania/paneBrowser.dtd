@@ -105,6 +105,12 @@
 <!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
 <!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab">
 <!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
+<!ENTITY browser.multimedia.label "Multimedia">
+<!ENTITY browser.multimedia.windows-media-foundation-enabled.label "Enable Windows Media Foundation (Windows7+)">
+<!ENTITY browser.multimedia.windows-media-foundation-play-stand-alone.label "Play stand-alone">
+<!ENTITY browser.multimedia.directshow-enabled.label "Enable Direct Show (Windows)">
+<!ENTITY browser.multimedia.gstreamer-enabled.label "Enable GStreamer (Linux)">
+<!ENTITY browser.multimedia.apple-mp3-enabled.label "Enable Apple MP3 (Mac)">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links">
 <!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
