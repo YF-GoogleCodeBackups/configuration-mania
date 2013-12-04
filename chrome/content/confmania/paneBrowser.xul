@@ -126,6 +126,12 @@
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
 
+  <preference id="media.windows-media-foundation.enabled" name="media.windows-media-foundation.enabled" type="bool"/>
+  <preference id="media.windows-media-foundation.play-stand-alone" name="media.windows-media-foundation.play-stand-alone" type="bool"/>
+  <preference id="media.directshow.enabled" name="media.directshow.enabled" type="bool"/>
+  <preference id="media.gstreamer.enabled" name="media.gstreamer.enabled" type="bool"/>
+  <preference id="media.apple.mp3.enabled" name="media.apple.mp3.enabled" type="bool"/>
+
   <preference id="browser.altClickSave" name="browser.altClickSave" type="bool" inverted="true"/>
   <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
   <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
@@ -181,6 +187,7 @@
   <radio class="subtab" value="tabs"          label="&browser.tabs.label;"         />
   <radio class="subtab" value="sessionstore"  label="&browser.sessionStore.label;" />
   <radio class="subtab" value="bookmarkicon"  label="&browser.bookmarkicon.label;" />
+  <radio class="subtab" value="multimedia"    label="&browser.multimedia.label;"   />
   <radio class="subtab" value="download"      label="&browser.download.label;"     />
   <radio class="subtab" value="ua"            label="&browser.ua.label;"           />
   <radio class="subtab" value="speed-paint"   label="&browser.speed-paint.label;"  />
@@ -452,6 +459,13 @@
    preference="browser.chrome.site_icons"/>
   <checkbox label="&browser.bookmarkicon.favicons.lebel;"
    preference="browser.chrome.favicons"/>
+</box>
+<box class="subtabpanel" orient="vertical" id="multimedia">
+  <checkbox label="&browser.multimedia.windows-media-foundation-enabled.label;" preference="media.windows-media-foundation.enabled"/>
+  <checkbox class="indent" label="&browser.multimedia.windows-media-foundation-play-stand-alone.label;" preference="media.windows-media-foundation.play-stand-alone"/>
+  <checkbox label="&browser.multimedia.directshow-enabled.label;" preference="media.directshow.enabled"/>
+  <checkbox label="&browser.multimedia.gstreamer-enabled.label;" preference="media.gstreamer.enabled"/>
+  <checkbox label="&browser.multimedia.apple-mp3-enabled.label;" preference="media.apple.mp3.enabled"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="download">
   <checkbox label="&browser.download.disableAltClickSave.label;"
