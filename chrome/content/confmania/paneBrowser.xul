@@ -461,7 +461,7 @@
    preference="browser.chrome.favicons"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="multimedia">
-  <checkbox label="&browser.multimedia.windows-media-foundation-enabled.label;" preference="media.windows-media-foundation.enabled"/>
+  <checkbox label="&browser.multimedia.windows-media-foundation-enabled.label;" preference="media.windows-media-foundation.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onMultiMediaWMFEnabledSyncFrom();"/>
   <checkbox class="indent" label="&browser.multimedia.windows-media-foundation-play-stand-alone.label;" preference="media.windows-media-foundation.play-stand-alone"/>
   <checkbox label="&browser.multimedia.directshow-enabled.label;" preference="media.directshow.enabled"/>
   <checkbox label="&browser.multimedia.gstreamer-enabled.label;" preference="media.gstreamer.enabled"/>

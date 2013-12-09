@@ -207,6 +207,19 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnMultiMediaWMFEnabledSyncFrom: function() {
+    let checkbox = this.document.querySelector("checkbox[preference='media.windows-media-foundation.enabled']");
+    let target = this.document.querySelector("checkbox[preference='media.windows-media-foundation.play-stand-alone']");
+    let checkbox_origval = checkbox.value;
+    let target_origval = target.value;
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, !target.disabled);
+      checkbox.click();
+    }
+    checkbox.value = checkbox_origval;
+    target.value = target_origval;
+  },
   testOnDownloadUseToolkitUISyncFrom: function() {
     let checkbox = this.document.querySelector("checkbox[preference='browser.download.useToolkitUI']");
     let label = this.document.querySelector("label[control='browserDLFlashCount-gr']");
