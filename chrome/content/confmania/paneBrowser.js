@@ -178,6 +178,11 @@ gPrefWindow.prefBrowser = {
     document.getElementById("browser.download.manager.flashCount").disabled = disabled;
     return undefined; // no override
   },
+  onMultiMediaWMFEnabledSyncFrom : function() {
+    let disabled = ! document.getElementById("media.windows-media-foundation.enabled").value;
+    document.getElementById("media.windows-media-foundation.play-stand-alone").disabled = disabled;
+    return undefined; // no override
+  },
   onInterruptParseSyncFrom : function() {
     let disabled = document.getElementById("content.interrupt.parsing").value;
     document.getElementById("content.max.tokenizing.time").disabled = disabled;
