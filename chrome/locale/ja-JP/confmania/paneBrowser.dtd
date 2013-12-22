@@ -77,6 +77,7 @@
 <!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ">
 <!ENTITY browser.tabs.seachOpenintab.label "検索バーからEnterキーで検索した時、検索結果を新しいタブで開く">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "ページから開く新規タブを現在のタブの右に開く">
+<!ENTITY browser.tabs.warnOnCloseOtherTabs.label "他の複数のタブを閉じるときに警告する">
 <!ENTITY browser.tabs.autoselect.label "自動タブ選択">
 <!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "ブックマークや履歴から開いた新しいタブを選択する">
 <!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "外部アプリやリンクなどに新しいタブが開かれたとき、すぐにそのタブに切り替える">

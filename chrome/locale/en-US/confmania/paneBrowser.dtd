@@ -77,6 +77,7 @@
 <!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar with ENTER key">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab">
+<!ENTITY browser.tabs.warnOnCloseOtherTabs.label "Warn me when closing other multiple tabs">
 <!ENTITY browser.tabs.autoselect.label "Auto tab selection">
 <!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
 <!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
