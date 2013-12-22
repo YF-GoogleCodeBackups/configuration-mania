@@ -105,10 +105,10 @@
   <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
   <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
   <preference id="browser.tabs.insertRelatedAfterCurrent" name="browser.tabs.insertRelatedAfterCurrent" type="bool"/>
-  <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
+  <preference id="browser.tabs.warnOnCloseOtherTabs" name="browser.tabs.warnOnCloseOtherTabs" type="bool"/>
   <preference id="browser.tabs.loadBookmarksInBackground" name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.loadDivertedInBackground" name="browser.tabs.loadDivertedInBackground" type="bool" inverted="true"/>
-  <preference id="browser.tabs.warnOnCloseOtherTabs" name="browser.tabs.warnOnCloseOtherTabs" type="bool"/>
+  <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
   <preference id="browser.allTabs.previews" name="browser.allTabs.previews" type="bool"/>
   <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
   <preference id="browser.taskbar.previews.enable" name="browser.taskbar.previews.enable" type="bool"/>
