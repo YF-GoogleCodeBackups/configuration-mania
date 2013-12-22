@@ -105,9 +105,10 @@
   <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
   <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
   <preference id="browser.tabs.insertRelatedAfterCurrent" name="browser.tabs.insertRelatedAfterCurrent" type="bool"/>
+  <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
   <preference id="browser.tabs.loadBookmarksInBackground" name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.loadDivertedInBackground" name="browser.tabs.loadDivertedInBackground" type="bool" inverted="true"/>
-  <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
+  <preference id="browser.tabs.warnOnCloseOtherTabs" name="browser.tabs.warnOnCloseOtherTabs" type="bool"/>
   <preference id="browser.allTabs.previews" name="browser.allTabs.previews" type="bool"/>
   <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
   <preference id="browser.taskbar.previews.enable" name="browser.taskbar.previews.enable" type="bool"/>
@@ -395,6 +396,7 @@
 
   <checkbox label="&browser.tabs.seachOpenintab.label;" preference="browser.search.openintab"/>
   <checkbox label="&browser.tabs.insertRelatedAfterCurrent.label;" preference="browser.tabs.insertRelatedAfterCurrent"/>
+  <checkbox label="&browser.tabs.warnOnCloseOtherTabs.label;" preference="browser.tabs.warnOnCloseOtherTabs"/>
   <groupbox>
     <caption label="&browser.tabs.autoselect.label;"/>
     <checkbox label="&browser.tabs.autoselect.loadBookmarksInBackground.label;" preference="browser.tabs.loadBookmarksInBackground"/>
