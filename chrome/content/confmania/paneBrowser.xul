@@ -166,7 +166,6 @@
   <preference id="dom.vibrator.enabled" name="dom.vibrator.enabled" type="bool"/>
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
-  <checkbox label="&browser.others.prompts_tab_modal_enabled.label;" preference="prompts.tab_modal.enabled"/>
   <preference id="prompts.tab_modal.enabled" name="prompts.tab_modal.enabled" type="bool"/>
   <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
