@@ -191,5 +191,6 @@
 <!ENTITY browser.others.jumplist.item.frequent.label "Frequent">
 <!ENTITY browser.others.jumplist.item.recent.label "Recent">
 <!ENTITY browser.others.jumplist.item.tasks.label "Tasks">
+<!ENTITY browser.others.jumplist.maxListItemCount.label "Maximum number of items per list">
 <!ENTITY browser.others.jumplist.refreshInSeconds.label "Refresh list items every">
 <!ENTITY browser.others.jumplist.refreshInSeconds.label2 "seconds.">

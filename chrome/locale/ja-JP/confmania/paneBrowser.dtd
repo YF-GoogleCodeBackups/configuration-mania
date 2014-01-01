@@ -191,5 +191,6 @@
 <!ENTITY browser.others.jumplist.item.frequent.label "よく見るページ">
 <!ENTITY browser.others.jumplist.item.recent.label "最近見たページ">
 <!ENTITY browser.others.jumplist.item.tasks.label "タスク">
+<!ENTITY browser.others.jumplist.maxListItemCount.label "リストあたりのアイテムの最大個数">
 <!ENTITY browser.others.jumplist.refreshInSeconds.label "リストアイテムを">
 <!ENTITY browser.others.jumplist.refreshInSeconds.label2 "秒ごとに更新">
