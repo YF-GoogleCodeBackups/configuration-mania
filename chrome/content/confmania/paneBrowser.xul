@@ -173,6 +173,11 @@
   <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
   <preference id="places.history.expiration.max_pages" name="places.history.expiration.max_pages" type="int"/>
   <preference id="general.warnOnAboutConfig" name="general.warnOnAboutConfig" type="bool"/>
+  <preference id="browser.taskbar.lists.enabled" name="browser.taskbar.lists.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.frequent.enabled" name="browser.taskbar.lists.frequent.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.recent.enabled" name="browser.taskbar.lists.recent.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.tasks.enabled" name="browser.taskbar.lists.tasks.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.refreshInSeconds" name="browser.taskbar.lists.refreshInSeconds" type="int"/>
 </preferences>
 
 <hbox class="heading"><html:h1 class="indent-small">&browser.title;</html:h1></hbox>
@@ -686,6 +691,24 @@
   </groupbox>
 
   <checkbox preference="general.warnOnAboutConfig" label="&browser.others.warnOnAboutConfig.label;"/>
+
+  <groupbox>
+    <caption label="&browser.others.jumplist.label;"/>
+    <checkbox class="indent" preference="browser.taskbar.lists.enabled" label="&browser.others.jumplist.enabled.label;"
+              onsyncfrompreference="return gPrefWindow.prefBrowser.onJumplistEnabledSyncFrom();"/>
+    <vbox id="others-jumplist" class="indent">
+      <label value="&browser.others.jumplist.item.label;"/>
+      <checkbox class="indent" preference="browser.taskbar.lists.frequent.enabled" label="&browser.others.jumplist.item.frequent.label;"/>
+      <checkbox class="indent" preference="browser.taskbar.lists.recent.enabled" label="&browser.others.jumplist.item.recent.label;"/>
+      <checkbox class="indent" preference="browser.taskbar.lists.tasks.enabled" label="&browser.others.jumplist.item.tasks.label;"/>
+      <hbox align="center">
+        <label control="others-jumplistRefreshInSeconds" value="&browser.others.jumplist.refreshInSeconds.label;"/>
+        <textbox id="others-jumplistRefreshInSeconds" type="number" size="4" min="1"
+                 preference="browser.taskbar.lists.refreshInSeconds"/>
+        <label control="others-jumplistRefreshInSeconds" value="&browser.others.jumplist.refreshInSeconds.label2;"/>
+      </hbox>
+    </vbox>
+  </groupbox>
 </box>
 
 </deck>

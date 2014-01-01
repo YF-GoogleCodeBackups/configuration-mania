@@ -185,3 +185,11 @@
 <!ENTITY browser.others.backspace_action.nothing "何もしない">
 <!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
 <!ENTITY browser.others.warnOnAboutConfig.label "about:config で警告を表示する">
+<!ENTITY browser.others.jumplist.label "ジャンプリスト (Windows 7+)">
+<!ENTITY browser.others.jumplist.enabled.label "ジャンプリストを有効にする">
+<!ENTITY browser.others.jumplist.item.label "アイテム:">
+<!ENTITY browser.others.jumplist.item.frequent.label "よく見るページ">
+<!ENTITY browser.others.jumplist.item.recent.label "最近見たページ">
+<!ENTITY browser.others.jumplist.item.tasks.label "タスク">
+<!ENTITY browser.others.jumplist.refreshInSeconds.label "リストアイテムを">
+<!ENTITY browser.others.jumplist.refreshInSeconds.label2 "秒ごとに更新">

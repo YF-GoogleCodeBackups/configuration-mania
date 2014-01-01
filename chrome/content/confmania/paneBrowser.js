@@ -388,6 +388,14 @@ gPrefWindow.prefBrowser = {
   },
   resetBrowserCacheDiskCacheFolder : function(){
     gPrefWindow.resetPref(document.getElementById("browser.cache.disk.parent_directory"));
+  },
+  onJumplistEnabledSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.taskbar.lists.enabled").value;
+    Array.forEach(document.querySelectorAll("preference[id^='browser.taskbar.lists.']"), function(e) {
+      if (e.id != "browser.taskbar.lists.enabled") {
+        e.disabled = disabled;
+      }
+    });
   }
 };
 
