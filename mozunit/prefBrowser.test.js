@@ -388,4 +388,20 @@ tc.tests = {
   //},
   //testSetAlertsSlideLight: function() {
   //},
+  testOnJumplistEnabledSyncFrom: function() {
+    let checkbox = this.document.querySelector("checkbox[preference='browser.taskbar.lists.enabled']");
+    let targets = [
+      this.document.querySelector("checkbox[preference='browser.taskbar.lists.frequent.enabled']"),
+      this.document.querySelector("checkbox[preference='browser.taskbar.lists.recent.enabled']"),
+      this.document.querySelector("checkbox[preference='browser.taskbar.lists.tasks.enabled']"),
+      this.document.querySelector("textbox[preference='browser.taskbar.lists.refreshInSeconds']"),
+    ];
+
+    for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < targets.length; j++) {
+        assert.equals(checkbox.checked, !targets[j].disabled);
+      }
+      checkbox.click();
+    }
+  },
 }

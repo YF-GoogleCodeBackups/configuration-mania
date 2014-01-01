@@ -185,3 +185,11 @@
 <!ENTITY browser.others.backspace_action.nothing "Do nothing">
 <!ENTITY browser.others.historyExpirationMaxPages.label "Max number of unique URLs to retain in history">
 <!ENTITY browser.others.warnOnAboutConfig.label "Show the warning message on about:config">
+<!ENTITY browser.others.jumplist.label "Jumplist (Windows 7+)">
+<!ENTITY browser.others.jumplist.enabled.label "Enable Jumplist">
+<!ENTITY browser.others.jumplist.item.label "Items:">
+<!ENTITY browser.others.jumplist.item.frequent.label "Frequent">
+<!ENTITY browser.others.jumplist.item.recent.label "Recent">
+<!ENTITY browser.others.jumplist.item.tasks.label "Tasks">
+<!ENTITY browser.others.jumplist.refreshInSeconds.label "Refresh list items every">
+<!ENTITY browser.others.jumplist.refreshInSeconds.label2 "seconds.">
