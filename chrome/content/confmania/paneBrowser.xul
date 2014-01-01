@@ -177,6 +177,7 @@
   <preference id="browser.taskbar.lists.frequent.enabled" name="browser.taskbar.lists.frequent.enabled" type="bool"/>
   <preference id="browser.taskbar.lists.recent.enabled" name="browser.taskbar.lists.recent.enabled" type="bool"/>
   <preference id="browser.taskbar.lists.tasks.enabled" name="browser.taskbar.lists.tasks.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.maxListItemCount" name="browser.taskbar.lists.maxListItemCount" type="int"/>
   <preference id="browser.taskbar.lists.refreshInSeconds" name="browser.taskbar.lists.refreshInSeconds" type="int"/>
 </preferences>
 
@@ -701,6 +702,11 @@
       <checkbox class="indent" preference="browser.taskbar.lists.frequent.enabled" label="&browser.others.jumplist.item.frequent.label;"/>
       <checkbox class="indent" preference="browser.taskbar.lists.recent.enabled" label="&browser.others.jumplist.item.recent.label;"/>
       <checkbox class="indent" preference="browser.taskbar.lists.tasks.enabled" label="&browser.others.jumplist.item.tasks.label;"/>
+      <hbox align="center">
+        <label control="others-jumplistMaxListItemCount" value="&browser.others.jumplist.maxListItemCount.label;"/>
+        <textbox id="others-jumplistMaxListItemCount" type="number" size="2" min="0"
+                 preference="browser.taskbar.lists.maxListItemCount"/>
+      </hbox>
       <hbox align="center">
         <label control="others-jumplistRefreshInSeconds" value="&browser.others.jumplist.refreshInSeconds.label;"/>
         <textbox id="others-jumplistRefreshInSeconds" type="number" size="4" min="1"

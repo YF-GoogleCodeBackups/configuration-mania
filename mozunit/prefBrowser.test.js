@@ -390,17 +390,19 @@ tc.tests = {
   //},
   testOnJumplistEnabledSyncFrom: function() {
     let checkbox = this.document.querySelector("checkbox[preference='browser.taskbar.lists.enabled']");
-    let targets = [
-      this.document.querySelector("checkbox[preference='browser.taskbar.lists.frequent.enabled']"),
-      this.document.querySelector("checkbox[preference='browser.taskbar.lists.recent.enabled']"),
-      this.document.querySelector("checkbox[preference='browser.taskbar.lists.tasks.enabled']"),
-      this.document.querySelector("textbox[preference='browser.taskbar.lists.refreshInSeconds']"),
-    ];
+    let target_frequent = this.document.querySelector("checkbox[preference='browser.taskbar.lists.frequent.enabled']");
+    let target_recent = this.document.querySelector("checkbox[preference='browser.taskbar.lists.recent.enabled']");
+    let target_tasks = this.document.querySelector("checkbox[preference='browser.taskbar.lists.tasks.enabled']");
+    let target_maxListItemCount = this.document.querySelector("textbox[preference='browser.taskbar.lists.maxListItemCount']");
+    let target_refreshInSeconds = this.document.querySelector("textbox[preference='browser.taskbar.lists.refreshInSeconds']");
 
     for (let i = 0; i < 2; i++) {
-      for (let j = 0; j < targets.length; j++) {
-        assert.equals(checkbox.checked, !targets[j].disabled);
-      }
+      assert.equals(checkbox.checked, !target_frequent.disabled);
+      assert.equals(checkbox.checked, !target_recent.disabled);
+      assert.equals(checkbox.checked, !target_tasks.disabled);
+      assert.equals(checkbox.checked, !target_maxListItemCount.disabled);
+      assert.equals(checkbox.checked, !target_refreshInSeconds.disabled);
+
       checkbox.click();
     }
   },
