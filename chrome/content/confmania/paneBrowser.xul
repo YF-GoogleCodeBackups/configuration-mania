@@ -695,7 +695,7 @@
 
   <groupbox>
     <caption label="&browser.others.jumplist.label;"/>
-    <checkbox class="indent" preference="browser.taskbar.lists.enabled" label="&browser.others.jumplist.enabled.label;"
+    <checkbox preference="browser.taskbar.lists.enabled" label="&browser.others.jumplist.enabled.label;"
               onsyncfrompreference="return gPrefWindow.prefBrowser.onJumplistEnabledSyncFrom();"/>
     <vbox id="others-jumplist" class="indent">
       <label value="&browser.others.jumplist.item.label;"/>
