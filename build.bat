@@ -36,7 +36,7 @@ goto EOF
 
 :xpi
 	call :prep
-	%ZIP_PROG% %EXTENSIONNAME%.xpi chrome\content chrome\skin chrome\locale *.rdf chrome.manifest defaults\preferences\pref.js -x@exclude.lst
+	%ZIP_PROG% %EXTENSIONNAME%.xpi chrome\content chrome\skin chrome\locale *.rdf chrome.manifest bootstrap.js lib\*.js -x@exclude.lst
 	goto EOF
 
 :EOF
