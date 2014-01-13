@@ -78,8 +78,6 @@
   <preference id="image.http.accept" name="image.http.accept" type="string"/>
 </preferences>
 
-<hbox class="heading"><html:h1 class="indent-small">&http.title;</html:h1></hbox>
-
 <hbox flex="1" orient="horizontal" id="paneHTTPBox">
 <radiogroup id="paneHTTPBoxTab" class="subtabs"
  orient="vertical" style="max-width: 10em; width: 10em;"

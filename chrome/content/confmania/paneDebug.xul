@@ -63,8 +63,6 @@
   <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
 </preferences>
 
-<hbox class="heading"><html:h1 class="indent-small">&debug.title;</html:h1></hbox>
-
 <groupbox>
 <caption label="&debug.debug.label;"/>
 <checkbox label="&debug.debug.dump.label;"

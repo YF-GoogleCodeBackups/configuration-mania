@@ -4,15 +4,6 @@
 <?xml-stylesheet href="chrome://browser/skin/preferences/in-content/preferences.css"?>
 <?xml-stylesheet href="chrome://confmania/skin/preferences.css"?>
 
-<!--
-<?xul-overlay href="paneBrowser.xul"?>
-<?xul-overlay href="paneSecurity.xul"?>
-<?xul-overlay href="paneHTTP.xul"?>
-<?xul-overlay href="paneUI.xul"?>
-<?xul-overlay href="paneAddons.xul"?>
-<?xul-overlay href="paneDebug.xul"?>
--->
-
 <!DOCTYPE prefwindow [
 <!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
 %preferencesDTD;
@@ -28,15 +19,14 @@
 %paneAddonsDTD;
 <!ENTITY % paneDebugDTD SYSTEM "chrome://confmania/locale/paneDebug.dtd">
 %paneDebugDTD;
-
-<!ENTITY cm "chrome://confmania/content">
 ]>
 
-<page title="&prefWindow.title;"
- context="prefContextPopup"
- onload="gPrefWindow.onLoad();"
- xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
- xmlns:html="http://www.w3.org/1999/xhtml">
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      id="confmania-in-content-page" title="&prefWindow.title;"
+      role="application" windowtype="Browser:Confmania"
+      disablefastfind="true"
+      onload="gPrefWindow.onLoad();">
 
 <script type="application/javascript" src="chrome://global/content/contentAreaUtils.js"/>
 <script type="application/javascript" src="preferences_in_content.js"/>
@@ -63,34 +53,37 @@
                  oncommand="history.forward();" disabled="true"/>
 </hbox>
 
-<hbox class="main-content" flex="1">
-  <prefpane data-category="landing" flex="1" id="mainPrefPane">
-    <vbox>
-      <hbox class="heading"><html:h1 class="indent-small">&prefWindow.title;</html:h1></hbox>
-      <hbox id="preferences-home" flex="1">
-        <button label="&browser.title;" class="landingButton"
-                oncommand="gPrefWindow.gotoPref('paneBrowser');"/>
-        <button label="&security.title;" class="landingButton"
-                oncommand="gPrefWindow.gotoPref('paneSecurity');"/>
-        <button label="&http.title;" class="landingButton"
-                oncommand="gPrefWindow.gotoPref('paneHTTP');"/>
-        <button label="&ui.title;" class="landingButton"
-                oncommand="gPrefWindow.gotoPref('paneUI');"/>
-        <button label="&addons.title;" class="landingButton"
-                oncommand="gPrefWindow.gotoPref('paneAddons');"/>
-        <button label="&debug.title;" class="landingButton"
-                oncommand="gPrefWindow.gotoPref('paneDebug');"/>
-      </hbox>
-    </vbox>
-  </prefpane>
+<hbox flex="1">
+  <richlistbox id="categories">
+    <richlistitem id="category-browser" class="category" align="center" value="paneBrowser">
+      <label flex="1" value="&browser.title;"/>
+    </richlistitem>
+    <richlistitem id="category-security" class="category" align="center" value="paneSecurity">
+      <label flex="1" value="&security.title;"/>
+    </richlistitem>
+    <richlistitem id="category-http" class="category" align="center" value="paneHTTP">
+      <label flex="1" value="&http.title;"/>
+    </richlistitem>
+    <richlistitem id="category-ui" class="category" align="center" value="paneUI">
+      <label flex="1" value="&ui.title;"/>
+    </richlistitem>
+    <richlistitem id="category-addons" class="category" align="center" value="paneAddons">
+      <label flex="1" value="&addons.title;"/>
+    </richlistitem>
+    <richlistitem id="category-debug" class="category" align="center" value="paneDebug">
+      <label flex="1" value="&debug.title;"/>
+    </richlistitem>
+  </richlistbox>
 
-  <prefpane data-category="paneBrowser" id="paneBrowser" label="&browser.title;" flex="1" src="&cm;/paneBrowser.xul"/>
-  <prefpane data-category="paneSecurity" id="paneSecurity" label="&security.title;" flex="1" src="&cm;/paneSecurity.xul"/>
-  <prefpane data-category="paneHTTP" id="paneHTTP" label="&http.title;" flex="1" src="&cm;/paneHTTP.xul"/>
-  <prefpane data-category="paneUI" id="paneUI" label="&ui.title;" flex="1" src="&cm;/paneUI.xul"/>
-  <prefpane data-category="paneAddons" id="paneAddons" label="&addons.title;" flex="1" src="&cm;/paneAddons.xul"/>
-  <prefpane data-category="paneDebug" id="paneDebug" label="&debug.title;" flex="1" src="&cm;/paneDebug.xul"/>
-
+  <box class="main-content" flex="1">
+    <prefpane id="paneBrowser" label="&browser.title;" flex="1" src="chrome://confmania/content/paneBrowser.xul"/>
+    <prefpane id="paneSecurity" label="&security.title;" flex="1" src="chrome://confmania/content/paneSecurity.xul"/>
+    <prefpane id="paneHTTP" label="&http.title;" flex="1" src="chrome://confmania/content/paneHTTP.xul"/>
+    <prefpane id="paneUI" label="&ui.title;" flex="1" src="chrome://confmania/content/paneUI.xul"/>
+    <prefpane id="paneAddons" label="&addons.title;" flex="1" src="chrome://confmania/content/paneAddons.xul"/>
+    <prefpane id="paneDebug" label="&debug.title;" flex="1" src="chrome://confmania/content/paneDebug.xul"/>
+  </box>
 </hbox>
+
 
 </page>

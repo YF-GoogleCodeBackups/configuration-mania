@@ -100,8 +100,6 @@
   <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
 </preferences>
 
-<hbox class="heading"><html:h1 class="indent-small">&security.title;</html:h1></hbox>
-
 <hbox flex="1" orient="horizontal" id="paneSecurityBox">
 <radiogroup id="paneSecurityBoxTab" class="subtabs"
  orient="vertical" style="max-width: 10em; width: 10em;"

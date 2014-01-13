@@ -176,8 +176,6 @@
   <preference id="browser.taskbar.lists.refreshInSeconds" name="browser.taskbar.lists.refreshInSeconds" type="int"/>
 </preferences>
 
-<hbox class="heading"><html:h1 class="indent-small">&browser.title;</html:h1></hbox>
-
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
 <radiogroup id="paneBrowserBoxTab" class="subtabs"
  orient="vertical" style="max-width: 10em; width: 10em;"

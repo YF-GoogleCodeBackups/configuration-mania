@@ -129,8 +129,6 @@
   <preference id="ui.allow_platform_file_picker" name="ui.allow_platform_file_picker" type="bool" inverted="true"/>
 </preferences>
 
-<hbox class="heading"><html:h1 class="indent-small">&ui.title;</html:h1></hbox>
-
 <hbox flex="1" orient="horizontal" id="paneUIBox">
 <radiogroup id="paneUIBoxTab" class="subtabs"
  orient="vertical" style="max-width: 10em; width: 10em;"

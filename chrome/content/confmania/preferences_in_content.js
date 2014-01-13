@@ -2,10 +2,21 @@ var gPrefWindow = {
   onLoad: function(){
     // In-content
     document.documentElement.instantApply = true;
-    window.history.replaceState("landing", document.title);
-    window.addEventListener("popstate", gPrefWindow.onStatePopped, true);
-    gPrefWindow.showPanel("landing");
-    gPrefWindow.updateCommands();
+
+    var categories = document.getElementById("categories");
+    categories.addEventListener("select", function(event) {
+      gPrefWindow.gotoPref(event.target.value);
+    }, false);
+    window.addEventListener("popstate", function(event) {
+      gPrefWindow.selectCategory(event.state);
+    }, false);
+
+    if (history.length > 1 && history.state) {
+      gPrefWindow.updateCommands();
+    } else {
+      window.history.replaceState("paneBrowser", document.title);
+    }
+    gPrefWindow.showPage(history.state);
 
     // context menu
     var prefWin = document.documentElement;
@@ -45,27 +56,30 @@ var gPrefWindow = {
     document.getElementById("back-btn").disabled = !webNav.canGoBack;
     document.getElementById("forward-btn").disabled = !webNav.canGoForward;
   },
-  showPanel: function(aDataCategory) {
+  selectCategory: function(name) {
+    var categories = document.getElementById("categories");
+    var item = categories.querySelector(".category[value=" + name + "]");
+    categories.selectedItem = item;
+  },
+  showPage: function(aPage) {
     var elems = document.getElementsByTagName("prefpane");
     for (var i = 0; i < elems.length; i++) {
-      if (elems[i].getAttribute("data-category") == aDataCategory) {
+      if (elems[i].id == aPage) {
         gPrefWindow.loadPrefPane(elems[i]);
-        elems[i].hidden = false;
         elems[i].selected = true;
+        elems[i].hidden = false;
       } else {
-        elems[i].hidden = true;
         elems[i].selected = false;
+        elems[i].hidden = true;
       }
     }
   },
-  onStatePopped: function(aEvent) {
-    gPrefWindow.updateCommands();
-    gPrefWindow.showPanel(aEvent.state);
-  },
   gotoPref: function(page) {
-    gPrefWindow.showPanel(page);
-    window.history.pushState(page, document.title);
+    if (history.state != page) {
+      window.history.pushState(page, document.title);
+    }
     gPrefWindow.updateCommands();
+    gPrefWindow.showPage(page);
   },
 
   // =========================
