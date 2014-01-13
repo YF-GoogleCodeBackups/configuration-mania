@@ -65,8 +65,6 @@
   <preference name="extensions.alwaysUnpack" id="extensions.alwaysUnpack" type="bool"/>
 </preferences>
 
-<hbox class="heading"><html:h1 class="indent-small">&addons.title;</html:h1></hbox>
-
 <hbox align="center">
   <label value="&addons.get_addons_maxResults.label;" control="ext-maxResults"/>
   <textbox id="ext-maxResults" preference="extensions.getAddons.maxResults" type="number" hidespinbuttons="true" min="1" size="3"/>
