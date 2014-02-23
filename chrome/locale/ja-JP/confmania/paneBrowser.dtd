@@ -2,9 +2,7 @@
 <!ENTITY browser.smartbrowsing.label "SmartBrowsing">
 <!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
 <!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords を使って、ロケーションバーから検索、その他の情報に素早くアクセスできます。">
-<!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Internet Keywords を有効にする (Firefox 23以下)">
-<!ENTITY browser.smartbrowsing.internetKeywords.URL.label "URL の接頭辞 : ">
-<!ENTITY browser.smartbrowsing.internetKeywords.URL.emptyText "標準の検索エンジン">
+<!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Internet Keywords を有効にする">
 <!ENTITY browser.smartbrowsing.domainGuessing.label "ドメイン補完">
 <!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Web ページがみつからないときに、自動的に接頭辞と接尾辞を補完">
 <!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "接頭辞 : ">
@@ -21,7 +19,6 @@
 <!ENTITY browser.urlbar.formatting.formatting-enabled.label "ドメイン名を強調表示">
 <!ENTITY browser.urlbar.formatting.trimURLs.label "http:// を省略して表示">
 <!ENTITY browser.html.label "ページ表示制御">
-<!ENTITY browser.html.allowBlink.label "点滅テキストを有効にする (Firefox 23以下)">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
 <!ENTITY browser.html.enableFrame.label "フレームを有効にする">
 <!ENTITY browser.html.frameForceResizability.label "フレームを強制的にサイズ変更できるようにする">
@@ -47,8 +44,6 @@
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
 <!ENTITY browser.html.3d-transforms.label "CSS 3D Transforms を有効にする">
 <!ENTITY browser.html.webgl.label "WebGL を有効にする (再起動必要)">
-<!ENTITY browser.html.webgl.software_render.label "ソフトウェアレンダリングする (Firefox 4-17)">
-<!ENTITY browser.html.webgl.osmesa.path.label "OSMesaLib のパス :">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
@@ -83,7 +78,6 @@
 <!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "外部アプリやリンクなどに新しいタブが開かれたとき、すぐにそのタブに切り替える">
 <!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "タブを閉じたら、そのタブを開いたタブをアクティブにする">
 <!ENTITY browser.tabs.tabpreview.label "タブのプレビュー表示">
-<!ENTITY browser.tabs.tabpreview.alltabs.label "タブの一覧表示 (Firefox 21以下)">
 <!ENTITY browser.tabs.tabpreview.ctrltab.label "Ctrl+TAB">
 <!ENTITY browser.tabs.tabpreview.taskbar.label "タスクバー (Windows7)">
 <!ENTITY browser.tabs.animation.label "アニメーション">
@@ -119,7 +113,7 @@
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "中止するが、次回&brandShortName;起動時に自動的に再開">
 <!ENTITY browser.download.quitBehavior.pauseOnRestart.label "中止して、次回&brandShortName;起動時も自動的には再開しない">
 <!ENTITY browser.download.quitBehavior.cancelOnQuit.label "&brandShortName;終了時にキャンセルする">
-<!ENTITY browser.download.nouseToolkitUI.label "ダウンロードパネルを使用する (Firefox 19+)">
+<!ENTITY browser.download.nouseToolkitUI.label "ダウンロードパネルを使用する">
 <!ENTITY browser.download.flashCount.label "ダウンロード終了時、ダウンロードウィンドウを">
 <!ENTITY browser.download.flashCount.never.label "点滅させない">
 <!ENTITY browser.download.flashCount.infinite.label "ウィンドウがアクティブになるまで点滅">

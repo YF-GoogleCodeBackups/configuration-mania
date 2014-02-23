@@ -54,7 +54,6 @@
 
 <preferences>
   <preference id="keyword.enabled" name="keyword.enabled" type="bool"/>
-  <preference id="keyword.URL" name="keyword.URL" type="wstring"/>
   <preference id="browser.fixup.alternate.enabled" name="browser.fixup.alternate.enabled" type="bool"/>
   <preference id="browser.fixup.alternate.prefix" name="browser.fixup.alternate.prefix" type="string"/>
   <preference id="browser.fixup.alternate.suffix" name="browser.fixup.alternate.suffix" type="string"/>
@@ -69,7 +68,6 @@
   <preference id="browser.urlbar.formatting.enabled" name="browser.urlbar.formatting.enabled" type="bool"/>
   <preference id="browser.urlbar.trimURLs" name="browser.urlbar.trimURLs" type="bool"/>
 
-  <preference id="browser.blink_allowed" name="browser.blink_allowed" type="bool"/>
   <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool"/>
   <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
   <preference id="permissions.default.image" name="permissions.default.image" type="int"/>
@@ -82,8 +80,6 @@
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
   <preference id="layout.3d-transforms.enabled" name="layout.3d-transforms.enabled" type="bool"/>
   <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
-  <preference id="webgl.force_osmesa" name="webgl.force_osmesa" type="bool"/>
-  <preference id="webgl.osmesalib" name="webgl.osmesalib" type="string"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.zoom.siteSpecific" name="browser.zoom.siteSpecific" type="bool"/>
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
@@ -109,7 +105,6 @@
   <preference id="browser.tabs.loadBookmarksInBackground" name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.loadDivertedInBackground" name="browser.tabs.loadDivertedInBackground" type="bool" inverted="true"/>
   <preference id="browser.tabs.selectOwnerOnClose" name="browser.tabs.selectOwnerOnClose" type="bool"/>
-  <preference id="browser.allTabs.previews" name="browser.allTabs.previews" type="bool"/>
   <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
   <preference id="browser.taskbar.previews.enable" name="browser.taskbar.previews.enable" type="bool"/>
   <preference id="browser.tabs.animate" name="browser.tabs.animate" type="bool"/>
@@ -210,10 +205,6 @@
       <checkbox id="smartbrowsing-keywordsEnabled" preference="keyword.enabled"
                 onsyncfrompreference="return gPrefWindow.prefBrowser.onSmartBrowsingSyncFrom();"
                 label="&browser.smartbrowsing.internetKeywords.enabled.label;"/>
-      <hbox align="center">
-        <label control="smartbrowsing-keywordsURL" value="&browser.smartbrowsing.internetKeywords.URL.label;"/>
-        <textbox id="smartbrowsing-keywordsURL" preference="keyword.URL" flex="1" class="uri-element" placeholder="&browser.smartbrowsing.internetKeywords.URL.emptyText;"/>
-      </hbox>
     </vbox>
   </groupbox>
   <groupbox>
@@ -264,7 +255,6 @@
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="html">
-  <checkbox label="&browser.html.allowBlink.label;" preference="browser.blink_allowed"/>
   <checkbox id="html-frameEnabled" label="&browser.html.enableFrame.label;"
    onsyncfrompreference="return gPrefWindow.prefBrowser.onHtmlFrameSyncFrom();" preference="browser.frames.enabled"/>
   <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
@@ -317,17 +307,7 @@
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.3d-transforms.label;" preference="layout.3d-transforms.enabled"/>
-  <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.disabled"
-            onsyncfrompreference="return gPrefWindow.prefBrowser.onWebGLSyncFrom()"/>
-  <vbox id="html-webgl-vbox" class="indent">
-    <checkbox id="html-webgl-software-render" label="&browser.html.webgl.software_render.label;" preference="webgl.force_osmesa"
-              onsyncfrompreference="return gPrefWindow.prefBrowser.onWebGLSFRenderSyncFrom()"/>
-    <hbox align="center">
-      <label control="html-webgl-osmesa-path" value="&browser.html.webgl.osmesa.path.label;"/>
-      <textbox id="html-webgl-osmesa-path" preference="webgl.osmesalib" flex="1"/>
-      <button label="&browse;" control="html-webgl-osmesa-path" oncommand="gPrefWindow.prefBrowser.onWebGLOSMesaBrowse()"/>
-    </hbox>
-  </vbox>
+  <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.disabled"/>
 
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
   <checkbox label="&browser.html.zoomSiteSpecific.label;" preference="browser.zoom.siteSpecific"/>
@@ -410,7 +390,6 @@
   </groupbox>
   <groupbox>
     <caption label="&browser.tabs.tabpreview.label;"/>
-    <checkbox label="&browser.tabs.tabpreview.alltabs.label;" preference="browser.allTabs.previews"/>
     <checkbox label="&browser.tabs.tabpreview.ctrltab.label;" preference="browser.ctrlTab.previews"/>
     <checkbox label="&browser.tabs.tabpreview.taskbar.label;" preference="browser.taskbar.previews.enable"/>
   </groupbox>

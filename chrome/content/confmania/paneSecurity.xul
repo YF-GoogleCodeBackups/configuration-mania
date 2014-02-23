@@ -88,7 +88,6 @@
   <preference id="browser.ssl_override_behavior" name="browser.ssl_override_behavior" type="int"/>
 
   <preference id="network.http.redirection-limit" name="network.http.redirection-limit" type="int"/>
-  <preference id="network.enableIDN" name="network.enableIDN" type="bool" inverted="true"/>
   <preference id="network.IDN_show_punycode" name="network.IDN_show_punycode" type="bool"/>
 
   <preference id="signon.autofillForms" name="signon.autofillForms" type="bool"/>
@@ -259,11 +258,9 @@
     <label control="redirection-limit" value="&security.net.redirection-limit.label;"/>
     <textbox id="redirection-limit" type="number" hidespinbuttons="true" size="2" preference="network.http.redirection-limit"/>
   </hbox>
-  <checkbox id="disableIDN" label="&security.net.disableIDN.label;"
-    preference="network.enableIDN" onsyncfrompreference="return gPrefWindow.prefSecurity.onDisableIDNSyncFrom();"/>
-  <checkbox id="showPunycode" class="indent" label="&security.net.show_punycode.label;"
+  <checkbox id="showPunycode" label="&security.net.show_punycode.label;"
     preference="network.IDN_show_punycode"/>
-  <description id="showPunycodeDesc" class="indent">&security.net.show_punycode.desc;</description>
+  <description id="showPunycodeDesc">&security.net.show_punycode.desc;</description>
 </box>
 <box class="subtabpanel" orient="vertical" id="security-pane-privacy">
   <groupbox>
