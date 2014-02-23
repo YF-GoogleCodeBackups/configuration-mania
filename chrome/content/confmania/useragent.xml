@@ -5,6 +5,7 @@
     <option name="Windows 7" oscpu="Windows NT 6.1" platform="Windows"/>
     <option name="Windows 7 (Win64)" oscpu="Windows NT 6.1; Win64; x64" platform="Windows"/>
     <option name="Windows 8" oscpu="Windows NT 6.2" platform="Windows"/>
+    <option name="Windows 8.1" oscpu="Windows NT 6.3" platform="Windows"/>
     <option name="Intel MacOS X" oscpu="Intel MacOS X" platform="Macintosh"/>
     <option name="Linux x86" oscpu="Linux i686" platform="X11"/>
     <option name="Linux x64" oscpu="Linux x86_64" platform="X11"/>
