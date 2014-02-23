@@ -80,15 +80,6 @@ tc.tests = {
       assert.equals("true", this.document.getElementById(paneBrowserBoxTab.value).getAttribute("selected"));
     }
   },
-  testOnSmartBrowsingSyncFrom: function() {
-    let checkbox = this.document.getElementById("smartbrowsing-keywordsEnabled");
-    let target = this.document.getElementById("smartbrowsing-keywordsURL");
-
-    for (let i = 0; i < 2; i++) {
-      assert.equals(checkbox.checked, !target.disabled);
-      checkbox.click();
-    }
-  },
   testOnDomainGaussSyncFrom: function() {
     let checkbox = this.document.getElementById("smartbrowsing-domainGuessingEnabled");
     let target = this.document.getElementById("smartbrowsing-domainGuessingPrefix");
@@ -138,28 +129,6 @@ tc.tests = {
     }
 
     pref.value = origval;
-  },
-  testOnWebGLSyncFrom: function() {
-    let checkbox = this.document.getElementById("html-webglEnabled");
-    let target = this.document.getElementById("html-webgl-software-render");
-
-    for (let i = 0; i < 2; i++) {
-      assert.equals(checkbox.checked, !target.disabled);
-      checkbox.click();
-    }
-  },
-  testOnWebGLSFRenderSyncFrom: function() {
-    let checkbox1 = this.document.getElementById("html-webglEnabled");
-    let checkbox2 = this.document.getElementById("html-webgl-software-render");
-    let target = this.document.getElementById("html-webgl-osmesa-path");
-
-    for (let i = 0; i < 2; i++) {
-      for (let j = 0; j < 2; j++) {
-        assert.equals(checkbox1.checked && checkbox2.checked, !target.disabled);
-        checkbox2.click();
-      }
-      checkbox1.click();
-    }
   },
   testOnFocusHighlightSyncFrom: function() {
     let checkbox = this.document.getElementById("focus-highlight-enabled");

@@ -70,7 +70,6 @@
 <!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Pre-populate the current URL and pre-fetch the certificate.">
 <!ENTITY security.net.label "Network">
 <!ENTITY security.net.redirection-limit.label "Max number of HTTP redirections to follow:">
-<!ENTITY security.net.disableIDN.label "Disable IDN (Internationalized Domain Names) (up-to Firefox 21)">
 <!ENTITY security.net.show_punycode.label "Show IDN in punycode">
 <!ENTITY security.net.show_punycode.desc "There is no need to show IDN in punycode. Current &brandShortName; refuses illegal IDN addresses by using the black/white list.">
 <!ENTITY security.privacy.label "Privacy">

@@ -70,7 +70,6 @@
 <!ENTITY security.ssl.ssl_override_behavior.prefetch.label "現在のURLを例外として予め入力し、さらにSSL証明書も自動取得する。">
 <!ENTITY security.net.label "ネットワーク">
 <!ENTITY security.net.redirection-limit.label "HTTPリダイレクト回数の上限">
-<!ENTITY security.net.disableIDN.label "IDN (Internationalized Domain Names) を無効にする(Firefox 21以下)">
 <!ENTITY security.net.show_punycode.label "IDN を punycode で表示する">
 <!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
 <!ENTITY security.privacy.label "プライバシー">

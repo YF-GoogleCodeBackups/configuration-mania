@@ -88,11 +88,6 @@ gPrefWindow.prefBrowser = {
       pane.setAttribute("selected", (radioItem.selected)? "true" : "false");
     }
   },
-  onSmartBrowsingSyncFrom : function () {
-    let disabled = ! document.getElementById("keyword.enabled").value;
-    document.getElementById("keyword.URL").disabled = disabled;
-    return undefined; // no override
-  },
   onDomainGaussSyncFrom : function () {
     let disabled = ! document.getElementById("browser.fixup.alternate.enabled").value;
     for each (let name in ["browser.fixup.alternate.prefix", "browser.fixup.alternate.suffix"]) {
@@ -132,16 +127,6 @@ gPrefWindow.prefBrowser = {
                                           "chrome://browser/content/preferences/permissions.xul",
                                           "", params);
     }
-  },
-  onWebGLSyncFrom : function() {
-    let disabled = ! document.getElementById("webgl.disabled").value;
-    document.getElementById("webgl.force_osmesa").disabled = disabled;
-    return gPrefWindow.prefBrowser.onWebGLSFRenderSyncFrom();
-  },
-  onWebGLSFRenderSyncFrom : function() {
-    let disabled = ! (document.getElementById("webgl.disabled").value && document.getElementById("webgl.force_osmesa").value);
-    document.getElementById("webgl.osmesalib").disabled = disabled;
-    return undefined; // no override
   },
   onFocusHighlightSyncFrom : function() {
     let disabled = ! document.getElementById("browser.display.use_focus_colors").value;

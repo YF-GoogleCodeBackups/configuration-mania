@@ -200,15 +200,6 @@ tc.tests = {
       mData[i].value = origval[i];
     }
   },
-  testOnDisableIDNSyncFrom: function() {
-    let checkbox = this.document.getElementById("disableIDN");
-    let target = this.document.getElementById("showPunycode");
-
-    for (let i = 0; i < 2; i++) {
-      assert.equals(checkbox.checked, target.disabled);
-      checkbox.click();
-    }
-  },
   testOnSendRefererSecureXSiteSyncFrom: function() {
     let radiogroup = this.document.getElementById("sendReferer");
     let target = this.document.getElementById("sendRefererSecureXSite");
