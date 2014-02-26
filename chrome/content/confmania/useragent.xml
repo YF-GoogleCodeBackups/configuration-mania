@@ -6,7 +6,7 @@
     <option name="Windows 7 (Win64)" oscpu="Windows NT 6.1; Win64; x64" platform="Windows"/>
     <option name="Windows 8" oscpu="Windows NT 6.2" platform="Windows"/>
     <option name="Windows 8.1" oscpu="Windows NT 6.3" platform="Windows"/>
-    <option name="Intel MacOS X" oscpu="Intel MacOS X" platform="Macintosh"/>
+    <option name="Intel MacOS X 10.9" oscpu="Intel MacOS X 10.9" platform="Macintosh"/>
     <option name="Linux x86" oscpu="Linux i686" platform="X11"/>
     <option name="Linux x64" oscpu="Linux x86_64" platform="X11"/>
     <option name="FreeBSD x86" oscpu="FreeBSD i686" platform="X11"/>
@@ -25,20 +25,20 @@
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
 
-    <option name="Chrome 31.0.1650.63 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="31.0.1650.63"/>
-    <option name="Chrome 31.0.1650.63 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="31.0.1650.63"/>
-    <option name="Chrome 31.0.1650.63 (MacOS X 10.8)" platform="Macintosh" oscpu="Intel Mac OS X 10_8" webkit="537.36" version="31.0.1650.63"/>
-    <option name="Chrome 31.0.1650.63 (Nexus 4; Android 4.2.2)" platform="Linux" oscpu="Android 4.2.2; Nexus 4 Build/JDQ39" webkit="537.36" version="31.0.1650.63 Mobile"/>
+    <option name="Chrome 33.0.1750.117 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="33.0.1750.117"/>
+    <option name="Chrome 33.0.1750.117 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="33.0.1750.117"/>
+    <option name="Chrome 33.0.1750.117 (MacOS X 10.8)" platform="Macintosh" oscpu="Intel Mac OS X 10_9" webkit="537.36" version="33.0.1750.117"/>
+    <option name="Chrome 33.0.1750.117 (Nexus 5; Android 4.4)" platform="Linux" oscpu="Android 4.4; Nexus 5 Build/KRT16M" webkit="537.36" version="33.0.1750.117 Mobile"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
-    <option name="Safari 7.0 (Intel MacOS X 10.9)" platform="Macintosh" oscpu="Intel Mac OS X 10_9" webkit="537.71" safari="537.71" version="7.0"/>
+    <option name="Safari 7.0.2 (Intel MacOS X 10.9.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_9_2" webkit="537.74.9" safari="537.74.9" version="7.0.2"/>
 
-    <option name="Safari 6.0 (iPad; iOS 7.0.4)" platform="iPad" oscpu="CPU OS 7_0_4 like Mac OS X" webkit="537.51.1" safari="8357.53" version="7.0 Mobile/11B554a"/>
-    <option name="Safari 6.0 (iPhone; iOS 7.0.4)" platform="iPhone" oscpu="CPU iPhone OS 7_0_4 like Mac OS X" webkit="537.51.1" safari="8357.53" version="7.0 Mobile/11B554a"/>
+    <option name="Safari 7.0 (iPad; iOS 7.0.6)" platform="iPad" oscpu="CPU OS 7_0_6 like Mac OS X" webkit="537.51.1" safari="9537.53" version="7.0 Mobile/11B651"/>
+    <option name="Safari 7.0 (iPhone; iOS 7.0.6)" platform="iPhone" oscpu="CPU iPhone OS 7_0_6 like Mac OS X" webkit="537.51.1" safari="9537.53" version="7.0 Mobile/11A501"/>
   </group>
   <group name="Googlebot">
     <option name="Googlebot 2.1" value="Mozilla/5.0 (compatible; Googlebot/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
-    <option name="Googlebot-Mobile (Smartphone) 2.1" value="Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Version/4.0.5 Mobile/8B117 Safari/6531.22.7 (compatible; Googlebot-Mobile/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
+    <option name="Googlebot (Smartphone) 2.1" value="Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25 (compatible; Googlebot/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
     <option name="Googlebot Image 1.0" value="Googlebot-Image/{opt:version}" version="1.0"/>
   </group>
 </useragent>
