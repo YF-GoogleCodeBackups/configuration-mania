@@ -1,0 +1,8 @@
+@-moz-document url-prefix(chrome://browser/content/) {
+  toolbar[mode="icons"] #confmania-australis-button .toolbarbutton-text {
+    display: -moz-box ! important;
+  }
+  toolbar[mode="icons"] #confmania-australis-button .toolbarbutton-icon {
+    display: none ! important;
+  }
+}
