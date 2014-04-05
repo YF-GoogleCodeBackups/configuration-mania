@@ -168,54 +168,65 @@ tc.tests = {
         assert.isTrue(backbtn.disabled);
         assert.isTrue(forwardbtn.disabled);
 
-        let landingButton = win.document.querySelectorAll("button.landingButton");
-        for each (let [i,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
-          let mainPane = win.document.getElementById("mainPrefPane");
+        let listBox = win.document.getElementById("categories");
+        let listItems = win.document.querySelectorAll("#categories richlistitem.category");
+        let panes = "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" ");
+        assert.equals(listItems.length, panes.length);
+
+        for each (let [i,v] in Iterator(panes)) {
           let thePane = win.document.getElementById(v);
 
-          assert.isTrue(mainPane.selected);
-          assert.isFalse(thePane.selected);
-          assert.isFalse(mainPane.hidden);
-          assert.isTrue(thePane.hidden);
+          let listItem = win.document.querySelector("richlistitem[value=\"%s\"]".replace("%s", v)); 
+          assert.equals(listItem.parentNode, listBox);
 
-          landingButton[i].click();
+          // pane load
+          listItem.click();
           sleep(1000);
-          assert.isFalse(mainPane.selected);
-          assert.isTrue(thePane.selected);
-          assert.isTrue(mainPane.hidden);
-          assert.isFalse(thePane.hidden);
-
+          assert.isTrue(listItem.selected);
           assert.isTrue(thePane.loaded);
           assert.isTrue(thePane.childNodes.length > 0);
 
-          assert.isFalse(backbtn.disabled);
-          assert.isTrue(forwardbtn.disabled);
+          for each (let [j,u] in Iterator(panes)) {
+            if (j === i) {
+              assert.isTrue(win.document.getElementById(u).selected);
+            } else {
+              assert.isFalse(win.document.getElementById(u).selected);
+            }
+          }
 
-          win.history.back();
-          sleep(100);
-          assert.isTrue(mainPane.selected);
-          assert.isFalse(thePane.selected);
-          assert.isFalse(mainPane.hidden);
-          assert.isTrue(thePane.hidden);
+          // history
+          if (i === 0) {
+            assert.isTrue(backbtn.disabled);
+            assert.isTrue(forwardbtn.disabled);
+          } else {
+            var prevPane = win.document.getElementById(panes[i - 1]);
+            assert.isFalse(backbtn.disabled);
+            assert.isTrue(forwardbtn.disabled);
 
-          assert.isTrue(backbtn.disabled);
-          assert.isFalse(forwardbtn.disabled);
+            backbtn.click();
+            sleep(100);
+            assert.isFalse(forwardbtn.disabled);
+            assert.isTrue(prevPane.selected);
+            assert.isFalse(thePane.selected);
+            forwardbtn.click();
+            sleep(100);
+            assert.isFalse(backbtn.disabled);
+            assert.isTrue(forwardbtn.disabled);
+            assert.isFalse(prevPane.selected);
+            assert.isTrue(thePane.selected);
 
-          forwardbtn.click();
-          sleep(100);
-          assert.isFalse(mainPane.selected);
-          assert.isTrue(thePane.selected);
-          assert.isTrue(mainPane.hidden);
-          assert.isFalse(thePane.hidden);
-
-          assert.isFalse(backbtn.disabled);
-          assert.isTrue(forwardbtn.disabled);
-
-          backbtn.click();
-          sleep(100);
-
-          assert.isTrue(backbtn.disabled);
-          assert.isFalse(forwardbtn.disabled);
+            win.history.back();
+            sleep(100);
+            assert.isFalse(forwardbtn.disabled);
+            assert.isTrue(prevPane.selected);
+            assert.isFalse(thePane.selected);
+            win.history.forward();
+            sleep(100);
+            assert.isFalse(backbtn.disabled);
+            assert.isTrue(forwardbtn.disabled);
+            assert.isFalse(prevPane.selected);
+            assert.isTrue(thePane.selected);
+          }
         }
 
         browserWin.getBrowser().removeCurrentTab();
