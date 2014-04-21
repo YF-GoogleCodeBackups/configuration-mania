@@ -60,10 +60,13 @@
 <!ENTITY ui.bidi.direction.ltr.label "-&gt; Left-to-right">
 <!ENTITY ui.bidi.direction.rtl.label "&lt;- Right-to-left">
 <!ENTITY ui.bidi.numeral.label "Numeral">
+<!ENTITY ui.bidi.numeral.nominal.label "Nominal">
 <!ENTITY ui.bidi.numeral.regular_context.label "Regular context">
 <!ENTITY ui.bidi.numeral.hindi_context.label "Hindi context">
 <!ENTITY ui.bidi.numeral.arabic.label "Arabic">
 <!ENTITY ui.bidi.numeral.hindi.label "Hindi">
+<!ENTITY ui.bidi.numeral.persian_context.label "Persian context">
+<!ENTITY ui.bidi.numeral.persian.label "Persian">
 <!ENTITY ui.bidi.support.label "Provider">
 <!ENTITY ui.bidi.support.mozilla.label "&brandShortName;">
 <!ENTITY ui.bidi.support.os.label "OS">

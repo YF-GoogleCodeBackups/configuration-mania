@@ -349,10 +349,13 @@
       <row align="center">
         <label control="bidi-numeral" value="&ui.bidi.numeral.label;"/>
         <menulist id="bidi-numeral" preference="bidi.numeral"><menupopup>
-          <menuitem value="0" label="&ui.bidi.numeral.regular_context.label;"/>
-          <menuitem value="1" label="&ui.bidi.numeral.hindi_context.label;"/>
-          <menuitem value="2" label="&ui.bidi.numeral.arabic.label;"/>
-          <menuitem value="3" label="&ui.bidi.numeral.hindi.label;"/>
+          <menuitem value="0" label="&ui.bidi.numeral.nominal.label;"/>
+          <menuitem value="1" label="&ui.bidi.numeral.regular_context.label;"/>
+          <menuitem value="2" label="&ui.bidi.numeral.hindi_context.label;"/>
+          <menuitem value="3" label="&ui.bidi.numeral.arabic.label;"/>
+          <menuitem value="4" label="&ui.bidi.numeral.hindi.label;"/>
+          <menuitem value="5" label="&ui.bidi.numeral.persian_context.label;"/>
+          <menuitem value="6" label="&ui.bidi.numeral.persian.label;"/>
         </menupopup></menulist>
       </row>
       <row align="center">
