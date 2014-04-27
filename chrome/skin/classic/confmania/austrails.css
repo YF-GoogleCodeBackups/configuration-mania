@@ -1,8 +1,9 @@
 @-moz-document url-prefix(chrome://browser/content/) {
-  toolbar[mode="icons"] #confmania-australis-button .toolbarbutton-text {
-    display: -moz-box ! important;
+  #confmania-australis-button {
+    list-style-image: url(confmania16.png);
   }
-  toolbar[mode="icons"] #confmania-australis-button .toolbarbutton-icon {
-    display: none ! important;
+  #confmania-australis-button[cui-areatype="menu-panel"],
+  toolbarpaletteitem[place="palette"] > #confmania-australis-button {
+    list-style-image: url(confmania32.png);
   }
 }
