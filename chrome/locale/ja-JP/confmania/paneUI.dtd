@@ -60,10 +60,13 @@
 <!ENTITY ui.bidi.direction.ltr.label "-&gt; 左から右">
 <!ENTITY ui.bidi.direction.rtl.label "&lt;- 右から左">
 <!ENTITY ui.bidi.numeral.label "数値表現">
-<!ENTITY ui.bidi.numeral.regular_context.label "通常文脈">
+<!ENTITY ui.bidi.numeral.nominal.label "公称 (Nominal)">
+<!ENTITY ui.bidi.numeral.regular_context.label "標準文脈">
 <!ENTITY ui.bidi.numeral.hindi_context.label "ヒンディ語文脈">
-<!ENTITY ui.bidi.numeral.arabic.label "アラビア語">
+<!ENTITY ui.bidi.numeral.arabic.label "アラビア語文脈">
 <!ENTITY ui.bidi.numeral.hindi.label "ヒンディ語">
+<!ENTITY ui.bidi.numeral.persian_context.label "ペルシャ語文脈">
+<!ENTITY ui.bidi.numeral.persian.label "ペルシャ語">
 <!ENTITY ui.bidi.support.label "処理担当">
 <!ENTITY ui.bidi.support.mozilla.label "&brandShortName;">
 <!ENTITY ui.bidi.support.os.label "OS">
