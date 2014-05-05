@@ -25,13 +25,13 @@
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
 
-    <option name="Chrome 33.0.1750.117 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="33.0.1750.117"/>
-    <option name="Chrome 33.0.1750.117 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="33.0.1750.117"/>
-    <option name="Chrome 33.0.1750.117 (MacOS X 10.8)" platform="Macintosh" oscpu="Intel Mac OS X 10_9" webkit="537.36" version="33.0.1750.117"/>
-    <option name="Chrome 33.0.1750.117 (Nexus 5; Android 4.4)" platform="Linux" oscpu="Android 4.4; Nexus 5 Build/KRT16M" webkit="537.36" version="33.0.1750.117 Mobile"/>
+    <option name="Chrome 34.0.1847.131 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="34.0.1847.131"/>
+    <option name="Chrome 34.0.1847.131 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="34.0.1847.131"/>
+    <option name="Chrome 34.0.1847.131 (MacOS X 10.8)" platform="Macintosh" oscpu="Intel Mac OS X 10_9" webkit="537.36" version="34.0.1847.131"/>
+    <option name="Chrome 34.0.1847.112 (Nexus 5; Android 4.4.2)" platform="Linux" oscpu="Android 4.4.2; Nexus 5 Build/KOT49H" webkit="537.36" version="34.0.1847.112 Mobile"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
-    <option name="Safari 7.0.2 (Intel MacOS X 10.9.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_9_2" webkit="537.74.9" safari="537.74.9" version="7.0.2"/>
+    <option name="Safari 7.0.3 (Intel MacOS X 10.9.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_9_2" webkit="537.75.10" safari="537.75.10" version="7.0.3"/>
 
     <option name="Safari 7.0 (iPad; iOS 7.0.6)" platform="iPad" oscpu="CPU OS 7_0_6 like Mac OS X" webkit="537.51.1" safari="9537.53" version="7.0 Mobile/11B651"/>
     <option name="Safari 7.0 (iPhone; iOS 7.0.6)" platform="iPhone" oscpu="CPU iPhone OS 7_0_6 like Mac OS X" webkit="537.51.1" safari="9537.53" version="7.0 Mobile/11A501"/>
