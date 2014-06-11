@@ -51,7 +51,7 @@
 <!ENTITY security.popupwin.event.touchend.label "Touch End">
 <!ENTITY security.antivirus.label "Anti-Virus">
 <!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
-<!ENTITY security.antivirus.disableSaveZoneInformation.label "Disable saving the security zone information in the Alternate Data Stream of downloaded executable files on Windows (Firefox 26+)">
+<!ENTITY security.antivirus.disableSaveZoneInformation.label "Disable saving the security zone information in the Alternate Data Stream of downloaded executable files on Windows (Firefox 26-28)">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE file.">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.SSLProtocolVersions.caption "SSL Protocol Versions">
