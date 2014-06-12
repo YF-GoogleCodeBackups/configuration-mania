@@ -61,6 +61,7 @@
   <preference id="dom.disable_window_status_change" name="dom.disable_window_status_change" type="bool"/>
   <preference id="dom.disable_image_src_set" name="dom.disable_image_src_set" type="bool"/>
   <preference id="dom.event.contextmenu.enabled" name="dom.event.contextmenu.enabled" type="bool" inverted="true"/>
+  <preference id="dom.event.clipboardevents.enabled" name="dom.event.clipboardevents.enabled" type="bool" inverted="true"/>
   <preference id="nglayout.events.dispatchLeftClickOnly" name="nglayout.events.dispatchLeftClickOnly" type="bool"/>
 
   <preference id="dom.disable_window_open_feature.menubar" name="dom.disable_window_open_feature.menubar" type="bool"/>
@@ -135,6 +136,7 @@
       <checkbox preference="dom.disable_image_src_set" label="&security.js.annoy.change_image;"/>
       <description class="indent">&security.js.annoy.change_image.desc;</description>
       <checkbox preference="dom.event.contextmenu.enabled" label="&security.js.annoy.contextmenu;"/>
+      <checkbox preference="dom.event.clipboardevents.enabled" label="&security.js.annoy.clipboardevents;"/>
       <checkbox preference="nglayout.events.dispatchLeftClickOnly" label="&security.js.annoy.dispatchLeftClickOnly;"/>
     </groupbox>
   </groupbox>

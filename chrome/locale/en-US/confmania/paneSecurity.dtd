@@ -10,6 +10,7 @@
 <!ENTITY security.js.annoy.change_image "Disable Changing images">
 <!ENTITY security.js.annoy.change_image.desc "Caution: The setting &quot;&security.js.annoy.change_image;&quot; cause some web applications (such as Google Map) not to work.">
 <!ENTITY security.js.annoy.contextmenu "Disallow to dispatch contextmenu events">
+<!ENTITY security.js.annoy.clipboardevents "Disallow to dispatch clipboard events (copy/cut/paste)">
 <!ENTITY security.js.annoy.dispatchLeftClickOnly "Allow to dispatch left click only">
 <!ENTITY security.js.uis.label "UI-Spoofing">
 <!ENTITY security.js.uis.desc1 "Disable hiding (and Enable) when opened by JavaScript :">
