@@ -10,6 +10,7 @@
 <!ENTITY security.js.annoy.change_image "画像の置き換えを無効にする">
 <!ENTITY security.js.annoy.change_image.desc "注意: &quot;&security.js.annoy.change_image;&quot;の設定によって、いくつかのウェブアプリケーション(Google マップなど)が動作しなくなります。">
 <!ENTITY security.js.annoy.contextmenu "コンテキストメニューイベントの取得を無効にする">
+<!ENTITY security.js.annoy.clipboardevents "クリップボードイベント(コピー/切り取り/貼り付け)の取得を無効にする">
 <!ENTITY security.js.annoy.dispatchLeftClickOnly "左クリックのみイベント処理を許可">
 <!ENTITY security.js.uis.label "UI 擬装対策">
 <!ENTITY security.js.uis.desc1 "JavaScript で開かれたウインドウで以下を強制可視表示/有効 :">
