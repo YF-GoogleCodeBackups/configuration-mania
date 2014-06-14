@@ -150,6 +150,12 @@ gPrefWindow.prefBrowser = {
     document.getElementById("browser.tabs.tabClipWidth").disabled = disabled;
     return undefined; // no override
   },
+  onSessionStoreRestoreOnDemandSyncFrom: function() {
+    let disabled_hidden_tabs =   document.getElementById("browser.sessionstore.restore_on_demand").value;
+    let disabled_pinned_tabs = ! document.getElementById("browser.sessionstore.restore_on_demand").value;
+    document.getElementById("browser.sessionstore.restore_hidden_tabs").disabled = disabled_hidden_tabs;
+    document.getElementById("browser.sessionstore.restore_pinned_tabs_on_demand").disabled = disabled_pinned_tabs;
+  },
   onSessionStoreWarnOnQuitSyncFrom : function() {
     let disabled = ! document.getElementById("browser.warnOnQuit").value;
     document.getElementById("browser.showQuitWarning").disabled = disabled;
