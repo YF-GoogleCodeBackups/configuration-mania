@@ -159,6 +159,8 @@
 <!ENTITY browser.others.geoExceptions.label "Exceptions">
 <!ENTITY browser.others.geoExceptions.title "Exceptions - Geolocation">
 <!ENTITY browser.others.geoExceptions.desc "You can specify which websites are allowed to access your location. Type the exact address of the site you want to manage and then click Block or Allow.">
+<!ENTITY browser.others.geoWifiUri.label "Geolocation service URL:">
+<!ENTITY browser.others.geoWifiUri.browseFile.label "Browse file for debugging...">
 <!ENTITY browser.others.full_screen_enabled.label "Enable Full Screen API">
 <!ENTITY browser.others.full_screenExceptions.label "Exceptions">
 <!ENTITY browser.others.full_screenExceptions.title "Exceptions - Full Screen">

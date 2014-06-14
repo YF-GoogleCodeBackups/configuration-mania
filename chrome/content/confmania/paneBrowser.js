@@ -339,7 +339,15 @@ gPrefWindow.prefBrowser = {
   onOthersGeoEnabledSyncFrom : function () {
     let disabled = document.getElementById("geo.enabled").value;
     document.getElementById("others-geoExceptions").disabled = disabled;
+    document.getElementById("geo.wifi.uri").disabled = disabled;
     return undefined; // no override
+  },
+  onOthersGeoWifiUriBrowse: function() {
+    const filters = [{name: null, filter: "*.json"}, Components.interfaces.nsIFilePicker.filterAll];
+    this._openBrowse(filters, "others-geoWifiUri", "uri");
+  },
+  onOthersGeoWifiUriReset: function() {
+    gPrefWindow.resetPref(document.getElementById("geo.wifi.uri"));
   },
   onOthersGeoExceptionsCommand : function() {
     let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "geo" };
