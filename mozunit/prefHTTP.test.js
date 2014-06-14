@@ -1,9 +1,10 @@
-var TestCase = mozunit.TestCase;
-var assert = mozunit.assert;
+"use strict";
+var TestCase = (typeof(mozlab) !== "undefined")? mozlab.mozunit.TestCase : mozunit.TestCase;
+var assert   = (typeof(mozlab) !== "undefined")? mozlab.mozunit.assert   : mozunit.assert;
 
-const Cc = Components.classes;
-const Ci = Components.interfaces;
-const Cu = Components.utils;
+var Cc = Components.classes;
+var Ci = Components.interfaces;
+var Cu = Components.utils;
 Cu.import("resource://gre/modules/Services.jsm");
 
 function sleep(aWait) {
