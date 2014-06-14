@@ -93,10 +93,13 @@
 <!ENTITY browser.sessionStore.warnOnQuit.desc "注意：&brandShortName; を起動するときホームページまたは空白ページを表示するよう設定したとき、この設定は有効です。">
 <!ENTITY browser.sessionStore.showQuitWarning.label "終了時には尋ねない">
 <!ENTITY browser.sessionStore.warnOnRestart.label "再起動時には尋ねない">
-<!ENTITY browser.sessionStore.privacy_level.label "URL以外の付加的情報の扱い">
+<!ENTITY browser.sessionStore.privacy_level.label "エキストラセッション情報の保存">
+<!ENTITY browser.sessionStore.privacy_level.normal.label "通常時:">
+<!ENTITY browser.sessionStore.privacy_level.deferred.label "&brandShortName;終了時:">
 <!ENTITY browser.sessionStore.privacy_level.any.label "すべてのサイトで保存">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">
 <!ENTITY browser.sessionStore.privacy_level.never.label "決して保存しない">
+<!ENTITY browser.sessionStore.privacy_level.desc "エキストラセッション情報には、フォームの内容、スクロールバー位置、Cookie、POST情報を含みます。">
 <!ENTITY browser.bookmarkicon.label "ブックマークのアイコン(ファビコン)">
 <!ENTITY browser.bookmarkicon.siteicons.label "タブにアイコンを表示する">
 <!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
