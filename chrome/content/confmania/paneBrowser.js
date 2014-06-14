@@ -286,28 +286,55 @@ gPrefWindow.prefBrowser = {
     mData.value = paintDelay * 500;
     gPrefWindow.getCurrentPrefPane().userChangedValue(mData);
   },
-  _openBrowse: function(aFilter, aTargetID) {
+  _openBrowse: function(aFilters, aTargetID, aValueType) {
     // Open File Dialog
     const nsIFilePicker = Components.interfaces.nsIFilePicker;
     var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-    fp.init(window, document.title, nsIFilePicker.modeOpen);
-    fp.appendFilters(aFilter);
+    if (aValueType == "url" || aValueType == "uri") {
+      fp.init(window, document.title, nsIFilePicker.modeOpen);
+    } else if (aValueType == "directory") {
+      fp.init(window, document.title, nsIFilePicker.modeGetFolder);
+    } else {
+      fp.init(window, document.title, nsIFilePicker.modeOpen);
+    }
+
+    Array.forEach(aFilters, function(filter) {
+      if (typeof(filter) == "number") {
+        fp.appendFilters(filter);
+      } else {
+        fp.appendFilter(filter.name, filter.filter);
+      }
+    });
+
     try{
-      var file = Components.classes["@mozilla.org/file/local;1"]
-       .createInstance(Components.interfaces.nsILocalFile);
-      file.initWithPath(document.getElementById(aTargetID).value);
+      var targetElem = document.getElementById(aTargetID);
+      var file = null;
+      if (aValueType == "url" || aValueType == "uri") {
+        file = Components.classes["@mozilla.org/network/io-service;1"]
+         .getService(Components.interfaces.nsIIOService)
+         .getProtocolHandler("file")
+         .QueryInterface(Components.interfaces.nsIFileProtocolHandler)
+         .getFileFromURLSpec((targetElem.value == "")? targetElem.placeholder : targetElem.value);
+      } else {
+        file = Components.classes["@mozilla.org/file/local;1"]
+         .createInstance(Components.interfaces.nsILocalFile);
+        file.initWithPath((targetElem.value == "")? targetElem.placeholder : targetElem.value);
+      }
+
       fp.displayDirectory = file.parent;
       fp.defaultString = file.leafName;
     }catch(ex){}
 
     if(fp.show() == nsIFilePicker.returnOK) {
-      var targetElem = document.getElementById(aTargetID);
-      targetElem.value = fp.file.path;
+      if (aValueType == "url" || aValueType == "uri") {
+        targetElem.value = fp.fileURL.spec;
+      } else if (aValueType == "directory") {
+        targetElem.value = fp.file.path;
+      } else {
+        targetElem.value = fp.file.path;
+      }
       gPrefWindow.getCurrentPrefPane().userChangedValue(targetElem);
     }
-  },
-  onWebGLOSMesaBrowse : function() {
-    this._openBrowse(Components.interfaces.nsIFilePicker.filterAll, "html-webgl-osmesa-path");
   },
   onOthersGeoEnabledSyncFrom : function () {
     let disabled = document.getElementById("geo.enabled").value;
@@ -348,28 +375,11 @@ gPrefWindow.prefBrowser = {
     }
   },
   onEditorExternalBrowse : function(){
-    const filter = Components.interfaces.nsIFilePicker.filterApps | Components.interfaces.nsIFilePicker.filterAll;
-    this._openBrowse(filter, "others-editorExternal-path");
+    const filters = [Components.interfaces.nsIFilePicker.filterApps, Components.interfaces.nsIFilePicker.filterAll];
+    this._openBrowse(filters, "others-editorExternal-path", "file");
   },
   onBrowserCacheDiskCacheFolderBrowse : function(){
-    var folderField = document.getElementById("browserCacheDiskCacheFolder");
-
-    // Open File Dialog
-    const nsIFilePicker = Components.interfaces.nsIFilePicker;
-    var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-    fp.init(window, document.title, nsIFilePicker.modeGetFolder);
-    try{
-      var file = Components.classes["@mozilla.org/file/local;1"]
-       .createInstance(Components.interfaces.nsILocalFile);
-      file.initWithPath((folderField.value == "")? folderField.placeholder : folderField.value);
-      fp.displayDirectory = file.parent;
-      fp.defaultString = file.leafName;
-    }catch(ex){throw ex}
-
-    if(fp.show() == nsIFilePicker.returnOK) {
-      folderField.value = fp.file.path;
-      gPrefWindow.getCurrentPrefPane().userChangedValue(folderField);
-    }
+    this._openBrowse([], "browserCacheDiskCacheFolder", "directory");
   },
   resetBrowserCacheDiskCacheFolder : function(){
     gPrefWindow.resetPref(document.getElementById("browser.cache.disk.parent_directory"));
