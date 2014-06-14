@@ -155,6 +155,7 @@
   <preference id="browser.cache.disk.parent_directory" name="browser.cache.disk.parent_directory" type="string"/>
 
   <preference id="geo.enabled" name="geo.enabled" type="bool"/>
+  <preference id="geo.wifi.uri" name="geo.wifi.uri" type="string"/>
   <preference id="full-screen-api.enabled" name="full-screen-api.enabled" type="bool"/>
   <preference id="dom.battery.enabled" name="dom.battery.enabled" type="bool"/>
   <preference id="dom.sms.enabled" name="dom.sms.enabled" type="bool"/>
@@ -608,14 +609,26 @@
 </box>
 
 <box class="subtabpanel" orient="vertical" id="others">
-  <hbox>
-    <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled" flex="1" onsynctopreference="return gPrefWindow.prefBrowser.onOthersGeoEnabledSyncFrom();"/>
-    <button label="&browser.others.geoExceptions.label;"
-            id="others-geoExceptions"
-            data-dialog-title="&browser.others.geoExceptions.title;"
-            data-dialog-desc="&browser.others.geoExceptions.desc;"
-            oncommand="gPrefWindow.prefBrowser.onOthersGeoExceptionsCommand();"/>
-  </hbox>
+  <vbox>
+    <hbox>
+      <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled" flex="1" onsynctopreference="return gPrefWindow.prefBrowser.onOthersGeoEnabledSyncFrom();"/>
+      <button label="&browser.others.geoExceptions.label;"
+              id="others-geoExceptions"
+              data-dialog-title="&browser.others.geoExceptions.title;"
+              data-dialog-desc="&browser.others.geoExceptions.desc;"
+              oncommand="gPrefWindow.prefBrowser.onOthersGeoExceptionsCommand();"/>
+    </hbox>
+    <vbox class="indent">
+      <hbox align="center">
+        <label control="others-geoWifiUri" value="&browser.others.geoWifiUri.label;"/>
+        <textbox id="others-geoWifiUri" preference="geo.wifi.uri" flex="1"/>
+      </hbox>
+      <hbox align="center" pack="end">
+        <button label="&browser.others.geoWifiUri.browseFile.label;" control="others-geoWifiUri" oncommand="gPrefWindow.prefBrowser.onOthersGeoWifiUriBrowse();"/>
+        <button label="&reset;" control="others-geoWifiUri" oncommand="gPrefWindow.prefBrowser.onOthersGeoWifiUriReset();"/>
+      </hbox>
+    </vbox>
+  </vbox>
   <hbox>
     <checkbox label="&browser.others.full_screen_enabled.label;" preference="full-screen-api.enabled" flex="1" onsynctopreference="return gPrefWindow.prefBrowser.onOthersFullScreenEnabledSyncFrom();"/>
     <button label="&browser.others.full_screenExceptions.label;"

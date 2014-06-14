@@ -302,19 +302,45 @@ tc.tests = {
   //},
   //testOpenBrowse: function() {
   //},
-  //testOnWebGLOSMesaBrowse: function() {
-  //},
   testOnOthersGeoEnabledSyncFrom : function () {
     let checkbox = this.document.querySelector("checkbox[preference='geo.enabled']");
-    let target = this.document.getElementById("others-geoExceptions");
+    let target1 = this.document.getElementById("others-geoExceptions");
+    let target2 = this.document.getElementById("others-geoWifiUri");
 
     for (let i = 0; i < 2; i++) {
-      assert.equals(checkbox.checked, !target.disabled);
+      assert.equals(checkbox.checked, !target1.disabled);
+      assert.equals(checkbox.checked, !target2.disabled);
       checkbox.click();
     }
   },
   //testOnOthersGeoExceptionsCommand : function() {
   //},
+  //testOnOthersGeoWifiUriBrowse: function() {
+  //},
+  testOnOthersGeoWifiUriReset: function() {
+    let target = this.document.getElementById("others-geoWifiUri");
+    let origval = target.value;
+
+    let hasValue = function(aPref) {
+      if (aPref.instantApply) {
+        return (aPref.hasUserValue);
+      } else {
+        return (aPref.value !== undefined);
+      }
+    }
+
+    target.value = "***USER DEFINED VALUE***";
+    target.click();
+    assert.isTrue(hasValue(this.document.getElementById("geo.wifi.uri")));
+
+    let resetBtn = this.document.querySelector("hbox button[oncommand*=onOthersGeoWifiUriReset]");
+    resetBtn.click();
+    assert.equals("", target.value);
+    assert.isFalse(hasValue(this.document.getElementById("geo.wifi.uri")));
+
+    target.value = origval;
+    target.click();
+  },
   testOnOthersFullScreenEnabledSyncFrom : function () {
     let checkbox = this.document.querySelector("checkbox[preference='full-screen-api.enabled']");
     let target = this.document.getElementById("others-full_screenExceptions");
