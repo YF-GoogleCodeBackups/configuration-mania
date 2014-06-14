@@ -641,7 +641,7 @@
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
             onsyncfrompreference="return gPrefWindow.prefBrowser.onEditorExternalSyncFrom()"/>
   <hbox id="others-editorExternal-hbox" class="indent" align="center">
-    <label control="others-editorExternal-path" label="&browser.others.editorExternal.path;"/>
+    <label control="others-editorExternal-path" value="&browser.others.editorExternal.path;"/>
     <textbox id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
     <button label="&browse;" control="others-editorExternal-path" oncommand="gPrefWindow.prefBrowser.onEditorExternalBrowse()"/>
   </hbox>
