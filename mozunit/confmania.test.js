@@ -101,34 +101,36 @@ tc.tests = {
         Services.prefs.setBoolPref("browser.preferences.instantApply", true);
 
         cmd.click();
-        sleep(2000);
+        sleep(1000);
         let cmwin = Services.wm.getMostRecentWindow("Browser:Confmania");
         assert.isDefined(cmwin);
 
         cmd.click();
+        sleep(100);
         let cmwin2 = Services.wm.getMostRecentWindow("Browser:Confmania");
         assert.isTrue(cmwin === cmwin2);
 
         cmwin.close();
+        sleep(1000);
+
+        assert.isNull(Services.wm.getMostRecentWindow("Browser:Confmania"));
       }
-      // non-instantApply.
-      //   After Firefox 25?, Modal dialog does not block JavaScript procedure.
-      //   Following modal dialog test does not works (does not pass the assertion).
-      //{
-      //  Services.prefs.setBoolPref("browser.preferences.inContent", false);
-      //  Services.prefs.setBoolPref("browser.preferences.instantApply", false);
-      //
-      //  let confmaniaIsOpened = false;
-      //  dialogHandler.onOpen = function (cmwin) {
-      //    sleep(100);
-      //    confmaniaIsOpened = true;
-      //    cmwin.close();
-      //  };
-      //  cmd.click();
-      //  dialogHandler.onOpen = function () {};
-      //
-      //  assert.isTrue(confmaniaIsOpened);
-      //}
+      {
+        Services.prefs.setBoolPref("browser.preferences.inContent", false);
+        Services.prefs.setBoolPref("browser.preferences.instantApply", false);
+      
+        var confmaniaIsOpened = false;
+        dialogHandler.onOpen = (function (cmwin) {
+          sleep(100);
+          confmaniaIsOpened = true;
+          cmwin.close();
+        }).bind(this);
+        cmd.click();
+
+        dialogHandler.onOpen = function () {};
+
+        assert.isTrue(confmaniaIsOpened);
+      }
     } catch (e) {
       throw e;
     } finally {
