@@ -88,6 +88,10 @@
 <!ENTITY browser.sessionStore.max_undo.label "Number of closures to remember for restoration">
 <!ENTITY browser.sessionStore.max_undo.windows.label "Number of window closures :">
 <!ENTITY browser.sessionStore.max_undo.tabs.label "Number of tab closures :">
+<!ENTITY browser.sessionStore.restore_on_demand.label "Restore on demand">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_on_demand.label "Don't load tabs until selected">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_hidden_tabs.label "Don't load tabs in other hidden tab groups  until selected">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_pinned_tabs_on_demand.label "Don't load pinned tabs until selected">
 <!ENTITY browser.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
 <!ENTITY browser.sessionStore.warnOnQuit.label "Ask if &brandShortName; save the session on quit/restart or not">
 <!ENTITY browser.sessionStore.warnOnQuit.desc "Note: This pref is only applicable when you set &brandShortName; to show your home page or the blank page on startup.">

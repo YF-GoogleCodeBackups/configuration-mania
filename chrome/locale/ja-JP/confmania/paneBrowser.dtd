@@ -88,6 +88,10 @@
 <!ENTITY browser.sessionStore.max_undo.label "記憶する最近閉じたウィンドウおよびタブの数">
 <!ENTITY browser.sessionStore.max_undo.windows.label "最近閉じたウィンドウ数">
 <!ENTITY browser.sessionStore.max_undo.tabs.label "最近閉じたタブ数">
+<!ENTITY browser.sessionStore.restore_on_demand.label "オンデマンドでの復元">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_on_demand.label "選択されるまでタブを読み込まない">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_hidden_tabs.label "選択されるまで他の表示されていないタブグループのタブを読み込まない">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_pinned_tabs_on_demand.label "選択されるまでピン留めされたタブを読み込まない">
 <!ENTITY browser.sessionStore.resume_from_crash.label "クラッシュ後の&brandShortName;起動時に、ウィンドウとタブを復元する">
 <!ENTITY browser.sessionStore.warnOnQuit.label "&brandShortName; 終了/再起動時にセッションを保存するか尋ねる">
 <!ENTITY browser.sessionStore.warnOnQuit.desc "注意：&brandShortName; を起動するときホームページまたは空白ページを表示するよう設定したとき、この設定は有効です。">

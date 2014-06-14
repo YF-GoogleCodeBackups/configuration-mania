@@ -168,6 +168,17 @@ tc.tests = {
       assert.equals(radiogroup.value == 1, !target.disabled);
     }
   },
+  testOnSessionStoreRestoreOnDemandSyncFrom: function() {
+    let checkbox = this.document.querySelector("checkbox[preference='browser.sessionstore.restore_on_demand']");
+    let target1 = this.document.querySelector("checkbox[preference='browser.sessionstore.restore_hidden_tabs']");
+    let target2 = this.document.querySelector("checkbox[preference='browser.sessionstore.restore_pinned_tabs_on_demand"']");
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, target1.disabled);
+      assert.equals(checkbox.checked, !target2.disabled);
+      checkbox.click();
+    }
+  },
   testOnSessionStoreWarnOnQuitSyncFrom: function() {
     let checkbox = this.document.querySelector("checkbox[preference='browser.warnOnQuit']");
     let target = this.document.querySelector("checkbox[preference='browser.showQuitWarning']");
