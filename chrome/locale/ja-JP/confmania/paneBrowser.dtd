@@ -64,7 +64,7 @@
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
 <!ENTITY browser.tabs.tabBarLocation.label "タブバーの位置">
 <!ENTITY browser.tabs.tabBarLocation.topTab.label "タブを上部に表示 (Firefox 28以下)">
-<!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所">
+<!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所 (Firefox 30以下)">
 <!ENTITY browser.tabs.closeButtons.active.label "アクティブなタブのみ表示">
 <!ENTITY browser.tabs.closeButtons.all.label "全てのタブに表示 (標準)">
 <!ENTITY browser.tabs.closeButtons.no.label "常に表示しない">

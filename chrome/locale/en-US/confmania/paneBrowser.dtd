@@ -64,7 +64,7 @@
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
 <!ENTITY browser.tabs.tabBarLocation.label "Tab bar location">
 <!ENTITY browser.tabs.tabBarLocation.topTab.label "Tabs on Top (up-to Firefox 28)">
-<!ENTITY browser.tabs.closeButtons.label "Display a close button ...">
+<!ENTITY browser.tabs.closeButtons.label "Display a close button (up-to Firefox 30)...">
 <!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
 <!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">
 <!ENTITY browser.tabs.closeButtons.no.label "No close button">
