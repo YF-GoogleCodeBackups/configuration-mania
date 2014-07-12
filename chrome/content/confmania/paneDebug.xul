@@ -52,6 +52,7 @@
 
 <preferences>
   <preference name="browser.dom.window.dump.enabled" id="browser.dom.window.dump.enabled" type="bool"/>
+  <preference name="browser.dom.window.dump.file" id="browser.dom.window.dump.file" type="string"/>
   <preference name="javascript.options.strict" id="javascript.options.strict" type="bool"/>
   <preference name="javascript.options.showInConsole" id="javascript.options.showInConsole" type="bool"/>
   <preference name="layout.css.report_errors" id="layout.css.report_errors" type="bool"/>
@@ -63,10 +64,19 @@
   <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
 </preferences>
 
+<script type="application/javascript;version=1.8" src="paneDebug.js"></script>
+
 <groupbox>
 <caption label="&debug.debug.label;"/>
 <checkbox label="&debug.debug.dump.label;"
-          preference="browser.dom.window.dump.enabled"/>
+          preference="browser.dom.window.dump.enabled"
+          onsyncfrompreference="return gPrefWindow.prefDebug.onDebugDumpEnabledSyncFrom();"/>
+<hbox class="indent" align="center">
+  <label value="Output file:" control="debug-dump-file"/>
+  <textbox id="debug-dump-file" flex="1" preference="browser.dom.window.dump.file" placeholder="Standard Output (stdout)"/>
+  <button label="&browse;" control="debug-dump-file" oncommand="gPrefWindow.prefDebug.onDebugDumpFileBrowse();"/>
+  <button label="&reset;" control="debug-dump-file" oncommand="gPrefWindow.prefDebug.onDebugDumpFileReset();"/>
+</hbox>
 <checkbox label="&debug.debug.jsstrict.label;"
           preference="javascript.options.strict"/>
 <checkbox label="&debug.debug.chromeerr.label;"
