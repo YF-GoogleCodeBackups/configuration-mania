@@ -72,8 +72,8 @@
           preference="browser.dom.window.dump.enabled"
           onsyncfrompreference="return gPrefWindow.prefDebug.onDebugDumpEnabledSyncFrom();"/>
 <hbox class="indent" align="center">
-  <label value="Output file:" control="debug-dump-file"/>
-  <textbox id="debug-dump-file" flex="1" preference="browser.dom.window.dump.file" placeholder="Standard Output (stdout)"/>
+  <label value="&debug.debug.dump.file.label;" control="debug-dump-file"/>
+  <textbox id="debug-dump-file" flex="1" preference="browser.dom.window.dump.file" placeholder="&debug.debug.dump.file.placeholder;"/>
   <button label="&browse;" control="debug-dump-file" oncommand="gPrefWindow.prefDebug.onDebugDumpFileBrowse();"/>
   <button label="&reset;" control="debug-dump-file" oncommand="gPrefWindow.prefDebug.onDebugDumpFileReset();"/>
 </hbox>

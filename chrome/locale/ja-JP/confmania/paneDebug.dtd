@@ -1,6 +1,8 @@
 <!ENTITY debug.title "デバッグ">
 <!ENTITY debug.debug.label "デバッグ作業用">
 <!ENTITY debug.debug.dump.label "JavaScript の dump() 出力を有効にする">
+<!ENTITY debug.debug.dump.file.label "出力先ファイル:">
+<!ENTITY debug.debug.dump.file.placeholder "標準出力">
 <!ENTITY debug.debug.jsstrict.label "JavaScript の厳密なエラーを出力する">
 <!ENTITY debug.debug.chromeerr.label "クロム (chrome) の JavaScript エラー/警告も表示する">
 <!ENTITY debug.debug.csserr.label "スタイルシートの解析エラーも表示する">

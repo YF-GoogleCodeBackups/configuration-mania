@@ -1,6 +1,8 @@
 <!ENTITY debug.title "Debug">
 <!ENTITY debug.debug.label "For Debugging">
 <!ENTITY debug.debug.dump.label "Enable JavaScript dump() output">
+<!ENTITY debug.debug.dump.file.label "Output file:">
+<!ENTITY debug.debug.dump.file.placeholder "Standard Output">
 <!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
 <!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
 <!ENTITY debug.debug.csserr.label "Show CSS parse errors">
