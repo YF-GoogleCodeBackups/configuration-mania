@@ -171,7 +171,7 @@ tc.tests = {
   testOnSessionStoreRestoreOnDemandSyncFrom: function() {
     let checkbox = this.document.querySelector("checkbox[preference='browser.sessionstore.restore_on_demand']");
     let target1 = this.document.querySelector("checkbox[preference='browser.sessionstore.restore_hidden_tabs']");
-    let target2 = this.document.querySelector("checkbox[preference='browser.sessionstore.restore_pinned_tabs_on_demand"']");
+    let target2 = this.document.querySelector("checkbox[preference='browser.sessionstore.restore_pinned_tabs_on_demand']");
 
     for (let i = 0; i < 2; i++) {
       assert.equals(checkbox.checked, target1.disabled);
@@ -346,7 +346,6 @@ tc.tests = {
 
     let resetBtn = this.document.querySelector("hbox button[oncommand*=onOthersGeoWifiUriReset]");
     resetBtn.click();
-    assert.equals("", target.value);
     assert.isFalse(hasValue(this.document.getElementById("geo.wifi.uri")));
 
     target.value = origval;
