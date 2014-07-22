@@ -61,6 +61,7 @@
   <preference name="extensions.checkCompatibility.29.0" id="extensions.checkCompatibility.29.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.30.0" id="extensions.checkCompatibility.30.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.31.0" id="extensions.checkCompatibility.31.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.32.0" id="extensions.checkCompatibility.32.0" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.install.requireBuiltInCerts" id="extensions.install.requireBuiltInCerts" type="bool" inverted="true"/>
   <preference name="dom.ipc.plugins.enabled" id="dom.ipc.plugins.enabled" type="bool"/>
@@ -87,6 +88,7 @@
 <checkbox label="29" preference="extensions.checkCompatibility.29.0"/>
 <checkbox label="30" preference="extensions.checkCompatibility.30.0"/>
 <checkbox label="31" preference="extensions.checkCompatibility.31.0"/>
+<checkbox label="32" preference="extensions.checkCompatibility.32.0"/>
 </hbox>
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
