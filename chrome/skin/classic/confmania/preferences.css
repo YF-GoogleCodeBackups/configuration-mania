@@ -1,3 +1,6 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
 .listBox{
   -moz-appearance: listbox;
   margin: 2px 4px;
@@ -8,8 +11,13 @@
   -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
   background: -moz-Field;
   color: -moz-FieldText;
-
   overflow: auto;
+}
+
+page#confmania-in-content-page {
+  padding: 18px;
+  background-color: Window;
+  color: WindowText;
 }
 prefwindow#ConfmaniaPreferences .paneSelector > radio[pane] {
   list-style-image: none;
@@ -21,8 +29,15 @@ prefwindow#ConfmaniaPreferences image.paneButtonIcon {
 prefwindow#ConfmaniaPreferences prefpane hbox.heading {
   display: none; /* display only for in-content */
 }
+
 page#confmania-in-content-page .main-content {
   max-width: none;
+  /* Needed to allow the radius to clip the inner content, see bug 595656 */
+  overflow: hidden;
+  background-color: -moz-Field;
+  color: -moz-FieldText;
+  border: 1px solid ThreeDShadow;
+  border-radius: 5px;
 }
 page#confmania-in-content-page #categories {
   -moz-appearance: none;
@@ -58,6 +73,12 @@ page#confmania-in-content-page .category[selected] {
   background-color: -moz-Field;
   color: -moz-FieldText;
   border-color: ThreeDShadow;
+}
+page#confmania-in-content-page prefpane > .content-box {
+  overflow: auto;
+}
+page#confmania-in-content-page caption {
+  font-size: 1.667rem;
 }
 
 .subtabs, .subtabpanel{
@@ -138,3 +159,9 @@ vbox.warning {
 }
 
 *|*:-moz-any-link:hover{ color: -moz-nativehyperlinktext; text-decoration: underline; }
+
+/* XXX This style is for bug 740213 and should be removed once that
+   bug has a solution. */
+description > *|*:-moz-any-link {
+  cursor: pointer;
+}

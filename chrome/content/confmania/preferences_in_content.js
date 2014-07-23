@@ -12,7 +12,7 @@ var gPrefWindow = {
     }, false);
 
     if (history.length > 1 && history.state) {
-      gPrefWindow.updateCommands();
+      // do nothing
     } else {
       window.history.replaceState("paneBrowser", document.title);
     }
@@ -50,12 +50,6 @@ var gPrefWindow = {
       document.loadOverlay(aPane.src, obs);
     }
   },
-  updateCommands: function() {
-    var webNav = window.QueryInterface(Components.interfaces.nsIInterfaceRequestor)
-                 .getInterface(Components.interfaces.nsIWebNavigation);
-    document.getElementById("back-btn").disabled = !webNav.canGoBack;
-    document.getElementById("forward-btn").disabled = !webNav.canGoForward;
-  },
   selectCategory: function(name) {
     var categories = document.getElementById("categories");
     var item = categories.querySelector(".category[value=" + name + "]");
@@ -78,7 +72,6 @@ var gPrefWindow = {
     if (history.state != page) {
       window.history.pushState(page, document.title);
     }
-    gPrefWindow.updateCommands();
     gPrefWindow.showPage(page);
   },
 
