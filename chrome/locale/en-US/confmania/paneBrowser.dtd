@@ -20,7 +20,7 @@
 <!ENTITY browser.urlbar.formatting.trimURLs.label "Drop http:// prefix.">
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
-<!ENTITY browser.html.enableFrame.label "Enable frames">
+<!ENTITY browser.html.disableFrame.label "Disable frames (up-to Firefox 31)">
 <!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
 <!ENTITY browser.html.img "Image">
 <!ENTITY browser.html.img.loadImages.label "Load images automatically">
