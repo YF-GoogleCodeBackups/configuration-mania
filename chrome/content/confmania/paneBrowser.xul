@@ -68,7 +68,7 @@
   <preference id="browser.urlbar.formatting.enabled" name="browser.urlbar.formatting.enabled" type="bool"/>
   <preference id="browser.urlbar.trimURLs" name="browser.urlbar.trimURLs" type="bool"/>
 
-  <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool"/>
+  <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool" inverted="true"/>
   <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
   <preference id="permissions.default.image" name="permissions.default.image" type="int"/>
   <preference id="image.animation_mode" name="image.animation_mode" type="string"/>
@@ -258,7 +258,7 @@
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="html">
-  <checkbox id="html-frameEnabled" label="&browser.html.enableFrame.label;"
+  <checkbox id="html-frameDisabled" label="&browser.html.disableFrame.label;"
    onsyncfrompreference="return gPrefWindow.prefBrowser.onHtmlFrameSyncFrom();" preference="browser.frames.enabled"/>
   <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
    class="indent" preference="layout.frames.force_resizability"/>

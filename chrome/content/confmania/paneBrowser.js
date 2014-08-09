@@ -103,7 +103,7 @@ gPrefWindow.prefBrowser = {
     return undefined; // no override
   },
   onHtmlFrameSyncFrom : function() {
-    let disabled = ! document.getElementById("browser.frames.enabled").value;
+    let disabled = document.getElementById("browser.frames.enabled").value;
     document.getElementById("layout.frames.force_resizability").disabled = disabled;
     return undefined; // no override
   },

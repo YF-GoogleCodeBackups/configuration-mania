@@ -100,11 +100,11 @@ tc.tests = {
     }
   },
   testOnHtmlFrameSyncFrom: function() {
-    let checkbox = this.document.getElementById("html-frameEnabled");
+    let checkbox = this.document.getElementById("html-frameDisabled");
     let target = this.document.getElementById("html-frameForceResizability");
 
     for (let i = 0; i < 2; i++) {
-      assert.equals(checkbox.checked, !target.disabled);
+      assert.equals(checkbox.checked, target.disabled);
       checkbox.click();
     }
   },
