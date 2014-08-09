@@ -21,11 +21,13 @@
 ]>
 
 <page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-      xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:html="http://www.w3.org/1999/xhtml"
       id="confmania-in-content-page" title="&prefWindow.title;"
       role="application" windowtype="Browser:Confmania"
       disablefastfind="true"
       onload="gPrefWindow.onLoad();">
+
+<html:link rel="shortcut icon" href="chrome://confmania/skin/confmania16.png"/>
 
 <script type="application/javascript" src="chrome://global/content/contentAreaUtils.js"/>
 <script type="application/javascript" src="preferences_in_content.js"/>
