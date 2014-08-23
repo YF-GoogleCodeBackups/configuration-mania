@@ -7,13 +7,6 @@
 <!ENTITY prefWindow.context.copyName.accesskey "C">
 <!ENTITY prefWindow.context.mkb.label "MozillaZine Knowledge Baseで検索">
 <!ENTITY prefWindow.context.mkb.accesskey "S">
-
-
-
-
-
-
-
 <!ENTITY miliseconds "ミリ秒">
 <!ENTITY microseconds "μ秒">
 <!ENTITY seconds "秒">
