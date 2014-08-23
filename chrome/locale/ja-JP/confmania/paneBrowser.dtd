@@ -20,7 +20,6 @@
 <!ENTITY browser.urlbar.formatting.trimURLs.label "http:// を省略して表示">
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
-<!ENTITY browser.html.enableFrame.label "フレームを有効にする">
 <!ENTITY browser.html.disableFrame.label "フレームを無効にする(Firefox 31以下)">
 <!ENTITY browser.html.frameForceResizability.label "フレームを強制的にサイズ変更できるようにする">
 <!ENTITY browser.html.img "画像">
