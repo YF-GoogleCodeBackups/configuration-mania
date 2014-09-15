@@ -42,7 +42,6 @@
 <!ENTITY browser.html.plugins.label "Plugins">
 <!ENTITY browser.html.plugins.click_to_play.label "Do not load the plugin content until you click on it">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
-<!ENTITY browser.html.3d-transforms.label "Enable CSS 3D Transforms">
 <!ENTITY browser.html.webgl.label "Enable WebGL (takes effect after restart)">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.zoomSiteSpecific.label "Remember the zoom preferences page by page">
