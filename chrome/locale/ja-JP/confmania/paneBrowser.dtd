@@ -42,7 +42,6 @@
 <!ENTITY browser.html.plugins.label "プラグイン">
 <!ENTITY browser.html.plugins.click_to_play.label "プラグインコンテンツはクリックしたら読み込む">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
-<!ENTITY browser.html.3d-transforms.label "CSS 3D Transforms を有効にする">
 <!ENTITY browser.html.webgl.label "WebGL を有効にする (再起動必要)">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">

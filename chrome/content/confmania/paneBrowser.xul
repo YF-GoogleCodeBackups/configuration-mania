@@ -78,7 +78,6 @@
   <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
   <preference id="plugins.click_to_play" name="plugins.click_to_play" type="bool"/>
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
-  <preference id="layout.3d-transforms.enabled" name="layout.3d-transforms.enabled" type="bool"/>
   <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.zoom.siteSpecific" name="browser.zoom.siteSpecific" type="bool"/>
@@ -309,7 +308,6 @@
     <checkbox label="&browser.html.plugins.click_to_play.label;" preference="plugins.click_to_play"/>
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
-  <checkbox label="&browser.html.3d-transforms.label;" preference="layout.3d-transforms.enabled"/>
   <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.disabled"/>
 
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
