@@ -163,13 +163,9 @@ tc.tests = {
                       "chrome://confmania/content/preferences_in_content.xul");
 
         let win = browserWin.getBrowser().contentWindow;
+        let webNav = browserWin.getBrowser().webNavigation;
 
         assert.isTrue(win.document.documentElement.instantApply);
-
-        let backbtn = win.document.getElementById("back-btn");
-        let forwardbtn = win.document.getElementById("forward-btn");
-        assert.isTrue(backbtn.disabled);
-        assert.isTrue(forwardbtn.disabled);
 
         let listBox = win.document.getElementById("categories");
         let listItems = win.document.querySelectorAll("#categories richlistitem.category");
@@ -199,34 +195,22 @@ tc.tests = {
 
           // history
           if (i === 0) {
-            assert.isTrue(backbtn.disabled);
-            assert.isTrue(forwardbtn.disabled);
+            assert.isFalse(webNav.canGoBack);
+            assert.isFalse(webNav.canGoForward);
           } else {
             var prevPane = win.document.getElementById(panes[i - 1]);
-            assert.isFalse(backbtn.disabled);
-            assert.isTrue(forwardbtn.disabled);
-
-            backbtn.click();
-            sleep(100);
-            assert.isFalse(forwardbtn.disabled);
-            assert.isTrue(prevPane.selected);
-            assert.isFalse(thePane.selected);
-            forwardbtn.click();
-            sleep(100);
-            assert.isFalse(backbtn.disabled);
-            assert.isTrue(forwardbtn.disabled);
-            assert.isFalse(prevPane.selected);
-            assert.isTrue(thePane.selected);
+            assert.isTrue(webNav.canGoBack);
+            assert.isFalse(webNav.canGoForward);
 
             win.history.back();
             sleep(100);
-            assert.isFalse(forwardbtn.disabled);
+            assert.isTrue(webNav.canGoForward);
             assert.isTrue(prevPane.selected);
             assert.isFalse(thePane.selected);
             win.history.forward();
             sleep(100);
-            assert.isFalse(backbtn.disabled);
-            assert.isTrue(forwardbtn.disabled);
+            assert.isTrue(webNav.canGoBack);
+            assert.isFalse(webNav.canGoForward);
             assert.isFalse(prevPane.selected);
             assert.isTrue(thePane.selected);
           }
