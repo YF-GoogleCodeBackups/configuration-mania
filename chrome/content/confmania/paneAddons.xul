@@ -91,6 +91,7 @@
 <checkbox label="31" preference="extensions.checkCompatibility.31.0"/>
 <checkbox label="32" preference="extensions.checkCompatibility.32.0"/>
 <checkbox label="33" preference="extensions.checkCompatibility.33.0"/>
+<checkbox label="34" preference="extensions.checkCompatibility.34.0"/>
 </hbox>
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
