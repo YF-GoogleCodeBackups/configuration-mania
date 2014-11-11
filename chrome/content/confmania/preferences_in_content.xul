@@ -25,6 +25,7 @@
       id="confmania-in-content-page" title="&prefWindow.title;"
       role="application" windowtype="Browser:Confmania"
       disablefastfind="true"
+      context="prefContextPopup"
       onload="gPrefWindow.onLoad();">
 
 <html:link rel="shortcut icon" href="chrome://confmania/skin/confmania16.png"/>
