@@ -1,7 +1,8 @@
 var gPrefWindow = {
   onLoad: function(){
-    var prefWin = document.documentElement;
-    prefWin.addEventListener("contextmenu", gPrefWindow.onContextMenu, true);
+    // context menu
+    var prefContextPopup = document.getElementById("prefContextPopup");
+    prefContextPopup.addEventListener("popupshowing", gPrefWindow.onPrefContexPopupShowing, true);
   },
 
   // =========================
@@ -34,7 +35,7 @@ var gPrefWindow = {
   },
   _contextPrefString: null,
   _setPrefObj: function(event){
-    var o = event.target;
+    var o = event.target.triggerNode;
     if (o.labeledControlElement) o = o.labeledControlElement;
     if (o.nodeName == "radio") {
       if ((o.value == "*") && (o.nextSibling != null) && (o.nextSibling.hasAttribute("preference"))) {
@@ -52,9 +53,9 @@ var gPrefWindow = {
       gPrefWindow._contextPrefString = null;
     }
   },
-  onContextMenu: function(event){
+  onPrefContexPopupShowing: function(event){
     gPrefWindow._setPrefObj(event)
-    if (gPrefWindow._contextPrefString == null) event.preventDefault();
+    if (gPrefWindow._contextPrefString == null) { event.preventDefault(); }
   },
   onResetPopupClicked: function(event){
     var prefstr = gPrefWindow._contextPrefString;
