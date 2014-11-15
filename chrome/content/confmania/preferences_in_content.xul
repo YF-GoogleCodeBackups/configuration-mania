@@ -31,7 +31,7 @@
 <html:link rel="shortcut icon" href="chrome://confmania/skin/confmania16.png"/>
 
 <script type="application/javascript" src="chrome://global/content/contentAreaUtils.js"/>
-<script type="application/javascript" src="preferences_in_content.js"/>
+<script type="application/javascript" src="chrome://confmania/content/preferences_in_content.js"/>
 
 <commandset>
   <command id="ConfManiaPopup:Reset" oncommand="gPrefWindow.onResetPopupClicked(event);"/>

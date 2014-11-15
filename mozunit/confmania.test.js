@@ -22,6 +22,9 @@ function sleep(aWait) {
   }
 }
 
+Cu.import("resource://gre/modules/AddonManager.jsm");
+const CONF_MANIA_ADDON_ID = "{c4d362ec-1cff-4ca0-9031-99a8fad7995a}";
+
 function DialogObserver(windowtype, handlers) {
   this.windowtype = windowtype;
   this.handlers = handlers;
@@ -55,6 +58,61 @@ tc.tests = {
   },
 
   // TEST ####################
+
+  testURIRegistration: function() {
+    var addonObj = undefined;
+    AddonManager.getAddonByID(CONF_MANIA_ADDON_ID, function (v) { addonObj = v; });
+    sleep(1000);
+    assert.isDefined(addonObj);
+
+    let channel;
+
+    assert.equals(addonObj.userDisabled, false);
+    channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
+    assert.isDefined(channel);
+    channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
+    assert.isDefined(channel);
+    channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
+    assert.isDefined(channel);
+    channel = Services.io.newChannel("about:confmania", null, null);
+    assert.isDefined(channel);
+
+    addonObj.userDisabled = true;
+    sleep(100);
+    assert.equals(addonObj.userDisabled, true);
+    try {
+      channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
+      assert.fail("chrome://confmania/content/preferences.xul is not unloaded.");
+    } catch (e) {
+    }
+    try {
+      channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
+      assert.fail("chrome://confmania/skin/preferences.css is not unloaded.");
+    } catch (e) {
+    }
+    try {
+      channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
+      assert.fail("chrome://confmania/locale/confmania.dtd is not unloaded.");
+    } catch (e) {
+    }
+    try {
+      channel = Services.io.newChannel("about:confmania", null, null);
+      assert.fail("about:confmania is not unloaded.");
+    } catch (e) {
+    }
+
+    addonObj.userDisabled = false;
+    sleep(100);
+    assert.equals(addonObj.userDisabled, false);
+    channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
+    assert.isDefined(channel);
+    channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
+    assert.isDefined(channel);
+    channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
+    assert.isDefined(channel);
+    channel = Services.io.newChannel("about:confmania", null, null);
+    assert.isDefined(channel);
+  },
   
   testOpenConfMania: function() {
     let origICvalue = Services.prefs.getBoolPref("browser.preferences.inContent");
@@ -79,7 +137,7 @@ tc.tests = {
         sleep(2000);
 
         assert.equals(browserWin.getBrowser().currentURI.spec,
-                      "chrome://confmania/content/preferences_in_content.xul");
+                      "about:confmania");
 
         browserWin.getBrowser().removeCurrentTab();
 
@@ -90,7 +148,7 @@ tc.tests = {
         sleep(2000);
 
         assert.equals(browserWin.getBrowser().currentURI.spec,
-                      "chrome://confmania/content/preferences_in_content.xul");
+                      "about:confmania");
 
         browserWin.getBrowser().removeCurrentTab();
       }
@@ -160,7 +218,7 @@ tc.tests = {
         let browserWin = Services.wm.getMostRecentWindow("navigator:browser");
 
         assert.equals(browserWin.getBrowser().currentURI.spec,
-                      "chrome://confmania/content/preferences_in_content.xul");
+                      "about:confmania");
 
         let win = browserWin.getBrowser().contentWindow;
         let webNav = browserWin.getBrowser().webNavigation;
@@ -229,7 +287,7 @@ tc.tests = {
         let browserWin = Services.wm.getMostRecentWindow("navigator:browser");
 
         assert.equals(browserWin.getBrowser().currentURI.spec,
-                      "chrome://confmania/content/preferences_in_content.xul");
+                      "about:confmania");
 
         let win = browserWin.getBrowser().contentWindow;
 
