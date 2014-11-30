@@ -95,9 +95,6 @@
   <preference id="browser.newtabpage.enabled" name="browser.newtabpage.enabled" type="bool"/>
   <preference id="browser.pagethumbnails.capturing_disabled" name="browser.pagethumbnails.capturing_disabled" type="bool"/>
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
-  <preference id="browser.tabs.onTop" name="browser.tabs.onTop" type="bool"/>
-  <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>
-  <preference id="browser.tabs.tabClipWidth" name="browser.tabs.tabClipWidth" type="int"/>
   <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
   <preference id="browser.tabs.insertRelatedAfterCurrent" name="browser.tabs.insertRelatedAfterCurrent" type="bool"/>
   <preference id="browser.tabs.warnOnCloseOtherTabs" name="browser.tabs.warnOnCloseOtherTabs" type="bool"/>
@@ -134,8 +131,6 @@
   <preference id="browser.altClickSave" name="browser.altClickSave" type="bool" inverted="true"/>
   <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
   <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
-  <preference id="browser.download.useToolkitUI" name="browser.download.useToolkitUI" type="bool" inverted="true"/>
-  <preference id="browser.download.manager.flashCount" name="browser.download.manager.flashCount" type="int"/>
   <preference id="browser.download.manager.showAlertOnComplete" name="browser.download.manager.showAlertOnComplete" type="bool"/>
   <preference id="browser.download.animateNotifications" name="browser.download.animateNotifications" type="bool" inverted="true"/>
 
@@ -360,25 +355,6 @@
     <checkbox class="indent" label="&browser.tabs.newtab.thumbCapturingDisabled.label;" preference="browser.pagethumbnails.capturing_disabled"/>
   </groupbox>
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
-  <groupbox>
-    <caption label="&browser.tabs.tabBarLocation.label;"/>
-    <checkbox label="&browser.tabs.tabBarLocation.topTab.label;" preference="browser.tabs.onTop"/>
-  </groupbox>
-  <groupbox>
-    <caption label="&browser.tabs.closeButtons.label;"/>
-    <radiogroup preference="browser.tabs.closeButtons" onsyncfrompreference="return gPrefWindow.prefBrowser.onTabsCloseButtonSyncFrom()">
-      <radio value="0" label="&browser.tabs.closeButtons.active.label;"/>
-      <radio value="1" label="&browser.tabs.closeButtons.all.label;"/>
-      <vbox class="indent">
-        <html:div>
-          <label control="tabs-tabClipWidth">&browser.tabs.tabClipWidth.label;</label>
-          <textbox class="indent" type="number" hidespinbuttons="true" preference="browser.tabs.tabClipWidth" id="tabs-tabClipWidth" size="4"/>
-        </html:div>
-      </vbox>
-      <radio value="2" label="&browser.tabs.closeButtons.no.label;"/>
-      <radio value="3" label="&browser.tabs.closeButtons.end.label;"/>
-    </radiogroup>
-  </groupbox>
 
   <checkbox label="&browser.tabs.seachOpenintab.label;" preference="browser.search.openintab"/>
   <checkbox label="&browser.tabs.insertRelatedAfterCurrent.label;" preference="browser.tabs.insertRelatedAfterCurrent"/>
@@ -494,23 +470,6 @@
       <radio value="2" label="&browser.download.quitBehavior.cancelOnQuit.label;"/>
     </radiogroup>
   </groupbox>
-
-  <checkbox label="&browser.download.nouseToolkitUI.label;" preference="browser.download.useToolkitUI" onsyncfrompreference="return gPrefWindow.prefBrowser.onDownloadNouseToolkitUISyncFrom();"/>
-  <vbox class="indent">
-    <label value="&browser.download.flashCount.label;" control="browserDLFlashCount-gr"/>
-    <radiogroup class="indent" id="browserDLFlashCount-gr">
-      <radio value="0" label="&browser.download.flashCount.never.label;"/>
-      <radio value="-1" label="&browser.download.flashCount.infinite.label;"/>
-      <hbox align="center">
-        <radio value="*" label="&browser.download.flashCount.finite.label;"/>
-        <textbox id="browserDLFlashCount" type="number"
-                 hidespinbuttons="true" size="3" min="-1"
-                 preference="browser.download.manager.flashCount"
-                 onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('browserDLFlashCount-gr','browserDLFlashCount',2);"/>
-        <label value="&browser.download.flashCount.finite.label2;"/>
-      </hbox>
-    </radiogroup>
-  </vbox>
 
   <checkbox label="&browser.download.showAlertOnComplete.label;"
             preference="browser.download.manager.showAlertOnComplete"/>

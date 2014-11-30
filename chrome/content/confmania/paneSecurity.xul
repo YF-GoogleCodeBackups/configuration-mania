@@ -79,7 +79,6 @@
   <preference id="dom.popup_allowed_events" name="dom.popup_allowed_events" type="string"/>
 
   <preference id="browser.download.manager.scanWhenDone" name="browser.download.manager.scanWhenDone" type="bool"/>
-  <preference id="browser.download.saveZoneInformation" name="browser.download.saveZoneInformation" type="bool" inverted="true"/>
   <preference id="browser.download.manager.alertOnEXEOpen" name="browser.download.manager.alertOnEXEOpen" type="bool"/>
 
   <preference id="security.tls.version.min" name="security.tls.version.min" type="int"/>
@@ -201,8 +200,6 @@
 <box class="subtabpanel" orient="vertical" id="security-pane-antivirus">
   <checkbox label="&security.antivirus.scanWhenDone.label;"
    preference="browser.download.manager.scanWhenDone"/>
-  <checkbox label="&security.antivirus.disableSaveZoneInformation.label;"
-   preference="browser.download.saveZoneInformation"/>
   <checkbox label="&security.antivirus.alertOnEXEOpen.label;"
    preference="browser.download.manager.alertOnEXEOpen"/>
 </box>

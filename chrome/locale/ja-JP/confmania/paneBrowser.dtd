@@ -61,14 +61,6 @@
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
-<!ENTITY browser.tabs.tabBarLocation.label "タブバーの位置">
-<!ENTITY browser.tabs.tabBarLocation.topTab.label "タブを上部に表示 (Firefox 28以下)">
-<!ENTITY browser.tabs.closeButtons.label "閉じるボタンを表示する場所 (Firefox 30以下)">
-<!ENTITY browser.tabs.closeButtons.active.label "アクティブなタブのみ表示">
-<!ENTITY browser.tabs.closeButtons.all.label "全てのタブに表示 (標準)">
-<!ENTITY browser.tabs.closeButtons.no.label "常に表示しない">
-<!ENTITY browser.tabs.closeButtons.end.label "タブバーの端に表示 (Firefox1.xの動作)">
-<!ENTITY browser.tabs.tabClipWidth.label "閉じるボタンを表示するタブの最小サイズ">
 <!ENTITY browser.tabs.seachOpenintab.label "検索バーからEnterキーで検索した時、検索結果を新しいタブで開く">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "ページから開く新規タブを現在のタブの右に開く">
 <!ENTITY browser.tabs.warnOnCloseOtherTabs.label "他の複数のタブを閉じるときに警告する">
@@ -119,14 +111,8 @@
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "中止するが、次回&brandShortName;起動時に自動的に再開">
 <!ENTITY browser.download.quitBehavior.pauseOnRestart.label "中止して、次回&brandShortName;起動時も自動的には再開しない">
 <!ENTITY browser.download.quitBehavior.cancelOnQuit.label "&brandShortName;終了時にキャンセルする">
-<!ENTITY browser.download.nouseToolkitUI.label "ダウンロードパネルを使用する (Firefox 27以下)">
-<!ENTITY browser.download.flashCount.label "ダウンロード終了時、ダウンロードウィンドウを">
-<!ENTITY browser.download.flashCount.never.label "点滅させない">
-<!ENTITY browser.download.flashCount.infinite.label "ウィンドウがアクティブになるまで点滅">
-<!ENTITY browser.download.flashCount.finite.label "点滅を">
-<!ENTITY browser.download.flashCount.finite.label2 "回させる">
 <!ENTITY browser.download.showAlertOnComplete.label "ダウンロード終了時に通知する">
-<!ENTITY browser.download.disableAnimateNotifications.label "ダウンロード開始・終了時にダウンロードインディケータのアニメーション通知をしない (Firefox 25+)">
+<!ENTITY browser.download.disableAnimateNotifications.label "ダウンロード開始・終了時にダウンロードインディケータのアニメーション通知をしない">
 <!ENTITY browser.ua.label "UserAgent">
 <!ENTITY browser.ua.desc "警告: おそらくこの設定が一部のプラグインや &quot;User Agent Switcher&quot; などと競合するかもしれません。">
 <!ENTITY browser.ua.text.label "UA文字列 :">
