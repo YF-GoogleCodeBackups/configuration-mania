@@ -51,6 +51,10 @@
 <!ENTITY ui.keynav.acceleratorKey.accesskey "A">
 <!ENTITY ui.keynav.menuAccessKey.label "メニュー装飾キー(のコード):">
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.keynav.backspace_action.label "Backspaceキー押下時の動作:">
+<!ENTITY ui.keynav.backspace_action.goBack "ページの履歴を戻る(IEと同じ動作)">
+<!ENTITY ui.keynav.backspace_action.scrollUp "ページをスクロールアップ">
+<!ENTITY ui.keynav.backspace_action.nothing "何もしない">
 <!ENTITY ui.keynav.accesibility.label "アクセシビリティ">
 <!ENTITY ui.keynav.accesibility.accesskeycauseactivation.label "アクセスキーでその要素をアクティブにする(例えばリンク先に移動)">
 <!ENTITY ui.keynav.accesibility.accesskeycauseactivation.accesskey "E">

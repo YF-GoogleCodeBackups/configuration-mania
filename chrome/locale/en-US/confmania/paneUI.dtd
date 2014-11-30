@@ -51,6 +51,10 @@
 <!ENTITY ui.keynav.acceleratorKey.accesskey "A">
 <!ENTITY ui.keynav.menuAccessKey.label "Menu access key:">
 <!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.keynav.backspace_action.label "Action when Pressing [Backspace] :">
+<!ENTITY ui.keynav.backspace_action.goBack "Go back a page in the session history (same as IE)">
+<!ENTITY ui.keynav.backspace_action.scrollUp "Scroll up in the current document">
+<!ENTITY ui.keynav.backspace_action.nothing "Do nothing">
 <!ENTITY ui.keynav.accesibility.label "Accesibility">
 <!ENTITY ui.keynav.accesibility.accesskeycauseactivation.label "Activate the element (e.g. follow a link) using an access key">
 <!ENTITY ui.keynav.accesibility.accesskeycauseactivation.accesskey "E">
