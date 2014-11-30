@@ -1,12 +1,4 @@
 <!ENTITY browser.title "Browser">
-<!ENTITY browser.smartbrowsing.label "SmartBrowsing">
-<!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
-<!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords enables fast access to services such as search and other information from the Location bar.">
-<!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Enable Internet Keywords">
-<!ENTITY browser.smartbrowsing.domainGuessing.label "Domain Guessing">
-<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Automatically add prefix &amp; suffix to the location if a web page isn't found.">
-<!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "Prefix :">
-<!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "Suffix :">
 <!ENTITY browser.urlbar.label "Location Bar">
 <!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when clicked">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when double-clicked">
@@ -18,6 +10,12 @@
 <!ENTITY browser.urlbar.formatting.label "Formatting">
 <!ENTITY browser.urlbar.formatting.formatting-enabled.label "Enable domain highlighting.">
 <!ENTITY browser.urlbar.formatting.trimURLs.label "Drop http:// prefix.">
+<!ENTITY browser.urlbar.unknownLocations.label "Unknown Locations">
+<!ENTITY browser.urlbar.unknownLocations.keywords.label "Perform a web search when entered text is not a web location">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.label "Domain Guessing">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.enabled.label "Automatically add prefix &amp; suffix to the location if a web page isn't found.">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.prefix.label "Prefix :">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.suffix.label "Suffix :">
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
 <!ENTITY browser.html.disableFrame.label "Disable frames (up-to Firefox 31)">
