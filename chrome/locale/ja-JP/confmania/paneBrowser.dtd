@@ -170,6 +170,7 @@
 <!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで表示する">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
+<!ENTITY browser.others.enableOneClickSearchesUI.label "検索バーに対して One-Click Searches UI を有効にする (Firefox 34+)">
 <!ENTITY browser.others.backspace_action.label "Backspaceキー押下時の動作:">
 <!ENTITY browser.others.backspace_action.goBack "ページの履歴を戻る(IEと同じ動作)">
 <!ENTITY browser.others.backspace_action.scrollUp "ページをスクロールアップ">

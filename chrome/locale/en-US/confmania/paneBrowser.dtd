@@ -170,6 +170,7 @@
 <!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
+<!ENTITY browser.others.enableOneClickSearchesUI.label "Enable One-Click Searches UI in the search bar (Firefox 34+)">
 <!ENTITY browser.others.backspace_action.label "Action when Pressing [Backspace] :">
 <!ENTITY browser.others.backspace_action.goBack "Go back a page in the session history (same as IE)">
 <!ENTITY browser.others.backspace_action.scrollUp "Scroll up in the current document">
