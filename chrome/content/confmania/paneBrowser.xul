@@ -53,11 +53,6 @@
 <script type="application/javascript;version=1.8" src="paneBrowser.js"></script>
 
 <preferences>
-  <preference id="keyword.enabled" name="keyword.enabled" type="bool"/>
-  <preference id="browser.fixup.alternate.enabled" name="browser.fixup.alternate.enabled" type="bool"/>
-  <preference id="browser.fixup.alternate.prefix" name="browser.fixup.alternate.prefix" type="string"/>
-  <preference id="browser.fixup.alternate.suffix" name="browser.fixup.alternate.suffix" type="string"/>
-
   <preference id="browser.urlbar.clickSelectsAll" name="browser.urlbar.clickSelectsAll" type="bool"/>
   <preference id="browser.urlbar.doubleClickSelectsAll" name="browser.urlbar.doubleClickSelectsAll" type="bool"/>
   <preference id="browser.urlbar.autocomplete.enabled" name="browser.urlbar.autocomplete.enabled" type="bool" inverted="true"/>
@@ -67,6 +62,10 @@
   <preference id="browser.urlbar.delay" name="browser.urlbar.delay" type="int"/>
   <preference id="browser.urlbar.formatting.enabled" name="browser.urlbar.formatting.enabled" type="bool"/>
   <preference id="browser.urlbar.trimURLs" name="browser.urlbar.trimURLs" type="bool"/>
+  <preference id="keyword.enabled" name="keyword.enabled" type="bool"/>
+  <preference id="browser.fixup.alternate.enabled" name="browser.fixup.alternate.enabled" type="bool"/>
+  <preference id="browser.fixup.alternate.prefix" name="browser.fixup.alternate.prefix" type="string"/>
+  <preference id="browser.fixup.alternate.suffix" name="browser.fixup.alternate.suffix" type="string"/>
 
   <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool" inverted="true"/>
   <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
@@ -181,8 +180,7 @@
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
 <radiogroup id="paneBrowserBoxTab" class="subtabs"
  orient="vertical" style="max-width: 10em; width: 10em;"
- value="smartbrowsing" oncommand="gPrefWindow.prefBrowser.onPaneBrowserBoxTabSelected();">
-  <radio class="subtab" value="smartbrowsing" label="&browser.smartbrowsing.label;"/>
+ value="urlbar" oncommand="gPrefWindow.prefBrowser.onPaneBrowserBoxTabSelected();">
   <radio class="subtab" value="urlbar"        label="&browser.urlbar.label;"       />
   <radio class="subtab" value="html"          label="&browser.html.label;"         />
   <radio class="subtab" value="tabs"          label="&browser.tabs.label;"         />
@@ -198,35 +196,6 @@
 </radiogroup>
 <splitter/>
 <deck id="paneBrowserBoxContainer" flex="4">
-<box class="subtabpanel" orient="vertical" id="smartbrowsing">
-  <groupbox>
-    <caption label="&browser.smartbrowsing.internetKeywords.label;"/>
-    <description>&browser.smartbrowsing.internetKeywords.desc;</description>
-    <vbox>
-      <checkbox id="smartbrowsing-keywordsEnabled" preference="keyword.enabled"
-                label="&browser.smartbrowsing.internetKeywords.enabled.label;"/>
-    </vbox>
-  </groupbox>
-  <groupbox>
-    <caption label="&browser.smartbrowsing.domainGuessing.label;"/>
-
-    <checkbox id="smartbrowsing-domainGuessingEnabled"
-          label="&browser.smartbrowsing.domainGuessing.enabled.label;"
-          onsyncfrompreference="return gPrefWindow.prefBrowser.onDomainGaussSyncFrom();"
-          preference="browser.fixup.alternate.enabled"/>
-    <hbox align="center">
-      <label control="smartbrowsing-domainGuessingPrefix"
-             value="&browser.smartbrowsing.domainGuessing.prefix.label;"/>
-      <textbox id="smartbrowsing-domainGuessingPrefix"
-        preference="browser.fixup.alternate.prefix" flex="1"/>
-      <spacer flex="1"/>
-      <label control="smartbrowsing-domainGuessingSuffix"
-             value="&browser.smartbrowsing.domainGuessing.suffix.label;"/>
-      <textbox id="smartbrowsing-domainGuessingSuffix"
-               preference="browser.fixup.alternate.suffix" flex="1"/>
-    </hbox>
-  </groupbox>
-</box>
 <box class="subtabpanel" orient="vertical" id="urlbar">
   <checkbox label="&browser.urlbar.clickSelectsAll.label;" preference="browser.urlbar.clickSelectsAll"/>
   <checkbox label="&browser.urlbar.doubleClickSelectsAll.label;" preference="browser.urlbar.doubleClickSelectsAll"/>
@@ -252,6 +221,32 @@
     <caption label="&browser.urlbar.formatting.label;"/>
     <checkbox label="&browser.urlbar.formatting.formatting-enabled.label;" preference="browser.urlbar.formatting.enabled"/>
     <checkbox label="&browser.urlbar.formatting.trimURLs.label;" preference="browser.urlbar.trimURLs"/>
+  </groupbox>
+
+  <groupbox>
+    <caption label="&browser.urlbar.unknownLocations.label;"/>
+
+    <checkbox preference="keyword.enabled"
+              label="&browser.urlbar.unknownLocations.keywords.label;"/>
+    <groupbox>
+      <caption label="&browser.urlbar.unknownLocations.domainGuessing.label;"/>
+
+      <checkbox id="urlbar-domainGuessingEnabled"
+            label="&browser.urlbar.unknownLocations.domainGuessing.enabled.label;"
+            onsyncfrompreference="return gPrefWindow.prefBrowser.onDomainGaussSyncFrom();"
+            preference="browser.fixup.alternate.enabled"/>
+      <hbox align="center">
+        <label control="urlbar-domainGuessingPrefix"
+               value="&browser.urlbar.unknownLocations.domainGuessing.prefix.label;"/>
+        <textbox id="urlbar-domainGuessingPrefix"
+          preference="browser.fixup.alternate.prefix" flex="1"/>
+        <spacer flex="1"/>
+        <label control="urlbar-domainGuessingSuffix"
+               value="&browser.urlbar.unknownLocations.domainGuessing.suffix.label;"/>
+        <textbox id="urlbar-domainGuessingSuffix"
+                 preference="browser.fixup.alternate.suffix" flex="1"/>
+      </hbox>
+    </groupbox>
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="html">

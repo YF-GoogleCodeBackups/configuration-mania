@@ -3,10 +3,6 @@
 <!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
 <!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords を使って、ロケーションバーから検索、その他の情報に素早くアクセスできます。">
 <!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Internet Keywords を有効にする">
-<!ENTITY browser.smartbrowsing.domainGuessing.label "ドメイン補完">
-<!ENTITY browser.smartbrowsing.domainGuessing.enabled.label "Web ページがみつからないときに、自動的に接頭辞と接尾辞を補完">
-<!ENTITY browser.smartbrowsing.domainGuessing.prefix.label "接頭辞 : ">
-<!ENTITY browser.smartbrowsing.domainGuessing.suffix.label "接尾辞 : ">
 <!ENTITY browser.urlbar.label "ロケーションバー">
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
@@ -18,6 +14,12 @@
 <!ENTITY browser.urlbar.formatting.label "整形">
 <!ENTITY browser.urlbar.formatting.formatting-enabled.label "ドメイン名を強調表示">
 <!ENTITY browser.urlbar.formatting.trimURLs.label "http:// を省略して表示">
+<!ENTITY browser.urlbar.unknownLocations.label "アドレス入力">
+<!ENTITY browser.urlbar.unknownLocations.keywords.label "入力されたテキストが Web アドレス (URL) でないときは Web を検索する">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.label "ドメイン補完">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.enabled.label "Web ページがみつからないときに、自動的に接頭辞と接尾辞を補完">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.prefix.label "接頭辞 : ">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.suffix.label "接尾辞 : ">
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
 <!ENTITY browser.html.disableFrame.label "フレームを無効にする(Firefox 31以下)">

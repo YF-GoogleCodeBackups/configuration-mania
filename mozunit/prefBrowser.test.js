@@ -81,21 +81,23 @@ tc.tests = {
       assert.equals("true", this.document.getElementById(paneBrowserBoxTab.value).getAttribute("selected"));
     }
   },
-  testOnDomainGaussSyncFrom: function() {
-    let checkbox = this.document.getElementById("smartbrowsing-domainGuessingEnabled");
-    let target = this.document.getElementById("smartbrowsing-domainGuessingPrefix");
-
-    for (let i = 0; i < 2; i++) {
-      assert.equals(checkbox.checked, !target.disabled);
-      checkbox.click();
-    }
-  },
   testOnAutoCompleteSyncFrom: function() {
     let checkbox = this.document.getElementById("urlbar-autoComplete-disabled");
     let target = this.document.getElementById("urlbar-delay");
 
     for (let i = 0; i < 2; i++) {
       assert.equals(!checkbox.checked, !target.disabled);
+      checkbox.click();
+    }
+  },
+  testOnDomainGaussSyncFrom: function() {
+    let checkbox = this.document.getElementById("urlbar-domainGuessingEnabled");
+    let target1 = this.document.getElementById("urlbar-domainGuessingPrefix");
+    let target2 = this.document.getElementById("urlbar-domainGuessingSuffix");
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, !target1.disabled);
+      assert.equals(checkbox.checked, !target2.disabled);
       checkbox.click();
     }
   },

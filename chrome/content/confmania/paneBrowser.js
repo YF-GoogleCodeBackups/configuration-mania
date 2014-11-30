@@ -88,16 +88,16 @@ gPrefWindow.prefBrowser = {
       pane.setAttribute("selected", (radioItem.selected)? "true" : "false");
     }
   },
-  onDomainGaussSyncFrom : function () {
-    let disabled = ! document.getElementById("browser.fixup.alternate.enabled").value;
-    for each (let name in ["browser.fixup.alternate.prefix", "browser.fixup.alternate.suffix"]) {
+  onAutoCompleteSyncFrom : function (){
+    let disabled = document.getElementById("browser.urlbar.autocomplete.enabled").value;
+    for each (let name in ["browser.urlbar.autoFill", "browser.urlbar.filter.javascript", "browser.urlbar.maxRichResults", "browser.urlbar.delay"]) {
       document.getElementById(name).disabled = disabled;
     }
     return undefined; // no override
   },
-  onAutoCompleteSyncFrom : function (){
-    let disabled = document.getElementById("browser.urlbar.autocomplete.enabled").value;
-    for each (let name in ["browser.urlbar.autoFill", "browser.urlbar.filter.javascript", "browser.urlbar.maxRichResults", "browser.urlbar.delay"]) {
+  onDomainGaussSyncFrom : function () {
+    let disabled = ! document.getElementById("browser.fixup.alternate.enabled").value;
+    for each (let name in ["browser.fixup.alternate.prefix", "browser.fixup.alternate.suffix"]) {
       document.getElementById(name).disabled = disabled;
     }
     return undefined; // no override
