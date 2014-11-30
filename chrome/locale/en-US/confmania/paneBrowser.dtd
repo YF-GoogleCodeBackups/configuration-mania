@@ -160,6 +160,9 @@
 <!ENTITY browser.others.dom_battery_enabled.label "Enable Battery Status API">
 <!ENTITY browser.others.dom_sms_enabled.label "Enable Messaging (SMS) API">
 <!ENTITY browser.others.dom_vibrator_enabled.label "Enable Vibration API">
+<!ENTITY browser.others.network-predictor.label "Network predictor (Firefox 32+)">
+<!ENTITY browser.others.network-predictor.enabled.label "Pre-connect link-target server on hovering mouse over the link">
+<!ENTITY browser.others.network-predictor.enable-hover-on-ssl.label "Do not pre-connect on hovering mouse over the link in HTTPS site">
 <!ENTITY browser.others.dns.label "DNS Setting">
 <!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
 <!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">

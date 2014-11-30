@@ -160,6 +160,9 @@
 <!ENTITY browser.others.dom_battery_enabled.label "バッテリーステータスAPIを有効にする">
 <!ENTITY browser.others.dom_sms_enabled.label "メッセージング(SMS)APIを有効にする">
 <!ENTITY browser.others.dom_vibrator_enabled.label "バイブレーションAPIを有効にする">
+<!ENTITY browser.others.network-predictor.label "Network predictor (Firefox 32+)">
+<!ENTITY browser.others.network-predictor.enabled.label "リンクをマウスオーバー時にリンク先のサーバに事前接続する">
+<!ENTITY browser.others.network-predictor.enable-hover-on-ssl.label "HTTPSサイト上のリンクをマウスオーバー時には事前接続をしない">
 <!ENTITY browser.others.dns.label "名前解決(DNS)">
 <!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
 <!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">
