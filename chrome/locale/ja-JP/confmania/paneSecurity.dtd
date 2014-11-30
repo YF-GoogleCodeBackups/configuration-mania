@@ -52,7 +52,6 @@
 <!ENTITY security.popupwin.event.touchend.label "タッチ終了">
 <!ENTITY security.antivirus.label "ウイルス対策">
 <!ENTITY security.antivirus.scanWhenDone.label "ダウンロード完了時にウイルススキャンを実行する">
-<!ENTITY security.antivirus.disableSaveZoneInformation.label "ダウンロードされたファイルの代替データストリームに Security Zone Information を格納しない(Firefox 26-28)">
 <!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.SSLProtocolVersions.caption "SSL プロトコルのバージョン">

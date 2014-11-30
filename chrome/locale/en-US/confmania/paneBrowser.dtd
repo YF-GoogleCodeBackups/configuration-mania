@@ -61,14 +61,6 @@
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
-<!ENTITY browser.tabs.tabBarLocation.label "Tab bar location">
-<!ENTITY browser.tabs.tabBarLocation.topTab.label "Tabs on Top (up-to Firefox 28)">
-<!ENTITY browser.tabs.closeButtons.label "Display a close button (up-to Firefox 30)...">
-<!ENTITY browser.tabs.closeButtons.active.label "on the Active tab Only">
-<!ENTITY browser.tabs.closeButtons.all.label "on All tabs (Default)">
-<!ENTITY browser.tabs.closeButtons.no.label "No close button">
-<!ENTITY browser.tabs.closeButtons.end.label "at the end of the tab strip (Firefox1.x behavior)">
-<!ENTITY browser.tabs.tabClipWidth.label "Minimum background-tab width to display close button">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar with ENTER key">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab">
 <!ENTITY browser.tabs.warnOnCloseOtherTabs.label "Warn me when closing other multiple tabs">
@@ -119,14 +111,8 @@
 <!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">
 <!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Pause but will not resume downloads automatically when &brandShortName; restarted">
 <!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
-<!ENTITY browser.download.nouseToolkitUI.label "Use download panel (up-to Firefox 27)">
-<!ENTITY browser.download.flashCount.label "On download completed, the downloads window blinks:">
-<!ENTITY browser.download.flashCount.never.label "Never.">
-<!ENTITY browser.download.flashCount.infinite.label "until the window is brought into foreground">
-<!ENTITY browser.download.flashCount.finite.label "">
-<!ENTITY browser.download.flashCount.finite.label2 "times">
 <!ENTITY browser.download.showAlertOnComplete.label "Show alert when a download completes">
-<!ENTITY browser.download.disableAnimateNotifications.label "Disable the animated notifications of the Download Indicator when a download starts or completes. (Firefox 25+)">
+<!ENTITY browser.download.disableAnimateNotifications.label "Disable the animated notifications of the Download Indicator when a download starts or completes.">
 <!ENTITY browser.ua.label "User-Agent">
 <!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.text.label "UA string :">

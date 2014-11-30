@@ -53,13 +53,6 @@
 <preferences>
   <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
   <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
-  <preference name="extensions.checkCompatibility.24.0" id="extensions.checkCompatibility.24.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.25.0" id="extensions.checkCompatibility.25.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.26.0" id="extensions.checkCompatibility.26.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.27.0" id="extensions.checkCompatibility.27.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.28.0" id="extensions.checkCompatibility.28.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.29.0" id="extensions.checkCompatibility.29.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.30.0" id="extensions.checkCompatibility.30.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.31.0" id="extensions.checkCompatibility.31.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.32.0" id="extensions.checkCompatibility.32.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.33.0" id="extensions.checkCompatibility.33.0" type="bool" inverted="true"/>
@@ -84,13 +77,6 @@
 <groupbox>
 <caption label="&addons.noCheckCompatibility.label;"/>
 <hbox>
-<checkbox label="24" preference="extensions.checkCompatibility.24.0"/>
-<checkbox label="25" preference="extensions.checkCompatibility.25.0"/>
-<checkbox label="26" preference="extensions.checkCompatibility.26.0"/>
-<checkbox label="27" preference="extensions.checkCompatibility.27.0"/>
-<checkbox label="28" preference="extensions.checkCompatibility.28.0"/>
-<checkbox label="29" preference="extensions.checkCompatibility.29.0"/>
-<checkbox label="30" preference="extensions.checkCompatibility.30.0"/>
 <checkbox label="31" preference="extensions.checkCompatibility.31.0"/>
 <checkbox label="32" preference="extensions.checkCompatibility.32.0"/>
 <checkbox label="33" preference="extensions.checkCompatibility.33.0"/>
