@@ -87,7 +87,7 @@
   <preference id="layers.acceleration.force-enabled" name="layers.acceleration.force-enabled" type="bool"/>
   <preference id="gfx.direct2d.disabled" name="gfx.direct2d.disabled" type="bool"/>
   <preference id="gfx.direct2d.force-enabled" name="gfx.direct2d.force-enabled" type="bool"/>
-
+  <preference id="layers.offmainthreadcomposition.enabled" name="layers.offmainthreadcomposition.enabled" type="bool"/>
 
   <preference id="browser.newtab.url" name="browser.newtab.url" type="string"/>
   <preference id="browser.newtabpage.enabled" name="browser.newtabpage.enabled" type="bool"/>
@@ -334,6 +334,8 @@
               class="indent"
               preference="gfx.direct2d.force-enabled"/>
   </groupbox>
+  <checkbox label="&browser.html.offmainthreadcomposition-enabled.label;"
+            preference="layers.offmainthreadcomposition.enabled"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="tabs">
   <groupbox>

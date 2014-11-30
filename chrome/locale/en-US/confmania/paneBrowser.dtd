@@ -51,7 +51,8 @@
 <!ENTITY browser.html.acceleration.disabled.label "Disable acceleration for all widgets">
 <!ENTITY browser.html.acceleration.force-enabled.label "Force acceleration on, ignoring blacklists">
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Disable the automatic detection and use of direct2d (Windows)">
-<!ENTITY browser.html.acceleration.d2d-force-enabled.label "enable Direct2D regardless of automatic detection or blacklisting (Windows)">
+<!ENTITY browser.html.acceleration.d2d-force-enabled.label "Enable Direct2D regardless of automatic detection or blacklisting (Windows)">
+<!ENTITY browser.html.offmainthreadcomposition-enabled.label "Enable Off Main Thread Compositing (OMTC)">
 <!ENTITY browser.tabs.label "TabBrowsing">
 <!ENTITY browser.tabs.newtab.label "New Tab">
 <!ENTITY browser.tabs.newtab.url.label "URL:">

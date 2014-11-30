@@ -56,6 +56,7 @@
 <!ENTITY browser.html.acceleration.force-enabled.label "グラフィックスドライバのブラックリストを無視して常に有効にする">
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Direct2D を使用しない (Windows)">
 <!ENTITY browser.html.acceleration.d2d-force-enabled.label "グラフィックスドライバのブラックリストを無視して常に有効にする (Windows)">
+<!ENTITY browser.html.offmainthreadcomposition-enabled.label "Off Main Thread Compositing (OMTC) を有効にする">
 <!ENTITY browser.tabs.label "タブブラウジング">
 <!ENTITY browser.tabs.newtab.label "新しいタブ">
 <!ENTITY browser.tabs.newtab.url.label "URL:">
