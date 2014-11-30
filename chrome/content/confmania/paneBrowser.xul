@@ -203,7 +203,6 @@
     <description>&browser.smartbrowsing.internetKeywords.desc;</description>
     <vbox>
       <checkbox id="smartbrowsing-keywordsEnabled" preference="keyword.enabled"
-                onsyncfrompreference="return gPrefWindow.prefBrowser.onSmartBrowsingSyncFrom();"
                 label="&browser.smartbrowsing.internetKeywords.enabled.label;"/>
     </vbox>
   </groupbox>
