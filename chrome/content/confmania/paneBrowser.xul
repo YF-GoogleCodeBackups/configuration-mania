@@ -158,6 +158,8 @@
   <preference id="dom.battery.enabled" name="dom.battery.enabled" type="bool"/>
   <preference id="dom.sms.enabled" name="dom.sms.enabled" type="bool"/>
   <preference id="dom.vibrator.enabled" name="dom.vibrator.enabled" type="bool"/>
+  <preference id="network.predictor.enabled" name="network.predictor.enabled" type="bool"/>
+  <preference id="network.predictor.enable-hover-on-ssl" name="network.predictor.enable-hover-on-ssl" type="bool" inverted="true"/>
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
   <preference id="prompts.tab_modal.enabled" name="prompts.tab_modal.enabled" type="bool"/>
@@ -628,6 +630,12 @@
   <checkbox label="&browser.others.dom_battery_enabled.label;" preference="dom.battery.enabled"/>
   <checkbox label="&browser.others.dom_sms_enabled.label;" preference="dom.sms.enabled"/>
   <checkbox label="&browser.others.dom_vibrator_enabled.label;" preference="dom.vibrator.enabled"/>
+
+  <groupbox>
+    <caption label="&browser.others.network-predictor.label;"/>
+    <checkbox label="&browser.others.network-predictor.enabled.label;" preference="network.predictor.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onOtherNetworkPredictorEnabledSyncFrom();"/>
+    <checkbox label="&browser.others.network-predictor.enable-hover-on-ssl.label;" preference="network.predictor.enable-hover-on-ssl" class="indent"/>
+  </groupbox>
 
   <groupbox>
     <caption label="&browser.others.dns.label;"/>

@@ -333,6 +333,15 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnOthersNetworkPredictorEnabledSyncFrom : function () {
+    let checkbox = this.document.querySelector("checkbox[preference='network.predictor.enabled']");
+    let target = this.document.querySelector("checkbox[preference='network.predictor.enable-hover-on-ssl']");
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, !target.disabled);
+      checkbox.click();
+    }
+  },
   //testOnOthersGeoExceptionsCommand : function() {
   //},
   //testOnnBrowserCacheDiskCacheFolderBrowse: function() {

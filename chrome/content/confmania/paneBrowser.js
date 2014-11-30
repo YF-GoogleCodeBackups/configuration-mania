@@ -388,6 +388,11 @@ gPrefWindow.prefBrowser = {
                                           "", params);
     }
   },
+  onOtherNetworkPredictorEnabledSyncFrom : function () {
+    let disabled = ! document.getElementById("network.predictor.enabled").value;
+    document.getElementById("network.predictor.enable-hover-on-ssl").disabled = disabled;
+    return undefined; // no override
+  },
   onEditorExternalBrowse : function(){
     const filters = [Components.interfaces.nsIFilePicker.filterApps, Components.interfaces.nsIFilePicker.filterAll];
     this._openBrowse(filters, "others-editorExternal-path", "file");
