@@ -42,7 +42,6 @@
 <!ENTITY browser.html.plugins.label "Plugins">
 <!ENTITY browser.html.plugins.click_to_play.label "Do not load the plugin content until you click on it">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
-<!ENTITY browser.html.webgl.label "Enable WebGL (takes effect after restart)">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.zoomSiteSpecific.label "Remember the zoom preferences page by page">
 <!ENTITY browser.html.focus.label "Highlight Focus">
@@ -104,6 +103,21 @@
 <!ENTITY browser.multimedia.directshow-enabled.label "Enable Direct Show (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "Enable GStreamer (Linux)">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Enable Apple MP3 (Mac)">
+<!ENTITY browser.webapi.label "Web API">
+<!ENTITY browser.webapi.geo_enabled.label "Enable Geolocation">
+<!ENTITY browser.webapi.geoExceptions.label "Exceptions">
+<!ENTITY browser.webapi.geoExceptions.title "Exceptions - Geolocation">
+<!ENTITY browser.webapi.geoExceptions.desc "You can specify which websites are allowed to access your location. Type the exact address of the site you want to manage and then click Block or Allow.">
+<!ENTITY browser.webapi.geoWifiUri.label "Geolocation service URL:">
+<!ENTITY browser.webapi.geoWifiUri.browseFile.label "Browse file for debugging...">
+<!ENTITY browser.webapi.full_screen_enabled.label "Enable Full Screen API">
+<!ENTITY browser.webapi.full_screenExceptions.label "Exceptions">
+<!ENTITY browser.webapi.full_screenExceptions.title "Exceptions - Full Screen">
+<!ENTITY browser.webapi.full_screenExceptions.desc "You can specify which websites are allowed to enter fullscreen. Type the exact address of the site you want to manage and then click Block or Allow.">
+<!ENTITY browser.webapi.dom_battery_enabled.label "Enable Battery Status API">
+<!ENTITY browser.webapi.dom_sms_enabled.label "Enable Messaging (SMS) API">
+<!ENTITY browser.webapi.dom_vibrator_enabled.label "Enable Vibration API">
+<!ENTITY browser.webapi.webgl.label "Enable WebGL (takes effect after restart)">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links">
 <!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
@@ -147,19 +161,6 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.label "Cache Folder Location">
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
 <!ENTITY browser.others.label "Other">
-<!ENTITY browser.others.geo_enabled.label "Enable Geolocation">
-<!ENTITY browser.others.geoExceptions.label "Exceptions">
-<!ENTITY browser.others.geoExceptions.title "Exceptions - Geolocation">
-<!ENTITY browser.others.geoExceptions.desc "You can specify which websites are allowed to access your location. Type the exact address of the site you want to manage and then click Block or Allow.">
-<!ENTITY browser.others.geoWifiUri.label "Geolocation service URL:">
-<!ENTITY browser.others.geoWifiUri.browseFile.label "Browse file for debugging...">
-<!ENTITY browser.others.full_screen_enabled.label "Enable Full Screen API">
-<!ENTITY browser.others.full_screenExceptions.label "Exceptions">
-<!ENTITY browser.others.full_screenExceptions.title "Exceptions - Full Screen">
-<!ENTITY browser.others.full_screenExceptions.desc "You can specify which websites are allowed to enter fullscreen. Type the exact address of the site you want to manage and then click Block or Allow.">
-<!ENTITY browser.others.dom_battery_enabled.label "Enable Battery Status API">
-<!ENTITY browser.others.dom_sms_enabled.label "Enable Messaging (SMS) API">
-<!ENTITY browser.others.dom_vibrator_enabled.label "Enable Vibration API">
 <!ENTITY browser.others.network-predictor.label "Network predictor (Firefox 32+)">
 <!ENTITY browser.others.network-predictor.enabled.label "Pre-connect link-target server on hovering mouse over the link">
 <!ENTITY browser.others.network-predictor.enable-hover-on-ssl.label "Do not pre-connect on hovering mouse over the link in HTTPS site">

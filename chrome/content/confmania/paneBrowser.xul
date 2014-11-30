@@ -78,7 +78,6 @@
   <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
   <preference id="plugins.click_to_play" name="plugins.click_to_play" type="bool"/>
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
-  <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.zoom.siteSpecific" name="browser.zoom.siteSpecific" type="bool"/>
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
@@ -128,6 +127,14 @@
   <preference id="media.gstreamer.enabled" name="media.gstreamer.enabled" type="bool"/>
   <preference id="media.apple.mp3.enabled" name="media.apple.mp3.enabled" type="bool"/>
 
+  <preference id="geo.enabled" name="geo.enabled" type="bool"/>
+  <preference id="geo.wifi.uri" name="geo.wifi.uri" type="string"/>
+  <preference id="full-screen-api.enabled" name="full-screen-api.enabled" type="bool"/>
+  <preference id="dom.battery.enabled" name="dom.battery.enabled" type="bool"/>
+  <preference id="dom.sms.enabled" name="dom.sms.enabled" type="bool"/>
+  <preference id="dom.vibrator.enabled" name="dom.vibrator.enabled" type="bool"/>
+  <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
+
   <preference id="browser.altClickSave" name="browser.altClickSave" type="bool" inverted="true"/>
   <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
   <preference id="browser.download.manager.quitBehavior" name="browser.download.manager.quitBehavior" type="int"/>
@@ -152,12 +159,6 @@
   <preference id="browser.sessionhistory.max_total_viewers" name="browser.sessionhistory.max_total_viewers" type="int"/>
   <preference id="browser.cache.disk.parent_directory" name="browser.cache.disk.parent_directory" type="string"/>
 
-  <preference id="geo.enabled" name="geo.enabled" type="bool"/>
-  <preference id="geo.wifi.uri" name="geo.wifi.uri" type="string"/>
-  <preference id="full-screen-api.enabled" name="full-screen-api.enabled" type="bool"/>
-  <preference id="dom.battery.enabled" name="dom.battery.enabled" type="bool"/>
-  <preference id="dom.sms.enabled" name="dom.sms.enabled" type="bool"/>
-  <preference id="dom.vibrator.enabled" name="dom.vibrator.enabled" type="bool"/>
   <preference id="network.predictor.enabled" name="network.predictor.enabled" type="bool"/>
   <preference id="network.predictor.enable-hover-on-ssl" name="network.predictor.enable-hover-on-ssl" type="bool" inverted="true"/>
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
@@ -188,6 +189,7 @@
   <radio class="subtab" value="sessionstore"  label="&browser.sessionStore.label;" />
   <radio class="subtab" value="bookmarkicon"  label="&browser.bookmarkicon.label;" />
   <radio class="subtab" value="multimedia"    label="&browser.multimedia.label;"   />
+  <radio class="subtab" value="webapi"        label="&browser.webapi.label;"       />
   <radio class="subtab" value="download"      label="&browser.download.label;"     />
   <radio class="subtab" value="ua"            label="&browser.ua.label;"           />
   <radio class="subtab" value="speed-paint"   label="&browser.speed-paint.label;"  />
@@ -304,7 +306,6 @@
     <checkbox label="&browser.html.plugins.click_to_play.label;" preference="plugins.click_to_play"/>
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
-  <checkbox id="html-webglEnabled" label="&browser.html.webgl.label;" preference="webgl.disabled"/>
 
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
   <checkbox label="&browser.html.zoomSiteSpecific.label;" preference="browser.zoom.siteSpecific"/>
@@ -458,6 +459,40 @@
   <checkbox label="&browser.multimedia.gstreamer-enabled.label;" preference="media.gstreamer.enabled"/>
   <checkbox label="&browser.multimedia.apple-mp3-enabled.label;" preference="media.apple.mp3.enabled"/>
 </box>
+<box class="subtabpanel" orient="vertical" id="webapi">
+  <vbox>
+    <hbox>
+      <checkbox label="&browser.webapi.geo_enabled.label;" preference="geo.enabled" flex="1" onsynctopreference="return gPrefWindow.prefBrowser.onWebAPIGeoEnabledSyncFrom();"/>
+      <button label="&browser.webapi.geoExceptions.label;"
+              id="webapi-geoExceptions"
+              data-dialog-title="&browser.webapi.geoExceptions.title;"
+              data-dialog-desc="&browser.webapi.geoExceptions.desc;"
+              oncommand="gPrefWindow.prefBrowser.onWebAPIGeoExceptionsCommand();"/>
+    </hbox>
+    <vbox class="indent">
+      <hbox align="center">
+        <label control="webapi-geoWifiUri" value="&browser.webapi.geoWifiUri.label;"/>
+        <textbox id="webapi-geoWifiUri" preference="geo.wifi.uri" flex="1"/>
+      </hbox>
+      <hbox align="center" pack="end">
+        <button label="&browser.webapi.geoWifiUri.browseFile.label;" control="webapi-geoWifiUri" oncommand="gPrefWindow.prefBrowser.onWebAPIGeoWifiUriBrowse();"/>
+        <button label="&reset;" control="webapi-geoWifiUri" oncommand="gPrefWindow.prefBrowser.onWebAPIGeoWifiUriReset();"/>
+      </hbox>
+    </vbox>
+  </vbox>
+  <hbox>
+    <checkbox label="&browser.webapi.full_screen_enabled.label;" preference="full-screen-api.enabled" flex="1" onsynctopreference="return gPrefWindow.prefBrowser.onWebAPIFullScreenEnabledSyncFrom();"/>
+    <button label="&browser.webapi.full_screenExceptions.label;"
+            id="webapi-full_screenExceptions"
+            data-dialog-title="&browser.webapi.full_screenExceptions.title;"
+            data-dialog-desc="&browser.webapi.full_screenExceptions.desc;"
+            oncommand="gPrefWindow.prefBrowser.onWebAPIFullScreenExceptionsCommand();"/>
+  </hbox>
+  <checkbox label="&browser.webapi.dom_battery_enabled.label;" preference="dom.battery.enabled"/>
+  <checkbox label="&browser.webapi.dom_sms_enabled.label;" preference="dom.sms.enabled"/>
+  <checkbox label="&browser.webapi.dom_vibrator_enabled.label;" preference="dom.vibrator.enabled"/>
+  <checkbox label="&browser.webapi.webgl.label;" preference="webgl.disabled"/>
+</box>
 <box class="subtabpanel" orient="vertical" id="download">
   <checkbox label="&browser.download.disableAltClickSave.label;"
             preference="browser.altClickSave"/>
@@ -598,37 +633,6 @@
 </box>
 
 <box class="subtabpanel" orient="vertical" id="others">
-  <vbox>
-    <hbox>
-      <checkbox label="&browser.others.geo_enabled.label;" preference="geo.enabled" flex="1" onsynctopreference="return gPrefWindow.prefBrowser.onOthersGeoEnabledSyncFrom();"/>
-      <button label="&browser.others.geoExceptions.label;"
-              id="others-geoExceptions"
-              data-dialog-title="&browser.others.geoExceptions.title;"
-              data-dialog-desc="&browser.others.geoExceptions.desc;"
-              oncommand="gPrefWindow.prefBrowser.onOthersGeoExceptionsCommand();"/>
-    </hbox>
-    <vbox class="indent">
-      <hbox align="center">
-        <label control="others-geoWifiUri" value="&browser.others.geoWifiUri.label;"/>
-        <textbox id="others-geoWifiUri" preference="geo.wifi.uri" flex="1"/>
-      </hbox>
-      <hbox align="center" pack="end">
-        <button label="&browser.others.geoWifiUri.browseFile.label;" control="others-geoWifiUri" oncommand="gPrefWindow.prefBrowser.onOthersGeoWifiUriBrowse();"/>
-        <button label="&reset;" control="others-geoWifiUri" oncommand="gPrefWindow.prefBrowser.onOthersGeoWifiUriReset();"/>
-      </hbox>
-    </vbox>
-  </vbox>
-  <hbox>
-    <checkbox label="&browser.others.full_screen_enabled.label;" preference="full-screen-api.enabled" flex="1" onsynctopreference="return gPrefWindow.prefBrowser.onOthersFullScreenEnabledSyncFrom();"/>
-    <button label="&browser.others.full_screenExceptions.label;"
-            id="others-full_screenExceptions"
-            data-dialog-title="&browser.others.full_screenExceptions.title;"
-            data-dialog-desc="&browser.others.full_screenExceptions.desc;"
-            oncommand="gPrefWindow.prefBrowser.onOthersFullScreenExceptionsCommand();"/>
-  </hbox>
-  <checkbox label="&browser.others.dom_battery_enabled.label;" preference="dom.battery.enabled"/>
-  <checkbox label="&browser.others.dom_sms_enabled.label;" preference="dom.sms.enabled"/>
-  <checkbox label="&browser.others.dom_vibrator_enabled.label;" preference="dom.vibrator.enabled"/>
 
   <groupbox>
     <caption label="&browser.others.network-predictor.label;"/>

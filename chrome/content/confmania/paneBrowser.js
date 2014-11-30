@@ -174,6 +174,52 @@ gPrefWindow.prefBrowser = {
     document.getElementById("media.windows-media-foundation.play-stand-alone").disabled = disabled;
     return undefined; // no override
   },
+  onWebAPIGeoEnabledSyncFrom : function () {
+    let disabled = document.getElementById("geo.enabled").value;
+    document.getElementById("webapi-geoExceptions").disabled = disabled;
+    document.getElementById("geo.wifi.uri").disabled = disabled;
+    return undefined; // no override
+  },
+  onWebAPIGeoWifiUriBrowse: function() {
+    const filters = [{name: null, filter: "*.json"}, Components.interfaces.nsIFilePicker.filterAll];
+    this._openBrowse(filters, "webapi-geoWifiUri", "uri");
+  },
+  onWebAPIGeoWifiUriReset: function() {
+    gPrefWindow.resetPref(document.getElementById("geo.wifi.uri"));
+  },
+  onWebAPIGeoExceptionsCommand : function() {
+    let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "geo" };
+    params.windowTitle = document.getElementById("webapi-geoExceptions").getAttribute("data-dialog-title");
+    params.introText   = document.getElementById("webapi-geoExceptions").getAttribute("data-dialog-desc");
+
+    if (openDialog) { // in-Content
+      openDialog("chrome://browser/content/preferences/permissions.xul", 
+                 "Browser:Permissions", "resizable=yes", params);
+    } else if (document.documentElement.openWindow) {
+      document.documentElement.openWindow("Browser:Permissions",
+                                          "chrome://browser/content/preferences/permissions.xul",
+                                          "", params);
+    }
+  },
+  onWebAPIFullScreenEnabledSyncFrom : function () {
+    let disabled = document.getElementById("full-screen-api.enabled").value;
+    document.getElementById("webapi-full_screenExceptions").disabled = disabled;
+    return undefined; // no override
+  },
+  onWebAPIFullScreenExceptionsCommand : function() {
+    let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "fullscreen" };
+    params.windowTitle = document.getElementById("webapi-full_screenExceptions").getAttribute("data-dialog-title");
+    params.introText   = document.getElementById("webapi-full_screenExceptions").getAttribute("data-dialog-desc");
+
+    if (openDialog) { // in-Content
+      openDialog("chrome://browser/content/preferences/permissions.xul", 
+                 "Browser:Permissions", "resizable=yes", params);
+    } else if (document.documentElement.openWindow) {
+      document.documentElement.openWindow("Browser:Permissions",
+                                          "chrome://browser/content/preferences/permissions.xul",
+                                          "", params);
+    }
+  },
   onInterruptParseSyncFrom : function() {
     let disabled = document.getElementById("content.interrupt.parsing").value;
     document.getElementById("content.max.tokenizing.time").disabled = disabled;
@@ -340,52 +386,6 @@ gPrefWindow.prefBrowser = {
         targetElem.value = fp.file.path;
       }
       gPrefWindow.getCurrentPrefPane().userChangedValue(targetElem);
-    }
-  },
-  onOthersGeoEnabledSyncFrom : function () {
-    let disabled = document.getElementById("geo.enabled").value;
-    document.getElementById("others-geoExceptions").disabled = disabled;
-    document.getElementById("geo.wifi.uri").disabled = disabled;
-    return undefined; // no override
-  },
-  onOthersGeoWifiUriBrowse: function() {
-    const filters = [{name: null, filter: "*.json"}, Components.interfaces.nsIFilePicker.filterAll];
-    this._openBrowse(filters, "others-geoWifiUri", "uri");
-  },
-  onOthersGeoWifiUriReset: function() {
-    gPrefWindow.resetPref(document.getElementById("geo.wifi.uri"));
-  },
-  onOthersGeoExceptionsCommand : function() {
-    let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "geo" };
-    params.windowTitle = document.getElementById("others-geoExceptions").getAttribute("data-dialog-title");
-    params.introText   = document.getElementById("others-geoExceptions").getAttribute("data-dialog-desc");
-
-    if (openDialog) { // in-Content
-      openDialog("chrome://browser/content/preferences/permissions.xul", 
-                 "Browser:Permissions", "resizable=yes", params);
-    } else if (document.documentElement.openWindow) {
-      document.documentElement.openWindow("Browser:Permissions",
-                                          "chrome://browser/content/preferences/permissions.xul",
-                                          "", params);
-    }
-  },
-  onOthersFullScreenEnabledSyncFrom : function () {
-    let disabled = document.getElementById("full-screen-api.enabled").value;
-    document.getElementById("others-full_screenExceptions").disabled = disabled;
-    return undefined; // no override
-  },
-  onOthersFullScreenExceptionsCommand : function() {
-    let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "fullscreen" };
-    params.windowTitle = document.getElementById("others-full_screenExceptions").getAttribute("data-dialog-title");
-    params.introText   = document.getElementById("others-full_screenExceptions").getAttribute("data-dialog-desc");
-
-    if (openDialog) { // in-Content
-      openDialog("chrome://browser/content/preferences/permissions.xul", 
-                 "Browser:Permissions", "resizable=yes", params);
-    } else if (document.documentElement.openWindow) {
-      document.documentElement.openWindow("Browser:Permissions",
-                                          "chrome://browser/content/preferences/permissions.xul",
-                                          "", params);
     }
   },
   onOtherNetworkPredictorEnabledSyncFrom : function () {

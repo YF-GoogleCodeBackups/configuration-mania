@@ -42,7 +42,6 @@
 <!ENTITY browser.html.plugins.label "プラグイン">
 <!ENTITY browser.html.plugins.click_to_play.label "プラグインコンテンツはクリックしたら読み込む">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
-<!ENTITY browser.html.webgl.label "WebGL を有効にする (再起動必要)">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
@@ -104,6 +103,21 @@
 <!ENTITY browser.multimedia.directshow-enabled.label "Direct Showを有効にする (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "GStreamerを有効にする (Linux)">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Apple MP3を有効にする (Mac)">
+<!ENTITY browser.webapi.label "Web API">
+<!ENTITY browser.webapi.geo_enabled.label "位置情報通信機能を有効にする">
+<!ENTITY browser.webapi.geoExceptions.label "例外サイト...">
+<!ENTITY browser.webapi.geoExceptions.title "例外サイト - 位置情報">
+<!ENTITY browser.webapi.geoExceptions.desc "位置情報の通知を許可するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
+<!ENTITY browser.webapi.geoWifiUri.label "位置情報サービスURL:">
+<!ENTITY browser.webapi.geoWifiUri.browseFile.label "デバッグ用にファイルを参照...">
+<!ENTITY browser.webapi.full_screen_enabled.label "フルスクリーンAPIを有効にする">
+<!ENTITY browser.webapi.full_screenExceptions.label "例外サイト...">
+<!ENTITY browser.webapi.full_screenExceptions.title "例外サイト - 全画面表示">
+<!ENTITY browser.webapi.full_screenExceptions.desc "全画面表示の移行を許可するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
+<!ENTITY browser.webapi.dom_battery_enabled.label "バッテリーステータスAPIを有効にする">
+<!ENTITY browser.webapi.dom_sms_enabled.label "メッセージング(SMS)APIを有効にする">
+<!ENTITY browser.webapi.dom_vibrator_enabled.label "バイブレーションAPIを有効にする">
+<!ENTITY browser.webapi.webgl.label "WebGL を有効にする (再起動必要)">
 <!ENTITY browser.download.label "ダウンロード">
 <!ENTITY browser.download.disableAltClickSave.label "ALT+Click または ALT+ENTER でリンク先をダウンロードしない">
 <!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
@@ -147,19 +161,6 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.label "キャッシュの保存先">
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
 <!ENTITY browser.others.label "その他">
-<!ENTITY browser.others.geo_enabled.label "位置情報通信機能を有効にする">
-<!ENTITY browser.others.geoExceptions.label "例外サイト...">
-<!ENTITY browser.others.geoExceptions.title "例外サイト - 位置情報">
-<!ENTITY browser.others.geoExceptions.desc "位置情報の通知を許可するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
-<!ENTITY browser.others.geoWifiUri.label "位置情報サービスURL:">
-<!ENTITY browser.others.geoWifiUri.browseFile.label "デバッグ用にファイルを参照...">
-<!ENTITY browser.others.full_screen_enabled.label "フルスクリーンAPIを有効にする">
-<!ENTITY browser.others.full_screenExceptions.label "例外サイト...">
-<!ENTITY browser.others.full_screenExceptions.title "例外サイト - 全画面表示">
-<!ENTITY browser.others.full_screenExceptions.desc "全画面表示の移行を許可するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
-<!ENTITY browser.others.dom_battery_enabled.label "バッテリーステータスAPIを有効にする">
-<!ENTITY browser.others.dom_sms_enabled.label "メッセージング(SMS)APIを有効にする">
-<!ENTITY browser.others.dom_vibrator_enabled.label "バイブレーションAPIを有効にする">
 <!ENTITY browser.others.network-predictor.label "Network predictor (Firefox 32+)">
 <!ENTITY browser.others.network-predictor.enabled.label "リンクをマウスオーバー時にリンク先のサーバに事前接続する">
 <!ENTITY browser.others.network-predictor.enable-hover-on-ssl.label "HTTPSサイト上のリンクをマウスオーバー時には事前接続をしない">
