@@ -167,7 +167,6 @@
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
   <preference id="browser.search.showOneOffButtons" name="browser.search.showOneOffButtons" type="bool"/>
-  <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
   <preference id="places.history.expiration.max_pages" name="places.history.expiration.max_pages" type="int"/>
   <preference id="general.warnOnAboutConfig" name="general.warnOnAboutConfig" type="bool"/>
   <preference id="browser.taskbar.lists.enabled" name="browser.taskbar.lists.enabled" type="bool"/>
@@ -655,15 +654,6 @@
     <button label="&browse;" control="others-editorExternal-path" oncommand="gPrefWindow.prefBrowser.onEditorExternalBrowse()"/>
   </hbox>
   <checkbox label="&browser.others.enableOneClickSearchesUI.label;" preference="browser.search.showOneOffButtons"/>
-
-  <groupbox>
-    <caption label="&browser.others.backspace_action.label;"/>
-    <radiogroup preference="browser.backspace_action">
-      <radio value="0" label="&browser.others.backspace_action.goBack;"/>
-      <radio value="1" label="&browser.others.backspace_action.scrollUp;"/>
-      <radio value="2" label="&browser.others.backspace_action.nothing;"/>
-    </radiogroup>
-  </groupbox>
 
   <groupbox>
     <caption label="&browser.others.historyExpirationMaxPages.label;"/>
