@@ -1,8 +1,4 @@
 <!ENTITY browser.title "ブラウザ">
-<!ENTITY browser.smartbrowsing.label "SmartBrowsing">
-<!ENTITY browser.smartbrowsing.internetKeywords.label "Internet Keywords">
-<!ENTITY browser.smartbrowsing.internetKeywords.desc "&brandShortName; Internet Keywords を使って、ロケーションバーから検索、その他の情報に素早くアクセスできます。">
-<!ENTITY browser.smartbrowsing.internetKeywords.enabled.label "Internet Keywords を有効にする">
 <!ENTITY browser.urlbar.label "ロケーションバー">
 <!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
 <!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
