@@ -179,7 +179,7 @@
   </radiogroup>
 
   <label value="&security.popupwin.event.label;" control="popupwin-e"/>
-  <listbox class="indent" id="popupwin-e" rows="4" preference="dom.popup_allowed_events" onsyncfrompreference="return gPrefWindow.prefSecurity.syncFromPopupwin()" onsynctopreference="return gPrefWindow.prefSecurity.syncToPopupwin()">
+  <listbox class="indent" id="popupwin-e" preference="dom.popup_allowed_events" onsyncfrompreference="return gPrefWindow.prefSecurity.syncFromPopupwin()" onsynctopreference="return gPrefWindow.prefSecurity.syncToPopupwin()">
     <listitem type="checkbox" value="reset" label="&security.popupwin.event.reset.label;"/>
     <listitem type="checkbox" value="submit" label="&security.popupwin.event.submit.label;"/>
     <listitem type="checkbox" value="select" label="&security.popupwin.event.select.label;"/>
