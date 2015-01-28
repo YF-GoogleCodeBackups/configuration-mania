@@ -160,6 +160,7 @@ vbox.warning {
 
 *|*:-moz-any-link:hover{ color: -moz-nativehyperlinktext; text-decoration: underline; }
 
+description[disabled="true"] { color: GrayText; }
 /* XXX This style is for bug 740213 and should be removed once that
    bug has a solution. */
 description > *|*:-moz-any-link {
