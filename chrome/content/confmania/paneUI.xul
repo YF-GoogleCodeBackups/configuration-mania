@@ -117,9 +117,9 @@
   <preference id="ui.click_hold_context_menus" name="ui.click_hold_context_menus" type="bool"/>
   <preference id="ui.submenuDelay" name="ui.submenuDelay" type="int"/>
 
-  <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
   <preference id="browser.preferences.animateFadeIn" name="browser.preferences.animateFadeIn" type="bool"/>
   <preference id="browser.preferences.inContent" name="browser.preferences.inContent" type="bool"/>
+  <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
   <preference id="clipboard.autocopy" name="clipboard.autocopy" type="bool"/>
   <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
   <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
@@ -437,10 +437,13 @@
 <box class="subtabpanel" orient="vertical" id="ui-pane-others">
   <groupbox>
     <caption label="&ui.others.preference.label;"/>
-    <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
-    <description class="indent">&ui.others.preference.instanceAccept.desc;</description>
     <checkbox label="&ui.others.preference.animateFadeIn.label;" preference="browser.preferences.animateFadeIn"/>
-    <checkbox label="&ui.others.preference.inContent.label;" preference="browser.preferences.inContent"/>
+    <checkbox label="&ui.others.preference.inContent.label;" preference="browser.preferences.inContent"
+              onsyncfrompreference="gPrefWindow.prefUI.onPreferenceInContentSyncFrom();"/>
+    <vbox id="ui-pane-others-pref-instanceAccept" class="indent">
+      <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
+      <description class="indent">&ui.others.preference.instanceAccept.desc;</description>
+    </vbox>
   </groupbox>
   <groupbox>
     <caption label="&ui.others.xwin.label;"/>

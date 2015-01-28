@@ -144,4 +144,15 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnPreferenceInContentSyncFrom: function() {
+    let checkbox = this.document.querySelector("checkbox[preference='browser.preferences.inContent']");
+    let target1 = this.document.querySelector("checkbox[preference='browser.preferences.instantApply']");
+    let target2 = this.document.querySelector("checkbox[preference='browser.preferences.instantApply']+description");
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, target1.disabled);
+      assert.equals(checkbox.checked, target2.disabled);
+      checkbox.click();
+    }
+  }
 }
