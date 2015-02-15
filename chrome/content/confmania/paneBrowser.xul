@@ -76,6 +76,7 @@
   <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
   <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
   <preference id="plugins.click_to_play" name="plugins.click_to_play" type="bool"/>
+  <preference id="dom.ipc.plugins.flash.disable-protected-mode" name="dom.ipc.plugins.flash.disable-protected-mode" type="bool"/>
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.zoom.siteSpecific" name="browser.zoom.siteSpecific" type="bool"/>
@@ -300,6 +301,7 @@
   <groupbox>
     <caption label="&browser.html.plugins.label;"/>
     <checkbox label="&browser.html.plugins.click_to_play.label;" preference="plugins.click_to_play"/>
+    <checkbox label="&browser.html.plugins.flash-disable-protected-mode.label;" preference="dom.ipc.plugins.flash.disable-protected-mode"/>
   </groupbox>
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
 
