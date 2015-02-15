@@ -24,6 +24,7 @@
 <!ENTITY ui.multitouch.gestures.swipe.label "Swipe (left/right/up/down)">
 <!ENTITY ui.multitouch.gestures.twist.label "Twist (left-/right-handed)">
 <!ENTITY ui.find.label "Find in page">
+<!ENTITY ui.find.prefillwithselection.label "Set find term to selection text when find bar is opened and Ctrl-F is pressed.">
 <!ENTITY ui.find.findahead.label "Quick Find (Find As You Type)">
 <!ENTITY ui.find.findahead.desc "Tip: To manually start Quick Find, type / to find text or ' to find links, followed by the text you want to find.">
 <!ENTITY ui.find.findahead.timeout.label "Clear the current search after">

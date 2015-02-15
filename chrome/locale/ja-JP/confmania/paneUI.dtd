@@ -24,6 +24,7 @@
 <!ENTITY ui.multitouch.gestures.swipe.label "スワイプ (上下左右)">
 <!ENTITY ui.multitouch.gestures.twist.label "ツイスト (左回り/右回り)">
 <!ENTITY ui.find.label "ページ内検索">
+<!ENTITY ui.find.prefillwithselection.label "検索バーを開いた時とCtrl+Fを押した時、選択されたテキストを検索語句にする">
 <!ENTITY ui.find.findahead.label "クイック検索 (Find As You Type)">
 <!ENTITY ui.find.findahead.desc "ヒント: クイック検索を手動で開始するには、検索文字を続けて、/文字 または、 'リンク を入力します。">
 <!ENTITY ui.find.findahead.timeout.label "停止状態が">

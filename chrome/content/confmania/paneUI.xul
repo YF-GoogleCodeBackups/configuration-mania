@@ -90,6 +90,7 @@
   <preference id="browser.gesture.twist.right"     name="browser.gesture.twist.right"     type="string"/>
   <preference id="browser.gesture.twist.left"      name="browser.gesture.twist.left"      type="string"/>
 
+  <preference id="accessibility.typeaheadfind.prefillwithselection" name="accessibility.typeaheadfind.prefillwithselection" type="bool"/>
   <preference id="accessibility.typeaheadfind.timeout" name="accessibility.typeaheadfind.timeout" type="int"/>
   <preference id="accessibility.typeaheadfind.enablesound" name="accessibility.typeaheadfind.enablesound" type="bool"/>
   <preference id="accessibility.typeaheadfind.casesensitive" name="accessibility.typeaheadfind.casesensitive" type="int"/>
@@ -264,6 +265,8 @@
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-findahead">
+  <checkbox label="&ui.find.prefillwithselection.label;"
+   preference="accessibility.typeaheadfind.prefillwithselection"/>
   <groupbox>
     <caption label="&ui.find.findahead.label;"/>
     <description>&ui.find.findahead.desc;</description>
