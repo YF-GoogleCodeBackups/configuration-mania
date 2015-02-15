@@ -193,6 +193,18 @@ tc.tests = {
     checkbox.value = checkbox_origval;
     target.value = target_origval;
   },
+  testOnMultiMediaMediaSourceEnabledSyncFrom : function () {
+    let checkbox = this.document.querySelector("checkbox[preference='media.mediasource.enabled']");
+    let targets = this.document.querySelectorAll("checkbox[preference='media.mediasource.youtubeonly'], #multimedia-mediasource-formats checkbox[preference]");
+
+    assert.isTrue(targets.length >= 2);
+    for (let i = 0; i < 2; i++) {
+      for (let j = 0; j < targets.length; j++) {
+        assert.equals(checkbox.checked, !targets[j].disabled);
+      }
+      checkbox.click();
+    }
+  },
   testOnWebAPIGeoEnabledSyncFrom : function () {
     let checkbox = this.document.querySelector("checkbox[preference='geo.enabled']");
     let target1 = this.document.getElementById("webapi-geoExceptions");
