@@ -102,6 +102,7 @@
 <!ENTITY browser.multimedia.directshow-enabled.label "Enable Direct Show (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "Enable GStreamer (Linux)">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Enable Apple MP3 (Mac)">
+<!ENTITY browser.multimedia.gmp-gmpopenh264-provider-enabled.label "Enable OpenH264 Video Codec (Firefox 33+)">
 <!ENTITY browser.webapi.label "Web API">
 <!ENTITY browser.webapi.geo_enabled.label "Enable Geolocation">
 <!ENTITY browser.webapi.geoExceptions.label "Exceptions">

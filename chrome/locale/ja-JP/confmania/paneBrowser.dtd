@@ -102,6 +102,7 @@
 <!ENTITY browser.multimedia.directshow-enabled.label "Direct Showを有効にする (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "GStreamerを有効にする (Linux)">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Apple MP3を有効にする (Mac)">
+<!ENTITY browser.multimedia.gmp-gmpopenh264-provider-enabled.label "OpenH264 Video Codec を有効にする(Firefox 33+)">
 <!ENTITY browser.webapi.label "Web API">
 <!ENTITY browser.webapi.geo_enabled.label "位置情報通信機能を有効にする">
 <!ENTITY browser.webapi.geoExceptions.label "例外サイト...">
