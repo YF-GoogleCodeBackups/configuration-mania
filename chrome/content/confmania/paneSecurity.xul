@@ -91,8 +91,9 @@
   <preference id="network.IDN_show_punycode" name="network.IDN_show_punycode" type="bool"/>
 
   <preference id="signon.autofillForms" name="signon.autofillForms" type="bool"/>
-  <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
   <preference id="network.cookie.lifetime.days" name="network.cookie.lifetime.days" type="int"/>
+  <preference id="privacy.trackingprotection.enabled" name="privacy.trackingprotection.enabled" type="bool"/>
+  <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
   <preference id="security.ask_for_password" name="security.ask_for_password" type="int"/>
   <preference id="security.password_lifetime" name="security.password_lifetime" type="int"/>
 
@@ -276,6 +277,20 @@
         <label value="&days;"/>
       </hbox>
     </groupbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&security.privacy.trackingprotection.label;"/>
+    <hbox>
+      <checkbox id="trackingprotection-enable"
+                flex="1"
+                label="&security.privacy.trackingprotection.enable.label;"
+                preference="privacy.trackingprotection.enabled" />
+      <button label="&security.privacy.trackingprotection.exceptions.label;"
+              id="trackingprotection-showTrackingProtectionExceptions"
+              data-dialog-title="&security.privacy.trackingprotection.exceptions.title;"
+              data-dialog-desc="&security.privacy.trackingprotection.exceptions.desc;"
+              oncommand="gPrefWindow.prefSecurity.onTrackingProtectionExceptionsCommand();"/>
+    </hbox>
   </groupbox>
   <groupbox>
     <caption label="&security.privacy.passwd.label;"/>

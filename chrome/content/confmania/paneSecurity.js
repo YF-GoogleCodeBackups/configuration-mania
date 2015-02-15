@@ -86,6 +86,20 @@ gPrefWindow.prefSecurity = {
     document.getElementById("network.http.sendSecureXSiteReferrer").disabled = disabled;
     return undefined; // no override
   },
+  onTrackingProtectionExceptionsCommand: function() {
+    let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "trackingprotection" };
+    params.windowTitle = document.getElementById("trackingprotection-showTrackingProtectionExceptions").getAttribute("data-dialog-title");
+    params.introText   = document.getElementById("trackingprotection-showTrackingProtectionExceptions").getAttribute("data-dialog-desc");
+
+    if (openDialog) { // in-Content
+      openDialog("chrome://browser/content/preferences/permissions.xul", 
+                 "Browser:Permissions", "resizable=yes", params);
+    } else if (document.documentElement.openWindow) {
+      document.documentElement.openWindow("Browser:Permissions",
+                                          "chrome://browser/content/preferences/permissions.xul",
+                                          "", params);
+    }
+  },
   updatePasswordAskTimes : function(){
     var radiogroup = document.getElementById("passwordAskTimes");
     var askEveryTimeHidden = document.getElementById("askEveryTimeHidden");
