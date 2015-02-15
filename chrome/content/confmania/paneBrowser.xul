@@ -125,6 +125,7 @@
   <preference id="media.directshow.enabled" name="media.directshow.enabled" type="bool"/>
   <preference id="media.gstreamer.enabled" name="media.gstreamer.enabled" type="bool"/>
   <preference id="media.apple.mp3.enabled" name="media.apple.mp3.enabled" type="bool"/>
+  <preference id="media.gmp-gmpopenh264.provider.enabled" name="media.gmp-gmpopenh264.provider.enabled" type="bool"/>
 
   <preference id="geo.enabled" name="geo.enabled" type="bool"/>
   <preference id="geo.wifi.uri" name="geo.wifi.uri" type="string"/>
@@ -455,6 +456,7 @@
   <checkbox label="&browser.multimedia.directshow-enabled.label;" preference="media.directshow.enabled"/>
   <checkbox label="&browser.multimedia.gstreamer-enabled.label;" preference="media.gstreamer.enabled"/>
   <checkbox label="&browser.multimedia.apple-mp3-enabled.label;" preference="media.apple.mp3.enabled"/>
+  <checkbox label="&browser.multimedia.gmp-gmpopenh264-provider-enabled.label;" preference="media.gmp-gmpopenh264.provider.enabled"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="webapi">
   <vbox>
