@@ -211,6 +211,8 @@ tc.tests = {
       assert.equals(radiogroup.value != 0, !target.disabled);
     }
   },
+  //testOnTrackingProtectionExceptionsCommand: function() {
+  //},
   testUpdatePasswordAskTimes: function() {
     let radiogroup = this.document.getElementById("passwordAskTimes");
     let target1 = this.document.getElementById("passwordTimeout");

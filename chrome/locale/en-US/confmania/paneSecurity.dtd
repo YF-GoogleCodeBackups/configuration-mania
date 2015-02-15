@@ -78,6 +78,11 @@
 <!ENTITY security.privacy.history.label "History">
 <!ENTITY security.privacy.history.cookie.label "Cookie">
 <!ENTITY security.privacy.history.cookie.lifetimedays.label "Accept cookies for">
+<!ENTITY security.privacy.trackingprotection.label "Tracking Protection (Firefox 33+)">
+<!ENTITY security.privacy.trackingprotection.enable.label "Enable Tracking Protection">
+<!ENTITY security.privacy.trackingprotection.exceptions.label "Exceptions">
+<!ENTITY security.privacy.trackingprotection.exceptions.title "Exceptions - Tracking Protection">
+<!ENTITY security.privacy.trackingprotection.exceptions.desc "You can specify which websites are allowed to track your online activity. Type the exact address of the site you want to manage and then click Block or Allow.">
 <!ENTITY security.privacy.passwd.label "Master Password">
 <!ENTITY security.privacy.passwd.managepassword.label "Master Password Timeout">
 <!ENTITY security.privacy.passwd.managepassword.text "&brandShortName; will ask for your master password:">
