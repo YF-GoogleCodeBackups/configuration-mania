@@ -169,6 +169,13 @@ gPrefWindow.prefBrowser = {
     document.getElementById("media.windows-media-foundation.play-stand-alone").disabled = disabled;
     return undefined; // no override
   },
+  onMultiMediaMediaSourceEnabledSyncFrom: function () {
+    let disabled = ! document.getElementById("media.mediasource.enabled").value;
+    document.getElementById("media.mediasource.youtubeonly").disabled = disabled;
+    document.getElementById("media.mediasource.mp4.enabled").disabled = disabled;
+    document.getElementById("media.mediasource.webm.enabled").disabled = disabled;
+    return undefined; // no override
+  },
   onWebAPIGeoEnabledSyncFrom : function () {
     let disabled = document.getElementById("geo.enabled").value;
     document.getElementById("webapi-geoExceptions").disabled = disabled;
