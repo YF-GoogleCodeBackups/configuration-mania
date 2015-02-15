@@ -39,6 +39,7 @@
 <!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
 <!ENTITY browser.html.plugins.label "プラグイン">
 <!ENTITY browser.html.plugins.click_to_play.label "プラグインコンテンツはクリックしたら読み込む">
+<!ENTITY browser.html.plugins.flash-disable-protected-mode.label "Flash Player 11.3以降の保護モードを無効にする (Windows Vista/7:Firefox 35+, Windows 8:Firefox 36+)">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">
