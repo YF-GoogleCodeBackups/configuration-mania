@@ -125,6 +125,7 @@
   <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
   <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
   <preference id="middlemouse.scrollbarPosition" name="middlemouse.scrollbarPosition" type="bool"/>
+  <preference id="browser.devedition.theme.enabled" name="browser.devedition.theme.enabled" type="bool"/>
   <preference id="layout.word_select.eat_space_to_next_word" name="layout.word_select.eat_space_to_next_word" type="bool"/>
   <preference id="layout.word_select.stop_at_punctuation" name="layout.word_select.stop_at_punctuation" type="bool" inverted="true"/>
   <preference id="nglayout.enable_drag_images" name="nglayout.enable_drag_images" type="bool"/>
@@ -454,6 +455,11 @@
     <checkbox label="&ui.others.xwin.paste.label;" preference="middlemouse.paste"/>
     <checkbox label="&ui.others.xwin.contentLoadURL.label;" preference="middlemouse.contentLoadURL"/>
     <checkbox label="&ui.others.xwin.scrollbarPosition.label;" preference="middlemouse.scrollbarPosition"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&ui.others.theme.label;"/>
+    <checkbox label="&ui.others.theme.devedition.label;"
+              preference="browser.devedition.theme.enabled"/>
   </groupbox>
   <groupbox>
     <caption label="&ui.others.word_select.label;"/>
