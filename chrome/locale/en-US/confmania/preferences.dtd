@@ -7,14 +7,6 @@
 <!ENTITY prefWindow.context.copyName.accesskey "C">
 <!ENTITY prefWindow.context.mkb.label "Search in MozillaZine Knowledge Base">
 <!ENTITY prefWindow.context.mkb.accesskey "S">
-
-
-
-
-
-
-
-
 <!ENTITY miliseconds "[ms]">
 <!ENTITY microseconds "[μs]">
 <!ENTITY seconds "seconds">
