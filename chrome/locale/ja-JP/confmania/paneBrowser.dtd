@@ -103,7 +103,7 @@
 <!ENTITY browser.multimedia.directshow-enabled.label "Direct Showを有効にする (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "GStreamerを有効にする (Linux)">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Apple MP3を有効にする (Mac)">
-<!ENTITY browser.multimedia.gmp-gmpopenh264-provider-enabled.label "OpenH264 Video Codec を有効にする(Firefox 33+)">
+<!ENTITY browser.multimedia.gmp-gmpopenh264-provider-enabled.label "OpenH264 Video Codec を有効にする(Firefox 33-36)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Media Source Extensions を有効にする">
 <!ENTITY browser.multimedia.mediasource.youtubeonly.label "Youtube (youtube.com, youtube-nocookie.com) に限って有効にする (Firefox 36+)">
 <!ENTITY browser.multimedia.mediasource.formats.label "対応形式 (Firefox 36+)">

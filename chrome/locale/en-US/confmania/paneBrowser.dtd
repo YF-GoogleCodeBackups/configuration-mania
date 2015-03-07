@@ -103,7 +103,7 @@
 <!ENTITY browser.multimedia.directshow-enabled.label "Enable Direct Show (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "Enable GStreamer (Linux)">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Enable Apple MP3 (Mac)">
-<!ENTITY browser.multimedia.gmp-gmpopenh264-provider-enabled.label "Enable OpenH264 Video Codec (Firefox 33+)">
+<!ENTITY browser.multimedia.gmp-gmpopenh264-provider-enabled.label "Enable OpenH264 Video Codec (Firefox 33-36)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Enable Media Source Extensions">
 <!ENTITY browser.multimedia.mediasource.youtubeonly.label "Enable on Youtube only (youtube.com, youtube-nocookie.com) (Firefox 36+)">
 <!ENTITY browser.multimedia.mediasource.formats.label "Supported Formats (Firefox 36+)">
