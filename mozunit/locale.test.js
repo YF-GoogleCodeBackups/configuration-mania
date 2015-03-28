@@ -91,7 +91,7 @@ tc.tests = {
         Services.prefs.setCharPref("general.useragent.locale", locale);
         Services.prefs.setBoolPref("intl.locale.matchOS", false);
 
-        // XUL files
+        // XUL and DTD files
         for each (let fileName in ["paneAddons.xul", "paneDebug.xul", "preferences.xul", "paneBrowser.xul", "preferences_in_content.xul", "paneUI.xul", "paneSecurity.xul", "paneHTTP.xul"]) {
           let req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]
                     .createInstance(Ci.nsIXMLHttpRequest);
@@ -103,6 +103,13 @@ tc.tests = {
 
           assert.equals(req.responseXML.documentElement.namespaceURI,
                         "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+        }
+	
+        // Properties files
+        for each (let fileName in ["confmania.properties"]) {
+          Services.strings.flushBundles();
+          let stringBundle = Services.strings.createBundle("chrome://confmania/locale/" + fileName);
+          assert.isTrue(stringBundle.getSimpleEnumeration().hasMoreElements());
         }
       }
     } catch (e) {
