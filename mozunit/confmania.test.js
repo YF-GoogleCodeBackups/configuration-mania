@@ -49,6 +49,29 @@ DialogObserver.prototype = {
   }
 };
 
+function CommonDialogObserver(handlers) {
+  this.handlers = handlers;
+}
+CommonDialogObserver.prototype = {
+  observe: function (aSubject, aTopic, aData) {
+    if (aTopic == "domwindowopened") {
+      aSubject.QueryInterface(Ci.nsIDOMWindow)
+        .addEventListener("load", this, false);
+    } else if (aTopic == "domwindowclosed") {
+      if (aSubject.QueryInterface(Ci.nsIDOMWindow).location.href == "chrome://global/content/commonDialog.xul") {
+        this.handlers.onClose(aSubject);
+      }
+    }
+  },
+  handleEvent: function(aEvent) {
+    let aWindow = aEvent.currentTarget;
+    aWindow.removeEventListener(aEvent.type, this, false);
+    if (aWindow.location.href == "chrome://global/content/commonDialog.xul") {
+      this.handlers.onOpen(aWindow);
+    }
+  }
+};
+
 var tc = new TestCase();
 tc.tests = {
   setUp: function() {
@@ -59,59 +82,107 @@ tc.tests = {
 
   // TEST ####################
 
+  testCancelDisabling: function() {
+    var addonObj = undefined;
+    AddonManager.getAddonByID(CONF_MANIA_ADDON_ID, function (v) { addonObj = v; });
+    sleep(1000);
+    assert.isDefined(addonObj);
+
+    var dialogHandler = { onOpen: function(){}, onClose: function(){} };
+    let dialogObserver = new CommonDialogObserver(dialogHandler);
+    try {
+      Services.ww.registerNotification(dialogObserver);
+      dialogHandler.onOpen = function (aWindow) {
+        let dialog = aWindow.document.documentElement;
+        if (dialog.textContent.indexOf("Configuration Mania") >= 0) {
+          aWindow.close();
+        }
+      };
+
+      assert.equals(addonObj.userDisabled, false);
+
+      addonObj.userDisabled = true;
+      assert.equals(addonObj.userDisabled, true);
+      sleep(500);
+
+      assert.equals(addonObj.userDisabled, false);
+    } catch (e) {
+      throw e;
+    } finally {
+      Services.ww.unregisterNotification(dialogObserver);
+      addonObj.userDisabled = false;
+    }
+  },
+
   testURIRegistration: function() {
     var addonObj = undefined;
     AddonManager.getAddonByID(CONF_MANIA_ADDON_ID, function (v) { addonObj = v; });
     sleep(1000);
     assert.isDefined(addonObj);
 
-    let channel;
-
-    assert.equals(addonObj.userDisabled, false);
-    channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
-    assert.isDefined(channel);
-    channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
-    assert.isDefined(channel);
-    channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
-    assert.isDefined(channel);
-    channel = Services.io.newChannel("about:confmania", null, null);
-    assert.isDefined(channel);
-
-    addonObj.userDisabled = true;
-    sleep(100);
-    assert.equals(addonObj.userDisabled, true);
+    var dialogHandler = { onOpen: function(){}, onClose: function(){} };
+    let dialogObserver = new CommonDialogObserver(dialogHandler);
     try {
+      Services.ww.registerNotification(dialogObserver);
+      dialogHandler.onOpen = function (aWindow) {
+        let dialog = aWindow.document.documentElement;
+        if (dialog.textContent.indexOf("Configuration Mania") >= 0) {
+          dialog.getButton("extra1").click(); // Keep pref.
+        }
+      };
+
+      let channel;
+
+      assert.equals(addonObj.userDisabled, false);
       channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
-      assert.fail("chrome://confmania/content/preferences.xul is not unloaded.");
-    } catch (e) {
-    }
-    try {
+      assert.isDefined(channel);
       channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
-      assert.fail("chrome://confmania/skin/preferences.css is not unloaded.");
-    } catch (e) {
-    }
-    try {
+      assert.isDefined(channel);
       channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
-      assert.fail("chrome://confmania/locale/confmania.dtd is not unloaded.");
-    } catch (e) {
-    }
-    try {
+      assert.isDefined(channel);
       channel = Services.io.newChannel("about:confmania", null, null);
-      assert.fail("about:confmania is not unloaded.");
-    } catch (e) {
-    }
+      assert.isDefined(channel);
 
-    addonObj.userDisabled = false;
-    sleep(100);
-    assert.equals(addonObj.userDisabled, false);
-    channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
-    assert.isDefined(channel);
-    channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
-    assert.isDefined(channel);
-    channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
-    assert.isDefined(channel);
-    channel = Services.io.newChannel("about:confmania", null, null);
-    assert.isDefined(channel);
+      addonObj.userDisabled = true;
+      sleep(100);
+      assert.equals(addonObj.userDisabled, true);
+      try {
+        channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
+        assert.fail("chrome://confmania/content/preferences.xul is not unloaded.");
+      } catch (e) {
+      }
+      try {
+        channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
+        assert.fail("chrome://confmania/skin/preferences.css is not unloaded.");
+      } catch (e) {
+      }
+      try {
+        channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
+        assert.fail("chrome://confmania/locale/confmania.dtd is not unloaded.");
+      } catch (e) {
+      }
+      try {
+        channel = Services.io.newChannel("about:confmania", null, null);
+        assert.fail("about:confmania is not unloaded.");
+      } catch (e) {
+      }
+
+      addonObj.userDisabled = false;
+      sleep(100);
+      assert.equals(addonObj.userDisabled, false);
+      channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
+      assert.isDefined(channel);
+      channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
+      assert.isDefined(channel);
+      channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
+      assert.isDefined(channel);
+      channel = Services.io.newChannel("about:confmania", null, null);
+      assert.isDefined(channel);
+    } catch (e) {
+      throw e;
+    } finally {
+      Services.ww.unregisterNotification(dialogObserver);
+    }
   },
   
   testOpenConfMania: function() {
