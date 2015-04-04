@@ -90,14 +90,14 @@ gPrefWindow.prefBrowser = {
   },
   onAutoCompleteSyncFrom : function (){
     let disabled = document.getElementById("browser.urlbar.autocomplete.enabled").value;
-    for each (let name in ["browser.urlbar.autoFill", "browser.urlbar.filter.javascript", "browser.urlbar.maxRichResults", "browser.urlbar.delay"]) {
+    for (let name of ["browser.urlbar.autoFill", "browser.urlbar.filter.javascript", "browser.urlbar.maxRichResults", "browser.urlbar.delay"]) {
       document.getElementById(name).disabled = disabled;
     }
     return undefined; // no override
   },
   onDomainGaussSyncFrom : function () {
     let disabled = ! document.getElementById("browser.fixup.alternate.enabled").value;
-    for each (let name in ["browser.fixup.alternate.prefix", "browser.fixup.alternate.suffix"]) {
+    for (let name of ["browser.fixup.alternate.prefix", "browser.fixup.alternate.suffix"]) {
       document.getElementById(name).disabled = disabled;
     }
     return undefined; // no override
@@ -130,7 +130,7 @@ gPrefWindow.prefBrowser = {
   },
   onFocusHighlightSyncFrom : function() {
     let disabled = ! document.getElementById("browser.display.use_focus_colors").value;
-    for each (let name in ["browser.display.focus_background_color", "browser.display.focus_text_color"]) {
+    for (let name of ["browser.display.focus_background_color", "browser.display.focus_text_color"]) {
       document.getElementById(name).disabled = disabled;
     }
     return undefined; // no override
@@ -229,7 +229,7 @@ gPrefWindow.prefBrowser = {
   },
   onMemoryEnableSyncFrom : function() {
     let disabled = ! document.getElementById("browser.cache.memory.enable").value;
-    for each (let name in ["speed-cache-memory-capacity-type", "speed-cache-memory-capacity-type-label", "browser.cache.memory.capacity"]) {
+    for (let name of ["speed-cache-memory-capacity-type", "speed-cache-memory-capacity-type-label", "browser.cache.memory.capacity"]) {
       document.getElementById(name).disabled = disabled;
     }
     return undefined; // no override

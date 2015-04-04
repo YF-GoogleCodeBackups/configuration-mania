@@ -301,7 +301,7 @@ tc.tests = {
         let panes = "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" ");
         assert.equals(listItems.length, panes.length);
 
-        for each (let [i,v] in Iterator(panes)) {
+        for (let [i,v] of Iterator(panes)) {
           let thePane = win.document.getElementById(v);
 
           let listItem = win.document.querySelector("richlistitem[value=\"%s\"]".replace("%s", v)); 
@@ -314,7 +314,7 @@ tc.tests = {
           assert.isTrue(thePane.loaded);
           assert.isTrue(thePane.childNodes.length > 0);
 
-          for each (let [j,u] in Iterator(panes)) {
+          for (let [j,u] of Iterator(panes)) {
             if (j === i) {
               assert.isTrue(win.document.getElementById(u).selected);
             } else {
@@ -406,7 +406,7 @@ tc.tests = {
           Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
         );
 
-        for each (let [k,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
+        for (let v of ("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
           prefWin.showPane(document.getElementById(v));
           sleep(1000);
           assert.equals(v, prefWin.currentPane.id);
@@ -437,7 +437,7 @@ tc.tests = {
               Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
             );
 
-            for each (let [k,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
+            for (let v of ("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
               prefWin.showPane(document.getElementById(v));
               sleep(1000);
               assert.equals(v, prefWin.currentPane.id);

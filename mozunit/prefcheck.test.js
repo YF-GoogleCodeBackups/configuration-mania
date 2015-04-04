@@ -40,17 +40,14 @@ tc.tests = {
   // TEST ####################
   
   testEditElemExistance: function() {
-    let prefElems = this.document.querySelectorAll("preference[id]");
-
-    Array.forEach(prefElems, (function(v) {
+    for (let v of this.document.querySelectorAll("preference[id]")) {
       assert.equals(v.getAttribute("id"), v.getAttribute("name"));
 
       let editElem = this.document.querySelector("*[preference='"+v.id+"']");
       if (!(editElem instanceof XULElement)) {
         assert.fail("\"" + v.id + "\" elem could not found.");
       }
-
-    }).bind(this));
+    }
   },
   testPrefElemExistance: function() {
     let editElems = this.document.querySelectorAll("*[preference]");
@@ -64,7 +61,7 @@ tc.tests = {
       return false;
     };
 
-    Array.forEach(editElems, (function(v) {
+    for (let v of editElems) {
       if (!isTemplateAction(v)) {
         let prefElem = this.document.getElementById(v.getAttribute("preference"));
         if (!(prefElem instanceof XULElement) || (prefElem.tagName !== "preference")) {
@@ -72,6 +69,6 @@ tc.tests = {
         }
         assert.equals(prefElem.name, v.getAttribute("preference"));
       }
-    }).bind(this));
+    }
   },
 }
