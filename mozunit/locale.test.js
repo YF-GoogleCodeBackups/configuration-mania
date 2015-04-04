@@ -87,12 +87,12 @@ tc.tests = {
     let origMOvalue = Services.prefs.getBoolPref("intl.locale.matchOS");
 
     try {
-      for each (let locale in CONF_MANIA_LOCALES) {
+      for (let locale of CONF_MANIA_LOCALES) {
         Services.prefs.setCharPref("general.useragent.locale", locale);
         Services.prefs.setBoolPref("intl.locale.matchOS", false);
 
         // XUL and DTD files
-        for each (let fileName in ["paneAddons.xul", "paneDebug.xul", "preferences.xul", "paneBrowser.xul", "preferences_in_content.xul", "paneUI.xul", "paneSecurity.xul", "paneHTTP.xul"]) {
+        for (let fileName of ["paneAddons.xul", "paneDebug.xul", "preferences.xul", "paneBrowser.xul", "preferences_in_content.xul", "paneUI.xul", "paneSecurity.xul", "paneHTTP.xul"]) {
           let req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]
                     .createInstance(Ci.nsIXMLHttpRequest);
           req.open("GET", "chrome://confmania/content/" + fileName, false);
@@ -106,7 +106,7 @@ tc.tests = {
         }
 	
         // Properties files
-        for each (let fileName in ["confmania.properties"]) {
+        for (let fileName of ["confmania.properties"]) {
           Services.strings.flushBundles();
           let stringBundle = Services.strings.createBundle("chrome://confmania/locale/" + fileName);
           assert.isTrue(stringBundle.getSimpleEnumeration().hasMoreElements());
@@ -127,7 +127,7 @@ tc.tests = {
     let origMOvalue = Services.prefs.getBoolPref("intl.locale.matchOS");
 
     try {
-      for each (let locale in CONF_MANIA_LOCALES) {
+      for (let locale of CONF_MANIA_LOCALES) {
         Services.prefs.setCharPref("general.useragent.locale", locale);
         Services.prefs.setBoolPref("intl.locale.matchOS", false);
 
@@ -145,7 +145,7 @@ tc.tests = {
         let panes = "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" ");
         assert.equals(listItems.length, panes.length);
 
-        for each (let [i,v] in Iterator(panes)) {
+        for (let v of panes) {
           let thePane = win.document.getElementById(v);
           let listItem = win.document.querySelector("richlistitem[value=\"%s\"]".replace("%s", v)); 
           assert.equals(listItem.parentNode, listBox);
@@ -173,7 +173,7 @@ tc.tests = {
     let origMOvalue = Services.prefs.getBoolPref("intl.locale.matchOS");
 
     try {
-      for each (let locale in CONF_MANIA_LOCALES) {
+      for (let locale of CONF_MANIA_LOCALES) {
         Services.prefs.setCharPref("general.useragent.locale", locale);
         Services.prefs.setBoolPref("intl.locale.matchOS", false);
 
@@ -195,7 +195,7 @@ tc.tests = {
           Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
         );
 
-        for each (let [k,v] in Iterator("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
+        for (let v of ("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
           prefWin.showPane(document.getElementById(v));
           sleep(1000);
           assert.equals(v, prefWin.currentPane.id);
@@ -236,7 +236,7 @@ tc.tests = {
       let origMOvalue = Services.prefs.getBoolPref("intl.locale.matchOS");
 
       try {
-        for each (let locale in CONF_MANIA_LOCALES) {
+        for (let locale of CONF_MANIA_LOCALES) {
           Services.prefs.setCharPref("general.useragent.locale", locale);
           Services.prefs.setBoolPref("intl.locale.matchOS", false);
 
