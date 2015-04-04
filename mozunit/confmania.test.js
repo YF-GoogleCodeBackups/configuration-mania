@@ -301,7 +301,7 @@ tc.tests = {
         let panes = "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" ");
         assert.equals(listItems.length, panes.length);
 
-        for (let [i,v] of Iterator(panes)) {
+        for (let [i,v] of panes.entries()) {
           let thePane = win.document.getElementById(v);
 
           let listItem = win.document.querySelector("richlistitem[value=\"%s\"]".replace("%s", v)); 
@@ -314,7 +314,7 @@ tc.tests = {
           assert.isTrue(thePane.loaded);
           assert.isTrue(thePane.childNodes.length > 0);
 
-          for (let [j,u] of Iterator(panes)) {
+          for (let [j,u] of panes.entries()) {
             if (j === i) {
               assert.isTrue(win.document.getElementById(u).selected);
             } else {
