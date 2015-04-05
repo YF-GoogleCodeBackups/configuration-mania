@@ -1,5 +1,7 @@
 var gPrefWindow = {
   onLoad: function(){
+    window.removeEventListener("DOMContentLoaded", gPrefWindow.onLoad, false);
+
     // In-content
     document.documentElement.instantApply = true;
 
@@ -11,12 +13,12 @@ var gPrefWindow = {
       gPrefWindow.selectCategory(event.state);
     }, false);
 
-    if (history.length > 1 && history.state) {
-      // do nothing
-    } else {
-      window.history.replaceState("paneBrowser", document.title);
+    var category = "paneBrowser";
+    if (window.location.hash) {
+      category = window.location.hash.replace(/^#/, "");
     }
-    gPrefWindow.showPage(history.state);
+    gPrefWindow.selectCategory(category);
+    gPrefWindow.showPage(category);
 
     // context menu
     var prefContextPopup = document.getElementById("prefContextPopup");
@@ -70,6 +72,7 @@ var gPrefWindow = {
   },
   gotoPref: function(page) {
     if (history.state != page) {
+      window.location.hash = page;
       window.history.pushState(page, document.title);
     }
     gPrefWindow.showPage(page);
@@ -210,3 +213,6 @@ var gPrefWindow = {
         return val;
   }
 };
+
+document.addEventListener("DOMContentLoaded", gPrefWindow.onLoad, false);
+
