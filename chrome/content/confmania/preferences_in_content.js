@@ -9,14 +9,13 @@ var gPrefWindow = {
     categories.addEventListener("select", function(event) {
       gPrefWindow.gotoPref(event.target.value);
     }, false);
-    window.addEventListener("popstate", function(event) {
-      gPrefWindow.selectCategory(event.state);
+    window.addEventListener("hashchange", function(event) {
+      var category = window.location.hash.substr(1) || "paneBrowser";
+      gPrefWindow.selectCategory(category);
+      gPrefWindow.showPage(category);
     }, false);
 
-    var category = "paneBrowser";
-    if (window.location.hash) {
-      category = window.location.hash.replace(/^#/, "");
-    }
+    var category = window.location.hash.substr(1) || "paneBrowser";
     gPrefWindow.selectCategory(category);
     gPrefWindow.showPage(category);
 
@@ -71,9 +70,10 @@ var gPrefWindow = {
     }
   },
   gotoPref: function(page) {
-    if (history.state != page) {
+    if ((window.location.hash === "") && (page === "paneBrowser")) {
+      // window.location.hash = "";
+    } else if (window.location.hash !== "#" + page) {
       window.location.hash = page;
-      window.history.pushState(page, document.title);
     }
     gPrefWindow.showPage(page);
   },
