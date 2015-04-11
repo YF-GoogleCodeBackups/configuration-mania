@@ -340,9 +340,11 @@
     <checkbox label="&browser.html.acceleration.d2d-force-enabled.label;"
               class="indent"
               preference="gfx.direct2d.force-enabled"/>
+
+    <checkbox label="&browser.html.offmainthreadcomposition-enabled.label;"
+              preference="layers.offmainthreadcomposition.enabled"/>
+    <description class="indent">&browser.html.offmainthreadcomposition-enabled.desc;</description>
   </groupbox>
-  <checkbox label="&browser.html.offmainthreadcomposition-enabled.label;"
-            preference="layers.offmainthreadcomposition.enabled"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="tabs">
   <groupbox>

@@ -54,6 +54,7 @@
 <!ENTITY browser.html.acceleration.d2d-disabled.label "Disable the automatic detection and use of direct2d (Windows)">
 <!ENTITY browser.html.acceleration.d2d-force-enabled.label "Enable Direct2D regardless of automatic detection or blacklisting (Windows)">
 <!ENTITY browser.html.offmainthreadcomposition-enabled.label "Enable Off Main Thread Compositing (OMTC)">
+<!ENTITY browser.html.offmainthreadcomposition-enabled.desc "Note: Disabling OMTC can have the effect of disabling hardware acceleration.">
 <!ENTITY browser.tabs.label "TabBrowsing">
 <!ENTITY browser.tabs.newtab.label "New Tab">
 <!ENTITY browser.tabs.newtab.url.label "URL:">
