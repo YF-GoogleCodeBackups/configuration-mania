@@ -3,6 +3,8 @@
 <!ENTITY prefwindow.resetMessageTemplate "Changes will be lost! Are you sure you want to reset all the settings on this tab [__TABNAME__]?">
 <!ENTITY prefWindow.context.reset.label "Reset the setting to the default value">
 <!ENTITY prefWindow.context.reset.accesskey "R">
+<!ENTITY prefWindow.context.openaboutconfig.label "Open with about:config">
+<!ENTITY prefWindow.context.openaboutconfig.accesskey "A">
 <!ENTITY prefWindow.context.copyName.label "Copy Preference Name">
 <!ENTITY prefWindow.context.copyName.accesskey "C">
 <!ENTITY prefWindow.context.mkb.label "Search in MozillaZine Knowledge Base">
