@@ -118,6 +118,13 @@
   <preference id="ui.click_hold_context_menus" name="ui.click_hold_context_menus" type="bool"/>
   <preference id="ui.submenuDelay" name="ui.submenuDelay" type="int"/>
 
+  <preference id="browser.taskbar.lists.enabled" name="browser.taskbar.lists.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.frequent.enabled" name="browser.taskbar.lists.frequent.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.recent.enabled" name="browser.taskbar.lists.recent.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.tasks.enabled" name="browser.taskbar.lists.tasks.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.maxListItemCount" name="browser.taskbar.lists.maxListItemCount" type="int"/>
+  <preference id="browser.taskbar.lists.refreshInSeconds" name="browser.taskbar.lists.refreshInSeconds" type="int"/>
+
   <preference id="browser.preferences.animateFadeIn" name="browser.preferences.animateFadeIn" type="bool"/>
   <preference id="browser.preferences.inContent" name="browser.preferences.inContent" type="bool"/>
   <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
@@ -143,6 +150,7 @@
   <radio class="subtab" value="ui-pane-bidi"        label="&ui.bidi.label;"/>
   <radio class="subtab" value="ui-pane-i18n"        label="&ui.i18n.label;"/>
   <radio class="subtab" value="ui-pane-contextmenu" label="&ui.contextmenu.label;"/>
+  <radio class="subtab" value="ui-pane-taskbar"     label="&ui.taskbar.label;"/>
   <radio class="subtab" value="ui-pane-others"      label="&ui.others.label;"/>
 </radiogroup>
 <splitter/>
@@ -436,6 +444,30 @@
         <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
       </hbox>
     </radiogroup>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-taskbar">
+  <groupbox>
+    <caption label="&ui.taskbar.jumplist.label;"/>
+    <checkbox preference="browser.taskbar.lists.enabled" label="&ui.taskbar.jumplist.enabled.label;"
+              onsyncfrompreference="return gPrefWindow.prefUI.onJumplistEnabledSyncFrom();"/>
+    <vbox id="others-jumplist" class="indent">
+      <label value="&ui.taskbar.jumplist.item.label;"/>
+      <checkbox class="indent" preference="browser.taskbar.lists.frequent.enabled" label="&ui.taskbar.jumplist.item.frequent.label;"/>
+      <checkbox class="indent" preference="browser.taskbar.lists.recent.enabled" label="&ui.taskbar.jumplist.item.recent.label;"/>
+      <checkbox class="indent" preference="browser.taskbar.lists.tasks.enabled" label="&ui.taskbar.jumplist.item.tasks.label;"/>
+      <hbox align="center">
+        <label control="others-jumplistMaxListItemCount" value="&ui.taskbar.jumplist.maxListItemCount.label;"/>
+        <textbox id="others-jumplistMaxListItemCount" type="number" size="2" min="0"
+                 preference="browser.taskbar.lists.maxListItemCount"/>
+      </hbox>
+      <hbox align="center">
+        <label control="others-jumplistRefreshInSeconds" value="&ui.taskbar.jumplist.refreshInSeconds.label;"/>
+        <textbox id="others-jumplistRefreshInSeconds" type="number" size="4" min="1"
+                 preference="browser.taskbar.lists.refreshInSeconds"/>
+        <label control="others-jumplistRefreshInSeconds" value="&ui.taskbar.jumplist.refreshInSeconds.label2;"/>
+      </hbox>
+    </vbox>
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-others">
