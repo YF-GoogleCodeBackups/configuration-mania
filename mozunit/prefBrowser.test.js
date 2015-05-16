@@ -55,15 +55,21 @@ tc.tests = {
 
     for (let i = 0; i < presetpopup.childNodes.length; i++) {
       let menu = presetpopup.childNodes[i];
+
       if (menu.tagName == "menu") {
-        assert.isTrue(menu.itemCount > 0);
-        for (let j = 0; j < menu.length; j++) {
-          let item = menu.getItemAtIndex(j);
-          assert.equals(item.tagName == "menuitem");
-          assert.isTrue(item.label != "");
-          assert.isTrue(item.value != "");
+        let menuitems = menu.querySelectorAll("menupopup menuitem");
+        assert.isTrue(menuitems.length > 0);
+        for (let j = 0; j < menuitems.length; j++) {
+          let item = menuitems[j];
+          assert.isTrue(item.hasAttribute("label"));
+          assert.notEquals(item.getAttribute("label"), "");
+          assert.isTrue(item.hasAttribute("value"));
+          assert.notEquals(item.getAttribute("value"), "");
         }
+        assert.isTrue(menu.querySelectorAll("menu").length == 0);
       } else if (menu.tagName == "menuseparator") {
+      } else if (menu.tagName == "menuitem") {
+        assert.fail("Illegal menuitem");
       }
     }
   },
@@ -319,8 +325,13 @@ tc.tests = {
     });
     assert.equals("***TEST UA***", target.value);
 
+    // Click the button so as to ensure that all the menuitem elements are built.
+    this.document.getElementById("ua-presets-popup").parentNode.click();
+    sleep(100);
+
     let menuitem = this.document.querySelector("#ua-presets-popup menuitem[value]");
     assert.isDefined(menuitem);
+    assert.isDefined(menuitem.value);
 
     menuitem.click();
     assert.equals(menuitem.value, target.value);
