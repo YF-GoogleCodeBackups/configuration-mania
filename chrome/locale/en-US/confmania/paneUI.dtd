@@ -99,6 +99,16 @@
 <!ENTITY ui.contextmenu.uiSubmenuDelay.label "Submenu Delay">
 <!ENTITY ui.contextmenu.uiSubmenuDelay.none.label "None">
 <!ENTITY ui.contextmenu.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
+<!ENTITY ui.taskbar.label "Taskbar">
+<!ENTITY ui.taskbar.jumplist.label "Jumplist (Windows 7+)">
+<!ENTITY ui.taskbar.jumplist.enabled.label "Enable Jumplist">
+<!ENTITY ui.taskbar.jumplist.item.label "Items:">
+<!ENTITY ui.taskbar.jumplist.item.frequent.label "Frequent">
+<!ENTITY ui.taskbar.jumplist.item.recent.label "Recent">
+<!ENTITY ui.taskbar.jumplist.item.tasks.label "Tasks">
+<!ENTITY ui.taskbar.jumplist.maxListItemCount.label "Maximum number of items per list">
+<!ENTITY ui.taskbar.jumplist.refreshInSeconds.label "Refresh list items every">
+<!ENTITY ui.taskbar.jumplist.refreshInSeconds.label2 "seconds.">
 <!ENTITY ui.others.label "Other">
 <!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
 <!ENTITY ui.others.preference.animateFadeIn.label "Animate fade-in (likely Mac)">

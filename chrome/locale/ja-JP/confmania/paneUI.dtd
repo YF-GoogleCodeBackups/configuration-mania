@@ -99,6 +99,16 @@
 <!ENTITY ui.contextmenu.uiSubmenuDelay.label "サブメニュー表示遅延時間">
 <!ENTITY ui.contextmenu.uiSubmenuDelay.none.label "なし">
 <!ENTITY ui.contextmenu.uiSubmenuDelay.inf.label "∞ (Motif の真似)">
+<!ENTITY ui.taskbar.label "タスクバー">
+<!ENTITY ui.taskbar.jumplist.label "ジャンプリスト (Windows 7+)">
+<!ENTITY ui.taskbar.jumplist.enabled.label "ジャンプリストを有効にする">
+<!ENTITY ui.taskbar.jumplist.item.label "アイテム:">
+<!ENTITY ui.taskbar.jumplist.item.frequent.label "よく見るページ">
+<!ENTITY ui.taskbar.jumplist.item.recent.label "最近見たページ">
+<!ENTITY ui.taskbar.jumplist.item.tasks.label "タスク">
+<!ENTITY ui.taskbar.jumplist.maxListItemCount.label "リストあたりのアイテムの最大個数">
+<!ENTITY ui.taskbar.jumplist.refreshInSeconds.label "リストアイテムを">
+<!ENTITY ui.taskbar.jumplist.refreshInSeconds.label2 "秒ごとに更新">
 <!ENTITY ui.others.label "その他">
 <!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
 <!ENTITY ui.others.preference.animateFadeIn.label "フェードインのアニメーションをする (Mac のように)">

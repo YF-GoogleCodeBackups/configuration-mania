@@ -74,6 +74,14 @@ gPrefWindow.prefUI = {
     let disabled = document.getElementById("intl.locale.matchOS").value;
     document.getElementById("general.useragent.locale").disabled = disabled;
   },
+  onJumplistEnabledSyncFrom : function() {
+    let disabled = ! document.getElementById("browser.taskbar.lists.enabled").value;
+    Array.forEach(document.querySelectorAll("preference[id^='browser.taskbar.lists.']"), function(e) {
+      if (e.id != "browser.taskbar.lists.enabled") {
+        e.disabled = disabled;
+      }
+    });
+  },
   onPreferenceInContentSyncFrom : function() {
     let disabled = document.getElementById("browser.preferences.inContent").value;
     document.getElementById("browser.preferences.instantApply").disabled = disabled;
