@@ -28,7 +28,7 @@ gPrefWindow.prefBrowser = {
       if(req.readyState != 4) return;
       var doc = req.responseXML;
 
-      var presetpopup = document.getElementById("ua-presets-popup");
+      var df = document.createDocumentFragment();
       var menupopuptable = {"{opt:this}": document.getElementById("ua-presets-this-popup")};
 
       const OS_PARAM_LANGUAGE        = /\{language\??\}/g;
@@ -48,7 +48,7 @@ gPrefWindow.prefBrowser = {
           var oMenu = document.createElement("menu");
           oMenu.setAttribute("label", name);
           oMenu.appendChild(menupopuptable[name]);
-          presetpopup.appendChild(oMenu);
+          df.appendChild(oMenu);
         }
       });
       Array.forEach(doc.getElementsByTagName("option"), function(o) {
@@ -71,6 +71,9 @@ gPrefWindow.prefBrowser = {
         oMenuItem.setAttribute("value", value);
         oMenupopup.appendChild(oMenuItem);
       });
+
+      var presetpopup = document.getElementById("ua-presets-popup");
+      presetpopup.appendChild(df);
     };
     req.send(null);
   },
