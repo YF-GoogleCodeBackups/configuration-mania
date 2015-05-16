@@ -36,6 +36,7 @@
 <commandset>
   <command id="ConfManiaPopup:Reset" oncommand="gPrefWindow.onResetPopupClicked(event);"/>
   <command id="ConfManiaPopup:CopyName" oncommand="gPrefWindow.onCopyNamePopupClicked(event);"/>
+  <command id="ConfManiaPopup:OpenAboutConfig" oncommand="gPrefWindow.onOpenAboutConfigClicked(event);"/>
   <command id="ConfManiaPopup:Mkb" oncommand="gPrefWindow.onMkbPopupClicked(event)"/>
 </commandset>
 
@@ -43,6 +44,7 @@
   <menupopup id="prefContextPopup">
     <menuitem label="&prefWindow.context.reset.label;" accesskey="&prefWindow.context.reset.accesskey;" command="ConfManiaPopup:Reset"/>
     <menuseparator/>
+    <menuitem label="&prefWindow.context.openaboutconfig.label;" accesskey="&prefWindow.context.openaboutconfig.accesskey;" command="ConfManiaPopup:OpenAboutConfig"/>
     <menuitem label="&prefWindow.context.copyName.label;" accesskey="&prefWindow.context.copyName.accesskey;" command="ConfManiaPopup:CopyName"/>
     <menuitem label="&prefWindow.context.mkb.label;" accesskey="&prefWindow.context.mkb.accesskey;" command="ConfManiaPopup:Mkb"/>
   </menupopup>

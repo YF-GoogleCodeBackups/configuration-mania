@@ -3,6 +3,8 @@
 <!ENTITY prefwindow.resetMessageTemplate "変更は失われます! 本当にこのタブ「__TABNAME__」の設定を標準に戻しますか?">
 <!ENTITY prefWindow.context.reset.label "標準の設定に戻す">
 <!ENTITY prefWindow.context.reset.accesskey "R">
+<!ENTITY prefWindow.context.openaboutconfig.label "about:configで開く">
+<!ENTITY prefWindow.context.openaboutconfig.accesskey "A">
 <!ENTITY prefWindow.context.copyName.label "設定の名前をコピー">
 <!ENTITY prefWindow.context.copyName.accesskey "C">
 <!ENTITY prefWindow.context.mkb.label "MozillaZine Knowledge Baseで検索">

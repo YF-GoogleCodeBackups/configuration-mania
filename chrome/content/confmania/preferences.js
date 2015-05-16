@@ -62,6 +62,10 @@ var gPrefWindow = {
     var p = document.getElementById(prefstr);
     gPrefWindow.resetPref(p);
   },
+  onOpenAboutConfigClicked: function(event){
+    var prefstr = gPrefWindow._contextPrefString;
+    openURL("about:config?filter="+encodeURI(prefstr));
+  },
   onCopyNamePopupClicked: function(event){
     var prefstr = gPrefWindow._contextPrefString;
     var clipboard = Components.classes["@mozilla.org/widget/clipboardhelper;1"]
