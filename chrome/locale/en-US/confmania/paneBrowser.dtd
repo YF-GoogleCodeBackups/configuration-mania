@@ -123,6 +123,7 @@
 <!ENTITY browser.webapi.dom_sms_enabled.label "Enable Messaging (SMS) API">
 <!ENTITY browser.webapi.dom_vibrator_enabled.label "Enable Vibration API">
 <!ENTITY browser.webapi.webgl.label "Enable WebGL (takes effect after restart)">
+<!ENTITY browser.webapi.serviceWorkers_enabled.label "Enable Service Workers">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links">
 <!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
