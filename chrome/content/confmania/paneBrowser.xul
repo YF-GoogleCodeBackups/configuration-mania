@@ -140,6 +140,7 @@
   <preference id="dom.vibrator.enabled" name="dom.vibrator.enabled" type="bool"/>
   <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
   <preference id="dom.serviceWorkers.enabled" name="dom.serviceWorkers.enabled" type="bool"/>
+  <preference id="dom.webcomponents.enabled" name="dom.webcomponents.enabled" type="bool"/>
 
   <preference id="browser.altClickSave" name="browser.altClickSave" type="bool" inverted="true"/>
   <preference id="browser.download.manager.addToRecentDocs" name="browser.download.manager.addToRecentDocs" type="bool"/>
@@ -505,6 +506,7 @@
   <checkbox label="&browser.webapi.dom_vibrator_enabled.label;" preference="dom.vibrator.enabled"/>
   <checkbox label="&browser.webapi.webgl.label;" preference="webgl.disabled"/>
   <checkbox label="&browser.webapi.serviceWorkers_enabled.label;" preference="dom.serviceWorkers.enabled"/>
+  <checkbox label="&browser.webapi.webcomponents_enabled.label;" preference="dom.webcomponents.enabled"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="download">
   <checkbox label="&browser.download.disableAltClickSave.label;"
