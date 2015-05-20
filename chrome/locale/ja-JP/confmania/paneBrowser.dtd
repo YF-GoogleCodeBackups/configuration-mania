@@ -124,6 +124,7 @@
 <!ENTITY browser.webapi.dom_vibrator_enabled.label "バイブレーションAPIを有効にする">
 <!ENTITY browser.webapi.webgl.label "WebGL を有効にする (再起動必要)">
 <!ENTITY browser.webapi.serviceWorkers_enabled.label "Service Workersを有効にする">
+<!ENTITY browser.webapi.webcomponents_enabled.label "Web Components (Shadow DOM)を有効にする (Firefox 29+)">
 <!ENTITY browser.download.label "ダウンロード">
 <!ENTITY browser.download.disableAltClickSave.label "ALT+Click または ALT+ENTER でリンク先をダウンロードしない">
 <!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
