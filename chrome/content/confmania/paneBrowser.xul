@@ -71,6 +71,8 @@
   <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
   <preference id="permissions.default.image" name="permissions.default.image" type="int"/>
   <preference id="image.animation_mode" name="image.animation_mode" type="string"/>
+  <preference id="dom.image.srcset.enabled" name="dom.image.srcset.enabled" type="bool"/>
+  <preference id="dom.image.picture.enabled" name="dom.image.picture.enabled" type="bool"/>
   <preference id="browser.enable_automatic_image_resizing" name="browser.enable_automatic_image_resizing" type="bool"/>
   <preference id="browser.display.show_image_placeholders" name="browser.display.show_image_placeholders" type="bool"/>
   <preference id="browser.display.force_inline_alttext" name="browser.display.force_inline_alttext" type="bool"/>
@@ -279,6 +281,13 @@
         <radio value="once" label="&browser.html.img.anim.once.label;"/>
         <radio value="none" label="&browser.html.img.anim.none.label;"/>
       </radiogroup>
+    </groupbox>
+    <groupbox>
+      <caption label="&browser.html.img.multiplesource.label;"/>
+      <checkbox label="&browser.html.img.multiplesource.srcset.label;"
+       preference="dom.image.srcset.enabled"/>
+      <checkbox label="&browser.html.img.multiplesource.picture.label;"
+       preference="dom.image.picture.enabled"/>
     </groupbox>
     <checkbox label="&browser.html.img.resizing.label;"
      preference="browser.enable_automatic_image_resizing"/>
