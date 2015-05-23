@@ -29,6 +29,9 @@
 <!ENTITY browser.html.img.anim.normal.label "As many times as the image specifies">
 <!ENTITY browser.html.img.anim.once.label "Once">
 <!ENTITY browser.html.img.anim.none.label "Never (Stop)">
+<!ENTITY browser.html.img.multiplesource.label "Multiple Source Image">
+<!ENTITY browser.html.img.multiplesource.srcset.label "Enable srcset attribute on img elements (Firefox 32+)">
+<!ENTITY browser.html.img.multiplesource.picture.label "Enable picture element (Firefox 33+)">
 <!ENTITY browser.html.img.resizing.label "Resize large images to fit in the browser window">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force broken images' alt text to be displayed inline">
