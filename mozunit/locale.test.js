@@ -226,7 +226,7 @@ tc.tests = {
       Services.ww.registerNotification(dialogObserver);
       dialogHandler.onOpen = function (aWindow) {
         let dialog = aWindow.document.documentElement;
-        if (dialog.textContent.indexOf("Configuration Mania") >= 0) {
+        if (dialog.id === "commonDialog") {
           aWindow.close();
         }
       };
