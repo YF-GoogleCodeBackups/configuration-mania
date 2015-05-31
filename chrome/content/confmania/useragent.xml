@@ -25,10 +25,10 @@
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
 
-    <option name="Chrome 42.0.2311.90 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="42.0.2311.90"/>
-    <option name="Chrome 42.0.2311.90 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="42.0.2311.90"/>
-    <option name="Chrome 42.0.2311.90 (MacOS X 10.10)" platform="Macintosh" oscpu="Intel Mac OS X 10_10" webkit="537.36" version="42.0.2311.90"/>
-    <option name="Chrome 42.0.2311.90 (Nexus 5; Android 5.0)" platform="Linux" oscpu="Android 5.0; Nexus 5 Build/LRX21O" webkit="537.36" version="42.0.2311.90"/>
+    <option name="Chrome 43.0.2357.65 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="43.0.2357.65"/>
+    <option name="Chrome 43.0.2357.65 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="43.0.2357.65"/>
+    <option name="Chrome 43.0.2357.65 (MacOS X 10.10)" platform="Macintosh" oscpu="Intel Mac OS X 10_10" webkit="537.36" version="43.0.2357.65"/>
+    <option name="Chrome 43.0.2357.65 (Nexus 5; Android 5.0)" platform="Linux" oscpu="Android 5.0; Nexus 5 Build/LRX21O" webkit="537.36" version="43.0.2357.65"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
     <option name="Safari 8.0.4 (Intel MacOS X 10.10.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_10_2" webkit="600.4.10" safari="600.4.10" version="8.0.4"/>
