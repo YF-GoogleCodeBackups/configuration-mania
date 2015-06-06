@@ -14,11 +14,6 @@
   overflow: auto;
 }
 
-page#confmania-in-content-page {
-  padding: 18px;
-  background-color: Window;
-  color: WindowText;
-}
 prefwindow#ConfmaniaPreferences .paneSelector > radio[pane] {
   list-style-image: none;
   -moz-image-region: auto;
@@ -28,57 +23,6 @@ prefwindow#ConfmaniaPreferences image.paneButtonIcon {
 }
 prefwindow#ConfmaniaPreferences prefpane hbox.heading {
   display: none; /* display only for in-content */
-}
-
-page#confmania-in-content-page .main-content {
-  max-width: none;
-  /* Needed to allow the radius to clip the inner content, see bug 595656 */
-  overflow: hidden;
-  background-color: -moz-Field;
-  color: -moz-FieldText;
-  border: 1px solid ThreeDShadow;
-  border-radius: 5px;
-}
-page#confmania-in-content-page #categories {
-  -moz-appearance: none;
-  border: none;
-  -moz-margin-end: -1px;
-  background-color: transparent;
-  position: relative;
-  margin-top: 41px;
-}
-page#confmania-in-content-page .category {
-  -moz-appearance: none;
-  border-width: 1px;
-  -moz-border-end-width: 0;
-  border-style: solid;
-  border-color: transparent;
-  padding: 9px 4px 10px;
-  -moz-padding-end: 8px;
-  -moz-box-align: center;
-  overflow: hidden;
-  min-height: 0;
-  color: WindowText;
-  height: 52px;
-}
-page#confmania-in-content-page .category:-moz-locale-dir(ltr) {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-page#confmania-in-content-page .category:-moz-locale-dir(rtl) {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-page#confmania-in-content-page .category[selected] {
-  background-color: -moz-Field;
-  color: -moz-FieldText;
-  border-color: ThreeDShadow;
-}
-page#confmania-in-content-page prefpane > .content-box {
-  overflow: auto;
-}
-page#confmania-in-content-page caption {
-  font-size: 1.667rem;
 }
 
 .subtabs, .subtabpanel{

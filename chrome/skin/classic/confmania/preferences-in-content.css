@@ -1,0 +1,115 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+@media (max-height: 359px) {
+  #categories {
+    padding-top: calc(100vh - 320px);
+  }
+}
+#categories {
+  max-height: 100vh;
+}
+#categories > scrollbox {
+  overflow-x: hidden !important;
+}
+
+prefpane > .content-box {
+  overflow: auto;
+}
+
+prefpane hbox.header[data-category] {
+  display: inherit; /* display only for in-content */
+}
+
+prefpane > .content-box {
+  overflow: auto;
+}
+.main-content {
+  -moz-padding-start: 4px;
+  -moz-padding-end: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+textbox + button,
+filefield + button {
+  -moz-margin-start: -4px;
+}
+
+menulist[editable="true"] .menulist-editable-box {
+  -moz-appearance: none;
+  background-color: #fff !important;
+}
+menulist[editable="true"][focused] {
+  border-color: #0095DD;
+}
+menulist[editable="true"] button {
+  border-color: #0095DD;
+}
+/*
+menulist[editable="true"] > .menulist-dropmarker {
+  -moz-appearance: none;
+  -moz-margin-end: 4px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown");
+}
+menulist[editable="true"] > .menulist-dropmarker > .dropmarker-icon {
+  width: 18px;
+  height: 18px;
+}
+menulist[disabled="true"][editable="true"] > .menulist-dropmarker {
+  list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown-disabled")
+}
+*/
+
+textbox[type="number"] > spinbuttons {
+  -moz-appearance: none;
+}
+groupbox + *:not(groupbox) {
+  margin-top: 15px;
+}
+
+.subtabs {
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: solid 1px #C1C1C1 !important;
+  border-right: solid 1px #C1C1C1 !important;
+}
+
+.subtabs .subtab {
+  border-style: none;
+  border-left: 4px solid transparent;
+  padding: 4px;
+}
+.subtabs .subtab:hover {
+  background-color: #EBEBEB;
+}
+.subtabs .subtab[selected] {
+  border-left: 4px solid #FF9500;
+  background-color: #EBEBEB;
+  color: #212121;
+}
+
+
+caption {
+  font-size: 1.667rem;
+}
+.category > label, prefpane {
+  font-size: 1.25rem;
+}
+.subtabpanel {
+  padding: 0.5rem;
+}
+.subpanel groupbox .groupbox-body, .indent {
+  -moz-margin-start: 33px;
+}
+@media (max-width: 799px), (max-height: 359px) {
+  .category > label, prefpane, groupbox .groupbox-body {
+    font-size: 1.0rem;
+  }
+  .subpanel groupbox .groupbox-body, .indent {
+    -moz-margin-start: 13px;
+  }
+}
