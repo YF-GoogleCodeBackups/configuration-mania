@@ -71,7 +71,12 @@
     </richlistitem>
   </richlistbox>
 
-  <box class="main-content" flex="1">
+  <box class="main-content" flex="1" orient="vertical">
+    <hbox class="header">
+      <label class="header-name" flex="1"/>
+      <button label="&reset;" oncommand="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"/>
+    </hbox>
+
     <prefpane id="paneBrowser" label="&browser.title;" flex="1" src="chrome://confmania/content/paneBrowser.xul"/>
     <prefpane id="paneSecurity" label="&security.title;" flex="1" src="chrome://confmania/content/paneSecurity.xul"/>
     <prefpane id="paneHTTP" label="&http.title;" flex="1" src="chrome://confmania/content/paneHTTP.xul"/>

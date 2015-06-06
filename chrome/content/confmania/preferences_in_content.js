@@ -63,6 +63,8 @@ var gPrefWindow = {
         gPrefWindow.loadPrefPane(elems[i]);
         elems[i].selected = true;
         elems[i].hidden = false;
+
+        document.querySelector(".main-content .header-name").value = elems[i].getAttribute("label");
       } else {
         elems[i].selected = false;
         elems[i].hidden = true;
@@ -83,7 +85,7 @@ var gPrefWindow = {
   // =========================
   onResetSettings: function(event, msgtmpl){
     var currentPane = gPrefWindow.getCurrentPrefPane();
-    var srcbtn = document.documentElement.getButton("extra2");
+    var srcbtn = event.target;
     var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
                    .getService(Components.interfaces.nsIPromptService);
 
