@@ -67,7 +67,6 @@
   <preference id="browser.fixup.alternate.prefix" name="browser.fixup.alternate.prefix" type="string"/>
   <preference id="browser.fixup.alternate.suffix" name="browser.fixup.alternate.suffix" type="string"/>
 
-  <preference id="browser.frames.enabled" name="browser.frames.enabled" type="bool" inverted="true"/>
   <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
   <preference id="permissions.default.image" name="permissions.default.image" type="int"/>
   <preference id="image.animation_mode" name="image.animation_mode" type="string"/>
@@ -128,9 +127,7 @@
   <preference id="media.directshow.enabled" name="media.directshow.enabled" type="bool"/>
   <preference id="media.gstreamer.enabled" name="media.gstreamer.enabled" type="bool"/>
   <preference id="media.apple.mp3.enabled" name="media.apple.mp3.enabled" type="bool"/>
-  <preference id="media.gmp-gmpopenh264.provider.enabled" name="media.gmp-gmpopenh264.provider.enabled" type="bool"/>
   <preference id="media.mediasource.enabled" name="media.mediasource.enabled" type="bool"/>
-  <preference id="media.mediasource.youtubeonly" name="media.mediasource.youtubeonly" type="bool"/>
   <preference id="media.mediasource.mp4.enabled" name="media.mediasource.mp4.enabled" type="bool"/>
   <preference id="media.mediasource.webm.enabled" name="media.mediasource.webm.enabled" type="bool"/>
 
@@ -254,8 +251,6 @@
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="html">
-  <checkbox id="html-frameDisabled" label="&browser.html.disableFrame.label;"
-   onsyncfrompreference="return gPrefWindow.prefBrowser.onHtmlFrameSyncFrom();" preference="browser.frames.enabled"/>
   <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
    class="indent" preference="layout.frames.force_resizability"/>
   <groupbox>
@@ -469,11 +464,9 @@
   <checkbox label="&browser.multimedia.directshow-enabled.label;" preference="media.directshow.enabled"/>
   <checkbox label="&browser.multimedia.gstreamer-enabled.label;" preference="media.gstreamer.enabled"/>
   <checkbox label="&browser.multimedia.apple-mp3-enabled.label;" preference="media.apple.mp3.enabled"/>
-  <checkbox label="&browser.multimedia.gmp-gmpopenh264-provider-enabled.label;" preference="media.gmp-gmpopenh264.provider.enabled"/>
 
   <checkbox label="&browser.multimedia.mediasource.enabled.label;" preference="media.mediasource.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onMultiMediaMediaSourceEnabledSyncFrom();"/>
   <vbox class="indent">
-    <checkbox label="&browser.multimedia.mediasource.youtubeonly.label;" preference="media.mediasource.youtubeonly"/>
     <groupbox id="multimedia-mediasource-formats" orient="horizontal">
       <caption label="&browser.multimedia.mediasource.formats.label;"/>
       <checkbox label="mp4" preference="media.mediasource.mp4.enabled"/>

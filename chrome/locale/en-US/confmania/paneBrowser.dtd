@@ -18,7 +18,6 @@
 <!ENTITY browser.urlbar.unknownLocations.domainGuessing.suffix.label "Suffix :">
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
-<!ENTITY browser.html.disableFrame.label "Disable frames (up-to Firefox 31)">
 <!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
 <!ENTITY browser.html.img "Image">
 <!ENTITY browser.html.img.loadImages.label "Load images automatically">
@@ -30,8 +29,8 @@
 <!ENTITY browser.html.img.anim.once.label "Once">
 <!ENTITY browser.html.img.anim.none.label "Never (Stop)">
 <!ENTITY browser.html.img.multiplesource.label "Multiple Source Image">
-<!ENTITY browser.html.img.multiplesource.srcset.label "Enable srcset attribute on img elements (Firefox 32+)">
-<!ENTITY browser.html.img.multiplesource.picture.label "Enable picture element (Firefox 33+)">
+<!ENTITY browser.html.img.multiplesource.srcset.label "Enable srcset attribute on img elements">
+<!ENTITY browser.html.img.multiplesource.picture.label "Enable picture element">
 <!ENTITY browser.html.img.resizing.label "Resize large images to fit in the browser window">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force broken images' alt text to be displayed inline">
@@ -42,7 +41,7 @@
 <!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
 <!ENTITY browser.html.plugins.label "Plugins">
 <!ENTITY browser.html.plugins.click_to_play.label "Do not load the plugin content until you click on it">
-<!ENTITY browser.html.plugins.flash-disable-protected-mode.label "Disable protected mode in Flash Player 11.3+ (Windows Vista/7:Firefox 35+, Windows 8:Firefox 36+)">
+<!ENTITY browser.html.plugins.flash-disable-protected-mode.label "Disable protected mode in Flash Player 11.3+ (Windows)">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.zoomSiteSpecific.label "Remember the zoom preferences page by page">
@@ -107,10 +106,8 @@
 <!ENTITY browser.multimedia.directshow-enabled.label "Enable Direct Show (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "Enable GStreamer (Linux)">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Enable Apple MP3 (Mac)">
-<!ENTITY browser.multimedia.gmp-gmpopenh264-provider-enabled.label "Enable OpenH264 Video Codec (Firefox 33-36)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Enable Media Source Extensions">
-<!ENTITY browser.multimedia.mediasource.youtubeonly.label "Enable on Youtube only (youtube.com, youtube-nocookie.com) (Firefox 36-37)">
-<!ENTITY browser.multimedia.mediasource.formats.label "Supported Formats (Firefox 36+)">
+<!ENTITY browser.multimedia.mediasource.formats.label "Supported Formats">
 <!ENTITY browser.webapi.label "Web API">
 <!ENTITY browser.webapi.geo_enabled.label "Enable Geolocation">
 <!ENTITY browser.webapi.geoExceptions.label "Exceptions">
@@ -126,8 +123,8 @@
 <!ENTITY browser.webapi.dom_sms_enabled.label "Enable Messaging (SMS) API">
 <!ENTITY browser.webapi.dom_vibrator_enabled.label "Enable Vibration API">
 <!ENTITY browser.webapi.webgl.label "Enable WebGL (takes effect after restart)">
-<!ENTITY browser.webapi.serviceWorkers_enabled.label "Enable Service Workers (Firefox 32+)">
-<!ENTITY browser.webapi.webcomponents_enabled.label "Enable Web Components (Shadow DOM) (Firefox 29+)">
+<!ENTITY browser.webapi.serviceWorkers_enabled.label "Enable Service Workers">
+<!ENTITY browser.webapi.webcomponents_enabled.label "Enable Web Components (Shadow DOM)">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links">
 <!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
@@ -171,7 +168,7 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.label "Cache Folder Location">
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
 <!ENTITY browser.others.label "Other">
-<!ENTITY browser.others.network-predictor.label "Network predictor (Firefox 32+)">
+<!ENTITY browser.others.network-predictor.label "Network predictor">
 <!ENTITY browser.others.network-predictor.enabled.label "Pre-connect link-target server on hovering mouse over the link">
 <!ENTITY browser.others.network-predictor.enable-hover-on-ssl.label "Do not pre-connect on hovering mouse over the link in HTTPS site">
 <!ENTITY browser.others.dns.label "DNS Setting">
@@ -181,6 +178,6 @@
 <!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
-<!ENTITY browser.others.enableOneClickSearchesUI.label "Enable One-Click Searches UI in the search bar (Firefox 34+)">
+<!ENTITY browser.others.enableOneClickSearchesUI.label "Enable One-Click Searches UI in the search bar">
 <!ENTITY browser.others.historyExpirationMaxPages.label "Max number of unique URLs to retain in history">
 <!ENTITY browser.others.warnOnAboutConfig.label "Show the warning message on about:config">
