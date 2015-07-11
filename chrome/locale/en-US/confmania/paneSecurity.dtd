@@ -24,7 +24,11 @@
 <!ENTITY security.popupwin.label "Popup Win.">
 <!ENTITY security.popupwin.onblock.label "When block popup windows:">
 <!ENTITY security.popupwin.onblock.displayNotification.label "Display a notification bar at the top of the content area">
-<!ENTITY security.popupwin.tabs.label "On opening Popup Windows (window.open) on the Tabbed Browsing:">
+<!ENTITY security.popupwin.tabs_newwindow.label "On opening new window by clicking links that specify target attribute:">
+<!ENTITY security.popupwin.tabs_newwindow.openCurrent.label "Open new windows in the current tabs instead">
+<!ENTITY security.popupwin.tabs_newwindow.openTab.label "Open new windows in new tabs instead">
+<!ENTITY security.popupwin.tabs_newwindow.openWindow.label "Open new windows">
+<!ENTITY security.popupwin.tabs.label "On opening new popup windows using JavaScript:">
 <!ENTITY security.popupwin.tabs.0.label "Same as the link's setting">
 <!ENTITY security.popupwin.tabs.1.label "Open new window">
 <!ENTITY security.popupwin.tabs.2.label "Same as the link's setting, but open window if specified how to be displayed (Default)">
