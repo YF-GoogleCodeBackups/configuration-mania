@@ -78,7 +78,7 @@
 <!ENTITY security.privacy.history.label "History">
 <!ENTITY security.privacy.history.cookie.label "Cookie">
 <!ENTITY security.privacy.history.cookie.lifetimedays.label "Accept cookies for">
-<!ENTITY security.privacy.trackingprotection.label "Tracking Protection (Firefox 33+)">
+<!ENTITY security.privacy.trackingprotection.label "Tracking Protection">
 <!ENTITY security.privacy.trackingprotection.enable.label "Enable Tracking Protection">
 <!ENTITY security.privacy.trackingprotection.exceptions.label "Exceptions">
 <!ENTITY security.privacy.trackingprotection.exceptions.title "Exceptions - Tracking Protection">

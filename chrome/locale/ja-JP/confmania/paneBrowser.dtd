@@ -18,7 +18,6 @@
 <!ENTITY browser.urlbar.unknownLocations.domainGuessing.suffix.label "接尾辞 : ">
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
-<!ENTITY browser.html.disableFrame.label "フレームを無効にする(Firefox 31以下)">
 <!ENTITY browser.html.frameForceResizability.label "フレームを強制的にサイズ変更できるようにする">
 <!ENTITY browser.html.img "画像">
 <!ENTITY browser.html.img.loadImages.label "画像を自動的に読み込む">
@@ -30,8 +29,8 @@
 <!ENTITY browser.html.img.anim.once.label "一回だけ">
 <!ENTITY browser.html.img.anim.none.label "なし(静止)">
 <!ENTITY browser.html.img.multiplesource.label "複数画像ソース">
-<!ENTITY browser.html.img.multiplesource.srcset.label "img要素のsrcset属性を有効にする (Firefox 32+)">
-<!ENTITY browser.html.img.multiplesource.picture.label "picture要素を有効にする (Firefox 33+)">
+<!ENTITY browser.html.img.multiplesource.srcset.label "img要素のsrcset属性を有効にする">
+<!ENTITY browser.html.img.multiplesource.picture.label "picture要素を有効にする">
 <!ENTITY browser.html.img.resizing.label "ページサイズに合わせて画像を縮小">
 <!ENTITY browser.html.img.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
 <!ENTITY browser.html.img.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
@@ -42,7 +41,7 @@
 <!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
 <!ENTITY browser.html.plugins.label "プラグイン">
 <!ENTITY browser.html.plugins.click_to_play.label "プラグインコンテンツはクリックしたら読み込む">
-<!ENTITY browser.html.plugins.flash-disable-protected-mode.label "Flash Player 11.3以降の保護モードを無効にする (Windows Vista/7:Firefox 35+, Windows 8:Firefox 36+)">
+<!ENTITY browser.html.plugins.flash-disable-protected-mode.label "Flash Player 11.3以降の保護モードを無効にする (Windows)">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">
@@ -107,10 +106,8 @@
 <!ENTITY browser.multimedia.directshow-enabled.label "Direct Showを有効にする (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "GStreamerを有効にする (Linux)">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Apple MP3を有効にする (Mac)">
-<!ENTITY browser.multimedia.gmp-gmpopenh264-provider-enabled.label "OpenH264 Video Codec を有効にする(Firefox 33-36)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Media Source Extensions を有効にする">
-<!ENTITY browser.multimedia.mediasource.youtubeonly.label "Youtube (youtube.com, youtube-nocookie.com) に限って有効にする (Firefox 36-37)">
-<!ENTITY browser.multimedia.mediasource.formats.label "対応形式 (Firefox 36+)">
+<!ENTITY browser.multimedia.mediasource.formats.label "対応形式">
 <!ENTITY browser.webapi.label "Web API">
 <!ENTITY browser.webapi.geo_enabled.label "位置情報通信機能を有効にする">
 <!ENTITY browser.webapi.geoExceptions.label "例外サイト...">
@@ -126,8 +123,8 @@
 <!ENTITY browser.webapi.dom_sms_enabled.label "メッセージング(SMS)APIを有効にする">
 <!ENTITY browser.webapi.dom_vibrator_enabled.label "バイブレーションAPIを有効にする">
 <!ENTITY browser.webapi.webgl.label "WebGL を有効にする (再起動必要)">
-<!ENTITY browser.webapi.serviceWorkers_enabled.label "Service Workersを有効にする (Firefox 32+)">
-<!ENTITY browser.webapi.webcomponents_enabled.label "Web Components (Shadow DOM)を有効にする (Firefox 29+)">
+<!ENTITY browser.webapi.serviceWorkers_enabled.label "Service Workersを有効にする">
+<!ENTITY browser.webapi.webcomponents_enabled.label "Web Components (Shadow DOM)を有効にする">
 <!ENTITY browser.download.label "ダウンロード">
 <!ENTITY browser.download.disableAltClickSave.label "ALT+Click または ALT+ENTER でリンク先をダウンロードしない">
 <!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
@@ -171,7 +168,7 @@
 <!ENTITY browser.speed-cache.diskCacheFolder.label "キャッシュの保存先">
 <!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
 <!ENTITY browser.others.label "その他">
-<!ENTITY browser.others.network-predictor.label "Network predictor (Firefox 32+)">
+<!ENTITY browser.others.network-predictor.label "Network predictor">
 <!ENTITY browser.others.network-predictor.enabled.label "リンクをマウスオーバー時にリンク先のサーバに事前接続する">
 <!ENTITY browser.others.network-predictor.enable-hover-on-ssl.label "HTTPSサイト上のリンクをマウスオーバー時には事前接続をしない">
 <!ENTITY browser.others.dns.label "名前解決(DNS)">
@@ -181,6 +178,6 @@
 <!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで表示する">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
-<!ENTITY browser.others.enableOneClickSearchesUI.label "検索バーに対して One-Click Searches UI を有効にする (Firefox 34+)">
+<!ENTITY browser.others.enableOneClickSearchesUI.label "検索バーに対して One-Click Searches UI を有効にする">
 <!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
 <!ENTITY browser.others.warnOnAboutConfig.label "about:config で警告を表示する">

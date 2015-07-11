@@ -105,11 +105,6 @@ gPrefWindow.prefBrowser = {
     }
     return undefined; // no override
   },
-  onHtmlFrameSyncFrom : function() {
-    let disabled = document.getElementById("browser.frames.enabled").value;
-    document.getElementById("layout.frames.force_resizability").disabled = disabled;
-    return undefined; // no override
-  },
   onHTMLLoadImageSyncFrom : function() {
     let pref = document.getElementById("permissions.default.image");
     return (pref.value == 1 || pref.value == 3);
@@ -174,7 +169,6 @@ gPrefWindow.prefBrowser = {
   },
   onMultiMediaMediaSourceEnabledSyncFrom: function () {
     let disabled = ! document.getElementById("media.mediasource.enabled").value;
-    document.getElementById("media.mediasource.youtubeonly").disabled = disabled;
     document.getElementById("media.mediasource.mp4.enabled").disabled = disabled;
     document.getElementById("media.mediasource.webm.enabled").disabled = disabled;
     return undefined; // no override

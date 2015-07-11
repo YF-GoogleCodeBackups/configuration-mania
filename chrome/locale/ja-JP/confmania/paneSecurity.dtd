@@ -78,7 +78,7 @@
 <!ENTITY security.privacy.history.label "履歴">
 <!ENTITY security.privacy.history.cookie.label "Cookie">
 <!ENTITY security.privacy.history.cookie.lifetimedays.label "有効期限を限定:">
-<!ENTITY security.privacy.trackingprotection.label "追跡防止 (Firefox 33+)">
+<!ENTITY security.privacy.trackingprotection.label "追跡防止">
 <!ENTITY security.privacy.trackingprotection.enable.label "追跡防止を有効にする">
 <!ENTITY security.privacy.trackingprotection.exceptions.label "例外サイト...">
 <!ENTITY security.privacy.trackingprotection.exceptions.title "例外サイト - 追跡防止">
