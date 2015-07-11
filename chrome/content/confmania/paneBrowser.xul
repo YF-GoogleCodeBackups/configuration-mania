@@ -252,7 +252,7 @@
 </box>
 <box class="subtabpanel" orient="vertical" id="html">
   <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
-   class="indent" preference="layout.frames.force_resizability"/>
+   preference="layout.frames.force_resizability"/>
   <groupbox>
     <caption label="&browser.html.img;"/>
 
@@ -466,13 +466,11 @@
   <checkbox label="&browser.multimedia.apple-mp3-enabled.label;" preference="media.apple.mp3.enabled"/>
 
   <checkbox label="&browser.multimedia.mediasource.enabled.label;" preference="media.mediasource.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onMultiMediaMediaSourceEnabledSyncFrom();"/>
-  <vbox class="indent">
-    <groupbox id="multimedia-mediasource-formats" orient="horizontal">
-      <caption label="&browser.multimedia.mediasource.formats.label;"/>
-      <checkbox label="mp4" preference="media.mediasource.mp4.enabled"/>
-      <checkbox label="webm" preference="media.mediasource.webm.enabled"/>
-    </groupbox>
-  </vbox>
+  <groupbox id="multimedia-mediasource-formats" class="indent" orient="horizontal">
+    <caption label="&browser.multimedia.mediasource.formats.label;"/>
+    <checkbox label="mp4" preference="media.mediasource.mp4.enabled"/>
+    <checkbox label="webm" preference="media.mediasource.webm.enabled"/>
+  </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="webapi">
   <vbox>
