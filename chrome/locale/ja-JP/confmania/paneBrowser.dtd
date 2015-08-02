@@ -181,3 +181,7 @@
 <!ENTITY browser.others.enableOneClickSearchesUI.label "検索バーに対して One-Click Searches UI を有効にする">
 <!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
 <!ENTITY browser.others.warnOnAboutConfig.label "about:config で警告を表示する">
+<!ENTITY browser.others.hello.label "Firefox Hello">
+<!ENTITY browser.others.hello.enabled.label "Firefox Helloを有効にする">
+<!ENTITY browser.others.hello.forget-access-token.label "ゲストアクセストークンを忘却">
+<!ENTITY browser.others.hello.forget-access-token.desc "ゲストアカウントのすべての会話が削除されます。この動作は元に戻せません。&brandShortName; を再起動して変更を有効にしてください。">

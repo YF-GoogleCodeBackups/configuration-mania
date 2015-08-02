@@ -176,6 +176,10 @@
   <preference id="browser.search.showOneOffButtons" name="browser.search.showOneOffButtons" type="bool"/>
   <preference id="places.history.expiration.max_pages" name="places.history.expiration.max_pages" type="int"/>
   <preference id="general.warnOnAboutConfig" name="general.warnOnAboutConfig" type="bool"/>
+  <preference id="loop.enabled" name="loop.enabled" type="bool"/>
+  <preference id="loop.hawk-session-token" name="loop.hawk-session-token" type="string"/>
+  <preference id="loop.key" name="loop.key" type="string"/>
+  <preference id="loop.ot.guid" name="loop.ot.guid" type="string"/>
 </preferences>
 
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
@@ -689,6 +693,28 @@
   </groupbox>
 
   <checkbox preference="general.warnOnAboutConfig" label="&browser.others.warnOnAboutConfig.label;"/>
+
+  <groupbox>
+    <caption label="&browser.others.hello.label;"/>
+    <checkbox label="&browser.others.hello.enabled.label;"
+            preference="loop.enabled"
+            onsyncfrompreference="return gPrefWindow.prefBrowser.onHelloEnableSyncFrom();"/>
+    <vbox class="indent">
+      <data preference="loop.hawk-session-token"
+            preference-editable="true"
+            onsyncfrompreference="return gPrefWindow.prefBrowser.onHelloAccessTokenSyncFrom();"/>
+      <data preference="loop.key"
+            preference-editable="true"
+            onsyncfrompreference="return gPrefWindow.prefBrowser.onHelloAccessTokenSyncFrom();"/>
+      <data preference="loop.ot.guid"
+            preference-editable="true"
+            onsyncfrompreference="return gPrefWindow.prefBrowser.onHelloAccessTokenSyncFrom();"/>
+      <button id="browser-others-loop-forget"
+              label="&browser.others.hello.forget-access-token.label;"
+              oncommand="return gPrefWindow.prefBrowser.onHelloForgetAccessTokenCommanded();"/>
+      <description class="indent" id="browser-others-loop-forget-desc">&browser.others.hello.forget-access-token.desc;</description>
+    </vbox>
+  </groupbox>
 </box>
 
 </deck>

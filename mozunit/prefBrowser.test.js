@@ -401,4 +401,75 @@ tc.tests = {
   //},
   //testSetAlertsSlideLight: function() {
   //},
+  testOnHelloAccessTokenSyncFrom : function() {
+    let target = this.document.getElementById("browser-others-loop-forget");
+    let checkbox = this.document.querySelector("checkbox[preference='loop.enabled']");
+
+    let origvalLoopEnabled = this.document.getElementById("loop.enabled").value;
+    let origvalHawkSessionToken = this.document.getElementById("loop.hawk-session-token").value;
+    let origvalLoopKey = this.document.getElementById("loop.key").value;
+    let origvalOtGuid = this.document.getElementById("loop.ot.guid").value;
+
+    checkbox.checked = true;
+    checkbox.click();
+    assert.isFalse(checkbox.checked);
+
+    assert.isTrue(target.disabled);
+    this.document.getElementById("loop.hawk-session-token").value = "loop.hawk-session-token";
+    assert.isTrue(target.disabled);
+    this.document.getElementById("loop.key").value = "loop.key";
+    assert.isTrue(target.disabled);
+    this.document.getElementById("loop.ot.guid").value = "loop.ot.guid";
+    assert.isTrue(target.disabled);
+
+    checkbox.click();
+    assert.isTrue(checkbox.checked);
+
+    assert.isFalse(target.disabled);
+    this.document.getElementById("loop.hawk-session-token").value = undefined;
+    assert.isFalse(target.disabled);
+    this.document.getElementById("loop.key").value = undefined;
+    assert.isFalse(target.disabled);
+    this.document.getElementById("loop.ot.guid").value = undefined;
+    assert.isTrue(target.disabled);
+
+    this.document.getElementById("loop.enabled").value = origvalLoopEnabled;
+    this.document.getElementById("loop.hawk-session-token").value = origvalHawkSessionToken;
+    this.document.getElementById("loop.key").value = origvalLoopKey;
+    this.document.getElementById("loop.ot.guid").value = origvalOtGuid;
+  },
+  testOnHelloForgetAccessTokenCommanded : function() {
+    let origvalLoopEnabled = this.document.getElementById("loop.enabled").value;
+    let origvalHawkSessionToken = this.document.getElementById("loop.hawk-session-token").value;
+    let origvalLoopKey = this.document.getElementById("loop.key").value;
+    let origvalOtGuid = this.document.getElementById("loop.ot.guid").value;
+
+    let hasValue = function(aPref) {
+      if (aPref.instantApply) {
+        return (aPref.hasUserValue);
+      } else {
+        return (aPref.value !== undefined);
+      }
+    }
+
+    this.document.getElementById("loop.enabled").value = true;
+    this.document.getElementById("loop.hawk-session-token").value = "loop.hawk-session-token";
+    this.document.getElementById("loop.key").value = "loop.key";
+    this.document.getElementById("loop.ot.guid").value = "loop.ot.guid";
+
+    let resetBtn = this.document.getElementById("browser-others-loop-forget");
+    assert.isFalse(resetBtn.disabled);
+    resetBtn.click();
+
+    assert.isTrue(resetBtn.disabled);
+
+    assert.isFalse(hasValue(this.document.getElementById("loop.hawk-session-token")));
+    assert.isFalse(hasValue(this.document.getElementById("loop.key")));
+    assert.isFalse(hasValue(this.document.getElementById("loop.ot.guid")));
+
+    this.document.getElementById("loop.enabled").value = origvalLoopEnabled;
+    this.document.getElementById("loop.hawk-session-token").value = origvalHawkSessionToken;
+    this.document.getElementById("loop.key").value = origvalLoopKey;
+    this.document.getElementById("loop.ot.guid").value = origvalOtGuid;
+  },
 }

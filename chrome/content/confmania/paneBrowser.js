@@ -401,6 +401,24 @@ gPrefWindow.prefBrowser = {
   },
   resetBrowserCacheDiskCacheFolder : function(){
     gPrefWindow.resetPref(document.getElementById("browser.cache.disk.parent_directory"));
+  },
+  onHelloEnableSyncFrom : function() {
+    gPrefWindow.prefBrowser.onHelloAccessTokenSyncFrom();    
+    return undefined; // no override
+  },
+  onHelloAccessTokenSyncFrom : function() {
+    let disabled = !(document.getElementById("loop.enabled").value &&
+                   (document.getElementById("loop.hawk-session-token").hasUserValue ||
+                   document.getElementById("loop.key").hasUserValue ||
+                   document.getElementById("loop.ot.guid").hasUserValue));
+    document.getElementById("browser-others-loop-forget").disabled = disabled;
+    document.getElementById("browser-others-loop-forget-desc").disabled = disabled;
+    return undefined; // no override
+  },
+  onHelloForgetAccessTokenCommanded: function() {
+    gPrefWindow.resetPref(document.getElementById("loop.hawk-session-token"));
+    gPrefWindow.resetPref(document.getElementById("loop.key"));
+    gPrefWindow.resetPref(document.getElementById("loop.ot.guid"));
   }
 };
 
