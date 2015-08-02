@@ -43,6 +43,7 @@
 <!ENTITY browser.html.plugins.click_to_play.label "プラグインコンテンツはクリックしたら読み込む">
 <!ENTITY browser.html.plugins.flash-disable-protected-mode.label "Flash Player 11.3以降の保護モードを無効にする (Windows)">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
+<!ENTITY browser.html.vertical-text.label "CSSの縦書きテキストを有効にする">
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">

@@ -43,6 +43,7 @@
 <!ENTITY browser.html.plugins.click_to_play.label "Do not load the plugin content until you click on it">
 <!ENTITY browser.html.plugins.flash-disable-protected-mode.label "Disable protected mode in Flash Player 11.3+ (Windows)">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
+<!ENTITY browser.html.vertical-text.label "Enable CSS vertical text">
 <!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
 <!ENTITY browser.html.zoomSiteSpecific.label "Remember the zoom preferences page by page">
 <!ENTITY browser.html.focus.label "Highlight Focus">
