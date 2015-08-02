@@ -111,16 +111,16 @@ description > *|*:-moz-any-link {
   cursor: pointer;
 }
 *[data-obsolete-msg]::after, *[data-require-msg]::after, *[data-require-obsolete-msg]::after {
-	border-width: 0 0 0 4px;
-	font-size: x-small;
-	border-radius: 2px;
+  border-width: 0 0 0 4px;
+  font-size: x-small;
+  border-radius: 2px;
   border-width: 0 0 0 4px;
   border-style: solid;
-	padding: 4px 4px 2px;
-	display: inline-block;
-	vertical-align: top;
-	font-weight: 400;
-	line-height: normal;
+  padding: 4px 4px 2px;
+  display: inline-block;
+  vertical-align: top;
+  font-weight: 400;
+  line-height: normal;
 }
 *[data-obsolete-msg]::after {
   content: attr(data-obsolete-msg);
