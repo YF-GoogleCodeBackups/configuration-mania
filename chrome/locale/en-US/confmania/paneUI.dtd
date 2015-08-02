@@ -122,6 +122,7 @@
 <!ENTITY ui.others.xwin.scrollbarPosition.label "Allow middle mouse button to adjust scroll bar (takes effect after restart)">
 <!ENTITY ui.others.theme.label "Themes">
 <!ENTITY ui.others.theme.devedition.label "Use Firefox Developer Edition Theme">
+<!ENTITY ui.others.theme.devedition.versionmsg "Obsolete since Firefox 40">
 <!ENTITY ui.others.word_select.label "Selection behavior when double-clicking text">
 <!ENTITY ui.others.word_select.eat_space_to_next_word.label "Select the space up to the following word">
 <!ENTITY ui.others.word_select.eat_punctuation.label "Select the surrounding punctuation">

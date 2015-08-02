@@ -122,6 +122,7 @@
 <!ENTITY ui.others.xwin.scrollbarPosition.label "中央ボタンでスクロールバーを調整できるようにする(再起動必要)">
 <!ENTITY ui.others.theme.label "テーマ">
 <!ENTITY ui.others.theme.devedition.label "Developer Edition テーマを使用する">
+<!ENTITY ui.others.theme.devedition.versionmsg "Firefox 40で廃止">
 <!ENTITY ui.others.word_select.label "テキストをダブルクリックした時の選択動作">
 <!ENTITY ui.others.word_select.eat_space_to_next_word.label "後続の空白も選択する">
 <!ENTITY ui.others.word_select.eat_punctuation.label "囲んでいる句読点も選択する">

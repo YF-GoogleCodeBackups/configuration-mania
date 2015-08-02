@@ -110,3 +110,30 @@ description[disabled="true"] { color: GrayText; }
 description > *|*:-moz-any-link {
   cursor: pointer;
 }
+*[data-obsolete-msg]::after, *[data-require-msg]::after, *[data-require-obsolete-msg]::after {
+	border-width: 0 0 0 4px;
+	font-size: x-small;
+	border-radius: 2px;
+  border-width: 0 0 0 4px;
+  border-style: solid;
+	padding: 4px 4px 2px;
+	display: inline-block;
+	vertical-align: top;
+	font-weight: 400;
+	line-height: normal;
+}
+*[data-obsolete-msg]::after {
+  content: attr(data-obsolete-msg);
+  background-color: rgba(230,96,0,.45);
+  border-color: rgba(0,0,0,.05);
+}
+*[data-require-msg]::after {
+  content: attr(data-require-msg);
+  background-color: rgba(0,83,159,.2);
+  border-color: rgba(0,0,0,.05);
+}
+*[data-require-obsolete-msg]::after {
+  content: attr(data-require-obsolete-msg);
+  background: linear-gradient(to right, rgba(0,83,159,.2) 0%, rgba(230,96,0,.45) 100%);
+  border-color: rgba(0,0,0,.05);
+}

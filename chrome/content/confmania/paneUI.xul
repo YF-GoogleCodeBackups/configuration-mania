@@ -491,7 +491,8 @@
   <groupbox>
     <caption label="&ui.others.theme.label;"/>
     <checkbox label="&ui.others.theme.devedition.label;"
-              preference="browser.devedition.theme.enabled"/>
+            preference="browser.devedition.theme.enabled"
+            data-obsolete-msg="&ui.others.theme.devedition.versionmsg;"/>
   </groupbox>
   <groupbox>
     <caption label="&ui.others.word_select.label;"/>
