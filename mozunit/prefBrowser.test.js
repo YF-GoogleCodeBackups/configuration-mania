@@ -107,15 +107,6 @@ tc.tests = {
       checkbox.click();
     }
   },
-  testOnHtmlFrameSyncFrom: function() {
-    let checkbox = this.document.getElementById("html-frameDisabled");
-    let target = this.document.getElementById("html-frameForceResizability");
-
-    for (let i = 0; i < 2; i++) {
-      assert.equals(checkbox.checked, target.disabled);
-      checkbox.click();
-    }
-  },
   testOnHTMLLoadImageSyncFrom: function() {
     let pref = this.document.getElementById("permissions.default.image");
     let origval = pref.value;
