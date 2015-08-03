@@ -316,12 +316,19 @@ tc.tests = {
     });
     assert.equals("***TEST UA***", target.value);
 
-    // Click the button so as to ensure that all the menuitem elements are built.
-    this.document.getElementById("ua-presets-popup").parentNode.click();
-    sleep(100);
+    target.value = origval;
+    target.click();
 
-    let menuitem = this.document.querySelector("#ua-presets-popup menuitem[value]");
+    let menuitemparent = this.document.querySelector("#ua-presets-popup menu menupopup");
+    let menuitem = menuitemparent.querySelector("menuitem[value]");
     assert.isDefined(menuitem);
+
+    // Ensure that the menuitem is built.
+    this.document.getElementById("ua-presets-popup").showPopup();
+    menuitemparent.showPopup();
+    //sleep(100);
+    menuitemparent.hidePopup();
+    this.document.getElementById("ua-presets-popup").hidePopup();
     assert.isDefined(menuitem.value);
 
     menuitem.click();
