@@ -85,13 +85,46 @@ var gPrefWindow = {
   // =========================
   onResetSettings: function(event, msgtmpl){
     var currentPane = gPrefWindow.getCurrentPrefPane();
-    var srcbtn = event.target;
-    var prompts = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
-                   .getService(Components.interfaces.nsIPromptService);
+    var scope = Components.utils.import("resource://gre/modules/Services.jsm", {});
+    var ps = scope.Services.prompt;
+    var stringBundle = scope.Services.strings.createBundle("chrome://confmania/locale/confmania.properties");
 
-    var msg = msgtmpl.replace(/__TABNAME__/, currentPane.label);
-    if( prompts.confirm(window, srcbtn.label, msg) ) {
-      Array.forEach(currentPane.preferences, gPrefWindow.resetPref);
+    var prefOnInstall = undefined;
+    if (scope.Services.prefs.prefHasUserValue("extensions.confmania.prefOnInstall")) {
+      try {
+        prefOnInstall = JSON.parse(scope.Services.prefs.getCharPref("extensions.confmania.prefOnInstall"));
+      } catch (e) {}
+    }
+
+    var buttonPressed = ps.confirmEx(null,
+      stringBundle.GetStringFromName("resetDialogOnResetTab.title"),
+      stringBundle.formatStringFromName("resetDialogOnResetTab.message", [currentPane.label], 1),
+      ps.BUTTON_TITLE_IS_STRING * ps.BUTTON_POS_0 +
+      ps.BUTTON_TITLE_CANCEL    * ps.BUTTON_POS_1 +
+      ps.BUTTON_TITLE_IS_STRING * ps.BUTTON_POS_2 * ((prefOnInstall)? 1 : 0) +
+      ps.BUTTON_POS_0_DEFAULT,
+      stringBundle.GetStringFromName("resetDialogOnResetTab.reset.label"),
+      null,
+      stringBundle.GetStringFromName("resetDialogOnResetTab.revert.label"),
+      null,
+      { value: null });
+
+    switch (buttonPressed) {
+      case 0: // Reset
+        Array.forEach(currentPane.preferences, gPrefWindow.resetPref);
+        break;
+      case 2: // Revert
+        Array.forEach(currentPane.preferences, function (v) {
+          var prefName = v.getAttribute("name");
+          if (prefOnInstall && prefOnInstall[prefName]) {
+            v.value = prefOnInstall[prefName];
+          } else {
+            gPrefWindow.resetPref(v);
+          }
+        });
+        break;
+      default: // Cancel
+        break;
     }
   },
   // =========================
