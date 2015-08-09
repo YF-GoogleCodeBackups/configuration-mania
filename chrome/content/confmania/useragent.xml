@@ -3,38 +3,41 @@
     <option name="Windows XP" oscpu="Windows NT 5.1" platform="Windows"/>
     <option name="Windows Vista" oscpu="Windows NT 6.0" platform="Windows"/>
     <option name="Windows 7" oscpu="Windows NT 6.1" platform="Windows"/>
-    <option name="Windows 7 (Win64)" oscpu="Windows NT 6.1; Win64; x64" platform="Windows"/>
-    <option name="Windows 8" oscpu="Windows NT 6.2" platform="Windows"/>
-    <option name="Windows 8.1" oscpu="Windows NT 6.3" platform="Windows"/>
-    <option name="Intel MacOS X 10.9" oscpu="Intel MacOS X 10.9" platform="Macintosh"/>
+    <option name="Windows 7, WOW64" oscpu="Windows NT 6.1; WOW64" platform="Windows"/>
+    <option name="Windows 8, WOW64" oscpu="Windows NT 6.2; WOW64" platform="Windows"/>
+    <option name="Windows 8.1, WOW64" oscpu="Windows NT 6.3; WOW64" platform="Windows"/>
+    <option name="Windows 10, WOW64" oscpu="Windows NT 10.0; WOW64" platform="Windows"/>
+    <option name="Intel MacOS X 10.10" oscpu="Intel MacOS X 10.10" platform="Macintosh"/>
     <option name="Linux x86" oscpu="Linux i686" platform="X11"/>
     <option name="Linux x64" oscpu="Linux x86_64" platform="X11"/>
     <option name="FreeBSD x86" oscpu="FreeBSD i686" platform="X11"/>
     <option name="FreeBSD x64" oscpu="FreeBSD x86_64" platform="X11"/>
-    <option name="Mobile Android" oscpu="Mobile" platform="Android"/>
-    <option name="Android Tablet" oscpu="Tablet" platform="Android"/>
+    <option name="Android Mobile Phone" oscpu="Mobile" platform="Android 4.4"/>
+    <option name="Android Tablet" oscpu="Tablet" platform="Android 4.4"/>
+    <option name="Firefox OS Mobile Phone" oscpu="Mobile"/>
   </group>
   <group name="Microsoft Internet Explorer" value="Mozilla/4.0 (compatible; MSIE {opt:version}; {opt:oscpu}{opt:extra})">
     <option name="IE 6 (Windows XP SP3, .NET 1.0~2.0)" version="6.0" oscpu="Windows NT 5.1" extra="; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727"/>
-    <option name="IE 7 (Windows XP SP3, .NET 1.0~2.0)" version="7.0" oscpu="Windows NT 5.1" extra="; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727"/>
     <option name="IE 8 (Windows 7 x86 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.4506.2152; Media Center PC 6.0"/>
-    <option name="IE 9 (Windows 7)" value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"/>
-    <option name="IE 10 (Windows 8)" value="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)"/>
-    <option name="IE 11 (Windows 8.1)" value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko"/>
-    <option name="IE 11 (Windows 8.1 w/ Touch)" value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; Touch; rv:11.0) like Gecko"/>
+    <option name="IE 11 (Windows 8.1 WOW64)" value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko"/>
+    <option name="IE 11 (Windows 8.1 WOW64; w/ Touch)" value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; Touch; rv:11.0) like Gecko"/>
+    <option name="IE 11 (Windows 10 WOW64)" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+  </group>
+  <group name="Microsoft Edge" value="Mozilla/5.0 ({opt:oscpu}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/{opt:version}">
+    <option name="Edge 12.10240 (Windows 10 WOW64)" oscpu="Windows NT 10.0; Win64; x64" version="12.10240"/>
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
 
-    <option name="Chrome 43.0.2357.65 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="43.0.2357.65"/>
-    <option name="Chrome 43.0.2357.65 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="43.0.2357.65"/>
-    <option name="Chrome 43.0.2357.65 (MacOS X 10.10)" platform="Macintosh" oscpu="Intel Mac OS X 10_10" webkit="537.36" version="43.0.2357.65"/>
-    <option name="Chrome 43.0.2357.65 (Nexus 5; Android 5.0)" platform="Linux" oscpu="Android 5.0; Nexus 5 Build/LRX21O" webkit="537.36" version="43.0.2357.65"/>
+    <option name="Chrome 44.0.2403.89 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="44.0.2403.89"/>
+    <option name="Chrome 44.0.2403.89 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="44.0.2403.89"/>
+    <option name="Chrome 44.0.2403.89 (MacOS X 10.10.3)" platform="Macintosh" oscpu="Intel Mac OS X 10_10_3" webkit="537.36" version="44.0.2403.89"/>
+    <option name="Chrome 44.0.2403.89 (Nexus 5; Android 5.1.1)" platform="Linux" oscpu="Android 5.1.1; Nexus 5 Build/LMY48I" webkit="537.36" version="44.0.2403.89"/>
   </group>
-  <group name="Safari" value="Mozilla/5.0 ({opt:platform}; U; {opt:oscpu}; {language}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
-    <option name="Safari 8.0.4 (Intel MacOS X 10.10.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_10_2" webkit="600.4.10" safari="600.4.10" version="8.0.4"/>
+  <group name="Safari" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
+    <option name="Safari 8.0.7 (Intel MacOS X 10.10.3)" platform="Macintosh" oscpu="Intel Mac OS X 10_10_3" webkit="600.7.12" safari="600.7.12" version="8.0.7"/>
 
-    <option name="Safari 8.0 (iPad; iOS 8.2)" platform="iPad" oscpu="CPU OS 8_2 like Mac OS X" webkit="600.1.4" safari="600.1.4" version="8.0 Mobile/12D508"/>
-    <option name="Safari 8.0 (iPhone; iOS 8.2)" platform="iPhone" oscpu="CPU iPhone OS 8_2 like Mac OS X" webkit="600.1.4" safari="600.1.4" version="8.0 Mobile/12D508"/>
+    <option name="Safari 8.0 (iPad; iOS 8.4)" platform="iPad" oscpu="CPU OS 8_4 like Mac OS X" webkit="600.1.4" safari="600.1.4" version="8.0 Mobile/12H143"/>
+    <option name="Safari 8.0 (iPhone; iOS 8.4)" platform="iPhone" oscpu="CPU iPhone OS 8_4 like Mac OS X" webkit="600.1.4" safari="600.1.4" version="8.0 Mobile/12H143"/>
   </group>
   <group name="Googlebot">
     <option name="Googlebot 2.1" value="Mozilla/5.0 (compatible; Googlebot/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
