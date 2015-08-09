@@ -17,7 +17,6 @@ gPrefWindow.prefBrowser = {
     } catch (ex) {}
     var prefBranch = Components.classes['@mozilla.org/preferences-service;1']
       .getService(Components.interfaces.nsIPrefBranch);
-    var language = prefBranch.getCharPref("general.useragent.locale");
     var appversion = Components.classes["@mozilla.org/xre/app-info;1"]
       .getService(Components.interfaces.nsIXULAppInfo).version;
 
@@ -31,15 +30,10 @@ gPrefWindow.prefBrowser = {
       var df = document.createDocumentFragment();
       var menupopuptable = {"{opt:this}": document.getElementById("ua-presets-this-popup")};
 
-      const OS_PARAM_LANGUAGE        = /\{language\??\}/g;
       const OS_PARAM_APP_VERSION     = /\{appversion\??\}/g;
       const OPT_PARAM_GENERIC        = /\{opt:([a-zA-Z]+)\??\}/g;
       const OPT_PARAM_DEFAULT        = /\{opt:default\}/g;
       const OS_PARAM_OPTIONAL        = /\{\w+\?\}/g;
-      const UA_FIREFOX_DEFAULT       = gPrefWindow.prefBrowser.getFirefoxUserAgent({
-        platform: "{opt:platform}",
-        oscpu: "{opt:oscpu}"
-      });
 
       Array.forEach(doc.getElementsByTagName("group"), function(b) {
         var name = b.getAttribute("name");
@@ -57,12 +51,18 @@ gPrefWindow.prefBrowser = {
         var name  = o.getAttribute("name");
         var value = o.getAttribute("value") || b.getAttribute("value");
 
-        value = value.replace(OPT_PARAM_DEFAULT, UA_FIREFOX_DEFAULT);
+        value = value.replace(OPT_PARAM_DEFAULT, function() {
+          return gPrefWindow.prefBrowser.getFirefoxUserAgent({
+            platform: o.getAttribute("platform") || b.getAttribute("platform") || undefined,
+            compatDevice: o.getAttribute("compatDevice") || b.getAttribute("compatDevice") || undefined,
+            oscpu: o.getAttribute("oscpu") || b.getAttribute("oscpu") || undefined,
+            misc: o.getAttribute("misc") || b.getAttribute("misc") || undefined
+          });
+        });
         value = value.replace(OPT_PARAM_GENERIC, function(str, optattr) {
           return o.getAttribute(optattr) || b.getAttribute(optattr) || "";
         });
         value = value.replace(OS_PARAM_OPTIONAL, "");
-        value = value.replace(OS_PARAM_LANGUAGE, language);
         value = value.replace(OS_PARAM_APP_VERSION, appversion);
 
         var oMenupopup = menupopuptable[bname];
@@ -246,7 +246,7 @@ gPrefWindow.prefBrowser = {
     let versionComp = Components.classes['@mozilla.org/xpcom/version-comparator;1']
       .getService(Components.interfaces.nsIVersionComparator);
 
-    if (option == null) {
+    if (!option) {
       option = {
         platform:     m.platform,
         compatDevice: undefined,
@@ -269,6 +269,10 @@ gPrefWindow.prefBrowser = {
       // If Firefox 16-: firefox version is just only major version, and geckotrail is same as firefox version.
       firefoxVersion   = appInfo.version.toString().split(".").splice(0, 2).join(".");
       geckotrail       = firefoxVersion;
+    }
+    // On Desktop, geckotrail is the fixed string "20100101"
+    if ((!!option.oscpu) && (option.oscpu !== "Mobile") && (option.oscpu !== "Tablet")) {
+      geckotrail       = "20100101";
     }
 
     if (option.misc === undefined) {
