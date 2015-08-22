@@ -173,6 +173,7 @@
 <!ENTITY browser.others.network-predictor.label "Network predictor">
 <!ENTITY browser.others.network-predictor.enabled.label "リンクをマウスオーバー時にリンク先のサーバに事前接続する">
 <!ENTITY browser.others.network-predictor.enable-hover-on-ssl.label "HTTPSサイト上のリンクをマウスオーバー時には事前接続をしない">
+<!ENTITY browser.others.network-predictor.speculative-parallel-limit.label "推測接続が許可されるソケットの最大数:">
 <!ENTITY browser.others.dns.label "名前解決(DNS)">
 <!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
 <!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">

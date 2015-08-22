@@ -168,6 +168,7 @@
 
   <preference id="network.predictor.enabled" name="network.predictor.enabled" type="bool"/>
   <preference id="network.predictor.enable-hover-on-ssl" name="network.predictor.enable-hover-on-ssl" type="bool" inverted="true"/>
+  <preference id="network.http.speculative-parallel-limit" name="network.http.speculative-parallel-limit" type="int"/>
   <preference id="network.dns.disableIPv6" name="network.dns.disableIPv6" type="bool"/>
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
   <preference id="prompts.tab_modal.enabled" name="prompts.tab_modal.enabled" type="bool"/>
@@ -658,6 +659,12 @@
     <caption label="&browser.others.network-predictor.label;"/>
     <checkbox label="&browser.others.network-predictor.enabled.label;" preference="network.predictor.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onOtherNetworkPredictorEnabledSyncFrom();"/>
     <checkbox label="&browser.others.network-predictor.enable-hover-on-ssl.label;" preference="network.predictor.enable-hover-on-ssl" class="indent"/>
+
+    <hbox align="center">
+      <label control="others-network-predictor-speculative-parallel-limit" value="&browser.others.network-predictor.speculative-parallel-limit.label;"/>
+      <textbox id="others-network-predictor-speculative-parallel-limit"
+               min="0" type="number" hidespinbuttons="true" size="1" preference="network.http.speculative-parallel-limit"/>
+    </hbox>
   </groupbox>
 
   <groupbox>
