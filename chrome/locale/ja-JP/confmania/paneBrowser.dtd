@@ -61,6 +61,7 @@
 <!ENTITY browser.tabs.label "タブブラウジング">
 <!ENTITY browser.tabs.newtab.label "新しいタブ">
 <!ENTITY browser.tabs.newtab.url.label "URL:">
+<!ENTITY browser.tabs.newtab.url.versionmsg "Firefox 41で廃止">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">

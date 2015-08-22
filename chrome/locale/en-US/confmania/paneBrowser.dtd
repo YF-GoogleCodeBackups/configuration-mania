@@ -61,6 +61,7 @@
 <!ENTITY browser.tabs.label "TabBrowsing">
 <!ENTITY browser.tabs.newtab.label "New Tab">
 <!ENTITY browser.tabs.newtab.url.label "URL:">
+<!ENTITY browser.tabs.newtab.url.versionmsg "Obsolete since Firefox 41">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
