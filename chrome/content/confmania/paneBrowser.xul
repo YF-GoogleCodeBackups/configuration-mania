@@ -354,7 +354,7 @@
 <box class="subtabpanel" orient="vertical" id="tabs">
   <groupbox>
     <caption label="&browser.tabs.newtab.label;"/>
-    <hbox align="center">
+    <hbox align="center" data-obsolete-msg="&browser.tabs.newtab.url.versionmsg;">
       <label value="&browser.tabs.newtab.url.label;" control="newtab-url"/>
       <menulist id="newtab-url" editable="true" preference="browser.newtab.url" flex="1">
         <menupopup>
