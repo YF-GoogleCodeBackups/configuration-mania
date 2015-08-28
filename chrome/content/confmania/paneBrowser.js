@@ -1,10 +1,8 @@
 gPrefWindow.prefBrowser = {
   init : function(){
     try {
-      let dirSvc = Components.classes["@mozilla.org/file/directory_service;1"]
-       .getService(Components.interfaces.nsIProperties);
-      let cachedir = dirSvc.get((dirSvc.has("ProfLD"))? "ProfLD" : "ProfD", Components.interfaces.nsILocalFile);
-      document.getElementById("browserCacheDiskCacheFolder").placeholder = cachedir.path;
+      let cachedirpath = OS.Constants.Path.localProfileDir || OS.Constants.Path.profileDir;
+      document.getElementById("browserCacheDiskCacheFolder").placeholder = cachedirpath;
     } catch(ex){}
 
     gPrefWindow.prefBrowser.initUA();
@@ -15,13 +13,9 @@ gPrefWindow.prefBrowser = {
     try {
       oUAValue.placeholder = gPrefWindow.prefBrowser.getFirefoxUserAgent();
     } catch (ex) {}
-    var prefBranch = Components.classes['@mozilla.org/preferences-service;1']
-      .getService(Components.interfaces.nsIPrefBranch);
-    var appversion = Components.classes["@mozilla.org/xre/app-info;1"]
-      .getService(Components.interfaces.nsIXULAppInfo).version;
+    var appversion = Services.appinfo.version;
 
-    var req = Components.classes["@mozilla.org/xmlextras/xmlhttprequest;1"]
-              .createInstance(Components.interfaces.nsIXMLHttpRequest);
+    var req = new XMLHttpRequest();
     req.open("GET", "chrome://confmania/content/useragent.xml", true);
     req.onreadystatechange = function (event) {
       if(req.readyState != 4) return;
@@ -239,12 +233,9 @@ gPrefWindow.prefBrowser = {
   getFirefoxUserAgent : function(option) {
     let ua = "";
     // cf. nsHttpHandler.cpp#BuildUserAgent()
-    let m = Components.classes['@mozilla.org/network/protocol;1?name=http']
-      .getService(Components.interfaces.nsIHttpProtocolHandler);
-    let appInfo = Components.classes['@mozilla.org/xre/app-info;1']
-      .getService(Components.interfaces.nsIXULAppInfo);
-    let versionComp = Components.classes['@mozilla.org/xpcom/version-comparator;1']
-      .getService(Components.interfaces.nsIVersionComparator);
+    let m = Services.io.getProtocolHandler("http").QueryInterface(Components.interfaces.nsIHttpProtocolHandler);
+    let appInfo = Services.appinfo;
+    let versionComp = Services.vc;
 
     if (!option) {
       option = {
@@ -365,15 +356,9 @@ gPrefWindow.prefBrowser = {
       var targetElem = document.getElementById(aTargetID);
       var file = null;
       if (aValueType == "url" || aValueType == "uri") {
-        file = Components.classes["@mozilla.org/network/io-service;1"]
-         .getService(Components.interfaces.nsIIOService)
-         .getProtocolHandler("file")
-         .QueryInterface(Components.interfaces.nsIFileProtocolHandler)
-         .getFileFromURLSpec((targetElem.value == "")? targetElem.placeholder : targetElem.value);
+        file = new FileUtils.File(OS.Path.fromFileURI((targetElem.value == "")? targetElem.placeholder : targetElem.value));
       } else {
-        file = Components.classes["@mozilla.org/file/local;1"]
-         .createInstance(Components.interfaces.nsILocalFile);
-        file.initWithPath((targetElem.value == "")? targetElem.placeholder : targetElem.value);
+        file = new FileUtils.File((targetElem.value == "")? targetElem.placeholder : targetElem.value);
       }
 
       fp.displayDirectory = file.parent;

@@ -4,9 +4,7 @@ gPrefWindow.prefUI = {
     gPrefWindow.prefUI.initUIBoxTab();
   },
   initMultitouchPopup: function(){
-    var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
-                   .getService(Components.interfaces.nsIWindowMediator);
-    var win = wm.getMostRecentWindow("navigator:browser");
+    var win = Services.wm.getMostRecentWindow("navigator:browser");
     var winMenubar = win.document.getElementById("main-menubar");
     if ( win == null ) return;
     var cmds = Array.map(win.document.getElementsByTagName("command"), function(elem){

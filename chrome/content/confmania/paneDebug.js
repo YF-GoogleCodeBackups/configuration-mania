@@ -26,15 +26,9 @@ gPrefWindow.prefDebug = {
       var targetElem = document.getElementById(aTargetID);
       var file = null;
       if (aValueType == "url" || aValueType == "uri") {
-        file = Components.classes["@mozilla.org/network/io-service;1"]
-         .getService(Components.interfaces.nsIIOService)
-         .getProtocolHandler("file")
-         .QueryInterface(Components.interfaces.nsIFileProtocolHandler)
-         .getFileFromURLSpec((targetElem.value == "")? targetElem.placeholder : targetElem.value);
+        file = new FileUtils.File(OS.Path.fromFileURI((targetElem.value == "")? targetElem.placeholder : targetElem.value));
       } else {
-        file = Components.classes["@mozilla.org/file/local;1"]
-         .createInstance(Components.interfaces.nsILocalFile);
-        file.initWithPath((targetElem.value == "")? targetElem.placeholder : targetElem.value);
+        file = new FileUtils.File((targetElem.value == "")? targetElem.placeholder : targetElem.value);
       }
 
       fp.displayDirectory = file.parent;
