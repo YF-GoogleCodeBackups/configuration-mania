@@ -3,6 +3,13 @@
 <?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
 <?xml-stylesheet href="chrome://confmania/skin/preferences.css"?>
 
+<?xul-overlay href="chrome://confmania/content/paneBrowser.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneSecurity.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneHTTP.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneUI.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneAddons.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneDebug.xul"?>
+
 <!DOCTYPE prefwindow [
 <!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
 %preferencesDTD;
@@ -18,8 +25,6 @@
 %paneAddonsDTD;
 <!ENTITY % paneDebugDTD SYSTEM "chrome://confmania/locale/paneDebug.dtd">
 %paneDebugDTD;
-
-<!ENTITY cm "chrome://confmania/content">
 ]>
 <prefwindow type="prefwindow" id="ConfmaniaPreferences"
  windowtype="Browser:Confmania"
@@ -50,10 +55,11 @@
   </menupopup>
 </popupset>
 
-<prefpane id="paneBrowser" label="&browser.title;" src="&cm;/paneBrowser.xul"/>
-<prefpane id="paneSecurity" label="&security.title;" src="&cm;/paneSecurity.xul"/>
-<prefpane id="paneHTTP" label="&http.title;" src="&cm;/paneHTTP.xul"/>
-<prefpane id="paneUI" label="&ui.title;" src="&cm;/paneUI.xul"/>
-<prefpane id="paneAddons" label="&addons.title;" src="&cm;/paneAddons.xul"/>
-<prefpane id="paneDebug" label="&debug.title;" src="&cm;/paneDebug.xul"/>
+<prefpane id="paneBrowser" label="&browser.title;" flex="1"/>
+<prefpane id="paneSecurity" label="&security.title;" flex="1"/>
+<prefpane id="paneHTTP" label="&http.title;" flex="1"/>
+<prefpane id="paneUI" label="&ui.title;" flex="1"/>
+<prefpane id="paneAddons" label="&addons.title;" flex="1"/>
+<prefpane id="paneDebug" label="&debug.title;" flex="1"/>
+
 </prefwindow>

@@ -89,4 +89,4 @@ gPrefWindow.prefUI = {
   }
 };
 
-document.getElementById("paneUI").addEventListener("paneload", gPrefWindow.prefUI.init, false);
+window.addEventListener("DOMContentLoaded", gPrefWindow.prefUI.init, false);

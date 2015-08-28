@@ -15,4 +15,4 @@ gPrefWindow.prefHTTP = {
   }
 };
 
-document.getElementById("paneHTTP").addEventListener("paneload", gPrefWindow.prefHTTP.init, false);
+window.addEventListener("DOMContentLoaded", gPrefWindow.prefHTTP.init, false);

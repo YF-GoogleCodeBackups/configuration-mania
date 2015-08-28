@@ -426,4 +426,4 @@ gPrefWindow.prefBrowser = {
   }
 };
 
-document.getElementById("paneBrowser").addEventListener("paneload", gPrefWindow.prefBrowser.init, false);
+window.addEventListener("DOMContentLoaded", gPrefWindow.prefBrowser.init, false);

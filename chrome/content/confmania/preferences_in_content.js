@@ -1,7 +1,5 @@
 var gPrefWindow = {
   onLoad: function(){
-    window.removeEventListener("DOMContentLoaded", gPrefWindow.onLoad, false);
-
     // In-content
     document.documentElement.instantApply = true;
 
@@ -27,30 +25,6 @@ var gPrefWindow = {
   // =========================
   // In-content
   // =========================
-  loadPrefPane: function(aPane) {
-    if (!aPane.loaded) {
-      var OverlayLoadObserver = function(aPane) {
-        this._pane = aPane;
-      };
-      OverlayLoadObserver.prototype = {
-        observe: function (aSubject, aTopic, aData) {
-          try {
-            this._pane.loaded = true;
-
-            // fire onpaneload event.
-            var event = document.createEvent("Events");
-            event.initEvent("paneload", true, true);
-            return !this._pane.dispatchEvent(event);
-          } catch (e) {
-            Components.utils.reportError(e);
-          }
-        }
-      };
-
-      var obs = new OverlayLoadObserver(aPane);
-      document.loadOverlay(aPane.src, obs);
-    }
-  },
   selectCategory: function(name) {
     var categories = document.getElementById("categories");
     var item = categories.querySelector(".category[value=" + name + "]");
@@ -60,7 +34,6 @@ var gPrefWindow = {
     var elems = document.getElementsByTagName("prefpane");
     for (var i = 0; i < elems.length; i++) {
       if (elems[i].id == aPage) {
-        gPrefWindow.loadPrefPane(elems[i]);
         elems[i].selected = true;
         elems[i].hidden = false;
 
@@ -254,4 +227,3 @@ var gPrefWindow = {
 };
 
 document.addEventListener("DOMContentLoaded", gPrefWindow.onLoad, false);
-
