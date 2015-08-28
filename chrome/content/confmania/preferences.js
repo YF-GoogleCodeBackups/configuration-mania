@@ -10,9 +10,8 @@ var gPrefWindow = {
   // =========================
   onResetSettings: function(event, msgtmpl){
     var currentPane = gPrefWindow.getCurrentPrefPane();
-    var scope = Components.utils.import("resource://gre/modules/Services.jsm", {});
-    var ps = scope.Services.prompt;
-    var stringBundle = scope.Services.strings.createBundle("chrome://confmania/locale/confmania.properties");
+    var ps = Services.prompt;
+    var stringBundle = Services.strings.createBundle("chrome://confmania/locale/confmania.properties");
 
     var prefOnInstall = undefined;
     if (scope.Services.prefs.prefHasUserValue("extensions.confmania.prefOnInstall")) {
