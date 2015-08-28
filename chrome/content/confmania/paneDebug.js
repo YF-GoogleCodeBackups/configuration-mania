@@ -1,3 +1,4 @@
+
 gPrefWindow.prefDebug = {
   init : function() {
   },
@@ -65,4 +66,4 @@ gPrefWindow.prefDebug = {
   }
 };
 
-document.getElementById("paneDebug").addEventListener("paneload", gPrefWindow.prefDebug.init, false);
+window.addEventListener("DOMContentLoaded", gPrefWindow.prefDebug.init, false);

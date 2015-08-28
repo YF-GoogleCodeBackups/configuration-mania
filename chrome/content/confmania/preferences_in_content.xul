@@ -4,6 +4,13 @@
 <?xml-stylesheet href="chrome://confmania/skin/preferences.css"?>
 <?xml-stylesheet href="chrome://confmania/skin/preferences-in-content.css"?>
 
+<?xul-overlay href="chrome://confmania/content/paneBrowser.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneSecurity.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneHTTP.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneUI.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneAddons.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneDebug.xul"?>
+
 <!DOCTYPE prefwindow [
 <!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
 %preferencesDTD;
@@ -78,12 +85,12 @@
       <button label="&reset;" oncommand="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"/>
     </hbox>
 
-    <prefpane id="paneBrowser" label="&browser.title;" flex="1" src="chrome://confmania/content/paneBrowser.xul"/>
-    <prefpane id="paneSecurity" label="&security.title;" flex="1" src="chrome://confmania/content/paneSecurity.xul"/>
-    <prefpane id="paneHTTP" label="&http.title;" flex="1" src="chrome://confmania/content/paneHTTP.xul"/>
-    <prefpane id="paneUI" label="&ui.title;" flex="1" src="chrome://confmania/content/paneUI.xul"/>
-    <prefpane id="paneAddons" label="&addons.title;" flex="1" src="chrome://confmania/content/paneAddons.xul"/>
-    <prefpane id="paneDebug" label="&debug.title;" flex="1" src="chrome://confmania/content/paneDebug.xul"/>
+    <prefpane id="paneBrowser" label="&browser.title;" flex="1"/>
+    <prefpane id="paneSecurity" label="&security.title;" flex="1"/>
+    <prefpane id="paneHTTP" label="&http.title;" flex="1"/>
+    <prefpane id="paneUI" label="&ui.title;" flex="1"/>
+    <prefpane id="paneAddons" label="&addons.title;" flex="1"/>
+    <prefpane id="paneDebug" label="&debug.title;" flex="1"/>
   </box>
 </hbox>
 
