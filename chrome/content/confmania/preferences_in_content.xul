@@ -35,7 +35,7 @@
       disablefastfind="true"
       context="prefContextPopup">
 
-<html:link rel="shortcut icon" href="chrome://confmania/skin/confmania16.png"/>
+<html:link rel="shortcut icon" href="chrome://confmania/skin/icon.svg"/>
 
 <script type="application/javascript" src="chrome://global/content/contentAreaUtils.js"/>
 <script type="application/javascript" src="chrome://confmania/content/preferences_in_content.js"/>
