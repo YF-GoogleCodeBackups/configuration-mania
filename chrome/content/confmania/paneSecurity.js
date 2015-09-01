@@ -1,5 +1,7 @@
 gPrefWindow.prefSecurity = {
   init : function(){
+    window.removeEventListener("DOMContentLoaded", gPrefWindow.prefSecurity.init, false);
+
     document.getElementById("passwordTimeout").value
      = Components.classes["@mozilla.org/security/pk11tokendb;1"]
      .getService(Components.interfaces.nsIPK11TokenDB)

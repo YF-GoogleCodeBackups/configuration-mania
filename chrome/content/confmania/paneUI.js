@@ -1,5 +1,7 @@
 gPrefWindow.prefUI = {
   init : function(){
+    window.removeEventListener("DOMContentLoaded", gPrefWindow.prefUI.init, false);
+
     gPrefWindow.prefUI.initMultitouchPopup();
     gPrefWindow.prefUI.initUIBoxTab();
   },

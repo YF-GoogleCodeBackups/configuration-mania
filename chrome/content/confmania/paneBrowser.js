@@ -1,5 +1,7 @@
 gPrefWindow.prefBrowser = {
   init : function(){
+    window.removeEventListener("DOMContentLoaded", gPrefWindow.prefBrowser.init, false);
+
     try {
       let cachedirpath = OS.Constants.Path.localProfileDir || OS.Constants.Path.profileDir;
       document.getElementById("browserCacheDiskCacheFolder").placeholder = cachedirpath;
