@@ -1,5 +1,6 @@
 gPrefWindow.prefHTTP = {
   init : function() {
+    window.removeEventListener("DOMContentLoaded", gPrefWindow.prefHTTP.init, false);
     gPrefWindow.prefHTTP.onPaneHTTPBoxTabSelected();
   },
   onPaneHTTPBoxTabSelected : function () {

@@ -1,5 +1,7 @@
 var gPrefWindow = {
   onLoad: function(){
+    window.removeEventListener("DOMContentLoaded", gPrefWindow.onLoad, false);
+
     // In-content
     document.documentElement.instantApply = true;
 
