@@ -179,6 +179,8 @@
 <!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
 <!ENTITY browser.others.prompts_tab_modal_enabled.label "Use tab modal dialog for alert()/prompt()/confirm()">
 <!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
+<!ENTITY browser.others.viewSourceTab.label "View source in a new tab">
+<!ENTITY browser.others.viewSourceTab.versionmsg "Requies Firefox 40+">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
 <!ENTITY browser.others.enableOneClickSearchesUI.label "Enable One-Click Searches UI in the search bar">
