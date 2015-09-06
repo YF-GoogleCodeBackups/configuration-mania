@@ -278,14 +278,38 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnViewSourceTabSyncFrom: function() {
+    let checkbox = this.document.getElementById("others-viewSourceTab");
+    let target1 = this.document.getElementById("others-editorExternal");
+    let target2 = this.document.getElementById("others-editorExternal-path");
+    let target3 = this.document.querySelector("#others-editorExternal-hbox button");
+
+    for (let i = 0; i < 2; i++) {
+      if (checkbox.checked) {
+        assert.equals(true, target1.disabled);
+        assert.equals(true, target2.disabled);
+        assert.equals(true, target3.disabled);
+      } else {
+        assert.equals(false, target1.disabled);
+      }
+      checkbox.click();
+    }
+  },
   testOnEditorExternalSyncFrom: function() {
+    let viewSourceTab = this.document.getElementById(this.document.getElementById("others-viewSourceTab").getAttribute("preference"));
+    let viewSourceTabOrigVal = viewSourceTab.value;
+    viewSourceTab.value = false;
+
     let checkbox = this.document.getElementById("others-editorExternal");
     let target = this.document.getElementById("others-editorExternal-path");
 
+    assert.equals(false, checkbox.disabled);
     for (let i = 0; i < 2; i++) {
       assert.equals(checkbox.checked, !target.disabled);
       checkbox.click();
     }
+
+    viewSourceTab.value = viewSourceTabOrigVal;
   },
   testGetFirefoxUserAgent: function() {
     let ua = this.window.gPrefWindow.prefBrowser.getFirefoxUserAgent();
