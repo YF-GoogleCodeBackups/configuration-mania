@@ -59,7 +59,6 @@
   <preference name="extensions.checkCompatibility.41.0" id="extensions.checkCompatibility.41.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.42.0" id="extensions.checkCompatibility.42.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.43.0" id="extensions.checkCompatibility.43.0" type="bool" inverted="true"/>
-  <preference name="xpinstall.signatures.required" id="xpinstall.signatures.required" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.install.requireBuiltInCerts" id="extensions.install.requireBuiltInCerts" type="bool" inverted="true"/>
   <preference name="dom.ipc.plugins.enabled" id="dom.ipc.plugins.enabled" type="bool"/>
@@ -86,9 +85,6 @@
 <checkbox label="43" preference="extensions.checkCompatibility.43.0"/>
 </hbox>
 </groupbox>
-<checkbox label="&addons.ignoreSignaturesRequirement.label;"
-          preference="xpinstall.signatures.required"
-          data-require-msg="&addons.ignoreSignaturesRequirement.versionmsg;"/>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
           preference="extensions.checkUpdateSecurity"/>
 <checkbox label="&addons.allowNonBuiltInCerts.label;"
