@@ -7,13 +7,13 @@
     <option name="Windows 8, WOW64" oscpu="Windows NT 6.2; WOW64" platform="Windows"/>
     <option name="Windows 8.1, WOW64" oscpu="Windows NT 6.3; WOW64" platform="Windows"/>
     <option name="Windows 10, WOW64" oscpu="Windows NT 10.0; WOW64" platform="Windows"/>
-    <option name="Intel MacOS X 10.10" oscpu="Intel MacOS X 10.10" platform="Macintosh"/>
+    <option name="Intel MacOS X 10.10.5" oscpu="Intel MacOS X 10.10.5" platform="Macintosh"/>
     <option name="Linux x86" oscpu="Linux i686" platform="X11"/>
     <option name="Linux x64" oscpu="Linux x86_64" platform="X11"/>
     <option name="FreeBSD x86" oscpu="FreeBSD i686" platform="X11"/>
     <option name="FreeBSD x64" oscpu="FreeBSD x86_64" platform="X11"/>
-    <option name="Android Mobile Phone" oscpu="Mobile" platform="Android 4.4"/>
-    <option name="Android Tablet" oscpu="Tablet" platform="Android 4.4"/>
+    <option name="Android Mobile Phone" oscpu="Mobile" platform="Android 5.1.1"/>
+    <option name="Android Tablet" oscpu="Tablet" platform="Android 5.1.1"/>
     <option name="Firefox OS Mobile Phone" oscpu="Mobile"/>
   </group>
   <group name="Microsoft Internet Explorer" value="Mozilla/4.0 (compatible; MSIE {opt:version}; {opt:oscpu}{opt:extra})">
@@ -28,16 +28,16 @@
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
 
-    <option name="Chrome 44.0.2403.89 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="44.0.2403.89"/>
-    <option name="Chrome 44.0.2403.89 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="44.0.2403.89"/>
-    <option name="Chrome 44.0.2403.89 (MacOS X 10.10.3)" platform="Macintosh" oscpu="Intel Mac OS X 10_10_3" webkit="537.36" version="44.0.2403.89"/>
-    <option name="Chrome 44.0.2403.89 (Nexus 5; Android 5.1.1)" platform="Linux" oscpu="Android 5.1.1; Nexus 5 Build/LMY48I" webkit="537.36" version="44.0.2403.89"/>
+    <option name="Chrome 45.0.2454.93 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="45.0.2454.93"/>
+    <option name="Chrome 45.0.2454.93 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="45.0.2454.93"/>
+    <option name="Chrome 45.0.2454.93 (MacOS X 10.10.5)" platform="Macintosh" oscpu="Intel Mac OS X 10_10_5" webkit="537.36" version="45.0.2454.93"/>
+    <option name="Chrome 45.0.2454.93 (Nexus 5; Android 5.1.1)" platform="Linux" oscpu="Android 5.1.1; Nexus 5 Build/LMY48I" webkit="537.36" version="45.0.2454.93"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
-    <option name="Safari 8.0.7 (Intel MacOS X 10.10.3)" platform="Macintosh" oscpu="Intel Mac OS X 10_10_3" webkit="600.7.12" safari="600.7.12" version="8.0.7"/>
+    <option name="Safari 8.0.8 (Intel MacOS X 10.10.5)" platform="Macintosh" oscpu="Intel Mac OS X 10_10_5" webkit="600.7.12" safari="600.7.12" version="8.0.8"/>
 
-    <option name="Safari 8.0 (iPad; iOS 8.4)" platform="iPad" oscpu="CPU OS 8_4 like Mac OS X" webkit="600.1.4" safari="600.1.4" version="8.0 Mobile/12H143"/>
-    <option name="Safari 8.0 (iPhone; iOS 8.4)" platform="iPhone" oscpu="CPU iPhone OS 8_4 like Mac OS X" webkit="600.1.4" safari="600.1.4" version="8.0 Mobile/12H143"/>
+    <option name="Safari 8.0 (iPad; iOS 9.0)" platform="iPad" oscpu="CPU OS 9_0 like Mac OS X" webkit="600.1.4" safari="600.1.4" version="9.0 Mobile/13A344"/>
+    <option name="Safari 8.0 (iPhone; iOS 9.0)" platform="iPhone" oscpu="CPU iPhone OS 9_0 like Mac OS X" webkit="600.1.4" safari="600.1.4" version="9.0 Mobile/13A343"/>
   </group>
   <group name="Googlebot">
     <option name="Googlebot 2.1" value="Mozilla/5.0 (compatible; Googlebot/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
