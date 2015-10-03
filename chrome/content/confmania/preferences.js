@@ -14,9 +14,9 @@ var gPrefWindow = {
     var stringBundle = Services.strings.createBundle("chrome://confmania/locale/confmania.properties");
 
     var prefOnInstall = undefined;
-    if (scope.Services.prefs.prefHasUserValue("extensions.confmania.prefOnInstall")) {
+    if (Services.prefs.prefHasUserValue("extensions.confmania.prefOnInstall")) {
       try {
-        prefOnInstall = JSON.parse(scope.Services.prefs.getCharPref("extensions.confmania.prefOnInstall"));
+        prefOnInstall = JSON.parse(Services.prefs.getCharPref("extensions.confmania.prefOnInstall"));
       } catch (e) {}
     }
 
