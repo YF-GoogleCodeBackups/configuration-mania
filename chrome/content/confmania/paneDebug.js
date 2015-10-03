@@ -1,7 +1,7 @@
 
 gPrefWindow.prefDebug = {
   init : function() {
-    window.removeEventListener("DOMContentLoaded", gPrefWindow.prefDialog.init, false);
+    window.removeEventListener("DOMContentLoaded", gPrefWindow.prefDebug.init, false);
   },
   _openBrowse: function(aFilters, aTargetID, aValueTypes) {
     let targetElem = document.getElementById(aTargetID);
