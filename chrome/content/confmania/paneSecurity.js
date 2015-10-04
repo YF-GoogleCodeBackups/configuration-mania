@@ -88,6 +88,11 @@ gPrefWindow.prefSecurity = {
     document.getElementById("network.http.sendSecureXSiteReferrer").disabled = disabled;
     return undefined; // no override
   },
+  onTrackingProtectionEnabledSyncFrom: function() {
+    let disabled = document.getElementById("privacy.trackingprotection.enabled").value;
+    document.getElementById("privacy.trackingprotection.pbmode.enabled").disabled = disabled;
+    return undefined; // no override
+  },
   onTrackingProtectionExceptionsCommand: function() {
     let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "trackingprotection" };
     params.windowTitle = document.getElementById("trackingprotection-showTrackingProtectionExceptions").getAttribute("data-dialog-title");
