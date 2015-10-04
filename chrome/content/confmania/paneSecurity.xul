@@ -94,6 +94,7 @@
   <preference id="signon.autofillForms" name="signon.autofillForms" type="bool"/>
   <preference id="network.cookie.lifetime.days" name="network.cookie.lifetime.days" type="int"/>
   <preference id="privacy.trackingprotection.enabled" name="privacy.trackingprotection.enabled" type="bool"/>
+  <preference id="privacy.trackingprotection.pbmode.enabled" name="privacy.trackingprotection.pbmode.enabled" type="bool"/>
   <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
   <preference id="security.ask_for_password" name="security.ask_for_password" type="int"/>
   <preference id="security.password_lifetime" name="security.password_lifetime" type="int"/>
@@ -292,12 +293,20 @@
       <checkbox id="trackingprotection-enable"
                 flex="1"
                 label="&security.privacy.trackingprotection.enable.label;"
-                preference="privacy.trackingprotection.enabled" />
+                preference="privacy.trackingprotection.enabled"
+                onsyncfrompreference="return gPrefWindow.prefSecurity.onTrackingProtectionEnabledSyncFrom();"/>
       <button label="&security.privacy.trackingprotection.exceptions.label;"
               id="trackingprotection-showTrackingProtectionExceptions"
               data-dialog-title="&security.privacy.trackingprotection.exceptions.title;"
               data-dialog-desc="&security.privacy.trackingprotection.exceptions.desc;"
               oncommand="gPrefWindow.prefSecurity.onTrackingProtectionExceptionsCommand();"/>
+    </hbox>
+    <hbox class="indent">
+      <checkbox id="trackingprotection-pbmode-enable"
+                flex="1"
+                label="&security.privacy.trackingprotection-pbmode.enable.label;"
+                data-require-msg="&security.privacy.trackingprotection-pbmode.enable.versionmsg;"
+                preference="privacy.trackingprotection.pbmode.enabled" />
     </hbox>
   </groupbox>
   <groupbox>

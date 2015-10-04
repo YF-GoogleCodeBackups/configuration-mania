@@ -211,6 +211,15 @@ tc.tests = {
       assert.equals(radiogroup.value != 0, !target.disabled);
     }
   },
+  testOnTrackingProtectionEnabledSyncFrom: function() {
+    let checkbox = this.document.getElementById("trackingprotection-enable");
+    let target = this.document.getElementById("trackingprotection-pbmode-enable");
+    
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, target.disabled);
+      checkbox.click();
+    }
+  },
   //testOnTrackingProtectionExceptionsCommand: function() {
   //},
   testUpdatePasswordAskTimes: function() {
