@@ -126,7 +126,7 @@
   <preference id="browser.taskbar.lists.refreshInSeconds" name="browser.taskbar.lists.refreshInSeconds" type="int"/>
 
   <preference id="browser.preferences.animateFadeIn" name="browser.preferences.animateFadeIn" type="bool"/>
-  <preference id="browser.preferences.inContent" name="browser.preferences.inContent" type="bool"/>
+  <preference id="browser.preferences.inContent" name="browser.preferences.inContent" type="bool" inverted="true"/>
   <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
   <preference id="clipboard.autocopy" name="clipboard.autocopy" type="bool"/>
   <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
@@ -474,8 +474,9 @@
   <groupbox>
     <caption label="&ui.others.preference.label;"/>
     <checkbox label="&ui.others.preference.animateFadeIn.label;" preference="browser.preferences.animateFadeIn"/>
-    <checkbox label="&ui.others.preference.inContent.label;" preference="browser.preferences.inContent"
-              onsyncfrompreference="gPrefWindow.prefUI.onPreferenceInContentSyncFrom();"/>
+    <checkbox label="&ui.others.preference.inContent-inverted.label;" preference="browser.preferences.inContent"
+              data-obsolete-msg="&ui.others.preference.inContent-inverted.versionmsg;"
+              onsyncfrompreference="gPrefWindow.prefUI.onPreferenceInContentInvertedSyncFrom();"/>
     <vbox id="ui-pane-others-pref-instanceAccept" class="indent">
       <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
       <description class="indent">&ui.others.preference.instanceAccept.desc;</description>

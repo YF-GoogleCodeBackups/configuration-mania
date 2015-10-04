@@ -112,7 +112,8 @@
 <!ENTITY ui.others.label "その他">
 <!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
 <!ENTITY ui.others.preference.animateFadeIn.label "フェードインのアニメーションをする (Mac のように)">
-<!ENTITY ui.others.preference.inContent.label "設定画面をダイアログではなくタブで開く">
+<!ENTITY ui.others.preference.inContent-inverted.label "設定画面をタブではなくダイアログで開く">
+<!ENTITY ui.others.preference.inContent-inverted.versionmsg "Firefox 42で廃止">
 <!ENTITY ui.others.preference.instanceAccept.label "モードレスダイアログで瞬時に設定を適用 (Mac や Gnome のように)">
 <!ENTITY ui.others.preference.instanceAccept.desc "Mac OS Xではチェックを外さないでください。詳細は Mozilla bugzilla 641288 (http://bugzil.la/641288) を参照">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) スタイルのマウス動作">
