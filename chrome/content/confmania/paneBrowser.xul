@@ -259,7 +259,7 @@
 </box>
 <box class="subtabpanel" orient="vertical" id="html">
   <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
-   preference="layout.frames.force_resizability"/>
+   preference="layout.frames.force_resizability" data-obsolete-msg="&browser.html.frameForceResizability.versionmsg;"/>
   <groupbox>
     <caption label="&browser.html.img;"/>
 
