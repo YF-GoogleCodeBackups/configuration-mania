@@ -27,7 +27,8 @@
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 <!--em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL-->
-<em:optionsURL>chrome://confmania/content/preferences.xul</em:optionsURL>
+<em:optionsURL>about:confmania</em:optionsURL>
+<em:optionsType>3</em:optionsType>
 <em:iconURL>chrome://confmania/skin/icon.svg</em:iconURL>
 
 <em:localized><Description>
