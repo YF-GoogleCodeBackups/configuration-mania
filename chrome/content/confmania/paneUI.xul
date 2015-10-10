@@ -475,7 +475,7 @@
     <caption label="&ui.others.preference.label;"/>
     <checkbox label="&ui.others.preference.animateFadeIn.label;" preference="browser.preferences.animateFadeIn"/>
     <checkbox label="&ui.others.preference.inContent-inverted.label;" preference="browser.preferences.inContent"
-              data-obsolete-msg="&ui.others.preference.inContent-inverted.versionmsg;"
+              data-obsolete-version-since="42"
               onsyncfrompreference="gPrefWindow.prefUI.onPreferenceInContentInvertedSyncFrom();"/>
     <vbox id="ui-pane-others-pref-instanceAccept" class="indent">
       <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
@@ -493,7 +493,7 @@
     <caption label="&ui.others.theme.label;"/>
     <checkbox label="&ui.others.theme.devedition.label;"
             preference="browser.devedition.theme.enabled"
-            data-obsolete-msg="&ui.others.theme.devedition.versionmsg;"/>
+            data-obsolete-version-since="40"/>
   </groupbox>
   <groupbox>
     <caption label="&ui.others.word_select.label;"/>

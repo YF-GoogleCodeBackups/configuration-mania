@@ -113,7 +113,6 @@
 <!ENTITY ui.others.preference.label "Preference Dialogs (includes Configuration Mania)">
 <!ENTITY ui.others.preference.animateFadeIn.label "Animate fade-in (likely Mac)">
 <!ENTITY ui.others.preference.inContent-inverted.label "Open Preference in dialog instead of tab">
-<!ENTITY ui.others.preference.inContent-inverted.versionmsg "Obsolete since Firefox 42">
 <!ENTITY ui.others.preference.instanceAccept.label "Apply instance and the dialog is modeless  (likely Mac or Gnome)">
 <!ENTITY ui.others.preference.instanceAccept.desc "Do not unselect on Mac OS X. See Mozilla bugzilla 641288 (http://bugzil.la/641288).">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) style mouse behavior">
@@ -123,7 +122,6 @@
 <!ENTITY ui.others.xwin.scrollbarPosition.label "Allow middle mouse button to adjust scroll bar (takes effect after restart)">
 <!ENTITY ui.others.theme.label "Themes">
 <!ENTITY ui.others.theme.devedition.label "Use Firefox Developer Edition Theme">
-<!ENTITY ui.others.theme.devedition.versionmsg "Obsolete since Firefox 40">
 <!ENTITY ui.others.word_select.label "Selection behavior when double-clicking text">
 <!ENTITY ui.others.word_select.eat_space_to_next_word.label "Select the space up to the following word">
 <!ENTITY ui.others.word_select.eat_punctuation.label "Select the surrounding punctuation">

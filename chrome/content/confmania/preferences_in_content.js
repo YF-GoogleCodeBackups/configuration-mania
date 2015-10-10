@@ -22,6 +22,17 @@ var gPrefWindow = {
     // context menu
     var prefContextPopup = document.getElementById("prefContextPopup");
     prefContextPopup.addEventListener("popupshowing", gPrefWindow.onPrefContexPopupShowing, true);
+
+    // version info
+    var stringBundle = Services.strings.createBundle("chrome://confmania/locale/confmania.properties");
+    for (let e of document.querySelectorAll("*[data-obsolete-version-since]")) {
+      let msg = stringBundle.formatStringFromName("versionInfo.obsoleteSince.label", [e.getAttribute("data-obsolete-version-since")], 1);
+      e.setAttribute("data-obsolete-msg", msg);
+    }
+    for (let e of document.querySelectorAll("*[data-require-version]")) {
+      let msg = stringBundle.formatStringFromName("versionInfo.requires.label", [e.getAttribute("data-require-version")], 1);
+      e.setAttribute("data-require-msg", msg);
+    }
   },
 
   // =========================

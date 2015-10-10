@@ -19,7 +19,6 @@
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
 <!ENTITY browser.html.frameForceResizability.label "フレームを強制的にサイズ変更できるようにする">
-<!ENTITY browser.html.frameForceResizability.versionmsg "Firefox 42で廃止">
 <!ENTITY browser.html.img "画像">
 <!ENTITY browser.html.img.loadImages.label "画像を自動的に読み込む">
 <!ENTITY browser.html.img.loadImagesExceptions.label "例外サイト...">
@@ -62,7 +61,6 @@
 <!ENTITY browser.tabs.label "タブブラウジング">
 <!ENTITY browser.tabs.newtab.label "新しいタブ">
 <!ENTITY browser.tabs.newtab.url.label "URL:">
-<!ENTITY browser.tabs.newtab.url.versionmsg "Firefox 41で廃止">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
@@ -181,7 +179,6 @@
 <!ENTITY browser.others.prompts_tab_modal_enabled.label "alert()/prompt()/confirm()をタブモーダルモードで表示する">
 <!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで表示する">
 <!ENTITY browser.others.viewSourceTab.label "新しいタブでソースを開く">
-<!ENTITY browser.others.viewSourceTab.versionmsg "Firefox 40+ が必要">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
 <!ENTITY browser.others.enableOneClickSearchesUI.label "検索バーに対して One-Click Searches UI を有効にする">
