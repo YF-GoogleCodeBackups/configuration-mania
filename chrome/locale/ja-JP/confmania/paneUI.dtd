@@ -113,7 +113,6 @@
 <!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
 <!ENTITY ui.others.preference.animateFadeIn.label "フェードインのアニメーションをする (Mac のように)">
 <!ENTITY ui.others.preference.inContent-inverted.label "設定画面をタブではなくダイアログで開く">
-<!ENTITY ui.others.preference.inContent-inverted.versionmsg "Firefox 42で廃止">
 <!ENTITY ui.others.preference.instanceAccept.label "モードレスダイアログで瞬時に設定を適用 (Mac や Gnome のように)">
 <!ENTITY ui.others.preference.instanceAccept.desc "Mac OS Xではチェックを外さないでください。詳細は Mozilla bugzilla 641288 (http://bugzil.la/641288) を参照">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) スタイルのマウス動作">
@@ -123,7 +122,6 @@
 <!ENTITY ui.others.xwin.scrollbarPosition.label "中央ボタンでスクロールバーを調整できるようにする(再起動必要)">
 <!ENTITY ui.others.theme.label "テーマ">
 <!ENTITY ui.others.theme.devedition.label "Developer Edition テーマを使用する">
-<!ENTITY ui.others.theme.devedition.versionmsg "Firefox 40で廃止">
 <!ENTITY ui.others.word_select.label "テキストをダブルクリックした時の選択動作">
 <!ENTITY ui.others.word_select.eat_space_to_next_word.label "後続の空白も選択する">
 <!ENTITY ui.others.word_select.eat_punctuation.label "囲んでいる句読点も選択する">

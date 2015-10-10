@@ -305,7 +305,7 @@
       <checkbox id="trackingprotection-pbmode-enable"
                 flex="1"
                 label="&security.privacy.trackingprotection-pbmode.enable.label;"
-                data-require-msg="&security.privacy.trackingprotection-pbmode.enable.versionmsg;"
+                data-require-version="39+"
                 preference="privacy.trackingprotection.pbmode.enabled" />
     </hbox>
   </groupbox>

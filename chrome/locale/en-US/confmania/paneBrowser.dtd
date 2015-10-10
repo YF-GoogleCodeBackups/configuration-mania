@@ -19,7 +19,6 @@
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
 <!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
-<!ENTITY browser.html.frameForceResizability.versionmsg "Obsolete since Firefox 42">
 <!ENTITY browser.html.img "Image">
 <!ENTITY browser.html.img.loadImages.label "Load images automatically">
 <!ENTITY browser.html.img.loadImagesExceptions.label "Exceptions">
@@ -62,7 +61,6 @@
 <!ENTITY browser.tabs.label "TabBrowsing">
 <!ENTITY browser.tabs.newtab.label "New Tab">
 <!ENTITY browser.tabs.newtab.url.label "URL:">
-<!ENTITY browser.tabs.newtab.url.versionmsg "Obsolete since Firefox 41">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
@@ -181,7 +179,6 @@
 <!ENTITY browser.others.prompts_tab_modal_enabled.label "Use tab modal dialog for alert()/prompt()/confirm()">
 <!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
 <!ENTITY browser.others.viewSourceTab.label "View source in a new tab">
-<!ENTITY browser.others.viewSourceTab.versionmsg "Requies Firefox 40+">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
 <!ENTITY browser.others.enableOneClickSearchesUI.label "Enable One-Click Searches UI in the search bar">

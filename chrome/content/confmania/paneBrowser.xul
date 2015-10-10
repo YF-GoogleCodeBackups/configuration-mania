@@ -259,7 +259,7 @@
 </box>
 <box class="subtabpanel" orient="vertical" id="html">
   <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
-   preference="layout.frames.force_resizability" data-obsolete-msg="&browser.html.frameForceResizability.versionmsg;"/>
+   preference="layout.frames.force_resizability" data-obsolete-version-since="42"/>
   <groupbox>
     <caption label="&browser.html.img;"/>
 
@@ -356,7 +356,7 @@
 <box class="subtabpanel" orient="vertical" id="tabs">
   <groupbox>
     <caption label="&browser.tabs.newtab.label;"/>
-    <hbox align="center" data-obsolete-msg="&browser.tabs.newtab.url.versionmsg;">
+    <hbox align="center" data-obsolete-version-since="41">
       <label value="&browser.tabs.newtab.url.label;" control="newtab-url"/>
       <menulist id="newtab-url" editable="true" preference="browser.newtab.url" flex="1">
         <menupopup>
@@ -680,7 +680,7 @@
 
   <checkbox id="others-viewSourceTab" label="&browser.others.viewSourceTab.label;" preference="view_source.tab"
           onsyncfrompreference="return gPrefWindow.prefBrowser.onViewSourceTabSyncFrom()"
-          data-require-msg="&browser.others.viewSourceTab.versionmsg;"/>
+          data-require-version="40+"/>
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
             onsyncfrompreference="return gPrefWindow.prefBrowser.onEditorExternalSyncFrom()"/>
   <hbox id="others-editorExternal-hbox" class="indent" align="center">
