@@ -46,29 +46,18 @@ menulist[editable="true"][focused] {
 menulist[editable="true"] button {
   border-color: #0095DD;
 }
-/*
 menulist[editable="true"] > .menulist-dropmarker {
-  -moz-appearance: none;
-  -moz-margin-end: 4px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown");
+  -moz-appearance: toolbarbutton-dropdown;
 }
-menulist[editable="true"] > .menulist-dropmarker > .dropmarker-icon {
-  width: 18px;
-  height: 18px;
-}
-menulist[disabled="true"][editable="true"] > .menulist-dropmarker {
-  list-style-image: url("chrome://global/skin/in-content/dropdown.svg#dropdown-disabled")
-}
-*/
 
 textbox[type="number"] > spinbuttons {
   -moz-appearance: none;
 }
 groupbox + *:not(groupbox) {
   margin-top: 15px;
+}
+button[type="menu"] > .button-box > .button-menu-dropmarker {
+  -moz-appearance: toolbarbutton-dropdown !important;
 }
 
 .subtabs {
