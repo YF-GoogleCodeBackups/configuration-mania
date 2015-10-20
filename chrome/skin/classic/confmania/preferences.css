@@ -138,6 +138,9 @@ description > *|*:-moz-any-link {
   background: linear-gradient(to right, rgba(0,83,159,.2) 0%, rgba(230,96,0,.45) 100%);
   border-color: rgba(0,0,0,.05);
 }
+*[data-obsolete-msg][disabled]::after, *[data-require-msg][disabled]::after, *[data-require-obsolete-msg][disabled]::after {
+  opacity: 0.5;
+}
 *[data-obsolete-msg]:not([disabled="true"]):hover::after, *[data-require-msg]:not([disabled="true"]):hover::after, *[data-require-obsolete-msg]:not([disabled="true"]):hover::after {
   outline: 1px solid #0095dd;
   -moz-outline-radius: 4px;
