@@ -110,6 +110,7 @@ description[disabled="true"] { color: GrayText; }
 description > *|*:-moz-any-link {
   cursor: pointer;
 }
+
 *[data-obsolete-msg]::after, *[data-require-msg]::after, *[data-require-obsolete-msg]::after {
   border-width: 0 0 0 4px;
   font-size: x-small;
@@ -136,4 +137,8 @@ description > *|*:-moz-any-link {
   content: attr(data-require-obsolete-msg);
   background: linear-gradient(to right, rgba(0,83,159,.2) 0%, rgba(230,96,0,.45) 100%);
   border-color: rgba(0,0,0,.05);
+}
+*[data-obsolete-msg]:not([disabled="true"]):hover::after, *[data-require-msg]:not([disabled="true"]):hover::after, *[data-require-obsolete-msg]:not([disabled="true"]):hover::after {
+  outline: 1px solid #0095dd;
+  -moz-outline-radius: 4px;
 }
