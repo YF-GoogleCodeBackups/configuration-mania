@@ -150,7 +150,7 @@
 <!ENTITY browser.speed-paint.content-interrupt.desc "注意: パース終了まで&brandShortName;が応答しない原因になり得ます。">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.label "その処理を中止するまでの最大時間">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "注意: 0 にしてはいけません。">
-<!ENTITY browser.speed-paint.content-switch-threshold.label "High→Low frequency interrupt mode 切替待機時間閾値">
+<!ENTITY browser.speed-paint.content-switch-threshold.label "High frequency mode において Low frequency mode に移行するまでの無操作時間:">
 <!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode はインターフェースの反応を速くするために、ページの読み込み処理を遅くします。; 標準: 750000 則ち 3/4 ミリ秒">
 <!ENTITY browser.speed-cache.label "ブラウザのキャッシュ">
 <!ENTITY browser.speed-cache.check.label "ページのキャッシュの確認の頻度">
