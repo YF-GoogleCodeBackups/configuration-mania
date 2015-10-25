@@ -32,8 +32,8 @@
 <!ENTITY browser.html.img.multiplesource.srcset.label "Enable srcset attribute on img elements">
 <!ENTITY browser.html.img.multiplesource.picture.label "Enable picture element">
 <!ENTITY browser.html.img.resizing.label "Resize large images to fit in the browser window">
-<!ENTITY browser.html.img.show_image_placeholders.label "Show image-placeholder on broken/loading one">
-<!ENTITY browser.html.img.force_inline_alttext.label "Force broken images' alt text to be displayed inline">
+<!ENTITY browser.html.img.show_image_placeholders.label "Show image placeholders while image is loading or when image is broken">
+<!ENTITY browser.html.img.force_inline_alttext.label "Force broken-image ALT text to be displayed inline">
 <!ENTITY browser.html.color_management.label "Color Management (CMS) (takes effect after restart)">
 <!ENTITY browser.html.color_management.mode.label "Mode">
 <!ENTITY browser.html.color_management.mode.off.label "Disable CMS">
@@ -79,9 +79,9 @@
 <!ENTITY browser.tabs.animation.panorama.label "Tab Groups (Panorama)">
 <!ENTITY browser.sessionStore.label "Session Store">
 <!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
-<!ENTITY browser.sessionStore.max_undo.label "Number of closures to remember for restoration">
-<!ENTITY browser.sessionStore.max_undo.windows.label "Number of window closures :">
-<!ENTITY browser.sessionStore.max_undo.tabs.label "Number of tab closures :">
+<!ENTITY browser.sessionStore.max_undo.label "Number of Recently Closed Tabs/Windows which is remembered">
+<!ENTITY browser.sessionStore.max_undo.windows.label "Number of closed windows:">
+<!ENTITY browser.sessionStore.max_undo.tabs.label "Number of closed tabs:">
 <!ENTITY browser.sessionStore.restore_on_demand.label "Restore on demand">
 <!ENTITY browser.sessionStore.restore_on_demand.restore_on_demand.label "Don't load tabs until selected">
 <!ENTITY browser.sessionStore.restore_on_demand.restore_hidden_tabs.label "Don't load tabs in other hidden tab groups  until selected">
@@ -136,7 +136,7 @@
 <!ENTITY browser.download.showAlertOnComplete.label "Show alert when a download completes">
 <!ENTITY browser.download.disableAnimateNotifications.label "Disable the animated notifications of the Download Indicator when a download starts or completes.">
 <!ENTITY browser.ua.label "User-Agent">
-<!ENTITY browser.ua.desc "WARNING: perhaps this configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
+<!ENTITY browser.ua.desc "WARNING: This configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
 <!ENTITY browser.ua.text.label "UA string :">
 <!ENTITY browser.ua.presets.label "Preset">
 <!ENTITY browser.ua.presets.this.label "&brandShortName;, this version.">
@@ -145,12 +145,12 @@
 <!ENTITY browser.speed-paint.delay.label "Initial paint delay">
 <!ENTITY browser.speed-paint.notify-backoffcount.label "Max Number of timer-based reflows to perform">
 <!ENTITY browser.speed-paint.notify-backoffcount.never "No limit">
-<!ENTITY browser.speed-paint.notify-interval.label "Interval for the initial reflows">
+<!ENTITY browser.speed-paint.notify-interval.label "Minimum interval between reflows">
 <!ENTITY browser.speed-paint.content-interrupt.label "Parsing cannot be interrupt">
 <!ENTITY browser.speed-paint.content-interrupt.desc "Caution: &brandShortName; can be unresponsive until parsing is complete.">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.label "Maximum time to interrupt the process">
 <!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "Caution: Do not set 0.">
-<!ENTITY browser.speed-paint.content-switch-threshold.label "High-&gt;Low frequency interrupt mode switch Threshold">
+<!ENTITY browser.speed-paint.content-switch-threshold.label "Enter Low frequency mode after you have no activity on High frequency mode for">
 <!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode provides better UI responsiveness at the expense of load time; Default: 750000 i.e. 3/4 ms">
 <!ENTITY browser.speed-cache.label "Browser Cache">
 <!ENTITY browser.speed-cache.check.label "Check cache of the pages ...">

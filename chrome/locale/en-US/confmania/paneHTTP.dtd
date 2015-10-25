@@ -18,10 +18,10 @@
 <!ENTITY http.connect.spdy.label "Enable SPDY Protocol">
 <!ENTITY http.connect.spdy.accesskey "D">
 <!ENTITY http.maxconn.label "Max Connections">
-<!ENTITY http.maxconn.maxpipeliningrequest.label "Max pipelining Request">
-<!ENTITY http.maxconn.maxconnections.label "Max Connections (Total)">
-<!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "Max Persistent Connections (per Server)">
-<!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "Max Persistent Connections (via Proxy)">
+<!ENTITY http.maxconn.maxpipeliningrequest.label "Max Number of pipelining requests">
+<!ENTITY http.maxconn.maxconnections.label "Max Number of Connections (Total)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerServer.label "Max Number of Persistent Connections (per Server)">
+<!ENTITY http.maxconn.maxpersistentconnectionsPerProxy.label "Max Number of Persistent Connections (via Proxy)">
 <!ENTITY http.timeout.label "Timeout">
 <!ENTITY http.timeout.connection-retry.label "Connection retry">
 <!ENTITY http.timeout.keep-alive.label "Keep-Alive">
