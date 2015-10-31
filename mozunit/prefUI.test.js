@@ -172,5 +172,14 @@ tc.tests = {
       assert.equals(checkbox.checked, !target2.disabled);
       checkbox.click();
     }
+  },
+  testOnMiddlemousePasteSyncFrom: function () {
+    let checkbox = this.document.querySelector("checkbox[preference='middlemouse.paste']");
+    let target = this.document.querySelector("checkbox[preference='middlemouse.contentLoadURL']");
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, target.disabled);
+      checkbox.click();
+    }
   }
 }
