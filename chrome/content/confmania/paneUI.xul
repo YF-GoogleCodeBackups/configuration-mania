@@ -440,7 +440,8 @@
       <hbox align="center">
         <radio value="*" label="&manualSet;"/>
         <textbox id="uiSubmenuDelay" type="number" hidespinbuttons="true" min="-1" size="4" preference="ui.submenuDelay"
-          onsyncfrompreference="return gPrefWindow.radioGrConnSyncFrom('uiSubmenuDelay-radio','uiSubmenuDelay',0);"/>
+          onsyncfrompreference="return gPrefWindow.radioGroupConnectionSyncFrom(this, 'uiSubmenuDelay-radio', 0);"
+          onsynctopreference="return gPrefWindow.syncTo(this, 0);"/>
         <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
       </hbox>
     </radiogroup>

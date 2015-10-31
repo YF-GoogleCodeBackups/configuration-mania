@@ -143,47 +143,41 @@ var gPrefWindow = {
       return undefined;
     }
   },
-  radioGrConnSyncFrom: function (groupid, dataid, defaultdat) {
-        var mData = document.getElementById(dataid);
-        var mGroup = document.getElementById(groupid);
-        var preference = document.getElementById(mData.getAttribute("preference"));
-        var val = preference.value;
+  radioGroupConnectionSyncFrom: function(elem, radioGroupId, defaultValue) {
+    let preference = document.getElementById(elem.getAttribute("preference"));
+    let radioGroupElem = document.getElementById(radioGroupId);
+    let val = preference.value;
+    if ((defaultValue !== undefined) && (val === undefined)) {
+      val = defaultValue;
+    }
 
-        mGroup._linkedpreference = preference.name;
-
-        if (defaultdat != null && val == null) {
-            val = defaultdat;
+    if (!radioGroupElem.mLinkedElement) {
+      radioGroupElem.addEventListener("command", function (event) {
+        if (event.target.radioGroup === radioGroupElem) {
+          if (radioGroupElem.value === "") {
+            preference.reset();
+          } else {
+            radioGroupElem.mLinkedElement.value = radioGroupElem.value;
+            gPrefWindow.getCurrentPrefPane().userChangedValue(radioGroupElem.mLinkedElement);
+          }
+          event.stopPropagation();
         }
+      }, false);
+      radioGroupElem.mLinkedElement = elem;
+    }
 
-        const _oncommandHandler = function (event) {
-            var oRadio = event.target;
-            var mData = oRadio.mData;
-            mData.value = oRadio.value;
-            if (mData.value == "") {
-              document.getElementById(mData.getAttribute('preference')).reset();
-            }else{
-              gPrefWindow.getCurrentPrefPane().userChangedValue(mData);
-            }
-            event.stopPropagation();
-        };
+    let radioItemOther   = undefined;
+    let radioItemMatched = undefined;
+    for (let i = 0, len = radioGroupElem.itemCount; i < len; i++) {
+      let oRadio = radioGroupElem.getItemAtIndex(i);
+      if (oRadio.value === "*") {
+        radioItemOther = oRadio;
+      } else if (oRadio.value === String(val)) {
+        radioItemMatched = oRadio;
+      }
+    }
+    radioGroupElem.selectedItem = radioItemMatched || radioItemOther;
 
-        var oOthers = null;
-        var found = false;
-        Array.forEach(mGroup._getRadioChildren(), function (oRadio) {
-            oRadio.mData = mData;
-            if (oRadio.value == "*"){
-                oOthers = oRadio;
-            } else {
-                oRadio.addEventListener("command", _oncommandHandler, false);
-                if(oRadio.value == String(val)){
-                    found = true;
-                    mGroup.selectedItem = oRadio;
-                }
-            }
-        });
-        if (!found) {
-            mGroup.selectedItem = oOthers;
-        }
-        return val;
+    return val;
   }
 };
