@@ -485,7 +485,8 @@
   <groupbox>
     <caption label="&ui.others.xwin.label;"/>
     <checkbox label="&ui.others.xwin.autocopy.label;" preference="clipboard.autocopy"/>
-    <checkbox label="&ui.others.xwin.paste.label;" preference="middlemouse.paste"/>
+    <checkbox label="&ui.others.xwin.paste.label;" preference="middlemouse.paste"
+              onsyncfrompreference="gPrefWindow.prefUI.onMiddlemousePasteSyncFrom();"/>
     <checkbox label="&ui.others.xwin.contentLoadURL.label;" preference="middlemouse.contentLoadURL"/>
     <checkbox label="&ui.others.xwin.scrollbarPosition.label;" preference="middlemouse.scrollbarPosition"/>
   </groupbox>
