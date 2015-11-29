@@ -181,7 +181,7 @@
 <!ENTITY browser.others.viewSourceTab.label "新しいタブでソースを開く">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
-<!ENTITY browser.others.enableOneClickSearchesUI.label "検索バーに対して One-Click Searches UI を有効にする">
+<!ENTITY browser.others.disableOneClickSearchesUI.label "検索バーに対して One-Click Searches UI を無効にする">
 <!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
 <!ENTITY browser.others.warnOnAboutConfig.label "about:config で警告を表示する">
 <!ENTITY browser.others.hello.label "Firefox Hello">
