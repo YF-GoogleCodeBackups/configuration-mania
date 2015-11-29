@@ -176,7 +176,7 @@
   <preference id="view_source.tab" name="view_source.tab" type="bool"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
-  <preference id="browser.search.showOneOffButtons" name="browser.search.showOneOffButtons" type="bool"/>
+  <preference id="browser.search.showOneOffButtons" name="browser.search.showOneOffButtons" type="bool" inverted="true"/>
   <preference id="places.history.expiration.max_pages" name="places.history.expiration.max_pages" type="int"/>
   <preference id="general.warnOnAboutConfig" name="general.warnOnAboutConfig" type="bool"/>
   <preference id="loop.enabled" name="loop.enabled" type="bool"/>
@@ -688,7 +688,7 @@
     <textbox id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
     <button label="&browse;" control="others-editorExternal-path" oncommand="gPrefWindow.prefBrowser.onEditorExternalBrowse()"/>
   </hbox>
-  <checkbox label="&browser.others.enableOneClickSearchesUI.label;" preference="browser.search.showOneOffButtons"/>
+  <checkbox label="&browser.others.disableOneClickSearchesUI.label;" preference="browser.search.showOneOffButtons" data-obsolete-version-since="43"/>
 
   <groupbox>
     <caption label="&browser.others.historyExpirationMaxPages.label;"/>

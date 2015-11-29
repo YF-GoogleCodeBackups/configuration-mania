@@ -181,7 +181,7 @@
 <!ENTITY browser.others.viewSourceTab.label "View source in a new tab">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
-<!ENTITY browser.others.enableOneClickSearchesUI.label "Enable One-Click Searches UI in the search bar">
+<!ENTITY browser.others.disableOneClickSearchesUI.label "Disable One-Click Searches UI in the search bar">
 <!ENTITY browser.others.historyExpirationMaxPages.label "Max number of unique URLs to retain in history">
 <!ENTITY browser.others.warnOnAboutConfig.label "Show the warning message on about:config">
 <!ENTITY browser.others.hello.label "Firefox Hello">
