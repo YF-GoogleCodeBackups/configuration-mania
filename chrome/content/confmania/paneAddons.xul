@@ -59,6 +59,7 @@
   <preference name="extensions.checkCompatibility.41.0" id="extensions.checkCompatibility.41.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.42.0" id="extensions.checkCompatibility.42.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.43.0" id="extensions.checkCompatibility.43.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.44.0" id="extensions.checkCompatibility.44.0" type="bool" inverted="true"/>
   <preference name="xpinstall.signatures.required" id="xpinstall.signatures.required" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.install.requireBuiltInCerts" id="extensions.install.requireBuiltInCerts" type="bool" inverted="true"/>
@@ -84,6 +85,7 @@
 <checkbox label="41" preference="extensions.checkCompatibility.41.0"/>
 <checkbox label="42" preference="extensions.checkCompatibility.42.0"/>
 <checkbox label="43" preference="extensions.checkCompatibility.43.0"/>
+<checkbox label="44" preference="extensions.checkCompatibility.44.0"/>
 </hbox>
 </groupbox>
 <checkbox label="&addons.ignoreSignaturesRequirement.label;"
