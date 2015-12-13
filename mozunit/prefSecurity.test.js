@@ -48,27 +48,24 @@ tc.tests = {
     let origval = mData.value;
 
     let val = [];
-    for (let i = 0; i < target.itemCount; i++) {
-      if (target.getItemAtIndex(i).checked) {
-        val.push(target.getItemAtIndex(i).value);
+    Array.forEach(target.querySelectorAll("listitem"), function(item) {
+      if (item.checked) {
+        val.push(item.value);
       }
-    }
+    });
     assert.equals(mData.value.split(/\s+/).sort().join(" "), val.sort().join(" "));
 
     mData.value = "";
     this.window.gPrefWindow.prefSecurity.syncFromPopupwin();
-    for (let i = 0; i < target.itemCount; i++) {
-      assert.isFalse(target.getItemAtIndex(i).checked);
-    }
+    Array.forEach(target.querySelectorAll("listitem"), function(item) {
+      assert.isFalse(item.checked);
+    });
 
-    mData.value = "";
-    for (let i = 0; i < target.itemCount; i++) {
-      mData.value += " " + target.getItemAtIndex(i).value;
-    }
+    mData.value = Array.map(target.querySelectorAll("listitem"), function(item) { return item.value }).join(" ");
     this.window.gPrefWindow.prefSecurity.syncFromPopupwin();
-    for (let i = 0; i < target.itemCount; i++) {
-      assert.isTrue(target.getItemAtIndex(i).checked);
-    }
+    Array.forEach(target.querySelectorAll("listitem"), function(item) {
+      assert.isTrue(item.checked);
+    });
 
     mData.value = origval;
     this.window.gPrefWindow.prefSecurity.syncFromPopupwin();
@@ -80,16 +77,16 @@ tc.tests = {
 
     assert.equals(mData.value.split(/\s+/).sort().join(" "), this.window.gPrefWindow.prefSecurity.syncToPopupwin().split(/\s+/).sort().join(" "));
 
-    for (let i = 0; i < target.itemCount; i++) {
-      target.getItemAtIndex(i).checked = false;
-    }
+    Array.forEach(target.querySelectorAll("listitem"), function(item) {
+      item.checked = false;
+    });
     assert.matches(/^\s*$/, this.window.gPrefWindow.prefSecurity.syncToPopupwin());
 
     let fullValues = [];
-    for (let i = 0; i < target.itemCount; i++) {
-      target.getItemAtIndex(i).checked = true;
-      fullValues.push(target.getItemAtIndex(i).value);
-    }
+    Array.forEach(target.querySelectorAll("listitem"), function(item) {
+      item.checked = true;
+      fullValues.push(item.value);
+    });
     assert.equals(fullValues.join(" "), this.window.gPrefWindow.prefSecurity.syncToPopupwin());
 
     mData.value = origval;

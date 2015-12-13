@@ -186,8 +186,8 @@ tc.tests = {
   },
   
   testOpenConfMania: function() {
-    let origICvalue = Services.prefs.getBoolPref("browser.preferences.inContent");
-    let origIAvalue = Services.prefs.getBoolPref("browser.preferences.instantApply");
+    let origICvalue = (Services.prefs.prefHasUserValue("browser.preferences.inContent"))? Services.prefs.getBoolPref("browser.preferences.inContent") : undefined;
+    let origIAvalue = (Services.prefs.prefHasUserValue("browser.preferences.instantApply"))? Services.prefs.getBoolPref("browser.preferences.instantApply") : undefined;
 
     let cmd = this.win.document.getElementById("ConfMania:Open");
     assert.isDefined(cmd);
@@ -265,14 +265,22 @@ tc.tests = {
     } finally {
       Services.ww.unregisterNotification(dialogObserver);
 
-      Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
-      Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
+      if (origICvalue !== undefined) {
+        Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
+      } else {
+        Services.prefs.clearUserPref("browser.preferences.inContent");
+      }
+      if (origIAvalue !== undefined) {
+        Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
+      } else {
+        Services.prefs.clearUserPref("browser.preferences.instantApply");
+      }
     }
   },
 
   testLoadAllPaneInContent: function() {
-    let origIAvalue = Services.prefs.getBoolPref("browser.preferences.instantApply");
-    let origICvalue = Services.prefs.getBoolPref("browser.preferences.inContent");
+    let origICvalue = (Services.prefs.prefHasUserValue("browser.preferences.inContent"))? Services.prefs.getBoolPref("browser.preferences.inContent") : undefined;
+    let origIAvalue = (Services.prefs.prefHasUserValue("browser.preferences.instantApply"))? Services.prefs.getBoolPref("browser.preferences.instantApply") : undefined;
 
     let cmd = this.win.document.getElementById("ConfMania:Open");
     assert.isDefined(cmd);
@@ -369,13 +377,21 @@ tc.tests = {
     } catch (e) {
       throw e;
     } finally {
-      Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
-      Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
+      if (origICvalue !== undefined) {
+        Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
+      } else {
+        Services.prefs.clearUserPref("browser.preferences.inContent");
+      }
+      if (origIAvalue !== undefined) {
+        Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
+      } else {
+        Services.prefs.clearUserPref("browser.preferences.instantApply");
+      }
     }
   },
   testLoadAllPaneOnDialog: function() {
-    let origIAvalue = Services.prefs.getBoolPref("browser.preferences.instantApply");
-    let origICvalue = Services.prefs.getBoolPref("browser.preferences.inContent");
+    let origICvalue = (Services.prefs.prefHasUserValue("browser.preferences.inContent"))? Services.prefs.getBoolPref("browser.preferences.inContent") : undefined;
+    let origIAvalue = (Services.prefs.prefHasUserValue("browser.preferences.instantApply"))? Services.prefs.getBoolPref("browser.preferences.instantApply") : undefined;
 
     let cmd = this.win.document.getElementById("ConfMania:Open");
     assert.isDefined(cmd);
@@ -463,8 +479,16 @@ tc.tests = {
     } finally {
       Services.ww.unregisterNotification(dialogObserver);
 
-      Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
-      Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
+      if (origICvalue !== undefined) {
+        Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
+      } else {
+        Services.prefs.clearUserPref("browser.preferences.inContent");
+      }
+      if (origIAvalue !== undefined) {
+        Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
+      } else {
+        Services.prefs.clearUserPref("browser.preferences.instantApply");
+      }
     }
   },
 }

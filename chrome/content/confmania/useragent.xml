@@ -7,7 +7,7 @@
     <option name="Windows 8, WOW64" oscpu="Windows NT 6.2; WOW64" platform="Windows"/>
     <option name="Windows 8.1, WOW64" oscpu="Windows NT 6.3; WOW64" platform="Windows"/>
     <option name="Windows 10, WOW64" oscpu="Windows NT 10.0; WOW64" platform="Windows"/>
-    <option name="Intel MacOS X 10.10.5" oscpu="Intel MacOS X 10.10.5" platform="Macintosh"/>
+    <option name="Intel MacOS X 10.11" oscpu="Intel MacOS X 10.11" platform="Macintosh"/>
     <option name="Linux x86" oscpu="Linux i686" platform="X11"/>
     <option name="Linux x64" oscpu="Linux x86_64" platform="X11"/>
     <option name="FreeBSD x86" oscpu="FreeBSD i686" platform="X11"/>
@@ -24,17 +24,17 @@
     <option name="IE 11 (Windows 10 WOW64)" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
   </group>
   <group name="Microsoft Edge" value="Mozilla/5.0 ({opt:oscpu}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/{opt:version}">
-    <option name="Edge 12.10240 (Windows 10 WOW64)" oscpu="Windows NT 10.0; Win64; x64" version="12.10240"/>
+    <option name="Edge 12.10240 (Windows 10 x64)" oscpu="Windows NT 10.0; Win64; x64" version="12.10240"/>
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
 
-    <option name="Chrome 46.0.2490.80 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="46.0.2490.80"/>
-    <option name="Chrome 46.0.2490.80 (Windows 8.1)" platform="Windows" oscpu="Windows NT 6.3" webkit="537.36" version="46.0.2490.80"/>
-    <option name="Chrome 46.0.2490.80 (MacOS X 10.10.5)" platform="Macintosh" oscpu="Intel Mac OS X 10_10_5" webkit="537.36" version="46.0.2490.80"/>
-    <option name="Chrome 46.0.2490.80 (Nexus 5; Android 6.0)" platform="Linux" oscpu="Android 6.0; Nexus 5 Build/MRA58K" webkit="537.36" version="46.0.2490.80"/>
+    <option name="Chrome 47.0.2526.73 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="47.0.2526.73"/>
+    <option name="Chrome 47.0.2526.73 (Windows 10)" platform="Windows" oscpu="Windows NT 10.0" webkit="537.36" version="47.0.2526.73"/>
+    <option name="Chrome 47.0.2526.73 (MacOS X 10.11.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_2" webkit="537.36" version="47.0.2526.73"/>
+    <option name="Chrome 47.0.2526.73 (Nexus 6; Android 6.0.1)" platform="Linux" oscpu="Android 6.0.1; Nexus 6 Build/MMB29K" webkit="537.36" version="47.0.2526.73"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
-    <option name="Safari 9.0.1 (Intel MacOS X 10.11.1)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_1" webkit="601.2.7" safari="601.2.7" version="9.0.1"/>
+    <option name="Safari 9.0.1 (Intel MacOS X 10.11.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_2" webkit="601.2.7" safari="601.2.7" version="9.0.1"/>
 
     <option name="Safari 9.0 (iPhone; iOS 9.1)" platform="iPhone" oscpu="CPU iPhone OS 9_1 like Mac OS X" webkit="601.1.46" safari="601.1" version="9.0 Mobile/13A452"/>
     <option name="Safari 9.0 (iPad; iOS 9.1)" platform="iPad" oscpu="CPU OS 9_1 like Mac OS X" webkit="601.1.46" safari="601.1" version="9.0 Mobile/13A143"/>
