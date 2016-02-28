@@ -95,11 +95,14 @@ checkbox.nogray-disabled[disabled="true"][nogray="true"] {
 
 .emphasis{ font-weight: bold ! important; }
 vbox.warning {
-  background-color: #d9534f;
-  color: #fff;
-  padding: 0.2em 0.6em 0.3em;
-  border-radius: 0.25em;
-  margin: 2px;
+  border-width: 0 0 0 4px;
+  border-radius: 2px;
+  border-width: 0 0 0 4px;
+  border-style: solid;
+  padding: 4px 4px 2px;
+  
+	background:#fad7d4;
+	border-color:#f08a81;
 }
 
 *|*:-moz-any-link:hover{ color: -moz-nativehyperlinktext; text-decoration: underline; }
@@ -125,18 +128,18 @@ description > *|*:-moz-any-link {
 }
 *[data-obsolete-msg]::after {
   content: attr(data-obsolete-msg);
-  background-color: rgba(230,96,0,.45);
-  border-color: rgba(0,0,0,.05);
+	background:#fad7d4;
+	border-color:#f08a81;
 }
 *[data-require-msg]::after {
   content: attr(data-require-msg);
-  background-color: rgba(0,83,159,.2);
-  border-color: rgba(0,0,0,.05);
+  background:#cce9f8;
+	border-color:#7dc7ed;
 }
 *[data-require-obsolete-msg]::after {
   content: attr(data-require-obsolete-msg);
-  background: linear-gradient(to right, rgba(0,83,159,.2) 0%, rgba(230,96,0,.45) 100%);
-  border-color: rgba(0,0,0,.05);
+  background:#fff4cc;
+	border-color:#ffe070;
 }
 *[data-obsolete-msg][disabled]::after, *[data-require-msg][disabled]::after, *[data-require-obsolete-msg][disabled]::after {
   opacity: 0.5;
