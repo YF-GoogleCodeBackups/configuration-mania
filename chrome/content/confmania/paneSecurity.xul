@@ -135,7 +135,7 @@
       <checkbox preference="dom.disable_window_flip" label="&security.js.annoy.window_flip;"/>
       <checkbox preference="dom.disable_window_move_resize" label="&security.js.annoy.window_move_resize;"/>
       <checkbox preference="dom.disable_window_status_change" label="&security.js.annoy.status_change;"/>
-      <checkbox preference="dom.disable_image_src_set" label="&security.js.annoy.change_image;"/>
+      <checkbox preference="dom.disable_image_src_set" label="&security.js.annoy.change_image;" data-obsolete-version-since="43"/>
       <description class="indent">&security.js.annoy.change_image.desc;</description>
       <checkbox preference="dom.event.contextmenu.enabled" label="&security.js.annoy.contextmenu;"/>
       <checkbox preference="dom.event.clipboardevents.enabled" label="&security.js.annoy.clipboardevents;"/>
