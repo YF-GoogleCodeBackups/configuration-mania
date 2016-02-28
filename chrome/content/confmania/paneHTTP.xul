@@ -62,18 +62,15 @@
   <preference id="network.http.proxy.pipelining" name="network.http.proxy.pipelining" type="bool"/>
   <preference id="network.http.pipelining.ssl" name="network.http.pipelining.ssl" type="bool"/>
   <preference id="network.http.spdy.enabled" name="network.http.spdy.enabled" type="bool"/>
-
   <preference id="network.http.connection-retry-timeout" name="network.http.connection-retry-timeout" type="int"/>
   <preference id="network.http.keep-alive.timeout" name="network.http.keep-alive.timeout" type="int"/>
   <preference id="network.http.spdy.timeout" name="network.http.spdy.timeout" type="int"/>
-
   <preference id="network.http.pipelining.maxrequests" name="network.http.pipelining.maxrequests" type="int"/>
   <preference id="network.http.max-connections" name="network.http.max-connections" type="int"/>
   <preference id="network.http.max-persistent-connections-per-server" name="network.http.max-persistent-connections-per-server" type="int"/>
   <preference id="network.http.max-persistent-connections-per-proxy" name="network.http.max-persistent-connections-per-proxy" type="int"/>
-
-
   <preference id="network.http.accept-encoding" name="network.http.accept-encoding" type="string"/>
+  <preference id="network.http.accept-encoding.secure" name="network.http.accept-encoding.secure" type="string"/>
   <preference id="network.http.accept.default" name="network.http.accept.default" type="string"/>
   <preference id="image.http.accept" name="image.http.accept" type="string"/>
 </preferences>
@@ -183,6 +180,10 @@
       <row align="center">
         <label value="&http.header.encoding.label;" control="HTTPAcceptEncoding"/>
         <textbox id="HTTPAcceptEncoding" preference="network.http.accept-encoding"/>
+      </row>
+      <row align="center">
+        <label value="&http.header.encoding-secure.label;" control="HTTPAcceptEncodingSecure"/>
+        <textbox id="HTTPAcceptEncodingSecure" preference="network.http.accept-encoding.secure" data-require-version="44"/>
       </row>
       <row align="center">
         <label value="&http.header.accept.label;" control="HTTPAccept"/>

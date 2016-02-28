@@ -28,5 +28,6 @@
 <!ENTITY http.timeout.spdy.label "SPDY">
 <!ENTITY http.header.label "ヘッダ">
 <!ENTITY http.header.encoding.label "Accept-Encoding">
+<!ENTITY http.header.encoding-secure.label "Accept-Encoding (HTTPS用)">
 <!ENTITY http.header.accept.label "Accept (コンテンツ)">
 <!ENTITY http.header.accept-image.label "Accept (画像)">

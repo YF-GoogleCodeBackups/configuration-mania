@@ -28,5 +28,6 @@
 <!ENTITY http.timeout.spdy.label "SPDY">
 <!ENTITY http.header.label "Header">
 <!ENTITY http.header.encoding.label "Accept-Encoding">
+<!ENTITY http.header.encoding-secure.label "Accept-Encoding (for HTTPS)">
 <!ENTITY http.header.accept.label "Accept (for Content)">
 <!ENTITY http.header.accept-image.label "Accept (for Image)">
