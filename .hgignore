@@ -1,0 +1,10 @@
+syntax: glob
+
+*.xpi
+node_modules
+tmp
+
+*.log
+*~
+#*#
+.#*
