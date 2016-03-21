@@ -78,10 +78,11 @@
   <preference id="gfx.color_management.mode" name="gfx.color_management.mode" type="int"/>
   <preference id="plugins.click_to_play" name="plugins.click_to_play" type="bool"/>
   <preference id="dom.ipc.plugins.flash.disable-protected-mode" name="dom.ipc.plugins.flash.disable-protected-mode" type="bool"/>
-  <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
-  <preference id="layout.css.vertical-text.enabled" name="layout.css.vertical-text.enabled" type="bool"/>
   <preference id="layout.xml.prettyprint" name="layout.xml.prettyprint" type="bool" inverted="true"/>
   <preference id="browser.zoom.siteSpecific" name="browser.zoom.siteSpecific" type="bool"/>
+  <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
+  <preference id="layout.css.vertical-text.enabled" name="layout.css.vertical-text.enabled" type="bool"/>
+  <preference id="layout.css.prefixes.webkit" name="layout.css.prefixes.webkit" type="bool"/>
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
   <preference id="browser.display.focus_text_color" name="browser.display.focus_text_color" type="string"/>
@@ -314,10 +315,15 @@
     <checkbox label="&browser.html.plugins.click_to_play.label;" preference="plugins.click_to_play"/>
     <checkbox label="&browser.html.plugins.flash-disable-protected-mode.label;" preference="dom.ipc.plugins.flash.disable-protected-mode"/>
   </groupbox>
-  <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
-  <checkbox label="&browser.html.vertical-text.label;" preference="layout.css.vertical-text.enabled"/>
   <checkbox label="&browser.html.plainviewXML.label;" preference="layout.xml.prettyprint"/>
   <checkbox label="&browser.html.zoomSiteSpecific.label;" preference="browser.zoom.siteSpecific"/>
+
+  <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
+  <checkbox label="&browser.html.vertical-text.label;" preference="layout.css.vertical-text.enabled"/>
+  <groupbox>
+    <caption label="&browser.html.webcompatibility.label;"/>
+    <checkbox label="&browser.html.webcompatibility.prefixes-webkit.label;" preference="layout.css.prefixes.webkit" data-require-version="44"/>
+  </groupbox>
 
   <groupbox>
     <caption label="&browser.html.focus.label;"/>
