@@ -55,9 +55,6 @@
 <!ENTITY security.popupwin.event.touchstart.label "タッチ開始">
 <!ENTITY security.popupwin.event.touchend.label "タッチ終了">
 <!ENTITY security.popupwin.event.notificationclick.label "通知をクリック">
-<!ENTITY security.antivirus.label "ウイルス対策">
-<!ENTITY security.antivirus.scanWhenDone.label "ダウンロード完了時にウイルススキャンを実行する">
-<!ENTITY security.antivirus.alertOnEXEOpen.label "実行可能ファイルを開こうと(実行しようと)した場合に、危険性について警告する">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.SSLProtocolVersions.caption "SSL プロトコルのバージョン">
 <!ENTITY security.ssl.limit.description "安全な接続に使用する暗号化プロトコルを制限できます。単一のバージョンまたは連続するバージョンの範囲を選択してください。">
