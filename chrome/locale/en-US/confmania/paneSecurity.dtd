@@ -55,9 +55,6 @@
 <!ENTITY security.popupwin.event.touchstart.label "Touch Start">
 <!ENTITY security.popupwin.event.touchend.label "Touch End">
 <!ENTITY security.popupwin.event.notificationclick.label "Notification Clicked">
-<!ENTITY security.antivirus.label "Anti-Virus">
-<!ENTITY security.antivirus.scanWhenDone.label "Perform virus scans after downloads are complete">
-<!ENTITY security.antivirus.alertOnEXEOpen.label "Show alert about on opening (executing) an EXE file.">
 <!ENTITY security.ssl.label "SSL">
 <!ENTITY security.ssl.SSLProtocolVersions.caption "SSL Protocol Versions">
 <!ENTITY security.ssl.limit.description "You can restrict which encryption protocols to use for secure connections. Choose a single version or a contiguous range of versions.">

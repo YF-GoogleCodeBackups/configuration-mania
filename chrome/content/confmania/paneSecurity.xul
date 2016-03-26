@@ -79,9 +79,6 @@
   <preference id="privacy.popups.disable_from_plugins" name="privacy.popups.disable_from_plugins" type="int"/>
   <preference id="dom.popup_allowed_events" name="dom.popup_allowed_events" type="string"/>
 
-  <preference id="browser.download.manager.scanWhenDone" name="browser.download.manager.scanWhenDone" type="bool"/>
-  <preference id="browser.download.manager.alertOnEXEOpen" name="browser.download.manager.alertOnEXEOpen" type="bool"/>
-
   <preference id="security.tls.version.min" name="security.tls.version.min" type="int"/>
   <preference id="security.tls.version.max" name="security.tls.version.max" type="int"/>
   <preference id="security.mixed_content.block_active_content" name="security.mixed_content.block_active_content" type="bool"/>
@@ -109,7 +106,6 @@
  value="security-pane-js" oncommand="gPrefWindow.prefSecurity.onPaneSecurityBoxTabSelected();">
   <radio class="subtab" value="security-pane-js"        label="&security.js.label;"/>
   <radio class="subtab" value="security-pane-popupwin"  label="&security.popupwin.label;"/>
-  <radio class="subtab" value="security-pane-antivirus" label="&security.antivirus.label;"/>
   <radio class="subtab" value="security-pane-ssl"       label="&security.ssl.label;"/>
   <radio class="subtab" value="security-pane-net"       label="&security.net.label;"/>
   <radio class="subtab" value="security-pane-privacy"   label="&security.privacy.label;"/>
@@ -207,12 +203,6 @@
     <listitem type="checkbox" value="touchend" label="&security.popupwin.event.touchend.label;"/>
     <listitem type="checkbox" value="notificationclick" label="&security.popupwin.event.notificationclick.label;" data-require-version="41"/>
   </listbox>
-</box>
-<box class="subtabpanel" orient="vertical" id="security-pane-antivirus">
-  <checkbox label="&security.antivirus.scanWhenDone.label;"
-   preference="browser.download.manager.scanWhenDone"/>
-  <checkbox label="&security.antivirus.alertOnEXEOpen.label;"
-   preference="browser.download.manager.alertOnEXEOpen"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="security-pane-ssl">
   <groupbox align="start">
