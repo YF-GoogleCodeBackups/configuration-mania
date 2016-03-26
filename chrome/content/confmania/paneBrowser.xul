@@ -394,7 +394,7 @@
   <groupbox>
     <caption label="&browser.tabs.animation.label;"/> 
     <checkbox label="&browser.tabs.animation.animate_tab.label;" preference="browser.tabs.animate"/>
-    <checkbox label="&browser.tabs.animation.panorama.label;" preference="browser.panorama.animate_zoom"/>
+    <checkbox label="&browser.tabs.animation.panorama.label;" preference="browser.panorama.animate_zoom" data-obsolete-version-since="45"/>
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="sessionstore">
