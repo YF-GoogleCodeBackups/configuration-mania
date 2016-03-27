@@ -65,6 +65,7 @@
 <!ENTITY browser.tabs.newtab.url.label "URL:">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする">
+<!ENTITY browser.tabs.showAudioPlayingIcon.label "音声を再生しているタブにミュートアイコンを表示する">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
 <!ENTITY browser.tabs.seachOpenintab.label "検索バーからEnterキーで検索した時、検索結果を新しいタブで開く">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "ページから開く新規タブを現在のタブの右に開く">
