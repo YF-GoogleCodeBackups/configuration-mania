@@ -65,6 +65,7 @@
 <!ENTITY browser.tabs.newtab.url.label "URL:">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages">
+<!ENTITY browser.tabs.showAudioPlayingIcon.label "Show mute icons on tabs that playing audio">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
 <!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar with ENTER key">
 <!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab">

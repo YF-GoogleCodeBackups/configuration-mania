@@ -96,6 +96,7 @@
   <preference id="browser.newtab.url" name="browser.newtab.url" type="string"/>
   <preference id="browser.newtabpage.enabled" name="browser.newtabpage.enabled" type="bool"/>
   <preference id="browser.pagethumbnails.capturing_disabled" name="browser.pagethumbnails.capturing_disabled" type="bool"/>
+  <preference id="browser.tabs.showAudioPlayingIcon" name="browser.tabs.showAudioPlayingIcon" type="bool"/>
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
   <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
   <preference id="browser.tabs.insertRelatedAfterCurrent" name="browser.tabs.insertRelatedAfterCurrent" type="bool"/>
@@ -375,8 +376,9 @@
     <checkbox label="&browser.tabs.newtab.newtabpageEnabled.label;" preference="browser.newtabpage.enabled"/>
     <checkbox class="indent" label="&browser.tabs.newtab.thumbCapturingDisabled.label;" preference="browser.pagethumbnails.capturing_disabled"/>
   </groupbox>
-  <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
+  <checkbox label="&browser.tabs.showAudioPlayingIcon.label;" preference="browser.tabs.showAudioPlayingIcon" data-require-version="42"/>
 
+  <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
   <checkbox label="&browser.tabs.seachOpenintab.label;" preference="browser.search.openintab"/>
   <checkbox label="&browser.tabs.insertRelatedAfterCurrent.label;" preference="browser.tabs.insertRelatedAfterCurrent"/>
   <checkbox label="&browser.tabs.warnOnCloseOtherTabs.label;" preference="browser.tabs.warnOnCloseOtherTabs"/>
