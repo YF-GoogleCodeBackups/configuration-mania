@@ -321,10 +321,8 @@
 
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.vertical-text.label;" preference="layout.css.vertical-text.enabled"/>
-  <groupbox>
-    <caption label="&browser.html.webcompatibility.label;"/>
-    <checkbox label="&browser.html.webcompatibility.prefixes-webkit.label;" preference="layout.css.prefixes.webkit" data-require-version="44"/>
-  </groupbox>
+
+  <checkbox label="&browser.html.prefixes-webkit.label;" preference="layout.css.prefixes.webkit" data-require-version="44"/>
 
   <groupbox>
     <caption label="&browser.html.focus.label;"/>

@@ -46,8 +46,7 @@
 <!ENTITY browser.html.zoomSiteSpecific.label "Remember the zoom preferences page by page">
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.vertical-text.label "Enable CSS vertical text">
-<!ENTITY browser.html.webcompatibility.label "Web compatibility">
-<!ENTITY browser.html.webcompatibility.prefixes-webkit.label "Enable some &quot;-webkit-&quot; vendor-prefixed CSS properties">
+<!ENTITY browser.html.prefixes-webkit.label "Enable some &quot;-webkit-&quot; vendor-prefixed CSS properties">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Highlight focused objects with color">
 <!ENTITY browser.html.focus.bg.label "Background Color">
