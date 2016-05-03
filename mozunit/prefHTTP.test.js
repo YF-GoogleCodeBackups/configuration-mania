@@ -25,14 +25,32 @@ function sleep(aWait) {
 var tc = new TestCase();
 tc.tests = {
   setUp: function() {
-    let win = Services.wm.getMostRecentWindow("navigator:browser");
-    let cmd = win.document.getElementById("ConfMania:Open");
-    let cmwin = Services.wm.getMostRecentWindow("Browser:Confmania");
-    let prefWin  = cmwin.document.documentElement;
-    prefWin.showPane(cmwin.document.getElementById("paneHTTP"));
+    let cmwin = null;
+    let browserEnumerator = Services.wm.getEnumerator("navigator:browser");
+    while (browserEnumerator.hasMoreElements()) {
+      let browserWin = browserEnumerator.getNext();
+      let tabbrowser = browserWin.gBrowser;
+      let tabLength = tabbrowser.tabs.length;
 
-    this.window = cmwin.document.defaultView;
-    this.document = cmwin.document;
+      for (let i = 0; i < tabLength; i++) {
+        let currentBrowser = tabbrowser.getBrowserAtIndex(i);
+        if (currentBrowser.currentURI.spec.startsWith("about:confmania")) {
+          cmwin = currentBrowser.contentWindow;
+          //browserWin.focus();
+          tabbrowser.selectTabAtIndex(i);
+          break;
+        }
+      }
+    }
+
+    if (cmwin) {
+      this.window = cmwin;
+      this.document = cmwin.document;
+
+      cmwin.document.getElementById("category-http").click();
+    } else {
+      throw new Error("about:confmania not found");
+    }
   },
   tearDown: function() {
   },
