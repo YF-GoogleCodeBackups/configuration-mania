@@ -3,16 +3,20 @@
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "grunt",
-    "clean": "grunt clean",
-    "run": "grunt run",
+    "build": "jpm xpi",
+    "run": "jpm run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "@cat_in_136",
-  "license": "",
+  "engines": {
+    "firefox": ">=38.*"
+  },
+  "title": "Configuration Mania",
+  "homepage": "http://bitbucket.org/cat_in_136/configuration-mania/",
+  "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+  "license": "MPL-2.0",
+  "main": "./index.js",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-cli": "~0.1.13",
-    "jpm": "~1.0.6"
+    "jpm": "~1.0.7"
   }
 }
