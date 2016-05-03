@@ -105,8 +105,8 @@ tc.tests = {
     let origval1 = target1.checked;
     let origval2 = target2.checked;
 
-    origval1.checked = false;
-    origval2.checked = false;
+    target1.checked = false;
+    target2.checked = false;
     mData.value = 0;
 
     target1.click();
