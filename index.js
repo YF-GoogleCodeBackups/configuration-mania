@@ -1,25 +1,7 @@
 "use strict";
 
-const Cc = Components.classes;
-const Ci = Components.interfaces;
-const Cu = Components.utils;
-
+let {Cc, Ci, Cu, Cr, Cm } = require("chrome");
 Cu.import("resource://gre/modules/Services.jsm");
-
-function convertUrl(params, src) {
-    let uri = null;
-    if (params.installPath.isDirectory()) {
-        let filepath = params.installPath.clone();
-        src.split("/").forEach(function(v) { filepath.append(v); } );
-        uri = Services.io.newFileURI(filepath).spec;
-    } else {
-        let jarfileuri = Services.io.newFileURI(params.installPath).spec;
-        uri = "jar:" + jarfileuri + "!/" + src;
-    }
-
-    return uri;
-}
-
 
 function BrowserWindowObserver(params, handlers) {
     this.params = params;
@@ -46,44 +28,32 @@ BrowserWindowObserver.prototype = {
         }
     }
 };
+
 var _gWindowListener = null;
-var _gScope = null;
+var _gScope = require("./lib/main.js");
 
-function startup(params, aReason) {
-    // load main lib.
-    _gScope = {};
-    Cu.import(convertUrl(params, "lib/main.js"), _gScope);
-
+exports.main = function main(aOptions, aCallback) {
     // notify startup to main lib.
-    _gScope.startup(params, aReason);
+    _gScope.startup(aOptions);
     
-    _gWindowListener = new BrowserWindowObserver(params, {
+    _gWindowListener = new BrowserWindowObserver({reason: aOptions.reason}, {
         onStartup: _gScope.browserWindowStartup,
         onShutdown: _gScope.browserWindowShutdown
     });
     Services.ww.registerNotification(_gWindowListener);
     let winenu = Services.wm.getEnumerator("navigator:browser");
     while (winenu.hasMoreElements()) {
-        _gScope.browserWindowStartup(params, winenu.getNext());
+        _gScope.browserWindowStartup({reason: aOptions.reason}, winenu.getNext());
     }
-    
-}
+};
 
-function shutdown(params, aReason) {
+exports.onUnload = function onUnload(aReason) {
     // notify startup to main lib.
-    _gScope.shutdown(params, aReason);
+    _gScope.shutdown(aReason);
     Services.ww.unregisterNotification(_gWindowListener);
     _gWindowListener = null;
     let winenu = Services.wm.getEnumerator("navigator:browser");
     while (winenu.hasMoreElements()) {
-        _gScope.browserWindowShutdown(params, winenu.getNext());
+        _gScope.browserWindowShutdown({reason: aReason}, winenu.getNext());
     }
-
-    Cu.unload(convertUrl(params, "lib/main.js"));
-}
-
-function install(params, aReason) {
-}
-
-function uninstall(params, aReason) {
 }

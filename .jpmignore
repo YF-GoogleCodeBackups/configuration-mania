@@ -1,10 +1,8 @@
 *.xpi
 node_modules
 test
-package.json
 README.*
 Gruntfile.*
-index.js
 mozunit
 tmp
 
