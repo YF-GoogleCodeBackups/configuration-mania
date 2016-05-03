@@ -11,9 +11,88 @@
   "engines": {
     "firefox": ">=38.*"
   },
-  "title": "Configuration Mania",
+  "title": "Configuration Mania?",
   "homepage": "http://bitbucket.org/cat_in_136/configuration-mania/",
   "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
+  "icon": "chrome://confmania/skin/icon.svg",
+  "permissions": {
+    "multiprocess": true
+  },
+  "unpack": false,
+  "preferences-branch": "confmania",
+  "locales": {
+    "en": {
+      "title": "Configuration Mania",
+      "description": "More Advanced (hidden) configures"
+    },
+    "ja-JP": {
+      "title": "Configuration Mania",
+      "description": "様々な隠し設定を変更する設定画面"
+    },
+    "de": {
+      "title": "Configuration Mania",
+      "description": "Zusätzliche fortgeschrittene (versteckte) Einstellungen",
+      "translators": [
+        "Markus Stadler", "Erwin D. Glockner (erglo)"
+      ]
+    },
+    "es-ES": {
+      "title": "Configuration Mania",
+      "description": "More Advanced (hidden) configures",
+      "translators": [
+        "HenryGR"
+      ]
+    },
+    "fr": {
+      "title": "Configuration Mania",
+      "description": "More Advanced (hidden) configures",
+      "translators": [
+        "myahoo"
+      ]
+    },
+    "lt": {
+      "title": "Configuration Mania",
+      "description": "More Advanced (hidden) configures",
+      "translators": [
+        "Algimantas Margevičius"
+      ]
+    },
+    "pl": {
+      "title": "Configuration Mania",
+      "description": "Zaawansowane – standardowo ukryte – ustawienia konfiguracyjne",
+      "translators": [
+        "Leszek(teo)Życzkowski"
+      ]
+    },
+    "pt-BR": {
+      "title": "Configuration Mania",
+      "description": "More Advanced (hidden) configures",
+      "translators": [
+        "Leopardus Tigrinus", "Éctor (petruc)"
+      ]
+    },
+    "sv-SE": {
+      "title": "Configuration Mania",
+      "description": "Ger åtkomst till avancerade (dolda) inställningar",
+      "translators": [
+        "Johan Fredin (komsip)", "Mikael Hiort af Ornäs"
+      ]
+    },
+    "zh-CN": {
+      "title": "Configuration Mania",
+      "description": "调整更多的隐藏选项",
+      "translators": [
+        "fang5566", "YFdyh000"
+      ]
+    },
+    "zh-TW": {
+      "title": "Configuration Mania",
+      "description": "調整更多的（隱藏）選項",
+      "translators": [
+        "otakutw"
+      ]
+    }
+  },
   "license": "MPL-2.0",
   "main": "./index.js",
   "devDependencies": {
