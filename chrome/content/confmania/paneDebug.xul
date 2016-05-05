@@ -59,6 +59,7 @@
   <preference name="extensions.logging.enabled" id="extensions.logging.enabled" type="bool"/>
   <preference name="devtools.chrome.enabled" id="devtools.chrome.enabled" type="bool"/>
   <preference name="devtools.debugger.remote-enabled" id="devtools.debugger.remote-enabled" type="bool"/>
+  <preference name="ui.popup.disable_autohide" id="ui.popup.disable_autohide" type="bool"/>
   <preference name="nglayout.debug.disable_xul_cache" id="nglayout.debug.disable_xul_cache" type="bool"/>
   <preference name="browser.cache.disk.enable" id="browser.cache.disk.enable" type="bool" inverted="true"/>
   <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
@@ -94,6 +95,8 @@
 <checkbox label="&debug.devtools.debugger_remote_enabled.label;"
           preference="devtools.debugger.remote-enabled"/>
 </groupbox>
+
+<checkbox label="&debug.popup_disable_autohide.label;" preference="ui.popup.disable_autohide" data-require-version="47"/>
 
 <groupbox orient="horizontal">
 <caption label="&debug.cache.label;"/>
