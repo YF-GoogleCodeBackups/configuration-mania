@@ -132,7 +132,7 @@
   <preference id="media.gstreamer.enabled" name="media.gstreamer.enabled" type="bool"/>
   <preference id="media.ffmpeg.enabled" name="media.ffmpeg.enabled" type="bool"/>
   <preference id="media.ffvpx.enabled" name="media.ffvpx.enabled" type="bool"/>
-  <preference id="media.gmp.enabled" name="media.gmp.enabled" type="bool"/>
+  <preference id="media.gmp.decoder.enabled" name="media.gmp.decoder.enabled" type="bool"/>
   <preference id="media.apple.mp3.enabled" name="media.apple.mp3.enabled" type="bool"/>
   <preference id="media.apple.mp4.enabled" name="media.apple.mp4.enabled" type="bool"/>
   <preference id="media.mediasource.enabled" name="media.mediasource.enabled" type="bool"/>
@@ -484,7 +484,7 @@
   <checkbox label="&browser.multimedia.gstreamer-enabled.label;" preference="media.gstreamer.enabled" data-obsolete-version-since="44"/>
   <checkbox label="&browser.multimedia.ffmpeg-enabled.label;" preference="media.ffmpeg.enabled" data-require-version="44"/>
   <checkbox label="&browser.multimedia.ffvpx-enabled.label;" preference="media.ffvpx.enabled" data-require-version="45"/>
-  <checkbox label="&browser.multimedia.gmp-enabled.label;" preference="media.gmp.enabled" data-require-version="44"/>
+  <checkbox label="&browser.multimedia.gmp-decoder-enabled.label;" preference="media.gmp.decoder.enabled" data-require-version="44"/>
   <checkbox label="&browser.multimedia.apple-mp3-enabled.label;" preference="media.apple.mp3.enabled"/>
   <checkbox label="&browser.multimedia.apple-mp4-enabled.label;" preference="media.apple.mp4.enabled"/>
 

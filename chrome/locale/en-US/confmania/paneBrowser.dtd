@@ -110,7 +110,7 @@
 <!ENTITY browser.multimedia.gstreamer-enabled.label "Enable GStreamer (Linux)">
 <!ENTITY browser.multimedia.ffmpeg-enabled.label "Enable FFmpeg">
 <!ENTITY browser.multimedia.ffvpx-enabled.label "Enable built-in FFVPX">
-<!ENTITY browser.multimedia.gmp-enabled.label "Enable Gecko Media Plugins (GMPs)">
+<!ENTITY browser.multimedia.gmp-decoder-enabled.label "Enable Gecko Media Plugin (GMP) Decoder">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Enable Apple MP3 (Mac)">
 <!ENTITY browser.multimedia.apple-mp4-enabled.label "Enable Apple MP4 (Mac)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Enable Media Source Extensions">
