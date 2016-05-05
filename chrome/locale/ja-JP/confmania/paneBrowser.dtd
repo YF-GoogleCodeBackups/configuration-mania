@@ -110,7 +110,7 @@
 <!ENTITY browser.multimedia.gstreamer-enabled.label "GStreamerを有効にする (Linux)">
 <!ENTITY browser.multimedia.ffmpeg-enabled.label "FFmpegを有効にする">
 <!ENTITY browser.multimedia.ffvpx-enabled.label "ビルトインのFFVPXを有効にする">
-<!ENTITY browser.multimedia.gmp-enabled.label "Gecko Media Plugins (GMPs) を有効にする">
+<!ENTITY browser.multimedia.gmp-decoder-enabled.label "Gecko Media Plugin (GMP) Decoder を有効にする">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Apple MP3を有効にする (Mac)">
 <!ENTITY browser.multimedia.apple-mp4-enabled.label "Apple MP4を有効にする (Mac)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Media Source Extensions を有効にする">
