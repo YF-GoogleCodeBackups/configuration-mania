@@ -108,7 +108,11 @@
 <!ENTITY browser.multimedia.windows-media-foundation-play-stand-alone.label "Play stand-alone">
 <!ENTITY browser.multimedia.directshow-enabled.label "Enable Direct Show (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "Enable GStreamer (Linux)">
+<!ENTITY browser.multimedia.ffmpeg-enabled.label "Enable FFmpeg">
+<!ENTITY browser.multimedia.ffvpx-enabled.label "Enable built-in FFVPX">
+<!ENTITY browser.multimedia.gmp-enabled.label "Enable Gecko Media Plugins (GMPs)">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Enable Apple MP3 (Mac)">
+<!ENTITY browser.multimedia.apple-mp4-enabled.label "Enable Apple MP4 (Mac)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Enable Media Source Extensions">
 <!ENTITY browser.multimedia.mediasource.formats.label "Supported Formats">
 <!ENTITY browser.webapi.label "Web API">

@@ -125,11 +125,16 @@
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
 
+  <preference id="media.wmf.enabled" name="media.wmf.enabled" type="bool"/>
   <preference id="media.windows-media-foundation.enabled" name="media.windows-media-foundation.enabled" type="bool"/>
   <preference id="media.windows-media-foundation.play-stand-alone" name="media.windows-media-foundation.play-stand-alone" type="bool"/>
   <preference id="media.directshow.enabled" name="media.directshow.enabled" type="bool"/>
   <preference id="media.gstreamer.enabled" name="media.gstreamer.enabled" type="bool"/>
+  <preference id="media.ffmpeg.enabled" name="media.ffmpeg.enabled" type="bool"/>
+  <preference id="media.ffvpx.enabled" name="media.ffvpx.enabled" type="bool"/>
+  <preference id="media.gmp.enabled" name="media.gmp.enabled" type="bool"/>
   <preference id="media.apple.mp3.enabled" name="media.apple.mp3.enabled" type="bool"/>
+  <preference id="media.apple.mp4.enabled" name="media.apple.mp4.enabled" type="bool"/>
   <preference id="media.mediasource.enabled" name="media.mediasource.enabled" type="bool"/>
   <preference id="media.mediasource.mp4.enabled" name="media.mediasource.mp4.enabled" type="bool"/>
   <preference id="media.mediasource.webm.enabled" name="media.mediasource.webm.enabled" type="bool"/>
@@ -472,11 +477,16 @@
    preference="browser.chrome.favicons"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="multimedia">
-  <checkbox label="&browser.multimedia.windows-media-foundation-enabled.label;" preference="media.windows-media-foundation.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onMultiMediaWMFEnabledSyncFrom();"/>
+  <checkbox label="&browser.multimedia.windows-media-foundation-enabled.label;" preference="media.wmf.enabled" data-require-version="44"/>
+  <checkbox label="&browser.multimedia.windows-media-foundation-enabled.label;" preference="media.windows-media-foundation.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onMultiMediaWMFEnabledSyncFrom();" data-obsolete-version-since="42"/>
   <checkbox class="indent" label="&browser.multimedia.windows-media-foundation-play-stand-alone.label;" preference="media.windows-media-foundation.play-stand-alone"/>
   <checkbox label="&browser.multimedia.directshow-enabled.label;" preference="media.directshow.enabled"/>
-  <checkbox label="&browser.multimedia.gstreamer-enabled.label;" preference="media.gstreamer.enabled"/>
+  <checkbox label="&browser.multimedia.gstreamer-enabled.label;" preference="media.gstreamer.enabled" data-obsolete-version-since="44"/>
+  <checkbox label="&browser.multimedia.ffmpeg-enabled.label;" preference="media.ffmpeg.enabled" data-require-version="44"/>
+  <checkbox label="&browser.multimedia.ffvpx-enabled.label;" preference="media.ffvpx.enabled" data-require-version="45"/>
+  <checkbox label="&browser.multimedia.gmp-enabled.label;" preference="media.gmp.enabled" data-require-version="44"/>
   <checkbox label="&browser.multimedia.apple-mp3-enabled.label;" preference="media.apple.mp3.enabled"/>
+  <checkbox label="&browser.multimedia.apple-mp4-enabled.label;" preference="media.apple.mp4.enabled"/>
 
   <checkbox label="&browser.multimedia.mediasource.enabled.label;" preference="media.mediasource.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onMultiMediaMediaSourceEnabledSyncFrom();"/>
   <groupbox id="multimedia-mediasource-formats" class="indent" orient="horizontal">

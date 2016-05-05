@@ -108,7 +108,11 @@
 <!ENTITY browser.multimedia.windows-media-foundation-play-stand-alone.label "スタンドアロンで再生">
 <!ENTITY browser.multimedia.directshow-enabled.label "Direct Showを有効にする (Windows)">
 <!ENTITY browser.multimedia.gstreamer-enabled.label "GStreamerを有効にする (Linux)">
+<!ENTITY browser.multimedia.ffmpeg-enabled.label "FFmpegを有効にする">
+<!ENTITY browser.multimedia.ffvpx-enabled.label "ビルトインのFFVPXを有効にする">
+<!ENTITY browser.multimedia.gmp-enabled.label "Gecko Media Plugins (GMPs) を有効にする">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Apple MP3を有効にする (Mac)">
+<!ENTITY browser.multimedia.apple-mp4-enabled.label "Apple MP4を有効にする (Mac)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Media Source Extensions を有効にする">
 <!ENTITY browser.multimedia.mediasource.formats.label "対応形式">
 <!ENTITY browser.webapi.label "Web API">
