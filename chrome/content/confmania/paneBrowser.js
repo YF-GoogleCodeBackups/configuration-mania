@@ -227,20 +227,9 @@ gPrefWindow.prefBrowser = {
     }
     return undefined; // no override
   },
-  onViewSourceTabSyncFrom: function() {
-    return gPrefWindow.prefBrowser.onEditorExternalSyncFrom();
-  },
   onEditorExternalSyncFrom : function() {
-    let disabled = document.getElementById("view_source.tab").value;
-    if (disabled) {
-      document.getElementById("view_source.editor.external").disabled = true;
-      document.getElementById("view_source.editor.path").disabled = true;
-    } else {
-      document.getElementById("view_source.editor.external").disabled = false;
-      let disabledPath = ! document.getElementById("view_source.editor.external").value;
-      document.getElementById("view_source.editor.path").disabled = disabledPath;
-    }
-
+    let disabledPath = ! document.getElementById("view_source.editor.external").value;
+    document.getElementById("view_source.editor.path").disabled = disabledPath;
     return undefined; // no override
   },
   getFirefoxUserAgent : function(option) {

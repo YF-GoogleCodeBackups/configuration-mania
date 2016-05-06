@@ -695,8 +695,7 @@
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 
   <checkbox id="others-viewSourceTab" label="&browser.others.viewSourceTab.label;" preference="view_source.tab"
-          onsyncfrompreference="return gPrefWindow.prefBrowser.onViewSourceTabSyncFrom()"
-          data-require-version="40+"/>
+          data-require-version="40"/>
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
             onsyncfrompreference="return gPrefWindow.prefBrowser.onEditorExternalSyncFrom()"/>
   <hbox id="others-editorExternal-hbox" class="indent" align="center">
