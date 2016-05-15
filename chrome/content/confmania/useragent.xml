@@ -30,13 +30,13 @@
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
 
-    <option name="Chrome 49.0.2623.110 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="49.0.2623.110"/>
-    <option name="Chrome 49.0.2623.110 (Windows 10)" platform="Windows" oscpu="Windows NT 10.0" webkit="537.36" version="49.0.2623.110"/>
-    <option name="Chrome 49.0.2623.110 (MacOS X 10.11.3)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_3" webkit="537.36" version="49.0.2623.110"/>
-    <option name="Chrome 49.0.2623.110 (Nexus 6; Android 6.0.1)" platform="Linux" oscpu="Android 6.0.1; Nexus 6 Build/MMB29K" webkit="537.36" version="47.0.2526.100"/>
+    <option name="Chrome 50.0.2661.102 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="50.0.2661.102"/>
+    <option name="Chrome 50.0.2661.102 (Windows 10)" platform="Windows" oscpu="Windows NT 10.0" webkit="537.36" version="50.0.2661.102"/>
+    <option name="Chrome 50.0.2661.102 (MacOS X 10.11.4)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_4" webkit="537.36" version="50.0.2661.102"/>
+    <option name="Chrome 50.0.2661.89 (Nexus 6; Android 6.0.1)" platform="Linux" oscpu="Android 6.0.1; Nexus 6 Build/MMB29K" webkit="537.36" version="50.0.2661.89"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
-    <option name="Safari 9.0.3 (Intel MacOS X 10.11.3)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_3" webkit="601.4.4" safari="601.4.4" version="9.0.3"/>
+    <option name="Safari 9.1 (Intel MacOS X 10.11.4)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_4" webkit="601.5.17" safari="601.5.17" version="9.1"/>
 
     <option name="Safari 9.0 (iPhone; iOS 9.3.1)" platform="iPhone" oscpu="CPU iPhone OS 9_3_1 like Mac OS X" webkit="601.1.46" safari="601.1" version="9.0 Mobile/13E238"/>
     <option name="Safari 9.0 (iPad; iOS 9.3.1)" platform="iPad" oscpu="CPU OS 9_3_1 like Mac OS X" webkit="601.1.46" safari="601.1" version="9.0 Mobile/13E238"/>
