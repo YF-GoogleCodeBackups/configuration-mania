@@ -101,6 +101,7 @@
           preference="extensions.install.requireBuiltInCerts"
           onsynctopreference="return gPrefWindow.syncTo(this, false);"/>
 <checkbox label="&addons.oopp.label;"
+          data-obsolete-version-since="43"
           preference="dom.ipc.plugins.enabled"/>
 <checkbox label="&addons.alwaysUnpack.label;"
           preference="extensions.alwaysUnpack"/>
