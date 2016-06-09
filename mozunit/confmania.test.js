@@ -134,8 +134,6 @@ tc.tests = {
       let channel;
 
       assert.equals(addonObj.userDisabled, false);
-      channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
-      assert.isDefined(channel);
       channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
       assert.isDefined(channel);
       channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
@@ -146,11 +144,6 @@ tc.tests = {
       addonObj.userDisabled = true;
       sleep(100);
       assert.equals(addonObj.userDisabled, true);
-      try {
-        channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
-        assert.fail("chrome://confmania/content/preferences.xul is not unloaded.");
-      } catch (e) {
-      }
       try {
         channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
         assert.fail("chrome://confmania/skin/preferences.css is not unloaded.");
@@ -170,8 +163,6 @@ tc.tests = {
       addonObj.userDisabled = false;
       sleep(100);
       assert.equals(addonObj.userDisabled, false);
-      channel = Services.io.newChannel("chrome://confmania/content/preferences.xul", null, null);
-      assert.isDefined(channel);
       channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
       assert.isDefined(channel);
       channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
@@ -186,9 +177,6 @@ tc.tests = {
   },
   
   testOpenConfMania: function() {
-    let origICvalue = (Services.prefs.prefHasUserValue("browser.preferences.inContent"))? Services.prefs.getBoolPref("browser.preferences.inContent") : undefined;
-    let origIAvalue = (Services.prefs.prefHasUserValue("browser.preferences.instantApply"))? Services.prefs.getBoolPref("browser.preferences.instantApply") : undefined;
-
     let cmd = this.win.document.getElementById("ConfMania:Open");
     assert.isDefined(cmd);
 
@@ -199,9 +187,6 @@ tc.tests = {
 
       // inContent.
       {
-        Services.prefs.setBoolPref("browser.preferences.inContent", true);
-        Services.prefs.setBoolPref("browser.preferences.instantApply", true);
-
         let browserWin = Services.wm.getMostRecentWindow("navigator:browser");
 
         cmd.click();
@@ -211,86 +196,21 @@ tc.tests = {
                       "about:confmania");
 
         browserWin.getBrowser().removeCurrentTab();
-
-        Services.prefs.setBoolPref("browser.preferences.inContent", true);
-        Services.prefs.setBoolPref("browser.preferences.instantApply", false);
-
-        cmd.click();
-        sleep(2000);
-
-        assert.equals(browserWin.getBrowser().currentURI.spec,
-                      "about:confmania");
-
-        browserWin.getBrowser().removeCurrentTab();
-      }
-
-      // instantApply.
-      {
-        Services.prefs.setBoolPref("browser.preferences.inContent", false);
-        Services.prefs.setBoolPref("browser.preferences.instantApply", true);
-
-        cmd.click();
-        sleep(1000);
-        let cmwin = Services.wm.getMostRecentWindow("Browser:Confmania");
-        assert.isDefined(cmwin);
-
-        cmd.click();
-        sleep(100);
-        let cmwin2 = Services.wm.getMostRecentWindow("Browser:Confmania");
-        assert.isTrue(cmwin === cmwin2);
-
-        cmwin.close();
-        sleep(1000);
-
-        assert.isNull(Services.wm.getMostRecentWindow("Browser:Confmania"));
-      }
-      {
-        Services.prefs.setBoolPref("browser.preferences.inContent", false);
-        Services.prefs.setBoolPref("browser.preferences.instantApply", false);
-      
-        var confmaniaIsOpened = false;
-        dialogHandler.onOpen = (function (cmwin) {
-          sleep(100);
-          confmaniaIsOpened = true;
-          cmwin.close();
-        }).bind(this);
-        cmd.click();
-
-        dialogHandler.onOpen = function () {};
-
-        assert.isTrue(confmaniaIsOpened);
       }
     } catch (e) {
       throw e;
     } finally {
       Services.ww.unregisterNotification(dialogObserver);
-
-      if (origICvalue !== undefined) {
-        Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
-      } else {
-        Services.prefs.clearUserPref("browser.preferences.inContent");
-      }
-      if (origIAvalue !== undefined) {
-        Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
-      } else {
-        Services.prefs.clearUserPref("browser.preferences.instantApply");
-      }
     }
   },
 
   testLoadAllPaneInContent: function() {
-    let origICvalue = (Services.prefs.prefHasUserValue("browser.preferences.inContent"))? Services.prefs.getBoolPref("browser.preferences.inContent") : undefined;
-    let origIAvalue = (Services.prefs.prefHasUserValue("browser.preferences.instantApply"))? Services.prefs.getBoolPref("browser.preferences.instantApply") : undefined;
-
     let cmd = this.win.document.getElementById("ConfMania:Open");
     assert.isDefined(cmd);
 
     try {
       // in-content
       {
-        Services.prefs.setBoolPref("browser.preferences.inContent", true);
-        Services.prefs.setBoolPref("browser.preferences.instantApply", true);
-
         cmd.click();
         sleep(2000);
 
@@ -355,140 +275,9 @@ tc.tests = {
 
         browserWin.getBrowser().removeCurrentTab();
       }
-      // in-content
-      {
-        Services.prefs.setBoolPref("browser.preferences.inContent", true);
-        Services.prefs.setBoolPref("browser.preferences.instantApply", false);
-
-        cmd.click();
-        sleep(2000);
-
-        let browserWin = Services.wm.getMostRecentWindow("navigator:browser");
-
-        assert.equals(browserWin.getBrowser().currentURI.spec,
-                      "about:confmania");
-
-        let win = browserWin.getBrowser().contentWindow;
-
-        assert.isTrue(win.document.documentElement.instantApply);
-
-        browserWin.getBrowser().removeCurrentTab();
-      }
     } catch (e) {
       throw e;
     } finally {
-      if (origICvalue !== undefined) {
-        Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
-      } else {
-        Services.prefs.clearUserPref("browser.preferences.inContent");
-      }
-      if (origIAvalue !== undefined) {
-        Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
-      } else {
-        Services.prefs.clearUserPref("browser.preferences.instantApply");
-      }
-    }
-  },
-  testLoadAllPaneOnDialog: function() {
-    let origICvalue = (Services.prefs.prefHasUserValue("browser.preferences.inContent"))? Services.prefs.getBoolPref("browser.preferences.inContent") : undefined;
-    let origIAvalue = (Services.prefs.prefHasUserValue("browser.preferences.instantApply"))? Services.prefs.getBoolPref("browser.preferences.instantApply") : undefined;
-
-    let cmd = this.win.document.getElementById("ConfMania:Open");
-    assert.isDefined(cmd);
-
-    var dialogHandler = { onOpen: function(){}, onClose: function(){} };
-    let dialogObserver = new DialogObserver("Browser:Confmania", dialogHandler);
-    try {
-      Services.ww.registerNotification(dialogObserver);
-
-      // instantApply.
-      {
-        Services.prefs.setBoolPref("browser.preferences.inContent", false);
-        Services.prefs.setBoolPref("browser.preferences.instantApply", true);
-
-        cmd.click();
-        sleep(2000);
-
-        let cmwin = Services.wm.getMostRecentWindow("Browser:Confmania");
-        let document = cmwin.document;
-        let prefWin  = document.documentElement;
-
-        assert.isTrue(prefWin.currentPane.loaded);
-
-        assert.isTrue(document.documentElement.instantApply);
-
-        assert.equals(
-          "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug",
-          Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
-        );
-
-        for (let v of ("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
-          prefWin.showPane(document.getElementById(v));
-          sleep(1000);
-          assert.equals(v, prefWin.currentPane.id);
-          assert.isTrue(prefWin.currentPane.loaded);
-
-          assert.isTrue(prefWin.currentPane.childNodes.length > 0);
-        }
-
-        cmwin.close();
-      }
-      // non-instantApply.
-      {
-        Services.prefs.setBoolPref("browser.preferences.inContent", false);
-        Services.prefs.setBoolPref("browser.preferences.instantApply", false);
-
-        let exception = undefined;
-        dialogHandler.onOpen = function (cmwin) {
-          try {
-            let document = cmwin.document;
-            let prefWin  = document.documentElement;
-
-            assert.isTrue(prefWin.currentPane.loaded);
-
-            assert.isFalse(document.documentElement.instantApply);
-
-            assert.equals(
-              "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug",
-              Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
-            );
-
-            for (let v of ("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
-              prefWin.showPane(document.getElementById(v));
-              sleep(1000);
-              assert.equals(v, prefWin.currentPane.id);
-              assert.isTrue(prefWin.currentPane.loaded);
-
-              assert.isTrue(prefWin.currentPane.childNodes.length > 0);
-            }
-          } catch (e) {
-            exception = e;
-          } finally {
-            cmwin.close();
-          }
-        };
-        cmd.click();
-        dialogHandler.onOpen = function () {};
-
-        if (!!exception) {
-          throw exception;
-        }
-      }
-    } catch (e) {
-      throw e;
-    } finally {
-      Services.ww.unregisterNotification(dialogObserver);
-
-      if (origICvalue !== undefined) {
-        Services.prefs.setBoolPref("browser.preferences.inContent", origICvalue);
-      } else {
-        Services.prefs.clearUserPref("browser.preferences.inContent");
-      }
-      if (origIAvalue !== undefined) {
-        Services.prefs.setBoolPref("browser.preferences.instantApply", origIAvalue);
-      } else {
-        Services.prefs.clearUserPref("browser.preferences.instantApply");
-      }
     }
   },
 }
