@@ -92,7 +92,7 @@ tc.tests = {
         Services.prefs.setBoolPref("intl.locale.matchOS", false);
 
         // XUL and DTD files
-        for (let fileName of ["paneAddons.xul", "paneDebug.xul", "preferences.xul", "paneBrowser.xul", "preferences_in_content.xul", "paneUI.xul", "paneSecurity.xul", "paneHTTP.xul"]) {
+        for (let fileName of ["paneAddons.xul", "paneDebug.xul", "paneBrowser.xul", "preferences_in_content.xul", "paneUI.xul", "paneSecurity.xul", "paneHTTP.xul"]) {
           let req = Cc["@mozilla.org/xmlextras/xmlhttprequest;1"]
                     .createInstance(Ci.nsIXMLHttpRequest);
           req.open("GET", "chrome://confmania/content/" + fileName, false);
@@ -159,52 +159,6 @@ tc.tests = {
         }
 
         browserWin.getBrowser().removeCurrentTab();
-      }
-    } catch (e) {
-      throw e;
-    } finally {
-      Services.prefs.setCharPref("general.useragent.locale", origULvalue);
-      Services.prefs.setBoolPref("intl.locale.matchOS", origMOvalue);
-    }
-  },
-  testLoadAllPaneOnDialog: function() {
-    let browserWin = Services.wm.getMostRecentWindow("navigator:browser");
-    let origULvalue = Services.prefs.getCharPref("general.useragent.locale");
-    let origMOvalue = Services.prefs.getBoolPref("intl.locale.matchOS");
-
-    try {
-      for (let locale of CONF_MANIA_LOCALES) {
-        Services.prefs.setCharPref("general.useragent.locale", locale);
-        Services.prefs.setBoolPref("intl.locale.matchOS", false);
-
-        let features = 'chrome,titlebar,toolbar,centerscreen,resizable,dialog=no';
-        browserWin.openDialog("chrome://confmania/content/preferences.xul", "confmania", features);
-
-        sleep(1000);
-
-        let cmwin = Services.wm.getMostRecentWindow("Browser:Confmania");
-        let document = cmwin.document;
-        let prefWin  = document.documentElement;
-
-        assert.isTrue(prefWin.currentPane.loaded);
-
-        assert.isTrue(document.documentElement.instantApply);
-
-        assert.equals(
-          "paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug",
-          Array.map(prefWin.preferencePanes, function(v) { return v.id; }).join(" ")
-        );
-
-        for (let v of ("paneBrowser paneSecurity paneHTTP paneUI paneAddons paneDebug".split(" "))) {
-          prefWin.showPane(document.getElementById(v));
-          sleep(1000);
-          assert.equals(v, prefWin.currentPane.id);
-          assert.isTrue(prefWin.currentPane.loaded);
-
-          assert.isTrue(prefWin.currentPane.childNodes.length > 0);
-        }
-
-        cmwin.close();
       }
     } catch (e) {
       throw e;
