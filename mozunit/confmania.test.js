@@ -134,7 +134,7 @@ tc.tests = {
       let channel;
 
       assert.equals(addonObj.userDisabled, false);
-      channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
+      channel = Services.io.newChannel("chrome://confmania/skin/preferences-in-content.css", null, null);
       assert.isDefined(channel);
       channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
       assert.isDefined(channel);
@@ -145,8 +145,8 @@ tc.tests = {
       sleep(100);
       assert.equals(addonObj.userDisabled, true);
       try {
-        channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
-        assert.fail("chrome://confmania/skin/preferences.css is not unloaded.");
+        channel = Services.io.newChannel("chrome://confmania/skin/preferences-in-content.css", null, null);
+        assert.fail("chrome://confmania/skin/preferences-in-content.css is not unloaded.");
       } catch (e) {
       }
       try {
@@ -163,7 +163,7 @@ tc.tests = {
       addonObj.userDisabled = false;
       sleep(100);
       assert.equals(addonObj.userDisabled, false);
-      channel = Services.io.newChannel("chrome://confmania/skin/preferences.css", null, null);
+      channel = Services.io.newChannel("chrome://confmania/skin/preferences-in-content.css", null, null);
       assert.isDefined(channel);
       channel = Services.io.newChannel("chrome://confmania/locale/confmania.dtd", null, null);
       assert.isDefined(channel);
