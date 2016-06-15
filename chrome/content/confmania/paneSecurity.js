@@ -98,14 +98,8 @@ gPrefWindow.prefSecurity = {
     params.windowTitle = document.getElementById("trackingprotection-showTrackingProtectionExceptions").getAttribute("data-dialog-title");
     params.introText   = document.getElementById("trackingprotection-showTrackingProtectionExceptions").getAttribute("data-dialog-desc");
 
-    if (openDialog) { // in-Content
-      openDialog("chrome://browser/content/preferences/permissions.xul", 
-                 "Browser:Permissions", "resizable=yes", params);
-    } else if (document.documentElement.openWindow) {
-      document.documentElement.openWindow("Browser:Permissions",
-                                          "chrome://browser/content/preferences/permissions.xul",
-                                          "", params);
-    }
+    openDialog("chrome://browser/content/preferences/permissions.xul", 
+               "Browser:Permissions", "resizable=yes", params);
   },
   updatePasswordAskTimes : function(){
     var radiogroup = document.getElementById("passwordAskTimes");

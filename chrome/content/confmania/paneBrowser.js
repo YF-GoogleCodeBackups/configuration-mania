@@ -113,14 +113,8 @@ gPrefWindow.prefBrowser = {
     params.windowTitle = document.getElementById("html-showImageExceptions").getAttribute("data-dialog-title");
     params.introText   = document.getElementById("html-showImageExceptions").getAttribute("data-dialog-desc");
 
-    if (openDialog) { // in-Content
-      openDialog("chrome://browser/content/preferences/permissions.xul", 
-                 "Browser:Permissions", "resizable=yes", params);
-    } else if (document.documentElement.openWindow) {
-      document.documentElement.openWindow("Browser:Permissions",
-                                          "chrome://browser/content/preferences/permissions.xul",
-                                          "", params);
-    }
+    openDialog("chrome://browser/content/preferences/permissions.xul", 
+               "Browser:Permissions", "resizable=yes", params);
   },
   onFocusHighlightSyncFrom : function() {
     let disabled = ! document.getElementById("browser.display.use_focus_colors").value;
@@ -187,14 +181,8 @@ gPrefWindow.prefBrowser = {
     params.windowTitle = document.getElementById("webapi-geoExceptions").getAttribute("data-dialog-title");
     params.introText   = document.getElementById("webapi-geoExceptions").getAttribute("data-dialog-desc");
 
-    if (openDialog) { // in-Content
-      openDialog("chrome://browser/content/preferences/permissions.xul", 
-                 "Browser:Permissions", "resizable=yes", params);
-    } else if (document.documentElement.openWindow) {
-      document.documentElement.openWindow("Browser:Permissions",
-                                          "chrome://browser/content/preferences/permissions.xul",
-                                          "", params);
-    }
+    openDialog("chrome://browser/content/preferences/permissions.xul", 
+               "Browser:Permissions", "resizable=yes", params);
   },
   onWebAPIFullScreenEnabledSyncFrom : function () {
     let disabled = document.getElementById("full-screen-api.enabled").value;
@@ -206,14 +194,8 @@ gPrefWindow.prefBrowser = {
     params.windowTitle = document.getElementById("webapi-full_screenExceptions").getAttribute("data-dialog-title");
     params.introText   = document.getElementById("webapi-full_screenExceptions").getAttribute("data-dialog-desc");
 
-    if (openDialog) { // in-Content
-      openDialog("chrome://browser/content/preferences/permissions.xul", 
-                 "Browser:Permissions", "resizable=yes", params);
-    } else if (document.documentElement.openWindow) {
-      document.documentElement.openWindow("Browser:Permissions",
-                                          "chrome://browser/content/preferences/permissions.xul",
-                                          "", params);
-    }
+    openDialog("chrome://browser/content/preferences/permissions.xul", 
+               "Browser:Permissions", "resizable=yes", params);
   },
   onInterruptParseSyncFrom : function() {
     let disabled = document.getElementById("content.interrupt.parsing").value;
