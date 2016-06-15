@@ -1,6 +1,19 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
+.listBox {
+  -moz-appearance: listbox;
+  margin: 2px 4px;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+  background: -moz-Field;
+  color: -moz-FieldText;
+  overflow: auto;
+}
+
 @media (max-height: 359px) {
   #categories {
     padding-top: calc(100vh - 320px);
@@ -60,17 +73,32 @@ button[type="menu"] > .button-box > .button-menu-dropmarker {
   -moz-appearance: toolbarbutton-dropdown !important;
 }
 
+
+.subtabs, .subtabpanel {
+  -moz-appearance: listbox;
+  border: 2px solid;
+  background: -moz-Field;
+  color: -moz-FieldText;
+
+  overflow: auto;
+}
 .subtabs {
+  overflow-x: hidden;
+  overflow-y: auto;
+  
   border-top: none !important;
   border-bottom: none !important;
   border-left: solid 1px #C1C1C1 !important;
   border-right: solid 1px #C1C1C1 !important;
 }
-
 .subtabs .subtab {
+  -moz-appearance: none;
+  margin: 0;
+  padding: 4px;
   border-style: none;
   border-left: 4px solid transparent;
-  padding: 4px;
+  background: -moz-Field;
+  color: -moz-FieldText;
 }
 .subtabs .subtab:hover {
   background-color: #EBEBEB;
@@ -79,6 +107,26 @@ button[type="menu"] > .button-box > .button-menu-dropmarker {
   border-left: 4px solid #FF9500;
   background-color: #EBEBEB;
   color: #212121;
+}
+.subtabs .subtab * {
+  background-image: none ! important;
+}
+.subtabs .subtab .radio-spacer-box,
+.subtabs .subtab .radio-check,
+.subtabs .subtab .radio-check-box1 {
+  visibility: collapse;
+}
+.subtabpanel {
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+.subtabpanel {
+  visibility: collapse;
+  opacity: 0;
+}
+.subtabpanel[selected="true"] {
+  visibility: visible;
+  opacity: 1;
 }
 
 
@@ -101,4 +149,72 @@ caption {
   .subpanel groupbox .groupbox-body, .indent {
     -moz-margin-start: 13px;
   }
+}
+
+
+/* checkbox which is disabled for changes but non-gray text (i.e., in effect) */
+checkbox.nogray-disabled[disabled="true"][nogray="true"] {
+  color: inherit;
+  text-shadow: inherit;
+}
+
+.emphasis{ font-weight: bold ! important; }
+vbox.warning {
+  border-width: 0 0 0 4px;
+  border-radius: 2px;
+  border-width: 0 0 0 4px;
+  border-style: solid;
+  padding: 4px 4px 2px;
+  
+	background:#fad7d4;
+	border-color:#f08a81;
+}
+
+*|*:-moz-any-link:hover{ color: -moz-nativehyperlinktext; text-decoration: underline; }
+
+description[disabled="true"] { color: GrayText; }
+/* XXX This style is for bug 740213 and should be removed once that
+   bug has a solution. */
+description > *|*:-moz-any-link {
+  cursor: pointer;
+}
+
+*[data-obsolete-msg]::after, *[data-require-msg]::after, *[data-require-obsolete-msg]::after {
+  border-width: 0 0 0 4px;
+  font-size: x-small;
+  border-radius: 2px;
+  border-width: 0 0 0 4px;
+  border-style: solid;
+  padding: 4px 4px 2px;
+  display: inline-block;
+  vertical-align: top;
+  font-weight: 400;
+  line-height: normal;
+}
+*[data-obsolete-msg]::after {
+  content: attr(data-obsolete-msg);
+	background:#fad7d4;
+	border-color:#f08a81;
+}
+*[data-require-msg]::after {
+  content: attr(data-require-msg);
+  background:#cce9f8;
+	border-color:#7dc7ed;
+}
+*[data-require-obsolete-msg]::after {
+  content: attr(data-require-obsolete-msg);
+  background:#fff4cc;
+	border-color:#ffe070;
+}
+*[data-obsolete-msg][disabled]::after, *[data-require-msg][disabled]::after, *[data-require-obsolete-msg][disabled]::after {
+  opacity: 0.5;
+}
+*[data-obsolete-msg]:not([disabled="true"]):hover::after, *[data-require-msg]:not([disabled="true"]):hover::after, *[data-require-obsolete-msg]:not([disabled="true"]):hover::after {
+  outline: 1px solid #0095dd;
+  -moz-outline-radius: 4px;
+}
+
+listbox > listrows > listboxbody {
+  display: flex;
+  flex-direction: column;
 }
