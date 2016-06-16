@@ -53,7 +53,7 @@
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane id="paneHTTP" flex="1">
 
-<script type="application/javascript;version=1.8" src="paneHTTP.js"></script>
+<script type="application/javascript" src="paneHTTP.js"></script>
 
 <preferences>
   <preference id="network.http.version" name="network.http.version" type="string"/>

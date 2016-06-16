@@ -65,7 +65,7 @@
   <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
 </preferences>
 
-<script type="application/javascript;version=1.8" src="paneDebug.js"></script>
+<script type="application/javascript" src="paneDebug.js"></script>
 
 <groupbox>
 <caption label="&debug.debug.label;"/>

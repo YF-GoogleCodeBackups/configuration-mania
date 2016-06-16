@@ -50,7 +50,7 @@
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane id="paneSecurity" flex="1">
 
-<script type="application/javascript;version=1.8" src="paneSecurity.js"></script>
+<script type="application/javascript" src="paneSecurity.js"></script>
 
 <preferences>
   <preference id="javascript.enabled" name="javascript.enabled" type="bool"/>
