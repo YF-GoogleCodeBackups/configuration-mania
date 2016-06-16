@@ -50,7 +50,7 @@
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane id="paneBrowser" flex="1">
 
-<script type="application/javascript;version=1.8" src="paneBrowser.js"></script>
+<script type="application/javascript" src="paneBrowser.js"></script>
 
 <preferences>
   <preference id="browser.urlbar.clickSelectsAll" name="browser.urlbar.clickSelectsAll" type="bool"/>

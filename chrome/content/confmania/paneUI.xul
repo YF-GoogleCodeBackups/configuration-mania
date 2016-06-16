@@ -51,7 +51,7 @@
  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <prefpane flex="1" id="paneUI">
 
-<script type="application/javascript;version=1.8" src="paneUI.js"></script>
+<script type="application/javascript" src="paneUI.js"></script>
 
 <preferences>
   <preference type="int" id="mousewheel.default.action" name="mousewheel.default.action"/>
