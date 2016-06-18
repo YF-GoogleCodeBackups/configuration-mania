@@ -45,6 +45,10 @@
   <command id="ConfManiaPopup:OpenAboutConfig" oncommand="gPrefWindow.onOpenAboutConfigClicked(event);"/>
   <command id="ConfManiaPopup:Mkb" oncommand="gPrefWindow.onMkbPopupClicked(event)"/>
 </commandset>
+<keyset>
+  <key modifiers="accel" key="f" oncommand="document.getElementById('pref-find').focus();gPrefWindow.prefFindShow('next');"/>
+  <key modifiers="accel shift" key="f" oncommand="document.getElementById('pref-find').focus();gPrefWindow.prefFindShow('prev');"/>
+</keyset>
 
 <popupset>
   <menupopup id="prefContextPopup">
