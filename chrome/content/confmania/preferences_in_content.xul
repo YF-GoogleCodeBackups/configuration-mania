@@ -81,7 +81,6 @@
   <box class="main-content" flex="1" orient="vertical">
     <hbox class="header">
       <label class="header-name" flex="1"/>
-      <button label="&reset;" oncommand="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"/>
     </hbox>
 
     <prefpane id="paneBrowser" label="&browser.title;" flex="1"/>
@@ -91,6 +90,16 @@
     <prefpane id="paneAddons" label="&addons.title;" flex="1"/>
     <prefpane id="paneDebug" label="&debug.title;" flex="1"/>
   </box>
+
+</hbox>
+
+<hbox id="app-bar" align="center">
+  <textbox id="pref-find" type="search" oncommand="gPrefWindow.onPrefFind(event);" placeholder="&search;"/>
+  <toolbarbutton id="pref-find-previous" class="tabbable" oncommand="gPrefWindow.prefFindShow('prev');"/>
+  <toolbarbutton id="pref-find-next" class="tabbable" oncommand="gPrefWindow.prefFindShow('next');"/>
+  <label id="pref-find-status"/>
+  <spacer flex="1"/>
+  <button label="&reset;" oncommand="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"/>
 </hbox>
 
 

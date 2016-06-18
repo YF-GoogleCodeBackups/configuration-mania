@@ -39,21 +39,19 @@ var gPrefWindow = {
   // In-content
   // =========================
   selectCategory: function(name) {
-    var categories = document.getElementById("categories");
-    var item = categories.querySelector(".category[value=" + name + "]");
-    categories.selectedItem = item;
+    let categories = document.getElementById("categories");
+    categories.selectedItem = categories.querySelector(".category[value=" + name + "]");
   },
   showPage: function(aPage) {
-    var elems = document.getElementsByTagName("prefpane");
-    for (var i = 0; i < elems.length; i++) {
-      if (elems[i].id == aPage) {
-        elems[i].selected = true;
-        elems[i].hidden = false;
+    for (let elem of document.querySelectorAll("prefpane")) {
+      if (elem.id == aPage) {
+        elem.selected = true;
+        elem.hidden = false;
 
-        document.querySelector(".main-content .header-name").value = elems[i].getAttribute("label");
+        document.querySelector(".main-content .header-name").value = elem.getAttribute("label");
       } else {
-        elems[i].selected = false;
-        elems[i].hidden = true;
+        elem.selected = false;
+        elem.hidden = true;
       }
     }
   },
@@ -67,8 +65,114 @@ var gPrefWindow = {
   },
 
   // =========================
-  // Dialog buttons
+  // App bar
   // =========================
+  ensureVisible: function (node) {
+    Array.from((function* () {
+      for (let e = node; e; e = e.parentNode) { yield e; }
+    })()).reverse().forEach((e) => {
+      if (e.nodeType === Node.ELEMENT_NODE) {
+        if (node.scrollIntoView) { node.scrollIntoView(); }
+        if (e.tagName === "prefpane") {
+          gPrefWindow.gotoPref(e.id);
+        }
+        if (e.classList.contains("subtabpanel") && e.id) {
+          document.querySelector(".subtab[value=\"" + e.id + "\"]").click();
+        }
+      }
+    });
+  },
+  getNodeIteratorForKeyword: function(keyword) {
+    let findtext = keyword.trim().toLocaleLowerCase();
+
+    let isFindMatch = (v) => (typeof(v) === "string") && (v.toLocaleLowerCase().indexOf(findtext) >= 0);
+    let iter = document.createNodeIterator(document.querySelector(".main-content"), NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT, {
+      acceptNode: (node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+          return (isFindMatch(node.data))? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+        } else if (node.nodeType === Node.ELEMENT_NODE) {
+          if (node.classList.contains("header-name")) {
+            return NodeFilter.FILTER_REJECT;
+          } else if (["menuitem", "data"].indexOf(node.localName) >= 0) {
+            return NodeFilter.FILTER_REJECT;
+          } else if (node.hasAttribute("preference") && (node.getAttribute("preference").toLocaleLowerCase() == findtext)) {
+            return NodeFilter.FILTER_ACCEPT;
+          } else {
+            return ((isFindMatch(node.getAttribute("label"))) ||
+                    ((node.localName === "label") && isFindMatch(node.getAttribute("value"))))? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+          }
+        } else {
+          return NodeFilter.FILTER_REJECT;
+        }
+      }
+    });
+
+    return (function* () {
+      for (let node = iter.nextNode(); node; node = iter.nextNode()) { yield node; }
+    })();
+  },
+  prefFindShow: function (type) {
+    let mPrefFind = document.getElementById("pref-find").mPrefFind;
+    if (mPrefFind) {
+      switch (type) {
+        case "prev":
+          mPrefFind.index = (mPrefFind.index - 1 + mPrefFind.foundNodes.length) % mPrefFind.foundNodes.length;
+          break;
+        case "next":
+          mPrefFind.index = (mPrefFind.index + 1) % mPrefFind.foundNodes.length;
+          break;
+        default:
+          break;
+      }
+
+      gPrefWindow.ensureVisible(mPrefFind.foundNodes[mPrefFind.index]);
+      for (let elem of document.querySelectorAll("*[data-highlight=active]")) {
+        elem.setAttribute("data-highlight", "");
+      }
+      let node = mPrefFind.foundNodes[mPrefFind.index];
+      ((node.nodeType === Node.TEXT_NODE)? node.parentElement : node).setAttribute("data-highlight", "active");
+      document.getElementById("pref-find-status").value = [mPrefFind.index+1, mPrefFind.foundNodes.length].join("/");
+    }
+  },
+  onPrefFind: function(event) {
+    let prefFind = document.getElementById("pref-find");
+    let findtext = prefFind.value.trim().toLocaleLowerCase();
+    if (findtext != "") {
+      if (prefFind.mPrefFind && (prefFind.mPrefFind.findtext == findtext)) {
+        gPrefWindow.prefFindShow("next");
+      } else {
+        for (let elem of document.querySelectorAll("*[data-highlight]")) {
+          elem.removeAttribute("data-highlight");
+        }
+
+        let foundNodes = Array.from(gPrefWindow.getNodeIteratorForKeyword(findtext));
+        if (foundNodes.length > 0) {
+          for (let node of foundNodes) {
+            ((node.nodeType === Node.TEXT_NODE)? node.parentElement : node).setAttribute("data-highlight", "active");
+          }
+
+          prefFind.mPrefFind = { findtext, foundNodes, index: 0 };
+          gPrefWindow.prefFindShow("current");
+          document.getElementById("pref-find-status").value = [0+1, foundNodes.length].join("/");
+          prefFind.setAttribute("status", "found");
+        } else {
+          prefFind.mPrefFind = undefined;
+          document.getElementById("pref-find-status").value = "";
+          prefFind.setAttribute("status", "notfound");
+        }
+      }
+    } else {
+      for (let elem of document.querySelectorAll("*[data-highlight]")) {
+        elem.removeAttribute("data-highlight");
+      }
+      prefFind.mPrefFind = undefined;
+      document.getElementById("pref-find-status").value = "";
+      prefFind.removeAttribute("status");
+    }
+
+    document.getElementById("pref-find-previous").disabled = !prefFind.mPrefFind;
+    document.getElementById("pref-find-next").disabled = !prefFind.mPrefFind;
+  },
   onResetSettings: function(event, msgtmpl){
     var currentPane = gPrefWindow.getCurrentPrefPane();
     var ps = Services.prompt;
