@@ -183,7 +183,7 @@
       </row>
       <row align="center">
         <label value="&http.header.encoding-secure.label;" control="HTTPAcceptEncodingSecure"/>
-        <textbox id="HTTPAcceptEncodingSecure" preference="network.http.accept-encoding.secure" data-require-version="44"/>
+        <textbox id="HTTPAcceptEncodingSecure" preference="network.http.accept-encoding.secure"/>
       </row>
       <row align="center">
         <label value="&http.header.accept.label;" control="HTTPAccept"/>

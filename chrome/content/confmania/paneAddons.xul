@@ -53,20 +53,12 @@
 <preferences>
   <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
   <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
-  <preference name="extensions.checkCompatibility.38.0" id="extensions.checkCompatibility.38.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.39.0" id="extensions.checkCompatibility.39.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.40.0" id="extensions.checkCompatibility.40.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.41.0" id="extensions.checkCompatibility.41.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.42.0" id="extensions.checkCompatibility.42.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.43.0" id="extensions.checkCompatibility.43.0" type="bool" inverted="true"/>
-  <preference name="extensions.checkCompatibility.44.0" id="extensions.checkCompatibility.44.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.45.0" id="extensions.checkCompatibility.45.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.46.0" id="extensions.checkCompatibility.46.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.47.0" id="extensions.checkCompatibility.47.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.48.0" id="extensions.checkCompatibility.48.0" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.install.requireBuiltInCerts" id="extensions.install.requireBuiltInCerts" type="bool" inverted="true"/>
-  <preference name="dom.ipc.plugins.enabled" id="dom.ipc.plugins.enabled" type="bool"/>
   <preference name="extensions.alwaysUnpack" id="extensions.alwaysUnpack" type="bool"/>
 </preferences>
 
@@ -82,13 +74,6 @@
 <groupbox>
 <caption label="&addons.noCheckCompatibility.label;"/>
 <hbox>
-<checkbox label="38" preference="extensions.checkCompatibility.38.0"/>
-<checkbox label="39" preference="extensions.checkCompatibility.39.0"/>
-<checkbox label="40" preference="extensions.checkCompatibility.40.0"/>
-<checkbox label="41" preference="extensions.checkCompatibility.41.0"/>
-<checkbox label="42" preference="extensions.checkCompatibility.42.0"/>
-<checkbox label="43" preference="extensions.checkCompatibility.43.0"/>
-<checkbox label="44" preference="extensions.checkCompatibility.44.0"/>
 <checkbox label="45" preference="extensions.checkCompatibility.45.0"/>
 <checkbox label="46" preference="extensions.checkCompatibility.46.0"/>
 <checkbox label="47" preference="extensions.checkCompatibility.47.0"/>
@@ -100,9 +85,6 @@
 <checkbox label="&addons.allowNonBuiltInCerts.label;"
           preference="extensions.install.requireBuiltInCerts"
           onsynctopreference="return gPrefWindow.syncTo(this, false);"/>
-<checkbox label="&addons.oopp.label;"
-          data-obsolete-version-since="43"
-          preference="dom.ipc.plugins.enabled"/>
 <checkbox label="&addons.alwaysUnpack.label;"
           preference="extensions.alwaysUnpack"/>
 

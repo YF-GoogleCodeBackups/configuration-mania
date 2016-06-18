@@ -82,11 +82,6 @@ gPrefWindow.prefUI = {
       }
     });
   },
-  onPreferenceInContentInvertedSyncFrom : function() {
-    let disabled = !document.getElementById("browser.preferences.inContent").value;
-    document.getElementById("browser.preferences.instantApply").disabled = disabled;
-    document.querySelector("#ui-pane-others-pref-instanceAccept description").disabled = disabled;
-  },
   onMiddlemousePasteSyncFrom : function () {
     let disabled = document.getElementById("middlemouse.paste").value;
     document.getElementById("middlemouse.contentLoadURL").disabled = disabled;

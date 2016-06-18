@@ -195,19 +195,6 @@ tc.tests = {
       checkbox.click();
     }
   },
-  testOnMultiMediaWMFEnabledSyncFrom: function() {
-    let checkbox = this.document.querySelector("checkbox[preference='media.windows-media-foundation.enabled']");
-    let target = this.document.querySelector("checkbox[preference='media.windows-media-foundation.play-stand-alone']");
-    let checkbox_origval = checkbox.value;
-    let target_origval = target.value;
-
-    for (let i = 0; i < 2; i++) {
-      assert.equals(checkbox.checked, !target.disabled);
-      checkbox.click();
-    }
-    checkbox.value = checkbox_origval;
-    target.value = target_origval;
-  },
   testOnMultiMediaMediaSourceEnabledSyncFrom : function () {
     let checkbox = this.document.querySelector("checkbox[preference='media.mediasource.enabled']");
     let targets = this.document.querySelectorAll("checkbox[preference='media.mediasource.youtubeonly'], #multimedia-mediasource-formats checkbox[preference]");
