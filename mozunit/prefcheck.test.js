@@ -22,6 +22,35 @@ function sleep(aWait) {
   }
 }
 
+function getAddonVersionInfo() {
+  let { AddonManager } = Cu.import("resource://gre/modules/AddonManager.jsm");
+  const CONF_MANIA_ADDON_ID = "{c4d362ec-1cff-4ca0-9031-99a8fad7995a}";
+  
+  let addonVersionInfo = {};
+  AddonManager.getAddonByID(CONF_MANIA_ADDON_ID, function (addon) {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", addon.getResourceURI("install.rdf").spec, true);
+    xhr.onload = function () {
+      if (xhr.readyState === 4) {
+        let doc = xhr.responseXML;
+        let minVersion = undefined;
+        let maxVersion = undefined;
+
+        if (doc.querySelector("targetApplication minVersion")) {
+          addonVersionInfo.minVersion = doc.querySelector("targetApplication minVersion").textContent;
+        }
+        if (doc.querySelector("targetApplication maxVersion")) {
+          addonVersionInfo.maxVersion = doc.querySelector("targetApplication maxVersion").textContent;
+        }
+      }
+    };
+    xhr.send(null);
+  });
+  sleep(1000);
+
+  return addonVersionInfo;
+}
+
 var tc = new TestCase();
 tc.tests = {
   setUp: function() {
@@ -84,6 +113,34 @@ tc.tests = {
           assert.fail("\"" + v.getAttribute("preference") + "\" elem could not found.");
         }
         assert.equals(prefElem.name, v.getAttribute("preference"));
+      }
+    }
+  },
+  testDataObsoleteVersion: function() {
+    let elems = this.document.querySelectorAll("*[data-obsolete-version-since]");
+    let addonVersionInfo = getAddonVersionInfo();
+
+    for (let v of elems) {
+      let dataVersion = v.getAttribute("data-obsolete-version-since");
+
+      if (parseInt(dataVersion, 10) !== 0) {
+        // assert addonVersionInfo.minVersion < dataVersion <= addonVersionInfo.maxVersion
+        assert.isTrue(Services.vc.compare(addonVersionInfo.minVersion, dataVersion) <  0);
+        assert.isTrue(Services.vc.compare(addonVersionInfo.maxVersion, dataVersion) >= 0);
+      }
+    }
+  },
+  testDataRequireVersion: function() {
+    let elems = this.document.querySelectorAll("*[data-require-version]");
+    let addonVersionInfo = getAddonVersionInfo();
+
+    for (let v of elems) {
+      let dataVersion = v.getAttribute("data-require-version");
+
+      if (parseInt(dataVersion, 10) !== 0) {
+        // assert addonVersionInfo.minVersion < dataVersion <= addonVersionInfo.maxVersion
+        assert.isTrue(Services.vc.compare(addonVersionInfo.minVersion, dataVersion) <  0);
+        assert.isTrue(Services.vc.compare(addonVersionInfo.maxVersion, dataVersion) >= 0);
       }
     }
   },
