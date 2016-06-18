@@ -7,8 +7,6 @@
 <!ENTITY security.js.annoy.window_flip "ウィンドウのフォーカスの取得とはずすのを無効にする">
 <!ENTITY security.js.annoy.window_move_resize "ウィンドウの移動または大きさの変更を無効にする">
 <!ENTITY security.js.annoy.status_change "ステータスバーのテキストの変更を無効にする">
-<!ENTITY security.js.annoy.change_image "画像の置き換えを無効にする">
-<!ENTITY security.js.annoy.change_image.desc "注意: &quot;&security.js.annoy.change_image;&quot;の設定によって、いくつかのウェブアプリケーション(Google マップなど)が動作しなくなります。">
 <!ENTITY security.js.annoy.contextmenu "コンテキストメニューイベントの取得を無効にする">
 <!ENTITY security.js.annoy.clipboardevents "クリップボードイベント(コピー/切り取り/貼り付け)の取得を無効にする">
 <!ENTITY security.js.annoy.dispatchLeftClickOnly "左クリックのみイベント処理を許可">
