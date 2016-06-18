@@ -18,7 +18,6 @@
 <!ENTITY browser.urlbar.unknownLocations.domainGuessing.suffix.label "Suffix :">
 <!ENTITY browser.html.label "Page control">
 <!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
-<!ENTITY browser.html.frameForceResizability.label "Force frames to be resizable">
 <!ENTITY browser.html.img "Image">
 <!ENTITY browser.html.img.loadImages.label "Load images automatically">
 <!ENTITY browser.html.img.loadImagesExceptions.label "Exceptions">
@@ -61,7 +60,6 @@
 <!ENTITY browser.html.offmainthreadcomposition-enabled.desc "Note: Disabling OMTC can have the effect of disabling hardware acceleration.">
 <!ENTITY browser.tabs.label "TabBrowsing">
 <!ENTITY browser.tabs.newtab.label "New Tab">
-<!ENTITY browser.tabs.newtab.url.label "URL:">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages">
 <!ENTITY browser.tabs.showAudioPlayingIcon.label "Show mute icons on tabs that playing audio">
@@ -107,10 +105,7 @@
 <!ENTITY browser.multimedia.windows-media-foundation-enabled.label "Enable Windows Media Foundation (Windows7+)">
 <!ENTITY browser.multimedia.windows-media-foundation-play-stand-alone.label "Play stand-alone">
 <!ENTITY browser.multimedia.directshow-enabled.label "Enable Direct Show (Windows)">
-<!ENTITY browser.multimedia.gstreamer-enabled.label "Enable GStreamer (Linux)">
-<!ENTITY browser.multimedia.ffmpeg-enabled.label "Enable FFmpeg">
 <!ENTITY browser.multimedia.ffvpx-enabled.label "Enable built-in FFVPX">
-<!ENTITY browser.multimedia.gmp-decoder-enabled.label "Enable Gecko Media Plugin (GMP) Decoder">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Enable Apple MP3 (Mac)">
 <!ENTITY browser.multimedia.apple-mp4-enabled.label "Enable Apple MP4 (Mac)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Enable Media Source Extensions">
@@ -187,7 +182,6 @@
 <!ENTITY browser.others.viewSourceTab.label "View source in a new tab">
 <!ENTITY browser.others.editorExternal "View source with external editor">
 <!ENTITY browser.others.editorExternal.path "Editor path:">
-<!ENTITY browser.others.disableOneClickSearchesUI.label "Disable One-Click Searches UI in the search bar">
 <!ENTITY browser.others.historyExpirationMaxPages.label "Max number of unique URLs to retain in history">
 <!ENTITY browser.others.warnOnAboutConfig.label "Show the warning message on about:config">
 <!ENTITY browser.others.hello.label "Firefox Hello">

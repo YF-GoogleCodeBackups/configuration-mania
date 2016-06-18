@@ -18,7 +18,6 @@
 <!ENTITY browser.urlbar.unknownLocations.domainGuessing.suffix.label "接尾辞 : ">
 <!ENTITY browser.html.label "ページ表示制御">
 <!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
-<!ENTITY browser.html.frameForceResizability.label "フレームを強制的にサイズ変更できるようにする">
 <!ENTITY browser.html.img "画像">
 <!ENTITY browser.html.img.loadImages.label "画像を自動的に読み込む">
 <!ENTITY browser.html.img.loadImagesExceptions.label "例外サイト...">
@@ -61,7 +60,6 @@
 <!ENTITY browser.html.offmainthreadcomposition-enabled.desc "注意: OMTC を無効にするとハードウェアアクセラレーションを無効になる影響がでる場合があります。">
 <!ENTITY browser.tabs.label "タブブラウジング">
 <!ENTITY browser.tabs.newtab.label "新しいタブ">
-<!ENTITY browser.tabs.newtab.url.label "URL:">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする">
 <!ENTITY browser.tabs.showAudioPlayingIcon.label "音声を再生しているタブにミュートアイコンを表示する">
@@ -107,10 +105,7 @@
 <!ENTITY browser.multimedia.windows-media-foundation-enabled.label "Windows Media Foundationを有効にする (Windows7+)">
 <!ENTITY browser.multimedia.windows-media-foundation-play-stand-alone.label "スタンドアロンで再生">
 <!ENTITY browser.multimedia.directshow-enabled.label "Direct Showを有効にする (Windows)">
-<!ENTITY browser.multimedia.gstreamer-enabled.label "GStreamerを有効にする (Linux)">
-<!ENTITY browser.multimedia.ffmpeg-enabled.label "FFmpegを有効にする">
 <!ENTITY browser.multimedia.ffvpx-enabled.label "ビルトインのFFVPXを有効にする">
-<!ENTITY browser.multimedia.gmp-decoder-enabled.label "Gecko Media Plugin (GMP) Decoder を有効にする">
 <!ENTITY browser.multimedia.apple-mp3-enabled.label "Apple MP3を有効にする (Mac)">
 <!ENTITY browser.multimedia.apple-mp4-enabled.label "Apple MP4を有効にする (Mac)">
 <!ENTITY browser.multimedia.mediasource.enabled.label "Media Source Extensions を有効にする">
@@ -187,7 +182,6 @@
 <!ENTITY browser.others.viewSourceTab.label "新しいタブでソースを開く">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
-<!ENTITY browser.others.disableOneClickSearchesUI.label "検索バーに対して One-Click Searches UI を無効にする">
 <!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
 <!ENTITY browser.others.warnOnAboutConfig.label "about:config で警告を表示する">
 <!ENTITY browser.others.hello.label "Firefox Hello">

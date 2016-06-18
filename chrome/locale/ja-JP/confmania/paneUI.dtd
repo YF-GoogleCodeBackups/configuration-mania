@@ -110,18 +110,12 @@
 <!ENTITY ui.taskbar.jumplist.refreshInSeconds.label "リストアイテムを">
 <!ENTITY ui.taskbar.jumplist.refreshInSeconds.label2 "秒ごとに更新">
 <!ENTITY ui.others.label "その他">
-<!ENTITY ui.others.preference.label "設定ダイアログ(Configuration Mania含)">
-<!ENTITY ui.others.preference.animateFadeIn.label "フェードインのアニメーションをする (Mac のように)">
-<!ENTITY ui.others.preference.inContent-inverted.label "設定画面をタブではなくダイアログで開く">
-<!ENTITY ui.others.preference.instanceAccept.label "モードレスダイアログで瞬時に設定を適用 (Mac や Gnome のように)">
-<!ENTITY ui.others.preference.instanceAccept.desc "Mac OS Xではチェックを外さないでください。詳細は Mozilla bugzilla 641288 (http://bugzil.la/641288) を参照">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) スタイルのマウス動作">
 <!ENTITY ui.others.xwin.autocopy.label "選択テキストの自動コピーを有効にする(*nixでのみ有効)">
 <!ENTITY ui.others.xwin.paste.label "中央クリックで張り付ける">
 <!ENTITY ui.others.xwin.contentLoadURL.label "中央クリックでクリップボードに格納された URL へ行く">
 <!ENTITY ui.others.xwin.scrollbarPosition.label "中央ボタンでスクロールバーを調整できるようにする(再起動必要)">
 <!ENTITY ui.others.theme.label "テーマ">
-<!ENTITY ui.others.theme.devedition.label "Developer Edition テーマを使用する">
 <!ENTITY ui.others.word_select.label "テキストをダブルクリックした時の選択動作">
 <!ENTITY ui.others.word_select.eat_space_to_next_word.label "後続の空白も選択する">
 <!ENTITY ui.others.word_select.eat_punctuation.label "囲んでいる句読点も選択する">

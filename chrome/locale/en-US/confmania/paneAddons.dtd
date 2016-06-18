@@ -4,5 +4,4 @@
 <!ENTITY addons.noCheckCompatibility.label "Do Not check add-on compatibility with :">
 <!ENTITY addons.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
 <!ENTITY addons.allowNonBuiltInCerts.label "Allow non-built-in certs to be used for downloading XPIs and update.">
-<!ENTITY addons.oopp.label "Run browser plugins in an own process (OOPP)">
 <!ENTITY addons.alwaysUnpack.label "Always unpack XPI file">
