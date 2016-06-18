@@ -350,6 +350,7 @@
               preference="gfx.direct2d.force-enabled"/>
 
     <checkbox label="&browser.html.offmainthreadcomposition-enabled.label;"
+              data-obsolete-version-since="48"
               preference="layers.offmainthreadcomposition.enabled"/>
     <description class="indent">&browser.html.offmainthreadcomposition-enabled.desc;</description>
   </groupbox>
