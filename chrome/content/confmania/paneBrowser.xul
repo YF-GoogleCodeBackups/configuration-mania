@@ -67,7 +67,6 @@
   <preference id="browser.fixup.alternate.prefix" name="browser.fixup.alternate.prefix" type="string"/>
   <preference id="browser.fixup.alternate.suffix" name="browser.fixup.alternate.suffix" type="string"/>
 
-  <preference id="layout.frames.force_resizability" name="layout.frames.force_resizability" type="bool"/>
   <preference id="permissions.default.image" name="permissions.default.image" type="int"/>
   <preference id="image.animation_mode" name="image.animation_mode" type="string"/>
   <preference id="dom.image.srcset.enabled" name="dom.image.srcset.enabled" type="bool"/>
@@ -93,7 +92,6 @@
   <preference id="gfx.direct2d.force-enabled" name="gfx.direct2d.force-enabled" type="bool"/>
   <preference id="layers.offmainthreadcomposition.enabled" name="layers.offmainthreadcomposition.enabled" type="bool"/>
 
-  <preference id="browser.newtab.url" name="browser.newtab.url" type="string"/>
   <preference id="browser.newtabpage.enabled" name="browser.newtabpage.enabled" type="bool"/>
   <preference id="browser.pagethumbnails.capturing_disabled" name="browser.pagethumbnails.capturing_disabled" type="bool"/>
   <preference id="browser.tabs.showAudioPlayingIcon" name="browser.tabs.showAudioPlayingIcon" type="bool"/>
@@ -126,13 +124,9 @@
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
 
   <preference id="media.wmf.enabled" name="media.wmf.enabled" type="bool"/>
-  <preference id="media.windows-media-foundation.enabled" name="media.windows-media-foundation.enabled" type="bool"/>
   <preference id="media.windows-media-foundation.play-stand-alone" name="media.windows-media-foundation.play-stand-alone" type="bool"/>
   <preference id="media.directshow.enabled" name="media.directshow.enabled" type="bool"/>
-  <preference id="media.gstreamer.enabled" name="media.gstreamer.enabled" type="bool"/>
-  <preference id="media.ffmpeg.enabled" name="media.ffmpeg.enabled" type="bool"/>
   <preference id="media.ffvpx.enabled" name="media.ffvpx.enabled" type="bool"/>
-  <preference id="media.gmp.decoder.enabled" name="media.gmp.decoder.enabled" type="bool"/>
   <preference id="media.apple.mp3.enabled" name="media.apple.mp3.enabled" type="bool"/>
   <preference id="media.apple.mp4.enabled" name="media.apple.mp4.enabled" type="bool"/>
   <preference id="media.mediasource.enabled" name="media.mediasource.enabled" type="bool"/>
@@ -183,7 +177,6 @@
   <preference id="view_source.tab" name="view_source.tab" type="bool"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
-  <preference id="browser.search.showOneOffButtons" name="browser.search.showOneOffButtons" type="bool" inverted="true"/>
   <preference id="places.history.expiration.max_pages" name="places.history.expiration.max_pages" type="int"/>
   <preference id="general.warnOnAboutConfig" name="general.warnOnAboutConfig" type="bool"/>
   <preference id="loop.enabled" name="loop.enabled" type="bool"/>
@@ -265,8 +258,6 @@
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="html">
-  <checkbox id="html-frameForceResizability" label="&browser.html.frameForceResizability.label;"
-   preference="layout.frames.force_resizability" data-obsolete-version-since="42"/>
   <groupbox>
     <caption label="&browser.html.img;"/>
 
@@ -327,7 +318,7 @@
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.vertical-text.label;" preference="layout.css.vertical-text.enabled"/>
 
-  <checkbox label="&browser.html.prefixes-webkit.label;" preference="layout.css.prefixes.webkit" data-require-version="44"/>
+  <checkbox label="&browser.html.prefixes-webkit.label;" preference="layout.css.prefixes.webkit"/>
 
   <groupbox>
     <caption label="&browser.html.focus.label;"/>
@@ -366,20 +357,10 @@
 <box class="subtabpanel" orient="vertical" id="tabs">
   <groupbox>
     <caption label="&browser.tabs.newtab.label;"/>
-    <hbox align="center" data-obsolete-version-since="41">
-      <label value="&browser.tabs.newtab.url.label;" control="newtab-url"/>
-      <menulist id="newtab-url" editable="true" preference="browser.newtab.url" flex="1">
-        <menupopup>
-          <menuitem label="about:blank"/>
-          <menuitem label="about:newtab"/>
-          <menuitem label="about:home"/>
-        </menupopup>
-      </menulist>
-    </hbox>
     <checkbox label="&browser.tabs.newtab.newtabpageEnabled.label;" preference="browser.newtabpage.enabled"/>
     <checkbox class="indent" label="&browser.tabs.newtab.thumbCapturingDisabled.label;" preference="browser.pagethumbnails.capturing_disabled"/>
   </groupbox>
-  <checkbox label="&browser.tabs.showAudioPlayingIcon.label;" preference="browser.tabs.showAudioPlayingIcon" data-require-version="42"/>
+  <checkbox label="&browser.tabs.showAudioPlayingIcon.label;" preference="browser.tabs.showAudioPlayingIcon"/>
 
   <checkbox label="&browser.tabs.closeWindowWithLastTab.label;" preference="browser.tabs.closeWindowWithLastTab"/>
   <checkbox label="&browser.tabs.seachOpenintab.label;" preference="browser.search.openintab"/>
@@ -399,7 +380,7 @@
   <groupbox>
     <caption label="&browser.tabs.animation.label;"/> 
     <checkbox label="&browser.tabs.animation.animate_tab.label;" preference="browser.tabs.animate"/>
-    <checkbox label="&browser.tabs.animation.panorama.label;" preference="browser.panorama.animate_zoom" data-obsolete-version-since="45"/>
+    <checkbox label="&browser.tabs.animation.panorama.label;" preference="browser.panorama.animate_zoom"/>
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="sessionstore">
@@ -477,14 +458,10 @@
    preference="browser.chrome.favicons"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="multimedia">
-  <checkbox label="&browser.multimedia.windows-media-foundation-enabled.label;" preference="media.wmf.enabled" data-require-version="44"/>
-  <checkbox label="&browser.multimedia.windows-media-foundation-enabled.label;" preference="media.windows-media-foundation.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onMultiMediaWMFEnabledSyncFrom();" data-obsolete-version-since="42"/>
+  <checkbox label="&browser.multimedia.windows-media-foundation-enabled.label;" preference="media.wmf.enabled"/>
   <checkbox class="indent" label="&browser.multimedia.windows-media-foundation-play-stand-alone.label;" preference="media.windows-media-foundation.play-stand-alone"/>
   <checkbox label="&browser.multimedia.directshow-enabled.label;" preference="media.directshow.enabled"/>
-  <checkbox label="&browser.multimedia.gstreamer-enabled.label;" preference="media.gstreamer.enabled" data-obsolete-version-since="44"/>
-  <checkbox label="&browser.multimedia.ffmpeg-enabled.label;" preference="media.ffmpeg.enabled" data-require-version="44"/>
-  <checkbox label="&browser.multimedia.ffvpx-enabled.label;" preference="media.ffvpx.enabled" data-require-version="45"/>
-  <checkbox label="&browser.multimedia.gmp-decoder-enabled.label;" preference="media.gmp.decoder.enabled" data-require-version="44"/>
+  <checkbox label="&browser.multimedia.ffvpx-enabled.label;" preference="media.ffvpx.enabled"/>
   <checkbox label="&browser.multimedia.apple-mp3-enabled.label;" preference="media.apple.mp3.enabled"/>
   <checkbox label="&browser.multimedia.apple-mp4-enabled.label;" preference="media.apple.mp4.enabled"/>
 
@@ -694,8 +671,7 @@
   <checkbox label="&browser.others.prompts_tab_modal_enabled.label;" preference="prompts.tab_modal.enabled"/>
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
 
-  <checkbox id="others-viewSourceTab" label="&browser.others.viewSourceTab.label;" preference="view_source.tab"
-          data-require-version="40"/>
+  <checkbox id="others-viewSourceTab" label="&browser.others.viewSourceTab.label;" preference="view_source.tab"/>
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
             onsyncfrompreference="return gPrefWindow.prefBrowser.onEditorExternalSyncFrom()"/>
   <hbox id="others-editorExternal-hbox" class="indent" align="center">
@@ -703,7 +679,6 @@
     <textbox id="others-editorExternal-path" preference="view_source.editor.path" flex="1"/>
     <button label="&browse;" control="others-editorExternal-path" oncommand="gPrefWindow.prefBrowser.onEditorExternalBrowse()"/>
   </hbox>
-  <checkbox label="&browser.others.disableOneClickSearchesUI.label;" preference="browser.search.showOneOffButtons" data-obsolete-version-since="43"/>
 
   <groupbox>
     <caption label="&browser.others.historyExpirationMaxPages.label;"/>

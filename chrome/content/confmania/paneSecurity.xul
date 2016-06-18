@@ -59,7 +59,6 @@
   <preference id="dom.disable_window_flip" name="dom.disable_window_flip" type="bool"/>
   <preference id="dom.disable_window_move_resize" name="dom.disable_window_move_resize" type="bool"/>
   <preference id="dom.disable_window_status_change" name="dom.disable_window_status_change" type="bool"/>
-  <preference id="dom.disable_image_src_set" name="dom.disable_image_src_set" type="bool"/>
   <preference id="dom.event.contextmenu.enabled" name="dom.event.contextmenu.enabled" type="bool" inverted="true"/>
   <preference id="dom.event.clipboardevents.enabled" name="dom.event.clipboardevents.enabled" type="bool" inverted="true"/>
   <preference id="nglayout.events.dispatchLeftClickOnly" name="nglayout.events.dispatchLeftClickOnly" type="bool"/>
@@ -131,8 +130,6 @@
       <checkbox preference="dom.disable_window_flip" label="&security.js.annoy.window_flip;"/>
       <checkbox preference="dom.disable_window_move_resize" label="&security.js.annoy.window_move_resize;"/>
       <checkbox preference="dom.disable_window_status_change" label="&security.js.annoy.status_change;"/>
-      <checkbox preference="dom.disable_image_src_set" label="&security.js.annoy.change_image;" data-obsolete-version-since="43"/>
-      <description class="indent">&security.js.annoy.change_image.desc;</description>
       <checkbox preference="dom.event.contextmenu.enabled" label="&security.js.annoy.contextmenu;"/>
       <checkbox preference="dom.event.clipboardevents.enabled" label="&security.js.annoy.clipboardevents;"/>
       <checkbox preference="nglayout.events.dispatchLeftClickOnly" label="&security.js.annoy.dispatchLeftClickOnly;"/>
@@ -201,7 +198,7 @@
     <listitem type="checkbox" value="dblclick" label="&security.popupwin.event.dblclick.label;"/>
     <listitem type="checkbox" value="touchstart" label="&security.popupwin.event.touchstart.label;"/>
     <listitem type="checkbox" value="touchend" label="&security.popupwin.event.touchend.label;"/>
-    <listitem type="checkbox" value="notificationclick" label="&security.popupwin.event.notificationclick.label;" data-require-version="41"/>
+    <listitem type="checkbox" value="notificationclick" label="&security.popupwin.event.notificationclick.label;"/>
   </listbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="security-pane-ssl">
@@ -296,7 +293,6 @@
       <checkbox id="trackingprotection-pbmode-enable"
                 flex="1"
                 label="&security.privacy.trackingprotection-pbmode.enable.label;"
-                data-require-version="39+"
                 preference="privacy.trackingprotection.pbmode.enabled" />
     </hbox>
   </groupbox>

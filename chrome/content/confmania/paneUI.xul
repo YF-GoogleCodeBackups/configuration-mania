@@ -125,14 +125,10 @@
   <preference id="browser.taskbar.lists.maxListItemCount" name="browser.taskbar.lists.maxListItemCount" type="int"/>
   <preference id="browser.taskbar.lists.refreshInSeconds" name="browser.taskbar.lists.refreshInSeconds" type="int"/>
 
-  <preference id="browser.preferences.animateFadeIn" name="browser.preferences.animateFadeIn" type="bool"/>
-  <preference id="browser.preferences.inContent" name="browser.preferences.inContent" type="bool" inverted="true"/>
-  <preference id="browser.preferences.instantApply" name="browser.preferences.instantApply" type="bool"/>
   <preference id="clipboard.autocopy" name="clipboard.autocopy" type="bool"/>
   <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
   <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
   <preference id="middlemouse.scrollbarPosition" name="middlemouse.scrollbarPosition" type="bool"/>
-  <preference id="browser.devedition.theme.enabled" name="browser.devedition.theme.enabled" type="bool"/>
   <preference id="layout.word_select.eat_space_to_next_word" name="layout.word_select.eat_space_to_next_word" type="bool"/>
   <preference id="layout.word_select.stop_at_punctuation" name="layout.word_select.stop_at_punctuation" type="bool" inverted="true"/>
   <preference id="nglayout.enable_drag_images" name="nglayout.enable_drag_images" type="bool"/>
@@ -473,29 +469,12 @@
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-others">
   <groupbox>
-    <caption label="&ui.others.preference.label;"/>
-    <checkbox label="&ui.others.preference.animateFadeIn.label;" preference="browser.preferences.animateFadeIn"/>
-    <checkbox label="&ui.others.preference.inContent-inverted.label;" preference="browser.preferences.inContent"
-              data-obsolete-version-since="42"
-              onsyncfrompreference="gPrefWindow.prefUI.onPreferenceInContentInvertedSyncFrom();"/>
-    <vbox id="ui-pane-others-pref-instanceAccept" class="indent">
-      <checkbox label="&ui.others.preference.instanceAccept.label;" preference="browser.preferences.instantApply"/>
-      <description class="indent">&ui.others.preference.instanceAccept.desc;</description>
-    </vbox>
-  </groupbox>
-  <groupbox>
     <caption label="&ui.others.xwin.label;"/>
     <checkbox label="&ui.others.xwin.autocopy.label;" preference="clipboard.autocopy"/>
     <checkbox label="&ui.others.xwin.paste.label;" preference="middlemouse.paste"
               onsyncfrompreference="gPrefWindow.prefUI.onMiddlemousePasteSyncFrom();"/>
     <checkbox label="&ui.others.xwin.contentLoadURL.label;" preference="middlemouse.contentLoadURL"/>
     <checkbox label="&ui.others.xwin.scrollbarPosition.label;" preference="middlemouse.scrollbarPosition"/>
-  </groupbox>
-  <groupbox>
-    <caption label="&ui.others.theme.label;"/>
-    <checkbox label="&ui.others.theme.devedition.label;"
-            preference="browser.devedition.theme.enabled"
-            data-obsolete-version-since="40"/>
   </groupbox>
   <groupbox>
     <caption label="&ui.others.word_select.label;"/>
