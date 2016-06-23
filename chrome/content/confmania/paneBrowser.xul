@@ -118,7 +118,6 @@
   <preference id="browser.showQuitWarning" name="browser.showQuitWarning" type="bool" inverted="true"/>
   <preference id="browser.warnOnRestart" name="browser.warnOnRestart" type="bool" inverted="true"/>
   <preference id="browser.sessionstore.privacy_level" name="browser.sessionstore.privacy_level" type="int"/>
-  <preference id="browser.sessionstore.privacy_level_deferred" name="browser.sessionstore.privacy_level_deferred" type="int"/>
 
   <preference id="browser.chrome.site_icons" name="browser.chrome.site_icons" type="bool"/>
   <preference id="browser.chrome.favicons" name="browser.chrome.favicons" type="bool"/>
@@ -428,27 +427,11 @@
   </vbox>
   <groupbox>
     <caption label="&browser.sessionStore.privacy_level.label;"/>
-    <grid>
-      <columns><column/><column flex="1"/></columns>
-      <rows>
-        <row align="center">
-          <label control="sessionStore_privacy_level" value="&browser.sessionStore.privacy_level.normal.label;"/>
-          <menulist id="sessionStore_privacy_level" preference="browser.sessionstore.privacy_level"><menupopup>
-            <menuitem value="0" label="&browser.sessionStore.privacy_level.any.label;"/>
-            <menuitem value="1" label="&browser.sessionStore.privacy_level.unenc.label;"/>
-            <menuitem value="2" label="&browser.sessionStore.privacy_level.never.label;"/>
-          </menupopup></menulist>
-        </row>
-        <row align="center">
-          <label control="sessionStore_privacy_level_deferred" value="&browser.sessionStore.privacy_level.deferred.label;"/>
-          <menulist id="sessionStore_privacy_level_deferred" preference="browser.sessionstore.privacy_level_deferred"><menupopup>
-            <menuitem value="0" label="&browser.sessionStore.privacy_level.any.label;"/>
-            <menuitem value="1" label="&browser.sessionStore.privacy_level.unenc.label;"/>
-            <menuitem value="2" label="&browser.sessionStore.privacy_level.never.label;"/>
-          </menupopup></menulist>
-        </row>
-      </rows>
-    </grid>
+    <radiogroup preference="browser.sessionstore.privacy_level">
+      <radio value="0" label="&browser.sessionStore.privacy_level.any.label;"/>
+      <radio value="1" label="&browser.sessionStore.privacy_level.unenc.label;"/>
+      <radio value="2" label="&browser.sessionStore.privacy_level.never.label;"/>
+    </radiogroup>
     <description>&browser.sessionStore.privacy_level.desc;</description>
   </groupbox>
 </box>

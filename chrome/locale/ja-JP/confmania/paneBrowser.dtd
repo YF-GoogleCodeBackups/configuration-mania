@@ -92,8 +92,6 @@
 <!ENTITY browser.sessionStore.showQuitWarning.label "終了時には尋ねない">
 <!ENTITY browser.sessionStore.warnOnRestart.label "再起動時には尋ねない">
 <!ENTITY browser.sessionStore.privacy_level.label "エキストラセッション情報の保存">
-<!ENTITY browser.sessionStore.privacy_level.normal.label "通常時:">
-<!ENTITY browser.sessionStore.privacy_level.deferred.label "&brandShortName;終了時:">
 <!ENTITY browser.sessionStore.privacy_level.any.label "すべてのサイトで保存">
 <!ENTITY browser.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">
 <!ENTITY browser.sessionStore.privacy_level.never.label "決して保存しない">
