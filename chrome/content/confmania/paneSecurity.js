@@ -10,7 +10,7 @@ gPrefWindow.prefSecurity = {
     gPrefWindow.prefSecurity.onPaneSecurityBoxTabSelected();
   },
   onSSLProtocolVersionsSyncFrom: function() {
-    const gSslPrefElementIds = ["allowSSL30", "allowTLS10", "allowTLS11", "allowTLS12"];
+    let gTlsPrefElements = document.querySelectorAll("#security-tls-version checkbox");
 
     // get minimum and maximum allowed protocol and locked status
     let minVersion = document.getElementById("security.tls.version.min").value;
@@ -19,8 +19,8 @@ gPrefWindow.prefSecurity = {
     let maxLocked  = document.getElementById("security.tls.version.max").locked;
 
     // set checked, disabled, and locked status for each protocol checkbox
-    for (let index = 0; index < gSslPrefElementIds.length; index++) {
-      let currentBox = document.getElementById(gSslPrefElementIds[index]);
+    for (let index = 0; index < gTlsPrefElements.length; index++) {
+      let currentBox = gTlsPrefElements[index];
       currentBox.checked = (index >= minVersion) && (index <= maxVersion);
 
       if ((minLocked && maxLocked) || (minLocked && index <= minVersion) ||
@@ -39,15 +39,15 @@ gPrefWindow.prefSecurity = {
     return undefined;
   },
   onSSLProtocolVersionsChange: function() {
-    const gSslPrefElementIds = ["allowSSL30", "allowTLS10", "allowTLS11", "allowTLS12"];
+    let gTlsPrefElements = document.querySelectorAll("#security-tls-version checkbox");
 
     // this is called whenever a checkbox changes
     let minVersion = -1;
     let maxVersion = -1;
   
     // find the first and last checkboxes which are now checked
-    for (let index = 0; index < gSslPrefElementIds.length; index++) {
-      if (document.getElementById(gSslPrefElementIds[index]).checked) {
+    for (let index = 0; index < gTlsPrefElements.length; index++) {
+      if (gTlsPrefElements[index].checked) {
         if (minVersion < 0) { // first box checked
           minVersion = index;
         }
