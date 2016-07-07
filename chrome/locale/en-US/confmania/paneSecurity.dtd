@@ -100,3 +100,7 @@
 <!ENTITY security.referer.all.label "Send on image requests as well">
 <!ENTITY security.referer.secureXSite.label "Send the Referrer header when navigating from a https site to another https site">
 <!ENTITY security.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https site to a non-secure site.">
+<!ENTITY security.content.label "Content">
+<!ENTITY security.content.fileuri_strict_origin_policy.label "Same origin policy for local documents">
+<!ENTITY security.content.fileuri_strict_origin_policy.restrict.label "Local documents have access to other local documents in the same directory and in subdirectories, but not directory listings">
+<!ENTITY security.content.fileuri_strict_origin_policy.traditional.label "Local documents have access to all other local documents, including directory listings.">

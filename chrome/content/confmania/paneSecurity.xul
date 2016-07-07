@@ -97,6 +97,8 @@
 
   <preference id="network.http.sendRefererHeader" name="network.http.sendRefererHeader" type="int"/>
   <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
+
+  <preference id="security.fileuri.strict_origin_policy" name="security.fileuri.strict_origin_policy" type="bool"/>
 </preferences>
 
 <hbox flex="1" orient="horizontal" id="paneSecurityBox">
@@ -109,6 +111,7 @@
   <radio class="subtab" value="security-pane-net"       label="&security.net.label;"/>
   <radio class="subtab" value="security-pane-privacy"   label="&security.privacy.label;"/>
   <radio class="subtab" value="security-pane-referer"   label="&security.referer.label;"/>
+  <radio class="subtab" value="security-pane-content"   label="&security.content.label;"/>
 </radiogroup>
 <splitter/>
 <deck id="paneSecurityBoxContainer" flex="4">
@@ -337,6 +340,15 @@
   <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite.label;"
     preference="network.http.sendSecureXSiteReferrer"/>
   <description class="indent">&security.referer.secureXSite.desc;</description>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-content">
+  <groupbox>
+    <caption label="&security.content.fileuri_strict_origin_policy.label;"/>
+    <radiogroup preference="security.fileuri.strict_origin_policy">
+      <radio value="true" label="&security.content.fileuri_strict_origin_policy.restrict.label;"/>
+      <radio value="false" label="&security.content.fileuri_strict_origin_policy.traditional.label;"/>
+    </radiogroup>
+  </groupbox>
 </box>
 </deck>
 </hbox>
