@@ -61,6 +61,7 @@
 <!ENTITY security.ssl.limit.tls10.label "TLS 1.0">
 <!ENTITY security.ssl.limit.tls11.label "TLS 1.1">
 <!ENTITY security.ssl.limit.tls12.label "TLS 1.2">
+<!ENTITY security.ssl.limit.tls13.label "TLS 1.3">
 <!ENTITY security.ssl.SSLMixedContent.caption "Mixed Content">
 <!ENTITY security.ssl.block.activecontent "Don't load insecure content on encrypted pages">
 <!ENTITY security.ssl.block.displaycontent "Don't load other types of mixed content on encrypted pages">

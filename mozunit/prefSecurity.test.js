@@ -117,7 +117,8 @@ tc.tests = {
     let target = [this.document.getElementById("allowSSL30"),
                   this.document.getElementById("allowTLS10"),
                   this.document.getElementById("allowTLS11"),
-                  this.document.getElementById("allowTLS12")];
+                  this.document.getElementById("allowTLS12"),
+                  this.document.getElementById("allowTLS13")];
 
     let applyValues = (function() {
       for (let i = 0; i < mData.length; i++) {
@@ -126,16 +127,20 @@ tc.tests = {
     }).bind(this);
 
     const TESTCASE = [
-      { min: 0, max: 0, expected: "-..." },
-      { min: 0, max: 1, expected: "xx.." },
-      { min: 0, max: 2, expected: "x-x." },
-      { min: 0, max: 3, expected: "x--x" },
-      { min: 1, max: 1, expected: ".-.." },
-      { min: 1, max: 2, expected: ".xx." },
-      { min: 1, max: 3, expected: ".x-x" },
-      { min: 2, max: 2, expected: "..-." },
-      { min: 2, max: 3, expected: "..xx" },
-      { min: 3, max: 3, expected: "...-" },
+      { min: 0, max: 0, expected: "-...." },
+      { min: 0, max: 1, expected: "xx..." },
+      { min: 0, max: 2, expected: "x-x.." },
+      { min: 0, max: 3, expected: "x--x." },
+      { min: 0, max: 4, expected: "x---x" },
+      { min: 1, max: 1, expected: ".-..." },
+      { min: 1, max: 2, expected: ".xx.." },
+      { min: 1, max: 3, expected: ".x-x." },
+      { min: 1, max: 4, expected: ".x--x" },
+      { min: 2, max: 2, expected: "..-.." },
+      { min: 2, max: 3, expected: "..xx." },
+      { min: 3, max: 3, expected: "...-." },
+      { min: 3, max: 4, expected: "...xx" },
+      { min: 4, max: 4, expected: "....-" },
     ];
     for (let tc_id = 0; tc_id < TESTCASE.length; tc_id++) {
       let tc = TESTCASE[tc_id];
@@ -169,7 +174,8 @@ tc.tests = {
     let target = [this.document.getElementById("allowSSL30"),
                   this.document.getElementById("allowTLS10"),
                   this.document.getElementById("allowTLS11"),
-                  this.document.getElementById("allowTLS12")];
+                  this.document.getElementById("allowTLS12"),
+                  this.document.getElementById("allowTLS13")];
 
     for (let min = 0; min < target.length; min++) {
       for (let max = min; max < target.length; max++) {
@@ -199,7 +205,8 @@ tc.tests = {
     let target = [this.document.getElementById("allowSSL30"),
                   this.document.getElementById("allowTLS10"),
                   this.document.getElementById("allowTLS11"),
-                  this.document.getElementById("allowTLS12")];
+                  this.document.getElementById("allowTLS12"),
+                  this.document.getElementById("allowTLS13")];
 
     mData[0].value = 0;
     mData[1].value = target.length - 1;

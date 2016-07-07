@@ -205,7 +205,7 @@
   <groupbox align="start">
     <caption label="&security.ssl.SSLProtocolVersions.caption;"/>
     <description>&security.ssl.limit.description;</description>
-    <hbox align="center">
+    <hbox align="center" id="security-tls-version">
       <label value="&security.ssl.limit.enable.label;"/>
       <data preference="security.tls.version.min"
             preference-editable="true"
@@ -228,6 +228,11 @@
       <checkbox id="allowTLS12"
                 class="nogray-disabled"
                 label="&security.ssl.limit.tls12.label;"
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
+      <checkbox id="allowTLS13"
+                class="nogray-disabled"
+                label="&security.ssl.limit.tls13.label;"
+                data-require-version="49"
                 oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
     </hbox>
     <hbox align="center" class="indent">
