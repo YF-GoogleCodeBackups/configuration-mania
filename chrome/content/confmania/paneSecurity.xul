@@ -96,6 +96,9 @@
   <preference id="security.password_lifetime" name="security.password_lifetime" type="int"/>
 
   <preference id="network.http.sendRefererHeader" name="network.http.sendRefererHeader" type="int"/>
+  <preference id="network.http.referer.spoofSource" name="network.http.referer.spoofSource" type="bool"/>
+  <preference id="network.http.referer.trimmingPolicy" name="network.http.referer.trimmingPolicy" type="int"/>
+  <preference id="network.http.referer.XOriginPolicy" name="network.http.referer.XOriginPolicy" type="int"/>
   <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
 
   <preference id="security.fileuri.strict_origin_policy" name="security.fileuri.strict_origin_policy" type="bool"/>
@@ -337,9 +340,25 @@
     <radio value="1" label="&security.referer.link.label;"/>
     <radio value="2" label="&security.referer.all.label;"/>
   </radiogroup>
-  <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite.label;"
-    preference="network.http.sendSecureXSiteReferrer"/>
-  <description class="indent">&security.referer.secureXSite.desc;</description>
+  <checkbox label="&security.referer.spoofSource.label;"
+    preference="network.http.referer.spoofSource"/>
+  <label value="&security.referer.trimmingPolicy.label;" control="sendRefererTrimmingPolicy"/>
+  <radiogroup class="indent" preference="network.http.referer.trimmingPolicy" id="sendRefererTrimmingPolicy">
+    <radio value="0" label="&security.referer.trimmingPolicy.full_URI.label;"/>
+    <radio value="1" label="&security.referer.trimmingPolicy.scheme_host_port_path.label;"/>
+    <radio value="2" label="&security.referer.trimmingPolicy.scheme_host_port.label;"/>
+  </radiogroup>
+  <label value="&security.referer.XOriginPolicy.label;" control="sendRefererXOriginPolicy"/>
+  <radiogroup class="indent" preference="network.http.referer.XOriginPolicy" id="sendRefererXOriginPolicy">
+    <radio value="0" label="&security.referer.XOriginPolicy.always.label;"/>
+    <radio value="1" label="&security.referer.XOriginPolicy.baseDomainsMatch.label;"/>
+    <radio value="2" label="&security.referer.XOriginPolicy.hostsMatch.label;"/>
+  </radiogroup>
+  <groupbox>
+    <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite.label;"
+      preference="network.http.sendSecureXSiteReferrer"/>
+    <description class="indent" control="sendRefererSecureXSite">&security.referer.secureXSite.desc;</description>
+  </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="security-pane-content">
   <groupbox>

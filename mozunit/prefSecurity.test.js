@@ -225,12 +225,20 @@ tc.tests = {
   },
   testOnSendRefererSecureXSiteSyncFrom: function() {
     let radiogroup = this.document.getElementById("sendReferer");
-    let target = this.document.getElementById("sendRefererSecureXSite");
+    let target1 = this.document.querySelector("checkbox[preference=\"network.http.referer.spoofSource\"]");
+    let target2 = this.document.getElementById("sendRefererTrimmingPolicy");
+    let target3 = this.document.getElementById("sendRefererXOriginPolicy");
+    let target4 = this.document.getElementById("sendRefererSecureXSite");
     
     for (let i = 0; i < radiogroup.itemCount; i++) {
       let index = (radiogroup.selectedIndex + 1) % radiogroup.itemCount
       radiogroup.getItemAtIndex(index).click();
-      assert.equals(radiogroup.value != 0, !target.disabled);
+      assert.equals(radiogroup.value != 0, !target1.disabled);
+      assert.equals(radiogroup.value != 0, !target2.disabled);
+      assert.equals(radiogroup.value != 0, !target2.labelElement.disabled);
+      assert.equals(radiogroup.value != 0, !target3.disabled);
+      assert.equals(radiogroup.value != 0, !target3.labelElement.disabled);
+      assert.equals(radiogroup.value != 0, !target4.disabled);
     }
   },
   testOnTrackingProtectionEnabledSyncFrom: function() {
