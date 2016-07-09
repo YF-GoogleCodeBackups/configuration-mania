@@ -98,6 +98,15 @@
 <!ENTITY security.referer.none.desc "警告: いくつかのサイトでは、Referrer ヘッダを要求します。そのようなとき、&quot;&security.referer.link.label;&quot;または&quot;&security.referer.all.label;&quot;を選択してください。">
 <!ENTITY security.referer.link.label "リンクのクリック時のみ送る">
 <!ENTITY security.referer.all.label "画像要求も送る">
+<!ENTITY security.referer.spoofSource.label "Referrer URL をターゲットの URL に偽装する">
+<!ENTITY security.referer.trimmingPolicy.label "Referrer URL のトリミング規則">
+<!ENTITY security.referer.trimmingPolicy.full_URI.label "URL 全体">
+<!ENTITY security.referer.trimmingPolicy.scheme_host_port_path.label "スキーム+ホスト+ポート+パス">
+<!ENTITY security.referer.trimmingPolicy.scheme_host_port.label "スキーム+ホスト+ポート">
+<!ENTITY security.referer.XOriginPolicy.label "クロスオリジンポリシー">
+<!ENTITY security.referer.XOriginPolicy.always.label "常に Referrer ヘッダを送る">
+<!ENTITY security.referer.XOriginPolicy.baseDomainsMatch.label "ベースドメインが同一のときに送る">
+<!ENTITY security.referer.XOriginPolicy.hostsMatch.label "ホストが同一のときに送る">
 <!ENTITY security.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送る">
 <!ENTITY security.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Referrerは送られません">
 <!ENTITY security.content.label "コンテンツ">
