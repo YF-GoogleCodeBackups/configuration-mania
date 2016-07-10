@@ -9,7 +9,7 @@
 <!ENTITY debug.debug.extensionslogging.label "アドオンのインストール・更新時のエラー/警告を表示する">
 <!ENTITY debug.devtools.label "開発ツール">
 <!ENTITY debug.devtools.chrome_enabled.label "スクラッチパッドでクロムコンテクストでJavaScriptコードの実行を有効にする">
-<!ENTITY debug.devtools.debugger_remote_enabled.label "Android Firefoxに対するリモートデバッグを有効にする">
+<!ENTITY debug.devtools.debugger_remote_enabled.label "リモートデバッガを有効にする">
 <!ENTITY debug.popup_disable_autohide.label "ポップアップの自動閉じを無効にする（ポップアップではなくデバッギングツールなどをクリックしてもポップアップを開いたままにする）">
 <!ENTITY debug.cache.label "キャッシュ">
 <!ENTITY debug.cache.disableXULCache.label "XUL キャッシュを無効にする">
