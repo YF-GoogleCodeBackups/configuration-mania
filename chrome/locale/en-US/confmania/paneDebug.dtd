@@ -9,7 +9,7 @@
 <!ENTITY debug.debug.extensionslogging.label "Show errors &amp; warnings about addon installation and update">
 <!ENTITY debug.devtools.label "Developer Tools">
 <!ENTITY debug.devtools.chrome_enabled.label "Enable to run JavaScript code in the chrome context of the Scratchpad.">
-<!ENTITY debug.devtools.debugger_remote_enabled.label "Enable remote debugging for Android Firefox">
+<!ENTITY debug.devtools.debugger_remote_enabled.label "Enable remote debugging">
 <!ENTITY debug.popup_disable_autohide.label "Disable popup auto hide. (i.e. Keep popup panel open when you click away from them and into such as debugging tool)">
 <!ENTITY debug.cache.label "Cache">
 <!ENTITY debug.cache.disableXULCache.label "Disable XUL Cache">
