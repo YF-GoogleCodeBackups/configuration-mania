@@ -295,9 +295,9 @@ gPrefWindow.prefBrowser = {
   },
   onSpeedPaintReset : function(){
     let expander = document.getElementById("speed-paint");
-    Array.forEach(expander.querySelectorAll("*[preference]"), function(e) {
+    for (let e of expander.querySelectorAll("[preference]")) {
       gPrefWindow.resetPref(document.getElementById(e.getAttribute("preference")));
-    });
+    }
   },
   synchNotifyInterval : function(){
     var paintDelay = document.getElementById("nglayout.initialpaint.delay").value;
