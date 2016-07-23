@@ -178,10 +178,10 @@ caption {
   -moz-image-region: rect(0px, 24px, 9px, 12px);
 }
 
-*[data-highlight], *[data-highlight] .checkbox-label, *[data-highlight] .radio-label {
+[data-highlight], [data-highlight] .checkbox-label, [data-highlight] .radio-label {
   box-shadow: 0 0 1px 4px #ff0 ! important;
 }
-*[data-highlight=active], *[data-highlight=active] .checkbox-label, *[data-highlight=active] .radio-label {
+[data-highlight=active], [data-highlight=active] .checkbox-label, [data-highlight=active] .radio-label {
   background-color: #ff0 ! important;
 }
 
@@ -213,7 +213,7 @@ description > *|*:-moz-any-link {
   cursor: pointer;
 }
 
-*[data-obsolete-msg]::after, *[data-require-msg]::after, *[data-require-obsolete-msg]::after {
+[data-obsolete-msg]::after, [data-require-msg]::after, [data-require-obsolete-msg]::after {
   border-width: 0 0 0 4px;
   font-size: x-small;
   border-radius: 2px;
@@ -225,25 +225,25 @@ description > *|*:-moz-any-link {
   font-weight: 400;
   line-height: normal;
 }
-*[data-obsolete-msg]::after {
+[data-obsolete-msg]::after {
   content: attr(data-obsolete-msg);
 	background:#fad7d4;
 	border-color:#f08a81;
 }
-*[data-require-msg]::after {
+[data-require-msg]::after {
   content: attr(data-require-msg);
   background:#cce9f8;
 	border-color:#7dc7ed;
 }
-*[data-require-obsolete-msg]::after {
+[data-require-obsolete-msg]::after {
   content: attr(data-require-obsolete-msg);
   background:#fff4cc;
 	border-color:#ffe070;
 }
-*[data-obsolete-msg][disabled]::after, *[data-require-msg][disabled]::after, *[data-require-obsolete-msg][disabled]::after {
+[data-obsolete-msg][disabled]::after, [data-require-msg][disabled]::after, [data-require-obsolete-msg][disabled]::after {
   opacity: 0.5;
 }
-*[data-obsolete-msg]:not([disabled="true"]):hover::after, *[data-require-msg]:not([disabled="true"]):hover::after, *[data-require-obsolete-msg]:not([disabled="true"]):hover::after {
+[data-obsolete-msg]:not([disabled="true"]):hover::after, [data-require-msg]:not([disabled="true"]):hover::after, [data-require-obsolete-msg]:not([disabled="true"]):hover::after {
   outline: 1px solid #0095dd;
   -moz-outline-radius: 4px;
 }

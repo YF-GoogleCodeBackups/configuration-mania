@@ -85,9 +85,9 @@ gPrefWindow.prefSecurity = {
   },
   onSendRefererSecureXSiteSyncFrom: function() {
     let disabled = document.getElementById("network.http.sendRefererHeader").value == "0";
-    Array.forEach(document.querySelectorAll("*[id^=\"network.http.referer.\"], *[id=\"network.http.sendSecureXSiteReferrer\"]"), function (v) {
+    for (let v of document.querySelectorAll('[id^="network.http.referer."], [id="network.http.sendSecureXSiteReferrer"]')) {
       v.disabled = disabled;
-    });
+    }
     return undefined; // no override
   },
   onTrackingProtectionEnabledSyncFrom: function() {
