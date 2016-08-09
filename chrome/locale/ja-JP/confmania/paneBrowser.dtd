@@ -177,6 +177,7 @@
 <!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">
 <!ENTITY browser.others.prompts_tab_modal_enabled.label "alert()/prompt()/confirm()をタブモーダルモードで表示する">
 <!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで表示する">
+<!ENTITY browser.others.showRecentlyBookmarked.label "ブックマークメニューに「最近のブックマーク」を表示する">
 <!ENTITY browser.others.viewSourceTab.label "新しいタブでソースを開く">
 <!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
 <!ENTITY browser.others.editorExternal.path "エディタのパス:">
