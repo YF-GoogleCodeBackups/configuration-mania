@@ -173,6 +173,7 @@
   <preference id="network.dns.disablePrefetch" name="network.dns.disablePrefetch" type="bool" inverted="true"/>
   <preference id="prompts.tab_modal.enabled" name="prompts.tab_modal.enabled" type="bool"/>
   <preference id="browser.xul.error_pages.enabled" name="browser.xul.error_pages.enabled" type="bool" inverted="true"/>
+  <preference id="browser.bookmarks.showRecentlyBookmarked" name="browser.bookmarks.showRecentlyBookmarked" type="bool"/>
   <preference id="view_source.tab" name="view_source.tab" type="bool"/>
   <preference id="view_source.editor.external" name="view_source.editor.external" type="bool"/>
   <preference id="view_source.editor.path" name="view_source.editor.path" type="string"/>
@@ -654,6 +655,8 @@
 
   <checkbox label="&browser.others.prompts_tab_modal_enabled.label;" preference="prompts.tab_modal.enabled"/>
   <checkbox label="&browser.others.errorPageDisabled.label;" preference="browser.xul.error_pages.enabled"/>
+
+  <checkbox label="&browser.others.showRecentlyBookmarked.label;" preference="browser.bookmarks.showRecentlyBookmarked" data-require-version="49"/>
 
   <checkbox id="others-viewSourceTab" label="&browser.others.viewSourceTab.label;" preference="view_source.tab"/>
   <checkbox id="others-editorExternal" label="&browser.others.editorExternal;" preference="view_source.editor.external"
