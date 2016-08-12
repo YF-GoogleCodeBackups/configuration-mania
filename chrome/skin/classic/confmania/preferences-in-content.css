@@ -143,7 +143,7 @@ caption {
   -moz-margin-start: 33px;
 }
 @media (max-width: 799px), (max-height: 359px) {
-  .category > label, prefpane, groupbox .groupbox-body {
+  .category > label, prefpane, groupbox .groupbox-body, .tab-text, tabpanels {
     font-size: 1.0rem;
   }
   .subpanel groupbox .groupbox-body, .indent {
