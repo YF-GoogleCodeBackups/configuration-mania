@@ -147,7 +147,7 @@
     <description>&security.js.uis.desc1;</description>
     <checkbox label="&security.js.uis.menubar;" preference="dom.disable_window_open_feature.menubar"/>
     <checkbox label="&security.js.uis.resizable;" preference="dom.disable_window_open_feature.resizable"/>
-    <checkbox label="&security.js.uis.scrollbars;" preference="dom.disable_window_open_feature.scrollbars"/>
+    <checkbox label="&security.js.uis.scrollbars;" preference="dom.disable_window_open_feature.scrollbars" data-obsolete-version-since="49"/>
     <!--checkbox id="security-uis-titlebar" label="Title" preference="dom.disable_window_open_feature.titlebar"/-->
     <checkbox label="&security.js.uis.toolbar;" preference="dom.disable_window_open_feature.toolbar"/>
     <checkbox label="&security.js.uis.locationbar;" preference="dom.disable_window_open_feature.location"/>
