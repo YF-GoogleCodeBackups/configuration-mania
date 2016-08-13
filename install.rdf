@@ -25,7 +25,7 @@
 <em:name>Configuration Mania?</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 <!--em:homepageURL>https://addons.mozilla.org/ja/firefox/addon/4420</em:homepageURL-->
 <em:optionsURL>about:confmania</em:optionsURL>
 <em:optionsType>3</em:optionsType>
@@ -36,14 +36,14 @@
 <em:name>Configuration Mania</em:name>
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>ja-JP</em:locale>
 <em:name>Configuration Mania</em:name>
 <em:description>様々な隠し設定を変更する設定画面</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 
 <!--
@@ -54,7 +54,7 @@
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>Markus Stadler</em:translator>
 <em:translator>Erwin D. Glockner (erglo)</em:translator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>es-ES</em:locale>
@@ -62,7 +62,7 @@
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>HenryGR</em:translator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>fr</em:locale>
@@ -70,7 +70,7 @@
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>myahoo</em:translator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>lt</em:locale>
@@ -78,7 +78,7 @@
 <em:description>More Advanced (hidden) configures</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>Algimantas Margevičius</em:translator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>pl</em:locale>
@@ -86,7 +86,7 @@
 <em:description>Zaawansowane – standardowo ukryte – ustawienia konfiguracyjne</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>Leszek(teo)Życzkowski</em:translator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>pt-BR</em:locale>
@@ -95,7 +95,7 @@
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>Leopardus Tigrinus</em:translator>
 <em:translator>Éctor (petruc)</em:translator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>sv-SE</em:locale>
@@ -104,7 +104,7 @@
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>Johan Fredin (komsip)</em:translator>
 <em:translator>Mikael Hiort af Ornäs</em:translator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>zh-CN</em:locale>
@@ -114,7 +114,7 @@
 <em:translator>fang5566</em:translator>
 <em:translator>YFdyh000</em:translator>
 <em:translator>EMLVIRUS</em:translator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 <em:localized><Description>
 <em:locale>zh-TW</em:locale>
@@ -122,7 +122,7 @@
 <em:description>調整更多的（隱藏）選項</em:description>
 <em:creator>Popoki Tom (@cat_in_136)</em:creator>
 <em:translator>otakutw</em:translator>
-<em:homepageURL>http://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
+<em:homepageURL>https://bitbucket.org/cat_in_136/configuration-mania/</em:homepageURL>
 </Description></em:localized>
 -->
 
