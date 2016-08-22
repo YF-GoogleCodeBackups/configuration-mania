@@ -30,16 +30,16 @@
   </group>
   <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
 
-    <option name="Chrome 51.0.2704.106 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="51.0.2704.106"/>
-    <option name="Chrome 51.0.2704.106 (Windows 10)" platform="Windows" oscpu="Windows NT 10.0" webkit="537.36" version="51.0.2704.106"/>
-    <option name="Chrome 51.0.2704.106 (MacOS X 10.11.4)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_4" webkit="537.36" version="51.0.2704.106"/>
-    <option name="Chrome 51.0.2704.81 (Nexus 6; Android 6.0.1)" platform="Linux" oscpu="Android 6.0.1; Nexus 6 Build/MMB29K" webkit="537.36" version="51.0.2704.81"/>
+    <option name="Chrome 52.0.2743.116 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="52.0.2743.116"/>
+    <option name="Chrome 52.0.2743.116 (Windows 10)" platform="Windows" oscpu="Windows NT 10.0" webkit="537.36" version="52.0.2743.116"/>
+    <option name="Chrome 52.0.2743.116 (MacOS X 10.11.4)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_4" webkit="537.36" version="52.0.2743.116"/>
+    <option name="Chrome 52.0.2743.98 (Nexus 6; Android 6.0.1)" platform="Linux" oscpu="Android 6.0.1; Nexus 6 Build/MMB29K" webkit="537.36" version="52.0.2743.98"/>
   </group>
   <group name="Safari" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
-    <option name="Safari 9.1.1 (Intel MacOS X 10.11.5)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_5" webkit="601.6.17" version="9.1.1" safari="601.5.17"/>
+    <option name="Safari 9.1.2 (Intel MacOS X 10.11.5)" platform="Macintosh" oscpu="Intel Mac OS X 10_11_5" webkit="601.6.17" version="9.1.2" safari="601.7.1"/>
 
-    <option name="Safari 9.0 (iPhone; iOS 9.3.2)" platform="iPhone" oscpu="CPU iPhone OS 9_3_2 like Mac OS X" webkit="601.1.46" version="9.0 Mobile/13F69" safari="601.1"/>
-    <option name="Safari 9.0 (iPad; iOS 9.3.2)" platform="iPad" oscpu="CPU OS 9_3_2 like Mac OS X" webkit="601.1.46" version="9.0 Mobile/13F72" safari="601.1"/>
+    <option name="Safari 9.0 (iPhone; iOS 9.3.4)" platform="iPhone" oscpu="CPU iPhone OS 9_3_4 like Mac OS X" webkit="601.1.46" version="9.0 Mobile/13G35" safari="601.1"/>
+    <option name="Safari 9.0 (iPad; iOS 9.3.4)" platform="iPad" oscpu="CPU OS 9_3_4 like Mac OS X" webkit="601.1.46" version="9.0 Mobile/13G35" safari="601.1"/>
   </group>
   <group name="Googlebot">
     <option name="Googlebot 2.1" value="Mozilla/5.0 (compatible; Googlebot/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
