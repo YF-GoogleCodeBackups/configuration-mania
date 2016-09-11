@@ -205,8 +205,9 @@ gPrefWindow.prefBrowser = {
     return undefined; // no override
   },
   onEditorExternalSyncFrom : function() {
-    let disabledPath = ! document.getElementById("view_source.editor.external").value;
-    document.getElementById("view_source.editor.path").disabled = disabledPath;
+    let useExternal = document.getElementById("view_source.editor.external").value;
+    document.getElementById("view_source.editor.path").disabled = ! useExternal;
+    document.getElementById("view_source.tab").disabled = useExternal;
     return undefined; // no override
   },
   getFirefoxUserAgent : function(option) {
