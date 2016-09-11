@@ -286,10 +286,12 @@ tc.tests = {
   testOnEditorExternalSyncFrom: function() {
     let checkbox = this.document.getElementById("others-editorExternal");
     let target = this.document.getElementById("others-editorExternal-path");
+    let target2 = this.document.getElementById("others-viewSourceTab");
 
     assert.equals(false, checkbox.disabled);
     for (let i = 0; i < 2; i++) {
       assert.equals(checkbox.checked, !target.disabled);
+      assert.equals(checkbox.checked, target2.disabled);
       checkbox.click();
     }
   },
