@@ -686,7 +686,7 @@
   <checkbox preference="general.warnOnAboutConfig" label="&browser.others.warnOnAboutConfig.label;"/>
 
   <groupbox>
-    <caption label="&browser.others.hello.label;"/>
+    <caption label="&browser.others.hello.label;" data-obsolete-version-since="49"/>
     <checkbox label="&browser.others.hello.enabled.label;"
             preference="loop.enabled"
             onsyncfrompreference="return gPrefWindow.prefBrowser.onHelloEnableSyncFrom();"/>
