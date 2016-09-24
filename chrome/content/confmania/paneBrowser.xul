@@ -552,7 +552,8 @@
     <radio value="*" label="&manualSet;"/>
     <textbox id="speed-notify-backoffcount" type="number" hidespinbuttons="true" min="-1" value="-1"
      preference="content.notify.backoffcount" size="2"
-     onsyncfrompreference="return gPrefWindow.radioGroupConnectionSyncFrom(this, 'speed-notify-backoffcount-gr', -1);"/>
+     onsyncfrompreference="return gPrefWindow.radioGroupConnectionSyncFrom(this, 'speed-notify-backoffcount-gr', -1);"
+     onsynctopreference="return gPrefWindow.syncTo(this, -1);"/>
   </radiogroup>
   <html:div>
     <label value="&browser.speed-paint.notify-interval.label;" control="speed-notify-interval"/>
@@ -591,7 +592,8 @@
     <radio value="-1" label="&autoSet;"/>
     <radio value="*" label="&manualSet;"/>
     <textbox id="speed-cache-memory-capacity" type="number" hidespinbuttons="true" min="-1" size="8" preference="browser.cache.memory.capacity"
-     onsyncfrompreference="return gPrefWindow.radioGroupConnectionSyncFrom(this, 'speed-cache-memory-capacity-type', -1);"/>
+      onsyncfrompreference="return gPrefWindow.radioGroupConnectionSyncFrom(this, 'speed-cache-memory-capacity-type', -1);"
+      onsynctopreference="return gPrefWindow.syncTo(this, -1);"/>
     <label value="&kilobytes;" control="browser-cache-memory-capacity"/>
   </radiogroup>
   <groupbox>
