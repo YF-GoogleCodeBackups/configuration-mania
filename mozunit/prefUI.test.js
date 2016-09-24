@@ -162,6 +162,38 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnUiSubmenuDelaySyncFrom: function() {
+    let target = this.document.getElementById("uiSubmenuDelay-radio");
+    let radioGroup = this.document.getElementById("uiSubmenuDelay");
+    let prefName = target.getAttribute("preference");
+    let origval = target.value;
+
+    target.value = 1000; // dummy
+
+    radioGroup.getItemAtIndex(0).click();
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+
+    target.value = -1;
+    target.click();
+    assert.equals("-1", radioGroup.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+    target.value = 0;
+    target.click();
+    assert.equals("*", radioGroup.value);
+    target.value = 1;
+    target.click();
+    assert.equals("*", radioGroup.value);
+
+    target.value = 1000; // dummy
+    Services.prefs.clearUserPref(prefName);
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    
+    target.value = origval;
+    target.click();
+  },
   testOnJumplistEnabledSyncFrom: function() {
     let checkbox = this.document.querySelector("checkbox[preference='browser.taskbar.lists.enabled']");
     let target_frequent = this.document.querySelector("checkbox[preference='browser.taskbar.lists.frequent.enabled']");

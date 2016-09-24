@@ -298,15 +298,13 @@ var gPrefWindow = {
     }
   },
   radioGroupConnectionSyncFrom: function(elem, radioGroupId, defaultValue) {
-    let preference = document.getElementById(elem.getAttribute("preference"));
+    let prefName = elem.getAttribute("preference");
+    let preference = document.getElementById(prefName);
     let radioGroupElem = document.getElementById(radioGroupId);
-    let val = preference.value;
-    if ((defaultValue !== undefined) && (val === undefined)) {
-      val = defaultValue;
-    }
 
     if (!radioGroupElem.mLinkedElement) {
-      radioGroupElem.addEventListener("command", function (event) {
+      radioGroupElem.mLinkedElement = elem;
+      radioGroupElem.addEventListener("command", (event) => {
         if (event.target.radioGroup === radioGroupElem) {
           if (radioGroupElem.value === "") {
             preference.reset();
@@ -317,7 +315,12 @@ var gPrefWindow = {
           event.stopPropagation();
         }
       }, false);
-      radioGroupElem.mLinkedElement = elem;
+    }
+
+    let val = defaultValue;
+    if ((Services.prefs.getPrefType(prefName) !== Components.interfaces.nsIPrefBranch.PREF_INVALID)
+        && (preference.value !== undefined)) {
+      val = preference.value;
     }
 
     let radioItemOther   = undefined;

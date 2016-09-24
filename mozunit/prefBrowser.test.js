@@ -369,12 +369,105 @@ tc.tests = {
     target.value = origval;
     target.click();
   },
-  //testOnSpeedPaintReset: function() {
-  //},
-  //testOnSynchNotifyInterval: function() {
-  //},
-  //testOpenBrowse: function() {
-  //},
+  testOnSpeedNotifyBackoffcountSyncFrom: function() {
+    let target = this.document.getElementById("speed-notify-backoffcount");
+    let radioGroup = this.document.getElementById("speed-notify-backoffcount-gr");
+    let prefName = target.getAttribute("preference");
+    let origval = target.value;
+
+    target.value = 100; // dummy
+
+    radioGroup.getItemAtIndex(0).click();
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+
+    target.value = -1;
+    target.click();
+    assert.equals("-1", radioGroup.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+    target.value = 0;
+    target.click();
+    assert.equals("*", radioGroup.value);
+    target.value = 1;
+    target.click();
+    assert.equals("*", radioGroup.value);
+
+    target.value = 100; // dummy
+    Services.prefs.clearUserPref(prefName);
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    
+    target.value = origval;
+    target.click();
+  },
+  testOnSpeedCacheMemoryCapacitySyncFrom: function() {
+    let target = this.document.getElementById("speed-cache-memory-capacity");
+    let radioGroup = this.document.getElementById("speed-cache-memory-capacity-type");
+    let prefName = target.getAttribute("preference");
+    let origval = target.value;
+
+    target.value = 100; // dummy
+
+    radioGroup.getItemAtIndex(0).click();
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+
+    target.value = -1;
+    target.click();
+    assert.equals("-1", radioGroup.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+    target.value = 0;
+    target.click();
+    assert.equals("*", radioGroup.value);
+    target.value = 1;
+    target.click();
+    assert.equals("*", radioGroup.value);
+
+    target.value = 100; // dummy
+    Services.prefs.clearUserPref(prefName);
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    
+    target.value = origval;
+    target.click();
+  },
+  testOnSessionHistoryViewerSyncFrom: function() {
+    let target = this.document.getElementById("session-history-viewers");
+    let radioGroup = this.document.getElementById("session-history-viewers-gr");
+    let prefName = target.getAttribute("preference");
+    let origval = target.value;
+
+    target.value = 100; // dummy
+
+    radioGroup.getItemAtIndex(0).click();
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+    radioGroup.getItemAtIndex(1).click();
+    assert.equals("0", radioGroup.value);
+    assert.equals(0, target.value);
+
+    target.value = -1;
+    target.click();
+    assert.equals("-1", radioGroup.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+    target.value = 0;
+    target.click();
+    assert.equals("0", radioGroup.value);
+    target.value = 1;
+    target.click();
+    assert.equals("*", radioGroup.value);
+
+    target.value = 100; // dummy
+    Services.prefs.clearUserPref(prefName);
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    
+    target.value = origval;
+    target.click();
+  },
   //testOnBrowserCacheDiskCacheFolderBrowse: function() {
   //},
   testResetBrowserCacheDiskFolder: function() {
@@ -403,10 +496,38 @@ tc.tests = {
     target.value = origval;
     target.click();
   },
-  //testResetAlertsSlide: function() {
-  //},
-  //testSetAlertsSlideLight: function() {
-  //},
+  testOnOthersHistoryExpirationMaxPagesSyncFrom: function() {
+    let target = this.document.getElementById("others-historyExpirationMaxPages");
+    let radioGroup = this.document.getElementById("others-historyExpirationMaxPages-gr");
+    let prefName = target.getAttribute("preference");
+    let origval = target.value;
+
+    target.value = 100; // dummy
+
+    radioGroup.getItemAtIndex(0).click();
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+
+    target.value = -1;
+    target.click();
+    assert.equals("-1", radioGroup.value);
+    assert.isFalse(this.document.getElementById(prefName).hasUserValue);
+    target.value = 0;
+    target.click();
+    assert.equals("*", radioGroup.value);
+    target.value = 1;
+    target.click();
+    assert.equals("*", radioGroup.value);
+
+    target.value = 100; // dummy
+    Services.prefs.clearUserPref(prefName);
+    assert.equals("-1", radioGroup.value);
+    assert.equals(-1, target.value);
+    
+    target.value = origval;
+    target.click();
+  },
   testOnHelloAccessTokenSyncFrom : function() {
     let target = this.document.getElementById("browser-others-loop-forget");
     let checkbox = this.document.querySelector("checkbox[preference='loop.enabled']");
