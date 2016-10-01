@@ -152,7 +152,7 @@ tc.tests = {
 
           // pane load
           listItem.click();
-          sleep(1000);
+          sleep(250);
 
           assert.isTrue(thePane.loaded);
           assert.isTrue(thePane.childNodes.length > 0);
@@ -171,7 +171,10 @@ tc.tests = {
   testRevertPrefDialog: function() {
     var addonObj = undefined;
     AddonManager.getAddonByID(CONF_MANIA_ADDON_ID, function (v) { addonObj = v; });
-    sleep(1000);
+    for (let i = 0; i < 100; i++) {
+      if (!!addonObj) { break; }
+      sleep(1);
+    }
     assert.isDefined(addonObj);
 
     var dialogHandler = { onOpen: function(){}, onClose: function(){} };
@@ -198,7 +201,7 @@ tc.tests = {
 
           addonObj.userDisabled = true;
           assert.equals(addonObj.userDisabled, true);
-          sleep(1000);
+          sleep(500);
 
           assert.equals(addonObj.userDisabled, false);
         }
