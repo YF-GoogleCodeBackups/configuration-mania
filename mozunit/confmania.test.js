@@ -85,7 +85,10 @@ tc.tests = {
   testCancelDisabling: function() {
     var addonObj = undefined;
     AddonManager.getAddonByID(CONF_MANIA_ADDON_ID, function (v) { addonObj = v; });
-    sleep(1000);
+    for (let i = 0; i < 100; i++) {
+      if (!!addonObj) { break; }
+      sleep(1);
+    }
     assert.isDefined(addonObj);
 
     var dialogHandler = { onOpen: function(){}, onClose: function(){} };
@@ -117,7 +120,10 @@ tc.tests = {
   testURIRegistration: function() {
     var addonObj = undefined;
     AddonManager.getAddonByID(CONF_MANIA_ADDON_ID, function (v) { addonObj = v; });
-    sleep(1000);
+    for (let i = 0; i < 100; i++) {
+      if (!!addonObj) { break; }
+      sleep(1);
+    }
     assert.isDefined(addonObj);
 
     var dialogHandler = { onOpen: function(){}, onClose: function(){} };
@@ -237,7 +243,7 @@ tc.tests = {
 
           // pane load
           listItem.click();
-          sleep(1000);
+          sleep(250);
           assert.isTrue(listItem.selected);
           assert.isTrue(thePane.loaded);
           assert.isTrue(thePane.childNodes.length > 0);
