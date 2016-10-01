@@ -105,7 +105,6 @@
   <preference id="browser.ctrlTab.previews" name="browser.ctrlTab.previews" type="bool"/>
   <preference id="browser.taskbar.previews.enable" name="browser.taskbar.previews.enable" type="bool"/>
   <preference id="browser.tabs.animate" name="browser.tabs.animate" type="bool"/>
-  <preference id="browser.panorama.animate_zoom" name="browser.panorama.animate_zoom" type="bool"/>
 
   <preference id="browser.sessionstore.interval" name="browser.sessionstore.interval" type="int"/>
   <preference id="browser.sessionstore.max_windows_undo" name="browser.sessionstore.max_windows_undo" type="int"/>
@@ -382,7 +381,6 @@
   <groupbox>
     <caption label="&browser.tabs.animation.label;"/> 
     <checkbox label="&browser.tabs.animation.animate_tab.label;" preference="browser.tabs.animate"/>
-    <checkbox label="&browser.tabs.animation.panorama.label;" preference="browser.panorama.animate_zoom" data-obsolete-version-since="45"/>
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="sessionstore">
