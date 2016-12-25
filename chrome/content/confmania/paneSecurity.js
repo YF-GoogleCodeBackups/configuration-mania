@@ -36,6 +36,19 @@ gPrefWindow.prefSecurity = {
       }
     }
 
+    // set data-preference-for-context attribute
+    for (let index = 0; index < gTlsPrefElements.length; index++) {
+      let currentBox = gTlsPrefElements[index];
+      if (index <= minVersion) {
+        currentBox.setAttribute("data-preference-for-context", "security.tls.version.min");
+      } else if (maxVersion <= index) {
+        // Note: care nothing in case of "minVersion == maxVersion == index == gTlsPrefElements.length"
+        currentBox.setAttribute("data-preference-for-context", "security.tls.version.max");
+      } else {
+        currentBox.removeAttribute("data-preference-for-context");
+      }
+    }
+
     return undefined;
   },
   onSSLProtocolVersionsChange: function() {
