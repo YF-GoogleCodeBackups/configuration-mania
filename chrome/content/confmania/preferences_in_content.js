@@ -244,6 +244,8 @@ var gPrefWindow = {
 
     if (o.hasAttribute("preference")) {
       gPrefWindow._contextPrefString = o.getAttribute("preference");
+    } else if (o.hasAttribute("data-preference-for-context")) {
+      gPrefWindow._contextPrefString = o.getAttribute("data-preference-for-context");
     } else if (o._linkedpreference) {
       gPrefWindow._contextPrefString = o._linkedpreference;
     } else {
