@@ -44,7 +44,7 @@
 <!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
 <!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
-<!ENTITY browser.html.vertical-text.label "CSSの縦書きテキストを有効にする">
+<!ENTITY browser.html.vertical-text-disabled.label "CSSの縦書きテキストを無効にする">
 <!ENTITY browser.html.prefixes-webkit.label "一部の &quot;-webkit-&quot; ベンダープリフィックスの CSS プロパティを有効にする">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
 <!ENTITY browser.html.focus.enabled.label "フォーカスされた要素を色を付けてハイライト表示">
