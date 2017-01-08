@@ -219,6 +219,59 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnCssDppRadioTextChange : function () {
+    let target = this.document.getElementById("layout.css.devPixelsPerPx");
+    let radioGroup = this.document.getElementById("uiCssDpp-radio");
+    let textbox = this.document.getElementById("uiCssDpp-text");
+    let origval = target.value;
+
+    radioGroup.getItemAtIndex(0).click();
+    assert.equals("-1.0", radioGroup.value);
+    assert.equals(true, textbox.disabled);
+    //assert.equals("-1.0", target.value);
+    textbox.value = 1.1;
+    textbox.click();
+    //assert.equals("-1.0", target.value);
+
+    radioGroup.getItemAtIndex(1).click();
+    assert.equals("*", radioGroup.value);
+    assert.equals(false, textbox.disabled);
+    textbox.value = 1.1;
+    textbox.click();
+    assert.equals("1.1", target.value);
+    textbox.value = 1.2;
+    textbox.click();
+    assert.equals("1.2", target.value);
+
+    target.value = origval;
+  },
+  testOnCssDppSyncFrom : function () {
+    let preference = this.document.getElementById("layout.css.devPixelsPerPx");
+    let radioGroup = this.document.getElementById("uiCssDpp-radio");
+    let textbox = this.document.getElementById("uiCssDpp-text");
+    let origval = preference.value;
+
+    preference.value = "-1.0";
+    assert.equals("-1.0", radioGroup.value);
+    assert.equals(true, textbox.disabled);
+
+    preference.value = "-0.1";
+    assert.equals("-1.0", radioGroup.value);
+    assert.equals(true, textbox.disabled);
+    preference.value = "0.0";
+    assert.equals("-1.0", radioGroup.value);
+    assert.equals(true, textbox.disabled);
+
+    preference.value = "0.1";
+    assert.equals("*", radioGroup.value);
+    assert.equals(false, textbox.disabled);
+
+    preference.value = "1.0";
+    assert.equals("*", radioGroup.value);
+    assert.equals(false, textbox.disabled);
+
+    preference.value = origval;
+  },
   testOnMiddlemousePasteSyncFrom: function () {
     let checkbox = this.document.querySelector("checkbox[preference='middlemouse.paste']");
     let target = this.document.querySelector("checkbox[preference='middlemouse.contentLoadURL']");

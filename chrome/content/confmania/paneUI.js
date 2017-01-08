@@ -82,6 +82,31 @@ gPrefWindow.prefUI = {
       }
     });
   },
+  onCssDppRadioTextChange : function () {
+    let textbox = document.getElementById("uiCssDpp-text");
+    let preference = document.getElementById("layout.css.devPixelsPerPx");
+    if (document.getElementById("uiCssDpp-radio").value === "*") {
+      textbox.disabled = false;
+      preference.value = parseFloat(textbox.value);
+    } else {
+      textbox.disabled = true;
+      gPrefWindow.resetPref(preference);
+    }
+  },
+  onCssDppSyncFrom : function () {
+    let curval = document.getElementById("layout.css.devPixelsPerPx").value;
+    let textbox = document.getElementById("uiCssDpp-text");
+    if (parseFloat(curval) < 0.01) {
+      document.getElementById("uiCssDpp-radio").value = "-1.0";
+      textbox.disabled = true;
+      textbox.value = String(window.devicePixelRatio);
+    } else {
+      document.getElementById("uiCssDpp-radio").value = "*";
+      textbox.disabled = false;
+      textbox.value = curval;
+    }
+    return undefined;
+  },
   onMiddlemousePasteSyncFrom : function () {
     let disabled = document.getElementById("middlemouse.paste").value;
     document.getElementById("middlemouse.contentLoadURL").disabled = disabled;
