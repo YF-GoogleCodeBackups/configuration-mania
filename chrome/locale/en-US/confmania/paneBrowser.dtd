@@ -46,6 +46,7 @@
 <!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
 <!ENTITY browser.html.vertical-text-disabled.label "Disable CSS vertical text">
 <!ENTITY browser.html.prefixes-webkit.label "Enable some &quot;-webkit-&quot; vendor-prefixed CSS properties">
+<!ENTITY browser.html.disable_css_visited_links.label "Disable CSS visited-link styling to protect the privacy of browsing history">
 <!ENTITY browser.html.focus.label "Highlight Focus">
 <!ENTITY browser.html.focus.enabled.label "Highlight focused objects with color">
 <!ENTITY browser.html.focus.bg.label "Background Color">
