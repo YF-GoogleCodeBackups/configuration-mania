@@ -236,7 +236,8 @@ var gPrefWindow = {
     var o = event.target.triggerNode;
     if (o.labeledControlElement) o = o.labeledControlElement;
     if (o.nodeName == "radio") {
-      if ((o.value == "*") && (o.nextSibling != null) && (o.nextSibling.hasAttribute("preference"))) {
+      if ((o.value == "*") && (o.nextSibling != null) &&
+        (o.nextSibling.hasAttribute("preference") || o.nextSibling.hasAttribute("data-preference-for-context"))) {
         o = o.nextSibling;
       } else if (o.radioGroup) {
         o = o.radioGroup;
@@ -332,7 +333,7 @@ var gPrefWindow = {
       let oRadio = radioGroupElem.getItemAtIndex(i);
       if (oRadio.value === "*") {
         radioItemOther = oRadio;
-      } else if (oRadio.value === String(val)) {
+      } else if (oRadio.value == String(val)) {
         radioItemMatched = oRadio;
       }
     }

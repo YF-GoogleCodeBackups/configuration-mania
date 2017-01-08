@@ -110,6 +110,7 @@
 <!ENTITY ui.taskbar.jumplist.refreshInSeconds.label "Refresh list items every">
 <!ENTITY ui.taskbar.jumplist.refreshInSeconds.label2 "seconds.">
 <!ENTITY ui.others.label "Other">
+<!ENTITY ui.others.css-devPixelsPerPx.label "DPI Scaling Level">
 <!ENTITY ui.others.xwin.label "Unix (X-Window) style mouse behavior">
 <!ENTITY ui.others.xwin.autocopy.label "Enable auto-copy selected text (takes effect only *nix)">
 <!ENTITY ui.others.xwin.paste.label "Paste when clicked middle mouse button">

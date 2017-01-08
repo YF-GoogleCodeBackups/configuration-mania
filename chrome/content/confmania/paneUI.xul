@@ -125,6 +125,7 @@
   <preference id="browser.taskbar.lists.maxListItemCount" name="browser.taskbar.lists.maxListItemCount" type="int"/>
   <preference id="browser.taskbar.lists.refreshInSeconds" name="browser.taskbar.lists.refreshInSeconds" type="int"/>
 
+  <preference id="layout.css.devPixelsPerPx" name="layout.css.devPixelsPerPx" type="string"/>
   <preference id="clipboard.autocopy" name="clipboard.autocopy" type="bool"/>
   <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
   <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
@@ -468,6 +469,22 @@
   </groupbox>
 </box>
 <box class="subtabpanel" orient="vertical" id="ui-pane-others">
+  <groupbox>
+    <caption label="&ui.others.css-devPixelsPerPx.label;"/>
+    <radiogroup id="uiCssDpp-radio" oncommand="gPrefWindow.prefUI.onCssDppRadioTextChange()">
+      <radio value="-1.0" label="&autoSet;"/>
+      <hbox align="center">
+        <radio value="*" label="&manualSet;"/>
+        <textbox id="uiCssDpp-text" type="number"
+          hidespinbuttons="true" min="0.01" size="4" decimalplaces="2" increment="0.01"
+          data-preference-for-context="layout.css.devPixelsPerPx"
+          onchange="gPrefWindow.prefUI.onCssDppRadioTextChange()"/>
+      </hbox>
+    </radiogroup>
+    <data preference="layout.css.devPixelsPerPx"
+          preference-editable="true"
+          onsyncfrompreference="gPrefWindow.prefUI.onCssDppSyncFrom();"/>
+  </groupbox>
   <groupbox>
     <caption label="&ui.others.xwin.label;"/>
     <checkbox label="&ui.others.xwin.autocopy.label;" preference="clipboard.autocopy"/>
