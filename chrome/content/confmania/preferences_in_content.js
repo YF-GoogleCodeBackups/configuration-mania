@@ -95,7 +95,8 @@ var gPrefWindow = {
             return NodeFilter.FILTER_REJECT;
           } else if (["menuitem", "data"].indexOf(node.localName) >= 0) {
             return NodeFilter.FILTER_REJECT;
-          } else if (node.hasAttribute("preference") && (node.getAttribute("preference").toLocaleLowerCase() == findtext)) {
+          } else if ((node.hasAttribute("preference") && (node.getAttribute("preference").toLocaleLowerCase() == findtext)) ||
+                     (node.hasAttribute("data-preference-for-context") && (node.getAttribute("data-preference-for-context").toLocaleLowerCase() == findtext))) {
             return NodeFilter.FILTER_ACCEPT;
           } else {
             return ((isFindMatch(node.getAttribute("label"))) ||
