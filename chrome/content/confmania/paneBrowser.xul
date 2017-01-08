@@ -82,6 +82,7 @@
   <preference id="gfx.downloadable_fonts.enabled" name="gfx.downloadable_fonts.enabled" type="bool"/>
   <preference id="layout.css.vertical-text.enabled" name="layout.css.vertical-text.enabled" type="bool" inverted="true"/>
   <preference id="layout.css.prefixes.webkit" name="layout.css.prefixes.webkit" type="bool"/>
+  <preference id="layout.css.visited_links_enabled" name="layout.css.visited_links_enabled" type="bool" inverted="true"/>
   <preference id="browser.display.use_focus_colors" name="browser.display.use_focus_colors" type="bool"/>
   <preference id="browser.display.focus_background_color" name="browser.display.focus_background_color" type="string"/>
   <preference id="browser.display.focus_text_color" name="browser.display.focus_text_color" type="string"/>
@@ -317,8 +318,8 @@
 
   <checkbox label="&browser.html.downloadable_fonts.label;" preference="gfx.downloadable_fonts.enabled"/>
   <checkbox label="&browser.html.vertical-text-disabled.label;" preference="layout.css.vertical-text.enabled" data-obsolete-version-since="51" />
-
   <checkbox label="&browser.html.prefixes-webkit.label;" preference="layout.css.prefixes.webkit"/>
+  <checkbox label="&browser.html.disable_css_visited_links.label;" preference="layout.css.visited_links_enabled"/>
 
   <groupbox>
     <caption label="&browser.html.focus.label;"/>

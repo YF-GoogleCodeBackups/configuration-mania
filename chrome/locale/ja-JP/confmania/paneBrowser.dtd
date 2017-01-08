@@ -46,6 +46,7 @@
 <!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
 <!ENTITY browser.html.vertical-text-disabled.label "CSSの縦書きテキストを無効にする">
 <!ENTITY browser.html.prefixes-webkit.label "一部の &quot;-webkit-&quot; ベンダープリフィックスの CSS プロパティを有効にする">
+<!ENTITY browser.html.disable_css_visited_links.label "CSSの訪問済みリンクのスタイリングを無効にして、閲覧履歴のプライバシーを保護する">
 <!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
 <!ENTITY browser.html.focus.enabled.label "フォーカスされた要素を色を付けてハイライト表示">
 <!ENTITY browser.html.focus.bg.label "背景色">
