@@ -192,6 +192,11 @@ gPrefWindow.prefBrowser = {
     openDialog("chrome://browser/content/preferences/permissions.xul", 
                "Browser:Permissions", "resizable=yes", params);
   },
+  onWebAPIWebComponentEnabledSyncFrom : function() {
+    let disabled = ! document.getElementById("dom.webcomponents.enabled").value;
+    document.getElementById("dom.webcomponents.customelements.enabled").disabled = disabled;
+    return undefined; // no override
+  },
   onInterruptParseSyncFrom : function() {
     let disabled = document.getElementById("content.interrupt.parsing").value;
     document.getElementById("content.max.tokenizing.time").disabled = disabled;

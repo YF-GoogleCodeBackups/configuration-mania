@@ -141,6 +141,7 @@
   <preference id="webgl.disabled" name="webgl.disabled" type="bool" inverted="true"/>
   <preference id="dom.serviceWorkers.enabled" name="dom.serviceWorkers.enabled" type="bool"/>
   <preference id="dom.webcomponents.enabled" name="dom.webcomponents.enabled" type="bool"/>
+  <preference id="dom.webcomponents.customelements.enabled" name="dom.webcomponents.customelements.enabled" type="bool"/>
   <preference id="javascript.options.wasm" name="javascript.options.wasm" type="bool"/>
 
   <preference id="browser.altClickSave" name="browser.altClickSave" type="bool" inverted="true"/>
@@ -491,7 +492,8 @@
   <checkbox label="&browser.webapi.dom_vibrator_enabled.label;" preference="dom.vibrator.enabled"/>
   <checkbox label="&browser.webapi.webgl.label;" preference="webgl.disabled"/>
   <checkbox label="&browser.webapi.serviceWorkers_enabled.label;" preference="dom.serviceWorkers.enabled"/>
-  <checkbox label="&browser.webapi.webcomponents_enabled.label;" preference="dom.webcomponents.enabled"/>
+  <checkbox label="&browser.webapi.webcomponents_enabled.label;" preference="dom.webcomponents.enabled" onsyncfrompreference="return gPrefWindow.prefBrowser.onWebAPIWebComponentEnabledSyncFrom();"/>
+  <checkbox class="indent" label="&browser.webapi.webcomponents_customelements_enabled.label;" preference="dom.webcomponents.customelements.enabled" data-require-version="50"/>
   <checkbox label="&browser.webapi.wasm_enabled.label;" preference="javascript.options.wasm" data-require-version="47"/>
 </box>
 <box class="subtabpanel" orient="vertical" id="download">

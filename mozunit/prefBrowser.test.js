@@ -265,6 +265,15 @@ tc.tests = {
   },
   //testOnWebAPIGeoExceptionsCommand : function() {
   //},
+  testOnWebAPIWebComponentEnabledSyncFrom: function() {
+    let checkbox = this.document.querySelector("checkbox[preference='dom.webcomponents.enabled']");
+    let target = this.document.querySelector("checkbox[preference='dom.webcomponents.customelements.enabled']");
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(checkbox.checked, !target.disabled);
+      checkbox.click();
+    }
+  },
   testOnInterruptParseSyncFrom: function() {
     let checkbox = this.document.getElementById("speed-interrupt-parsing");
     let target = this.document.getElementById("speed-max-tokenizing-time");
