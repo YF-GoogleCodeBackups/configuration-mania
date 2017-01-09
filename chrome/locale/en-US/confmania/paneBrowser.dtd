@@ -125,6 +125,7 @@
 <!ENTITY browser.webapi.webgl.label "Enable WebGL (takes effect after restart)">
 <!ENTITY browser.webapi.serviceWorkers_enabled.label "Enable Service Workers">
 <!ENTITY browser.webapi.webcomponents_enabled.label "Enable Web Components (Shadow DOM)">
+<!ENTITY browser.webapi.webcomponents_customelements_enabled.label "Enable custom elements">
 <!ENTITY browser.webapi.wasm_enabled.label "Enable Web Assembly">
 <!ENTITY browser.download.label "Download">
 <!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links">
