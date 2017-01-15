@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "node build.js clean",
     "build": "npm run build:xpi",
-    "build:xpi": "node build.js -x @exclude.lst -o confmania.xpi xpi \"*.rdf\" \"chrome.manifest\" bootstrap.js \"chrome/**/*.*\" \"lib/**/*\" \"defaults/**/*\"",
+    "build:xpi": "node build.js -x \"**/.*\" -x \"**/*{~,#,.bak,.orig,.rej}\" -o confmania.xpi xpi \"*.rdf\" \"chrome.manifest\" bootstrap.js \"chrome/**/*.*\" \"lib/**/*\" \"defaults/**/*\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "@cat-in-136",
