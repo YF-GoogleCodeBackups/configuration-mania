@@ -1,0 +1,15 @@
+content	confmania	chrome/content/confmania/
+
+skin	confmania	classic/1.0	chrome/skin/classic/confmania/
+locale	confmania	en-US	chrome/locale/en-US/confmania/
+locale	confmania	ja-JP	chrome/locale/ja-JP/confmania/
+
+#locale	confmania	de	chrome/locale/de/confmania/
+#locale	confmania	es-ES	chrome/locale/es-ES/confmania/
+#locale	confmania	fr	chrome/locale/fr/confmania/
+#locale	confmania	lt	chrome/locale/lt/confmania/
+#locale	confmania	pl	chrome/locale/pl/confmania/
+#locale	confmania	pt-BR	chrome/locale/pt-BR/confmania/
+#locale	confmania	sv-SE	chrome/locale/sv-SE/confmania/
+#locale	confmania	zh-CN	chrome/locale/zh-CN/confmania/
+#locale	confmania	zh-TW	chrome/locale/zh-TW/confmania/

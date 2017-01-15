@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is the Configuration Mania.
+   -
+   - The Initial Developer of the Original Code is Popoki Tom.
+   - Portions created by the Initial Developer are Copyright (C) 2004
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -     Popoki Tom (cat_in_136) (Configuration Mania)
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY % paneDebugDTD SYSTEM "chrome://confmania/locale/paneDebug.dtd">
+%paneDebugDTD;
+]>
+
+<overlay id="paneDebugOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneDebug" orient="vertical">
+
+<preferences>
+  <preference name="browser.dom.window.dump.enabled" id="browser.dom.window.dump.enabled" type="bool"/>
+  <preference name="browser.dom.window.dump.file" id="browser.dom.window.dump.file" type="string"/>
+  <preference name="javascript.options.strict" id="javascript.options.strict" type="bool"/>
+  <preference name="javascript.options.showInConsole" id="javascript.options.showInConsole" type="bool"/>
+  <preference name="layout.css.report_errors" id="layout.css.report_errors" type="bool"/>
+  <preference name="extensions.logging.enabled" id="extensions.logging.enabled" type="bool"/>
+  <preference name="devtools.chrome.enabled" id="devtools.chrome.enabled" type="bool"/>
+  <preference name="devtools.debugger.remote-enabled" id="devtools.debugger.remote-enabled" type="bool"/>
+  <preference name="ui.popup.disable_autohide" id="ui.popup.disable_autohide" type="bool"/>
+  <preference name="nglayout.debug.disable_xul_cache" id="nglayout.debug.disable_xul_cache" type="bool"/>
+  <preference name="browser.cache.disk.enable" id="browser.cache.disk.enable" type="bool" inverted="true"/>
+  <!--preference name="browser.cache.memory.enable" id="browser.cache.memory.enable" type="bool" inverted="true"/-->
+</preferences>
+
+<script type="application/javascript" src="paneDebug.js"></script>
+
+<groupbox>
+<caption label="&debug.debug.label;"/>
+<checkbox label="&debug.debug.dump.label;"
+          preference="browser.dom.window.dump.enabled"
+          onsyncfrompreference="return gPrefWindow.prefDebug.onDebugDumpEnabledSyncFrom();"/>
+<hbox class="indent" align="center">
+  <label value="&debug.debug.dump.file.label;" control="debug-dump-file"/>
+  <textbox id="debug-dump-file" flex="1" preference="browser.dom.window.dump.file" placeholder="&debug.debug.dump.file.placeholder;"/>
+  <button label="&browse;" control="debug-dump-file" oncommand="gPrefWindow.prefDebug.onDebugDumpFileBrowse();"/>
+  <button label="&reset;" control="debug-dump-file" oncommand="gPrefWindow.prefDebug.onDebugDumpFileReset();"/>
+</hbox>
+<checkbox label="&debug.debug.jsstrict.label;"
+          preference="javascript.options.strict"/>
+<checkbox label="&debug.debug.chromeerr.label;"
+          preference="javascript.options.showInConsole"/>
+<checkbox label="&debug.debug.csserr.label;"
+          preference="layout.css.report_errors"/>
+<checkbox label="&debug.debug.extensionslogging.label;"
+          preference="extensions.logging.enabled"/>
+</groupbox>
+
+<groupbox>
+<caption label="&debug.devtools.label;"/>
+<checkbox label="&debug.devtools.chrome_enabled.label;"
+          preference="devtools.chrome.enabled"/>
+<checkbox label="&debug.devtools.debugger_remote_enabled.label;"
+          preference="devtools.debugger.remote-enabled"/>
+</groupbox>
+
+<checkbox label="&debug.popup_disable_autohide.label;" preference="ui.popup.disable_autohide" data-require-version="47"/>
+
+<groupbox orient="horizontal">
+<caption label="&debug.cache.label;"/>
+<checkbox label="&debug.cache.disableXULCache.label;"
+          preference="nglayout.debug.disable_xul_cache"/>
+<checkbox label="&debug.cache.diskCacheDisable.label;"
+          preference="browser.cache.disk.enable"/>
+<!--checkbox label="&debug.cache.memoryCacheDisable.label;"
+          preference="browser.cache.memory.enable"/-->
+</groupbox>
+
+</prefpane>
+</overlay>

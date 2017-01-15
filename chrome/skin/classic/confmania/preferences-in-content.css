@@ -1,0 +1,254 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+.listBox {
+  -moz-appearance: listbox;
+  margin: 2px 4px;
+  border: 2px solid;
+  -moz-border-top-colors: ThreeDShadow ThreeDDarkShadow;
+  -moz-border-right-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  -moz-border-left-colors: ThreeDShadow ThreeDDarkShadow;
+  background: -moz-Field;
+  color: -moz-FieldText;
+  overflow: auto;
+}
+
+@media (max-height: 359px) {
+  #categories {
+    padding-top: calc(100vh - 320px);
+  }
+}
+#categories {
+  max-height: 100vh;
+}
+#categories > scrollbox {
+  overflow-x: hidden !important;
+}
+
+prefpane > .content-box {
+  overflow: auto;
+}
+
+prefpane hbox.header[data-category] {
+  display: inherit; /* display only for in-content */
+}
+
+prefpane > .content-box {
+  overflow: auto;
+}
+.main-content {
+  -moz-padding-start: 4px;
+  -moz-padding-end: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+textbox + button,
+filefield + button {
+  -moz-margin-start: -4px;
+}
+
+menulist[editable="true"] .menulist-editable-box {
+  -moz-appearance: none;
+  background-color: #fff !important;
+}
+menulist[editable="true"][focused] {
+  border-color: #0095DD;
+}
+menulist[editable="true"] button {
+  border-color: #0095DD;
+}
+menulist[editable="true"] > .menulist-dropmarker {
+  -moz-appearance: toolbarbutton-dropdown;
+}
+
+textbox[type="number"] > spinbuttons {
+  -moz-appearance: none;
+}
+groupbox + *:not(groupbox) {
+  margin-top: 15px;
+}
+button[type="menu"] > .button-box > .button-menu-dropmarker {
+  -moz-appearance: toolbarbutton-dropdown !important;
+}
+
+
+.subtabs, .subtabpanel {
+  -moz-appearance: listbox;
+  border: 2px solid;
+  background: -moz-Field;
+  color: -moz-FieldText;
+
+  overflow: auto;
+}
+.subtabs {
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: solid 1px #C1C1C1 !important;
+  border-right: solid 1px #C1C1C1 !important;
+}
+.subtabs .subtab {
+  -moz-appearance: none;
+  margin: 0;
+  padding: 4px;
+  border-style: none;
+  border-left: 4px solid transparent;
+  background: -moz-Field;
+  color: -moz-FieldText;
+}
+.subtabs .subtab:hover {
+  background-color: #EBEBEB;
+}
+.subtabs .subtab[selected] {
+  border-left: 4px solid #FF9500;
+  background-color: #EBEBEB;
+  color: #212121;
+}
+.subtabs .subtab * {
+  background-image: none ! important;
+}
+.subtabs .subtab .radio-spacer-box,
+.subtabs .subtab .radio-check,
+.subtabs .subtab .radio-check-box1 {
+  visibility: collapse;
+}
+.subtabpanel {
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+.subtabpanel {
+  visibility: collapse;
+  opacity: 0;
+}
+.subtabpanel[selected="true"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+caption {
+  font-size: 1.667rem;
+}
+.category > label, prefpane {
+  font-size: 1.25rem;
+}
+.subtabpanel {
+  padding: 0.5rem;
+}
+.subpanel groupbox .groupbox-body, .indent {
+  -moz-margin-start: 33px;
+}
+@media (max-width: 799px), (max-height: 359px) {
+  .category > label, prefpane, groupbox .groupbox-body, .tab-text, tabpanels {
+    font-size: 1.0rem;
+  }
+  .subpanel groupbox .groupbox-body, .indent {
+    -moz-margin-start: 13px;
+  }
+}
+
+#app-bar {
+	padding: 15px 40px;
+	box-shadow: inset 0 1px 0 #c1c1c1;
+}
+@media (max-width: 799px), (max-height: 359px) {
+  #app-bar {
+  	padding: 2px 4px;
+  }
+}
+#pref-find[status="notfound"] {
+  background-color: #f66;
+  color: white;
+}
+#pref-find-next, #pref-find-previous {
+  -moz-margin-start: 0;
+  list-style-image: url("find-arrows.svg");
+}
+#pref-find-next[disabled], #pref-find-previous[disabled] {
+  opacity: 0.5;
+}
+#pref-find-previous {
+  -moz-image-region: rect(0px, 12px, 9px, 0px);
+}
+#pref-find-next {
+  -moz-image-region: rect(0px, 24px, 9px, 12px);
+}
+
+[data-highlight], [data-highlight] .checkbox-label, [data-highlight] .radio-label {
+  box-shadow: 0 0 1px 4px #ff0 ! important;
+}
+[data-highlight=active], [data-highlight=active] .checkbox-label, [data-highlight=active] .radio-label {
+  background-color: #ff0 ! important;
+}
+
+
+/* checkbox which is disabled for changes but non-gray text (i.e., in effect) */
+checkbox.nogray-disabled[disabled="true"][nogray="true"] {
+  color: inherit;
+  text-shadow: inherit;
+}
+
+.emphasis{ font-weight: bold ! important; }
+vbox.warning {
+  border-width: 0 0 0 4px;
+  border-radius: 2px;
+  border-width: 0 0 0 4px;
+  border-style: solid;
+  padding: 4px 4px 2px;
+  
+	background:#fad7d4;
+	border-color:#f08a81;
+}
+
+*|*:-moz-any-link:hover{ color: -moz-nativehyperlinktext; text-decoration: underline; }
+
+description[disabled="true"] { color: GrayText; }
+/* XXX This style is for bug 740213 and should be removed once that
+   bug has a solution. */
+description > *|*:-moz-any-link {
+  cursor: pointer;
+}
+
+[data-obsolete-msg]::after, [data-require-msg]::after, [data-require-obsolete-msg]::after {
+  border-width: 0 0 0 4px;
+  font-size: x-small;
+  border-radius: 2px;
+  border-width: 0 0 0 4px;
+  border-style: solid;
+  padding: 4px 4px 2px;
+  display: inline-block;
+  vertical-align: top;
+  font-weight: 400;
+  line-height: normal;
+}
+[data-obsolete-msg]::after {
+  content: attr(data-obsolete-msg);
+	background:#fad7d4;
+	border-color:#f08a81;
+}
+[data-require-msg]::after {
+  content: attr(data-require-msg);
+  background:#cce9f8;
+	border-color:#7dc7ed;
+}
+[data-require-obsolete-msg]::after {
+  content: attr(data-require-obsolete-msg);
+  background:#fff4cc;
+	border-color:#ffe070;
+}
+[data-obsolete-msg][disabled]::after, [data-require-msg][disabled]::after, [data-require-obsolete-msg][disabled]::after {
+  opacity: 0.5;
+}
+[data-obsolete-msg]:not([disabled="true"]):hover::after, [data-require-msg]:not([disabled="true"]):hover::after, [data-require-obsolete-msg]:not([disabled="true"]):hover::after {
+  outline: 1px solid #0095dd;
+  -moz-outline-radius: 4px;
+}
+
+listbox > listrows > listboxbody {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,376 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is the Configure Mania.
+   -
+   - The Initial Developer of the Original Code is Popoki Tom.
+   - Portions created by the Initial Developer are Copyright (C) 2005
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -   Popoki Tom (cat_in_136) (Configuration Mania)
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY % paneSecurityDTD SYSTEM "chrome://confmania/locale/paneSecurity.dtd">
+%paneSecurityDTD;
+]>
+
+<overlay id="paneSecurityOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneSecurity" flex="1">
+
+<script type="application/javascript" src="paneSecurity.js"></script>
+
+<preferences>
+  <preference id="javascript.enabled" name="javascript.enabled" type="bool"/>
+  <preference id="dom.max_script_run_time" name="dom.max_script_run_time" type="int"/>
+  <preference id="dom.allow_scripts_to_close_windows" name="dom.allow_scripts_to_close_windows" type="bool" inverted="true"/>
+  <preference id="dom.disable_window_flip" name="dom.disable_window_flip" type="bool"/>
+  <preference id="dom.disable_window_move_resize" name="dom.disable_window_move_resize" type="bool"/>
+  <preference id="dom.disable_window_status_change" name="dom.disable_window_status_change" type="bool"/>
+  <preference id="dom.event.contextmenu.enabled" name="dom.event.contextmenu.enabled" type="bool" inverted="true"/>
+  <preference id="dom.event.clipboardevents.enabled" name="dom.event.clipboardevents.enabled" type="bool" inverted="true"/>
+  <preference id="nglayout.events.dispatchLeftClickOnly" name="nglayout.events.dispatchLeftClickOnly" type="bool"/>
+
+  <preference id="dom.disable_window_open_feature.menubar" name="dom.disable_window_open_feature.menubar" type="bool"/>
+  <preference id="dom.disable_window_open_feature.resizable" name="dom.disable_window_open_feature.resizable" type="bool"/>
+  <preference id="dom.disable_window_open_feature.scrollbars" name="dom.disable_window_open_feature.scrollbars" type="bool"/>
+  <!--preference id="dom.disable_window_open_feature.titlebar" name="dom.disable_window_open_feature.titlebar" type="bool"/-->
+  <preference id="dom.disable_window_open_feature.toolbar" name="dom.disable_window_open_feature.toolbar" type="bool"/>
+  <preference id="dom.disable_window_open_feature.location" name="dom.disable_window_open_feature.location" type="bool"/>
+  <preference id="dom.disable_window_open_feature.status" name="dom.disable_window_open_feature.status" type="bool"/>
+
+  <preference id="privacy.popups.showBrowserMessage" name="privacy.popups.showBrowserMessage" type="bool"/>
+  <preference id="browser.link.open_newwindow" name="browser.link.open_newwindow" type="int"/>
+  <preference id="browser.link.open_newwindow.restriction" name="browser.link.open_newwindow.restriction" type="int"/>
+  <preference id="dom.popup_maximum" name="dom.popup_maximum" type="int"/>
+  <preference id="privacy.popups.disable_from_plugins" name="privacy.popups.disable_from_plugins" type="int"/>
+  <preference id="dom.popup_allowed_events" name="dom.popup_allowed_events" type="string"/>
+
+  <preference id="security.tls.version.min" name="security.tls.version.min" type="int"/>
+  <preference id="security.tls.version.max" name="security.tls.version.max" type="int"/>
+  <preference id="security.mixed_content.block_active_content" name="security.mixed_content.block_active_content" type="bool"/>
+  <preference id="security.mixed_content.block_display_content" name="security.mixed_content.block_display_content" type="bool"/>
+  <preference id="browser.ssl_override_behavior" name="browser.ssl_override_behavior" type="int"/>
+
+  <preference id="network.http.redirection-limit" name="network.http.redirection-limit" type="int"/>
+  <preference id="network.IDN_show_punycode" name="network.IDN_show_punycode" type="bool"/>
+
+  <preference id="signon.autofillForms" name="signon.autofillForms" type="bool"/>
+  <preference id="network.cookie.lifetime.days" name="network.cookie.lifetime.days" type="int"/>
+  <preference id="privacy.trackingprotection.enabled" name="privacy.trackingprotection.enabled" type="bool"/>
+  <preference id="privacy.trackingprotection.pbmode.enabled" name="privacy.trackingprotection.pbmode.enabled" type="bool"/>
+  <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
+  <preference id="security.ask_for_password" name="security.ask_for_password" type="int"/>
+  <preference id="security.password_lifetime" name="security.password_lifetime" type="int"/>
+
+  <preference id="network.http.sendRefererHeader" name="network.http.sendRefererHeader" type="int"/>
+  <preference id="network.http.referer.spoofSource" name="network.http.referer.spoofSource" type="bool"/>
+  <preference id="network.http.referer.trimmingPolicy" name="network.http.referer.trimmingPolicy" type="int"/>
+  <preference id="network.http.referer.XOriginPolicy" name="network.http.referer.XOriginPolicy" type="int"/>
+  <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
+
+  <preference id="security.fileuri.strict_origin_policy" name="security.fileuri.strict_origin_policy" type="bool"/>
+</preferences>
+
+<hbox flex="1" orient="horizontal" id="paneSecurityBox">
+<radiogroup id="paneSecurityBoxTab" class="subtabs"
+ orient="vertical" style="max-width: 10em; width: 10em;"
+ value="security-pane-js" oncommand="gPrefWindow.prefSecurity.onPaneSecurityBoxTabSelected();">
+  <radio class="subtab" value="security-pane-js"        label="&security.js.label;"/>
+  <radio class="subtab" value="security-pane-popupwin"  label="&security.popupwin.label;"/>
+  <radio class="subtab" value="security-pane-ssl"       label="&security.ssl.label;"/>
+  <radio class="subtab" value="security-pane-net"       label="&security.net.label;"/>
+  <radio class="subtab" value="security-pane-privacy"   label="&security.privacy.label;"/>
+  <radio class="subtab" value="security-pane-referer"   label="&security.referer.label;"/>
+  <radio class="subtab" value="security-pane-content"   label="&security.content.label;"/>
+</radiogroup>
+<splitter/>
+<deck id="paneSecurityBoxContainer" flex="4">
+<box class="subtabpanel" orient="vertical" id="security-pane-js">
+  <checkbox preference="javascript.enabled"
+            label="&security.js.enableJavaScript.label;"/>
+  <groupbox>
+    <caption label="&security.js.annoy.label;"/>
+
+    <groupbox>
+      <html:div>
+        <label value="&security.js.annoy.max_script_run_time.label;" control="max_script_run_time"/>
+        <textbox id="max_script_run_time" type="number" hidespinbuttons="true" preference="dom.max_script_run_time" size="2"/>
+        <label value="&seconds;"/>
+      </html:div>
+    </groupbox>
+    <groupbox>
+      <checkbox preference="dom.allow_scripts_to_close_windows" label="&security.js.annoy.disable_scripts_to_close_windows;"/>
+      <checkbox preference="dom.disable_window_flip" label="&security.js.annoy.window_flip;"/>
+      <checkbox preference="dom.disable_window_move_resize" label="&security.js.annoy.window_move_resize;"/>
+      <checkbox preference="dom.disable_window_status_change" label="&security.js.annoy.status_change;"/>
+      <checkbox preference="dom.event.contextmenu.enabled" label="&security.js.annoy.contextmenu;"/>
+      <checkbox preference="dom.event.clipboardevents.enabled" label="&security.js.annoy.clipboardevents;"/>
+      <checkbox preference="nglayout.events.dispatchLeftClickOnly" label="&security.js.annoy.dispatchLeftClickOnly;"/>
+    </groupbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&security.js.uis.label;"/>
+
+    <description>&security.js.uis.desc1;</description>
+    <checkbox label="&security.js.uis.menubar;" preference="dom.disable_window_open_feature.menubar"/>
+    <checkbox label="&security.js.uis.resizable;" preference="dom.disable_window_open_feature.resizable"/>
+    <checkbox label="&security.js.uis.scrollbars;" preference="dom.disable_window_open_feature.scrollbars" data-obsolete-version-since="49"/>
+    <!--checkbox id="security-uis-titlebar" label="Title" preference="dom.disable_window_open_feature.titlebar"/-->
+    <checkbox label="&security.js.uis.toolbar;" preference="dom.disable_window_open_feature.toolbar"/>
+    <checkbox label="&security.js.uis.locationbar;" preference="dom.disable_window_open_feature.location"/>
+    <checkbox label="&security.js.uis.status;" preference="dom.disable_window_open_feature.status"/>
+    <description class="emphasis">&security.js.uis.desc2;</description>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-popupwin">
+  <label value="&security.popupwin.onblock.label;" control="popupwin-displayPopupsNotification"/>
+  <checkbox class="indent" id="popupwin-displayPopupsNotification"
+            label="&security.popupwin.onblock.displayNotification.label;"
+            preference="privacy.popups.showBrowserMessage"/>
+
+  <label value="&security.popupwin.tabs_newwindow.label;"/>
+  <radiogroup class="indent" preference="browser.link.open_newwindow">
+    <radio value="1" label="&security.popupwin.tabs_newwindow.openCurrent.label;"/>
+    <radio value="3" label="&security.popupwin.tabs_newwindow.openTab.label;"/>
+    <radio value="2" label="&security.popupwin.tabs_newwindow.openWindow.label;"/>
+  </radiogroup>
+
+  <label value="&security.popupwin.tabs.label;"/>
+  <radiogroup class="indent" preference="browser.link.open_newwindow.restriction">
+    <radio value="0" label="&security.popupwin.tabs.0.label;"/>
+    <radio value="1" label="&security.popupwin.tabs.1.label;"/>
+    <radio value="2" label="&security.popupwin.tabs.2.label;"/>
+  </radiogroup>
+
+  <hbox align="center">
+    <label value="&security.popupwin.popup_maximum.label;" control="popupwin-popup_maximum"/>
+    <textbox id="popupwin-popup_maximum" type="number" hidespinbuttons="true" preference="dom.popup_maximum" size="2"/>
+  </hbox>
+  <label value="&security.popupwin.from_plugins.label;"/>
+  <radiogroup class="indent" preference="privacy.popups.disable_from_plugins">
+    <radio value="0" label="&security.popupwin.from_plugins.0.label;"/>
+    <radio value="1" label="&security.popupwin.from_plugins.1.label;"/>
+    <radio value="2" label="&security.popupwin.from_plugins.2.label;"/>
+    <radio value="3" label="&security.popupwin.from_plugins.3.label;"/>
+  </radiogroup>
+
+  <label value="&security.popupwin.event.label;" control="popupwin-e"/>
+  <listbox class="indent" id="popupwin-e" preference="dom.popup_allowed_events" onsyncfrompreference="return gPrefWindow.prefSecurity.syncFromPopupwin()" onsynctopreference="return gPrefWindow.prefSecurity.syncToPopupwin()">
+    <listitem type="checkbox" value="reset" label="&security.popupwin.event.reset.label;"/>
+    <listitem type="checkbox" value="submit" label="&security.popupwin.event.submit.label;"/>
+    <listitem type="checkbox" value="select" label="&security.popupwin.event.select.label;"/>
+    <listitem type="checkbox" value="change" label="&security.popupwin.event.change.label;"/>
+    <listitem type="checkbox" value="resize" label="&security.popupwin.event.resize.label;"/>
+    <listitem type="checkbox" value="input" label="&security.popupwin.event.input.label;"/>
+    <listitem type="checkbox" value="keypress" label="&security.popupwin.event.keypress.label;"/>
+    <listitem type="checkbox" value="keydown" label="&security.popupwin.event.keydown.label;"/>
+    <listitem type="checkbox" value="keyup" label="&security.popupwin.event.keyup.label;"/>
+    <listitem type="checkbox" value="mouseup" label="&security.popupwin.event.mouseup.label;"/>
+    <listitem type="checkbox" value="mousedown" label="&security.popupwin.event.mousedown.label;"/>
+    <listitem type="checkbox" value="click" label="&security.popupwin.event.click.label;"/>
+    <listitem type="checkbox" value="dblclick" label="&security.popupwin.event.dblclick.label;"/>
+    <listitem type="checkbox" value="touchstart" label="&security.popupwin.event.touchstart.label;"/>
+    <listitem type="checkbox" value="touchend" label="&security.popupwin.event.touchend.label;"/>
+    <listitem type="checkbox" value="notificationclick" label="&security.popupwin.event.notificationclick.label;"/>
+  </listbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-ssl">
+  <groupbox align="start">
+    <caption label="&security.ssl.SSLProtocolVersions.caption;"/>
+    <description>&security.ssl.limit.description;</description>
+    <hbox align="center" id="security-tls-version">
+      <label value="&security.ssl.limit.enable.label;"/>
+      <data preference="security.tls.version.min"
+            preference-editable="true"
+            onsyncfrompreference="return gPrefWindow.prefSecurity.onSSLProtocolVersionsSyncFrom();"/>
+      <data preference="security.tls.version.max"
+            preference-editable="true"
+            onsyncfrompreference="return gPrefWindow.prefSecurity.onSSLProtocolVersionsSyncFrom();"/>
+      <checkbox id="allowSSL30"
+                class="nogray-disabled"
+                label="&security.ssl.limit.ssl30.label;"
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
+      <checkbox id="allowTLS10"
+                class="nogray-disabled"
+                label="&security.ssl.limit.tls10.label;"
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
+      <checkbox id="allowTLS11"
+                class="nogray-disabled"
+                label="&security.ssl.limit.tls11.label;"
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
+      <checkbox id="allowTLS12"
+                class="nogray-disabled"
+                label="&security.ssl.limit.tls12.label;"
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
+      <checkbox id="allowTLS13"
+                class="nogray-disabled"
+                label="&security.ssl.limit.tls13.label;"
+                data-require-version="49"
+                oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsChange();"/>
+    </hbox>
+    <hbox align="center" class="indent">
+      <button label="&reset;" oncommand="gPrefWindow.prefSecurity.onSSLProtocolVersionsReset();"/>
+    </hbox>
+  </groupbox>
+  <groupbox align="start">
+    <caption label="&security.ssl.SSLMixedContent.caption;"/>
+    <checkbox label="&security.ssl.block.activecontent;"
+              preference="security.mixed_content.block_active_content"/>
+    <checkbox label="&security.ssl.block.displaycontent;"
+              preference="security.mixed_content.block_display_content"/>
+  </groupbox>
+  <description>&security.ssl.ssl_override_behavior.label;</description>
+  <radiogroup class="indent" preference="browser.ssl_override_behavior">
+    <radio value="0" label="&security.ssl.ssl_override_behavior.dont.label;"/>
+    <radio value="1" label="&security.ssl.ssl_override_behavior.nofetch.label;"/>
+    <radio value="2" label="&security.ssl.ssl_override_behavior.prefetch.label;"/>
+  </radiogroup>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-net">
+  <hbox align="center">
+    <label control="redirection-limit" value="&security.net.redirection-limit.label;"/>
+    <textbox id="redirection-limit" type="number" hidespinbuttons="true" size="2" preference="network.http.redirection-limit"/>
+  </hbox>
+  <checkbox id="showPunycode" label="&security.net.show_punycode.label;"
+    preference="network.IDN_show_punycode"/>
+  <description id="showPunycodeDesc">&security.net.show_punycode.desc;</description>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-privacy">
+  <groupbox>
+    <caption label="&security.privacy.form.label;"/>
+    <checkbox label="&security.privacy.form.autofillForms.label;"
+              preference="signon.autofillForms"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&security.privacy.history.label;"/>
+
+    <groupbox>
+      <caption label="&security.privacy.history.cookie.label;"/>
+      <hbox align="center">
+        <label value="&security.privacy.history.cookie.lifetimedays.label;" control="cookieLifetimeDays"/>
+        <textbox id="cookieLifetimeDays" type="number" hidespinbuttons="true" size="2" preference="network.cookie.lifetime.days"/>
+        <label value="&days;"/>
+      </hbox>
+    </groupbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&security.privacy.trackingprotection.label;"/>
+    <hbox>
+      <checkbox id="trackingprotection-enable"
+                flex="1"
+                label="&security.privacy.trackingprotection.enable.label;"
+                preference="privacy.trackingprotection.enabled"
+                onsyncfrompreference="return gPrefWindow.prefSecurity.onTrackingProtectionEnabledSyncFrom();"/>
+      <button label="&security.privacy.trackingprotection.exceptions.label;"
+              id="trackingprotection-showTrackingProtectionExceptions"
+              data-dialog-title="&security.privacy.trackingprotection.exceptions.title;"
+              data-dialog-desc="&security.privacy.trackingprotection.exceptions.desc;"
+              oncommand="gPrefWindow.prefSecurity.onTrackingProtectionExceptionsCommand();"/>
+    </hbox>
+    <hbox class="indent">
+      <checkbox id="trackingprotection-pbmode-enable"
+                flex="1"
+                label="&security.privacy.trackingprotection-pbmode.enable.label;"
+                preference="privacy.trackingprotection.pbmode.enabled" />
+    </hbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&security.privacy.passwd.label;"/>
+    <groupbox>
+      <caption label="&security.privacy.passwd.managepassword.label;"/>
+      <checkbox hidden="true" id="askEveryTimeHidden" preference="signon.expireMasterPassword"/>
+      <label value="&security.privacy.passwd.managepassword.text;"/>
+      <radiogroup id="passwordAskTimes" preference="security.ask_for_password">
+        <!-- Components.interfaces.nsIPK11Token.ASK_FIRST_TIME == 0 -->
+        <radio value="0" label="&security.privacy.passwd.managepassword.askfirsttime;"
+          oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
+        <!-- Components.interfaces.nsIPK11Token.ASK_EVERY_TIME == -1 -->
+        <radio value="-1" label="&security.privacy.passwd.managepassword.askeverytime;"
+          oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
+        <hbox align="center">
+          <!-- Components.interfaces.nsIPK11Token.ASK_EXPIRE_TIME == 1 -->
+          <radio value="1" label="&security.privacy.passwd.managepassword.asktimeout;"
+            oncommand="gPrefWindow.prefSecurity.updatePasswordAskTimes();"/>
+          <textbox id="passwordTimeout" type="number" hidespinbuttons="true" size="4" preference="security.password_lifetime"/>
+          <label value="&security.privacy.passwd.managepassword.timeout.unit;"/>
+        </hbox>
+      </radiogroup>
+    </groupbox>
+    <description>&security.privacy.passwd.desc;</description>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-referer">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
+  <radiogroup id="sendReferer" preference="network.http.sendRefererHeader" onsyncfrompreference="return gPrefWindow.prefSecurity.onSendRefererSecureXSiteSyncFrom()">
+    <radio value="0" label="&security.referer.none.label;"/>
+    <description class="indent">&security.referer.none.desc;</description>
+    <radio value="1" label="&security.referer.link.label;"/>
+    <radio value="2" label="&security.referer.all.label;"/>
+  </radiogroup>
+  <checkbox label="&security.referer.spoofSource.label;"
+    preference="network.http.referer.spoofSource"/>
+  <label value="&security.referer.trimmingPolicy.label;" control="sendRefererTrimmingPolicy"/>
+  <radiogroup class="indent" preference="network.http.referer.trimmingPolicy" id="sendRefererTrimmingPolicy">
+    <radio value="0" label="&security.referer.trimmingPolicy.full_URI.label;"/>
+    <radio value="1" label="&security.referer.trimmingPolicy.scheme_host_port_path.label;"/>
+    <radio value="2" label="&security.referer.trimmingPolicy.scheme_host_port.label;"/>
+  </radiogroup>
+  <label value="&security.referer.XOriginPolicy.label;" control="sendRefererXOriginPolicy"/>
+  <radiogroup class="indent" preference="network.http.referer.XOriginPolicy" id="sendRefererXOriginPolicy">
+    <radio value="0" label="&security.referer.XOriginPolicy.always.label;"/>
+    <radio value="1" label="&security.referer.XOriginPolicy.baseDomainsMatch.label;"/>
+    <radio value="2" label="&security.referer.XOriginPolicy.hostsMatch.label;"/>
+  </radiogroup>
+  <groupbox>
+    <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite.label;"
+      preference="network.http.sendSecureXSiteReferrer"/>
+    <description class="indent" control="sendRefererSecureXSite">&security.referer.secureXSite.desc;</description>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="security-pane-content">
+  <groupbox>
+    <caption label="&security.content.fileuri_strict_origin_policy.label;"/>
+    <radiogroup preference="security.fileuri.strict_origin_policy">
+      <radio value="true" label="&security.content.fileuri_strict_origin_policy.restrict.label;"/>
+      <radio value="false" label="&security.content.fileuri_strict_origin_policy.traditional.label;"/>
+    </radiogroup>
+  </groupbox>
+</box>
+</deck>
+</hbox>
+
+</prefpane>
+</overlay>

@@ -1,0 +1,115 @@
+<!ENTITY security.title "セキュリティ">
+<!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.enableJavaScript.label "JavaScript を有効にする">
+<!ENTITY security.js.annoy.label "詳細設定">
+<!ENTITY security.js.annoy.max_script_run_time.label "警告するスクリプト実行時間">
+<!ENTITY security.js.annoy.disable_scripts_to_close_windows "スクリプトからポップアップウィンドウを閉じれなくする">
+<!ENTITY security.js.annoy.window_flip "ウィンドウのフォーカスの取得とはずすのを無効にする">
+<!ENTITY security.js.annoy.window_move_resize "ウィンドウの移動または大きさの変更を無効にする">
+<!ENTITY security.js.annoy.status_change "ステータスバーのテキストの変更を無効にする">
+<!ENTITY security.js.annoy.contextmenu "コンテキストメニューイベントの取得を無効にする">
+<!ENTITY security.js.annoy.clipboardevents "クリップボードイベント(コピー/切り取り/貼り付け)の取得を無効にする">
+<!ENTITY security.js.annoy.dispatchLeftClickOnly "左クリックのみイベント処理を許可">
+<!ENTITY security.js.uis.label "UI 擬装対策">
+<!ENTITY security.js.uis.desc1 "JavaScript で開かれたウインドウで以下を強制可視表示/有効 :">
+<!ENTITY security.js.uis.desc2 "UI 擬装 (UI Spoof) への対処として、全項目をチェックしてください。">
+<!ENTITY security.js.uis.menubar "メニューバー">
+<!ENTITY security.js.uis.resizable "サイズ変更可能性">
+<!ENTITY security.js.uis.scrollbars "スクロールバー">
+<!ENTITY security.js.uis.toolbar "ツールバー">
+<!ENTITY security.js.uis.locationbar "場所バー">
+<!ENTITY security.js.uis.status "ステータスバー">
+<!ENTITY security.popupwin.label "ポップアップ">
+<!ENTITY security.popupwin.onblock.label "ポップアップウィンドウをブロックしたとき:">
+<!ENTITY security.popupwin.onblock.displayNotification.label "コンテンツ領域の上部に通知バーを表示する">
+<!ENTITY security.popupwin.tabs_newwindow.label "target属性が指定されたリンクをクリックして新たなウィンドウを開くときの扱い:">
+<!ENTITY security.popupwin.tabs_newwindow.openCurrent.label "新たなウィンドウのかわりに現在のタブで開く">
+<!ENTITY security.popupwin.tabs_newwindow.openTab.label "新たなウィンドウのかわりに新たなタブで開く">
+<!ENTITY security.popupwin.tabs_newwindow.openWindow.label "新たなウィンドウで開く">
+<!ENTITY security.popupwin.tabs.label "JavaScriptからポップアップウィンドウを開くときの扱い:">
+<!ENTITY security.popupwin.tabs.0.label "リンクの設定と同様に処理">
+<!ENTITY security.popupwin.tabs.1.label "ウィンドウを開く">
+<!ENTITY security.popupwin.tabs.2.label "リンクの設定と同様に処理するが、ウィンドウの表示方法等が設定してある場合はウィンドウを開く (標準)">
+<!ENTITY security.popupwin.popup_maximum.label "ポップアップの上限個数">
+<!ENTITY security.popupwin.from_plugins.label "プラグインからのポップアップの制限">
+<!ENTITY security.popupwin.from_plugins.0.label "制限なし">
+<!ENTITY security.popupwin.from_plugins.1.label "&quot;&security.popupwin.popup_maximum.label;&quot;の値までに数を制限">
+<!ENTITY security.popupwin.from_plugins.2.label "ホワイトリスト以外ブロック">
+<!ENTITY security.popupwin.from_plugins.3.label "ホワイトリストを無視し全てブロック">
+<!ENTITY security.popupwin.event.label "以下の時に開くのを許可:">
+<!ENTITY security.popupwin.event.reset.label "フォームのリセット">
+<!ENTITY security.popupwin.event.submit.label "フォーム送信">
+<!ENTITY security.popupwin.event.select.label "フォーム選択">
+<!ENTITY security.popupwin.event.change.label "テキスト等の変更">
+<!ENTITY security.popupwin.event.resize.label "ウィンドウのサイズ変更">
+<!ENTITY security.popupwin.event.input.label "入力">
+<!ENTITY security.popupwin.event.keypress.label "キーを押した">
+<!ENTITY security.popupwin.event.keydown.label "キー押下">
+<!ENTITY security.popupwin.event.keyup.label "キーを離した">
+<!ENTITY security.popupwin.event.mouseup.label "マウスボタンを離した">
+<!ENTITY security.popupwin.event.mousedown.label "マウスボタンを押下">
+<!ENTITY security.popupwin.event.click.label "クリック">
+<!ENTITY security.popupwin.event.dblclick.label "ダブルクリック">
+<!ENTITY security.popupwin.event.touchstart.label "タッチ開始">
+<!ENTITY security.popupwin.event.touchend.label "タッチ終了">
+<!ENTITY security.popupwin.event.notificationclick.label "通知をクリック">
+<!ENTITY security.ssl.label "SSL">
+<!ENTITY security.ssl.SSLProtocolVersions.caption "SSL プロトコルのバージョン">
+<!ENTITY security.ssl.limit.description "安全な接続に使用する暗号化プロトコルを制限できます。単一のバージョンまたは連続するバージョンの範囲を選択してください。">
+<!ENTITY security.ssl.limit.enable.label "有効:">
+<!ENTITY security.ssl.limit.ssl30.label "SSL 3.0">
+<!ENTITY security.ssl.limit.tls10.label "TLS 1.0">
+<!ENTITY security.ssl.limit.tls11.label "TLS 1.1">
+<!ENTITY security.ssl.limit.tls12.label "TLS 1.2">
+<!ENTITY security.ssl.limit.tls13.label "TLS 1.3">
+<!ENTITY security.ssl.SSLMixedContent.caption "SSL 混在コンテンツ">
+<!ENTITY security.ssl.block.activecontent "暗号化されたページ上の安全でないコンテンツは読み込まない">
+<!ENTITY security.ssl.block.displaycontent "暗号化されたページ上の混在コンテンツは読み込まない">
+<!ENTITY security.ssl.ssl_override_behavior.label "安全な接続ができなかったときの、&quot;セキュリティ例外の追加&quot;ダイアログの振る舞い">
+<!ENTITY security.ssl.ssl_override_behavior.dont.label "現在のURLを例外として自動入力せず、SSL証明書の取得も行わない。">
+<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "現在のURLを例外として予め自動で入力しておくが、SSL証明書の取得は自動で行わない。">
+<!ENTITY security.ssl.ssl_override_behavior.prefetch.label "現在のURLを例外として予め入力し、さらにSSL証明書も自動取得する。">
+<!ENTITY security.net.label "ネットワーク">
+<!ENTITY security.net.redirection-limit.label "HTTPリダイレクト回数の上限">
+<!ENTITY security.net.show_punycode.label "IDN を punycode で表示する">
+<!ENTITY security.net.show_punycode.desc "現在の &brandShortName; では IDN にブラックリストやホワイトリストを使ったフィルタリングが行なわれているので、通常 punycode 表示させる必要性はありません。">
+<!ENTITY security.privacy.label "プライバシー">
+<!ENTITY security.privacy.form.label "フォーム">
+<!ENTITY security.privacy.form.autofillForms.label "ログインフォームを自動入力する">
+<!ENTITY security.privacy.history.label "履歴">
+<!ENTITY security.privacy.history.cookie.label "Cookie">
+<!ENTITY security.privacy.history.cookie.lifetimedays.label "有効期限を限定:">
+<!ENTITY security.privacy.trackingprotection.label "追跡防止">
+<!ENTITY security.privacy.trackingprotection.enable.label "追跡防止を有効にする">
+<!ENTITY security.privacy.trackingprotection.exceptions.label "例外サイト...">
+<!ENTITY security.privacy.trackingprotection.exceptions.title "例外サイト - 追跡防止">
+<!ENTITY security.privacy.trackingprotection.exceptions.desc "オンライン上の行動を追跡するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
+<!ENTITY security.privacy.trackingprotection-pbmode.enable.label "追跡防止をプライベートブラウジングで有効にする">
+<!ENTITY security.privacy.passwd.label "マスターパスワード">
+<!ENTITY security.privacy.passwd.managepassword.label "マスターパスワードの期限">
+<!ENTITY security.privacy.passwd.managepassword.text "マスターパスワードが求められるとき:">
+<!ENTITY security.privacy.passwd.managepassword.askfirsttime "必要になった初回のみ">
+<!ENTITY security.privacy.passwd.managepassword.askeverytime "必要になったとき毎回">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout "前回使用後">
+<!ENTITY security.privacy.passwd.managepassword.timeout.unit "分以上経ったとき">
+<!ENTITY security.privacy.passwd.desc "ヒント: マスターパスワードの設定は &brandShortName; の設定ダイアログにあります。">
+<!ENTITY security.referer.label "Referrer">
+<!ENTITY security.referer.none.label "常に送らない (非推奨)">
+<!ENTITY security.referer.none.desc "警告: いくつかのサイトでは、Referrer ヘッダを要求します。そのようなとき、&quot;&security.referer.link.label;&quot;または&quot;&security.referer.all.label;&quot;を選択してください。">
+<!ENTITY security.referer.link.label "リンクのクリック時のみ送る">
+<!ENTITY security.referer.all.label "画像要求も送る">
+<!ENTITY security.referer.spoofSource.label "Referrer URL をターゲットの URL に偽装する">
+<!ENTITY security.referer.trimmingPolicy.label "Referrer URL のトリミング規則">
+<!ENTITY security.referer.trimmingPolicy.full_URI.label "URL 全体">
+<!ENTITY security.referer.trimmingPolicy.scheme_host_port_path.label "スキーム+ホスト+ポート+パス">
+<!ENTITY security.referer.trimmingPolicy.scheme_host_port.label "スキーム+ホスト+ポート">
+<!ENTITY security.referer.XOriginPolicy.label "クロスオリジンポリシー">
+<!ENTITY security.referer.XOriginPolicy.always.label "常に Referrer ヘッダを送る">
+<!ENTITY security.referer.XOriginPolicy.baseDomainsMatch.label "ベースドメインが同一のときに送る">
+<!ENTITY security.referer.XOriginPolicy.hostsMatch.label "ホストが同一のときに送る">
+<!ENTITY security.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送る">
+<!ENTITY security.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Referrerは送られません">
+<!ENTITY security.content.label "コンテンツ">
+<!ENTITY security.content.fileuri_strict_origin_policy.label "ローカルドキュメントの同一ドメインポリシー">
+<!ENTITY security.content.fileuri_strict_origin_policy.restrict.label "ローカルドキュメントからは、同一ディレクトリまたはサブディレクトリのコンテンツへのアクセスを許可し、ディレクトリのリスティングを許可しない">
+<!ENTITY security.content.fileuri_strict_origin_policy.traditional.label "ローカルドキュメントからは、ほかのすべてのローカルドキュメントへのアクセスを許可し、ディレクトリのリスティングも許可する">

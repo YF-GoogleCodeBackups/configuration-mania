@@ -1,0 +1,191 @@
+<!ENTITY browser.title "Browser">
+<!ENTITY browser.urlbar.label "Location Bar">
+<!ENTITY browser.urlbar.clickSelectsAll.label "Select all contents when clicked">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "Select all contents when double-clicked">
+<!ENTITY browser.urlbar.autoComplete.label "Disable the autocomplete">
+<!ENTITY browser.urlbar.autoComplete.autoFill.label "Autocomplete best match as you type">
+<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "Filter out bookmarklet (&quot;javascript:&quot; URLs)">
+<!ENTITY browser.urlbar.autoComplete.maxRichResults.label "Maximum number of entries">
+<!ENTITY browser.urlbar.autoComplete.delay.label "Wait time on the autocomplete :">
+<!ENTITY browser.urlbar.formatting.label "Formatting">
+<!ENTITY browser.urlbar.formatting.formatting-enabled.label "Enable domain highlighting.">
+<!ENTITY browser.urlbar.formatting.trimURLs.label "Drop http:// prefix.">
+<!ENTITY browser.urlbar.unknownLocations.label "Unknown Locations">
+<!ENTITY browser.urlbar.unknownLocations.keywords.label "Perform a web search when entered text is not a web location">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.label "Domain Guessing">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.enabled.label "Automatically add prefix &amp; suffix to the location if a web page isn't found.">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.prefix.label "Prefix :">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.suffix.label "Suffix :">
+<!ENTITY browser.html.label "Page control">
+<!ENTITY browser.html.allowMarquee.label "Allow marquee scrolling text">
+<!ENTITY browser.html.img "Image">
+<!ENTITY browser.html.img.loadImages.label "Load images automatically">
+<!ENTITY browser.html.img.loadImagesExceptions.label "Exceptions">
+<!ENTITY browser.html.img.loadImagesExceptions.title "Exceptions - Images">
+<!ENTITY browser.html.img.loadImagesExceptions.desc "You can specify which websites are allowed to load images. Type the exact address of the site you want to manage and then click Block or Allow.">
+<!ENTITY browser.html.img.anim.label "Animated images should loop">
+<!ENTITY browser.html.img.anim.normal.label "As many times as the image specifies">
+<!ENTITY browser.html.img.anim.once.label "Once">
+<!ENTITY browser.html.img.anim.none.label "Never (Stop)">
+<!ENTITY browser.html.img.multiplesource.label "Multiple Source Image">
+<!ENTITY browser.html.img.multiplesource.srcset.label "Enable srcset attribute on img elements">
+<!ENTITY browser.html.img.multiplesource.picture.label "Enable picture element">
+<!ENTITY browser.html.img.resizing.label "Resize large images to fit in the browser window">
+<!ENTITY browser.html.img.show_image_placeholders.label "Show image placeholders while image is loading or when image is broken">
+<!ENTITY browser.html.img.force_inline_alttext.label "Force broken-image ALT text to be displayed inline">
+<!ENTITY browser.html.color_management.label "Color Management (CMS) (takes effect after restart)">
+<!ENTITY browser.html.color_management.mode.label "Mode">
+<!ENTITY browser.html.color_management.mode.off.label "Disable CMS">
+<!ENTITY browser.html.color_management.mode.on.label "Enable for rendered graphics">
+<!ENTITY browser.html.color_management.mode.tagged.label "Enable for tagged graphics only">
+<!ENTITY browser.html.plugins.label "Plugins">
+<!ENTITY browser.html.plugins.click_to_play.label "Do not load the plugin content until you click on it">
+<!ENTITY browser.html.plugins.flash-disable-protected-mode.label "Disable protected mode in Flash Player 11.3+ (Windows)">
+<!ENTITY browser.html.plainviewXML.label "View unstyled XML in plain style">
+<!ENTITY browser.html.zoomSiteSpecific.label "Remember the zoom preferences page by page">
+<!ENTITY browser.html.downloadable_fonts.label "Download CSS3 Web fonts">
+<!ENTITY browser.html.vertical-text-disabled.label "Disable CSS vertical text">
+<!ENTITY browser.html.prefixes-webkit.label "Enable some &quot;-webkit-&quot; vendor-prefixed CSS properties">
+<!ENTITY browser.html.disable_css_visited_links.label "Disable CSS visited-link styling to protect the privacy of browsing history">
+<!ENTITY browser.html.focus.label "Highlight Focus">
+<!ENTITY browser.html.focus.enabled.label "Highlight focused objects with color">
+<!ENTITY browser.html.focus.bg.label "Background Color">
+<!ENTITY browser.html.focus.fg.label "Text Color">
+<!ENTITY browser.html.nouse_text_smoothing_setting.label "Always use text smoothing (takes effect only Mac)">
+<!ENTITY browser.html.acceleration.label "Hardware acceleration">
+<!ENTITY browser.html.acceleration.disabled.label "Disable acceleration for all widgets">
+<!ENTITY browser.html.acceleration.force-enabled.label "Force acceleration on, ignoring blacklists">
+<!ENTITY browser.html.acceleration.d2d-disabled.label "Disable the automatic detection and use of direct2d (Windows)">
+<!ENTITY browser.html.acceleration.d2d-force-enabled.label "Enable Direct2D regardless of automatic detection or blacklisting (Windows)">
+<!ENTITY browser.html.offmainthreadcomposition-enabled.label "Enable Off Main Thread Compositing (OMTC)">
+<!ENTITY browser.html.offmainthreadcomposition-enabled.desc "Note: Disabling OMTC can have the effect of disabling hardware acceleration.">
+<!ENTITY browser.tabs.label "TabBrowsing">
+<!ENTITY browser.tabs.newtab.label "New Tab">
+<!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
+<!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages">
+<!ENTITY browser.tabs.showAudioPlayingIcon.label "Show mute icons on tabs that playing audio">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">
+<!ENTITY browser.tabs.seachOpenintab.label "Open the results in a new tab when searching from search bar with ENTER key">
+<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "Open new tab just after the current tab">
+<!ENTITY browser.tabs.warnOnCloseOtherTabs.label "Warn me when closing other multiple tabs">
+<!ENTITY browser.tabs.autoselect.label "Auto tab selection">
+<!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "Select New Tabs from Bookmarks or History">
+<!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "When a new tab opened by links or external applications, switch to it immediately">
+<!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "When closing a tab, Focus back to the tab that opened it">
+<!ENTITY browser.tabs.tabpreview.label "Enable thumbnail preview">
+<!ENTITY browser.tabs.tabpreview.ctrltab.label "on Ctrl+TAB">
+<!ENTITY browser.tabs.tabpreview.taskbar.label "on Taskbar (Windows7)">
+<!ENTITY browser.tabs.animation.label "Animation">
+<!ENTITY browser.tabs.animation.animate_tab.label "Opening/Closing tab">
+<!ENTITY browser.sessionStore.label "Session Store">
+<!ENTITY browser.sessionStore.interval.label "Save sessions at intervals of">
+<!ENTITY browser.sessionStore.max_undo.label "Number of Recently Closed Tabs/Windows which is remembered">
+<!ENTITY browser.sessionStore.max_undo.windows.label "Number of closed windows:">
+<!ENTITY browser.sessionStore.max_undo.tabs.label "Number of closed tabs:">
+<!ENTITY browser.sessionStore.restore_on_demand.label "Restore on demand">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_on_demand.label "Don't load tabs until selected">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_hidden_tabs.label "Don't load tabs in other hidden tab groups  until selected">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_pinned_tabs_on_demand.label "Don't load pinned tabs until selected">
+<!ENTITY browser.sessionStore.resume_from_crash.label "Restore the previous session when &brandShortName; starts after a crash">
+<!ENTITY browser.sessionStore.warnOnQuit.label "Ask if &brandShortName; save the session on quit/restart or not">
+<!ENTITY browser.sessionStore.warnOnQuit.desc "Note: This pref is only applicable when you set &brandShortName; to show your home page or the blank page on startup.">
+<!ENTITY browser.sessionStore.showQuitWarning.label "Never ask on quit">
+<!ENTITY browser.sessionStore.warnOnRestart.label "Never ask on restart">
+<!ENTITY browser.sessionStore.privacy_level.label "Store extra session data :">
+<!ENTITY browser.sessionStore.privacy_level.any.label "for any site">
+<!ENTITY browser.sessionStore.privacy_level.unenc.label "for non-secure (non-HTTPS) sites only">
+<!ENTITY browser.sessionStore.privacy_level.never.label "Never">
+<!ENTITY browser.sessionStore.privacy_level.desc "The extra session data contains contents of forms, scrollbar positions, cookies, and POST data.">
+<!ENTITY browser.bookmarkicon.label "Bookmark Icons (Favicons)">
+<!ENTITY browser.bookmarkicon.siteicons.label "Show bookmark icons on the tab">
+<!ENTITY browser.bookmarkicon.favicons.lebel "Show bookmark icons on bookmark elements">
+<!ENTITY browser.multimedia.label "Multimedia">
+<!ENTITY browser.multimedia.windows-media-foundation-enabled.label "Enable Windows Media Foundation (Windows7+)">
+<!ENTITY browser.multimedia.windows-media-foundation-play-stand-alone.label "Play stand-alone">
+<!ENTITY browser.multimedia.directshow-enabled.label "Enable Direct Show (Windows)">
+<!ENTITY browser.multimedia.ffvpx-enabled.label "Enable built-in FFVPX">
+<!ENTITY browser.multimedia.apple-mp3-enabled.label "Enable Apple MP3 (Mac)">
+<!ENTITY browser.multimedia.apple-mp4-enabled.label "Enable Apple MP4 (Mac)">
+<!ENTITY browser.multimedia.mediasource.enabled.label "Enable Media Source Extensions">
+<!ENTITY browser.multimedia.mediasource.formats.label "Supported Formats">
+<!ENTITY browser.webapi.label "Web API">
+<!ENTITY browser.webapi.geo_enabled.label "Enable Geolocation">
+<!ENTITY browser.webapi.geoExceptions.label "Exceptions">
+<!ENTITY browser.webapi.geoExceptions.title "Exceptions - Geolocation">
+<!ENTITY browser.webapi.geoExceptions.desc "You can specify which websites are allowed to access your location. Type the exact address of the site you want to manage and then click Block or Allow.">
+<!ENTITY browser.webapi.geoWifiUri.label "Geolocation service URL:">
+<!ENTITY browser.webapi.geoWifiUri.browseFile.label "Browse file for debugging...">
+<!ENTITY browser.webapi.full_screen_enabled.label "Enable Full Screen API">
+<!ENTITY browser.webapi.full_screenExceptions.label "Exceptions">
+<!ENTITY browser.webapi.full_screenExceptions.title "Exceptions - Full Screen">
+<!ENTITY browser.webapi.full_screenExceptions.desc "You can specify which websites are allowed to enter fullscreen. Type the exact address of the site you want to manage and then click Block or Allow.">
+<!ENTITY browser.webapi.dom_battery_enabled.label "Enable Battery Status API">
+<!ENTITY browser.webapi.dom_sms_enabled.label "Enable Messaging (SMS) API">
+<!ENTITY browser.webapi.dom_vibrator_enabled.label "Enable Vibration API">
+<!ENTITY browser.webapi.webgl.label "Enable WebGL (takes effect after restart)">
+<!ENTITY browser.webapi.serviceWorkers_enabled.label "Enable Service Workers">
+<!ENTITY browser.webapi.webcomponents_enabled.label "Enable Web Components (Shadow DOM)">
+<!ENTITY browser.webapi.webcomponents_customelements_enabled.label "Enable custom elements">
+<!ENTITY browser.webapi.wasm_enabled.label "Enable Web Assembly">
+<!ENTITY browser.download.label "Download">
+<!ENTITY browser.download.disableAltClickSave.label "Disable ALT+Click and ALT+ENTER to download links">
+<!ENTITY browser.download.addToRecentDocs.label "Add new downloads to the recent documents list">
+<!ENTITY browser.download.quitBehavior.label "When &brandShortName; quited but downloads in progress:">
+<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "Pause and Resume downloads automatically when &brandShortName; restarted">
+<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "Pause but will not resume downloads automatically when &brandShortName; restarted">
+<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "Cancel downloads on quit">
+<!ENTITY browser.download.showAlertOnComplete.label "Show alert when a download completes">
+<!ENTITY browser.download.disableAnimateNotifications.label "Disable the animated notifications of the Download Indicator when a download starts or completes.">
+<!ENTITY browser.ua.label "User-Agent">
+<!ENTITY browser.ua.desc "WARNING: This configuration may conflict of plug-ins, &quot;User Agent Switcher&quot; and so on.">
+<!ENTITY browser.ua.text.label "UA string :">
+<!ENTITY browser.ua.presets.label "Preset">
+<!ENTITY browser.ua.presets.this.label "&brandShortName;, this version.">
+<!ENTITY browser.speed-paint.label "Paint&amp;Rendering">
+<!ENTITY browser.speed-paint.desc "WARNING: The Recommended values are not always suitable for your line and PC environment. It sometimes make browsing slower or heavy. (But some of them feel browsing faster, which is the Placebo effect :-)">
+<!ENTITY browser.speed-paint.delay.label "Initial paint delay">
+<!ENTITY browser.speed-paint.notify-backoffcount.label "Max Number of timer-based reflows to perform">
+<!ENTITY browser.speed-paint.notify-backoffcount.never "No limit">
+<!ENTITY browser.speed-paint.notify-interval.label "Minimum interval between reflows">
+<!ENTITY browser.speed-paint.content-interrupt.label "Parsing cannot be interrupt">
+<!ENTITY browser.speed-paint.content-interrupt.desc "Caution: &brandShortName; can be unresponsive until parsing is complete.">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.label "Maximum time to interrupt the process">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "Caution: Do not set 0.">
+<!ENTITY browser.speed-paint.content-switch-threshold.label "Enter Low frequency mode after you have no activity on High frequency mode for">
+<!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode provides better UI responsiveness at the expense of load time; Default: 750000 i.e. 3/4 ms">
+<!ENTITY browser.speed-cache.label "Browser Cache">
+<!ENTITY browser.speed-cache.check.label "Check cache of the pages ...">
+<!ENTITY browser.speed-cache.check.desc "WARNING: &quot;Once per session&quot; speeds up your web browsing but can cause problems on some sites. Check &quot;&browser.speed-cache.check.each.label;&quot; if a page is not updated correctly. You can always use Shift+Reload to force a reload.">
+<!ENTITY browser.speed-cache.check.once.label "Once per session">
+<!ENTITY browser.speed-cache.check.each.label "Each time">
+<!ENTITY browser.speed-cache.check.never.label "Never (Not Recommended)">
+<!ENTITY browser.speed-cache.check.auto.label "When it is out of date (Preferred)">
+<!ENTITY browser.speed-cache.memory_enable.label "Enable cache memory (Never disabled, usually)">
+<!ENTITY browser.speed-cache.memory_capability.label "Cache Memory">
+<!ENTITY browser.speed-cache.trim_on_minimize.label "Swap out memory when &brandShortName; is minimized (Windows Only)">
+<!ENTITY browser.speed-cache.disk_cache_ssl.label "Also store SSL-connection pages in the cache (INSECURE)">
+<!ENTITY browser.speed-cache.prefetch-next.label "Enable link prefetching">
+<!ENTITY browser.speed-cache.session-history-viewers.label "Max Number of pages stored in memory">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "Caution: Increasing the value speeds up &quot;Back&quot; and &quot;Forward&quot;. But &brandShortName;'s memory usage can increase dramatically with increasing number of tabs. It is a trade-off.">
+<!ENTITY browser.speed-cache.diskCacheFolder.label "Cache Folder Location">
+<!ENTITY browser.speed-cache.diskCacheFolder.desc "Cache files will be stored in a subfolder named &quot;Cache&quot; of the directory you specify. Restart &brandShortName; for changes to take effect.">
+<!ENTITY browser.others.label "Other">
+<!ENTITY browser.others.network-predictor.label "Network predictor">
+<!ENTITY browser.others.network-predictor.enabled.label "Pre-connect link-target server on hovering mouse over the link">
+<!ENTITY browser.others.network-predictor.enable-hover-on-ssl.label "Do not pre-connect on hovering mouse over the link in HTTPS site">
+<!ENTITY browser.others.network-predictor.speculative-parallel-limit.label "Max number of sockets allowable for a speculative connection:">
+<!ENTITY browser.others.dns.label "DNS Setting">
+<!ENTITY browser.others.dns.disableIPv6.label "Disable IPv6 DNS lookups">
+<!ENTITY browser.others.dns.prefetch.label "Enable DNS prefetching to improve page load performance">
+<!ENTITY browser.others.prompts_tab_modal_enabled.label "Use tab modal dialog for alert()/prompt()/confirm()">
+<!ENTITY browser.others.errorPageDisabled.label "Display an error dialog when a page cannot be loaded">
+<!ENTITY browser.others.showRecentlyBookmarked.label "Show Recently Bookmarked on the bookmark menu">
+<!ENTITY browser.others.viewSourceTab.label "View source in a new tab">
+<!ENTITY browser.others.editorExternal "View source with external editor">
+<!ENTITY browser.others.editorExternal.path "Editor path:">
+<!ENTITY browser.others.historyExpirationMaxPages.label "Max number of unique URLs to retain in history">
+<!ENTITY browser.others.warnOnAboutConfig.label "Show the warning message on about:config">
+<!ENTITY browser.others.hello.label "Firefox Hello">
+<!ENTITY browser.others.hello.enabled.label "Enable Firefox Hello">
+<!ENTITY browser.others.hello.forget-access-token.label "Forget the guest access token">
+<!ENTITY browser.others.hello.forget-access-token.desc "All conversation of the guest account will be removed from &brandShortName;. This action cannot be undone. Restart &brandShortName; for changes to take effect.">

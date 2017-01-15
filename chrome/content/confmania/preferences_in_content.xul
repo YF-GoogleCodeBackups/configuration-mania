@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/"?>
+<?xml-stylesheet href="chrome://global/skin/in-content/common.css"?>
+<?xml-stylesheet href="chrome://confmania/skin/preferences-in-content.css"?>
+
+<?xul-overlay href="chrome://confmania/content/paneBrowser.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneSecurity.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneHTTP.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneUI.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneAddons.xul"?>
+<?xul-overlay href="chrome://confmania/content/paneDebug.xul"?>
+
+<!DOCTYPE prefwindow [
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY % paneBrowserDTD SYSTEM "chrome://confmania/locale/paneBrowser.dtd">
+%paneBrowserDTD;
+<!ENTITY % paneSecurityDTD SYSTEM "chrome://confmania/locale/paneSecurity.dtd">
+%paneSecurityDTD;
+<!ENTITY % paneHTTPDTD SYSTEM "chrome://confmania/locale/paneHTTP.dtd">
+%paneHTTPDTD;
+<!ENTITY % paneUIDTD SYSTEM "chrome://confmania/locale/paneUI.dtd">
+%paneUIDTD;
+<!ENTITY % paneAddonsDTD SYSTEM "chrome://confmania/locale/paneAddons.dtd">
+%paneAddonsDTD;
+<!ENTITY % paneDebugDTD SYSTEM "chrome://confmania/locale/paneDebug.dtd">
+%paneDebugDTD;
+]>
+
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      id="confmania-in-content-page" title="&prefWindow.title;"
+      role="application" windowtype="Browser:Confmania"
+      disablefastfind="true"
+      context="prefContextPopup">
+
+<html:link rel="shortcut icon" href="chrome://confmania/skin/icon.svg"/>
+
+<script type="application/javascript" src="chrome://global/content/contentAreaUtils.js"/>
+<script type="application/javascript" src="chrome://confmania/content/preferences_in_content.js"/>
+
+<commandset>
+  <command id="ConfManiaPopup:Reset" oncommand="gPrefWindow.onResetPopupClicked(event);"/>
+  <command id="ConfManiaPopup:CopyName" oncommand="gPrefWindow.onCopyNamePopupClicked(event);"/>
+  <command id="ConfManiaPopup:OpenAboutConfig" oncommand="gPrefWindow.onOpenAboutConfigClicked(event);"/>
+  <command id="ConfManiaPopup:Mkb" oncommand="gPrefWindow.onMkbPopupClicked(event)"/>
+</commandset>
+<keyset>
+  <key modifiers="accel" key="f" oncommand="document.getElementById('pref-find').focus();gPrefWindow.prefFindShow('next');"/>
+  <key modifiers="accel shift" key="f" oncommand="document.getElementById('pref-find').focus();gPrefWindow.prefFindShow('prev');"/>
+</keyset>
+
+<popupset>
+  <menupopup id="prefContextPopup">
+    <menuitem label="&prefWindow.context.reset.label;" accesskey="&prefWindow.context.reset.accesskey;" command="ConfManiaPopup:Reset"/>
+    <menuseparator/>
+    <menuitem label="&prefWindow.context.openaboutconfig.label;" accesskey="&prefWindow.context.openaboutconfig.accesskey;" command="ConfManiaPopup:OpenAboutConfig"/>
+    <menuitem label="&prefWindow.context.copyName.label;" accesskey="&prefWindow.context.copyName.accesskey;" command="ConfManiaPopup:CopyName"/>
+    <menuitem label="&prefWindow.context.mkb.label;" accesskey="&prefWindow.context.mkb.accesskey;" command="ConfManiaPopup:Mkb"/>
+  </menupopup>
+</popupset>
+
+<hbox flex="1">
+  <richlistbox id="categories">
+    <richlistitem id="category-browser" class="category" align="center" value="paneBrowser">
+      <label flex="1" value="&browser.title;"/>
+    </richlistitem>
+    <richlistitem id="category-security" class="category" align="center" value="paneSecurity">
+      <label flex="1" value="&security.title;"/>
+    </richlistitem>
+    <richlistitem id="category-http" class="category" align="center" value="paneHTTP">
+      <label flex="1" value="&http.title;"/>
+    </richlistitem>
+    <richlistitem id="category-ui" class="category" align="center" value="paneUI">
+      <label flex="1" value="&ui.title;"/>
+    </richlistitem>
+    <richlistitem id="category-addons" class="category" align="center" value="paneAddons">
+      <label flex="1" value="&addons.title;"/>
+    </richlistitem>
+    <richlistitem id="category-debug" class="category" align="center" value="paneDebug">
+      <label flex="1" value="&debug.title;"/>
+    </richlistitem>
+  </richlistbox>
+
+  <box class="main-content" flex="1" orient="vertical">
+    <hbox class="header">
+      <label class="header-name" flex="1"/>
+    </hbox>
+
+    <prefpane id="paneBrowser" label="&browser.title;" flex="1"/>
+    <prefpane id="paneSecurity" label="&security.title;" flex="1"/>
+    <prefpane id="paneHTTP" label="&http.title;" flex="1"/>
+    <prefpane id="paneUI" label="&ui.title;" flex="1"/>
+    <prefpane id="paneAddons" label="&addons.title;" flex="1"/>
+    <prefpane id="paneDebug" label="&debug.title;" flex="1"/>
+  </box>
+
+</hbox>
+
+<hbox id="app-bar" align="center">
+  <textbox id="pref-find" type="search" oncommand="gPrefWindow.onPrefFind(event);" placeholder="&search;"/>
+  <toolbarbutton id="pref-find-previous" class="tabbable" oncommand="gPrefWindow.prefFindShow('prev');"/>
+  <toolbarbutton id="pref-find-next" class="tabbable" oncommand="gPrefWindow.prefFindShow('next');"/>
+  <label id="pref-find-status"/>
+  <spacer flex="1"/>
+  <button label="&reset;" oncommand="gPrefWindow.onResetSettings(event,'&prefwindow.resetMessageTemplate;');"/>
+</hbox>
+
+
+</page>

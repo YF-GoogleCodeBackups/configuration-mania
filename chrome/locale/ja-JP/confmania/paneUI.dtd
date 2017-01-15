@@ -1,0 +1,124 @@
+<!ENTITY ui.title "インターフェイス">
+<!ENTITY ui.mousewheel.label "マウスホイール">
+<!ENTITY ui.mousewheel.binding.label "マウスホイールの割り当て">
+<!ENTITY ui.mousewheel.binding.default.label "デフォルト">
+<!ENTITY ui.mousewheel.binding.with_alt.label "Alt">
+<!ENTITY ui.mousewheel.binding.with_control.label "Ctrl">
+<!ENTITY ui.mousewheel.binding.with_meta.label "Meta">
+<!ENTITY ui.mousewheel.binding.with_shift.label "Shift">
+<!ENTITY ui.mousewheel.binding.with_win.label "Win">
+<!ENTITY ui.mousewheel.binding.action.label "動作">
+<!ENTITY ui.mousewheel.binding.action.do_nothing.label "何もしない">
+<!ENTITY ui.mousewheel.binding.action.scroll.label "スクロールする">
+<!ENTITY ui.mousewheel.binding.action.go_history.label "戻る・進む">
+<!ENTITY ui.mousewheel.binding.action.zoom.label "拡大・縮小">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_x.label "X方向の乗数">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_y.label "Y方向の乗数">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_z.label "Z方向の乗数">
+<!ENTITY ui.multitouch.label "マルチタッチ">
+<!ENTITY ui.multitouch.gestures.label "マルチタッチ・ジェスチャー">
+<!ENTITY ui.multitouch.gestures.pinch.in.label "ピンチイン">
+<!ENTITY ui.multitouch.gestures.pinch.in.shift.label "ピンチイン+シフトキー">
+<!ENTITY ui.multitouch.gestures.pinch.out.label "ピンチアウト">
+<!ENTITY ui.multitouch.gestures.pinch.out.shift.label "ピンチアウト+シフトキー">
+<!ENTITY ui.multitouch.gestures.swipe.label "スワイプ (上下左右)">
+<!ENTITY ui.multitouch.gestures.twist.label "ツイスト (左回り/右回り)">
+<!ENTITY ui.find.label "ページ内検索">
+<!ENTITY ui.find.prefillwithselection.label "検索バーを開いた時とCtrl+Fを押した時、選択されたテキストを検索語句にする">
+<!ENTITY ui.find.findahead.label "クイック検索 (Find As You Type)">
+<!ENTITY ui.find.findahead.desc "ヒント: クイック検索を手動で開始するには、検索文字を続けて、/文字 または、 'リンク を入力します。">
+<!ENTITY ui.find.findahead.timeout.label "停止状態が">
+<!ENTITY ui.find.findahead.timeout.label2 "ミリ秒続いたら現在の検索をクリアする">
+<!ENTITY ui.find.findahead.sound.label "入力文字が見つからないときサウンドを鳴らす (再起動必要)">
+<!ENTITY ui.find.casesensitive.label "大文字/小文字">
+<!ENTITY ui.find.casesensitive.insensitive "大文字/小文字を区別しない">
+<!ENTITY ui.find.casesensitive.sensitive "大文字/小文字を区別する">
+<!ENTITY ui.find.casesensitive.auto "検索単語に大文字を含んでいるが大文字だけではないときに限って大文字/小文字を区別する">
+<!ENTITY ui.keynav.label "キーボード">
+<!ENTITY ui.keynav.tabNavigationBehavior.label "タブキーによるフォーカス制御">
+<!ENTITY ui.keynav.tabNavigationLinks.label "リンク">
+<!ENTITY ui.keynav.tabNavigationLinks.accesskey "L">
+<!ENTITY ui.keynav.tabNavigationForms.label "ボタン、ラジオボタン、チェックボックス、リスト">
+<!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
+<!ENTITY ui.keynav.tabNavigationTextboxes.label "注意: テキストボックスは常にタブ操作の対象になります">
+<!ENTITY ui.keynav.browseWithCaret.label "キャレットブラウズ">
+<!ENTITY ui.keynav.browseWithCaret.shortcut.label "F7 キーを押したときキャレットブラウズモードに切り替える">
+<!ENTITY ui.keynav.browseWithCaret.shortcut.accesskey "F">
+<!ENTITY ui.keynav.browseWithCaret.warn.label "キャレットブラウズを有効にする前に警告を出す">
+<!ENTITY ui.keynav.browseWithCaret.warn.accesskey "W">
+<!ENTITY ui.keynav.accelerators.label "キーボードアクセラレータ">
+<!ENTITY ui.keynav.acceleratorsBlurb.label "0 に値を設定すると装飾キーを無効にします。">
+<!ENTITY ui.keynav.acceleratorKey.label "装飾キー(のコード):">
+<!ENTITY ui.keynav.acceleratorKey.accesskey "A">
+<!ENTITY ui.keynav.menuAccessKey.label "メニュー装飾キー(のコード):">
+<!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.keynav.backspace_action.label "Backspaceキー押下時の動作:">
+<!ENTITY ui.keynav.backspace_action.goBack "ページの履歴を戻る(IEと同じ動作)">
+<!ENTITY ui.keynav.backspace_action.scrollUp "ページをスクロールアップ">
+<!ENTITY ui.keynav.backspace_action.nothing "何もしない">
+<!ENTITY ui.keynav.accesibility.label "アクセシビリティ">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.label "アクセスキーでその要素をアクティブにする(例えばリンク先に移動)">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.accesskey "E">
+<!ENTITY ui.bidi.label "BiDi">
+<!ENTITY ui.bidi.ui.label "BiDi (双方向テキスト) のインターフェイスを有効に">
+<!ENTITY ui.bidi.direction.label "方向">
+<!ENTITY ui.bidi.direction.ltr.label "-&gt; 左から右">
+<!ENTITY ui.bidi.direction.rtl.label "&lt;- 右から左">
+<!ENTITY ui.bidi.numeral.label "数値表現">
+<!ENTITY ui.bidi.numeral.nominal.label "公称 (Nominal)">
+<!ENTITY ui.bidi.numeral.regular_context.label "標準文脈">
+<!ENTITY ui.bidi.numeral.hindi_context.label "ヒンディ語文脈">
+<!ENTITY ui.bidi.numeral.arabic.label "アラビア語文脈">
+<!ENTITY ui.bidi.numeral.hindi.label "ヒンディ語">
+<!ENTITY ui.bidi.numeral.persian_context.label "ペルシャ語文脈">
+<!ENTITY ui.bidi.numeral.persian.label "ペルシャ語">
+<!ENTITY ui.bidi.support.label "処理担当">
+<!ENTITY ui.bidi.support.mozilla.label "&brandShortName;">
+<!ENTITY ui.bidi.support.os.label "OS">
+<!ENTITY ui.bidi.support.disable.label "無効">
+<!ENTITY ui.bidi.texttype.label "テキストの種類">
+<!ENTITY ui.bidi.texttype.charset.label "文字コードに従う">
+<!ENTITY ui.bidi.texttype.logical.label "Logical">
+<!ENTITY ui.bidi.texttype.visual.label "Visual">
+<!ENTITY ui.bidi.scrollbarSide.label "垂直スクロールバーの位置">
+<!ENTITY ui.bidi.scrollbarSide.uiBase "&brandShortName;の方向に従い、-&gt;(LTR)の場合は右端、&lt;-(RTL)の場合は左端(標準)">
+<!ENTITY ui.bidi.scrollbarSide.contentBase "文書の方向に従い、-&gt;(LTR)の場合は右端、&lt;-(RTL)の場合は左端">
+<!ENTITY ui.bidi.scrollbarSide.right "右端">
+<!ENTITY ui.bidi.scrollbarSide.left "左端">
+<!ENTITY ui.i18n.label "国際化">
+<!ENTITY ui.i18n.locale.label "アプリケーションのロケール(言語)">
+<!ENTITY ui.i18n.locale.eg "(例: ja, en-US, en-GB, ar)">
+<!ENTITY ui.i18n.locale.matchOS.label "OSのロケールを使う">
+<!ENTITY ui.i18n.spellcheckDefault.label "スペルチェッカーの設定">
+<!ENTITY ui.i18n.spellcheckDefault.disabled "スペルチェッカーを無効にする">
+<!ENTITY ui.i18n.spellcheckDefault.multiline "複数行のコントロール(例:textarea)に対して有効にする(標準)">
+<!ENTITY ui.i18n.spellcheckDefault.all "すべてのテキスト入力コントロールに対して有効にする">
+<!ENTITY ui.i18n.japanese_specific_transform.label "日本語の文書で、バックスラッシュを円マークに変換する">
+<!ENTITY ui.contextmenu.label "コンテキストメニュー">
+<!ENTITY ui.contextmenu.click_hold_context_menus.label "クリックアンドホールドでコンテキストメニューを開く (昔のMac OS インタフェースを再現します)">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.label "サブメニュー表示遅延時間">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.none.label "なし">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.inf.label "∞ (Motif の真似)">
+<!ENTITY ui.taskbar.label "タスクバー">
+<!ENTITY ui.taskbar.jumplist.label "ジャンプリスト (Windows 7+)">
+<!ENTITY ui.taskbar.jumplist.enabled.label "ジャンプリストを有効にする">
+<!ENTITY ui.taskbar.jumplist.item.label "アイテム:">
+<!ENTITY ui.taskbar.jumplist.item.frequent.label "よく見るページ">
+<!ENTITY ui.taskbar.jumplist.item.recent.label "最近見たページ">
+<!ENTITY ui.taskbar.jumplist.item.tasks.label "タスク">
+<!ENTITY ui.taskbar.jumplist.maxListItemCount.label "リストあたりのアイテムの最大個数">
+<!ENTITY ui.taskbar.jumplist.refreshInSeconds.label "リストアイテムを">
+<!ENTITY ui.taskbar.jumplist.refreshInSeconds.label2 "秒ごとに更新">
+<!ENTITY ui.others.label "その他">
+<!ENTITY ui.others.css-devPixelsPerPx.label "DPI スケーリングレベル">
+<!ENTITY ui.others.xwin.label "Unix (X-Window) スタイルのマウス動作">
+<!ENTITY ui.others.xwin.autocopy.label "選択テキストの自動コピーを有効にする(*nixでのみ有効)">
+<!ENTITY ui.others.xwin.paste.label "中央クリックで張り付ける">
+<!ENTITY ui.others.xwin.contentLoadURL.label "中央クリックでクリップボードに格納された URL へ行く">
+<!ENTITY ui.others.xwin.scrollbarPosition.label "中央ボタンでスクロールバーを調整できるようにする(再起動必要)">
+<!ENTITY ui.others.theme.label "テーマ">
+<!ENTITY ui.others.word_select.label "テキストをダブルクリックした時の選択動作">
+<!ENTITY ui.others.word_select.eat_space_to_next_word.label "後続の空白も選択する">
+<!ENTITY ui.others.word_select.eat_punctuation.label "囲んでいる句読点も選択する">
+<!ENTITY ui.others.enable_drag_images.label "ドラッグ中に(可能であれば)画像を表示する">
+<!ENTITY ui.others.xul_file_picker "システムのファイルダイアログを使わずにXULファイルダイアログを使用">

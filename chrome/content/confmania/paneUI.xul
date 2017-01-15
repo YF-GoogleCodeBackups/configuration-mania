@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is Mozilla.org Code.
+   -
+   - The Initial Developer of the Original Code is
+   - Netscape Communications Corporation.
+   - Portions created by the Initial Developer are Copyright (C) 2003
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s): Aaron Leventhal
+   -                 Popoki Tom (cat_in_136) (Edited for Configuration Mania)
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY % paneUIDTD SYSTEM "chrome://confmania/locale/paneUI.dtd">
+%paneUIDTD;
+]>
+
+<overlay id="paneUIOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane flex="1" id="paneUI">
+
+<script type="application/javascript" src="paneUI.js"></script>
+
+<preferences>
+  <preference type="int" id="mousewheel.default.action" name="mousewheel.default.action"/>
+  <preference type="int" id="mousewheel.default.delta_multiplier_x" name="mousewheel.default.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.default.delta_multiplier_y" name="mousewheel.default.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.default.delta_multiplier_z" name="mousewheel.default.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_alt.action" name="mousewheel.with_alt.action"/>
+  <preference type="int" id="mousewheel.with_alt.delta_multiplier_x" name="mousewheel.with_alt.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_alt.delta_multiplier_y" name="mousewheel.with_alt.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_alt.delta_multiplier_z" name="mousewheel.with_alt.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_control.action" name="mousewheel.with_control.action"/>
+  <preference type="int" id="mousewheel.with_control.delta_multiplier_x" name="mousewheel.with_control.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_control.delta_multiplier_y" name="mousewheel.with_control.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_control.delta_multiplier_z" name="mousewheel.with_control.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_meta.action" name="mousewheel.with_meta.action"/>
+  <preference type="int" id="mousewheel.with_meta.delta_multiplier_x" name="mousewheel.with_meta.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_meta.delta_multiplier_y" name="mousewheel.with_meta.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_meta.delta_multiplier_z" name="mousewheel.with_meta.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_shift.action" name="mousewheel.with_shift.action"/>
+  <preference type="int" id="mousewheel.with_shift.delta_multiplier_x" name="mousewheel.with_shift.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_shift.delta_multiplier_y" name="mousewheel.with_shift.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_shift.delta_multiplier_z" name="mousewheel.with_shift.delta_multiplier_z"/>
+  <preference type="int" id="mousewheel.with_win.action" name="mousewheel.with_win.action"/>
+  <preference type="int" id="mousewheel.with_win.delta_multiplier_x" name="mousewheel.with_win.delta_multiplier_x"/>
+  <preference type="int" id="mousewheel.with_win.delta_multiplier_y" name="mousewheel.with_win.delta_multiplier_y"/>
+  <preference type="int" id="mousewheel.with_win.delta_multiplier_z" name="mousewheel.with_win.delta_multiplier_z"/>
+
+  <preference id="browser.gesture.swipe.left"      name="browser.gesture.swipe.left"      type="string"/>
+  <preference id="browser.gesture.swipe.right"     name="browser.gesture.swipe.right"     type="string"/>
+  <preference id="browser.gesture.swipe.up"        name="browser.gesture.swipe.up"        type="string"/>
+  <preference id="browser.gesture.swipe.down"      name="browser.gesture.swipe.down"      type="string"/>
+  <preference id="browser.gesture.pinch.out"       name="browser.gesture.pinch.out"       type="string"/>
+  <preference id="browser.gesture.pinch.in"        name="browser.gesture.pinch.in"        type="string"/>
+  <preference id="browser.gesture.pinch.out.shift" name="browser.gesture.pinch.out.shift" type="string"/>
+  <preference id="browser.gesture.pinch.in.shift"  name="browser.gesture.pinch.in.shift"  type="string"/>
+  <preference id="browser.gesture.twist.right"     name="browser.gesture.twist.right"     type="string"/>
+  <preference id="browser.gesture.twist.left"      name="browser.gesture.twist.left"      type="string"/>
+
+  <preference id="accessibility.typeaheadfind.prefillwithselection" name="accessibility.typeaheadfind.prefillwithselection" type="bool"/>
+  <preference id="accessibility.typeaheadfind.timeout" name="accessibility.typeaheadfind.timeout" type="int"/>
+  <preference id="accessibility.typeaheadfind.enablesound" name="accessibility.typeaheadfind.enablesound" type="bool"/>
+  <preference id="accessibility.typeaheadfind.casesensitive" name="accessibility.typeaheadfind.casesensitive" type="int"/>
+
+  <preference id="accessibility.tabfocus" name="accessibility.tabfocus" type="int"/>
+  <preference id="accessibility.browsewithcaret_shortcut.enabled" name="accessibility.browsewithcaret_shortcut.enabled" type="bool"/>
+  <preference id="accessibility.warn_on_browsewithcaret" name="accessibility.warn_on_browsewithcaret" type="bool"/>
+  <preference id="ui.key.accelKey" name="ui.key.accelKey" type="int"/>
+  <preference id="ui.key.menuAccessKey" name="ui.key.menuAccessKey" type="int"/>
+  <preference id="browser.backspace_action" name="browser.backspace_action" type="int"/>
+  <preference id="accessibility.accesskeycausesactivation" name="accessibility.accesskeycausesactivation" type="bool"/>
+
+  <preference id="bidi.browser.ui" name="bidi.browser.ui" type="bool"/>
+  <preference id="bidi.direction" name="bidi.direction" type="int"/>
+  <preference id="bidi.numeral" name="bidi.numeral" type="int"/>
+  <preference id="bidi.support" name="bidi.support" type="int"/>
+  <preference id="bidi.texttype" name="bidi.texttype" type="int"/>
+  <preference id="layout.scrollbar.side" name="layout.scrollbar.side" type="int"/>
+
+  <preference id="general.useragent.locale" name="general.useragent.locale" type="string"/>
+  <preference id="intl.locale.matchOS" name="intl.locale.matchOS" type="bool"/>
+  <preference id="layout.spellcheckDefault" name="layout.spellcheckDefault" type="int"/>
+  <preference id="layout.enable_japanese_specific_transform" name="layout.enable_japanese_specific_transform" type="bool"/>
+
+  <preference id="ui.click_hold_context_menus" name="ui.click_hold_context_menus" type="bool"/>
+  <preference id="ui.submenuDelay" name="ui.submenuDelay" type="int"/>
+
+  <preference id="browser.taskbar.lists.enabled" name="browser.taskbar.lists.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.frequent.enabled" name="browser.taskbar.lists.frequent.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.recent.enabled" name="browser.taskbar.lists.recent.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.tasks.enabled" name="browser.taskbar.lists.tasks.enabled" type="bool"/>
+  <preference id="browser.taskbar.lists.maxListItemCount" name="browser.taskbar.lists.maxListItemCount" type="int"/>
+  <preference id="browser.taskbar.lists.refreshInSeconds" name="browser.taskbar.lists.refreshInSeconds" type="int"/>
+
+  <preference id="layout.css.devPixelsPerPx" name="layout.css.devPixelsPerPx" type="string"/>
+  <preference id="clipboard.autocopy" name="clipboard.autocopy" type="bool"/>
+  <preference id="middlemouse.paste" name="middlemouse.paste" type="bool"/>
+  <preference id="middlemouse.contentLoadURL" name="middlemouse.contentLoadURL" type="bool"/>
+  <preference id="middlemouse.scrollbarPosition" name="middlemouse.scrollbarPosition" type="bool"/>
+  <preference id="layout.word_select.eat_space_to_next_word" name="layout.word_select.eat_space_to_next_word" type="bool"/>
+  <preference id="layout.word_select.stop_at_punctuation" name="layout.word_select.stop_at_punctuation" type="bool" inverted="true"/>
+  <preference id="nglayout.enable_drag_images" name="nglayout.enable_drag_images" type="bool"/>
+  <preference id="ui.allow_platform_file_picker" name="ui.allow_platform_file_picker" type="bool" inverted="true"/>
+</preferences>
+
+<hbox flex="1" orient="horizontal" id="paneUIBox">
+<radiogroup id="paneUIBoxTab" class="subtabs"
+ orient="vertical" style="max-width: 10em; width: 10em;"
+ value="ui-pane-mousewheel" oncommand="gPrefWindow.prefUI.onPaneUIBoxTabSelected();">
+  <radio class="subtab" value="ui-pane-mousewheel"  label="&ui.mousewheel.label;"/>
+  <radio class="subtab" value="ui-pane-multitouch"  label="&ui.multitouch.label;"/>
+  <radio class="subtab" value="ui-pane-findahead"   label="&ui.find.label;"/>
+  <radio class="subtab" value="ui-pane-keynav"      label="&ui.keynav.label;"/>
+  <radio class="subtab" value="ui-pane-bidi"        label="&ui.bidi.label;"/>
+  <radio class="subtab" value="ui-pane-i18n"        label="&ui.i18n.label;"/>
+  <radio class="subtab" value="ui-pane-contextmenu" label="&ui.contextmenu.label;"/>
+  <radio class="subtab" value="ui-pane-taskbar"     label="&ui.taskbar.label;"/>
+  <radio class="subtab" value="ui-pane-others"      label="&ui.others.label;"/>
+</radiogroup>
+<splitter/>
+<deck id="paneUIBoxContainer" flex="4">
+<box class="subtabpanel" orient="vertical" id="ui-pane-mousewheel">
+  <groupbox>
+    <caption label="&ui.mousewheel.binding.label;"/>
+
+    <data>
+      <mousewheelkeies id="ui-pane-data-mousewheelkeies" xmlns="">
+        <mousewheelkey name="default"     />
+        <mousewheelkey name="with_alt"    />
+        <mousewheelkey name="with_control"/>
+        <mousewheelkey name="with_meta"   />
+        <mousewheelkey name="with_shift"  />
+        <mousewheelkey name="with_win"    />
+      </mousewheelkeies>
+    </data>
+
+    <tabbox flex="1">
+      <tabs>
+        <tab label="&ui.mousewheel.binding.default.label;"     />
+        <tab label="&ui.mousewheel.binding.with_alt.label;"    />
+        <tab label="&ui.mousewheel.binding.with_control.label;"/>
+        <tab label="&ui.mousewheel.binding.with_meta.label;"   />
+        <tab label="&ui.mousewheel.binding.with_shift.label;"  />
+        <tab label="&ui.mousewheel.binding.with_win.label;"    />
+      </tabs>
+      <tabpanels datasources="#ui-pane-data-mousewheelkeies" ref="*" querytype="xml">
+        <template>
+          <query expr="mousewheelkey">
+            <assign var="?action" expr="concat('mousewheel.',@name,'.action')"/>
+            <assign var="?delta_multiplier_x" expr="concat('mousewheel.',@name,'.delta_multiplier_x')"/>
+            <assign var="?delta_multiplier_y" expr="concat('mousewheel.',@name,'.delta_multiplier_y')"/>
+            <assign var="?delta_multiplier_z" expr="concat('mousewheel.',@name,'.delta_multiplier_z')"/>
+          </query>
+          <action>
+            <tabpanel uri="?">
+              <grid>
+                <columns><column/><column/><column/></columns>
+                <rows>
+                  <row align="center">
+                    <label value="&ui.mousewheel.binding.action.label;"/>
+                    <menulist preference="?action"><menupopup>
+                      <menuitem value="0" label="&ui.mousewheel.binding.action.do_nothing.label;"/>
+                      <menuitem value="1" label="&ui.mousewheel.binding.action.scroll.label;"/>
+                      <menuitem value="2" label="&ui.mousewheel.binding.action.go_history.label;"/>
+                      <menuitem value="3" label="&ui.mousewheel.binding.action.zoom.label;"/>
+                    </menupopup></menulist>
+                  </row>
+                  <row align="center">
+                    <label value="&ui.mousewheel.binding.delta_multiplier_x.label;"/>
+                    <textbox type="number" preference="?delta_multiplier_x"/>
+                    <label value="%"/>
+                  </row>
+                  <row align="center">
+                    <label value="&ui.mousewheel.binding.delta_multiplier_y.label;"/>
+                    <textbox type="number" preference="?delta_multiplier_y"/>
+                    <label value="%"/>
+                  </row>
+                  <row align="center">
+                    <label value="&ui.mousewheel.binding.delta_multiplier_z.label;"/>
+                    <textbox type="number" preference="?delta_multiplier_z"/>
+                    <label value="%"/>
+                  </row>
+                </rows>
+              </grid>
+            </tabpanel>
+          </action>
+        </template>
+      </tabpanels>
+    </tabbox>
+  </groupbox>
+
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-multitouch">
+  <groupbox id="multitouch-gestures-box">
+    <caption label="&ui.multitouch.gestures.label;"/>
+    <hbox>
+      <vbox flex="1">
+        <label value="&ui.multitouch.gestures.pinch.in.label;" control="menu_pinch_in"/>
+        <menulist class="indent" editable="true" preference="browser.gesture.pinch.in" id="menu_pinch_in"/>
+        <label value="&ui.multitouch.gestures.pinch.in.shift.label;" control="menu_pinch_in_shift"/>
+        <menulist class="indent" editable="true" preference="browser.gesture.pinch.in.shift" id="menu_pinch_in_shift"/>
+      </vbox>
+      <vbox flex="1">
+        <label value="&ui.multitouch.gestures.pinch.out.label;" control="menu_pinch_out"/>
+        <menulist class="indent" editable="true" preference="browser.gesture.pinch.out" id="menu_pinch_out"/>
+        <label value="&ui.multitouch.gestures.pinch.out.shift.label;" control="menu_pinch_out_shift"/>
+        <menulist class="indent" editable="true" preference="browser.gesture.pinch.out.shift" id="menu_pinch_out_shift"/>
+      </vbox>
+    </hbox>
+    <groupbox>
+      <caption label="&ui.multitouch.gestures.swipe.label;"/>
+      <grid>
+      <columns><column flex="1"/><column flex="1"/><column flex="1"/></columns>
+      <rows>
+      <row align="center">
+        <box/>
+        <menulist editable="true" preference="browser.gesture.swipe.up"/>
+        <box/>
+      </row>
+      <row align="center">
+        <menulist editable="true" preference="browser.gesture.swipe.left"/>
+        <box/>
+        <menulist editable="true" preference="browser.gesture.swipe.right"/>
+      </row>
+      <row align="center">
+        <box/>
+        <menulist editable="true" preference="browser.gesture.swipe.down"/>
+        <box/>
+      </row>
+      </rows>
+      </grid>
+    </groupbox>
+    <groupbox orient="horizontal">
+      <caption label="&ui.multitouch.gestures.twist.label;"/>
+      <menulist editable="true" preference="browser.gesture.twist.left" flex="1"/>
+      <menulist editable="true" preference="browser.gesture.twist.right" flex="1"/>
+    </groupbox>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-findahead">
+  <checkbox label="&ui.find.prefillwithselection.label;"
+   preference="accessibility.typeaheadfind.prefillwithselection"/>
+  <groupbox>
+    <caption label="&ui.find.findahead.label;"/>
+    <description>&ui.find.findahead.desc;</description>
+    <hbox align="center">
+      <label value="&ui.find.findahead.timeout.label;" control="keyNavTypeAHeadTimeout"/>
+      <textbox id="keyNavTypeAHeadTimeout" type="number" hidespinbuttons="true" preference="accessibility.typeaheadfind.timeout" size="5"/>
+      <label value="&ui.find.findahead.timeout.label2;"/>
+    </hbox>
+    <checkbox id="keyNavTypeAHeadSound" label="&ui.find.findahead.sound.label;"
+     preference="accessibility.typeaheadfind.enablesound"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&ui.find.casesensitive.label;"/>
+    <radiogroup preference="accessibility.typeaheadfind.casesensitive">
+      <radio value="0" label="&ui.find.casesensitive.insensitive;"/>
+      <radio value="1" label="&ui.find.casesensitive.sensitive;"/>
+      <radio value="-1" label="&ui.find.casesensitive.auto;"/>
+    </radiogroup>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-keynav">
+  <groupbox>
+    <caption label="&ui.keynav.tabNavigationBehavior.label;"/>
+    <vbox>
+      <checkbox id="tabNavigationLinks" preference="accessibility.tabfocus"
+                label="&ui.keynav.tabNavigationLinks.label;"
+                accesskey="&ui.keynav.tabNavigationLinks.accesskey;"
+                onsyncfrompreference="return gPrefWindow.prefUI.onTabNavSyncFrom(this);"
+                onsynctopreference="return gPrefWindow.prefUI.onTabNavSyncTo(this);"/>
+      <checkbox id="tabNavigationForms" preference="accessibility.tabfocus"
+                label="&ui.keynav.tabNavigationForms.label;"
+                accesskey="&ui.keynav.tabNavigationForms.accesskey;"
+                onsyncfrompreference="return gPrefWindow.prefUI.onTabNavSyncFrom(this);"
+                onsynctopreference="return gPrefWindow.prefUI.onTabNavSyncTo(this);"/>
+    </vbox>
+    <description>&ui.keynav.tabNavigationTextboxes.label;</description>
+  </groupbox>
+
+  <groupbox align="start">
+    <caption label="&ui.keynav.browseWithCaret.label;"/>
+    <checkbox label="&ui.keynav.browseWithCaret.shortcut.label;"
+              accesskey="&ui.keynav.browseWithCaret.shortcut.accesskey;"
+              preference="accessibility.browsewithcaret_shortcut.enabled"
+              onsyncfrompreference="gPrefWindow.prefUI.onBrowseWithCaretSyncFrom();"/>
+    <checkbox label="&ui.keynav.browseWithCaret.warn.label;"
+              accesskey="&ui.keynav.browseWithCaret.warn.accesskey;"
+              class="indent"
+              preference="accessibility.warn_on_browsewithcaret"/>
+  </groupbox>
+
+  <groupbox>
+    <caption label="&ui.keynav.accelerators.label;"/>
+    <label value="&ui.keynav.acceleratorsBlurb.label;"/>
+
+    <html:div>
+      <label value="&ui.keynav.acceleratorKey.label;"
+       accesskey="&ui.keynav.acceleratorKey.accesskey;" control="acceleratorKeyValue"/>
+      <textbox id="acceleratorKeyValue" type="number" hidespinbuttons="true" preference="ui.key.accelKey" size="5"/>
+    </html:div>
+    <html:div>
+      <label value="&ui.keynav.menuAccessKey.label;" accesskey="&ui.keynav.menuAccessKey.accesskey;" control="menuAccessKeyValue"/>
+      <textbox id="menuAccessKeyValue" type="number" hidespinbuttons="true" preference="ui.key.menuAccessKey" size="5"/>
+    </html:div>
+  </groupbox>
+
+  <groupbox>
+    <caption label="&ui.keynav.backspace_action.label;"/>
+    <radiogroup preference="browser.backspace_action">
+      <radio value="0" label="&ui.keynav.backspace_action.goBack;"/>
+      <radio value="1" label="&ui.keynav.backspace_action.scrollUp;"/>
+      <radio value="2" label="&ui.keynav.backspace_action.nothing;"/>
+    </radiogroup>
+  </groupbox>
+
+  <groupbox>
+    <caption label="&ui.keynav.accesibility.label;"/>
+    <checkbox label="&ui.keynav.accesibility.accesskeycauseactivation.label;"
+              accesskey="&ui.keynav.accesibility.accesskeycauseactivation.accesskey;"
+              preference="accessibility.accesskeycausesactivation"/>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-bidi">
+  <checkbox label="&ui.bidi.ui.label;" preference="bidi.browser.ui"/>
+  <grid>
+    <columns><column/><column flex="1"/></columns>
+    <rows>
+      <row align="center">
+        <label value="&ui.bidi.direction.label;"/>
+        <menulist id="bidi-direction" preference="bidi.direction"><menupopup>
+          <menuitem value="1" label="&ui.bidi.direction.ltr.label;"/>
+          <menuitem value="2" label="&ui.bidi.direction.rtl.label;"/>
+        </menupopup></menulist>
+      </row>
+      <row align="center">
+        <label control="bidi-numeral" value="&ui.bidi.numeral.label;"/>
+        <menulist id="bidi-numeral" preference="bidi.numeral"><menupopup>
+          <menuitem value="0" label="&ui.bidi.numeral.nominal.label;"/>
+          <menuitem value="1" label="&ui.bidi.numeral.regular_context.label;"/>
+          <menuitem value="2" label="&ui.bidi.numeral.hindi_context.label;"/>
+          <menuitem value="3" label="&ui.bidi.numeral.arabic.label;"/>
+          <menuitem value="4" label="&ui.bidi.numeral.hindi.label;"/>
+          <menuitem value="5" label="&ui.bidi.numeral.persian_context.label;"/>
+          <menuitem value="6" label="&ui.bidi.numeral.persian.label;"/>
+        </menupopup></menulist>
+      </row>
+      <row align="center">
+        <label value="&ui.bidi.support.label;"/>
+        <menulist id="bidi-provider" preference="bidi.support"><menupopup>
+          <menuitem value="1" label="&ui.bidi.support.mozilla.label;"/>
+          <menuitem value="2" label="&ui.bidi.support.os.label;"/>
+          <menuitem value="3" label="&ui.bidi.support.disable.label;"/>
+        </menupopup></menulist>
+      </row>
+      <row align="center">
+        <label value="&ui.bidi.texttype.label;"/>
+        <menulist id="bidi-texttype" preference="bidi.texttype"><menupopup>
+          <menuitem value="1" label="&ui.bidi.texttype.charset.label;"/>
+          <menuitem value="2" label="&ui.bidi.texttype.logical.label;"/>
+          <menuitem value="3" label="&ui.bidi.texttype.visual.label;"/>
+        </menupopup></menulist>
+      </row>
+    </rows>
+  </grid>
+  <groupbox>
+    <caption label="&ui.bidi.scrollbarSide.label;"/>
+    <radiogroup preference="layout.scrollbar.side">
+      <radio value="0" label="&ui.bidi.scrollbarSide.uiBase;"/>
+      <radio value="1" label="&ui.bidi.scrollbarSide.contentBase;"/>
+      <radio value="2" label="&ui.bidi.scrollbarSide.right;"/>
+      <radio value="3" label="&ui.bidi.scrollbarSide.left;"/>
+    </radiogroup>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-i18n">
+  <groupbox>
+    <hbox align="center">
+      <label value="&ui.i18n.locale.label;" control="contentLocale"/>
+      <textbox id="contentLocale" preference="general.useragent.locale" size="8"/>
+      <label value="&ui.i18n.locale.eg;"/>
+    </hbox>
+    <checkbox class="indent" label="&ui.i18n.locale.matchOS.label;" preference="intl.locale.matchOS" onsyncfrompreference="gPrefWindow.prefUI.onLocaleMatchOSSyncFrom(this)"/>
+  </groupbox>
+
+  <groupbox>
+    <caption label="&ui.i18n.spellcheckDefault.label;"/>
+    <radiogroup preference="layout.spellcheckDefault">
+      <radio value="0" label="&ui.i18n.spellcheckDefault.disabled;"/>
+      <radio value="1" label="&ui.i18n.spellcheckDefault.multiline;"/>
+      <radio value="2" label="&ui.i18n.spellcheckDefault.all;"/>
+    </radiogroup>
+  </groupbox>
+  <checkbox label="&ui.i18n.japanese_specific_transform.label;" preference="layout.enable_japanese_specific_transform"/>
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-contextmenu">
+  <checkbox label="&ui.contextmenu.click_hold_context_menus.label;"
+            preference="ui.click_hold_context_menus"/>
+  <groupbox>
+    <caption label="&ui.contextmenu.uiSubmenuDelay.label;"/>
+    <radiogroup id="uiSubmenuDelay-radio">
+      <radio value="0" label="&ui.contextmenu.uiSubmenuDelay.none.label;"/>
+      <radio value="-1" label="&ui.contextmenu.uiSubmenuDelay.inf.label;"/>
+      <hbox align="center">
+        <radio value="*" label="&manualSet;"/>
+        <textbox id="uiSubmenuDelay" type="number" hidespinbuttons="true" min="-1" size="4" preference="ui.submenuDelay"
+          onsyncfrompreference="return gPrefWindow.radioGroupConnectionSyncFrom(this, 'uiSubmenuDelay-radio', 0);"
+          onsynctopreference="return gPrefWindow.syncTo(this, 0);"/>
+        <label value="&miliseconds;" id="uiSubmenuDelay-ms"/>
+      </hbox>
+    </radiogroup>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-taskbar">
+  <groupbox>
+    <caption label="&ui.taskbar.jumplist.label;"/>
+    <checkbox preference="browser.taskbar.lists.enabled" label="&ui.taskbar.jumplist.enabled.label;"
+              onsyncfrompreference="return gPrefWindow.prefUI.onJumplistEnabledSyncFrom();"/>
+    <vbox id="others-jumplist" class="indent">
+      <label value="&ui.taskbar.jumplist.item.label;"/>
+      <checkbox class="indent" preference="browser.taskbar.lists.frequent.enabled" label="&ui.taskbar.jumplist.item.frequent.label;"/>
+      <checkbox class="indent" preference="browser.taskbar.lists.recent.enabled" label="&ui.taskbar.jumplist.item.recent.label;"/>
+      <checkbox class="indent" preference="browser.taskbar.lists.tasks.enabled" label="&ui.taskbar.jumplist.item.tasks.label;"/>
+      <hbox align="center">
+        <label control="others-jumplistMaxListItemCount" value="&ui.taskbar.jumplist.maxListItemCount.label;"/>
+        <textbox id="others-jumplistMaxListItemCount" type="number" size="2" min="0"
+                 preference="browser.taskbar.lists.maxListItemCount"/>
+      </hbox>
+      <hbox align="center">
+        <label control="others-jumplistRefreshInSeconds" value="&ui.taskbar.jumplist.refreshInSeconds.label;"/>
+        <textbox id="others-jumplistRefreshInSeconds" type="number" size="4" min="1"
+                 preference="browser.taskbar.lists.refreshInSeconds"/>
+        <label control="others-jumplistRefreshInSeconds" value="&ui.taskbar.jumplist.refreshInSeconds.label2;"/>
+      </hbox>
+    </vbox>
+  </groupbox>
+</box>
+<box class="subtabpanel" orient="vertical" id="ui-pane-others">
+  <groupbox>
+    <caption label="&ui.others.css-devPixelsPerPx.label;"/>
+    <radiogroup id="uiCssDpp-radio" oncommand="gPrefWindow.prefUI.onCssDppRadioTextChange()">
+      <radio value="-1.0" label="&autoSet;"/>
+      <hbox align="center">
+        <radio value="*" label="&manualSet;"/>
+        <textbox id="uiCssDpp-text" type="number"
+          hidespinbuttons="true" min="0.01" size="4" decimalplaces="2" increment="0.01"
+          data-preference-for-context="layout.css.devPixelsPerPx"
+          onchange="gPrefWindow.prefUI.onCssDppRadioTextChange()"/>
+      </hbox>
+    </radiogroup>
+    <data preference="layout.css.devPixelsPerPx"
+          preference-editable="true"
+          onsyncfrompreference="gPrefWindow.prefUI.onCssDppSyncFrom();"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&ui.others.xwin.label;"/>
+    <checkbox label="&ui.others.xwin.autocopy.label;" preference="clipboard.autocopy"/>
+    <checkbox label="&ui.others.xwin.paste.label;" preference="middlemouse.paste"
+              onsyncfrompreference="gPrefWindow.prefUI.onMiddlemousePasteSyncFrom();"/>
+    <checkbox label="&ui.others.xwin.contentLoadURL.label;" preference="middlemouse.contentLoadURL"/>
+    <checkbox label="&ui.others.xwin.scrollbarPosition.label;" preference="middlemouse.scrollbarPosition"/>
+  </groupbox>
+  <groupbox>
+    <caption label="&ui.others.word_select.label;"/>
+    <checkbox label="&ui.others.word_select.eat_space_to_next_word.label;" preference="layout.word_select.eat_space_to_next_word"/>
+    <checkbox label="&ui.others.word_select.eat_punctuation.label;" preference="layout.word_select.stop_at_punctuation"/>
+  </groupbox>
+  <checkbox label="&ui.others.enable_drag_images.label;" preference="nglayout.enable_drag_images"/>
+  <checkbox label="&ui.others.xul_file_picker;" preference="ui.allow_platform_file_picker"/>
+</box>
+</deck>
+</hbox>
+
+</prefpane>
+</overlay>

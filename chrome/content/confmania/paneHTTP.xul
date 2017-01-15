@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is mozilla.org code.
+   -
+   - The Initial Developer of the Original Code is
+   - Ryan Cassin.
+   - Portions created by the Initial Developer are Copyright (C) 2002
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -   Ryan Cassin <rcassin@supernova.org>
+   -   Kathleen Brade <brade@netscape.com>
+   -   Popoki Tom (cat_in_136) (Edited for Configuration Mania)
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY % paneHTTPDTD SYSTEM "chrome://confmania/locale/paneHTTP.dtd">
+%paneHTTPDTD;
+]>
+
+<overlay id="paneHTTPOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneHTTP" flex="1">
+
+<script type="application/javascript" src="paneHTTP.js"></script>
+
+<preferences>
+  <preference id="network.http.version" name="network.http.version" type="string"/>
+  <preference id="network.http.pipelining" name="network.http.pipelining" type="bool"/>
+  <preference id="network.http.proxy.version" name="network.http.proxy.version" type="string"/>
+  <preference id="network.http.proxy.pipelining" name="network.http.proxy.pipelining" type="bool"/>
+  <preference id="network.http.pipelining.ssl" name="network.http.pipelining.ssl" type="bool"/>
+  <preference id="network.http.spdy.enabled" name="network.http.spdy.enabled" type="bool"/>
+  <preference id="network.http.connection-retry-timeout" name="network.http.connection-retry-timeout" type="int"/>
+  <preference id="network.http.keep-alive.timeout" name="network.http.keep-alive.timeout" type="int"/>
+  <preference id="network.http.spdy.timeout" name="network.http.spdy.timeout" type="int"/>
+  <preference id="network.http.pipelining.maxrequests" name="network.http.pipelining.maxrequests" type="int"/>
+  <preference id="network.http.max-connections" name="network.http.max-connections" type="int"/>
+  <preference id="network.http.max-persistent-connections-per-server" name="network.http.max-persistent-connections-per-server" type="int"/>
+  <preference id="network.http.max-persistent-connections-per-proxy" name="network.http.max-persistent-connections-per-proxy" type="int"/>
+  <preference id="network.http.accept-encoding" name="network.http.accept-encoding" type="string"/>
+  <preference id="network.http.accept-encoding.secure" name="network.http.accept-encoding.secure" type="string"/>
+  <preference id="network.http.accept.default" name="network.http.accept.default" type="string"/>
+  <preference id="image.http.accept" name="image.http.accept" type="string"/>
+</preferences>
+
+<hbox flex="1" orient="horizontal" id="paneHTTPBox">
+<radiogroup id="paneHTTPBoxTab" class="subtabs"
+ orient="vertical" style="max-width: 10em; width: 10em;"
+ value="http-pane-connect" oncommand="gPrefWindow.prefHTTP.onPaneHTTPBoxTabSelected();">
+  <radio class="subtab" value="http-pane-connect" label="&http.connect.label;"/>
+  <radio class="subtab" value="http-pane-maxconn" label="&http.maxconn.label;"/>
+  <radio class="subtab" value="http-pane-timeout" label="&http.timeout.label;"/>
+  <radio class="subtab" value="http-pane-header"  label="&http.header.label;"/>
+</radiogroup>
+<splitter/>
+<deck id="paneHTTPBoxContainer" flex="4">
+<box class="subtabpanel" orient="vertical" id="http-pane-connect">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
+  <description>&http.connect.desc;</description>
+  <hbox>
+    <groupbox flex="1">
+      <caption label="&http.connect.direct.label;"/>
+      <radiogroup id="httpVersion" preference="network.http.version">
+        <radio value="1.0" label="&http.connect.HTTP10.label;" accesskey="&http.connect.HTTP10.accesskey;"/>
+        <radio value="1.1" label="&http.connect.HTTP11.label;" accesskey="&http.connect.HTTP11.accesskey;"/>
+      </radiogroup>
+      <checkbox id="enablePipelining" label="&http.connect.pipeline.label;"
+                accesskey="&http.connect.pipeline.accesskey;"
+                preference="network.http.pipelining"/>
+    </groupbox>
+
+    <groupbox flex="1">
+      <caption label="&http.connect.proxy.label;"/>
+      <radiogroup id="httpVersionProxy" preference="network.http.proxy.version">
+        <radio value="1.0" label="&http.connect.HTTP10.label;" accesskey="&http.connect.HTTP10Proxy.accesskey;"/>
+        <radio value="1.1" label="&http.connect.HTTP11.label;" accesskey="&http.connect.HTTP11Proxy.accesskey;"/>
+      </radiogroup>
+      <checkbox id="enablePipeliningProxy" label="&http.connect.pipeline.label;"
+                accesskey="&http.connect.pipelineProxy.accesskey;"
+                preference="network.http.proxy.pipelining"/>
+    </groupbox>
+  </hbox>
+  <checkbox label="&http.connect.pipelineSSL.label;"
+            accesskey="&http.connect.pipelineSSL.accesskey;"
+            preference="network.http.pipelining.ssl"/>
+  <description>&http.connect.pipeline.desc;</description>
+  <checkbox label="&http.connect.spdy.label;"
+            accesskey="&http.connect.spdy.accesskey;"
+            preference="network.http.spdy.enabled"/>
+</box>
+<box class="subtabpanel" orient="vertical" id="http-pane-maxconn">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
+  <grid>
+    <columns><column/><column/></columns>
+    <rows>
+      <row align="center">
+        <label control="maxpipeliningrequest" value="&http.maxconn.maxpipeliningrequest.label;"/>
+        <textbox id="maxpipeliningrequest" type="number" hidespinbuttons="true" min="1" size="4" preference="network.http.pipelining.maxrequests"/>
+      </row>
+      <row align="center">
+        <label control="maxconnections" value="&http.maxconn.maxconnections.label;"/>
+        <textbox id="maxconnections" type="number" hidespinbuttons="true" min="1" size="4" preference="network.http.max-connections"/>
+      </row>
+    </rows>
+  </grid>
+  <grid class="indent">
+    <columns><column/><column/></columns>
+    <rows>
+      <row align="center">
+        <label control="maxpersistentconnectionsPerServer" value="&http.maxconn.maxpersistentconnectionsPerServer.label;"/>
+        <textbox id="maxpersistentconnectionsPerServer" min="1" type="number" hidespinbuttons="true" size="1" preference="network.http.max-persistent-connections-per-server"/>
+      </row>
+      <row align="center">
+        <label control="maxpersistentconnectionsPerProxy" value="&http.maxconn.maxpersistentconnectionsPerProxy.label;"/>
+        <textbox id="maxpersistentconnectionsPerProxy" min="1" type="number" hidespinbuttons="true" size="1" preference="network.http.max-persistent-connections-per-proxy"/>
+      </row>
+    </rows>
+  </grid>
+</box>
+<box class="subtabpanel" orient="vertical" id="http-pane-timeout">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
+  <grid>
+    <columns><column/><column/><column/></columns>
+    <rows>
+      <row align="center">
+        <label control="httptimeoutconnectionretry" value="&http.timeout.connection-retry.label;"/>
+        <textbox id="httptimeoutconnectionretry" type="number" hidespinbuttons="true" min="0" size="4" preference="network.http.connection-retry-timeout"/>
+        <label value="&miliseconds;"/>
+      </row>
+      <row align="center">
+        <label control="httptimeoutkeepalive" value="&http.timeout.keep-alive.label;"/>
+        <textbox id="httptimeoutkeepalive" type="number" hidespinbuttons="true" min="0" size="4" preference="network.http.keep-alive.timeout"/>
+        <label value="&seconds;"/>
+      </row>
+      <row align="center">
+        <label control="httptimeoutspdy" value="&http.timeout.spdy.label;"/>
+        <textbox id="httptimeoutspdy" type="number" hidespinbuttons="true" min="0" size="4" preference="network.http.spdy.timeout"/>
+        <label value="&seconds;"/>
+      </row>
+    </rows>
+  </grid>
+</box>
+<box class="subtabpanel" orient="vertical" id="http-pane-header">
+  <vbox orient="vertical" class="warning"><description>&harmfulWarning;</description></vbox>
+  <grid>
+    <columns><column/><column flex="1"/></columns>
+    <rows>
+      <row align="center">
+        <label value="&http.header.encoding.label;" control="HTTPAcceptEncoding"/>
+        <textbox id="HTTPAcceptEncoding" preference="network.http.accept-encoding"/>
+      </row>
+      <row align="center">
+        <label value="&http.header.encoding-secure.label;" control="HTTPAcceptEncodingSecure"/>
+        <textbox id="HTTPAcceptEncodingSecure" preference="network.http.accept-encoding.secure"/>
+      </row>
+      <row align="center">
+        <label value="&http.header.accept.label;" control="HTTPAccept"/>
+        <textbox id="HTTPAccept" preference="network.http.accept.default"/>
+      </row>
+      <row align="center">
+        <label value="&http.header.accept-image.label;" control="HTTPAccept4IMG"/>
+        <textbox id="HTTPAccept4IMG" preference="image.http.accept"/>
+      </row>
+    </rows>
+  </grid>
+</box>
+</deck>
+</hbox>
+
+</prefpane>
+</overlay>

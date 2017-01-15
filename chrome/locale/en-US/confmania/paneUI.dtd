@@ -1,0 +1,124 @@
+<!ENTITY ui.title "UI">
+<!ENTITY ui.mousewheel.label "Mouse wheel">
+<!ENTITY ui.mousewheel.binding.label "Mouse wheel binding">
+<!ENTITY ui.mousewheel.binding.default.label "Default">
+<!ENTITY ui.mousewheel.binding.with_alt.label "Alt">
+<!ENTITY ui.mousewheel.binding.with_control.label "Ctrl">
+<!ENTITY ui.mousewheel.binding.with_meta.label "Meta">
+<!ENTITY ui.mousewheel.binding.with_shift.label "Shift">
+<!ENTITY ui.mousewheel.binding.with_win.label "Win">
+<!ENTITY ui.mousewheel.binding.action.label "Action">
+<!ENTITY ui.mousewheel.binding.action.do_nothing.label "Do nothing">
+<!ENTITY ui.mousewheel.binding.action.scroll.label "Scroll contents">
+<!ENTITY ui.mousewheel.binding.action.go_history.label "Go back or forward in the history">
+<!ENTITY ui.mousewheel.binding.action.zoom.label "Zoom in or out the contents">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_x.label "Multiplier X">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_y.label "Multiplier Y">
+<!ENTITY ui.mousewheel.binding.delta_multiplier_z.label "Multiplier Z">
+<!ENTITY ui.multitouch.label "Multi-Touch">
+<!ENTITY ui.multitouch.gestures.label "Multi-Touch Gestures">
+<!ENTITY ui.multitouch.gestures.pinch.in.label "Pinch-in">
+<!ENTITY ui.multitouch.gestures.pinch.in.shift.label "Pinch-in with shift">
+<!ENTITY ui.multitouch.gestures.pinch.out.label "Pinch-out">
+<!ENTITY ui.multitouch.gestures.pinch.out.shift.label "Pinch-out with shift">
+<!ENTITY ui.multitouch.gestures.swipe.label "Swipe (left/right/up/down)">
+<!ENTITY ui.multitouch.gestures.twist.label "Twist (left-/right-handed)">
+<!ENTITY ui.find.label "Find in page">
+<!ENTITY ui.find.prefillwithselection.label "Set find term to selection text when find bar is opened and Ctrl-F is pressed.">
+<!ENTITY ui.find.findahead.label "Quick Find (Find As You Type)">
+<!ENTITY ui.find.findahead.desc "Tip: To manually start Quick Find, type / to find text or ' to find links, followed by the text you want to find.">
+<!ENTITY ui.find.findahead.timeout.label "Clear the current search after">
+<!ENTITY ui.find.findahead.timeout.label2 "[ms] of inactivity">
+<!ENTITY ui.find.findahead.sound.label "Play a sound when typed text isn't found (takes effect after restart)">
+<!ENTITY ui.find.casesensitive.label "Case sensitivity mode">
+<!ENTITY ui.find.casesensitive.insensitive "Case-insensitive">
+<!ENTITY ui.find.casesensitive.sensitive "Case-sensitive">
+<!ENTITY ui.find.casesensitive.auto "Case-sensitive only if the search string contains upper-case characters but isn't all-caps">
+<!ENTITY ui.keynav.label "Key Navigation">
+<!ENTITY ui.keynav.tabNavigationBehavior.label "Tab Focus Navigation">
+<!ENTITY ui.keynav.tabNavigationLinks.label "Links">
+<!ENTITY ui.keynav.tabNavigationLinks.accesskey "L">
+<!ENTITY ui.keynav.tabNavigationForms.label "Buttons, radio buttons, checkboxes, and lists">
+<!ENTITY ui.keynav.tabNavigationForms.accesskey "B">
+<!ENTITY ui.keynav.tabNavigationTextboxes.label "Note: text boxes are always part of the tabbing order.">
+<!ENTITY ui.keynav.browseWithCaret.label "Browse With Caret">
+<!ENTITY ui.keynav.browseWithCaret.shortcut.label "Use the F7 shortcut to toggle caret browsing">
+<!ENTITY ui.keynav.browseWithCaret.shortcut.accesskey "F">
+<!ENTITY ui.keynav.browseWithCaret.warn.label "Warn me before turning on caret browsing">
+<!ENTITY ui.keynav.browseWithCaret.warn.accesskey "W">
+<!ENTITY ui.keynav.accelerators.label "Keyboard accelerators">
+<!ENTITY ui.keynav.acceleratorsBlurb.label "A value of zero disables a modifier key.">
+<!ENTITY ui.keynav.acceleratorKey.label "Accelerator key:">
+<!ENTITY ui.keynav.acceleratorKey.accesskey "A">
+<!ENTITY ui.keynav.menuAccessKey.label "Menu access key:">
+<!ENTITY ui.keynav.menuAccessKey.accesskey "M">
+<!ENTITY ui.keynav.backspace_action.label "Action when Pressing [Backspace] :">
+<!ENTITY ui.keynav.backspace_action.goBack "Go back a page in the session history (same as IE)">
+<!ENTITY ui.keynav.backspace_action.scrollUp "Scroll up in the current document">
+<!ENTITY ui.keynav.backspace_action.nothing "Do nothing">
+<!ENTITY ui.keynav.accesibility.label "Accesibility">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.label "Activate the element (e.g. follow a link) using an access key">
+<!ENTITY ui.keynav.accesibility.accesskeycauseactivation.accesskey "E">
+<!ENTITY ui.bidi.label "Bidi">
+<!ENTITY ui.bidi.ui.label "Enable Bi-Directional (BiDi) UI">
+<!ENTITY ui.bidi.direction.label "Direction">
+<!ENTITY ui.bidi.direction.ltr.label "-&gt; Left-to-right">
+<!ENTITY ui.bidi.direction.rtl.label "&lt;- Right-to-left">
+<!ENTITY ui.bidi.numeral.label "Numeral">
+<!ENTITY ui.bidi.numeral.nominal.label "Nominal">
+<!ENTITY ui.bidi.numeral.regular_context.label "Regular context">
+<!ENTITY ui.bidi.numeral.hindi_context.label "Hindi context">
+<!ENTITY ui.bidi.numeral.arabic.label "Arabic">
+<!ENTITY ui.bidi.numeral.hindi.label "Hindi">
+<!ENTITY ui.bidi.numeral.persian_context.label "Persian context">
+<!ENTITY ui.bidi.numeral.persian.label "Persian">
+<!ENTITY ui.bidi.support.label "Provider">
+<!ENTITY ui.bidi.support.mozilla.label "&brandShortName;">
+<!ENTITY ui.bidi.support.os.label "OS">
+<!ENTITY ui.bidi.support.disable.label "Disable">
+<!ENTITY ui.bidi.texttype.label "Text type">
+<!ENTITY ui.bidi.texttype.charset.label "Default">
+<!ENTITY ui.bidi.texttype.logical.label "Logical">
+<!ENTITY ui.bidi.texttype.visual.label "Visual">
+<!ENTITY ui.bidi.scrollbarSide.label "Place the vertical scrollbar on:">
+<!ENTITY ui.bidi.scrollbarSide.uiBase "Right in LTR, Left in RTL, based on the &brandShortName;'s direction.(Default)">
+<!ENTITY ui.bidi.scrollbarSide.contentBase "Right in LTR, Left in RTL, based on the document's direction.">
+<!ENTITY ui.bidi.scrollbarSide.right "Right side">
+<!ENTITY ui.bidi.scrollbarSide.left "Left side">
+<!ENTITY ui.i18n.label "i18n">
+<!ENTITY ui.i18n.locale.label "Application Locale">
+<!ENTITY ui.i18n.locale.eg "(e.g. en-US, en-GB, ja, ar)">
+<!ENTITY ui.i18n.locale.matchOS.label "Use the OS's locale">
+<!ENTITY ui.i18n.spellcheckDefault.label "Spellchecker Setting">
+<!ENTITY ui.i18n.spellcheckDefault.disabled "Disables spellchecker">
+<!ENTITY ui.i18n.spellcheckDefault.multiline "Enables spellchecker for multi-line controls (e.g. textarea) (Default)">
+<!ENTITY ui.i18n.spellcheckDefault.all "Enables spellchecker for all text controls">
+<!ENTITY ui.i18n.japanese_specific_transform.label "Replaces backslash with Yen signs in Japanese-encoded document">
+<!ENTITY ui.contextmenu.label "Context menu">
+<!ENTITY ui.contextmenu.click_hold_context_menus.label "Enable click-and-hold context menus (Emulate old Mac OS interface)">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.label "Submenu Delay">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.none.label "None">
+<!ENTITY ui.contextmenu.uiSubmenuDelay.inf.label "Infinity (Motif Emulation)">
+<!ENTITY ui.taskbar.label "Taskbar">
+<!ENTITY ui.taskbar.jumplist.label "Jumplist (Windows 7+)">
+<!ENTITY ui.taskbar.jumplist.enabled.label "Enable Jumplist">
+<!ENTITY ui.taskbar.jumplist.item.label "Items:">
+<!ENTITY ui.taskbar.jumplist.item.frequent.label "Frequent">
+<!ENTITY ui.taskbar.jumplist.item.recent.label "Recent">
+<!ENTITY ui.taskbar.jumplist.item.tasks.label "Tasks">
+<!ENTITY ui.taskbar.jumplist.maxListItemCount.label "Maximum number of items per list">
+<!ENTITY ui.taskbar.jumplist.refreshInSeconds.label "Refresh list items every">
+<!ENTITY ui.taskbar.jumplist.refreshInSeconds.label2 "seconds.">
+<!ENTITY ui.others.label "Other">
+<!ENTITY ui.others.css-devPixelsPerPx.label "DPI Scaling Level">
+<!ENTITY ui.others.xwin.label "Unix (X-Window) style mouse behavior">
+<!ENTITY ui.others.xwin.autocopy.label "Enable auto-copy selected text (takes effect only *nix)">
+<!ENTITY ui.others.xwin.paste.label "Paste when clicked middle mouse button">
+<!ENTITY ui.others.xwin.contentLoadURL.label "Go to URL stored in clipboard by middle mouse click">
+<!ENTITY ui.others.xwin.scrollbarPosition.label "Allow middle mouse button to adjust scroll bar (takes effect after restart)">
+<!ENTITY ui.others.theme.label "Themes">
+<!ENTITY ui.others.word_select.label "Selection behavior when double-clicking text">
+<!ENTITY ui.others.word_select.eat_space_to_next_word.label "Select the space up to the following word">
+<!ENTITY ui.others.word_select.eat_punctuation.label "Select the surrounding punctuation">
+<!ENTITY ui.others.enable_drag_images.label "Display an image (when specified) during dragging">
+<!ENTITY ui.others.xul_file_picker "Use XUL file picker even if system file picker is available">

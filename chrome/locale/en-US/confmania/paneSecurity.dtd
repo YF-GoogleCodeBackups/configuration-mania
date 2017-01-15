@@ -1,0 +1,115 @@
+<!ENTITY security.title "Security">
+<!ENTITY security.js.label "JavaScript">
+<!ENTITY security.js.enableJavaScript.label "Enable JavaScript">
+<!ENTITY security.js.annoy.label "More Advanced">
+<!ENTITY security.js.annoy.max_script_run_time.label "The browser warns when a script is running over">
+<!ENTITY security.js.annoy.disable_scripts_to_close_windows "Disable Closing non-popup windows">
+<!ENTITY security.js.annoy.window_flip "Disable Requesting/Removing window focus">
+<!ENTITY security.js.annoy.window_move_resize "Disable Moving/Resizing existing windows">
+<!ENTITY security.js.annoy.status_change "Disable Changing statusbar">
+<!ENTITY security.js.annoy.contextmenu "Disallow to dispatch contextmenu events">
+<!ENTITY security.js.annoy.clipboardevents "Disallow to dispatch clipboard events (copy/cut/paste)">
+<!ENTITY security.js.annoy.dispatchLeftClickOnly "Allow to dispatch left click only">
+<!ENTITY security.js.uis.label "UI-Spoofing">
+<!ENTITY security.js.uis.desc1 "Disable hiding (and Enable) when opened by JavaScript :">
+<!ENTITY security.js.uis.desc2 "Checking all items prevent browser UI-spoofing attacks.">
+<!ENTITY security.js.uis.menubar "Menubar">
+<!ENTITY security.js.uis.resizable "Resizable">
+<!ENTITY security.js.uis.scrollbars "Scroll bars">
+<!ENTITY security.js.uis.toolbar "Tool bar">
+<!ENTITY security.js.uis.locationbar "Location bar">
+<!ENTITY security.js.uis.status "Status bar">
+<!ENTITY security.popupwin.label "Popup Win.">
+<!ENTITY security.popupwin.onblock.label "When block popup windows:">
+<!ENTITY security.popupwin.onblock.displayNotification.label "Display a notification bar at the top of the content area">
+<!ENTITY security.popupwin.tabs_newwindow.label "On opening new window by clicking links that specify target attribute:">
+<!ENTITY security.popupwin.tabs_newwindow.openCurrent.label "Open new windows in the current tabs instead">
+<!ENTITY security.popupwin.tabs_newwindow.openTab.label "Open new windows in new tabs instead">
+<!ENTITY security.popupwin.tabs_newwindow.openWindow.label "Open new windows">
+<!ENTITY security.popupwin.tabs.label "On opening new popup windows using JavaScript:">
+<!ENTITY security.popupwin.tabs.0.label "Same as the link's setting">
+<!ENTITY security.popupwin.tabs.1.label "Open new window">
+<!ENTITY security.popupwin.tabs.2.label "Same as the link's setting, but open window if specified how to be displayed (Default)">
+<!ENTITY security.popupwin.popup_maximum.label "Max number of popup windows">
+<!ENTITY security.popupwin.from_plugins.label "Restrictions on plugin-initiated popup windows:">
+<!ENTITY security.popupwin.from_plugins.0.label "No restrictions">
+<!ENTITY security.popupwin.from_plugins.1.label "Limit the numbers to &quot;&security.popupwin.popup_maximum.label;&quot;">
+<!ENTITY security.popupwin.from_plugins.2.label "Block all except whitelisted">
+<!ENTITY security.popupwin.from_plugins.3.label "Block all even those on whitelisted">
+<!ENTITY security.popupwin.event.label "Allow to open when:">
+<!ENTITY security.popupwin.event.reset.label "Reset form">
+<!ENTITY security.popupwin.event.submit.label "Submit form">
+<!ENTITY security.popupwin.event.select.label "Selected a form">
+<!ENTITY security.popupwin.event.change.label "Changed a text">
+<!ENTITY security.popupwin.event.resize.label "Resized windows">
+<!ENTITY security.popupwin.event.input.label "Input">
+<!ENTITY security.popupwin.event.keypress.label "Pressed Key">
+<!ENTITY security.popupwin.event.keydown.label "Key Down">
+<!ENTITY security.popupwin.event.keyup.label "Key Up">
+<!ENTITY security.popupwin.event.mouseup.label "Mouse Up">
+<!ENTITY security.popupwin.event.mousedown.label "Mouse Down">
+<!ENTITY security.popupwin.event.click.label "Clicked">
+<!ENTITY security.popupwin.event.dblclick.label "Double Clicked">
+<!ENTITY security.popupwin.event.touchstart.label "Touch Start">
+<!ENTITY security.popupwin.event.touchend.label "Touch End">
+<!ENTITY security.popupwin.event.notificationclick.label "Notification Clicked">
+<!ENTITY security.ssl.label "SSL">
+<!ENTITY security.ssl.SSLProtocolVersions.caption "SSL Protocol Versions">
+<!ENTITY security.ssl.limit.description "You can restrict which encryption protocols to use for secure connections. Choose a single version or a contiguous range of versions.">
+<!ENTITY security.ssl.limit.enable.label "Enable:">
+<!ENTITY security.ssl.limit.ssl30.label "SSL 3.0">
+<!ENTITY security.ssl.limit.tls10.label "TLS 1.0">
+<!ENTITY security.ssl.limit.tls11.label "TLS 1.1">
+<!ENTITY security.ssl.limit.tls12.label "TLS 1.2">
+<!ENTITY security.ssl.limit.tls13.label "TLS 1.3">
+<!ENTITY security.ssl.SSLMixedContent.caption "Mixed Content">
+<!ENTITY security.ssl.block.activecontent "Don't load insecure content on encrypted pages">
+<!ENTITY security.ssl.block.displaycontent "Don't load other types of mixed content on encrypted pages">
+<!ENTITY security.ssl.ssl_override_behavior.label "&quot;Add Security Exception&quot; dialog behavior when secure connection failed">
+<!ENTITY security.ssl.ssl_override_behavior.dont.label "Do Not pre-populate the current URL as an exception and Do Not pre-fetch the SSL certificate.">
+<!ENTITY security.ssl.ssl_override_behavior.nofetch.label "Pre-populate the current URL but Do Not pre-fetch the certificate.">
+<!ENTITY security.ssl.ssl_override_behavior.prefetch.label "Pre-populate the current URL and pre-fetch the certificate.">
+<!ENTITY security.net.label "Network">
+<!ENTITY security.net.redirection-limit.label "Max number of HTTP redirections to follow:">
+<!ENTITY security.net.show_punycode.label "Show IDN in punycode">
+<!ENTITY security.net.show_punycode.desc "There is no need to show IDN in punycode. Current &brandShortName; refuses illegal IDN addresses by using the black/white list.">
+<!ENTITY security.privacy.label "Privacy">
+<!ENTITY security.privacy.form.label "Form">
+<!ENTITY security.privacy.form.autofillForms.label "Automatically fill sign-in forms">
+<!ENTITY security.privacy.history.label "History">
+<!ENTITY security.privacy.history.cookie.label "Cookie">
+<!ENTITY security.privacy.history.cookie.lifetimedays.label "Accept cookies for">
+<!ENTITY security.privacy.trackingprotection.label "Tracking Protection">
+<!ENTITY security.privacy.trackingprotection.enable.label "Enable Tracking Protection">
+<!ENTITY security.privacy.trackingprotection.exceptions.label "Exceptions">
+<!ENTITY security.privacy.trackingprotection.exceptions.title "Exceptions - Tracking Protection">
+<!ENTITY security.privacy.trackingprotection.exceptions.desc "You can specify which websites are allowed to track your online activity. Type the exact address of the site you want to manage and then click Block or Allow.">
+<!ENTITY security.privacy.trackingprotection-pbmode.enable.label "Enable Tracking Protection for Private Browsing">
+<!ENTITY security.privacy.passwd.label "Master Password">
+<!ENTITY security.privacy.passwd.managepassword.label "Master Password Timeout">
+<!ENTITY security.privacy.passwd.managepassword.text "&brandShortName; will ask for your master password:">
+<!ENTITY security.privacy.passwd.managepassword.askfirsttime "The first time it is needed">
+<!ENTITY security.privacy.passwd.managepassword.askeverytime "Every time it is needed">
+<!ENTITY security.privacy.passwd.managepassword.asktimeout "If it has not been used for">
+<!ENTITY security.privacy.passwd.managepassword.timeout.unit "minutes or longer">
+<!ENTITY security.privacy.passwd.desc "Note: Preference of Master Password is available at the &brandShortName; Preference panel.">
+<!ENTITY security.referer.label "Referrer">
+<!ENTITY security.referer.none.label "Never Send (Not recommended)">
+<!ENTITY security.referer.none.desc "WARNING: Some site may require the Referrer header. In that case, Select &quot;&security.referer.link.label;&quot; or &quot;&security.referer.all.label;&quot;.">
+<!ENTITY security.referer.link.label "Send only on clicks">
+<!ENTITY security.referer.all.label "Send on image requests as well">
+<!ENTITY security.referer.spoofSource.label "Spoof Referrer URL and use the target URL as the referrer">
+<!ENTITY security.referer.trimmingPolicy.label "Referrer URL trimming policy">
+<!ENTITY security.referer.trimmingPolicy.full_URI.label "Full URL">
+<!ENTITY security.referer.trimmingPolicy.scheme_host_port_path.label "scheme+host+port+path">
+<!ENTITY security.referer.trimmingPolicy.scheme_host_port.label "scheme+host+port">
+<!ENTITY security.referer.XOriginPolicy.label "Cross origin policy">
+<!ENTITY security.referer.XOriginPolicy.always.label "Always send Referrer header">
+<!ENTITY security.referer.XOriginPolicy.baseDomainsMatch.label "Only send if base domains match">
+<!ENTITY security.referer.XOriginPolicy.hostsMatch.label "Only send if hosts match">
+<!ENTITY security.referer.secureXSite.label "Send the Referrer header when navigating from a https site to another https site">
+<!ENTITY security.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https site to a non-secure site.">
+<!ENTITY security.content.label "Content">
+<!ENTITY security.content.fileuri_strict_origin_policy.label "Same origin policy for local documents">
+<!ENTITY security.content.fileuri_strict_origin_policy.restrict.label "Local documents have access to other local documents in the same directory and in subdirectories, but not directory listings">
+<!ENTITY security.content.fileuri_strict_origin_policy.traditional.label "Local documents have access to all other local documents, including directory listings.">

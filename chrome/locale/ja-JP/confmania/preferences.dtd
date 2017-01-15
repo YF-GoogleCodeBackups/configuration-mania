@@ -1,0 +1,23 @@
+<!ENTITY prefWindow.title "Configuration Mania">
+<!ENTITY prefwindow.resetMessageTemplate "変更は失われます! 本当にこのタブ「__TABNAME__」の設定を標準に戻しますか?">
+<!ENTITY prefWindow.context.reset.label "標準の設定に戻す">
+<!ENTITY prefWindow.context.reset.accesskey "R">
+<!ENTITY prefWindow.context.openaboutconfig.label "about:configで開く">
+<!ENTITY prefWindow.context.openaboutconfig.accesskey "A">
+<!ENTITY prefWindow.context.copyName.label "設定の名前をコピー">
+<!ENTITY prefWindow.context.copyName.accesskey "C">
+<!ENTITY prefWindow.context.mkb.label "MozillaZine Knowledge Baseで検索">
+<!ENTITY prefWindow.context.mkb.accesskey "S">
+<!ENTITY miliseconds "ミリ秒">
+<!ENTITY microseconds "μ秒">
+<!ENTITY seconds "秒">
+<!ENTITY days "日">
+<!ENTITY kilobytes "KB">
+<!ENTITY reset "標準に戻す">
+<!ENTITY browse "参照...">
+<!ENTITY preview "プレビュー">
+<!ENTITY search "検索">
+<!ENTITY autoSet "自動">
+<!ENTITY disableSet "無効">
+<!ENTITY manualSet "手動設定">
+<!ENTITY harmfulWarning "これらの設定に変更を行うとアプリケーションの安定性やセキュリティなどの動作に有害な影響を与える可能性があります。何が起きるのかを知っている場合に限って使用してください。">

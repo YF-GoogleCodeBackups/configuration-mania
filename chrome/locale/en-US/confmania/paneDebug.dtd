@@ -1,0 +1,17 @@
+<!ENTITY debug.title "Debug">
+<!ENTITY debug.debug.label "For Debugging">
+<!ENTITY debug.debug.dump.label "Enable JavaScript dump() output">
+<!ENTITY debug.debug.dump.file.label "Output file:">
+<!ENTITY debug.debug.dump.file.placeholder "Standard Output">
+<!ENTITY debug.debug.jsstrict.label "Show strict JavaScript warnings">
+<!ENTITY debug.debug.chromeerr.label "Show chrome JavaScript errors &amp; warnings">
+<!ENTITY debug.debug.csserr.label "Show CSS parse errors">
+<!ENTITY debug.debug.extensionslogging.label "Show errors &amp; warnings about addon installation and update">
+<!ENTITY debug.devtools.label "Developer Tools">
+<!ENTITY debug.devtools.chrome_enabled.label "Enable to run JavaScript code in the chrome context of the Scratchpad.">
+<!ENTITY debug.devtools.debugger_remote_enabled.label "Enable remote debugging">
+<!ENTITY debug.popup_disable_autohide.label "Disable popup auto hide. (i.e. Keep popup panel open when you click away from them and into such as debugging tool)">
+<!ENTITY debug.cache.label "Cache">
+<!ENTITY debug.cache.disableXULCache.label "Disable XUL Cache">
+<!ENTITY debug.cache.diskCacheDisable.label "Disable Disk Cache">
+<!ENTITY debug.cache.memoryCacheDisable.label "Disable Memory Cache">

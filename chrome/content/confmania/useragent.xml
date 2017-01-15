@@ -1,0 +1,49 @@
+<useragent xmlns="chrome://confmania/chrome/xmlns/useragent#">
+  <group name="{opt:this}" value="{opt:default}">
+    <option name="Windows XP" oscpu="Windows NT 5.1" platform="Windows"/>
+    <option name="Windows Vista" oscpu="Windows NT 6.0" platform="Windows"/>
+    <option name="Windows 7" oscpu="Windows NT 6.1" platform="Windows"/>
+    <option name="Windows 7, WOW64" oscpu="Windows NT 6.1; WOW64" platform="Windows"/>
+    <option name="Windows 7, x64" oscpu="Windows NT 6.1; Win64; x64" platform="Windows"/>
+    <option name="Windows 8.1, WOW64" oscpu="Windows NT 6.3; WOW64" platform="Windows"/>
+    <option name="Windows 8.1, x64" oscpu="Windows NT 6.3; Win64; x64" platform="Windows"/>
+    <option name="Windows 10, WOW64" oscpu="Windows NT 10.0; WOW64" platform="Windows"/>
+    <option name="Windows 10, x64" oscpu="Windows NT 10.0; Win64; x64" platform="Windows"/>
+    <option name="macOS 10.12" oscpu="Intel MacOS X 10.12" platform="Macintosh"/>
+    <option name="Linux x86" oscpu="Linux i686" platform="X11"/>
+    <option name="Linux x64" oscpu="Linux x86_64" platform="X11"/>
+    <option name="FreeBSD x86" oscpu="FreeBSD i686" platform="X11"/>
+    <option name="FreeBSD x64" oscpu="FreeBSD x86_64" platform="X11"/>
+    <option name="Android Mobile Phone" oscpu="Mobile" platform="Android 7.0"/>
+    <option name="Android Tablet" oscpu="Tablet" platform="Android 7.0"/>
+    <option name="Firefox OS Mobile Phone" oscpu="Mobile"/>
+  </group>
+  <group name="Microsoft Internet Explorer" value="Mozilla/4.0 (compatible; MSIE {opt:version}; {opt:oscpu}{opt:extra})">
+    <option name="IE 6 (Windows XP SP3, .NET 1.0~2.0)" version="6.0" oscpu="Windows NT 5.1" extra="; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727"/>
+    <option name="IE 8 (Windows 7 x86 .NET 2.0~3.5)" version="8.0" oscpu="Windows NT 6.1" extra="; Trident/4.0 SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.21022; .NET CLR 3.5.30729; .NET CLR 3.0.4506.2152; Media Center PC 6.0"/>
+    <option name="IE 11 (Windows 8.1 WOW64)" value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko"/>
+    <option name="IE 11 (Windows 8.1 WOW64; w/ Touch)" value="Mozilla/5.0 (Windows NT 6.3; Trident/7.0; Touch; rv:11.0) like Gecko"/>
+    <option name="IE 11 (Windows 10 WOW64)" value="Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"/>
+  </group>
+  <group name="Microsoft Edge" value="Mozilla/5.0 ({opt:oscpu}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/{opt:version}">
+    <option name="Edge 14.14393 (Windows 10 x64)" oscpu="Windows NT 10.0; Win64; x64" version="14.14393"/>
+  </group>
+  <group name="Google Chrome" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Chrome/{opt:version} Safari/{opt:webkit}">
+
+    <option name="Chrome 55.0.2883.873 (Windows 7)" platform="Windows" oscpu="Windows NT 6.1" webkit="537.36" version="55.0.2883.87"/>
+    <option name="Chrome 55.0.2883.87 (Windows 10)" platform="Windows" oscpu="Windows NT 10.0" webkit="537.36" version="55.0.2883.87"/>
+    <option name="Chrome 55.0.2883.87 (macOS 10.12.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_12_2" webkit="537.36" version="55.0.2883.87"/>
+    <option name="Chrome 55.0.2883.91 (Nexus 6P; Android 7.1.1)" platform="Linux" oscpu="Android 7.1.1; Nexus 6P Build/N4F26I" webkit="537.36" version="55.0.2883.91"/>
+  </group>
+  <group name="Safari" value="Mozilla/5.0 ({opt:platform}; {opt:oscpu}) AppleWebKit/{opt:webkit} (KHTML, like Gecko) Version/{opt:version} Safari/{opt:safari}">
+    <option name="Safari 10.0.2 (macOS 10.12.2)" platform="Macintosh" oscpu="Intel Mac OS X 10_12_2" webkit="602.3.12" version="10.0.2" safari="602.3.12"/>
+
+    <option name="Safari 10.0 (iPhone; iOS 10.2)" platform="iPhone" oscpu="CPU iPhone OS 10_2 like Mac OS X" webkit="602.3.12" version="10.0 Mobile/14C92" safari="602.1"/>
+    <option name="Safari 10.0 (iPad; iOS 10.2)" platform="iPad" oscpu="CPU OS 10_2 like Mac OS X" webkit="602.3.12" version="10.0 Mobile/14C92" safari="602.1"/>
+  </group>
+  <group name="Googlebot">
+    <option name="Googlebot 2.1" value="Mozilla/5.0 (compatible; Googlebot/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
+    <option name="Googlebot (Smartphone) 2.1" value="Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.96 Mobile Safari/537.36 (compatible; Googlebot/{opt:version}; +http://www.google.com/bot.html)" version="2.1"/>
+    <option name="Googlebot Image 1.0" value="Googlebot-Image/{opt:version}" version="1.0"/>
+  </group>
+</useragent>

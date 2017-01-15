@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1/GPL 2.0/LGPL 2.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is the Configuration Mania.
+   -
+   - The Initial Developer of the Original Code is Popoki Tom.
+   - Portions created by the Initial Developer are Copyright (C) 2010
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -     Popoki Tom (cat_in_136) (Configuration Mania)
+   -
+   - Alternatively, the contents of this file may be used under the terms of
+   - either the GNU General Public License Version 2 or later (the "GPL"), or
+   - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+   - in which case the provisions of the GPL or the LGPL are applicable instead
+   - of those above. If you wish to allow use of your version of this file only
+   - under the terms of either the GPL or the LGPL, and not to allow others to
+   - use your version of this file under the terms of the MPL, indicate your
+   - decision by deleting the provisions above and replace them with the notice
+   - and other provisions required by the LGPL or the GPL. If you do not delete
+   - the provisions above, a recipient may use your version of this file under
+   - the terms of any one of the MPL, the GPL or the LGPL.
+   -
+   - ***** END LICENSE BLOCK ***** -->
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://global/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % preferencesDTD SYSTEM "chrome://confmania/locale/preferences.dtd">
+%preferencesDTD;
+<!ENTITY % paneAddonsDTD SYSTEM "chrome://confmania/locale/paneAddons.dtd">
+%paneAddonsDTD;
+]>
+
+<overlay id="paneDebugOverlay"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+ xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<prefpane id="paneAddons" orient="vertical">
+
+<preferences>
+  <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
+  <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
+  <preference name="extensions.checkCompatibility.45.0" id="extensions.checkCompatibility.45.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.46.0" id="extensions.checkCompatibility.46.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.47.0" id="extensions.checkCompatibility.47.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.48.0" id="extensions.checkCompatibility.48.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.49.0" id="extensions.checkCompatibility.49.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.50.0" id="extensions.checkCompatibility.50.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.51.0" id="extensions.checkCompatibility.51.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.52.0" id="extensions.checkCompatibility.52.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
+  <preference name="extensions.install.requireBuiltInCerts" id="extensions.install.requireBuiltInCerts" type="bool" inverted="true"/>
+  <preference name="extensions.alwaysUnpack" id="extensions.alwaysUnpack" type="bool"/>
+</preferences>
+
+<hbox align="center">
+  <label value="&addons.get_addons_maxResults.label;" control="ext-maxResults"/>
+  <textbox id="ext-maxResults" preference="extensions.getAddons.maxResults" type="number" hidespinbuttons="true" min="1" size="3"/>
+</hbox>
+<hbox align="center">
+  <label value="&addons.dialog_enable_delay.label;" control="ext-delay"/>
+  <textbox id="ext-delay" preference="security.dialog_enable_delay" type="number" hidespinbuttons="true" min="0" size="4"/>
+  <label value="&miliseconds;"/>
+</hbox>
+<groupbox>
+<caption label="&addons.noCheckCompatibility.label;"/>
+<hbox>
+<checkbox label="45" preference="extensions.checkCompatibility.45.0"/>
+<checkbox label="46" preference="extensions.checkCompatibility.46.0"/>
+<checkbox label="47" preference="extensions.checkCompatibility.47.0"/>
+<checkbox label="48" preference="extensions.checkCompatibility.48.0"/>
+<checkbox label="49" preference="extensions.checkCompatibility.49.0"/>
+<checkbox label="50" preference="extensions.checkCompatibility.50.0"/>
+<checkbox label="51" preference="extensions.checkCompatibility.51.0"/>
+<checkbox label="52" preference="extensions.checkCompatibility.52.0"/>
+</hbox>
+</groupbox>
+<checkbox label="&addons.noCheckUpdateSecurity.label;"
+          preference="extensions.checkUpdateSecurity"/>
+<checkbox label="&addons.allowNonBuiltInCerts.label;"
+          preference="extensions.install.requireBuiltInCerts"
+          onsynctopreference="return gPrefWindow.syncTo(this, false);"/>
+<checkbox label="&addons.alwaysUnpack.label;"
+          preference="extensions.alwaysUnpack"/>
+
+</prefpane>
+</overlay>

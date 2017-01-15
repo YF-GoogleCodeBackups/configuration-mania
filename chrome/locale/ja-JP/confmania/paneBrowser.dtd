@@ -1,0 +1,191 @@
+<!ENTITY browser.title "ブラウザ">
+<!ENTITY browser.urlbar.label "ロケーションバー">
+<!ENTITY browser.urlbar.clickSelectsAll.label "クリック時に内容を全て選択">
+<!ENTITY browser.urlbar.doubleClickSelectsAll.label "ダブルクリック時に内容を全て選択">
+<!ENTITY browser.urlbar.autoComplete.label "自動補完を無効にする">
+<!ENTITY browser.urlbar.autoComplete.autoFill.label "ロケーションバーに入力したURLを自動的に補完">
+<!ENTITY browser.urlbar.autoComplete.filterJavaScript.label "&quot;javascript:&quot;のアドレス（ブックマークレット）を表示しない">
+<!ENTITY browser.urlbar.autoComplete.maxRichResults.label "最大表示項目数">
+<!ENTITY browser.urlbar.autoComplete.delay.label "自動補完を始めるまでの待ち時間 : ">
+<!ENTITY browser.urlbar.formatting.label "整形">
+<!ENTITY browser.urlbar.formatting.formatting-enabled.label "ドメイン名を強調表示">
+<!ENTITY browser.urlbar.formatting.trimURLs.label "http:// を省略して表示">
+<!ENTITY browser.urlbar.unknownLocations.label "アドレス入力">
+<!ENTITY browser.urlbar.unknownLocations.keywords.label "入力されたテキストが Web アドレス (URL) でないときは Web を検索する">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.label "ドメイン補完">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.enabled.label "Web ページがみつからないときに、自動的に接頭辞と接尾辞を補完">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.prefix.label "接頭辞 : ">
+<!ENTITY browser.urlbar.unknownLocations.domainGuessing.suffix.label "接尾辞 : ">
+<!ENTITY browser.html.label "ページ表示制御">
+<!ENTITY browser.html.allowMarquee.label "スクロールテキストを有効にする">
+<!ENTITY browser.html.img "画像">
+<!ENTITY browser.html.img.loadImages.label "画像を自動的に読み込む">
+<!ENTITY browser.html.img.loadImagesExceptions.label "例外サイト...">
+<!ENTITY browser.html.img.loadImagesExceptions.title "例外サイト - 画像の読み込み">
+<!ENTITY browser.html.img.loadImagesExceptions.desc "画像の読み込みを許可するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
+<!ENTITY browser.html.img.anim.label "アニメーション画像の繰り返し:">
+<!ENTITY browser.html.img.anim.normal.label "画像が指定している回数">
+<!ENTITY browser.html.img.anim.once.label "一回だけ">
+<!ENTITY browser.html.img.anim.none.label "なし(静止)">
+<!ENTITY browser.html.img.multiplesource.label "複数画像ソース">
+<!ENTITY browser.html.img.multiplesource.srcset.label "img要素のsrcset属性を有効にする">
+<!ENTITY browser.html.img.multiplesource.picture.label "picture要素を有効にする">
+<!ENTITY browser.html.img.resizing.label "ページサイズに合わせて画像を縮小">
+<!ENTITY browser.html.img.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
+<!ENTITY browser.html.img.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
+<!ENTITY browser.html.color_management.label "カラーマネージメント(CMS) (再起動必要)">
+<!ENTITY browser.html.color_management.mode.label "モード">
+<!ENTITY browser.html.color_management.mode.off.label "CMS無効">
+<!ENTITY browser.html.color_management.mode.on.label "有効にする">
+<!ENTITY browser.html.color_management.mode.tagged.label "タグが付けされた画像のみ有効">
+<!ENTITY browser.html.plugins.label "プラグイン">
+<!ENTITY browser.html.plugins.click_to_play.label "プラグインコンテンツはクリックしたら読み込む">
+<!ENTITY browser.html.plugins.flash-disable-protected-mode.label "Flash Player 11.3以降の保護モードを無効にする (Windows)">
+<!ENTITY browser.html.plainviewXML.label "スタイルシートなしの XML をプレーン表示">
+<!ENTITY browser.html.zoomSiteSpecific.label "ページごとにズームの拡大率を保存する">
+<!ENTITY browser.html.downloadable_fonts.label "CSS3のWebフォントをダウンロードする">
+<!ENTITY browser.html.vertical-text-disabled.label "CSSの縦書きテキストを無効にする">
+<!ENTITY browser.html.prefixes-webkit.label "一部の &quot;-webkit-&quot; ベンダープリフィックスの CSS プロパティを有効にする">
+<!ENTITY browser.html.disable_css_visited_links.label "CSSの訪問済みリンクのスタイリングを無効にして、閲覧履歴のプライバシーを保護する">
+<!ENTITY browser.html.focus.label "フォーカスのハイライト表示">
+<!ENTITY browser.html.focus.enabled.label "フォーカスされた要素を色を付けてハイライト表示">
+<!ENTITY browser.html.focus.bg.label "背景色">
+<!ENTITY browser.html.focus.fg.label "文字色">
+<!ENTITY browser.html.nouse_text_smoothing_setting.label "常にテキストの縁を滑らかに表示する (Macでのみ有効)">
+<!ENTITY browser.html.acceleration.label "ハードウェアアクセラレーション">
+<!ENTITY browser.html.acceleration.disabled.label "ハードウェアアクセラレーションを使用しない">
+<!ENTITY browser.html.acceleration.force-enabled.label "グラフィックスドライバのブラックリストを無視して常に有効にする">
+<!ENTITY browser.html.acceleration.d2d-disabled.label "Direct2D を使用しない (Windows)">
+<!ENTITY browser.html.acceleration.d2d-force-enabled.label "グラフィックスドライバのブラックリストを無視して常に有効にする (Windows)">
+<!ENTITY browser.html.offmainthreadcomposition-enabled.label "Off Main Thread Compositing (OMTC) を有効にする">
+<!ENTITY browser.html.offmainthreadcomposition-enabled.desc "注意: OMTC を無効にするとハードウェアアクセラレーションを無効になる影響がでる場合があります。">
+<!ENTITY browser.tabs.label "タブブラウジング">
+<!ENTITY browser.tabs.newtab.label "新しいタブ">
+<!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
+<!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする">
+<!ENTITY browser.tabs.showAudioPlayingIcon.label "音声を再生しているタブにミュートアイコンを表示する">
+<!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">
+<!ENTITY browser.tabs.seachOpenintab.label "検索バーからEnterキーで検索した時、検索結果を新しいタブで開く">
+<!ENTITY browser.tabs.insertRelatedAfterCurrent.label "ページから開く新規タブを現在のタブの右に開く">
+<!ENTITY browser.tabs.warnOnCloseOtherTabs.label "他の複数のタブを閉じるときに警告する">
+<!ENTITY browser.tabs.autoselect.label "自動タブ選択">
+<!ENTITY browser.tabs.autoselect.loadBookmarksInBackground.label "ブックマークや履歴から開いた新しいタブを選択する">
+<!ENTITY browser.tabs.autoselect.loadDivertedInBackground.label "外部アプリやリンクなどに新しいタブが開かれたとき、すぐにそのタブに切り替える">
+<!ENTITY browser.tabs.autoselect.selectOwnerOnClose.label "タブを閉じたら、そのタブを開いたタブをアクティブにする">
+<!ENTITY browser.tabs.tabpreview.label "タブのプレビュー表示">
+<!ENTITY browser.tabs.tabpreview.ctrltab.label "Ctrl+TAB">
+<!ENTITY browser.tabs.tabpreview.taskbar.label "タスクバー (Windows7)">
+<!ENTITY browser.tabs.animation.label "アニメーション">
+<!ENTITY browser.tabs.animation.animate_tab.label "タブの開閉">
+<!ENTITY browser.sessionStore.label "セッションストア">
+<!ENTITY browser.sessionStore.interval.label "セッション状態を保存する時間間隔">
+<!ENTITY browser.sessionStore.max_undo.label "記憶する最近閉じたウィンドウおよびタブの数">
+<!ENTITY browser.sessionStore.max_undo.windows.label "最近閉じたウィンドウ数">
+<!ENTITY browser.sessionStore.max_undo.tabs.label "最近閉じたタブ数">
+<!ENTITY browser.sessionStore.restore_on_demand.label "オンデマンドでの復元">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_on_demand.label "選択されるまでタブを読み込まない">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_hidden_tabs.label "選択されるまで他の表示されていないタブグループのタブを読み込まない">
+<!ENTITY browser.sessionStore.restore_on_demand.restore_pinned_tabs_on_demand.label "選択されるまでピン留めされたタブを読み込まない">
+<!ENTITY browser.sessionStore.resume_from_crash.label "クラッシュ後の&brandShortName;起動時に、ウィンドウとタブを復元する">
+<!ENTITY browser.sessionStore.warnOnQuit.label "&brandShortName; 終了/再起動時にセッションを保存するか尋ねる">
+<!ENTITY browser.sessionStore.warnOnQuit.desc "注意：&brandShortName; を起動するときホームページまたは空白ページを表示するよう設定したとき、この設定は有効です。">
+<!ENTITY browser.sessionStore.showQuitWarning.label "終了時には尋ねない">
+<!ENTITY browser.sessionStore.warnOnRestart.label "再起動時には尋ねない">
+<!ENTITY browser.sessionStore.privacy_level.label "エキストラセッション情報の保存">
+<!ENTITY browser.sessionStore.privacy_level.any.label "すべてのサイトで保存">
+<!ENTITY browser.sessionStore.privacy_level.unenc.label "セキュア(HTTPS)でないサイトのみ保存">
+<!ENTITY browser.sessionStore.privacy_level.never.label "決して保存しない">
+<!ENTITY browser.sessionStore.privacy_level.desc "エキストラセッション情報には、フォームの内容、スクロールバー位置、Cookie、POST情報を含みます。">
+<!ENTITY browser.bookmarkicon.label "ブックマークのアイコン(ファビコン)">
+<!ENTITY browser.bookmarkicon.siteicons.label "タブにアイコンを表示する">
+<!ENTITY browser.bookmarkicon.favicons.lebel "ブックマークの要素にアイコンを表示">
+<!ENTITY browser.multimedia.label "マルチメディア">
+<!ENTITY browser.multimedia.windows-media-foundation-enabled.label "Windows Media Foundationを有効にする (Windows7+)">
+<!ENTITY browser.multimedia.windows-media-foundation-play-stand-alone.label "スタンドアロンで再生">
+<!ENTITY browser.multimedia.directshow-enabled.label "Direct Showを有効にする (Windows)">
+<!ENTITY browser.multimedia.ffvpx-enabled.label "ビルトインのFFVPXを有効にする">
+<!ENTITY browser.multimedia.apple-mp3-enabled.label "Apple MP3を有効にする (Mac)">
+<!ENTITY browser.multimedia.apple-mp4-enabled.label "Apple MP4を有効にする (Mac)">
+<!ENTITY browser.multimedia.mediasource.enabled.label "Media Source Extensions を有効にする">
+<!ENTITY browser.multimedia.mediasource.formats.label "対応形式">
+<!ENTITY browser.webapi.label "Web API">
+<!ENTITY browser.webapi.geo_enabled.label "位置情報通信機能を有効にする">
+<!ENTITY browser.webapi.geoExceptions.label "例外サイト...">
+<!ENTITY browser.webapi.geoExceptions.title "例外サイト - 位置情報">
+<!ENTITY browser.webapi.geoExceptions.desc "位置情報の通知を許可するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
+<!ENTITY browser.webapi.geoWifiUri.label "位置情報サービスURL:">
+<!ENTITY browser.webapi.geoWifiUri.browseFile.label "デバッグ用にファイルを参照...">
+<!ENTITY browser.webapi.full_screen_enabled.label "フルスクリーンAPIを有効にする">
+<!ENTITY browser.webapi.full_screenExceptions.label "例外サイト...">
+<!ENTITY browser.webapi.full_screenExceptions.title "例外サイト - 全画面表示">
+<!ENTITY browser.webapi.full_screenExceptions.desc "全画面表示の移行を許可するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
+<!ENTITY browser.webapi.dom_battery_enabled.label "バッテリーステータスAPIを有効にする">
+<!ENTITY browser.webapi.dom_sms_enabled.label "メッセージング(SMS)APIを有効にする">
+<!ENTITY browser.webapi.dom_vibrator_enabled.label "バイブレーションAPIを有効にする">
+<!ENTITY browser.webapi.webgl.label "WebGL を有効にする (再起動必要)">
+<!ENTITY browser.webapi.serviceWorkers_enabled.label "Service Workersを有効にする">
+<!ENTITY browser.webapi.webcomponents_enabled.label "Web Components (Shadow DOM)を有効にする">
+<!ENTITY browser.webapi.webcomponents_customelements_enabled.label "Custom elementsを有効にする">
+<!ENTITY browser.webapi.wasm_enabled.label "Web Assembly を有効にする">
+<!ENTITY browser.download.label "ダウンロード">
+<!ENTITY browser.download.disableAltClickSave.label "ALT+Click または ALT+ENTER でリンク先をダウンロードしない">
+<!ENTITY browser.download.addToRecentDocs.label "新しいダウンロードを最近開いたドキュメントの一覧に追加する">
+<!ENTITY browser.download.quitBehavior.label "&brandShortName;終了時の進行中のダウンロードの処理">
+<!ENTITY browser.download.quitBehavior.resumeOnRestart.label "中止するが、次回&brandShortName;起動時に自動的に再開">
+<!ENTITY browser.download.quitBehavior.pauseOnRestart.label "中止して、次回&brandShortName;起動時も自動的には再開しない">
+<!ENTITY browser.download.quitBehavior.cancelOnQuit.label "&brandShortName;終了時にキャンセルする">
+<!ENTITY browser.download.showAlertOnComplete.label "ダウンロード終了時に通知する">
+<!ENTITY browser.download.disableAnimateNotifications.label "ダウンロード開始・終了時にダウンロードインディケータのアニメーション通知をしない">
+<!ENTITY browser.ua.label "UserAgent">
+<!ENTITY browser.ua.desc "警告: おそらくこの設定が一部のプラグインや &quot;User Agent Switcher&quot; などと競合するかもしれません。">
+<!ENTITY browser.ua.text.label "UA文字列 :">
+<!ENTITY browser.ua.presets.label "プリセット">
+<!ENTITY browser.ua.presets.this.label "&brandShortName;のこのバージョン">
+<!ENTITY browser.speed-paint.label "描画/レンダリング">
+<!ENTITY browser.speed-paint.desc "警告: 推奨値はあなたの回線環境と PC 環境にいつも適しているわけではありません。そのため推奨値にすることによって、動作が遅くあるいは重くなることもあります。(しかし、プラシーボ効果で速く感じる人もいます^^)">
+<!ENTITY browser.speed-paint.delay.label "初期描画待機時間">
+<!ENTITY browser.speed-paint.notify-backoffcount.label "初期レンダリングの待機時間の閾値">
+<!ENTITY browser.speed-paint.notify-backoffcount.never "制限しない">
+<!ENTITY browser.speed-paint.notify-interval.label "初期レンダリングの間隔">
+<!ENTITY browser.speed-paint.content-interrupt.label "パースを中断せずに続ける">
+<!ENTITY browser.speed-paint.content-interrupt.desc "注意: パース終了まで&brandShortName;が応答しない原因になり得ます。">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.label "その処理を中止するまでの最大時間">
+<!ENTITY browser.speed-paint.content-max-tokenizing-time.desc "注意: 0 にしてはいけません。">
+<!ENTITY browser.speed-paint.content-switch-threshold.label "High frequency mode において Low frequency mode に移行するまでの無操作時間:">
+<!ENTITY browser.speed-paint.content-switch-threshold.desc "High frequency interrupt mode はインターフェースの反応を速くするために、ページの読み込み処理を遅くします。; 標準: 750000 則ち 3/4 ミリ秒">
+<!ENTITY browser.speed-cache.label "ブラウザのキャッシュ">
+<!ENTITY browser.speed-cache.check.label "ページのキャッシュの確認の頻度">
+<!ENTITY browser.speed-cache.check.desc "警告: &quot;&browser.speed-cache.check.once.label;&quot; で高速化されますが、一部の Web サービスに支障が出るかもしれません。また、ページが正しく更新されない不具合がある場合、&quot;&browser.speed-cache.check.each.label;&quot;に設定して下さい。もしくは、シフトキーを押しながら再読込ボタンをクリックして、強制読込をしてください。">
+<!ENTITY browser.speed-cache.check.once.label "セッション毎">
+<!ENTITY browser.speed-cache.check.each.label "アクセスする度に">
+<!ENTITY browser.speed-cache.check.never.label "しない">
+<!ENTITY browser.speed-cache.check.auto.label "更新されたら (推奨)">
+<!ENTITY browser.speed-cache.memory_enable.label "キャッシュメモリーを有効に (通常、決して無効にしないで下さい)">
+<!ENTITY browser.speed-cache.memory_capability.label "使用容量">
+<!ENTITY browser.speed-cache.trim_on_minimize.label "&brandShortName;の最小化時にメモリの内容をスワップアウトする (Windowsのみ)">
+<!ENTITY browser.speed-cache.disk_cache_ssl.label "SSL 通信の分もキャッシュに貯める (セキュリティリスク有り)">
+<!ENTITY browser.speed-cache.prefetch-next.label "リンク・プリフェッチ(先読み)を有効にする">
+<!ENTITY browser.speed-cache.session-history-viewers.label "キャッシュされるページ表示の数">
+<!ENTITY browser.speed-cache.session-history-viewers.desc "注意: この値を増やすと、戻る/進むがより速くなります。しかし、タブの数が増えるにつれて&brandShortName;がより多くのメモリを消費するようになります。つまりトレードオフが存在します。">
+<!ENTITY browser.speed-cache.diskCacheFolder.label "キャッシュの保存先">
+<!ENTITY browser.speed-cache.diskCacheFolder.desc "キャッシュファイルは指定したディレクトリの &quot;Cache&quot; という名前のサブフォルダに保存されます。&brandShortName; を再起動して変更を有効にしてください。">
+<!ENTITY browser.others.label "その他">
+<!ENTITY browser.others.network-predictor.label "Network predictor">
+<!ENTITY browser.others.network-predictor.enabled.label "リンクをマウスオーバー時にリンク先のサーバに事前接続する">
+<!ENTITY browser.others.network-predictor.enable-hover-on-ssl.label "HTTPSサイト上のリンクをマウスオーバー時には事前接続をしない">
+<!ENTITY browser.others.network-predictor.speculative-parallel-limit.label "推測接続が許可されるソケットの最大数:">
+<!ENTITY browser.others.dns.label "名前解決(DNS)">
+<!ENTITY browser.others.dns.disableIPv6.label "IPv6でDNSに問い合わせしない">
+<!ENTITY browser.others.dns.prefetch.label "DNSプリフェッチを有効にしてページの表示速度を向上する">
+<!ENTITY browser.others.prompts_tab_modal_enabled.label "alert()/prompt()/confirm()をタブモーダルモードで表示する">
+<!ENTITY browser.others.errorPageDisabled.label "ページ読み込み失敗をダイアログで表示する">
+<!ENTITY browser.others.showRecentlyBookmarked.label "ブックマークメニューに「最近のブックマーク」を表示する">
+<!ENTITY browser.others.viewSourceTab.label "新しいタブでソースを開く">
+<!ENTITY browser.others.editorExternal "外部のエディタでソースを開く">
+<!ENTITY browser.others.editorExternal.path "エディタのパス:">
+<!ENTITY browser.others.historyExpirationMaxPages.label "履歴に残すユニークなURLの最大個数">
+<!ENTITY browser.others.warnOnAboutConfig.label "about:config で警告を表示する">
+<!ENTITY browser.others.hello.label "Firefox Hello">
+<!ENTITY browser.others.hello.enabled.label "Firefox Helloを有効にする">
+<!ENTITY browser.others.hello.forget-access-token.label "ゲストアクセストークンを忘却">
+<!ENTITY browser.others.hello.forget-access-token.desc "ゲストアカウントのすべての会話が削除されます。この動作は元に戻せません。&brandShortName; を再起動して変更を有効にしてください。">

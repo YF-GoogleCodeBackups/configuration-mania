@@ -1,0 +1,10 @@
+@-moz-document url-prefix(chrome://browser/content/) {
+  #confmania-australis-button {
+    list-style-image: url(icon.svg);
+    width: 16px;
+    height: 16px;
+  }
+  toolbar[brighttext] #confmania-australis-button {
+    list-style-image: url(icon-inverted.svg);
+  }
+}

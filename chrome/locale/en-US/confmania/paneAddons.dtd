@@ -1,0 +1,7 @@
+<!ENTITY addons.title "Add-ons">
+<!ENTITY addons.get_addons_maxResults.label "Maximum number of search results to display :">
+<!ENTITY addons.dialog_enable_delay.label "Delay before starting add-on installations :">
+<!ENTITY addons.noCheckCompatibility.label "Do Not check add-on compatibility with :">
+<!ENTITY addons.noCheckUpdateSecurity.label "Do Not check secure updates of add-ons">
+<!ENTITY addons.allowNonBuiltInCerts.label "Allow non-built-in certs to be used for downloading XPIs and update.">
+<!ENTITY addons.alwaysUnpack.label "Always unpack XPI file">
