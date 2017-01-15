@@ -57,7 +57,8 @@ function taskClean() {
 
 function taskXPI() {
   let includes = ARGV._.splice(1);
-  let excludes = ARGV.exclude;
+  let excludes = (Array.isArray(ARGV.exclude))? ARGV.exclude :
+                 (typeof(ARGV.exclude) === "string")? [ARGV.exclude] : [];
 
   if (includes.length === 0) {
     throw new Error(`no file pattern is specified.`);
@@ -66,22 +67,20 @@ function taskXPI() {
     throw new Error("output file foobar.xpi MUST be specified.");
   }
 
-  (new Promise((resolve, reject) => {
-    if (!excludes) {
-      excludes = [ /* none */ ];
-      resolve();
-    } else if(excludes.startsWith("@")) {
-      fs.readFile(excludes.substring(1), "utf8", (err, data) => {
-        if (err) {
-          reject(err);
-        } else {
-          excludes = data.split(/\n+/).filter((v) => v.length > 0);
-          resolve();
-        }
+  Promise.all(excludes.map((v) => {
+    if (v.startsWith("@")) {
+      return new Promise((resolve, reject) => {
+        fs.readFile(v.substring(1), "utf8", (err, data) => {
+          if (err) {
+            reject(err);
+          } else {
+            excludes = data.split(/\n+/).filter((v) => v.length > 0);
+            resolve();
+          }
+        });
       });
     } else {
-      excludes = [excludes];
-      resolve();
+      return v;
     }
   })).then(() => new Promise((resolve, reject) => {
     let output = fs.createWriteStream(ARGV.output);
