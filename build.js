@@ -5,19 +5,33 @@
 const minimist = require("minimist");
 const fs = require("fs");
 const glob = require("glob");
-const archiver = require("archiver");
+const jszip = require("jszip");
 
 const ARGV = minimist(process.argv.slice(2), {
-  "string": ["firefox-binary", "exclude", "output"],
+  "string": ["firefox-binary", "output"],
   "boolean": ["help", "verbose"],
   "alias": {
     o: "output",
     f: "firefox-binary",
-    x: "exclude",
     v: "verbose",
     h: "help"
   }
 });
+
+const XPI_TARGET = {
+  includes: [
+    "*.rdf",
+    "chrome.manifest",
+    "bootstrap.js",
+    "chrome/**/*.*",
+    "lib/**/*",
+//    "defaults/**/*",
+  ],
+  excludes: [
+    "**/.*",
+    "**/*{~,#,.bak,.orig,.rej}"
+  ]
+};
 
 function printVerbose() {
   if (ARGV.verbose) {
@@ -56,60 +70,41 @@ function taskClean() {
 }
 
 function taskXPI() {
-  let includes = ARGV._.splice(1);
-  let excludes = (Array.isArray(ARGV.exclude))? ARGV.exclude :
-                 (typeof(ARGV.exclude) === "string")? [ARGV.exclude] : [];
-
-  if (includes.length === 0) {
-    throw new Error(`no file pattern is specified.`);
-  }
   if (!ARGV.output || !ARGV.output.endsWith(".xpi")) {
     throw new Error("output file foobar.xpi MUST be specified.");
   }
 
-  Promise.all(excludes.map((v) => {
-    if (v.startsWith("@")) {
-      return new Promise((resolve, reject) => {
-        fs.readFile(v.substring(1), "utf8", (err, data) => {
-          if (err) {
-            reject(err);
-          } else {
-            excludes = data.split(/\n+/).filter((v) => v.length > 0);
-            resolve();
-          }
-        });
-      });
-    } else {
-      return v;
-    }
-  })).then(() => new Promise((resolve, reject) => {
-    let output = fs.createWriteStream(ARGV.output);
-    let archive = archiver("zip");
-
-    output.on("close", () => resolve(archive));
-    archive.on("error", (err) => {
-      try {
-        archive.abort();
-      } catch (ex) { /* ignore */ }
-      reject(err);
+  let xpi = new jszip();
+  Promise.all(XPI_TARGET.includes.map((item) => new Promise((resolve, reject) => {
+    glob(item, {ignore: XPI_TARGET.excludes, nonull: true}, (err, matches) => {
+      if (err) {
+        reject(err);
+      } else {
+        for (let item of matches) {
+          xpi.file(item, fs.createReadStream(item));
+        }
+        resolve();
+      }
     });
-    archive.on("entry", (data) => {
-      printVerbose(`  Added: ${data.name}\n`);
-    });
+  }))).then(() => {
+    let currentFile = null;
 
-    archive.pipe(output);
-
-    for (let item of includes) {
-      archive.glob(item, {
-        nonull: true,
-        ignore: excludes,
-        absolute: false
+    return new Promise((resolve, reject) => {
+      xpi.generateNodeStream({}, (stat) => {
+        if (stat.currentFile && stat.currentFile != currentFile) {
+          printVerbose(`  Added: ${stat.currentFile}\n`);
+        }
+        currentFile = stat.currentFile;
+      })
+      .pipe(fs.createWriteStream(ARGV.output))
+      .on("finish", () => {
+        resolve();
+      }).on("error", (err) => {
+        reject(err);
       });
-    }
-
-    archive.finalize();
-  })).then((archive) => {
-    printVerbose(`Done. (${archive.pointer()} bytes)\n`);
+    });
+  }).then((archive) => {
+    printVerbose("Done.\n");
   }).catch((ex) => {
     processError(ex);
   });
@@ -132,7 +127,6 @@ if (ARGV.help || ARGV._[0] === "help") {
   process.stdout.write("\nOPTIONS:\n");
   process.stdout.write(" -o, --output=FILE           Path or alias to the XPI file output\n");
   process.stdout.write(" -f, --firefox-binary=FILE   Path or alias to a Firefox executable\n");
-  process.stdout.write(" -x, --exclude=PATTERN       exclude the following names from XPI\n");
   process.stdout.write("\n");
 } else {
   try {
