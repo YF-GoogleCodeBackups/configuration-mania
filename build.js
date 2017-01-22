@@ -2,6 +2,9 @@
 
 "use strict";
 
+const FirefoxProfile = require("firefox-profile");
+const FxRunner = require("fx-runner/lib/run");
+const timer = require("timers");
 const minimist = require("minimist");
 const fs = require("fs");
 const glob = require("glob");
@@ -37,6 +40,18 @@ function printVerbose() {
   if (ARGV.verbose) {
     process.stdout.write.apply(process.stdout, arguments);
   }
+}
+
+function processError(ex) {
+  if (ARGV.verbose && ex.stack) {
+    process.stderr.write((ex.type)? `${ex.type}\n` : (ex.name)? `${ex.name}\n` : "");
+    process.stderr.write(`${ex.message}\n`);
+    process.stderr.write(ex.stack);
+    process.stderr.write("\n");
+  } else {
+    process.stderr.write(`Error: ${ex.message}\n`);
+  }
+  process.exit(1);
 }
 
 function taskClean() {
@@ -110,16 +125,38 @@ function taskXPI() {
   });
 }
 
-function processError(ex) {
-  if (ARGV.verbose && ex.stack) {
-    process.stderr.write((ex.type)? `${ex.type}\n` : (ex.name)? `${ex.name}\n` : "");
-    process.stderr.write(`${ex.message}\n`);
-    process.stderr.write(ex.stack);
-    process.stderr.write("\n");
-  } else {
-    process.stderr.write(`Error: ${ex.message}\n`);
+function taskRun() {
+  if (!ARGV.output || !ARGV.output.endsWith(".xpi")) {
+    throw new Error("output file foobar.xpi MUST be specified.");
   }
-  process.exit(1);
+
+  Promise.resolve(new FirefoxProfile()).then((profile) => new Promise((resolve, reject) => {
+    profile.addExtension(ARGV.output, () => resolve(profile));
+  })).then((profile) => new Promise((resolve, reject) => {
+    profile.setPreference("devtools.debugger.remote-enabled", true);
+    profile.setPreference("devtools.chrome.enabled", true);
+    profile.setPreference("devtools.debugger.prompt-connection", false);
+    profile.setPreference("xpinstall.signatures.required", false); // for addon debugging
+    profile.updatePreferences();
+  
+    profile.encoded((zippedProfile) => {
+      resolve(profile, zippedProfile);
+    });
+  })).then((profile, zippedProfile) => {
+    return FxRunner({
+      "no-remote": true,
+      "binary": ARGV["firefox-binary"],
+      "profile": profile.profileDir,
+      "verbose": true,
+      "listen": 6000,
+    });
+  }).then((runner) => new Promise((resolve, reject) => {
+    timer.setTimeout(() => resolve(), 3000); // HACK wait
+  })).then(() => {
+    printVerbose("Done.\n");
+  }).catch((ex) => {
+    processError(ex);
+  });
 }
 
 if (ARGV.help || ARGV._[0] === "help") {
@@ -136,6 +173,9 @@ if (ARGV.help || ARGV._[0] === "help") {
         break;
       case "xpi":
         taskXPI();
+        break;
+      case "run":
+        taskRun();
         break;
       default:
         throw new Error(`unknown command: ${ARGV._[0]}\n`);
