@@ -1,0 +1,23 @@
+{
+  "name": "confmania",
+  "version": "0.0.0",
+  "description": "Configuration Mania",
+  "main": "build.js",
+  "scripts": {
+    "clean": "node build.js clean",
+    "build": "npm run build:xpi",
+    "build:xpi": "node build.js -o confmania.xpi xpi",
+    "prerun": "npm run build",
+    "run": "node build.js -o confmania.xpi run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@cat-in-136",
+  "license": "SEE LICENSE IN LICENSE-GPL.txt/LICENSE-LGPL.txt/LICENSE-MPL.txt",
+  "dependencies": {
+    "firefox-profile": "^0.4.7",
+    "fx-runner": "^1.0.6",
+    "glob": "^7.1.1",
+    "jszip": "^3.1.3",
+    "minimist": "^1.2.0"
+  }
+}
