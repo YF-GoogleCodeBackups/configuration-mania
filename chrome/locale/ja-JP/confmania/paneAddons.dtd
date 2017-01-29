@@ -1,6 +1,7 @@
 <!ENTITY addons.title "アドオン">
 <!ENTITY addons.get_addons_maxResults.label "表示する検索結果の最大数 :">
 <!ENTITY addons.dialog_enable_delay.label "インストール開始するまでの時間">
+<!ENTITY addons.disableCustomConfirmationUI.label "アドオンインストールの確認に古い確認ダイアログを使う">
 <!ENTITY addons.noCheckCompatibility.label "アドオンの以下のバージョンとの適合確認をしない :">
 <!ENTITY addons.noCheckUpdateSecurity.label "アドオンの署名チェックをしない">
 <!ENTITY addons.allowNonBuiltInCerts.label "XPIファイルのダウンロードや更新の時に非ビルトイン証明書の使用を許可する">

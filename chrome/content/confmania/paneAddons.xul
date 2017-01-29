@@ -53,6 +53,7 @@
 <preferences>
   <preference name="extensions.getAddons.maxResults" id="extensions.getAddons.maxResults" type="int"/>
   <preference name="security.dialog_enable_delay" id="security.dialog_enable_delay" type="int"/>
+  <preference name="xpinstall.customConfirmationUI" id="xpinstall.customConfirmationUI" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.45.0" id="extensions.checkCompatibility.45.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.46.0" id="extensions.checkCompatibility.46.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.47.0" id="extensions.checkCompatibility.47.0" type="bool" inverted="true"/>
@@ -75,6 +76,7 @@
   <textbox id="ext-delay" preference="security.dialog_enable_delay" type="number" hidespinbuttons="true" min="0" size="4"/>
   <label value="&miliseconds;"/>
 </hbox>
+<checkbox label="&addons.disableCustomConfirmationUI.label;" preference="xpinstall.customConfirmationUI"/>
 <groupbox>
 <caption label="&addons.noCheckCompatibility.label;"/>
 <hbox>
