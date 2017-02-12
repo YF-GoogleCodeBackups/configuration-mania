@@ -488,7 +488,7 @@
             oncommand="gPrefWindow.prefBrowser.onWebAPIFullScreenExceptionsCommand();"/>
   </hbox>
   <checkbox label="&browser.webapi.dom_battery_enabled.label;" preference="dom.battery.enabled"/>
-  <checkbox label="&browser.webapi.dom_sms_enabled.label;" preference="dom.sms.enabled"/>
+  <checkbox label="&browser.webapi.dom_sms_enabled.label;" preference="dom.sms.enabled" data-obsolete-version-since="52"/>
   <checkbox label="&browser.webapi.dom_vibrator_enabled.label;" preference="dom.vibrator.enabled"/>
   <checkbox label="&browser.webapi.webgl.label;" preference="webgl.disabled"/>
   <checkbox label="&browser.webapi.serviceWorkers_enabled.label;" preference="dom.serviceWorkers.enabled"/>
