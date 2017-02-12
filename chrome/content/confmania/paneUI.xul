@@ -106,7 +106,6 @@
   <preference id="bidi.browser.ui" name="bidi.browser.ui" type="bool"/>
   <preference id="bidi.direction" name="bidi.direction" type="int"/>
   <preference id="bidi.numeral" name="bidi.numeral" type="int"/>
-  <preference id="bidi.support" name="bidi.support" type="int"/>
   <preference id="bidi.texttype" name="bidi.texttype" type="int"/>
   <preference id="layout.scrollbar.side" name="layout.scrollbar.side" type="int"/>
 
@@ -376,14 +375,6 @@
           <menuitem value="4" label="&ui.bidi.numeral.hindi.label;"/>
           <menuitem value="5" label="&ui.bidi.numeral.persian_context.label;"/>
           <menuitem value="6" label="&ui.bidi.numeral.persian.label;"/>
-        </menupopup></menulist>
-      </row>
-      <row align="center">
-        <label value="&ui.bidi.support.label;"/>
-        <menulist id="bidi-provider" preference="bidi.support"><menupopup>
-          <menuitem value="1" label="&ui.bidi.support.mozilla.label;"/>
-          <menuitem value="2" label="&ui.bidi.support.os.label;"/>
-          <menuitem value="3" label="&ui.bidi.support.disable.label;"/>
         </menupopup></menulist>
       </row>
       <row align="center">
