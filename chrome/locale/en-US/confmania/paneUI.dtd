@@ -72,10 +72,6 @@
 <!ENTITY ui.bidi.numeral.hindi.label "Hindi">
 <!ENTITY ui.bidi.numeral.persian_context.label "Persian context">
 <!ENTITY ui.bidi.numeral.persian.label "Persian">
-<!ENTITY ui.bidi.support.label "Provider">
-<!ENTITY ui.bidi.support.mozilla.label "&brandShortName;">
-<!ENTITY ui.bidi.support.os.label "OS">
-<!ENTITY ui.bidi.support.disable.label "Disable">
 <!ENTITY ui.bidi.texttype.label "Text type">
 <!ENTITY ui.bidi.texttype.charset.label "Default">
 <!ENTITY ui.bidi.texttype.logical.label "Logical">

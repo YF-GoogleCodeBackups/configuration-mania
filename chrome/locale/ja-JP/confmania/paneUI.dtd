@@ -72,10 +72,6 @@
 <!ENTITY ui.bidi.numeral.hindi.label "ヒンディ語">
 <!ENTITY ui.bidi.numeral.persian_context.label "ペルシャ語文脈">
 <!ENTITY ui.bidi.numeral.persian.label "ペルシャ語">
-<!ENTITY ui.bidi.support.label "処理担当">
-<!ENTITY ui.bidi.support.mozilla.label "&brandShortName;">
-<!ENTITY ui.bidi.support.os.label "OS">
-<!ENTITY ui.bidi.support.disable.label "無効">
 <!ENTITY ui.bidi.texttype.label "テキストの種類">
 <!ENTITY ui.bidi.texttype.charset.label "文字コードに従う">
 <!ENTITY ui.bidi.texttype.logical.label "Logical">
