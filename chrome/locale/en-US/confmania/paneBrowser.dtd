@@ -28,8 +28,8 @@
 <!ENTITY browser.html.img.anim.once.label "Once">
 <!ENTITY browser.html.img.anim.none.label "Never (Stop)">
 <!ENTITY browser.html.img.multiplesource.label "Multiple Source Image">
-<!ENTITY browser.html.img.multiplesource.srcset.label "Enable srcset attribute on img elements">
-<!ENTITY browser.html.img.multiplesource.picture.label "Enable picture element">
+<!ENTITY browser.html.img.multiplesource.srcset-disabled.label "Disable srcset attribute on img elements">
+<!ENTITY browser.html.img.multiplesource.picture-disabled.label "Disable picture element">
 <!ENTITY browser.html.img.resizing.label "Resize large images to fit in the browser window">
 <!ENTITY browser.html.img.show_image_placeholders.label "Show image placeholders while image is loading or when image is broken">
 <!ENTITY browser.html.img.force_inline_alttext.label "Force broken-image ALT text to be displayed inline">
