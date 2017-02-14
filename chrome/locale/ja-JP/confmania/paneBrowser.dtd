@@ -28,8 +28,8 @@
 <!ENTITY browser.html.img.anim.once.label "一回だけ">
 <!ENTITY browser.html.img.anim.none.label "なし(静止)">
 <!ENTITY browser.html.img.multiplesource.label "複数画像ソース">
-<!ENTITY browser.html.img.multiplesource.srcset.label "img要素のsrcset属性を有効にする">
-<!ENTITY browser.html.img.multiplesource.picture.label "picture要素を有効にする">
+<!ENTITY browser.html.img.multiplesource.srcset-disabled.label "img要素のsrcset属性を無効にする">
+<!ENTITY browser.html.img.multiplesource.picture-disabled.label "picture要素を無効にする">
 <!ENTITY browser.html.img.resizing.label "ページサイズに合わせて画像を縮小">
 <!ENTITY browser.html.img.show_image_placeholders.label "壊れているか読み込み中の画像の所に代替アイコンを表示">
 <!ENTITY browser.html.img.force_inline_alttext.label "画像非表示に alt 属性をインラインで表示">
