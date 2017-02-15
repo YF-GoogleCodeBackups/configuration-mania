@@ -99,7 +99,7 @@
   <preference id="network.http.referer.spoofSource" name="network.http.referer.spoofSource" type="bool"/>
   <preference id="network.http.referer.trimmingPolicy" name="network.http.referer.trimmingPolicy" type="int"/>
   <preference id="network.http.referer.XOriginPolicy" name="network.http.referer.XOriginPolicy" type="int"/>
-  <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool"/>
+  <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool" inverted="true"/>
 
   <preference id="security.fileuri.strict_origin_policy" name="security.fileuri.strict_origin_policy" type="bool"/>
 </preferences>
@@ -355,8 +355,8 @@
     <radio value="2" label="&security.referer.XOriginPolicy.hostsMatch.label;"/>
   </radiogroup>
   <groupbox>
-    <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite.label;"
-      preference="network.http.sendSecureXSiteReferrer"/>
+    <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite-disabled.label;"
+      preference="network.http.sendSecureXSiteReferrer" data-obsolete-version-since="52"/>
     <description class="indent" control="sendRefererSecureXSite">&security.referer.secureXSite.desc;</description>
   </groupbox>
 </box>

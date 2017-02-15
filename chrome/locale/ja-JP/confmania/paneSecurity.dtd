@@ -107,7 +107,7 @@
 <!ENTITY security.referer.XOriginPolicy.always.label "常に Referrer ヘッダを送る">
 <!ENTITY security.referer.XOriginPolicy.baseDomainsMatch.label "ベースドメインが同一のときに送る">
 <!ENTITY security.referer.XOriginPolicy.hostsMatch.label "ホストが同一のときに送る">
-<!ENTITY security.referer.secureXSite.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送る">
+<!ENTITY security.referer.secureXSite-disabled.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送らない">
 <!ENTITY security.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Referrerは送られません">
 <!ENTITY security.content.label "コンテンツ">
 <!ENTITY security.content.fileuri_strict_origin_policy.label "ローカルドキュメントの同一ドメインポリシー">
