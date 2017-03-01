@@ -62,6 +62,7 @@
   <preference name="extensions.checkCompatibility.50.0" id="extensions.checkCompatibility.50.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.51.0" id="extensions.checkCompatibility.51.0" type="bool" inverted="true"/>
   <preference name="extensions.checkCompatibility.52.0" id="extensions.checkCompatibility.52.0" type="bool" inverted="true"/>
+  <preference name="extensions.checkCompatibility.53.0" id="extensions.checkCompatibility.53.0" type="bool" inverted="true"/>
   <preference name="extensions.checkUpdateSecurity" id="extensions.checkUpdateSecurity" type="bool" inverted="true"/>
   <preference name="extensions.install.requireBuiltInCerts" id="extensions.install.requireBuiltInCerts" type="bool" inverted="true"/>
   <preference name="extensions.alwaysUnpack" id="extensions.alwaysUnpack" type="bool"/>
@@ -88,6 +89,7 @@
 <checkbox label="50" preference="extensions.checkCompatibility.50.0"/>
 <checkbox label="51" preference="extensions.checkCompatibility.51.0"/>
 <checkbox label="52" preference="extensions.checkCompatibility.52.0"/>
+<checkbox label="53" preference="extensions.checkCompatibility.53.0"/>
 </hbox>
 </groupbox>
 <checkbox label="&addons.noCheckUpdateSecurity.label;"
