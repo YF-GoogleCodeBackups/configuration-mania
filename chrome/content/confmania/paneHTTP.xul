@@ -98,7 +98,8 @@
       </radiogroup>
       <checkbox id="enablePipelining" label="&http.connect.pipeline.label;"
                 accesskey="&http.connect.pipeline.accesskey;"
-                preference="network.http.pipelining"/>
+                preference="network.http.pipelining"
+                data-obsolete-version-since="54"/>
     </groupbox>
 
     <groupbox flex="1">
@@ -109,12 +110,14 @@
       </radiogroup>
       <checkbox id="enablePipeliningProxy" label="&http.connect.pipeline.label;"
                 accesskey="&http.connect.pipelineProxy.accesskey;"
-                preference="network.http.proxy.pipelining"/>
+                preference="network.http.proxy.pipelining"
+                data-obsolete-version-since="54"/>
     </groupbox>
   </hbox>
   <checkbox label="&http.connect.pipelineSSL.label;"
             accesskey="&http.connect.pipelineSSL.accesskey;"
-            preference="network.http.pipelining.ssl"/>
+            preference="network.http.pipelining.ssl"
+            data-obsolete-version-since="54"/>
   <description>&http.connect.pipeline.desc;</description>
   <checkbox label="&http.connect.spdy.label;"
             accesskey="&http.connect.spdy.accesskey;"
@@ -125,7 +128,7 @@
   <grid>
     <columns><column/><column/></columns>
     <rows>
-      <row align="center">
+      <row align="center" data-obsolete-version-since="54">
         <label control="maxpipeliningrequest" value="&http.maxconn.maxpipeliningrequest.label;"/>
         <textbox id="maxpipeliningrequest" type="number" hidespinbuttons="true" min="1" size="4" preference="network.http.pipelining.maxrequests"/>
       </row>
