@@ -79,6 +79,11 @@
 <!ENTITY security.privacy.history.label "History">
 <!ENTITY security.privacy.history.cookie.label "Cookie">
 <!ENTITY security.privacy.history.cookie.lifetimedays.label "Accept cookies for">
+<!ENTITY security.privacy.domstorage.label "DOM Storage">
+<!ENTITY security.privacy.domstorage.enable.label "Enable DOM Storage">
+<!ENTITY security.privacy.domstorage.exceptions.label "Exceptions">
+<!ENTITY security.privacy.domstorage.exceptions.title "Exceptions - DOM Storage">
+<!ENTITY security.privacy.domstorage.exceptions.desc "You can specify which websites are allowed to use DOM Storage. Type the exact address of the site you want to manage and then click Block or Allow.">
 <!ENTITY security.privacy.trackingprotection.label "Tracking Protection">
 <!ENTITY security.privacy.trackingprotection.enable.label "Enable Tracking Protection">
 <!ENTITY security.privacy.trackingprotection.exceptions.label "Exceptions">
