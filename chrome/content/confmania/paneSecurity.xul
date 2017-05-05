@@ -89,6 +89,7 @@
 
   <preference id="signon.autofillForms" name="signon.autofillForms" type="bool"/>
   <preference id="network.cookie.lifetime.days" name="network.cookie.lifetime.days" type="int"/>
+  <preference id="dom.storage.enabled" name="dom.storage.enabled" type="bool"/>
   <preference id="privacy.trackingprotection.enabled" name="privacy.trackingprotection.enabled" type="bool"/>
   <preference id="privacy.trackingprotection.pbmode.enabled" name="privacy.trackingprotection.pbmode.enabled" type="bool"/>
   <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
@@ -285,6 +286,19 @@
         <label value="&days;"/>
       </hbox>
     </groupbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&security.privacy.domstorage.label;"/>
+    <hbox align="center">
+      <checkbox label="&security.privacy.domstorage.enable.label;"
+        flex="1"
+        preference="dom.storage.enabled"/>
+      <button label="&security.privacy.domstorage.exceptions.label;"
+              id="domstorage-showDomStorageExceptions"
+              data-dialog-title="&security.privacy.domstorage.exceptions.title;"
+              data-dialog-desc="&security.privacy.domstorage.exceptions.desc;"
+              oncommand="gPrefWindow.prefSecurity.onDomStorageExceptionsCommand();"/>
+    </hbox>
   </groupbox>
   <groupbox>
     <caption label="&security.privacy.trackingprotection.label;"/>

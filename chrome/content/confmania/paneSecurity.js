@@ -103,6 +103,14 @@ gPrefWindow.prefSecurity = {
     }
     return undefined; // no override
   },
+  onDomStorageExceptionsCommand: function() {
+    let params = { blockVisible: true,  sessionVisible: false, allowVisible: true, prefilledHost: "", permissionType: "persistent-storage" };
+    params.windowTitle = document.getElementById("domstorage-showDomStorageExceptions").getAttribute("data-dialog-title");
+    params.introText   = document.getElementById("domstorage-showDomStorageExceptions").getAttribute("data-dialog-desc");
+
+    openDialog("chrome://browser/content/preferences/permissions.xul", 
+               "Browser:Permissions", "resizable=yes", params);
+  },
   onTrackingProtectionEnabledSyncFrom: function() {
     let disabled = document.getElementById("privacy.trackingprotection.enabled").value;
     document.getElementById("privacy.trackingprotection.pbmode.enabled").disabled = disabled;
