@@ -92,6 +92,7 @@
   <preference id="dom.storage.enabled" name="dom.storage.enabled" type="bool"/>
   <preference id="privacy.trackingprotection.enabled" name="privacy.trackingprotection.enabled" type="bool"/>
   <preference id="privacy.trackingprotection.pbmode.enabled" name="privacy.trackingprotection.pbmode.enabled" type="bool"/>
+  <preference id="privacy.userContext.enabled" name="privacy.userContext.enabled" type="bool"/>
   <preference id="signon.expireMasterPassword" name="signon.expireMasterPassword" type="bool"/>
   <preference id="security.ask_for_password" name="security.ask_for_password" type="int"/>
   <preference id="security.password_lifetime" name="security.password_lifetime" type="int"/>
@@ -320,6 +321,11 @@
                 label="&security.privacy.trackingprotection-pbmode.enable.label;"
                 preference="privacy.trackingprotection.pbmode.enabled" />
     </hbox>
+  </groupbox>
+  <groupbox>
+    <caption label="&security.privacy.userContext.label;"/>
+    <checkbox label="&security.privacy.userContext.enable.label;"
+              preference="privacy.userContext.enabled"/>
   </groupbox>
   <groupbox>
     <caption label="&security.privacy.passwd.label;"/>

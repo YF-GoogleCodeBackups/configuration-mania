@@ -90,6 +90,8 @@
 <!ENTITY security.privacy.trackingprotection.exceptions.title "例外サイト - 追跡防止">
 <!ENTITY security.privacy.trackingprotection.exceptions.desc "オンライン上の行動を追跡するかどうかサイトごとに指定できます。個別に設定するサイトの正確なアドレスを入力して [不許可] または [許可] をクリックしてください。">
 <!ENTITY security.privacy.trackingprotection-pbmode.enable.label "追跡防止をプライベートブラウジングで有効にする">
+<!ENTITY security.privacy.userContext.label "コンテキストアイデンティティ">
+<!ENTITY security.privacy.userContext.enable.label "コンテナータブを有効にする">
 <!ENTITY security.privacy.passwd.label "マスターパスワード">
 <!ENTITY security.privacy.passwd.managepassword.label "マスターパスワードの期限">
 <!ENTITY security.privacy.passwd.managepassword.text "マスターパスワードが求められるとき:">
