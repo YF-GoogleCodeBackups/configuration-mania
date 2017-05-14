@@ -101,6 +101,7 @@
   <preference id="network.http.referer.spoofSource" name="network.http.referer.spoofSource" type="bool"/>
   <preference id="network.http.referer.trimmingPolicy" name="network.http.referer.trimmingPolicy" type="int"/>
   <preference id="network.http.referer.XOriginPolicy" name="network.http.referer.XOriginPolicy" type="int"/>
+  <preference id="network.http.referer.userControlPolicy" name="network.http.referer.userControlPolicy" type="int"/>
   <preference id="network.http.sendSecureXSiteReferrer" name="network.http.sendSecureXSiteReferrer" type="bool" inverted="true"/>
 
   <preference id="security.fileuri.strict_origin_policy" name="security.fileuri.strict_origin_policy" type="bool"/>
@@ -375,6 +376,19 @@
     <radio value="2" label="&security.referer.XOriginPolicy.hostsMatch.label;"/>
   </radiogroup>
   <groupbox>
+    <groupbox>
+      <caption label="&security.referer.userControlPolicy.label;" control="securityRefererUserControlPolicy" data-require-version="52"/>
+      <radiogroup preference="network.http.referer.userControlPolicy" id="securityRefererUserControlPolicy">
+        <radio value="0" label="no-referrer"/>
+        <description>&security.referer.userControlPolicy.no-referrer.desc;</description>
+        <radio value="1" label="same-origin"/>
+        <description>&security.referer.userControlPolicy.same-origin.desc;</description>
+        <radio value="2" label="strict-origin-when-cross-origin"/>
+        <description>&security.referer.userControlPolicy.strict-origin-when-cross-origin.desc;</description>
+        <radio value="3" label="no-referrer-when-downgrade"/>
+        <description>&security.referer.userControlPolicy.no-referrer-when-downgrade.desc;</description>
+      </radiogroup>
+    </groupbox>
     <checkbox id="sendRefererSecureXSite" label="&security.referer.secureXSite-disabled.label;"
       preference="network.http.sendSecureXSiteReferrer" data-obsolete-version-since="52"/>
     <description class="indent" control="sendRefererSecureXSite">&security.referer.secureXSite.desc;</description>
