@@ -114,6 +114,11 @@
 <!ENTITY security.referer.XOriginPolicy.always.label "常に Referrer ヘッダを送る">
 <!ENTITY security.referer.XOriginPolicy.baseDomainsMatch.label "ベースドメインが同一のときに送る">
 <!ENTITY security.referer.XOriginPolicy.hostsMatch.label "ホストが同一のときに送る">
+<!ENTITY security.referer.userControlPolicy.label "デフォルトの Referrer-Policy">
+<!ENTITY security.referer.userControlPolicy.no-referrer.desc "Referrer ヘッダを常に送信しない。">
+<!ENTITY security.referer.userControlPolicy.same-origin.desc "同一オリジン要求のとき URL 全体を Referrer として送信する。クロスオリジン要求のときは Referrer 情報を送信しない。">
+<!ENTITY security.referer.userControlPolicy.strict-origin-when-cross-origin.desc "同一オリジン要求のとき URL 全体を Referrer として送信し、クロスオリジン要求のときはオリジンだけを送信する。HTTPSからHTTPへの要求のときは Referrer 情報を送信しない。">
+<!ENTITY security.referer.userControlPolicy.no-referrer-when-downgrade.desc "HTTPSからHTTPおよびHTTPからいかなるオリジンの要求のとき URL 全体を送信する。HTTPS から HTTP への要求のときは Referrer 情報を送信しない。">
 <!ENTITY security.referer.secureXSite-disabled.label "セキュア(https)なサイトから別のセキュアなサイトに移動するときに、Referrer を送らない">
 <!ENTITY security.referer.secureXSite.desc "この設定に関わらず、セキュアなサイトからセキュアでないサイトへ移動する時については、Referrerは送られません">
 <!ENTITY security.content.label "コンテンツ">

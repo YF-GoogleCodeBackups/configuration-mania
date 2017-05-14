@@ -114,6 +114,11 @@
 <!ENTITY security.referer.XOriginPolicy.always.label "Always send Referrer header">
 <!ENTITY security.referer.XOriginPolicy.baseDomainsMatch.label "Only send if base domains match">
 <!ENTITY security.referer.XOriginPolicy.hostsMatch.label "Only send if hosts match">
+<!ENTITY security.referer.userControlPolicy.label "Default Referrer-Policy">
+<!ENTITY security.referer.userControlPolicy.no-referrer.desc "The Referer header will be omitted entirely.">
+<!ENTITY security.referer.userControlPolicy.same-origin.desc "A full URL is sent as referrer information when making same-origin requests. Cross-origin requests will contain no referrer information.">
+<!ENTITY security.referer.userControlPolicy.strict-origin-when-cross-origin.desc "A full URL is sent as referrer information when making same-origin requests, and only the origin when making cross-origin requests. Requests from HTTPS to HTTP will contain no referrer information.">
+<!ENTITY security.referer.userControlPolicy.no-referrer-when-downgrade.desc "A full URL along with requests from HTTPS to HTTP, and requests from HTTP to any origin. Requests from HTTPS to HTTP will contain no referrer information.">
 <!ENTITY security.referer.secureXSite-disabled.label "Do not send the Referrer header when navigating from a https site to another https site">
 <!ENTITY security.referer.secureXSite.desc "Regardless of this setting, Never send the Referrer header when navigating from a https site to a non-secure site.">
 <!ENTITY security.content.label "Content">
