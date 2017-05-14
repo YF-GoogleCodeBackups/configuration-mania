@@ -62,6 +62,8 @@
 <!ENTITY browser.tabs.label "タブブラウジング">
 <!ENTITY browser.tabs.newtab.label "新しいタブ">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "about:newtab を有効にする">
+<!ENTITY browser.tabs.newtab.newtabpageRows.label "新規タブのグリッドの行数">
+<!ENTITY browser.tabs.newtab.newtabpageColumns.label "新規タブのグリッドの列数">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "新規訪問したページのサムネイル作成を無効にする">
 <!ENTITY browser.tabs.showAudioPlayingIcon.label "音声を再生しているタブにミュートアイコンを表示する">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "最後のタブを閉じたらウインドウを閉じる">

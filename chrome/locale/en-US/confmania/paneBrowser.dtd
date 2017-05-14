@@ -62,6 +62,8 @@
 <!ENTITY browser.tabs.label "TabBrowsing">
 <!ENTITY browser.tabs.newtab.label "New Tab">
 <!ENTITY browser.tabs.newtab.newtabpageEnabled.label "Enable about:newtab">
+<!ENTITY browser.tabs.newtab.newtabpageRows.label "Number of rows of newtab grid">
+<!ENTITY browser.tabs.newtab.newtabpageColumns.label "Number of columns of newtab grid">
 <!ENTITY browser.tabs.newtab.thumbCapturingDisabled.label "Disable capturing thumbnails for newly visited pages">
 <!ENTITY browser.tabs.showAudioPlayingIcon.label "Show mute icons on tabs that playing audio">
 <!ENTITY browser.tabs.closeWindowWithLastTab.label "Close the window when closing its last tab">

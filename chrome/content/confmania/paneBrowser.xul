@@ -94,6 +94,8 @@
   <preference id="layers.offmainthreadcomposition.enabled" name="layers.offmainthreadcomposition.enabled" type="bool"/>
 
   <preference id="browser.newtabpage.enabled" name="browser.newtabpage.enabled" type="bool"/>
+  <preference id="browser.newtabpage.rows" name="browser.newtabpage.rows" type="int"/>
+  <preference id="browser.newtabpage.columns" name="browser.newtabpage.columns" type="int"/>
   <preference id="browser.pagethumbnails.capturing_disabled" name="browser.pagethumbnails.capturing_disabled" type="bool"/>
   <preference id="browser.tabs.showAudioPlayingIcon" name="browser.tabs.showAudioPlayingIcon" type="bool"/>
   <preference id="browser.tabs.closeWindowWithLastTab" name="browser.tabs.closeWindowWithLastTab" type="bool"/>
@@ -360,7 +362,20 @@
 <box class="subtabpanel" orient="vertical" id="tabs">
   <groupbox>
     <caption label="&browser.tabs.newtab.label;"/>
-    <checkbox label="&browser.tabs.newtab.newtabpageEnabled.label;" preference="browser.newtabpage.enabled"/>
+    <checkbox label="&browser.tabs.newtab.newtabpageEnabled.label;" preference="browser.newtabpage.enabled"
+      onsyncfrompreference="return gPrefWindow.prefBrowser.onNewTabpageEnabledSyncFrom();"/>
+    <grid class="indent">
+      <columns><column/><column/></columns>
+      <rows><row align="center">
+        <label value="&browser.tabs.newtab.newtabpageRows.label;" control="browserNewTabPageRows"/>
+        <textbox id="browserNewTabPageRows" type="number"
+         hidespinbuttons="true" min="1" preference="browser.newtabpage.rows" size="2"/>
+      </row><row align="center">
+        <label value="&browser.tabs.newtab.newtabpageColumns.label;" control="browserNewTabPageColumns"/>
+        <textbox id="browserNewTabPageColumns" type="number"
+         hidespinbuttons="true" min="1" preference="browser.newtabpage.columns" size="2"/>
+      </row></rows>
+    </grid>
     <checkbox class="indent" label="&browser.tabs.newtab.thumbCapturingDisabled.label;" preference="browser.pagethumbnails.capturing_disabled"/>
   </groupbox>
   <checkbox label="&browser.tabs.showAudioPlayingIcon.label;" preference="browser.tabs.showAudioPlayingIcon"/>

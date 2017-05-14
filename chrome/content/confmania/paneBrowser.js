@@ -133,6 +133,11 @@ gPrefWindow.prefBrowser = {
     document.getElementById("gfx.direct2d.force-enabled").disabled = disabled;
     return undefined; // no override
   },
+  onNewTabpageEnabledSyncFrom: function() {
+    let disabled_newtab = ! document.getElementById("browser.newtabpage.enabled").value;
+    document.getElementById("browser.newtabpage.rows").disabled = disabled_newtab;
+    document.getElementById("browser.newtabpage.columns").disabled = disabled_newtab;
+  },
   onSessionStoreRestoreOnDemandSyncFrom: function() {
     let disabled_hidden_tabs =   document.getElementById("browser.sessionstore.restore_on_demand").value;
     let disabled_pinned_tabs = ! document.getElementById("browser.sessionstore.restore_on_demand").value;
