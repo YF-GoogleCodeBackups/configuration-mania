@@ -175,6 +175,17 @@ tc.tests = {
       checkbox.click();
     }
   },
+  testOnNewTabpageEnabledSyncFrom: function() {
+    let checkbox = this.document.querySelector("checkbox[preference='browser.newtabpage.enabled']");
+    let target1 = this.document.querySelector("textbox[preference='browser.newtabpage.rows']");
+    let target2 = this.document.querySelector("textbox[preference='browser.newtabpage.columns']");
+
+    for (let i = 0; i < 2; i++) {
+      assert.equals(!checkbox.checked, target1.disabled);
+      assert.equals(!checkbox.checked, target2.disabled);
+      checkbox.click();
+    }
+  },
   testOnSessionStoreRestoreOnDemandSyncFrom: function() {
     let checkbox = this.document.querySelector("checkbox[preference='browser.sessionstore.restore_on_demand']");
     let target1 = this.document.querySelector("checkbox[preference='browser.sessionstore.restore_hidden_tabs']");
