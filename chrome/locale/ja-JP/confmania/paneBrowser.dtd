@@ -191,3 +191,4 @@
 <!ENTITY browser.others.hello.enabled.label "Firefox Helloを有効にする">
 <!ENTITY browser.others.hello.forget-access-token.label "ゲストアクセストークンを忘却">
 <!ENTITY browser.others.hello.forget-access-token.desc "ゲストアカウントのすべての会話が削除されます。この動作は元に戻せません。&brandShortName; を再起動して変更を有効にしてください。">
+<!ENTITY browser.others.disableCosmeticAnimations.label "UI アニメーションを無効にする">
