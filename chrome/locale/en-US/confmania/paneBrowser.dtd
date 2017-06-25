@@ -191,3 +191,4 @@
 <!ENTITY browser.others.hello.enabled.label "Enable Firefox Hello">
 <!ENTITY browser.others.hello.forget-access-token.label "Forget the guest access token">
 <!ENTITY browser.others.hello.forget-access-token.desc "All conversation of the guest account will be removed from &brandShortName;. This action cannot be undone. Restart &brandShortName; for changes to take effect.">
+<!ENTITY browser.others.disableCosmeticAnimations.label "Disable UI animations">

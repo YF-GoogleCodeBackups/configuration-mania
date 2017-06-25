@@ -187,6 +187,7 @@
   <preference id="loop.hawk-session-token" name="loop.hawk-session-token" type="string"/>
   <preference id="loop.key" name="loop.key" type="string"/>
   <preference id="loop.ot.guid" name="loop.ot.guid" type="string"/>
+  <preference id="toolkit.cosmeticAnimations.enabled" name="toolkit.cosmeticAnimations.enabled" type="bool" inverted="true"/>
 </preferences>
 
 <hbox flex="1" orient="horizontal" id="paneBrowserBox">
@@ -724,6 +725,8 @@
       <description class="indent" id="browser-others-loop-forget-desc">&browser.others.hello.forget-access-token.desc;</description>
     </vbox>
   </groupbox>
+
+  <checkbox preference="toolkit.cosmeticAnimations.enabled" label="&browser.others.disableCosmeticAnimations.label;" data-require-version="55"/>
 </box>
 
 </deck>
