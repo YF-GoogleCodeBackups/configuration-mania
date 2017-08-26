@@ -268,7 +268,7 @@ gPrefWindow.prefBrowser = {
 
     // Application comment
     ua += "(";
-    if (!!option.platform) {
+    if ((!!option.platform) && (option.platform !== "")) {
       ua += option.platform;
       ua += "; ";
     }
